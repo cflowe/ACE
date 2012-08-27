@@ -1,0 +1,14 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+What this test tests?
+- Create a named EC
+- Try creating a duplicate EC and check for expected NameAlreadyUsed
+    exception.
+- Create named proxy consumer.
+- Narrow it to a structured proxy consumer.
+- Try creating a duplicate proxy consumer and check for expected
+    NameAlreadyUsed exception.
+- Disconnect proxy consumer.
+- Try creating a duplicate proxy consumer. As the named consumer has
+    already disconnected the NameAlreadyUsed exception isn't
+    expected.

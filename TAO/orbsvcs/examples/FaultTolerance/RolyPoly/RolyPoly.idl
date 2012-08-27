@@ -1,0 +1,15 @@
+// file      : RolyPoly/RolyPoly.idl
+// author    : Boris Kolpackov <boris@dre.vanderbilt.edu>
+// cvs-id    : $Id: RolyPoly.idl 54669 2003-12-22 01:44:39Z wilson_d $
+
+interface RolyPoly
+{
+  exception E
+  {
+    string s;
+  };
+
+  short number (inout string m) raises (E);
+
+  oneway void shutdown ();
+};

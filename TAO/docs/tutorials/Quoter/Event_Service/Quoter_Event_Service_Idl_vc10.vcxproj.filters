@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-6F44-08F1B6E2D59D}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-6F44-08F1B6E2D59D}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Svc Conf Files">
+      <UniqueIdentifier>{84D0937A-FECA-1BAD-6F44-08F1B6E2D59D}</UniqueIdentifier>
+      <Extensions>conf;confxml</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Quoter_Event_Service.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Quoter.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ec.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="ec.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: extra_anytypecode.mpb 91767 2010-09-14 18:50:32Z johnnyw $
+
+feature(!minimum_corba) {
+  Source_Files(TAO_ANYTYPECODE_COMPONENTS) {
+    ServicesA.cpp
+  }
+}

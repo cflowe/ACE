@@ -1,0 +1,15 @@
+// $Id: File1.idl 84059 2008-12-23 15:19:54Z vzykov $
+
+#ifndef File_1_
+#define File_1_
+
+module File1 {
+
+    typedef sequence <short> Seq1;
+
+    typedef string type2;
+    typedef sequence <type2> Seq2;
+
+};
+
+#endif

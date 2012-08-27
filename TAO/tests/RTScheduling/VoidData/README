@@ -1,0 +1,17 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+Case
+----
+
+A simple test to test the passing of CORBA::VoidData to a method.
+
+To Run
+------
+
+./test
+
+Typical Output
+--------------
+
+Void Data Passed to method 28
+

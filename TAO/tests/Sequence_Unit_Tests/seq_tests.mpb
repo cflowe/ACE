@@ -1,0 +1,4 @@
+// $Id: seq_tests.mpb 90164 2010-05-18 21:47:55Z mitza $
+project {
+  includes += .
+}

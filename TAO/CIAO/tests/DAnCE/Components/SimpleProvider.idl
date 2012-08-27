@@ -1,0 +1,21 @@
+// $Id: SimpleProvider.idl 93359 2011-02-11 11:33:12Z mcorino $
+
+#ifndef SIMPLE_PROVIDER_IDL
+#define SIMPLE_PROVIDER_IDL
+
+#include "SimpleCommon.idl"
+#include "Components.idl"
+
+module Simple
+{
+  component SimpleProvider
+  {
+    provides Trigger trig_provides;
+  };
+
+  home SimpleProviderHome manages SimpleProvider
+  {
+  };
+};
+
+#endif /*SIMPLE_PROVIDER_IDL*/

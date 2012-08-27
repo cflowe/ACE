@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>CCM_stub_idl</ProjectName>
+    <ProjectGuid>{9AA865D7-FECA-1BAD-4334-FDEB7D589086}</ProjectGuid>
+    <RootNamespace>CCM_stub_idl</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\CCM_stub_idl_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\CCM_stub_idl_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\CCM_stub_idl_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\CCM_stub_idl_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;..\..\..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CCM_LW;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;CCM_LW;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..;..\..\..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/noentry %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..;..\..\..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;CCM_LW;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;CCM_LW;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..;..\..\..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalOptions>/noentry %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;..\..\..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;CCM_LW;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;CCM_LW;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..;..\..\..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/noentry /machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..;..\..\..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;CCM_LW;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;CCM_LW;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..;..\..\..;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/noentry /machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCM_lem_stub.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CCM_stub.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CCM_svnt.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CCM_Base.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci -Gxhst -Gxhsk &quot;CCM_Base.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Base.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_BaseC.cpp;CCM_BaseC.h;CCM_BaseS.h;CCM_Stub_Export.h;CCM_Svnt_Export.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci -Gxhst -Gxhsk &quot;CCM_Base.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Base.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_BaseC.cpp;CCM_BaseC.h;CCM_BaseS.h;CCM_Stub_Export.h;CCM_Svnt_Export.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci -Gxhst -Gxhsk &quot;CCM_Base.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Base.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_BaseC.cpp;CCM_BaseC.h;CCM_BaseS.h;CCM_Stub_Export.h;CCM_Svnt_Export.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci -Gxhst -Gxhsk &quot;CCM_Base.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Base.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_BaseC.cpp;CCM_BaseC.h;CCM_BaseS.h;CCM_Stub_Export.h;CCM_Svnt_Export.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Configurator.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Configurator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Configurator.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_ConfiguratorC.cpp;CCM_ConfiguratorC.h;CCM_ConfiguratorC.inl;CCM_ConfiguratorS.cpp;CCM_ConfiguratorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Configurator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Configurator.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_ConfiguratorC.cpp;CCM_ConfiguratorC.h;CCM_ConfiguratorC.inl;CCM_ConfiguratorS.cpp;CCM_ConfiguratorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Configurator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Configurator.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_ConfiguratorC.cpp;CCM_ConfiguratorC.h;CCM_ConfiguratorC.inl;CCM_ConfiguratorS.cpp;CCM_ConfiguratorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Configurator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Configurator.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_ConfiguratorC.cpp;CCM_ConfiguratorC.h;CCM_ConfiguratorC.inl;CCM_ConfiguratorS.cpp;CCM_ConfiguratorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Cookie.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Cookie.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Cookie.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_CookieC.cpp;CCM_CookieC.h;CCM_CookieC.inl;CCM_CookieS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Cookie.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Cookie.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_CookieC.cpp;CCM_CookieC.h;CCM_CookieC.inl;CCM_CookieS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Cookie.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Cookie.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_CookieC.cpp;CCM_CookieC.h;CCM_CookieC.inl;CCM_CookieS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Cookie.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Cookie.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_CookieC.cpp;CCM_CookieC.h;CCM_CookieC.inl;CCM_CookieS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Enumeration.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Enumeration.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Enumeration.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_EnumerationC.cpp;CCM_EnumerationC.h;CCM_EnumerationC.inl;CCM_EnumerationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Enumeration.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Enumeration.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_EnumerationC.cpp;CCM_EnumerationC.h;CCM_EnumerationC.inl;CCM_EnumerationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Enumeration.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Enumeration.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_EnumerationC.cpp;CCM_EnumerationC.h;CCM_EnumerationC.inl;CCM_EnumerationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Enumeration.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Enumeration.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_EnumerationC.cpp;CCM_EnumerationC.h;CCM_EnumerationC.inl;CCM_EnumerationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_EventBase.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_EventBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_EventBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_EventBaseC.cpp;CCM_EventBaseC.h;CCM_EventBaseC.inl;CCM_EventBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_EventBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_EventBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_EventBaseC.cpp;CCM_EventBaseC.h;CCM_EventBaseC.inl;CCM_EventBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_EventBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_EventBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_EventBaseC.cpp;CCM_EventBaseC.h;CCM_EventBaseC.inl;CCM_EventBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_EventBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_EventBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_EventBaseC.cpp;CCM_EventBaseC.h;CCM_EventBaseC.inl;CCM_EventBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_EventConsumerBase.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_EventConsumerBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_EventConsumerBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_EventConsumerBaseC.cpp;CCM_EventConsumerBaseC.h;CCM_EventConsumerBaseC.inl;CCM_EventConsumerBaseS.cpp;CCM_EventConsumerBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_EventConsumerBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_EventConsumerBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_EventConsumerBaseC.cpp;CCM_EventConsumerBaseC.h;CCM_EventConsumerBaseC.inl;CCM_EventConsumerBaseS.cpp;CCM_EventConsumerBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_EventConsumerBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_EventConsumerBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_EventConsumerBaseC.cpp;CCM_EventConsumerBaseC.h;CCM_EventConsumerBaseC.inl;CCM_EventConsumerBaseS.cpp;CCM_EventConsumerBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_EventConsumerBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_EventConsumerBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_EventConsumerBaseC.cpp;CCM_EventConsumerBaseC.h;CCM_EventConsumerBaseC.inl;CCM_EventConsumerBaseS.cpp;CCM_EventConsumerBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Events.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Events.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Events.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_EventsC.cpp;CCM_EventsC.h;CCM_EventsC.inl;CCM_EventsS.cpp;CCM_EventsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Events.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Events.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_EventsC.cpp;CCM_EventsC.h;CCM_EventsC.inl;CCM_EventsS.cpp;CCM_EventsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Events.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Events.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_EventsC.cpp;CCM_EventsC.h;CCM_EventsC.inl;CCM_EventsS.cpp;CCM_EventsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Events.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Events.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_EventsC.cpp;CCM_EventsC.h;CCM_EventsC.inl;CCM_EventsS.cpp;CCM_EventsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Exceptions.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;CCM_Exceptions.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Exceptions.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_ExceptionsC.cpp;CCM_ExceptionsC.h;CCM_ExceptionsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;CCM_Exceptions.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Exceptions.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_ExceptionsC.cpp;CCM_ExceptionsC.h;CCM_ExceptionsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;CCM_Exceptions.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Exceptions.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_ExceptionsC.cpp;CCM_ExceptionsC.h;CCM_ExceptionsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;CCM_Exceptions.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Exceptions.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_ExceptionsC.cpp;CCM_ExceptionsC.h;CCM_ExceptionsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Home.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Home.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Home.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_HomeC.cpp;CCM_HomeC.h;CCM_HomeC.inl;CCM_HomeS.cpp;CCM_HomeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Home.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Home.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_HomeC.cpp;CCM_HomeC.h;CCM_HomeC.inl;CCM_HomeS.cpp;CCM_HomeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Home.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Home.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_HomeC.cpp;CCM_HomeC.h;CCM_HomeC.inl;CCM_HomeS.cpp;CCM_HomeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Home.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Home.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_HomeC.cpp;CCM_HomeC.h;CCM_HomeC.inl;CCM_HomeS.cpp;CCM_HomeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_HomeConfiguration.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeConfiguration.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_HomeConfiguration.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_HomeConfigurationC.cpp;CCM_HomeConfigurationC.h;CCM_HomeConfigurationC.inl;CCM_HomeConfigurationS.cpp;CCM_HomeConfigurationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeConfiguration.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_HomeConfiguration.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_HomeConfigurationC.cpp;CCM_HomeConfigurationC.h;CCM_HomeConfigurationC.inl;CCM_HomeConfigurationS.cpp;CCM_HomeConfigurationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeConfiguration.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_HomeConfiguration.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_HomeConfigurationC.cpp;CCM_HomeConfigurationC.h;CCM_HomeConfigurationC.inl;CCM_HomeConfigurationS.cpp;CCM_HomeConfigurationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeConfiguration.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_HomeConfiguration.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_HomeConfigurationC.cpp;CCM_HomeConfigurationC.h;CCM_HomeConfigurationC.inl;CCM_HomeConfigurationS.cpp;CCM_HomeConfigurationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_HomeFinder.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeFinder.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_HomeFinder.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_HomeFinderC.cpp;CCM_HomeFinderC.h;CCM_HomeFinderC.inl;CCM_HomeFinderS.cpp;CCM_HomeFinderS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeFinder.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_HomeFinder.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_HomeFinderC.cpp;CCM_HomeFinderC.h;CCM_HomeFinderC.inl;CCM_HomeFinderS.cpp;CCM_HomeFinderS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeFinder.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_HomeFinder.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_HomeFinderC.cpp;CCM_HomeFinderC.h;CCM_HomeFinderC.inl;CCM_HomeFinderS.cpp;CCM_HomeFinderS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeFinder.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_HomeFinder.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_HomeFinderC.cpp;CCM_HomeFinderC.h;CCM_HomeFinderC.inl;CCM_HomeFinderS.cpp;CCM_HomeFinderS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Homes.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Homes.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Homes.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_HomesC.cpp;CCM_HomesC.h;CCM_HomesC.inl;CCM_HomesS.cpp;CCM_HomesS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Homes.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Homes.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_HomesC.cpp;CCM_HomesC.h;CCM_HomesC.inl;CCM_HomesS.cpp;CCM_HomesS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Homes.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Homes.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_HomesC.cpp;CCM_HomesC.h;CCM_HomesC.inl;CCM_HomesS.cpp;CCM_HomesS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Homes.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Homes.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_HomesC.cpp;CCM_HomesC.h;CCM_HomesC.inl;CCM_HomesS.cpp;CCM_HomesS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_KeylessCCMHome.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_KeylessCCMHome.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_KeylessCCMHome.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_KeylessCCMHomeC.cpp;CCM_KeylessCCMHomeC.h;CCM_KeylessCCMHomeC.inl;CCM_KeylessCCMHomeS.cpp;CCM_KeylessCCMHomeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_KeylessCCMHome.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_KeylessCCMHome.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_KeylessCCMHomeC.cpp;CCM_KeylessCCMHomeC.h;CCM_KeylessCCMHomeC.inl;CCM_KeylessCCMHomeS.cpp;CCM_KeylessCCMHomeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_KeylessCCMHome.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_KeylessCCMHome.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_KeylessCCMHomeC.cpp;CCM_KeylessCCMHomeC.h;CCM_KeylessCCMHomeC.inl;CCM_KeylessCCMHomeS.cpp;CCM_KeylessCCMHomeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_KeylessCCMHome.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_KeylessCCMHome.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_KeylessCCMHomeC.cpp;CCM_KeylessCCMHomeC.h;CCM_KeylessCCMHomeC.inl;CCM_KeylessCCMHomeS.cpp;CCM_KeylessCCMHomeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Navigation.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Navigation.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Navigation.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_NavigationC.cpp;CCM_NavigationC.h;CCM_NavigationC.inl;CCM_NavigationS.cpp;CCM_NavigationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Navigation.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Navigation.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_NavigationC.cpp;CCM_NavigationC.h;CCM_NavigationC.inl;CCM_NavigationS.cpp;CCM_NavigationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Navigation.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Navigation.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_NavigationC.cpp;CCM_NavigationC.h;CCM_NavigationC.inl;CCM_NavigationS.cpp;CCM_NavigationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Navigation.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Navigation.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_NavigationC.cpp;CCM_NavigationC.h;CCM_NavigationC.inl;CCM_NavigationS.cpp;CCM_NavigationS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Object.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Object.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Object.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_ObjectC.cpp;CCM_ObjectC.h;CCM_ObjectC.inl;CCM_ObjectS.cpp;CCM_ObjectS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Object.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Object.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_ObjectC.cpp;CCM_ObjectC.h;CCM_ObjectC.inl;CCM_ObjectS.cpp;CCM_ObjectS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Object.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Object.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_ObjectC.cpp;CCM_ObjectC.h;CCM_ObjectC.inl;CCM_ObjectS.cpp;CCM_ObjectS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Object.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Object.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_ObjectC.cpp;CCM_ObjectC.h;CCM_ObjectC.inl;CCM_ObjectS.cpp;CCM_ObjectS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_PrimaryKeyBase.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_PrimaryKeyBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_PrimaryKeyBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_PrimaryKeyBaseC.cpp;CCM_PrimaryKeyBaseC.h;CCM_PrimaryKeyBaseC.inl;CCM_PrimaryKeyBaseS.cpp;CCM_PrimaryKeyBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_PrimaryKeyBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_PrimaryKeyBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_PrimaryKeyBaseC.cpp;CCM_PrimaryKeyBaseC.h;CCM_PrimaryKeyBaseC.inl;CCM_PrimaryKeyBaseS.cpp;CCM_PrimaryKeyBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_PrimaryKeyBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_PrimaryKeyBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_PrimaryKeyBaseC.cpp;CCM_PrimaryKeyBaseC.h;CCM_PrimaryKeyBaseC.inl;CCM_PrimaryKeyBaseS.cpp;CCM_PrimaryKeyBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_PrimaryKeyBase.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_PrimaryKeyBase.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_PrimaryKeyBaseC.cpp;CCM_PrimaryKeyBaseC.h;CCM_PrimaryKeyBaseC.inl;CCM_PrimaryKeyBaseS.cpp;CCM_PrimaryKeyBaseS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_Receptacle.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Receptacle.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Receptacle.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_ReceptacleC.cpp;CCM_ReceptacleC.h;CCM_ReceptacleC.inl;CCM_ReceptacleS.cpp;CCM_ReceptacleS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Receptacle.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_Receptacle.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_ReceptacleC.cpp;CCM_ReceptacleC.h;CCM_ReceptacleC.inl;CCM_ReceptacleS.cpp;CCM_ReceptacleS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Receptacle.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Receptacle.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_ReceptacleC.cpp;CCM_ReceptacleC.h;CCM_ReceptacleC.inl;CCM_ReceptacleS.cpp;CCM_ReceptacleS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Receptacle.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_Receptacle.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_ReceptacleC.cpp;CCM_ReceptacleC.h;CCM_ReceptacleC.inl;CCM_ReceptacleS.cpp;CCM_ReceptacleS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="CCM_StandardConfigurator.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_StandardConfigurator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_StandardConfigurator.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CCM_StandardConfiguratorC.cpp;CCM_StandardConfiguratorC.h;CCM_StandardConfiguratorC.inl;CCM_StandardConfiguratorS.cpp;CCM_StandardConfiguratorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_StandardConfigurator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on CCM_StandardConfigurator.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CCM_StandardConfiguratorC.cpp;CCM_StandardConfiguratorC.h;CCM_StandardConfiguratorC.inl;CCM_StandardConfiguratorS.cpp;CCM_StandardConfiguratorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_StandardConfigurator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on CCM_StandardConfigurator.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CCM_StandardConfiguratorC.cpp;CCM_StandardConfiguratorC.h;CCM_StandardConfiguratorC.inl;CCM_StandardConfiguratorS.cpp;CCM_StandardConfiguratorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_StandardConfigurator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on CCM_StandardConfigurator.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CCM_StandardConfiguratorC.cpp;CCM_StandardConfiguratorC.h;CCM_StandardConfiguratorC.inl;CCM_StandardConfiguratorS.cpp;CCM_StandardConfiguratorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="Components.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;Components.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on Components.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ComponentsC.cpp;ComponentsC.h;ComponentsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;Components.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on Components.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ComponentsC.cpp;ComponentsC.h;ComponentsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;Components.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on Components.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ComponentsC.cpp;ComponentsC.h;ComponentsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;Components.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on Components.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ComponentsC.cpp;ComponentsC.h;ComponentsS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

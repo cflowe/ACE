@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: Bug_3559_Regression_Test.mpc 84251 2009-01-28 10:17:46Z msmit $
+
+project(*Server): taoserver {
+  Source_Files {
+    Bug_3559_Regression_Test.cpp
+  }
+}

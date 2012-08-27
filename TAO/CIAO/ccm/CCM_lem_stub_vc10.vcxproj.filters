@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-34B9-29EF7D589086}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-34B9-29EF7D589086}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-34B9-29EF7D589086}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-34B9-29EF7D589086}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CCM_CCMExceptionC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_ContextC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_EnterpriseComponentC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_HomeExecutorBaseC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SecurityC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CCM_CCMExceptionC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_CCMExceptionS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ContextC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ContextS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EnterpriseComponentC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EnterpriseComponentS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomeExecutorBaseC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomeExecutorBaseS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_LEM_Stub_Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SecurityC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SecurityS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCM_lem_stub.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CCM_stub.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CCM_svnt.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCM_EnterpriseComponentC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_HomeExecutorBaseC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

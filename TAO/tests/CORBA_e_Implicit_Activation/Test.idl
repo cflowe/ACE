@@ -1,0 +1,12 @@
+//
+// $Id: Test.idl 77697 2007-03-13 17:32:43Z elliott_c $
+//
+
+/// Put the interfaces in a module, to avoid global namespace pollution
+module Test
+{
+  /// A very simple interface
+  interface Hello
+  {
+  };
+};

@@ -1,0 +1,6 @@
+// $Id: test.idl 35036 2000-09-13 07:35:41Z irfan $
+
+interface test
+{
+  void destroy_poa ();
+};

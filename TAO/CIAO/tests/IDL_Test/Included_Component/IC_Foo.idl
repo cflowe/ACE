@@ -1,0 +1,14 @@
+// $Id: IC_Foo.idl 88671 2010-01-22 15:03:22Z msmit $
+#ifndef IC_Foo_IDL
+#define IC_Foo_IDL
+
+#include <Components.idl>
+
+#pragma ciao lem "IC_FooE.idl"
+
+component Foo
+{
+};
+
+
+#endif

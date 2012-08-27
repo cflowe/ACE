@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: Bug_3171_Regression.mpc 80302 2007-12-18 10:46:59Z johnnyw $
+
+project(*Server): taoserver, valuetype, messaging, utils, threads {
+  Source_Files {
+    server.cpp
+  }
+}
+

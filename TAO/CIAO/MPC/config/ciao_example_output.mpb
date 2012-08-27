@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: ciao_example_output.mpb 86435 2009-08-09 20:22:50Z wotte $
+
+project {
+  libout = ../lib
+}

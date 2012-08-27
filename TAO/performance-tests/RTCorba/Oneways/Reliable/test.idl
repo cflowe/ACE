@@ -1,0 +1,15 @@
+//
+// $Id: test.idl 30204 1999-12-16 08:33:11Z irfan $
+//
+
+interface Test
+{
+  typedef sequence<octet> data;
+  oneway void oneway_payload_test (in data d);
+
+  oneway void oneway_work_test (in unsigned long work);
+
+  void twoway_work_test (in unsigned long work);
+
+  oneway void shutdown ();
+};

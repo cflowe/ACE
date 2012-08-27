@@ -1,0 +1,10 @@
+/*
+ * $Id: SLevel1_Test.idl 40857 2001-07-24 14:58:57Z parsons $
+ */
+
+interface SLevel1_Server
+{
+  boolean authorize_level1 ();
+
+  boolean authorize_level2 ();
+};

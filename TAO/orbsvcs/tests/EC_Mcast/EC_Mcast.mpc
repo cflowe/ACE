@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: EC_Mcast.mpc 66045 2005-05-23 11:08:09Z jwillemsen $
+
+project(EC_Mcast): rteventexe, rtevent_serv, messaging {
+  exename  = EC_Mcast
+}

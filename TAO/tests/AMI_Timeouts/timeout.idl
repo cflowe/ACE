@@ -1,0 +1,22 @@
+
+//=============================================================================
+/**
+ *  @file    timeout.idl
+ *
+ *  $Id: timeout.idl 93677 2011-03-29 12:36:41Z johnnyw $
+ *
+ *  Interface of the test CORBA object.
+ *
+ *
+ *  @author Michael Kircher <Michael.Kircher@mchp.siemens.de>
+ */
+//=============================================================================
+
+
+
+interface TimeoutObj {
+
+  void sendTimeToWait (in long msec);
+
+  oneway void shutdown ();
+};

@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<!-- Converted from ./tests/AMI/muxed.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  -->
+ <!--  $Id: muxed.conf.xml 94649 2011-10-07 07:54:59Z msmit $ -->
+ <!--  -->
+ <static id="Client_Strategy_Factory" params="-ORBTransportMuxStrategy MUXED -ORBClientConnectionHandler ST"/>
+</ACE_Svc_Conf>

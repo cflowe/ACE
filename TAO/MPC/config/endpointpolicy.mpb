@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: endpointpolicy.mpb 95392 2011-12-29 13:37:56Z johnnyw $
+
+project : taolib, portableserver, pi, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  after   += EndpointPolicy
+  libs    += TAO_EndpointPolicy
+}

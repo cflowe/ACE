@@ -1,0 +1,11 @@
+// -*- MPC -*-
+// $Id: Register_ORBInitializer.mpc 95374 2011-12-20 13:56:53Z msmit $
+
+project(*Server): taoserver, pi, interceptors, avoids_corba_e_micro {
+  Source_Files {
+    test_i.cpp
+    Server_ORBInitializer.cpp
+    server.cpp
+  }
+}
+

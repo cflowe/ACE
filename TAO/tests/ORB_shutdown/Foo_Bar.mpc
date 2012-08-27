@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Foo_Bar.mpc 63168 2005-01-07 19:23:34Z jwillemsen $
+
+project(ORB Shutdown Server): taoserver {
+  Source_Files {
+    Foo_Bar.cpp
+    server.cpp
+  }
+}
+

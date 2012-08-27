@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: dance_deployment_skel.mpb 91659 2010-09-08 15:05:08Z wotte $
+
+project : dance_deployment_stub, portableserver  {
+  after += Deployment_skel
+  libs  += DAnCE_Deployment_skel
+  idlflags += -I$(DANCE_ROOT)
+}

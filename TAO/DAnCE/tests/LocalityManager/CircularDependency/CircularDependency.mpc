@@ -1,0 +1,10 @@
+// $Id: CircularDependency.mpc 93890 2011-04-13 13:54:48Z mitza $
+project(CircularDependency) : dance_skel, dance_lib {
+  libout = .
+  dynamicflags += CIRCULARDEPENDENCY_BUILD_DLL
+
+  Source_Files {
+    Handler_A.cpp
+    Handler_B.cpp
+  }
+}

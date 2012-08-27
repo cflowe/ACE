@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ciao.mpb 94802 2011-10-20 09:46:10Z mcorino $
+
+project: ccm_direct_collocation {
+  includes += $(CIAO_ROOT)
+  libpaths += $(ACE_ROOT)/lib
+}

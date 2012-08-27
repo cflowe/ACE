@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AnyTypeCode.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="extra_anytypecode.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AnySeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Bounds.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dynamic.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dynamic_Parameter.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ValueModifier.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Visibility.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

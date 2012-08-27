@@ -1,0 +1,4 @@
+// $Id: Control.mpc 79084 2007-07-30 13:13:45Z elliott_c $
+project: notification_mc {
+  exename = Control
+}

@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: tao_notify_service.mpb 87253 2009-10-28 23:29:32Z dai_y $
+
+project : orbsvcslib, notification_serv, notification_serv, naming, iortable, messaging_optional, valuetype, svc_utils, notify_monitor_control{
+  after     += TAO_Notify_Service
+  libs      += TAO_Notify_Service
+  tagchecks += Notify
+}

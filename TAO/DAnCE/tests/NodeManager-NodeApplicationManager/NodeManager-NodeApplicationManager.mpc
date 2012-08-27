@@ -1,0 +1,9 @@
+// $Id: NodeManager-NodeApplicationManager.mpc 90933 2010-06-29 13:11:57Z johnnyw $
+
+project : dance, dance_nodemanager_stub, dance_logger {
+  exename   = NodeManagerNodeApplicationManagerTest
+
+  Source_Files {
+    test.cpp
+  }
+}

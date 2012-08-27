@@ -1,0 +1,36 @@
+// -*- MPC -*-
+// $Id: Bug_3837_Regression.mpc 89571 2010-03-22 15:10:36Z vzykov $
+
+project(*idl): taoidldefaults {
+  idlflags += -Sp
+  IDL_Files {
+    Test.idl
+  }
+  custom_only = 1
+}
+
+project(*Server): taoserver {
+  after += *idl
+  Source_Files {
+    Hello.cpp
+    server.cpp
+  }
+  Source_Files {
+    TestC.cpp
+    TestS.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client): taoclient {
+  after += *idl
+  Source_Files {
+    client.cpp
+  }
+  Source_Files {
+    TestC.cpp
+  }
+  IDL_Files {
+  }
+}

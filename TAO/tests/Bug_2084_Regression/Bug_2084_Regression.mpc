@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Bug_2084_Regression.mpc 69085 2005-10-31 12:57:55Z jwillemsen $
+
+project(*Server): taoserver {
+  exename = server
+}

@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: rt_client.mpb 78745 2007-07-03 06:50:58Z johnnyw $
+
+project : taoexe, negotiate_codesets, rtcorba {
+  exename = client
+}

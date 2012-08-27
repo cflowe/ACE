@@ -1,0 +1,5 @@
+// $Id: test.idl 32874 2000-05-29 20:04:52Z irfan $
+
+interface test
+{
+};

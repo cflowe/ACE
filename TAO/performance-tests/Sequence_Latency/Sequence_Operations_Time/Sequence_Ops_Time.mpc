@@ -1,0 +1,25 @@
+// -*- MPC -*-
+// $Id: Sequence_Ops_Time.mpc 93776 2011-04-06 13:23:21Z mesnier_p $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    sequence.idl
+  }
+  custom_only = 1
+}
+
+
+project(*Test): taoexe {
+  after += *idl
+  exename = test
+
+  Source_Files {
+    test.cpp
+  }
+  Source_Files {
+    sequenceC.cpp
+  }
+  IDL_Files {
+  }
+}
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-207F-2CC32940B6A4}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-207F-2CC32940B6A4}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProcessColocation.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Progressive.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleAttribute.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleCommon.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleConsumer.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleEmitter.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleFailure.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleLocalProvider.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleLocalUser.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleMultipleUser.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleNilFacetProvider.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleNilFacetUser.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleNull.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleProvider.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimplePublisher.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SimpleUser.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="SimpleUserE.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

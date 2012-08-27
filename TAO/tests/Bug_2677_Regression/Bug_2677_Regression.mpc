@@ -1,0 +1,16 @@
+// $Id: Bug_2677_Regression.mpc 77891 2007-04-03 18:30:33Z elliott_c $
+
+project(*server): taoserver {
+  Source_Files {
+    server.cpp
+  }
+}
+
+project: portableserver {
+  sharedname = Bug_2677_Regression
+  dynamicflags += BUG_2677_REGRESSION_BUILD_DLL
+
+  Source_Files {
+    DllORB.cpp
+  }
+}

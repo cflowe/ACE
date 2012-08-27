@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="AMI_GetComp_idl_gen"
+	ProjectGUID="{21D45E7A-FECA-1BAD-59A2-CB436170F6F7}"
+	RootNamespace="AMI_GetComp_idl_gen"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\AMI_GetComp_idl_gen_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\AMI_GetComp_idl_gen_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\AMI_GetComp_idl_gen_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\AMI_GetComp_idl_gen_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="GetComp.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="GetComp.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on GetComp.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -GC -Wb,stub_export_macro=GETCOMP_T_STUB_Export -Wb,stub_export_include=GetComp_stub_export.h -Wb,skel_export_macro=GETCOMP_T_SKEL_Export -Wb,skel_export_include=GetComp_skel_export.h -Wb,conn_export_macro=GETCOMP_T_CONN_Export -Wb,conn_export_include=GetComp_conn_export.h -Wb,exec_export_macro=GETCOMP_T_EXEC_Export -Wb,exec_export_include=GetComp_exec_export.h -I.. -GM -Gxhcn &quot;GetComp.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="GetComp_conn_export.h;GetComp_exec_export.h;GetComp_skel_export.h;GetComp_stub_export.h;GetComp_svnt.cpp;GetComp_svnt.h;GetComp_svnt_T.cpp;GetComp_svnt_T.h;GetCompA.idl;GetCompC.cpp;GetCompC.h;GetCompC.inl;GetCompE.idl;GetCompS.cpp;GetCompS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on GetComp.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -GC -Wb,stub_export_macro=GETCOMP_T_STUB_Export -Wb,stub_export_include=GetComp_stub_export.h -Wb,skel_export_macro=GETCOMP_T_SKEL_Export -Wb,skel_export_include=GetComp_skel_export.h -Wb,conn_export_macro=GETCOMP_T_CONN_Export -Wb,conn_export_include=GetComp_conn_export.h -Wb,exec_export_macro=GETCOMP_T_EXEC_Export -Wb,exec_export_include=GetComp_exec_export.h -I.. -GM -Gxhcn &quot;GetComp.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="GetComp_conn_export.h;GetComp_exec_export.h;GetComp_skel_export.h;GetComp_stub_export.h;GetComp_svnt.cpp;GetComp_svnt.h;GetComp_svnt_T.cpp;GetComp_svnt_T.h;GetCompA.idl;GetCompC.cpp;GetCompC.h;GetCompC.inl;GetCompE.idl;GetCompS.cpp;GetCompS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on GetComp.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -GC -Wb,stub_export_macro=GETCOMP_T_STUB_Export -Wb,stub_export_include=GetComp_stub_export.h -Wb,skel_export_macro=GETCOMP_T_SKEL_Export -Wb,skel_export_include=GetComp_skel_export.h -Wb,conn_export_macro=GETCOMP_T_CONN_Export -Wb,conn_export_include=GetComp_conn_export.h -Wb,exec_export_macro=GETCOMP_T_EXEC_Export -Wb,exec_export_include=GetComp_exec_export.h -I.. -GM -Gxhcn &quot;GetComp.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="GetComp_conn_export.h;GetComp_exec_export.h;GetComp_skel_export.h;GetComp_stub_export.h;GetComp_svnt.cpp;GetComp_svnt.h;GetComp_svnt_T.cpp;GetComp_svnt_T.h;GetCompA.idl;GetCompC.cpp;GetCompC.h;GetCompC.inl;GetCompE.idl;GetCompS.cpp;GetCompS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on GetComp.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -GC -Wb,stub_export_macro=GETCOMP_T_STUB_Export -Wb,stub_export_include=GetComp_stub_export.h -Wb,skel_export_macro=GETCOMP_T_SKEL_Export -Wb,skel_export_include=GetComp_skel_export.h -Wb,conn_export_macro=GETCOMP_T_CONN_Export -Wb,conn_export_include=GetComp_conn_export.h -Wb,exec_export_macro=GETCOMP_T_EXEC_Export -Wb,exec_export_include=GetComp_exec_export.h -I.. -GM -Gxhcn &quot;GetComp.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="GetComp_conn_export.h;GetComp_exec_export.h;GetComp_skel_export.h;GetComp_stub_export.h;GetComp_svnt.cpp;GetComp_svnt.h;GetComp_svnt_T.cpp;GetComp_svnt_T.h;GetCompA.idl;GetCompC.cpp;GetCompC.h;GetCompC.inl;GetCompE.idl;GetCompS.cpp;GetCompS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

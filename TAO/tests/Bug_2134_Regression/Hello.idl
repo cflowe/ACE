@@ -1,0 +1,7 @@
+// $Id: Hello.idl 71148 2006-02-21 17:59:46Z smcqueen $
+
+module Test {
+    interface Hello {
+        void say_hello();
+    };
+};

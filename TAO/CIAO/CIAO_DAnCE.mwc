@@ -1,0 +1,10 @@
+//$Id: CIAO_DAnCE.mwc 95323 2011-12-14 12:37:01Z msmit $
+
+workspace {
+  ccm
+  ciao
+  $(DANCE_ROOT)
+  exclude {
+    $(DANCE_ROOT)/tests
+  }
+}

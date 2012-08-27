@@ -1,0 +1,4 @@
+// $Id: monitor.mpc 81499 2008-04-28 17:58:17Z johnnyw $
+project (mc_monitor_example): notification_mc {
+  exename = monitor
+}

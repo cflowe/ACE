@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: event.mpb 75850 2006-12-06 08:36:30Z johnnyw $
+
+project : orbsvcslib, ec_use_typed_events, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  after     += CosEvent
+  libs      += TAO_CosEvent
+  tagchecks += CosEvent
+}

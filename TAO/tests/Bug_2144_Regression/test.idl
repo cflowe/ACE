@@ -1,0 +1,17 @@
+//
+// $Id: test.idl 75478 2006-11-22 13:58:29Z jtc $
+//
+module Test
+{
+   enum Selector { STRUCTTYPE, VALTYPE };
+
+   struct Foo { long l; } ;
+
+   valuetype Bar { public short s; } ;
+
+   union MyUnion switch (Selector)
+   {
+      case STRUCTTYPE: Foo fooData;
+      case VALTYPE: Bar barData;
+   };
+};

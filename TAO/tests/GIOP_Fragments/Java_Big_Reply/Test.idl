@@ -1,0 +1,18 @@
+//$Id: Test.idl 63330 2005-01-19 14:27:41Z elliott_c $
+module Test
+{
+
+  typedef sequence<octet> Octet_Seq;
+
+  interface Big_Reply
+    {
+      /// Receive a big reply
+      Octet_Seq get_big_reply ();
+
+      /// Ping message
+      void ping ();
+
+      /// Shudown the remote ORB
+      oneway void shutdown ();
+    };
+};

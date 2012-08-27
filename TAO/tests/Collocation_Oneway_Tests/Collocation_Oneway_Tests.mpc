@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Collocation_Oneway_Tests.mpc 67454 2005-08-08 10:40:09Z jwillemsen $
+
+project(*): taoserver, messaging, valuetype {
+  exename = Collocated_Test
+}

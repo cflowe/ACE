@@ -1,0 +1,9 @@
+// $Id: Bug_3531b_Regression.mpc 94930 2011-11-02 08:35:59Z mcorino $
+
+project(*Server): taoserver {
+  after += *idl
+  Source_Files {
+    server.cpp
+  }
+}
+

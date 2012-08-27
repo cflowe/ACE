@@ -1,0 +1,15 @@
+// $Id: CCM_Base.idl 90008 2010-04-26 14:57:50Z johnnyw $
+// Compliant to OMG 06-04-01, section 6.6.8
+
+#if !defined (CCM_BASE_IDL)
+#define CCM_BASE_IDL
+
+module Components
+{
+  typeprefix Components "omg.org";
+
+  exception InvalidConnection {};
+  exception AlreadyConnected {};
+  exception NoConnection {};
+};
+#endif /* CCM_BASE_IDL */

@@ -1,0 +1,12 @@
+// $Id: callback.idl 83358 2008-10-21 23:02:02Z sowayaa $
+
+interface Callback
+{
+  // A safe way to shutdown the client, using either clean shutdowns
+  // or "catastrophic failures".
+  oneway void shutdown();
+
+  // A simple remote call
+  void callback_method();
+};
+

@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_deployment_scheduler.mpb 90929 2010-06-29 11:31:45Z johnnyw $
+
+project : dance_skel, dance_logger, dance_completion_counter {
+   after += DAnCE_Deployment_Scheduler
+   libs += DAnCE_Deployment_Scheduler
+}

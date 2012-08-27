@@ -1,0 +1,8 @@
+// $Id: Fault_Notifier.mpc 91922 2010-09-22 11:53:07Z msmit $
+project : taoserver, orbsvcsexe, install, fault_tolerance, notification_serv {
+  exename  = tao_fault_notifier
+  Source_Files {
+    FT_Notifier_i.cpp
+    Fault_Notifier_Main.cpp
+  }
+}

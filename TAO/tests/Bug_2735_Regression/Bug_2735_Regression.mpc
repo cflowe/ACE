@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: Bug_2735_Regression.mpc 77858 2007-03-30 13:50:46Z elliott_c $
+
+project: taoserver {
+}

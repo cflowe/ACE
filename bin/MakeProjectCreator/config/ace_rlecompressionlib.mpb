@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ace_rlecompressionlib.mpb 95548 2012-02-23 08:21:34Z johnnyw $
+
+project : ace_compressionlib {
+    libs    += ACE_RLECompression
+    after   += ACE_RLECompression
+}

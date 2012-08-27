@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Collocation_Excep_Test.mpc 67525 2005-08-10 11:44:10Z jwillemsen $
+
+project(*): taoserver {
+  exename = Collocated_Test
+}

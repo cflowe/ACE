@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ciao_logger.mpb 90929 2010-06-29 11:31:45Z johnnyw $
+
+project : ciao, acelib {
+  after += CIAO_Logger
+  libs  += CIAO_Logger
+}

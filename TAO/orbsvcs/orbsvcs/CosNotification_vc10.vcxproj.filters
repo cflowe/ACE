@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-A7B3-C0B20000505F}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-A7B3-C0B20000505F}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-A7B3-C0B20000505F}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-A7B3-C0B20000505F}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-A7B3-C0B20000505F}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{5635C877-FECA-1BAD-A7B3-C0B20000505F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{502A2050-FECA-1BAD-A7B3-C0B20000505F}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CosNotificationC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CosNotifyChannelAdminC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CosNotifyCommC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CosNotifyFilterC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CosNotifyFilterExtC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Event_ForwarderC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Notify_Extensions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NotifyExtC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CosNotificationC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CosNotifyChannelAdminC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CosNotifyCommC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CosNotifyFilterC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CosNotifyFilterExtC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Event_ForwarderC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Admin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\AdminProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\AllocTracker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Bit_Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Buffering_Strategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Builder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Consumer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Consumer_Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\ConsumerAdmin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Container_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\CosNotify_Initializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\CosNotify_Service.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Default_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Delivery_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\ETCL_Filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\ETCL_FilterFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Event_Manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Event_Map_Entry_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Event_Map_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Event_Persistence_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Event_Persistence_Strategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\EventChannel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\EventChannelFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\EventType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\EventTypeSeq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\FilterAdmin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\FilterFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Find_Worker_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\ID_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Method_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Method_Request_Dispatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Method_Request_Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Method_Request_Lookup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Method_Request_Shutdown.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Method_Request_Updates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Method_Request_Updates_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Name_Value_Pair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Notify_Constraint_Interpreter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Notify_Constraint_Visitors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Notify_Default_CO_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Notify_Default_Collection_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Notify_Default_EMO_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Notify_Default_POA_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Notify_EventChannelFactory_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\notify_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Notify_Extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\notify_persist_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\notify_serv_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\notify_skel_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Peer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Persistent_File_Allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\POA_Helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Properties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Property.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Property_Boolean.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Property_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\PropertySeq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Proxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Proxy_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\ProxyConsumer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\ProxyConsumer_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\ProxySupplier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\ProxySupplier_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\QoSProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Random_File.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Reactive_Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Reconnect_Worker_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Reconnection_Registry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Refcountable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Refcountable_Guard_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Routing_Slip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Routing_Slip_Persistence_Manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Routing_Slip_Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\RT_Builder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\RT_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\rt_notify_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\RT_Notify_Service.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\RT_POA_Helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\RT_Properties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Save_Persist_Worker_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Seq_Worker_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Service.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Standard_Event_Persistence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Subscription_Change_Worker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Supplier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Supplier_Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\SupplierAdmin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\ThreadPool_Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Timer_Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Timer_Reactor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Topology_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Topology_Loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Topology_Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Topology_Saver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Validate_Client_Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Validate_Worker_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\Worker_Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\XML_Loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\XML_Saver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Notify\XML_Topology_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NotifyExtC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AV.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosConcurrency.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLifeCycle.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLoadBalancing.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="cosnaming_serv_persistence.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNotification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosProperty.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTime.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTrading.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsNotifyLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_idl.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_serv.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_skel.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FaultTolerance.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FTORB.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtRtEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="HTIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="IFRService.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="orbsvcs.mwc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="PortableGroup.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RT_Notification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTCORBAEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTKokyuEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSched.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSchedEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Security.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SSLIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ssliop_params_dup.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Svc_Utils.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_CosNotification.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CosNotificationC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CosNotifyChannelAdminC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CosNotifyCommC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CosNotifyFilterC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CosNotifyFilterExtC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Event_ForwarderC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Notify\Container_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Notify\Event_Map_Entry_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Notify\Event_Map_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Notify\Find_Worker_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Notify\Method_Request_Updates_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Notify\Property_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Notify\Refcountable_Guard_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Notify\Seq_Worker_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="NotifyExtC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Notify\Container_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Event_Map_Entry_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Event_Map_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Find_Worker_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Method_Request_Updates_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Property_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Proxy_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\ProxyConsumer_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\ProxySupplier_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Reconnect_Worker_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Refcountable_Guard_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Save_Persist_Worker_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Seq_Worker_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notify\Validate_Worker_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CosNotification.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

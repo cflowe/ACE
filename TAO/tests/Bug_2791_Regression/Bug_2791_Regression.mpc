@@ -1,0 +1,17 @@
+// -*- MPC -*-
+// $Id: Bug_2791_Regression.mpc 78908 2007-07-16 13:51:00Z mesnier_p $
+
+
+project (*client) : taoclient, valuetype {
+
+   IDL_Files {
+      Message.idl
+   }
+
+   Source_Files {
+      MessageC.cpp
+      Message_i.cpp
+      MessageFactory.cpp
+      client.cpp
+   }
+}

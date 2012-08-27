@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: valuetype_out_indirection.mpb 87936 2009-12-04 23:21:00Z dai_y $
+
+feature(valuetype_out_indirection) {
+  macros += TAO_HAS_VALUETYPE_OUT_INDIRECTION
+}

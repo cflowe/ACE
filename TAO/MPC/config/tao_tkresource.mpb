@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: tao_tkresource.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project: acelib, ace_tkreactor {
+  requires += tao_tkresource
+  after    += TAO_TkResource
+  libs     += TAO_TkResource
+}

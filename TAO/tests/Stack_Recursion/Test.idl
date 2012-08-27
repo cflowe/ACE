@@ -1,0 +1,24 @@
+//
+// $Id: Test.idl 45718 2002-07-25 02:34:56Z bala $
+//
+
+module Test
+{
+  typedef sequence<octet> Payload;
+
+  interface Sender {
+
+    /// Receive a big payload
+    boolean get_data (in unsigned long size,
+                      out Payload the_payload);
+
+    /// Return the number of messages received so far
+    long get_event_count ();
+
+    /// Simple ping to the server
+    void ping ();
+
+    /// A method to shutdown the ORB
+    oneway void shutdown ();
+  };
+};

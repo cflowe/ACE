@@ -1,0 +1,22 @@
+// $Id: Perf_Keyed_Test_Receiver.idl 95809 2012-06-03 17:56:00Z johnnyw $
+
+/**
+ * @file
+ * @author Marcel Smit (msmit@remedy.nl)
+ */
+
+#ifndef RECEIVER_IDL
+#define RECEIVER_IDL
+
+#include "Connector/Perf_Keyed_Test_Connector.idl"
+
+module Perf_Keyed_Test
+{
+  component Receiver
+  {
+    port CCM_DDS::PerfKeyedTest::DDS_Listen info_listen;
+    port CCM_DDS::PerfKeyedTest::DDS_Write write_ping;
+  };
+};
+
+#endif

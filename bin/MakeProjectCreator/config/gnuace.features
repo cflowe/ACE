@@ -1,0 +1,9 @@
+// $Id: gnuace.features 93963 2011-04-20 11:30:22Z johnnyw $
+
+ssl=1
+qt4=1
+fl=1
+tk=1
+xt=1
+sctp=1
+

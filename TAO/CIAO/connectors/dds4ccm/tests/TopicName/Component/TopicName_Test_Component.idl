@@ -1,0 +1,20 @@
+// $Id: TopicName_Test_Component.idl 95809 2012-06-03 17:56:00Z johnnyw $
+
+/**
+ * @author Marcel Smit (msmit@remedy.nl)
+ */
+
+#ifndef COMPONENT_IDL
+#define COMPONENT_IDL
+
+#include "Connector/TopicName_Test_Connector.idl"
+
+module TopicName_Test
+{
+  component TopicNameTestComponent
+  {
+    port TopicNameTestConnector::DDS_Write info_write;
+  };
+};
+
+#endif

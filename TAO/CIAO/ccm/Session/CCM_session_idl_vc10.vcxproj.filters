@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-18E4-0F47D87CCF1A}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-18E4-0F47D87CCF1A}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCM_session.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CCM_SessionComponent.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CCM_SessionContext.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CCM_SessionSynchronization.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

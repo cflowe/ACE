@@ -1,0 +1,24 @@
+// $Id: Diamond.idl 29809 1999-11-22 23:24:03Z kirthika $
+
+module Diamond
+{
+  interface Top
+    {
+      string shape ();
+    };
+
+  interface Left : Top
+    {
+      string color ();
+    };
+
+  interface Right : Top
+    {
+      long width ();
+    };
+
+  interface Buttom : Left, Right
+    {
+      string name ();
+    };
+};

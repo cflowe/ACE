@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Agent.mpc 95491 2012-01-24 13:51:36Z johnnyw $
+
+project : rmcast, orbsvcsexe, notification, notification_skel, notification_serv, typecodefactory {
+  exename = agent
+  after += Gate
+  libs += Gate
+  libpaths += ../Gate/.
+  includes += ..
+}

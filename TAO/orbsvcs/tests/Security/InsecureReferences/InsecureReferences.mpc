@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: InsecureReferences.mpc 77795 2007-03-24 23:42:05Z mesnier_p $
+
+project(*test): taoserver, orbsvcslib, security, ssliop, pi_server, codecfactory, interceptors { 
+  exename = test
+  Source_Files {
+    test.cpp
+  }
+}

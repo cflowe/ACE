@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: tao_monitor.mpb 81662 2008-05-09 12:27:11Z parsons $
+
+project : portableserver, tao_etcl, ace_mc {
+  after    += TAO_Monitor
+  libs     += TAO_Monitor
+}

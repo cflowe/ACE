@@ -1,0 +1,6 @@
+// $Id: test.idl 56601 2004-03-25 12:44:38Z elliott_c $
+
+module Arch_Idl {
+  interface Monitorable {
+  };
+};

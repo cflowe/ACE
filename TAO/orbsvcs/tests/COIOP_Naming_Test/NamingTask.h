@@ -1,0 +1,27 @@
+// $Id: NamingTask.h 82903 2008-10-01 19:22:10Z johnnyw $
+
+#ifndef NAMINGTASK_H
+#define NAMINGTASK_H
+
+#include "tao/corba.h"
+#include "ace/Task.h"
+#include "orbsvcs/CosNamingC.h"
+#include "ace/Synch_Traits.h"
+
+class NamingTask : public ACE_Task_Base
+{
+public:
+  NamingTask (const char* orbname, int argc, ACE_TCHAR** argv);
+  virtual int svc();
+  void waitInit ();
+  void end();
+
+  CosNaming::NamingContext_ptr root (void) const;
+
+private:
+  CORBA::ORB_var orb_;
+  bool initialized_;
+  CosNaming::NamingContext_var root_;
+};
+
+#endif

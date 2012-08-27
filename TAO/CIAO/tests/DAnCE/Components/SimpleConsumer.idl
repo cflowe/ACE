@@ -1,0 +1,23 @@
+// $Id: SimpleConsumer.idl 93359 2011-02-11 11:33:12Z mcorino $
+
+#ifndef SIMPLE_CONSUMER_IDL
+#define SIMPLE_CONSUMER_IDL
+
+#include "SimpleCommon.idl"
+#include <Components.idl>
+
+module Simple
+{
+  component SimpleConsumer
+  {
+#if !defined (CCM_NOEVENT)
+    consumes Hello hello_consumes;
+#endif
+  };
+
+  home SimpleConsumerHome manages SimpleConsumer
+  {
+  };
+};
+
+#endif /*SIMPLE_CONSUMER_IDL*/

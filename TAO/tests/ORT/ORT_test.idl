@@ -1,0 +1,27 @@
+// -*- IDL -*-
+
+//=============================================================================
+/**
+ * @file   ORT_test.idl
+ *
+ * $Id: ORT_test.idl 46926 2002-10-26 05:12:23Z ossama $
+ *
+ * @author Priyanka Gontla <gontla_p@ociweb.com>
+ */
+//=============================================================================
+
+
+#ifndef ORT_TEST_IDL
+#define ORT_TEST_IDL
+
+module ObjectReferenceTemplate
+{
+  interface ORT_test
+  {
+    boolean request_server ();
+
+    oneway void shutdown ();
+  };
+};
+
+#endif  /* ORT_TEST_IDL */

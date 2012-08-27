@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: avoids_minimum_corba.mpb 75891 2006-12-07 09:54:53Z johnnyw $
+
+feature(minimum_corba) {
+  avoids += minimum_corba
+}

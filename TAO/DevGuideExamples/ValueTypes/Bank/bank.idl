@@ -1,0 +1,15 @@
+// $Id: bank.idl 83358 2008-10-21 23:02:02Z sowayaa $
+
+valuetype Person {
+
+  public string name;
+  public long   balance;
+
+  factory create(in string name);
+
+  void debit(in long amt);
+};
+
+interface Transaction {
+  long update(in Person p);
+};

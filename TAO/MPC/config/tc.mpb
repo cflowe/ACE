@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: tc.mpb 76509 2007-01-18 00:36:05Z iliyan $
+
+project: taolib_with_idl, interceptors, pi {
+  requires += transport_current
+  after    += TC
+  libs     += TAO_TC
+}

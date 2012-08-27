@@ -1,0 +1,9 @@
+// $Id: Time_Conversion.mpc 89224 2010-02-25 08:34:51Z johnnyw $
+
+project(DDS_TimeConversion) : taoexe, dds4ccm_base {
+  includes += $(CIAO_ROOT)
+  exename = TimeConversion
+  Source_Files {
+    time_conversion.cpp
+  }
+}

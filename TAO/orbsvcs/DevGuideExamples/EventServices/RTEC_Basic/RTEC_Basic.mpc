@@ -1,0 +1,22 @@
+// $Id: RTEC_Basic.mpc 83415 2008-10-23 08:18:15Z johnnyw $
+
+project(*Supplier): namingexe, rteventexe,  {
+  exename   = EchoEventSupplier
+  includes += ../common
+
+  Source_Files {
+    EchoEventSupplierMain.cpp
+    EchoEventSupplier_i.cpp
+  }
+}
+
+project(*Consumer): namingexe, rteventexe,  {
+  exename   = EchoEventConsumer
+  includes += ../common
+
+  Source_Files {
+    EchoEventConsumerMain.cpp
+    EchoEventConsumer_i.cpp
+  }
+}
+

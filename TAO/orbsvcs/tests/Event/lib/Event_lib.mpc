@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Event_lib.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+
+project(Event_Test_Lib): rtevent_serv, naming {
+  sharedname   = ECTests
+  dynamicflags += EC_TEST_BUILD_DLL
+  Header_Files {
+    ectest_export.h
+  }
+}

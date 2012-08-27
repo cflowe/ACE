@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: ndds_idltocpp_impl.mpb 93862 2011-04-11 12:30:52Z johnnyw $
+
+project : ndds_idltocpp_stub, dds4ccm_logger {
+  after += CIAO_DDS4CCM_DDS_NDDS
+  libs += CIAO_DDS4CCM_DDS_NDDS
+}
+

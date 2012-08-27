@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: messaging_optional.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+feature(corba_messaging) : valuetype, portableserver, pi {
+  libs  += TAO_Messaging
+  after += Messaging
+}
+

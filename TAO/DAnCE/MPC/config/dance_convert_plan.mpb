@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_convert_plan.mpb 90929 2010-06-29 11:31:45Z johnnyw $
+
+project : dance_config_handlers, dance_deployment_stub, dance_tools {
+   after += DAnCE_Convert_Plan
+   libs += DAnCE_Convert_Plan
+}

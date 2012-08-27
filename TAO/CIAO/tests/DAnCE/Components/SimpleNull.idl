@@ -1,0 +1,14 @@
+// $Id: SimpleNull.idl 91815 2010-09-17 08:35:19Z johnnyw $
+
+#include <Components.idl>
+
+module Simple
+{
+  component SimpleNull
+  {
+  };
+
+  home SimpleNullHome manages SimpleNull
+  {
+  };
+};

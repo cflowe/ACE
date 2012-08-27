@@ -1,0 +1,21 @@
+// $Id: DDS_ObO_Receiver.mpc 93926 2011-04-16 08:10:41Z johnnyw $
+
+project(*qc_receiver) : aceexe, nddslib, ndds_ts_defaults {
+  exename = DDS_ObO_receiver
+  after += Base_obo_stub
+
+  includes += ../Base
+
+  libs += Base_obo_stub
+  libpaths += ../descriptors
+
+  exeout += ../descriptors
+
+  Source_Files {
+    ObO_Receiver.cpp
+  }
+
+  Header_Files {
+  }
+}
+

@@ -1,0 +1,9 @@
+//
+// $Id: bug_689_regression.idl 92094 2010-09-29 19:57:42Z mitza $
+//
+
+interface bug_689_regression
+{
+  void noop ();
+  oneway void shutdown ();
+};

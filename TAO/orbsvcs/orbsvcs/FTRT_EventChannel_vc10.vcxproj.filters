@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FTRT_EventChannel">
+      <UniqueIdentifier>{12FCA846-FECA-1BAD-03D7-9F610000505F}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-03D7-9F610000505F}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="FTRT_EventChannel">
+      <UniqueIdentifier>{12FCA846-FECA-1BAD-03D7-9F610000505F}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-03D7-9F610000505F}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-03D7-9F610000505F}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-03D7-9F610000505F}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="FTRT_EventChannel">
+      <UniqueIdentifier>{12FCA846-FECA-1BAD-03D7-9F610000505F}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-03D7-9F610000505F}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{5635C877-FECA-1BAD-03D7-9F610000505F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FtRtEvent\EventChannel\AMI_Primary_Replication_Strategy.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\AMI_Replication_Strategy.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Basic_Replication_Strategy.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\create_persistent_poa.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Dynamic_Bitset.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Fault_Detector.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Fault_Detector_Loader.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\ForwardCtrlServerInterceptor.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FT_ProxyAdmin_Base.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_Become_Primary_Listener.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_ConsumerAdmin.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_Event_Channel.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_Event_Channel_Impl.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_Factory.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_Group_Manager.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_ORBInitializer.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_ProxyConsumer.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_ProxySupplier.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FTEC_SupplierAdmin.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FtEventServiceInterceptor.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\GroupInfoPublisher.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Identification_Service.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\IOGR_Maker.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\ObjectGroupManagerHandler.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\ProxyConsumerStateWorker.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\ProxySupplierStateWorker.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\replace_key.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Replication_Service.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Replication_Strategy.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Request_Context_Repository.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\SCTP_Fault_Detector.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Set_Update_Interceptor.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Update_Manager.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\UpdateableHandler.cpp">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FtRtEvent\EventChannel\AMI_Primary_Replication_Strategy.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\AMI_Replication_Strategy.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Basic_Replication_Strategy.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\create_persistent_poa.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Dynamic_Bitset.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Fault_Detector.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Fault_Detector_Loader.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\ForwardCtrlServerInterceptor.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FT_ProxyAdmin_Base.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_Become_Primary_Listener.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_ConsumerAdmin.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_Event_Channel.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_Event_Channel_Impl.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_Factory.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_Group_Manager.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_ORBInitializer.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_ProxyConsumer.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_ProxySupplier.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FTEC_SupplierAdmin.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FtEventServiceInterceptor.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\GroupInfoPublisher.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Identification_Service.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\IOGR_Maker.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\ObjectGroupManagerHandler.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\ProxyConsumerStateWorker.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\ProxySupplierStateWorker.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Replication_Service.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Replication_Strategy.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Request_Context_Repository.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\SCTP_Fault_Detector.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Set_Update_Interceptor.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Update_Manager.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\UpdateableHandler.h">
+      <Filter>FTRT_EventChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\ConnectionHandler_T.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\Fault_Detector_T.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\FT_ProxyAdmin_T.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="FtRtEvent\EventChannel\ftrtec_export.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AV.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosConcurrency.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLifeCycle.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLoadBalancing.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="cosnaming_serv_persistence.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNotification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosProperty.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTime.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTrading.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsNotifyLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_idl.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_serv.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_skel.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FaultTolerance.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FTORB.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtRtEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="HTIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="IFRService.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="orbsvcs.mwc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="PortableGroup.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RT_Notification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTCORBAEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTKokyuEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSched.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSchedEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Security.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SSLIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ssliop_params_dup.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Svc_Utils.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_CosConcurrency.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosConcurrency_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosConcurrency_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosEvent.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosEvent_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosEvent_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosLifeCycle.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosLifeCycle_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosLoadBalancing.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNaming.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNaming_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNaming_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNotification.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNotification_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNotification_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosProperty.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosProperty_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosProperty_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTime.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTime_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTime_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTrading.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTrading_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTrading_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsEventLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsEventLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsEventLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsNotifyLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsNotifyLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsNotifyLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FaultTolerance.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FT_ClientORB.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FT_ServerORB.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FTORB_Utils.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_PortableGroup.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEvent.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEvent_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEvent_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEventLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEventLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEventLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_Svc_Utils.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FtRtEvent\EventChannel\Dynamic_Bitset.inl">
+      <Filter>FTRT_EventChannel</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FtRtEvent\EventChannel\ConnectionHandler_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\Fault_Detector_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FtRtEvent\EventChannel\FT_ProxyAdmin_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

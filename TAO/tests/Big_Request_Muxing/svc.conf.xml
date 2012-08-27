@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<!-- Converted from ./tests/Big_Request_Muxing/svc.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  -->
+ <!--  $Id: svc.conf.xml 68083 2005-09-01 22:03:40Z john_c $ -->
+ <!--  -->
+ <static id="Client_Strategy_Factory" params="-ORBTransportMuxStrategy MUXED"/>
+</ACE_Svc_Conf>

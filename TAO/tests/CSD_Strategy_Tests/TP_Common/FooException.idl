@@ -1,0 +1,7 @@
+// $Id: FooException.idl 68816 2005-10-19 00:27:51Z dai_y $
+#ifndef FOOEXCEPTION_IDL
+#define FOOEXCEPTION_IDL
+
+exception FooException {};
+
+#endif

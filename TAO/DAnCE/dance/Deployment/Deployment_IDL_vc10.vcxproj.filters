@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-F0BC-F15E960D6ACA}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-F0BC-F15E960D6ACA}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Deployment_Core.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Deployment.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_Application.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_Base.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_Connection.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_Data.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_DeploymentPlan.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_InvalidComponentExecParameter.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_InvalidConnection.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_InvalidNodeExecParameter.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_InvalidProperty.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_Packaging_Data.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_PlanError.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_ResourceCommitmentManager.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_ResourceNotAvailable.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_StartError.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_StopError.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Deployment_TargetData.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

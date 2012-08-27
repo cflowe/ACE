@@ -1,0 +1,21 @@
+// $Id: SetConnectorAttribute_Component.idl 95809 2012-06-03 17:56:00Z johnnyw $
+
+/**
+ * @file SetConnectorAttribute_Component.idl
+ * @author Marcel Smit (msmit@remedy.nl)
+ */
+
+#ifndef COMPONENT_IDL
+#define COMPONENT_IDL
+
+#include "Connector/SetConnectorAttribute_Connector.idl"
+
+module SetConnectorAttribute
+{
+  component SetConnectorAttributeComponent
+  {
+    port SetConnectorAttributeTestConnector::DDS_Write info_write;
+  };
+};
+
+#endif

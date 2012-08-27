@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: NamingViewer.mpc 81842 2008-06-05 15:23:26Z sma $
+
+project : namingexe, ace_mfc {
+  exename    = NamingViewer
+  install    = $(ACE_ROOT)/bin
+  pch_header = StdAfx.h
+  pch_source = StdAfx.cpp
+}

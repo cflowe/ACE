@@ -1,0 +1,43 @@
+// -*- MPC -*-
+// $Id: Performance.mpc 78875 2007-07-13 13:22:59Z vridosh $
+
+project(*IDL): taoidldefaults {
+  idlflags += -Sd -Sp
+
+  IDL_Files {
+    UDP.idl
+  }
+
+  custom_only = 1
+}
+
+project(*server): taoserver, strategies, avoids_corba_e_micro {
+  exename = server
+  after += *IDL
+
+  Source_Files {
+    UDP_i.cpp
+    server.cpp
+    UDPS.cpp
+    UDPC.cpp
+  }
+
+  IDL_Files {
+  }
+}
+
+project(*client): taoserver, strategies {
+  exename = client
+  after += *IDL
+
+  Source_Files {
+    client.cpp
+    UDP_i.cpp
+    UDP_PerformanceClient.cpp
+    UDPS.cpp
+    UDPC.cpp
+  }
+
+  IDL_Files {
+  }
+}

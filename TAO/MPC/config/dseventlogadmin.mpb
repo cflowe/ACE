@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: dseventlogadmin.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project : orbsvcslib, dslogadmin, event {
+  after     += DsEventLogAdmin
+  libs      += TAO_DsEventLogAdmin
+  tagchecks += EventLog
+}

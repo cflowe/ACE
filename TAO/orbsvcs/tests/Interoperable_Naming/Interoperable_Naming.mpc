@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Interoperable_Naming.mpc 60112 2004-09-07 23:41:00Z jtc $
+
+project: namingexe, portableserver {
+  exename = client
+}

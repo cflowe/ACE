@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: componentidldefaults.mpb 89165 2010-02-23 14:25:36Z johnnyw $
+
+project : ciaoidldefaults, anytypecode {
+  idlflags += -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex
+}
+

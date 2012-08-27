@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: ace_idl_dependencies.mpb 95440 2012-01-17 05:19:09Z jonesc $
+
+feature(ace_idl_dependencies) {
+	specific(gnuace) {
+		idlflags += -DGEN_IDL_MAKE_DEPS
+	}
+}
+

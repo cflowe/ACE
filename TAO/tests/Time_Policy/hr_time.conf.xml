@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<!-- Converted from hr_time.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  $Id: hr_time.conf.xml 95332 2011-12-15 11:09:41Z mcorino $ -->
+ <static id="Time_Policy_Manager" params="-ORBTimePolicyStrategy HR"/>
+</ACE_Svc_Conf>

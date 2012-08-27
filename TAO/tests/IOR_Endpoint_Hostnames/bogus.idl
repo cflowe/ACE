@@ -1,0 +1,11 @@
+//
+// $Id: bogus.idl 66171 2005-05-27 22:15:46Z cleeland $
+//
+
+module Test
+{
+  interface bogus
+  {
+    void noop();
+  };
+};

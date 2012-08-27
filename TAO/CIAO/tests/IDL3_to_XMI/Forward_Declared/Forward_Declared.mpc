@@ -1,0 +1,9 @@
+// $Id: Forward_Declared.mpc 92541 2010-11-11 09:55:17Z vzykov $
+
+project (*IDL): taoidl3toxmidefaults {
+  IDL3TOXMI_Files {
+    c_ok.idl
+    c_nok.idl
+  }
+  custom_only = 1
+}

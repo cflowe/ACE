@@ -1,0 +1,14 @@
+//
+// $Id: Sender.idl 44205 2002-04-04 19:08:45Z bala $
+//
+#include "Receiver.idl"
+
+interface Sender
+{
+
+  exception Table_Full {};
+
+  /// Receive the Receiver object and return a id for the object.
+  long receiver_object (in Receiver recv)
+    raises (Table_Full);
+};

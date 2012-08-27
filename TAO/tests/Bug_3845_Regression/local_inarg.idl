@@ -1,0 +1,11 @@
+// $Id: local_inarg.idl 89955 2010-04-21 16:15:14Z parsons $
+
+local interface foo
+{
+};
+
+interface bar
+{
+  void bar_op (in foo bad_arg);
+};
+

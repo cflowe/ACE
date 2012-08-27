@@ -1,0 +1,19 @@
+//$Id: Receiver.idl 94223 2011-06-17 11:25:52Z msmit $:
+
+#ifndef RECEIVER_IDL
+#define RECEIVER_IDL
+
+#include "../Hello_Base/Hello_Base.idl"
+
+module Hello
+{
+  component Receiver
+  {
+    uses ReadMessage read_message;
+    consumes TimeOut click_in;
+
+    attribute short iterations;
+  };
+
+};
+#endif /*RECEIVER_IDL*/

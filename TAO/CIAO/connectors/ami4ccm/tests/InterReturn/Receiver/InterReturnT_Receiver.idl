@@ -1,0 +1,18 @@
+// $Id: InterReturnT_Receiver.idl 90087 2010-05-06 12:23:07Z mhengstmengel $
+
+#ifndef INTERRETURN_T_RECEIVER_IDL
+#define INTERRETURN_T_RECEIVER_IDL
+
+#include <Components.idl>
+
+#include "Base/InterReturnT.idl"
+
+module InterReturnT
+{
+  component Receiver
+  {
+    /// Provides
+    provides MyFoo do_my_foo;
+  };
+};
+#endif

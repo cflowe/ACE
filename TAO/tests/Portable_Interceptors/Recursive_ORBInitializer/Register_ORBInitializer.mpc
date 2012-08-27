@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Register_ORBInitializer.mpc 67088 2005-07-19 12:26:21Z jwillemsen $
+
+project(*Client): taoclient, pi, interceptors {
+  Source_Files {
+    Client_ORBInitializer.cpp
+    client.cpp
+  }
+}
+

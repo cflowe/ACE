@@ -1,0 +1,15 @@
+// $Id: ProcessColocation.idl 95323 2011-12-14 12:37:01Z msmit $
+
+#include <Components.idl>
+
+module Simple
+{
+  component ProcessColocation
+  {
+    attribute string process_name;
+  };
+
+  home ProcessColocationHome manages ProcessColocation
+  {
+  };
+};

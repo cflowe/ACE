@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: time.mpb 82822 2008-09-24 17:26:58Z jtc $
+
+project : orbsvcslib {
+  after     += CosTime
+  libs      += TAO_CosTime
+  tagchecks += Time
+}

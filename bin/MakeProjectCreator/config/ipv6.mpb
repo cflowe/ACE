@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: ipv6.mpb 95654 2012-03-24 22:01:30Z shuston $
+
+feature(ipv6) {
+  macros += ACE_HAS_IPV6
+}

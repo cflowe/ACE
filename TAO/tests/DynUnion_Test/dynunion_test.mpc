@@ -1,0 +1,20 @@
+// $Id: dynunion_test.mpc 81772 2008-05-24 19:50:13Z jtc $
+
+project(*IDL): dynamicany {
+  IDL_Files {
+    dynany.idl
+  }
+  custom_only = 1
+}
+
+
+project(dynuniontest): dynamicany, typecodefactory {
+  exename = dynuniontest
+  after += *IDL
+  Source_Files {
+    DynUnionTest.cpp
+    dynanyC.cpp
+  }
+  IDL_Files {
+  }
+}

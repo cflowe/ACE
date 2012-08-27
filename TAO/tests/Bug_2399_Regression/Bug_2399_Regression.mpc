@@ -1,0 +1,11 @@
+// -*- MPC -*-
+// $Id: Bug_2399_Regression.mpc 70866 2006-02-09 16:34:12Z smcqueen $
+project (*Test) : taoserver {
+  exename = test
+  idlflags += -t ./mytmp
+
+  Source_Files {
+    test.cpp
+    }
+}
+

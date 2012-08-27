@@ -1,0 +1,16 @@
+// $Id: simple.idl 75147 2006-10-30 19:51:54Z mcorino $
+
+interface simple
+{
+  string op1  (in string name,
+               in any inany,
+               out any outany);
+
+  wstring op2 (in wstring s1);
+
+  /// A method to shutdown the ORB
+  /**
+    * This method is used to simplify the test shutdown process
+    */
+  oneway void shutdown ();
+};

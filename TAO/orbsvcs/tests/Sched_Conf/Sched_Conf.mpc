@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: Sched_Conf.mpc 78771 2007-07-04 05:39:51Z sowayaa $
+
+project: namingexe, rtsched {
+  exename = Sched_Conf
+  Source_Files {
+    Sched_Conf.cpp
+  }
+}

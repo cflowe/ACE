@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Concurrency.mpc 54747 2003-12-23 21:05:25Z dhinton $
+
+project(CC client) : orbsvcsexe, concurrency, naming, svc_utils, iortable, portableserver {
+  exename  = CC_client
+}

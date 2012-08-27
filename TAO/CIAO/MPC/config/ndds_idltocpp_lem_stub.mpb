@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ndds_idltocpp_lem_stub.mpb 93862 2011-04-11 12:30:52Z johnnyw $
+
+project : ndds_idltocpp_stub, ccm_session_stub {
+  libs += CIAO_NDDS_lem_stub
+  after += CIAO_NDDS_lem_stub
+}

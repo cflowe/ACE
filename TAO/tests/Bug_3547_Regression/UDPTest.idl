@@ -1,0 +1,14 @@
+// $Id: UDPTest.idl 84190 2009-01-19 15:55:46Z johnnyw $
+
+#ifndef _COMMON_UDPTEST_IDL_
+#define _COMMON_UDPTEST_IDL_
+
+interface UDPTestI
+{
+    typedef octet BufferT[1000] ;
+
+    oneway void send( in BufferT Msg );
+};
+
+
+#endif

@@ -1,0 +1,21 @@
+// $Id: SL_ManyByMany_Receiver.idl 95883 2012-06-13 18:45:09Z johnnyw $
+
+/**
+ * @file
+ * @author Marijke Hengstmengel (mhengstmengel@remedy.nl)
+ */
+
+#ifndef RECEIVER_IDL
+#define RECEIVER_IDL
+
+#include "Connector/SL_ManyByMany_Connector.idl"
+
+module SL_ManyByMany
+{
+  component Receiver
+  {
+    port SLManyByManyConnector::DDS_StateListen info_out;
+  };
+};
+
+#endif

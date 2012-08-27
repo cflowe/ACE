@@ -1,0 +1,33 @@
+// -*- MPC -*-
+// $Id: Security_Crash_Test.mpc 78771 2007-07-04 05:39:51Z sowayaa $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    test.idl
+  }
+  custom_only = 1
+}
+
+project(*server): taoexe, portableserver, ssliop, pi_server, codecfactory, interceptors {
+  after += *idl
+  exename = server
+  Source_Files {
+    server.cpp
+    test_i.cpp
+    testS.cpp
+    testC.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*client): taoexe, portableserver, ssliop, pi_server, codecfactory, interceptors {
+  after += *idl
+  exename = client
+  Source_Files {
+    client.cpp
+    testC.cpp
+  }
+  IDL_Files {
+  }
+}

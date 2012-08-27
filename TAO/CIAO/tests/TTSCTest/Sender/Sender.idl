@@ -1,0 +1,12 @@
+//$Id: Sender.idl 95904 2012-06-20 08:20:48Z johnnyw $
+
+#ifndef SENDER_IDL
+#define SENDER_IDL
+
+#include <Components.idl>
+
+component Sender
+  {
+  };
+
+#endif /*SENDER_IDL*/

@@ -1,0 +1,10 @@
+// $Id: Test2.idl 92337 2010-10-23 12:38:29Z johnnyw $
+
+#include "Test.idl"
+
+module Test2
+{
+  struct MyAttRefSeqStruct {
+    Test::MyAttRefSequence attRefSeq;
+  };
+};

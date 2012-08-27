@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: Bug_2134_Regression.mpc 75587 2006-11-27 08:31:26Z johnnyw $
+
+project (*Test) : taoserver, iortable, avoids_minimum_corba, messaging {
+  Source_Files {
+    Hello.cpp
+  }
+}

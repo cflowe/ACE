@@ -1,0 +1,29 @@
+// $Id: Component1.idl 95809 2012-06-03 17:56:00Z johnnyw $
+
+/**
+ * @file Component1.idl
+ * @author Marcel Smit (msmit@remedy.nl)
+ */
+
+#ifndef COMPONENT1_IDL_
+#define COMPONENT1_IDL_
+
+#include "Base/PartialShutdown.idl"
+
+module PartialShutdown
+{
+  component Component1
+  {
+    uses Writer write_to_comp_2;
+    uses Writer write_to_comp_3;
+
+    uses Reader read_from_comp_2;
+    uses Reader read_from_comp_3;
+
+    provides Writer comp_1_writer;
+
+    provides Reader comp_1_reader;
+  };
+};
+
+#endif /* COMPONENT1_IDL_ */

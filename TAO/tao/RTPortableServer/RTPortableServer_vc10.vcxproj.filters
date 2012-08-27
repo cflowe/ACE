@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-0251-5B59D4E22589}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-0251-5B59D4E22589}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-0251-5B59D4E22589}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-0251-5B59D4E22589}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="Pidl Files">
+      <UniqueIdentifier>{2990FD4C-FECA-1BAD-0251-5B59D4E22589}</UniqueIdentifier>
+      <Extensions>pidl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-0251-5B59D4E22589}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{502A2050-FECA-1BAD-0251-5B59D4E22589}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RT_Acceptor_Filters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_Collocation_Resolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_Object_Adapter_Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_POA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_Policy_Validator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_Servant_Dispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTPortableServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTPortableServer_includeC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTPortableServerC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RT_Acceptor_Filters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_Collocation_Resolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_Object_Adapter_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_POA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_Policy_Validator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_Servant_Dispatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPortableServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rtportableserver_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPortableServer_includeA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPortableServer_includeC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPortableServer_includeS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPortableServerA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPortableServerC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPortableServerS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RTPortableServer.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_RTPortableServer.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RTPortableServer.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="RTPortableServer_include.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RT_POA.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TAO_RTPortableServer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

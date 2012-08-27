@@ -1,0 +1,20 @@
+//$Id: FP_Scheduling.idl 65765 2005-05-02 18:38:58Z jwillemsen $
+
+#include "tao/RTScheduling/RTScheduler_include.pidl"
+#include "tao/RTCORBA/RTCORBA_include.pidl"
+
+module FP_Scheduling
+{
+  local interface SegmentSchedulingParameterPolicy
+  : CORBA::Policy
+  {
+    attribute RTCORBA::Priority value;
+  };
+
+  local interface FP_Scheduler : RTScheduling::Scheduler
+  {
+    SegmentSchedulingParameterPolicy
+      create_segment_scheduling_parameter
+        (in RTCORBA::Priority segment_priority);
+  };
+};

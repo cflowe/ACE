@@ -1,0 +1,40 @@
+// -*- MPC -*-
+// $Id: Callback.mpc 78771 2007-07-04 05:39:51Z sowayaa $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    server.idl
+    client.idl
+  }
+  custom_only = 1
+}
+
+project(*security server): taoexe, portableserver, ssl {
+  after += *idl
+  exename = server
+  IDL_Files {
+  }
+
+  Source_Files {
+    clientC.cpp
+    serverC.cpp
+    serverS.cpp
+    server_i.cpp
+    server.cpp
+  }
+}
+
+project(*security client): taoexe, portableserver, ssl {
+  after += *idl
+  exename = client
+  IDL_Files {
+  }
+
+  Source_Files {
+    clientC.cpp
+    clientS.cpp
+    serverC.cpp
+    client_i.cpp
+    client.cpp
+  }
+}

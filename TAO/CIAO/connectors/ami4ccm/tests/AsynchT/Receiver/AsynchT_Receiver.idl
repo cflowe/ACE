@@ -1,0 +1,18 @@
+// $Id: AsynchT_Receiver.idl 90496 2010-06-09 12:00:57Z mhengstmengel $
+
+#ifndef ASYNCHT_RECEIVER_IDL
+#define ASYNCHT_RECEIVER_IDL
+
+#include <Components.idl>
+
+#include "Base/AsynchT.idl"
+
+module AsynchT
+{
+  component Receiver
+  {
+    /// Provides
+    provides MyFoo do_my_foo;
+  };
+};
+#endif

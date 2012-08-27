@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_installation_handlers.mpb 90929 2010-06-29 11:31:45Z johnnyw $
+
+project : dance_artifact_installation, inet {
+  libs += DAnCE_File_Installation DAnCE_Http_Installation
+  after += DAnCE_File_Installation DAnCE_Http_Installation
+}

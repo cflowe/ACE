@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="Pidl Files">
+      <UniqueIdentifier>{2990FD4C-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+      <Extensions>pidl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{5635C877-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{502A2050-FECA-1BAD-1EBB-B402BC1CBEE4}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Alias_TypeCode_Static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any_Basic_Impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any_Impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any_SystemException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any_Unknown_IDL_Type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AnySeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AnySeqC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AnyTypeCode_Adapter_Impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="append.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicTypeTraits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BooleanSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundsA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundsC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CharSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CONV_FRAMEA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CurrentA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dynamic_ParameterA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dynamic_ParameterC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Empty_Param_TypeCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Enum_TypeCode_Static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FloatSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GIOPA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IIOP_EndpointsA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IIOPA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IOPA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LongDoubleSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LongLongSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LongSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Marshal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Messaging_PolicyValueA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NVList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NVList_Adapter_Impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectIdListA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Objref_TypeCode_Static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OctetSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="orb_typesA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterModeA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PI_ForwardA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Policy_CurrentA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Policy_ForwardA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Policy_ManagerA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PolicyA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortableInterceptorA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence_TypeCode_Static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServicesA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="skip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="String_TypeCode_Static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Struct_TypeCode_Static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemExceptionA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TAOA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeBaseA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="True_RefCount_Policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeCode_CDR_Extraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeCode_Constants.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeCodeA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ULongLongSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ULongSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Union_TypeCode_Static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UShortSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Value_TypeCode_Static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ValueModifierA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ValueModifierC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VisibilityA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VisibilityC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WCharSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WrongTransactionA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WStringSeqA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Alias_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Alias_TypeCode_Static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_Arg_Traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_Array_Impl_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_Basic_Impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_Basic_Impl_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_Dual_Impl_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_Impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_Impl_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_Special_Impl_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_SystemException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_Unknown_IDL_Type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnySeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnySeqC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnySeqS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnyTypeCode_Adapter_Impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnyTypeCode_methods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicTypeTraits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicTypeTraits_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BooleanSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundsA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundsC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundsS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CharSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CONV_FRAMEA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CurrentA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dynamic_ParameterA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dynamic_ParameterC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dynamic_ParameterS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Empty_Param_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enum_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enum_TypeCode_Static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Fixed_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FloatSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GIOPA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IIOP_EndpointsA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IIOPA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOPA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LongDoubleSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LongLongSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LongSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Marshal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Messaging_PolicyValueA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Messaging_SyncScopeA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Null_RefCount_Policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NVList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NVList_Adapter_Impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectIdListA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Objref_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Objref_TypeCode_Static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OctetSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="orb_typesA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterModeA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PI_ForwardA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Policy_CurrentA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Policy_ForwardA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Policy_ManagerA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PolicyA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableInterceptorA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Recursive_Type_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RefCount_Policy_Traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence_TypeCode_Static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServicesA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShortSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="String_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="String_TypeCode_Static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="String_TypeCode_Traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct_TypeCode_Static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemExceptionA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TAO_AnyTypeCode_Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TAOA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TC_Constants_Forward.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeBaseA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="True_RefCount_Policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_Base_Attributes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_Case_Base_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_Case_Enum_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_Case_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_CDR_Extraction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_Struct_Field.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_Traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Typecode_typesA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_Value_Field.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ULongLongSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ULongSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Union_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Union_TypeCode_Static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UShortSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Value_TypeCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Value_TypeCode_Static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ValueModifierA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ValueModifierC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ValueModifierS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector_AnyOp_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VisibilityA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VisibilityC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VisibilityS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WCharSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WrongTransactionA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WStringSeqA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AnyTypeCode.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="extra_anytypecode.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_AnyTypeCode.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AnySeq.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="Bounds.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="Dynamic.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="Dynamic_Parameter.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="ValueModifier.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="Visibility.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Alias_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Alias_TypeCode_Static.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Any.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Any_Array_Impl_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Any_Basic_Impl_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Any_Dual_Impl_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Any_Impl_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Any_Special_Impl_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Empty_Param_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Enum_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Enum_TypeCode_Static.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Fixed_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Marshal.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="NVList.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Objref_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Objref_TypeCode_Static.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Recursive_Type_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Sequence_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Sequence_TypeCode_Static.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="String_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="String_TypeCode_Static.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Struct_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Struct_TypeCode_Static.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="True_RefCount_Policy.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="TypeCode_Base_Attributes.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="TypeCode_Case_Base_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="TypeCode_Case_Enum_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="TypeCode_Case_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Union_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Union_TypeCode_Static.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Value_TypeCode.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Value_TypeCode_Static.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Alias_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any_Array_Impl_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any_Basic_Impl_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any_Dual_Impl_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any_Impl_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Any_Special_Impl_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Enum_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fixed_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Objref_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Recursive_Type_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="String_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Struct_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeCode_Base_Attributes.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeCode_Case_Base_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeCode_Case_Enum_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeCode_Case_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Union_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Value_TypeCode.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TAO_AnyTypeCode.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

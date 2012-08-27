@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: dance_deployment_stub.mpb 93749 2011-04-06 01:23:11Z wotte $
+
+project : pi, messaging, dance_logger {
+  after += Deployment_stub
+  libs  += DAnCE_Deployment_stub
+  includes += $(DANCE_ROOT)
+  idlflags += -I$(DANCE_ROOT)
+  requires += threads
+}

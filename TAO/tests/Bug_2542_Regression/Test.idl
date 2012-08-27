@@ -1,0 +1,9 @@
+// $Id: Test.idl 72805 2006-05-29 08:05:42Z jwillemsen $
+
+valuetype LongValue long;
+
+valuetype Value
+{
+      public LongValue l;
+};
+

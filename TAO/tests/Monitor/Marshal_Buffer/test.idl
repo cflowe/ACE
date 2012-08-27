@@ -1,0 +1,6 @@
+// $Id: test.idl 81492 2008-04-28 14:35:55Z johnnyw $
+
+interface test
+{
+  string test_op (in string in_arg);
+};

@@ -1,0 +1,14 @@
+// $Id: Dummy.idl 84406 2009-02-11 14:59:08Z wotte $
+
+#ifndef DUMMY_IDL
+#define DUMMY_IDL
+
+module NameServiceTest
+{
+  interface Dummy {
+    string sayHello();
+  };
+};
+
+#endif /* DUMMY_IDL */
+

@@ -1,0 +1,14 @@
+// -*- MPC -*-
+// $Id: Bug_3155_Regression.mpc 80143 2007-11-30 11:50:14Z sma $
+
+project(*test_idl): taoexe, ifr_client {
+  exename = test_idl
+  includes += $(TAO_ROOT)/include
+
+  Source_Files {
+    test_idl.cpp
+  }
+
+  IDL_Files {
+  }
+}

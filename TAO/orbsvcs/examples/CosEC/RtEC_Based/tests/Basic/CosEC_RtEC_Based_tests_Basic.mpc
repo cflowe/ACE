@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: CosEC_RtEC_Based_tests_Basic.mpc 95491 2012-01-24 13:51:36Z johnnyw $
+
+project(*Client) : orbsvcsexe, event, event_skel, rtevent_serv, rtsched {
+  after   += CosEC_RtEC_Based_lib
+  exename  = Basic
+  libs    += CosEC_RtEC_Based
+  includes += ../../lib
+  libpaths += ../../lib
+}

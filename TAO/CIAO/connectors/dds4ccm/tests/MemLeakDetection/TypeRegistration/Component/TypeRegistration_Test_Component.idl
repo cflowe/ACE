@@ -1,0 +1,21 @@
+// $Id: TypeRegistration_Test_Component.idl 95809 2012-06-03 17:56:00Z johnnyw $
+
+/**
+ * @author Marcel Smit (msmit@remedy.nl)
+ */
+
+#ifndef COMPONENT_IDL
+#define COMPONENT_IDL
+
+#include "Connector/TypeRegistration_Test_Connector.idl"
+
+module MLD_TypeRegistration_Test
+{
+  component CFTTestComponent
+  {
+    port MLDTypeRegistrationTestConn::DDS_Write   writer;
+    port MLDTypeRegistrationTestConn::DDS_Listen  listener;
+  };
+};
+
+#endif

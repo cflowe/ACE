@@ -1,0 +1,9 @@
+// $Id: BasicSP.mwc 77969 2007-04-10 17:25:06Z kitty $
+
+workspace {
+   BasicSP.mpc
+   BMClosedED/BMClosedED.mpc
+   BMDevice/BMDevice.mpc
+   BMDisplay/BMDisplay.mpc
+   EC/EC.mpc
+}

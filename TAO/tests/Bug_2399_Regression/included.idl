@@ -1,0 +1,5 @@
+// $Id: included.idl 70866 2006-02-09 16:34:12Z smcqueen $
+
+interface Parent
+{
+};

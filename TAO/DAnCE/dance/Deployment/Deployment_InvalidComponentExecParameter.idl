@@ -1,0 +1,13 @@
+// $Id: Deployment_InvalidComponentExecParameter.idl 90214 2010-05-21 13:59:45Z wotte $
+
+#ifndef DEPLOYMENT_INVALIDCOMPONENTEXECPARAMETER_IDL
+#define DEPLOYMENT_INVALIDCOMPONENTEXECPARAMETER_IDL
+
+module Deployment {
+  exception InvalidComponentExecParameter {
+    string name;
+    string reason;
+  };
+};
+
+#endif

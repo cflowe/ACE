@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Pidlinstallwithoutbuilding Files">
+      <UniqueIdentifier>{B5581BA1-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PortableServer.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AdapterActivator.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ForwardRequest.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="IdAssignmentPolicy.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="IdUniquenessPolicy.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ImplicitActivationPolicy.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LifespanPolicy.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="POA.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="POAManager.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="POAManagerFactory.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PortableServer.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PortableServer_include.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PS_Current.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RequestProcessingPolicy.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ServantActivator.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ServantLocator.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ServantManager.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ServantRetentionPolicy.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ThreadPolicy.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PS_Forward.pidl">
+      <Filter>Pidlinstallwithoutbuilding Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

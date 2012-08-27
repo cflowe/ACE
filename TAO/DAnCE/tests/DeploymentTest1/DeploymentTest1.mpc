@@ -1,0 +1,9 @@
+// $Id: DeploymentTest1.mpc 89019 2010-02-16 08:24:39Z johnnyw $
+project : dance, xerces, dance_config_handlers, dance_logger, dance_domainapplication_stub, dance_executionmanager_stub {
+  exename   = DeploymentTest1
+
+  Source_Files {
+    test.cpp
+  }
+}
+

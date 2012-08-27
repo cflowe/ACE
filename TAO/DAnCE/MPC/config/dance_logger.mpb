@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_logger.mpb 90929 2010-06-29 11:31:45Z johnnyw $
+
+project : dance, acelib {
+  after += DAnCE_Logger
+  libs  += DAnCE_Logger
+}

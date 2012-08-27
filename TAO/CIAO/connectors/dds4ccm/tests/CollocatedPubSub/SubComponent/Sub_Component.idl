@@ -1,0 +1,15 @@
+// $Id: Sub_Component.idl 94802 2011-10-20 09:46:10Z mcorino $
+
+#ifndef SUB_COMPONENT_
+#define SUB_COMPONENT_
+
+#include <Components.idl>
+#include "Connector/Collocated_Connector.idl"
+
+module CoPubSub {
+  component Sub_comp {
+    port Test_conn::DDS_Listen TestSub;
+  };
+};
+
+#endif // SUB_COMPONENT_

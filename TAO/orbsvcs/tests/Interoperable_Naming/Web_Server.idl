@@ -1,0 +1,22 @@
+
+//=============================================================================
+/**
+ *  @file    Web_Server.idl
+ *
+ *  $Id: Web_Server.idl 93677 2011-03-29 12:36:41Z johnnyw $
+ *
+ *   IDL schema definition for Web server interface.
+ *
+ *
+ *  @author  Priyanka Gontla <pgontla@ece.uci.edu>
+ */
+//=============================================================================
+
+
+module Web_Server
+{
+  interface Iterator_Factory
+  {
+  };
+
+};

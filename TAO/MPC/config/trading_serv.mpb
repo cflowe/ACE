@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: trading_serv.mpb 76227 2006-12-29 14:50:09Z elliott_c $
+
+project : orbsvcslib, trading_skel, dynamicany, svc_utils, utils, iortable {
+  after     += CosTrading_Serv
+  libs      += TAO_CosTrading_Serv
+}

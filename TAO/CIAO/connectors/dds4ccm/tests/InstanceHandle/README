@@ -1,0 +1,6 @@
+$Id: README 94655 2011-10-07 09:19:07Z msmit $
+
+Test which shows how to use the DDSDataWriter directly.
+
+We use the Datawriter from the DDS4CCM library. After typecasting
+it can be used to perform operations on DDS directly.

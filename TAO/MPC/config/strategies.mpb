@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: strategies.mpb 78787 2007-07-05 08:02:28Z johnnyw $
+project : taolib, anytypecode, pi, core_strategies {
+  after   += Strategies
+  libs    += TAO_Strategies
+}

@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: taolib.mpb 80606 2008-02-12 10:31:14Z smcqueen $
+
+project : acelib, ace_for_tao, taodefaults, pidl, corba_e_micro, corba_e_compact, core_minimum_corba, link_codecfactory {
+  after += TAO Codeset
+  libs  += TAO
+}

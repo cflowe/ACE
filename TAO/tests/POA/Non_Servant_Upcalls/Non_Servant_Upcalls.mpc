@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Non_Servant_Upcalls.mpc 78765 2007-07-03 18:27:51Z johnnyw $
+
+project(POA*): taoserver {
+  exename = Non_Servant_Upcalls
+}

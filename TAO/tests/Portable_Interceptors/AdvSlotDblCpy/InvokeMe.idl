@@ -1,0 +1,12 @@
+// file      : StateTransfer.idl
+// author    : Boris Kolpackov <boris@dre.vanderbilt.edu>
+// cvs-id    : $Id: InvokeMe.idl 71093 2006-02-16 13:38:35Z sma $
+
+interface InvokeMe
+{
+  void
+  invoke_me ();
+
+  oneway void
+  shutdown ();
+};

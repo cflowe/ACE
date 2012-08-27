@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_split_plan.mpb 94796 2011-10-19 19:15:23Z wotte $
+
+project : dance, dance_stub, dance_deployment_stub, dance_tools, openmp {
+   after += DAnCE_Split_Plan_Impl
+   libs += DAnCE_Split_Plan_Impl
+}

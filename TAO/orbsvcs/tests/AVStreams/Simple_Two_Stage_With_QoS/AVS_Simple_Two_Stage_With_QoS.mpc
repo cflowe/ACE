@@ -1,0 +1,17 @@
+// -*- MPC -*-
+// $Id: AVS_Simple_Two_Stage_With_QoS.mpc 57499 2004-05-06 23:20:08Z mbrudka $
+
+project(*send): avstreamsexe, qos {
+  exename   = sender
+  Source_Files {
+    sender.cpp
+  }
+}
+
+project(*recv): avstreamsexe, qos {
+  exename   = receiver
+  Source_Files {
+    receiver.cpp
+  }
+}
+

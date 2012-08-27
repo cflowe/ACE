@@ -1,0 +1,6 @@
+// $Id: test.idl 38427 2001-03-23 03:38:42Z irfan $
+
+interface test
+{
+  void deactivate_self ();
+};

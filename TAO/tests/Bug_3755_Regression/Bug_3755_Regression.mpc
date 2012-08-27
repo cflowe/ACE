@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Bug_3755_Regression.mpc 87278 2009-10-30 16:27:54Z vzykov $
+
+project(*Server) : rt_server {
+  exename=server
+
+  Source_Files {
+    server.cpp
+  }
+}

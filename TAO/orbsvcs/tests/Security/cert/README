@@ -1,0 +1,3 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+This is a CA used for signing keys in the security tests.  The password for the CA key is DOCGroup

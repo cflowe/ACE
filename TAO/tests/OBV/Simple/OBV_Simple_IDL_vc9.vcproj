@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="OBV_Simple_IDL"
+	ProjectGUID="{C17116BB-FECA-1BAD-A210-B03C6819B8CA}"
+	RootNamespace="OBV_Simple_IDL"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\OBV_Simple_IDL_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\OBV_Simple_IDL_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\OBV_Simple_IDL_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\OBV_Simple_IDL_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="OBV_Simple.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="OBV.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on OBV.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -Sa &quot;OBV.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="OBVC.cpp;OBVC.h;OBVC.inl;OBVS.cpp;OBVS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on OBV.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -Sa &quot;OBV.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="OBVC.cpp;OBVC.h;OBVC.inl;OBVS.cpp;OBVS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on OBV.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -Sa &quot;OBV.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="OBVC.cpp;OBVC.h;OBVC.inl;OBVS.cpp;OBVS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on OBV.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -Sa &quot;OBV.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="OBVC.cpp;OBVC.h;OBVC.inl;OBVS.cpp;OBVS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

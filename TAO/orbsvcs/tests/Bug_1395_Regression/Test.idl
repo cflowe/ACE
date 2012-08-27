@@ -1,0 +1,7 @@
+// $Id: Test.idl 48516 2003-02-21 18:23:14Z eas $
+
+interface Test
+{
+   long try_and_create_POA ();
+   void shutdown();
+};

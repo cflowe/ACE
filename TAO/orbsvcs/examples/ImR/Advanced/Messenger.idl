@@ -1,0 +1,6 @@
+//$Id: Messenger.idl 66056 2005-05-23 17:58:35Z michel_j $
+interface Messenger
+{
+  long send_message(in long thread, in long iter, in long obj, in long req);
+  oneway void shutdownOrb();
+};

@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: ndds_idltocpp_stub.mpb 93953 2011-04-20 08:46:28Z johnnyw $
+
+project : ndds_idltocpp {
+  includes += $(ACE_ROOT) $(CIAO_ROOT)
+  libs += CIAO_NDDS_stub
+  after += CIAO_NDDS_stub
+}

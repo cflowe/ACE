@@ -1,0 +1,6 @@
+// $Id: Bug_3243_Regression.idl 86392 2009-08-06 06:44:49Z johnnyw $
+
+// Test Bug 3243
+
+const long long NptNow = 0x80000000;
+

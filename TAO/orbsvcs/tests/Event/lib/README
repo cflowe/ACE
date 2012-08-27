@@ -1,0 +1,5 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+This directory contains a small framework to write tests for the
+real-time event service.  Check the Basic or Performance directories
+for examples of its use.

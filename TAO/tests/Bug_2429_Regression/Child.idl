@@ -1,0 +1,8 @@
+// $Id: Child.idl 71453 2006-03-08 15:08:23Z smcqueen $
+
+#include "Parent.idl"
+
+interface Child : Parent
+{
+  void childMethod ();
+};

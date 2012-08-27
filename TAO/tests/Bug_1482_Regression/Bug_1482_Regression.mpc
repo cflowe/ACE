@@ -1,0 +1,36 @@
+// -*- MPC -*-
+// $Id: Bug_1482_Regression.mpc 77008 2007-02-12 11:52:38Z johnnyw $
+
+project(*idl): taoidldefaults, amh, ami {
+  IDL_Files {
+    Test.idl
+  }
+  custom_only = 1
+}
+
+project(*Server): taoserver, amh, ami, iortable, portableserver {
+  after += *idl
+  Source_Files {
+    Hello.cpp
+    Server_Task.cpp
+    server.cpp
+    TestC.cpp
+    TestS.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client): taoserver, amh, ami {
+  exename = client
+  after += *idl
+  Source_Files {
+    Client_Task.cpp
+    Reply_Handler.cpp
+    client.cpp
+    TestC.cpp
+    TestS.cpp
+  }
+  IDL_Files {
+  }
+}

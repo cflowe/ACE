@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_installation_repository_manager.mpb 90929 2010-06-29 11:31:45Z johnnyw $
+
+project : dance, dance_deployment_stub, dance_tools {
+   after += DAnCE_Installation_Repository_Manager
+   libs += DAnCE_Installation_Repository_Manager
+}

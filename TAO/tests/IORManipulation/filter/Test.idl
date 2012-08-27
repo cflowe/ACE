@@ -1,0 +1,7 @@
+// $Id: Test.idl 78278 2007-05-07 11:46:18Z elliott_c $
+module Test
+{
+  interface Hello
+  {
+  };
+};

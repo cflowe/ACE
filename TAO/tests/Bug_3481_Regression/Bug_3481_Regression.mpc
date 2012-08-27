@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: Bug_3481_Regression.mpc 83631 2008-11-10 14:20:03Z sma $
+
+project: taoexe {
+}

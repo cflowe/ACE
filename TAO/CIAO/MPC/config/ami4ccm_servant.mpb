@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ami4ccm_servant.mpb 89535 2010-03-18 18:41:20Z parsons $
+
+project : ami4ccm_lem_stub, portableserver {
+  after += AMI4CCM_svnt
+  libs += AMI4CCM_svnt
+}

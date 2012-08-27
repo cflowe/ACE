@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: Bug_2543_Regression.mpc 72806 2006-05-29 08:27:49Z jwillemsen $
+
+project : taoclient, anytypecode, codecfactory, valuetype {
+  Source_Files {
+    bug_2543_regression.cpp
+  }
+}

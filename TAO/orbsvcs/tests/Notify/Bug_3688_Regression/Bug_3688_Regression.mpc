@@ -1,0 +1,19 @@
+// -*- MPC -*-
+// $Id: Bug_3688_Regression.mpc 85534 2009-06-05 21:02:41Z dai_y $
+
+project(*Consumer) : orbsvcsexe, notification, notification_skel, naming {
+  exename = consumer
+  Source_Files {
+    consumer.cpp
+  }
+}
+
+
+project(*Supplier) : orbsvcsexe, notification, notification_skel, naming {
+  exename = supplier
+
+  Source_Files {
+    supplier.cpp
+  }
+}
+

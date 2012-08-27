@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: notification_mc.mpb 81752 2008-05-21 15:54:38Z parsons $
+
+project: portableserver, iortable, naming, tao_monitor {
+  after += CosNotification_MC
+  libs  += TAO_CosNotification_MC
+}

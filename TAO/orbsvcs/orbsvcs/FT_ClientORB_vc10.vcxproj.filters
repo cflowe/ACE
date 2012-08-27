@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FT_ClientORB">
+      <UniqueIdentifier>{AF3D3BD7-FECA-1BAD-0A60-8A200000505F}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-0A60-8A200000505F}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-0A60-8A200000505F}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-0A60-8A200000505F}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-0A60-8A200000505F}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="FT_ClientORB">
+      <UniqueIdentifier>{AF3D3BD7-FECA-1BAD-0A60-8A200000505F}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-0A60-8A200000505F}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FaultTolerance\FT_ClientORBInitializer.cpp">
+      <Filter>FT_ClientORB</Filter>
+    </ClCompile>
+    <ClCompile Include="FaultTolerance\FT_ClientPolicy_i.cpp">
+      <Filter>FT_ClientORB</Filter>
+    </ClCompile>
+    <ClCompile Include="FaultTolerance\FT_ClientPolicyFactory.cpp">
+      <Filter>FT_ClientORB</Filter>
+    </ClCompile>
+    <ClCompile Include="FaultTolerance\FT_ClientRequest_Interceptor.cpp">
+      <Filter>FT_ClientORB</Filter>
+    </ClCompile>
+    <ClCompile Include="FaultTolerance\FT_ClientService_Activate.cpp">
+      <Filter>FT_ClientORB</Filter>
+    </ClCompile>
+    <ClCompile Include="FaultTolerance\FT_Endpoint_Selector_Factory.cpp">
+      <Filter>FT_ClientORB</Filter>
+    </ClCompile>
+    <ClCompile Include="FaultTolerance\FT_Invocation_Endpoint_Selectors.cpp">
+      <Filter>FT_ClientORB</Filter>
+    </ClCompile>
+    <ClCompile Include="FaultTolerance\FT_Service_Callbacks.cpp">
+      <Filter>FT_ClientORB</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FaultTolerance\fault_tol_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ClientORB_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ClientORBInitializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ClientPolicy_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ClientPolicyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ClientRequest_Interceptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ClientService_Activate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_Endpoint_Selector_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_Invocation_Endpoint_Selectors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_IOGR_Property.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ORB_Utils_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ORBInitializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ServerORB_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ServerORBInitializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ServerPolicy_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ServerPolicyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ServerRequest_Interceptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_ServerService_Activate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_Service_Activate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\FT_Service_Callbacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaultTolerance\ftconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AV.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosConcurrency.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLifeCycle.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLoadBalancing.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="cosnaming_serv_persistence.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNotification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosProperty.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTime.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTrading.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsNotifyLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_idl.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_serv.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_skel.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FaultTolerance.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FTORB.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtRtEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="HTIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="IFRService.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="orbsvcs.mwc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="PortableGroup.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RT_Notification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTCORBAEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTKokyuEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSched.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSchedEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Security.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SSLIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ssliop_params_dup.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Svc_Utils.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_FT_ClientORB.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FaultTolerance\FT_ClientPolicy_i.inl">
+      <Filter>FT_ClientORB</Filter>
+    </None>
+  </ItemGroup>
+</Project>

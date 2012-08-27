@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: Deactivate_Object.mpc 65522 2005-04-18 09:46:37Z jwillemsen $
+
+project(*Server): taoserver {
+  Source_Files {
+    Hello.cpp
+    server.cpp
+  }
+}

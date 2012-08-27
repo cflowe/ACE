@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-2253-92A357063C20}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-2253-92A357063C20}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-2253-92A357063C20}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-2253-92A357063C20}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Ddsgenerator Files">
+      <UniqueIdentifier>{D6A8D862-FECA-1BAD-2253-92A357063C20}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedCode\Shapes_ShapeType_msgC.cpp">
+      <Filter>default_group</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedCode\Shapes_ShapeType_msg_stub_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedCode\Shapes_ShapeType_msgC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedCode\Shapes_ShapeType_msgS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shapes.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Shapes_Control_obj.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Shapes_defn.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Shapes_ShapeType_conn.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Shapes_ShapeType_msg.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Shapes_ShapeType_msg.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shapes_ShapeType_msg.idl">
+      <Filter>Ddsgenerator Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

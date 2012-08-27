@@ -1,0 +1,11 @@
+// $Id: test.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+interface LCD_Display
+{
+  void send_val (in long val);
+  // Remote method through which the
+  // slider sets the value of the lcd display
+
+  void shutdown ();
+  // Shutdown the ORB
+};

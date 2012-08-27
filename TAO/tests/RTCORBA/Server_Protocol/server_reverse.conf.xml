@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<!-- Converted from server_reverse.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  -->
+ <!--  $Id: server_reverse.conf.xml 94649 2011-10-07 07:54:59Z msmit $ -->
+ <!--  -->
+ <!--  Options for SHMIOP protocol -->
+ <static id="SHMIOP_Factory" params="-MMAPFilePrefix server_shmiop"/>
+ <!--  Protocol options -->
+ <static id="Advanced_Resource_Factory" params="-ORBProtocolFactory SHMIOP_Factory -ORBProtocolFactory UIOP_Factory -ORBProtocolFactory IIOP_Factory"/>
+</ACE_Svc_Conf>

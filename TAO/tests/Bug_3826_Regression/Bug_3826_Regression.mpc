@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Bug_3826_Regression.mpc 89152 2010-02-23 09:57:24Z vzykov $
+
+project(*Server) : taoexe {
+  exename=server
+
+  Source_Files {
+    server.cpp
+  }
+}

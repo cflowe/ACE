@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: testcompressor.mpb 84843 2009-03-16 16:38:54Z msmit $
+
+project : taolib, compression {
+  libs    += TAO_TestCompressor
+}

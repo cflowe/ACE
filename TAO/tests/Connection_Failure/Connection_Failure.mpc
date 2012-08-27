@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Connection_Failure.mpc 63168 2005-01-07 19:23:34Z jwillemsen $
+
+project(*client): taoclient {
+  Source_Files {
+    testC.cpp
+    client.cpp
+  }
+}
+

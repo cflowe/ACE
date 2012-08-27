@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: CORBA_e_Implicit_Activation.mpc 77697 2007-03-13 17:32:43Z elliott_c $
+
+project: taoserver {
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-4092-FDEB7D589086}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-4092-FDEB7D589086}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-4092-FDEB7D589086}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-4092-FDEB7D589086}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CCM_ConfiguratorS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_EventConsumerBaseS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_EventsS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_ExecutorLocatorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_HomeConfigurationS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_HomeFinderS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_HomeS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_HomesS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_KeylessCCMHomeS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_NavigationS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_ObjectS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_PrimaryKeyBaseS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_ReceptacleS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_StandardConfiguratorS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_TransactionC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CosPersistentStateC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CCM_ExecutorLocatorC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ExecutorLocatorS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_Svnt_Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_TransactionC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_TransactionS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CosPersistentStateC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CosPersistentStateS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCM_lem_stub.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CCM_stub.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CCM_svnt.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCM_ExecutorLocatorC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_TransactionC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CosPersistentStateC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

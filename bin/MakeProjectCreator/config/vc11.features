@@ -1,0 +1,6 @@
+// $Id: vc11.features 95306 2011-12-12 19:05:49Z johnnyw $
+
+ssl=0
+qos=1
+rwho=0
+sctp=0

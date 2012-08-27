@@ -1,0 +1,16 @@
+// -*- IDL -*-
+// $Id: test.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+#include "tao/PI_Server/PI_Server_include.pidl"
+
+module RTTest
+{
+  interface test
+  {
+    /// Return the number assigned to the current object.  For
+    /// example, object one will return "1,"
+    short number ();
+
+    oneway void shutdown ();
+  };
+};

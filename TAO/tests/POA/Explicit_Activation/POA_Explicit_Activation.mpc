@@ -1,0 +1,13 @@
+// -*- MPC -*-
+// $Id: POA_Explicit_Activation.mpc 95491 2012-01-24 13:51:36Z johnnyw $
+
+project(*Server): taoserver, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+   libs += Generic_Servant
+   after += POA_Generic_Servant_Lib
+   includes += ../Generic_Servant
+   libpaths += ../Generic_Servant
+
+   Source_Files {
+    server.cpp
+  }
+}

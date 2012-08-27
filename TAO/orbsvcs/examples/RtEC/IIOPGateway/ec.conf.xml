@@ -1,0 +1,5 @@
+<?xml version='1.0'?>
+<ACE_Svc_Conf>
+ <!--  $Id: ec.conf.xml 51747 2003-08-15 10:08:46Z jwillemsen $ -->
+ <static id="static EC_Factory "-ECobserver basic ""/>
+</ACE_Svc_Conf>

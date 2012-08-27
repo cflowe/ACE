@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="Smart_Proxies_Idl"
+	ProjectGUID="{C887390D-FECA-1BAD-5970-2D7EC6B0DB56}"
+	RootNamespace="Smart_Proxies_Idl"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Smart_Proxies_Idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Smart_Proxies_Idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Smart_Proxies_Idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Smart_Proxies_Idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="Smart_Proxies.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="test.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on test.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Gsp &quot;test.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="testC.cpp;testC.h;testC.inl;testS.cpp;testS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on test.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Gsp &quot;test.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="testC.cpp;testC.h;testC.inl;testS.cpp;testS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on test.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Gsp &quot;test.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="testC.cpp;testC.h;testC.inl;testS.cpp;testS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on test.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Gsp &quot;test.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="testC.cpp;testC.h;testC.inl;testS.cpp;testS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Test Files"
+			Filter="">
+			<File
+				RelativePath="run_test.pl">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

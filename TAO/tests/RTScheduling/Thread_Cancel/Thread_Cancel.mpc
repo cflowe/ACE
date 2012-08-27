@@ -1,0 +1,13 @@
+// -*- MPC -*-
+// $Id: Thread_Cancel.mpc 68250 2005-09-22 08:48:33Z jwillemsen $
+
+project(Thread_Cancel) : rtscheduling_client {
+ Source_Files {
+    ../Scheduler.cpp
+    Thread_Task.cpp
+    test.cpp
+  }
+
+  exename = Thread_Cancel
+}
+

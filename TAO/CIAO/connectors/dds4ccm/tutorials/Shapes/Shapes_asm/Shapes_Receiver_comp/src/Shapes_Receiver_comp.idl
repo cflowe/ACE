@@ -1,0 +1,16 @@
+// $Id: Shapes_Receiver_comp.idl 92657 2010-11-19 19:21:12Z johnnyw $
+
+#ifndef SHAPES_RECEIVER_COMP_IDL_
+#define SHAPES_RECEIVER_COMP_IDL_
+
+#include "Shapes_ShapeType_conn.idl"
+
+module Shapes
+{
+  component Receiver_comp
+  {
+    port ShapeType_conn::DDS_Listen info_out;
+  };
+};
+
+#endif /* SHAPES_RECEIVER_COMP_IDL_ */

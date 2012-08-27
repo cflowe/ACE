@@ -1,0 +1,16 @@
+//$Id: Test.idl 42434 2001-12-14 03:36:55Z bala $
+/// Simple interface to send object references back and forth
+interface Server;
+
+typedef sequence<Server> ServerSequence;
+
+interface Server
+{
+  void CreateExtra (in unsigned long len,
+                    out ServerSequence seq)  ;
+
+  void DeleteExtra (in ServerSequence seq);
+
+  // Shutdown operation
+  oneway void shutdown ();
+};

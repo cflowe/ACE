@@ -1,0 +1,17 @@
+// $Id: ThreeComp_no_ami.idl 92632 2010-11-18 08:54:53Z mhengstmengel $
+
+#ifndef THREECOMP_NO_AMI_IDL
+#define THREECOMP_NO_AMI_IDL
+
+#pragma ciao lem "Base/ThreeComp_no_amiE.idl"
+
+module ThreeComp
+{
+   // test with no ciao ami4ccm interface, no pragma, see above
+  interface MyBar
+    {
+      long testbar (in long cmd, out string answer);
+    };
+};
+
+#endif

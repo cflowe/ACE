@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: compression.mpb 95525 2012-02-07 09:56:46Z johnnyw $
+
+project : taolib, anytypecode {
+  after   += Compression
+  libs    += TAO_Compression
+}

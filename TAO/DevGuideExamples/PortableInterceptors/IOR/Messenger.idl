@@ -1,0 +1,8 @@
+// $Id: Messenger.idl 83358 2008-10-21 23:02:02Z sowayaa $
+
+#include "orb.idl"
+
+interface Messenger
+{
+  void send_message(in CORBA::OctetSeq user_name);
+};

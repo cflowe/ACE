@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="Bar_idl_gen"
+	ProjectGUID="{2451B568-FECA-1BAD-4460-8A633BDA9868}"
+	RootNamespace="Bar_idl_gen"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Bar_idl_gen_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Bar_idl_gen_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Bar_idl_gen_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Bar_idl_gen_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="Bar.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="Bar.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Bar.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -DCCM_LW -Gcl -I..\.. -I..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -Wb,stub_export_macro=BAR_STUB_Export -Wb,stub_export_include=Bar_stub_export.h -Wb,skel_export_macro=BAR_SVNT_Export -Wb,skel_export_include=Bar_svnt_export.h -Wb,exec_export_macro=BAR_EXEC_Export -Wb,exec_export_include=Bar_exec_export.h -Gxhex -Gxhsk -Gxhst -Gex &quot;Bar.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bar_exec.cpp;Bar_exec.h;Bar_exec_export.h;Bar_stub_export.h;Bar_svnt.cpp;Bar_svnt.h;Bar_svnt_export.h;Bar_svnt_T.cpp;Bar_svnt_T.h;BarC.cpp;BarC.h;BarC.inl;BarE.idl;BarS.cpp;BarS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Bar.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -DCCM_LW -Gcl -I..\.. -I..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -Wb,stub_export_macro=BAR_STUB_Export -Wb,stub_export_include=Bar_stub_export.h -Wb,skel_export_macro=BAR_SVNT_Export -Wb,skel_export_include=Bar_svnt_export.h -Wb,exec_export_macro=BAR_EXEC_Export -Wb,exec_export_include=Bar_exec_export.h -Gxhex -Gxhsk -Gxhst -Gex &quot;Bar.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bar_exec.cpp;Bar_exec.h;Bar_exec_export.h;Bar_stub_export.h;Bar_svnt.cpp;Bar_svnt.h;Bar_svnt_export.h;Bar_svnt_T.cpp;Bar_svnt_T.h;BarC.cpp;BarC.h;BarC.inl;BarE.idl;BarS.cpp;BarS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Bar.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -DCCM_LW -Gcl -I..\.. -I..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -Wb,stub_export_macro=BAR_STUB_Export -Wb,stub_export_include=Bar_stub_export.h -Wb,skel_export_macro=BAR_SVNT_Export -Wb,skel_export_include=Bar_svnt_export.h -Wb,exec_export_macro=BAR_EXEC_Export -Wb,exec_export_include=Bar_exec_export.h -Gxhex -Gxhsk -Gxhst -Gex &quot;Bar.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bar_exec.cpp;Bar_exec.h;Bar_exec_export.h;Bar_stub_export.h;Bar_svnt.cpp;Bar_svnt.h;Bar_svnt_export.h;Bar_svnt_T.cpp;Bar_svnt_T.h;BarC.cpp;BarC.h;BarC.inl;BarE.idl;BarS.cpp;BarS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Bar.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -DCCM_LW -Gcl -I..\.. -I..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -Wb,stub_export_macro=BAR_STUB_Export -Wb,stub_export_include=Bar_stub_export.h -Wb,skel_export_macro=BAR_SVNT_Export -Wb,skel_export_include=Bar_svnt_export.h -Wb,exec_export_macro=BAR_EXEC_Export -Wb,exec_export_include=Bar_exec_export.h -Gxhex -Gxhsk -Gxhst -Gex &quot;Bar.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bar_exec.cpp;Bar_exec.h;Bar_exec_export.h;Bar_stub_export.h;Bar_svnt.cpp;Bar_svnt.h;Bar_svnt_export.h;Bar_svnt_T.cpp;Bar_svnt_T.h;BarC.cpp;BarC.h;BarC.inl;BarE.idl;BarS.cpp;BarS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

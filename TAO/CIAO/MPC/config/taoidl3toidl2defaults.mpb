@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: taoidl3toidl2defaults.mpb 89877 2010-04-14 07:11:14Z johnnyw $
+
+project: taobaseidl3toidl2defaults, taoidl3toid2_ccm_lw {
+}

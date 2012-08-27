@@ -1,0 +1,6 @@
+// $Id: README 94802 2011-10-20 09:46:10Z mcorino $
+CollocationStrategy direct and interface inheritance.
+
+The base needs to be generated also with direct collocation enabled,
+otherwise no direct collocation.
+

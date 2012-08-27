@@ -1,0 +1,7 @@
+// -*- mpc -*-
+// $Id: logWalker.mpc 85624 2009-06-12 16:14:23Z mesnier_p $
+
+project : aceexe, avoids_ace_for_tao {
+  exename = tao_logWalker
+  install = $(ACE_ROOT)/bin
+}

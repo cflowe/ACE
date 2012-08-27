@@ -1,0 +1,4 @@
+// $Id: wb26.features 86476 2009-08-13 03:27:23Z elliott_c $
+
+// We're always cross-compiling with wb26
+cross_compile = 1

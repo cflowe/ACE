@@ -1,0 +1,5 @@
+// $Id: XML_Persistence.mpc 69504 2005-11-21 20:05:23Z cleeland $
+
+project : orbsvcsexe, portableserver, notify_serv {
+  exename = main
+}

@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: RtEC_MCast.mpc 80754 2008-02-27 15:24:53Z sowayaa $
+
+project : orbsvcsexe, rtevent_serv, rtsched {
+  exename = MCast
+}

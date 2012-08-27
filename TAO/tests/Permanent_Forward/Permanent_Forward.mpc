@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Permanent_Forward.mpc 75478 2006-11-22 13:58:29Z jtc $
+
+project(*StubTest) : taoexe, iormanip {
+  exename  = StubTest
+}

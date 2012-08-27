@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: IORManip_Filter_Test.mpc 78765 2007-07-03 18:27:51Z johnnyw $
+
+project(*Server): taoserver, iormanip {
+}

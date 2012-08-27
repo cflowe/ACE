@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-6213-8B0970C10B4A}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-6213-8B0970C10B4A}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-6213-8B0970C10B4A}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-6213-8B0970C10B4A}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-6213-8B0970C10B4A}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{5635C877-FECA-1BAD-6213-8B0970C10B4A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Client_Group.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Client_Options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Client_Pair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Consumer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Control.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EC_Destroyer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Federated_TestC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Federated_TestS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Implicit_Deactivator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Loopback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Loopback_Consumer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Loopback_Pair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Loopback_Supplier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ORB_Holder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ORB_Shutdown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ORB_Task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ORB_Task_Activator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Peer_Base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PriorityBand_Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RT_Class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTClient_Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTCORBA_Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTEC_Initializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTPOA_Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RTServer_Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Send_Task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Send_Task_Stopper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Supplier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SyncScope_Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Auto_Disconnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Client_Pair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Consumer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EC_Destroyer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Federated_TestC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Federated_TestS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Implicit_Deactivator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Loopback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Loopback_Consumer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Loopback_Pair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Loopback_Supplier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Low_Priority_Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ORB_Holder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ORB_Shutdown.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ORB_Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ORB_Task_Activator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Peer_Base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PriorityBand_Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RIR_Narrow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_Class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTClient_Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTCORBA_Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTEC_Initializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rtec_perf_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPOA_Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTServer_Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Send_Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Send_Task_Stopper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Servant_var.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shutdown.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Supplier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SyncScope_Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_Activator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RTEC_Perf.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Federated_Test.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Auto_Disconnect.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Client_Group.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Client_Pair.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="EC_Destroyer.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Federated_TestC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Implicit_Deactivator.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Loopback_Pair.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Low_Priority_Setup.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="ORB_Holder.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="ORB_Shutdown.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="ORB_Task.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="ORB_Task_Activator.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="PriorityBand_Setup.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="RT_Class.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="RTClient_Setup.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="RTCORBA_Setup.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="RTPOA_Setup.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="RTServer_Setup.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Send_Task_Stopper.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Servant_var.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Shutdown.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="SyncScope_Setup.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Task_Activator.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Auto_Disconnect.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Low_Priority_Setup.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RIR_Narrow.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Servant_var.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shutdown.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_Activator.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

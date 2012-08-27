@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: notifytest.mpb 95491 2012-01-24 13:51:36Z johnnyw $
+
+project: orbsvcsexe, notification, notification_skel, notification_serv, naming, svc_utils, event_serv, ifr_client, dynamicinterface, messaging, pi, codecfactory, valuetype {
+  after    += NotifyTests_Lib
+  libs     += TAO_NotifyTests
+  includes += ../lib ../../lib
+  libpaths += ../lib ../../lib
+}

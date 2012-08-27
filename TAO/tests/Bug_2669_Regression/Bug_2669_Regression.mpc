@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Bug_2669_Regression.mpc 75136 2006-10-30 15:27:31Z smcqueen $
+
+project(*Test) : taoserver, messaging, ami {
+  exename   = client
+
+  Source_Files {
+    client.cpp
+  }
+}

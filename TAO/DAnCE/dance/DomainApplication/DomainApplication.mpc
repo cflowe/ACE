@@ -1,0 +1,18 @@
+// -*- MPC -*-
+// $Id: DomainApplication.mpc 92008 2010-09-24 14:50:21Z wotte $
+
+project: install, dance_lib, dance_output, dance_domainapplication_skel, \
+    dance_nodeapplicationmanager_stub, \
+    dance_nodeapplicationmanager_skel, \
+    dance_tools, dance_logger {
+  sharedname   = DAnCE_DomainApplication
+  dynamicflags += DOMAIN_APPLICATION_BUILD_DLL
+
+  Source_Files {
+    Domain_Application_Impl.cpp
+  }
+
+  specific {
+    install_dir = dance/DomainApplication
+  }
+}

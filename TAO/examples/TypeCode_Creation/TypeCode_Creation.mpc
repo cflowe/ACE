@@ -1,0 +1,9 @@
+// $Id: TypeCode_Creation.mpc 75909 2006-12-07 19:01:04Z parsons $
+
+project (TypeCode_Creation_Test) : taoclient, typecodefactory {
+  exename  = create_tc
+  Source_Files {
+    testC.cpp
+    main.cpp
+  }
+}

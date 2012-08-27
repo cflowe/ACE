@@ -1,0 +1,13 @@
+//
+// $Id: test.idl 82826 2008-09-25 08:12:53Z smcqueen $
+//
+
+interface Test
+{
+  void test_method (in short priority);
+  // Print out the CORBA priority of the servant thread and check that
+  // it is equal to the <priority> argument.
+
+  oneway void shutdown ();
+  // Shut down the ORB.
+};

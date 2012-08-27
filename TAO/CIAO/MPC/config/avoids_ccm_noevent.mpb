@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: avoids_ccm_noevent.mpb 92156 2010-10-05 09:21:17Z mhengstmengel $
+
+feature(ccm_noevent) {
+  avoids += ccm_noevent
+}

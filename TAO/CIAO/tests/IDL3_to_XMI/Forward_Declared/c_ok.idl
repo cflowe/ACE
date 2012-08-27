@@ -1,0 +1,21 @@
+// $Id: c_ok.idl 92524 2010-11-10 10:58:06Z vzykov $
+
+#ifndef C_IDL
+#define C_IDL
+
+#include "a.idl"
+
+module M
+{
+
+    interface c1: M::a
+    {
+    };
+
+    component c2 supports M::a
+    {
+    };
+
+};
+
+#endif // C_IDL

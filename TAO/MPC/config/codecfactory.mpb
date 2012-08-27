@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: codecfactory.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project : taolib, anytypecode {
+  after   += CodecFactory
+  libs    += TAO_CodecFactory
+}

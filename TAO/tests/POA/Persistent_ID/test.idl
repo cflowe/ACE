@@ -1,0 +1,9 @@
+// $Id: test.idl 45260 2002-06-20 23:01:03Z irfan $
+
+interface test
+{
+  void method ();
+  test create_POA ();
+  void destroy_POA ();
+  void shutdown ();
+};

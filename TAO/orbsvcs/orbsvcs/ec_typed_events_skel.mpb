@@ -1,0 +1,27 @@
+// -*- MPC -*-
+// $Id: ec_typed_events_skel.mpb 95128 2011-11-27 21:22:15Z johnnyw $
+
+feature(ec_typed_events) {
+  macros   += TAO_HAS_TYPED_EVENT_CHANNEL
+
+  Source_Files {
+    CosTypedEventCommS.cpp
+    CosTypedEventChannelAdminS.cpp
+  }
+
+  Header_Files {
+    CosTypedEventCommS.h
+    CosTypedEventChannelAdminS.h
+
+    CosTypedEventCommS_T.h
+    CosTypedEventChannelAdminS_T.h
+  }
+
+  Inline_Files {
+  }
+
+  Template_Files {
+    CosTypedEventCommS_T.cpp
+    CosTypedEventChannelAdminS_T.cpp
+  }
+}

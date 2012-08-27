@@ -1,0 +1,5 @@
+// $Id: nolink_codecfactory.mpb 77928 2007-04-05 11:53:03Z elliott_c $
+feature(interceptors, link_codecfactory) {
+  after -= CodecFactory
+  libs  -= TAO_CodecFactory
+}

@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Object_Reactivation.mpc 78765 2007-07-03 18:27:51Z johnnyw $
+
+project(POA*): taoserver, avoids_corba_e_micro {
+  exename = Object_Reactivation
+}

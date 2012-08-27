@@ -1,0 +1,7 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+	This directory contains a partial implementation of the COS
+Event Service, using TAO's RT Event Service as the backend.  It is
+preserved for historical reasons, most applications are better served
+by the full implementation of the COS Event Service included with TAO
+or by the standard Notification Service.

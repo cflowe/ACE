@@ -1,0 +1,30 @@
+// -*- MPC -*-
+// $Id: UNKNOWN_Exception.mpc 77036 2007-02-12 15:39:42Z elliott_c $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    test.idl
+  }
+  custom_only = 1
+}
+
+project(*Server): taoserver {
+  after += *idl
+  Source_Files {
+    testC.cpp
+    testS.cpp
+    server.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client): taoclient, anytypecode {
+  after += *idl
+  Source_Files {
+    testC.cpp
+    client.cpp
+  }
+  IDL_Files {
+  }
+}

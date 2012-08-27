@@ -1,0 +1,21 @@
+// $Id: PSL_SampleLost_Sender.idl 95932 2012-06-27 11:24:31Z msmit $
+
+/**
+ * @author Marijke Hengstmengel (mhengstmengel@remedy.nl)
+ */
+
+#ifndef DDS_PSL_SAMPLELOST_SENDER_IDL
+#define DDS_PSL_SAMPLELOST_SENDER_IDL
+
+#include "Connector/PSL_SampleLost_Connector.idl"
+
+module PSL_SampleLost
+{
+  component Sender
+  {
+    port PSL_SampleLostConnector::DDS_Write test_topic_write;
+    provides CCM_DDS::ConnectorStatusListener connector_status;
+  };
+};
+
+#endif

@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: Bug_2137_Regression.mpc 78776 2007-07-04 07:05:49Z sowayaa $
+
+project(*Client): taoclient, ftclientorb {
+
+  Source_Files {
+    client.cpp
+  }
+}

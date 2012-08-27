@@ -1,0 +1,5 @@
+// $Id: test.idl 59474 2004-08-12 17:00:42Z smcqueen $
+interface con
+{
+};
+

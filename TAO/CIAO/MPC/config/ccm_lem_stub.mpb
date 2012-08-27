@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ccm_lem_stub.mpb 92078 2010-09-29 02:23:08Z wotte $
+
+project : ccm_stub {
+  after += CCM_lem_stub 
+  libs  += CCM_lem_stub 
+}

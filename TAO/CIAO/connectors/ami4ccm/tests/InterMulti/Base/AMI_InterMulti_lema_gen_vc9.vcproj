@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="AMI_InterMulti_lema_gen"
+	ProjectGUID="{00C27092-FECA-1BAD-3FD2-A80907031F43}"
+	RootNamespace="AMI_InterMulti_lema_gen"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\AMI_InterMulti_lema_gen_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\AMI_InterMulti_lema_gen_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\AMI_InterMulti_lema_gen_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\AMI_InterMulti_lema_gen_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="InterMulti.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="InterMultiA.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on InterMultiA.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -Sa -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Wb,stub_export_macro=INTERMULTI_STUB_Export -Wb,stub_export_include=InterMulti_stub_export.h -Wb,conn_export_macro=INTERMULTI_CONN_Export -Wb,conn_export_include=InterMulti_conn_export.h -Wb,svnt_export_macro=INTERMULTI_SVNT_Export -Wb,svnt_export_include=InterMulti_svnt_export.h -Wb,skel_export_macro=INTERMULTI_SKEL_Export -Wb,skel_export_include=InterMulti_skel_export.h -I.. -Gsv -Gcn -Glem -GC -Gxhst -Gxhsv &quot;InterMultiA.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="InterMulti_stub_export.h;InterMulti_svnt_export.h;InterMultiA_conn.cpp;InterMultiA_conn.h;InterMultiA_svnt.cpp;InterMultiA_svnt.h;InterMultiA_svnt_T.cpp;InterMultiA_svnt_T.h;InterMultiAC.cpp;InterMultiAC.h;InterMultiAC.inl;InterMultiAE.idl;InterMultiAS.cpp;InterMultiAS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on InterMultiA.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -Sa -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Wb,stub_export_macro=INTERMULTI_STUB_Export -Wb,stub_export_include=InterMulti_stub_export.h -Wb,conn_export_macro=INTERMULTI_CONN_Export -Wb,conn_export_include=InterMulti_conn_export.h -Wb,svnt_export_macro=INTERMULTI_SVNT_Export -Wb,svnt_export_include=InterMulti_svnt_export.h -Wb,skel_export_macro=INTERMULTI_SKEL_Export -Wb,skel_export_include=InterMulti_skel_export.h -I.. -Gsv -Gcn -Glem -GC -Gxhst -Gxhsv &quot;InterMultiA.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="InterMulti_stub_export.h;InterMulti_svnt_export.h;InterMultiA_conn.cpp;InterMultiA_conn.h;InterMultiA_svnt.cpp;InterMultiA_svnt.h;InterMultiA_svnt_T.cpp;InterMultiA_svnt_T.h;InterMultiAC.cpp;InterMultiAC.h;InterMultiAC.inl;InterMultiAE.idl;InterMultiAS.cpp;InterMultiAS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on InterMultiA.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -Sa -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Wb,stub_export_macro=INTERMULTI_STUB_Export -Wb,stub_export_include=InterMulti_stub_export.h -Wb,conn_export_macro=INTERMULTI_CONN_Export -Wb,conn_export_include=InterMulti_conn_export.h -Wb,svnt_export_macro=INTERMULTI_SVNT_Export -Wb,svnt_export_include=InterMulti_svnt_export.h -Wb,skel_export_macro=INTERMULTI_SKEL_Export -Wb,skel_export_include=InterMulti_skel_export.h -I.. -Gsv -Gcn -Glem -GC -Gxhst -Gxhsv &quot;InterMultiA.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="InterMulti_stub_export.h;InterMulti_svnt_export.h;InterMultiA_conn.cpp;InterMultiA_conn.h;InterMultiA_svnt.cpp;InterMultiA_svnt.h;InterMultiA_svnt_T.cpp;InterMultiA_svnt_T.h;InterMultiAC.cpp;InterMultiAC.h;InterMultiAC.inl;InterMultiAE.idl;InterMultiAS.cpp;InterMultiAS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on InterMultiA.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -Sa -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Wb,stub_export_macro=INTERMULTI_STUB_Export -Wb,stub_export_include=InterMulti_stub_export.h -Wb,conn_export_macro=INTERMULTI_CONN_Export -Wb,conn_export_include=InterMulti_conn_export.h -Wb,svnt_export_macro=INTERMULTI_SVNT_Export -Wb,svnt_export_include=InterMulti_svnt_export.h -Wb,skel_export_macro=INTERMULTI_SKEL_Export -Wb,skel_export_include=InterMulti_skel_export.h -I.. -Gsv -Gcn -Glem -GC -Gxhst -Gxhsv &quot;InterMultiA.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="InterMulti_stub_export.h;InterMulti_svnt_export.h;InterMultiA_conn.cpp;InterMultiA_conn.h;InterMultiA_svnt.cpp;InterMultiA_svnt.h;InterMultiA_svnt_T.cpp;InterMultiA_svnt_T.h;InterMultiAC.cpp;InterMultiAC.h;InterMultiAC.inl;InterMultiAE.idl;InterMultiAS.cpp;InterMultiAS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

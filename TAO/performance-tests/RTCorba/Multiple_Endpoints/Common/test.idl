@@ -1,0 +1,10 @@
+//
+// $Id: test.idl 32470 2000-05-09 16:45:07Z coryan $
+//
+
+interface Test
+{
+  void test_method (in long id);
+
+  void shutdown (in string orb_id);
+};

@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Bug_2549_Regression.mpc 73635 2006-07-19 08:07:44Z smcqueen $
+
+project(*Test) : taoserver, messaging, rtcorba, objreftemplate, rtscheduling, rtportableserver {
+  exename   = test
+
+  Source_Files {
+    test.cpp
+  }
+}

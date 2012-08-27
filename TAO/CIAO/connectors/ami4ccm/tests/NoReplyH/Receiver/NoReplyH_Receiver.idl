@@ -1,0 +1,18 @@
+// $Id: NoReplyH_Receiver.idl 89891 2010-04-14 14:01:18Z mhengstmengel $
+
+#ifndef NOREPLYH_RECEIVER_IDL
+#define NOREPLYH_RECEIVER_IDL
+
+#include <Components.idl>
+
+#include "Base/NoReplyH.idl"
+
+module NoReplyH
+{
+  component Receiver
+  {
+    /// Provides
+    provides MyFoo do_my_foo;
+  };
+};
+#endif

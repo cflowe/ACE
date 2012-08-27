@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_nodeapplicationmanager.mpb 89115 2010-02-22 12:45:29Z johnnyw $
+
+project : dance, dance_nodeapplication, dance_nodeapplicationmanager_skel {
+  after += DAnCE_NodeApplicationManager
+  libs  += DAnCE_NodeApplicationManager
+}

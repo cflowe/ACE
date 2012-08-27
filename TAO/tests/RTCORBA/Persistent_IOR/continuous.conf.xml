@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<!-- Converted from continuous.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  -->
+ <!--  $Id: continuous.conf.xml 94649 2011-10-07 07:54:59Z msmit $ -->
+ <!--  -->
+ <!--  Option for platforms where direct mapping doesn't work -->
+ <static id="RT_ORB_Loader" params="-ORBPriorityMapping continuous"/>
+</ACE_Svc_Conf>

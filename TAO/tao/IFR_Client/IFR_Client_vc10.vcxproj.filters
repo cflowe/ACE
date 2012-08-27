@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-F745-F139A37D2D42}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-F745-F139A37D2D42}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-F745-F139A37D2D42}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-F745-F139A37D2D42}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="Pidl Files">
+      <UniqueIdentifier>{2990FD4C-FECA-1BAD-F745-F139A37D2D42}</UniqueIdentifier>
+      <Extensions>pidl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-F745-F139A37D2D42}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{502A2050-FECA-1BAD-F745-F139A37D2D42}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IFR_BaseC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFR_BasicC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFR_Client_Adapter_Impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFR_ComponentsC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFR_ExtendedC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IFR_BaseA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFR_BaseC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFR_BasicA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFR_BasicC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFR_Client_Adapter_Impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ifr_client_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ifr_client_skel_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFR_ComponentsA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFR_ComponentsC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFR_ExtendedA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFR_ExtendedC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IFR_Client.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_IFR_Client.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IFR_Base.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="IFR_Basic.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="IFR_Components.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="IFR_Extended.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IFR_BaseC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="IFR_BasicC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="IFR_ComponentsC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="IFR_ExtendedC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TAO_IFR_Client.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

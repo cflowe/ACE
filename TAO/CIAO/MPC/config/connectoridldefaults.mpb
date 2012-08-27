@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: connectoridldefaults.mpb 89564 2010-03-22 10:02:03Z johnnyw $
+
+project : componentidldefaults {
+ idlflags += -Gcn -Gxhcn -I$(CIAO_ROOT)/connectors -Sa -St
+ idlflags -= -Gxhex
+}

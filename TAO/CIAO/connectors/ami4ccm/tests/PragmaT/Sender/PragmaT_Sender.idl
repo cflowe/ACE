@@ -1,0 +1,21 @@
+// $Id: PragmaT_Sender.idl 95242 2011-12-07 11:54:56Z johnnyw $
+
+#ifndef PRAGMAT_SENDER_IDL
+#define PRAGMAT_SENDER_IDL
+
+#include <Components.idl>
+
+#include "Base/PragmaT.idl"
+
+#pragma ami4ccm receptacle "PragmaT::Sender::run_my_foo"
+
+module PragmaT
+{
+  component Sender
+  {
+    /// For synchronous invocation
+    uses MyFoo run_my_foo;
+  };
+};
+
+#endif

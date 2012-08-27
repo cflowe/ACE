@@ -1,0 +1,10 @@
+// $Id: TypeSupport.mpc 95816 2012-06-04 08:05:58Z johnnyw $
+
+project(DDS_TypeSupport_Test) : taoexe, typecode, dds4ccm_base {
+  includes += $(CIAO_ROOT)
+  exename = typesupport_test
+
+  Source_Files {
+    main.cpp
+  }
+}

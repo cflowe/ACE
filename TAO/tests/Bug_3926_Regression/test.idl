@@ -1,0 +1,8 @@
+// $Id: test.idl 92649 2010-11-19 13:31:27Z vzykov $
+
+module hello {
+    interface GoodDay {
+        short number ();
+        oneway void shutdown ();
+    };
+};

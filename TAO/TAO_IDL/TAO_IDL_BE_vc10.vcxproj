@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>TAO_IDL_BE</ProjectName>
+    <ProjectGuid>{F6E6EBE0-FECA-1BAD-9E60-2391A05AED51}</ProjectGuid>
+    <RootNamespace>TAO_IDL_BE</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\TAO_IDL_BE_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TAO_IDL_BEd</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\TAO_IDL_BE_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TAO_IDL_BE</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\TAO_IDL_BE_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TAO_IDL_BEd</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\TAO_IDL_BE_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TAO_IDL_BE</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..;..\TAO_IDL\fe;..\TAO_IDL\include;..;include;be_include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_IDL_BE_BUILD_DLL;_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..\TAO_IDL\fe;..\TAO_IDL\include;..;include;be_include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;TAO_IDL_FEd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_IDL_BEd.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAO_IDL_BEd.lib</ImportLibrary>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..;..\TAO_IDL\fe;..\TAO_IDL\include;..;include;be_include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_IDL_BE_BUILD_DLL;NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..\TAO_IDL\fe;..\TAO_IDL\include;..;include;be_include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;TAO_IDL_FE.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_IDL_BE.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAO_IDL_BE.lib</ImportLibrary>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..;..\TAO_IDL\fe;..\TAO_IDL\include;..;include;be_include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_IDL_BE_BUILD_DLL;_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..\TAO_IDL\fe;..\TAO_IDL\include;..;include;be_include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;TAO_IDL_FEd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_IDL_BEd.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAO_IDL_BEd.lib</ImportLibrary>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..;..\TAO_IDL\fe;..\TAO_IDL\include;..;include;be_include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_IDL_BE_BUILD_DLL;NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..\TAO_IDL\fe;..\TAO_IDL\include;..;include;be_include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;TAO_IDL_FE.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_IDL_BE.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAO_IDL_BE.lib</ImportLibrary>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="be\be_argument.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_array.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_attribute.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_codegen.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_component.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_component_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_connector.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_constant.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_consumes.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_decl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_emits.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_enum.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_enum_val.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_eventtype.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_eventtype_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_exception.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_expression.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_extended_port.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_factory.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_field.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_finder.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_generator.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_global.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_helper.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_home.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_identifier_helper.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_init.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_interface.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_interface_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_mirror_port.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_module.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_native.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_null_return_emitter.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_operation.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_param_holder.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_porttype.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_predefined_type.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_produce.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_provides.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_publishes.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_root.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_scope.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_sequence.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_string.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_structure.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_structure_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_template_module.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_template_module_inst.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_template_module_ref.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_tmplinst.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_type.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_typedef.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_union.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_union_branch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_union_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_union_label.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_uses.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_util.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_valuebox.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_valuetype.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_valuetype_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_amh_pre_proc.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_ami_pre_proc.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_any_extracted_type_decl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_arg_traits.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_argument\arglist.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_argument\argument.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_argument\invoke_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_argument\marshal_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_argument\upcall_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_argument\vardecl_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_array\any_op_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_array\any_op_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_array\array.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_array\array_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_array\array_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_array\array_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_array\cdr_op_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_array\cdr_op_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_attr_assign.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_attr_init.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_attr_return.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_attr_setarg_type.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_attribute\attribute.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_attribute\ccm_init.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_attribute\set_from_extracted.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_ccm_pre_proc.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_ami_rh_ex_base.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_ami_rh_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_ami_rh_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_ex_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_svh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_svs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_svth.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\component_svts.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\context_ex_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\context_svth.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\context_svts.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\executor_ex_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\executor_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\executor_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\executor_exs_attr_init.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\executor_private_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\facet_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\facet_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\servant_svh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component\servant_svs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component_fwd\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component_fwd\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component_fwd\component_fwd_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_component_scope.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_connector\connector_ami_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_connector\connector_ami_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_connector\connector_dds_ex_base.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_connector\connector_dds_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_connector\connector_dds_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_connector\executor_ami_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_connector\executor_ami_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_connector\facet_ami_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_connector\facet_ami_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_constant\constant_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_constant\constant_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_context.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_dds_ts_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_decl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_enum\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)3.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_enum\any_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_enum\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)3.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_enum\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_enum\enum_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_enum\enum_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)4.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\any_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)3.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)4.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)3.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\ctor_assign.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\exception.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\exception_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\exception_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\exception_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_exception\exception_ctor.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_field\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)5.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_field\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)4.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_field\field_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_field\field_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_field\field_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_home\home_ex_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_home\home_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_home\home_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_home\home_svh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_home\home_svs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\amh_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\amh_rh_sh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\amh_rh_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\amh_sh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\amh_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\ami4ccm_conn_ex_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\ami4ccm_rh_ex_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\ami4ccm_sendc_ex_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)5.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\any_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)4.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)6.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)5.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\direct_proxy_impl_sh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\direct_proxy_impl_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\facet_svth.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\facet_svts.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_ex_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_ih.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_is.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_sh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_svth.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\interface_svts.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\smart_proxy_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\smart_proxy_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\tie_sh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface\tie_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface_fwd\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)6.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface_fwd\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)7.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_interface_fwd\interface_fwd_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_member_type_decl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_module\any_op.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_module\cdr_op.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_module\module.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_module\module_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_module\module_ih.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_module\module_sh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_native\native_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_null_return_value.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\amh_rh_sh.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\amh_rh_ss.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\amh_sh.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\amh_ss.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\ami_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\ami_handler_reply_stub_operation_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\arglist.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\argument.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\argument_invoke.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\argument_marshal.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\direct_proxy_impl_ss.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\exceptlist_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\exceptlist_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\operation.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\operation_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\operation_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\operation_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\operation_ih.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\operation_is.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\operation_sh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\operation_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\operation_svs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\proxy_impl_xh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\rettype.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\rettype_return_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\smart_proxy_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\smart_proxy_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\tie_sh.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\tie_ss.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_operation\upcall_command_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\any_op.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\cdr_op.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_cnh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_cns.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_ex_idl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_exh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_exs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_ih.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_is.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_sh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_sth.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_svh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_svs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_svth.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_root\root_svts.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_scope.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_sequence\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)7.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_sequence\any_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)5.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_sequence\buffer_type.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_sequence\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)8.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_sequence\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)6.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_sequence\sequence_base.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_sequence\sequence_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_sequence\sequence_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_structure\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)8.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_structure\any_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)6.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_structure\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)9.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_structure\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)7.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_structure\structure.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_structure\structure_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_structure\structure_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_structure\structure_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_structure_fwd\structure_fwd_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_template_export.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_traits.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typecode\alias_typecode.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typecode\enum_typecode.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typecode\objref_typecode.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typecode\struct_typecode.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typecode\typecode_decl.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typecode\typecode_defn.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typecode\union_typecode.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typecode\value_typecode.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typedef\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)9.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typedef\any_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)7.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typedef\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)10.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typedef\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)8.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typedef\typedef.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typedef\typedef_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typedef\typedef_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_typedef\typedef_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)10.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\any_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)8.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)11.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)9.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\discriminant_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\discriminant_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\discriminant_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\union.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\union_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\union_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union\union_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_branch\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)12.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_branch\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)10.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_branch\private_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_branch\public_assign_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_branch\public_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_branch\public_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_branch\public_constructor_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_branch\public_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_branch\public_reset_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_union_fwd\union_fwd_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)11.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\any_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)9.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)13.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)11.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\field_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\field_ci.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\union_member_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\valuebox.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\valuebox_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\valuebox_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuebox\valuebox_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)12.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\any_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)10.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\arglist.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)3.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)14.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\cdr_op_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)12.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\field_cdr_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\field_cdr_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\field_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)3.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\field_ci.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)3.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\field_cs.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)2.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\marshal_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\marshal_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\obv_module.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_init.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_init_arglist_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_init_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_init_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_init_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_obv_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_obv_ci.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_obv_cs.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_sh.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype\valuetype_ss.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype_fwd\any_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)13.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype_fwd\cdr_op_ch.cpp">
+      <ObjectFileName>$(IntDir)\%(Filename)15.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_valuetype_fwd\valuetype_fwd_ch.cpp">
+    </ClCompile>
+    <ClCompile Include="be\be_visitor_xplicit_pre_proc.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="be\be_visitor_argument\argument.h" />
+    <ClInclude Include="be\be_visitor_array\array.h" />
+    <ClInclude Include="be\be_visitor_attribute\attribute.h" />
+    <ClInclude Include="be\be_visitor_component\component.h" />
+    <ClInclude Include="be\be_visitor_exception\exception.h" />
+    <ClInclude Include="be\be_visitor_interface\interface.h" />
+    <ClInclude Include="be\be_visitor_module\module.h" />
+    <ClInclude Include="be\be_visitor_operation\operation.h" />
+    <ClInclude Include="be\be_visitor_root\root.h" />
+    <ClInclude Include="be\be_visitor_structure\structure.h" />
+    <ClInclude Include="be\be_visitor_typedef\typedef.h" />
+    <ClInclude Include="be\be_visitor_union\union.h" />
+    <ClInclude Include="be\be_visitor_valuebox\valuebox.h" />
+    <ClInclude Include="be\be_visitor_valuetype\valuetype.h" />
+    <ClInclude Include="be_include\be_argument.h" />
+    <ClInclude Include="be_include\be_array.h" />
+    <ClInclude Include="be_include\be_attribute.h" />
+    <ClInclude Include="be_include\be_codegen.h" />
+    <ClInclude Include="be_include\be_component.h" />
+    <ClInclude Include="be_include\be_component_fwd.h" />
+    <ClInclude Include="be_include\be_connector.h" />
+    <ClInclude Include="be_include\be_constant.h" />
+    <ClInclude Include="be_include\be_consumes.h" />
+    <ClInclude Include="be_include\be_decl.h" />
+    <ClInclude Include="be_include\be_emits.h" />
+    <ClInclude Include="be_include\be_enum.h" />
+    <ClInclude Include="be_include\be_enum_val.h" />
+    <ClInclude Include="be_include\be_eventtype.h" />
+    <ClInclude Include="be_include\be_eventtype_fwd.h" />
+    <ClInclude Include="be_include\be_exception.h" />
+    <ClInclude Include="be_include\be_expression.h" />
+    <ClInclude Include="be_include\be_extended_port.h" />
+    <ClInclude Include="be_include\be_extern.h" />
+    <ClInclude Include="be_include\be_factory.h" />
+    <ClInclude Include="be_include\be_field.h" />
+    <ClInclude Include="be_include\be_finder.h" />
+    <ClInclude Include="be_include\be_generator.h" />
+    <ClInclude Include="be_include\be_global.h" />
+    <ClInclude Include="be_include\be_helper.h" />
+    <ClInclude Include="be_include\be_home.h" />
+    <ClInclude Include="be_include\be_identifier_helper.h" />
+    <ClInclude Include="be_include\be_interface.h" />
+    <ClInclude Include="be_include\be_interface_fwd.h" />
+    <ClInclude Include="be_include\be_mirror_port.h" />
+    <ClInclude Include="be_include\be_module.h" />
+    <ClInclude Include="be_include\be_native.h" />
+    <ClInclude Include="be_include\be_null_return_emitter.h" />
+    <ClInclude Include="be_include\be_operation.h" />
+    <ClInclude Include="be_include\be_param_holder.h" />
+    <ClInclude Include="be_include\be_porttype.h" />
+    <ClInclude Include="be_include\be_predefined_type.h" />
+    <ClInclude Include="be_include\be_provides.h" />
+    <ClInclude Include="be_include\be_publishes.h" />
+    <ClInclude Include="be_include\be_root.h" />
+    <ClInclude Include="be_include\be_scope.h" />
+    <ClInclude Include="be_include\be_sequence.h" />
+    <ClInclude Include="be_include\be_string.h" />
+    <ClInclude Include="be_include\be_structure.h" />
+    <ClInclude Include="be_include\be_structure_fwd.h" />
+    <ClInclude Include="be_include\be_template_module.h" />
+    <ClInclude Include="be_include\be_template_module_inst.h" />
+    <ClInclude Include="be_include\be_template_module_ref.h" />
+    <ClInclude Include="be_include\be_type.h" />
+    <ClInclude Include="be_include\be_typedef.h" />
+    <ClInclude Include="be_include\be_union.h" />
+    <ClInclude Include="be_include\be_union_branch.h" />
+    <ClInclude Include="be_include\be_union_fwd.h" />
+    <ClInclude Include="be_include\be_union_label.h" />
+    <ClInclude Include="be_include\be_uses.h" />
+    <ClInclude Include="be_include\be_util.h" />
+    <ClInclude Include="be_include\be_valuebox.h" />
+    <ClInclude Include="be_include\be_valuetype.h" />
+    <ClInclude Include="be_include\be_valuetype_fwd.h" />
+    <ClInclude Include="be_include\be_visitor.h" />
+    <ClInclude Include="be_include\be_visitor_amh_pre_proc.h" />
+    <ClInclude Include="be_include\be_visitor_ami_pre_proc.h" />
+    <ClInclude Include="be_include\be_visitor_any_extracted_type_decl.h" />
+    <ClInclude Include="be_include\be_visitor_arg_traits.h" />
+    <ClInclude Include="be_include\be_visitor_argument.h" />
+    <ClInclude Include="be_include\be_visitor_array.h" />
+    <ClInclude Include="be_include\be_visitor_attr_assign.h" />
+    <ClInclude Include="be_include\be_visitor_attr_init.h" />
+    <ClInclude Include="be_include\be_visitor_attr_return.h" />
+    <ClInclude Include="be_include\be_visitor_attr_setarg_type.h" />
+    <ClInclude Include="be_include\be_visitor_attribute.h" />
+    <ClInclude Include="be_include\be_visitor_ccm_pre_proc.h" />
+    <ClInclude Include="be_include\be_visitor_component.h" />
+    <ClInclude Include="be_include\be_visitor_component_fwd.h" />
+    <ClInclude Include="be_include\be_visitor_component_scope.h" />
+    <ClInclude Include="be_include\be_visitor_connector.h" />
+    <ClInclude Include="be_include\be_visitor_constant.h" />
+    <ClInclude Include="be_include\be_visitor_context.h" />
+    <ClInclude Include="be_include\be_visitor_dds_ts_idl.h" />
+    <ClInclude Include="be_include\be_visitor_decl.h" />
+    <ClInclude Include="be_include\be_visitor_enum.h" />
+    <ClInclude Include="be_include\be_visitor_exception.h" />
+    <ClInclude Include="be_include\be_visitor_field.h" />
+    <ClInclude Include="be_include\be_visitor_home.h" />
+    <ClInclude Include="be_include\be_visitor_interface.h" />
+    <ClInclude Include="be_include\be_visitor_interface_fwd.h" />
+    <ClInclude Include="be_include\be_visitor_member_type_decl.h" />
+    <ClInclude Include="be_include\be_visitor_module.h" />
+    <ClInclude Include="be_include\be_visitor_native.h" />
+    <ClInclude Include="be_include\be_visitor_null_return_value.h" />
+    <ClInclude Include="be_include\be_visitor_operation.h" />
+    <ClInclude Include="be_include\be_visitor_root.h" />
+    <ClInclude Include="be_include\be_visitor_scope.h" />
+    <ClInclude Include="be_include\be_visitor_sequence.h" />
+    <ClInclude Include="be_include\be_visitor_structure.h" />
+    <ClInclude Include="be_include\be_visitor_structure_fwd.h" />
+    <ClInclude Include="be_include\be_visitor_template_export.h" />
+    <ClInclude Include="be_include\be_visitor_traits.h" />
+    <ClInclude Include="be_include\be_visitor_typecode.h" />
+    <ClInclude Include="be_include\be_visitor_typedef.h" />
+    <ClInclude Include="be_include\be_visitor_union.h" />
+    <ClInclude Include="be_include\be_visitor_union_branch.h" />
+    <ClInclude Include="be_include\be_visitor_union_fwd.h" />
+    <ClInclude Include="be_include\be_visitor_valuebox.h" />
+    <ClInclude Include="be_include\be_visitor_valuetype.h" />
+    <ClInclude Include="be_include\be_visitor_valuetype_fwd.h" />
+    <ClInclude Include="be_include\be_visitor_xplicit_pre_proc.h" />
+    <ClInclude Include="be_include\TAO_IDL_BE_Export.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tao_idl.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="TAO_IDL.mwc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="TAO_IDL_ACE.mwc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="tao_idl_be.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="tao_idl_fe.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

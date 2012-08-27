@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-27F2-1BD7F795CBEA}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-27F2-1BD7F795CBEA}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-27F2-1BD7F795CBEA}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Test Files">
+      <UniqueIdentifier>{4190FD01-FECA-1BAD-27F2-1BD7F795CBEA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Svc Conf Files">
+      <UniqueIdentifier>{84D0937A-FECA-1BAD-27F2-1BD7F795CBEA}</UniqueIdentifier>
+      <Extensions>conf;confxml</Extensions>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{B14BBA74-FECA-1BAD-27F2-1BD7F795CBEA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Disconnect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Atomic_Reconnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BCast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MT_Disconnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Schedule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shutdown.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Event_Basic.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="rteventtestexe.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="run_test.pl">
+      <Filter>Test Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="control.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="control.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="mt.svc.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="mt.svc.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="observer.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="observer.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="sched.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="sched.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.complex.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.complex.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="README">
+      <Filter>Documentation</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

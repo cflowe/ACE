@@ -1,0 +1,18 @@
+// $Id: ThreeComp_Receiver.idl 91793 2010-09-16 10:06:23Z mhengstmengel $
+
+#ifndef THREECOMP_RECEIVER_IDL
+#define THREECOMP_RECEIVER_IDL
+
+#include <Components.idl>
+
+#include "Base/ThreeComp.idl"
+
+module ThreeComp
+{
+  component Receiver
+  {
+    /// Provides
+    provides MyFoo do_my_foo;
+  };
+};
+#endif

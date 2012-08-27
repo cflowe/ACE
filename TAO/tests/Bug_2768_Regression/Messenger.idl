@@ -1,0 +1,11 @@
+//
+// $Id: Messenger.idl 78067 2007-04-17 12:10:42Z johnnyw $
+//
+
+module SimpleMessenger
+{
+  interface Messenger
+  {
+    oneway void send();
+  };
+};

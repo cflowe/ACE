@@ -1,0 +1,4 @@
+// $Id: dds4ccm_dcps.mpb 95794 2012-05-30 10:48:37Z msmit $
+
+feature(dds4ccm_opendds) : dcps {
+}

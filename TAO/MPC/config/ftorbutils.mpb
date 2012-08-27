@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: ftorbutils.mpb 75850 2006-12-06 08:36:30Z johnnyw $
+
+project : iormanip, portableserver, orbsvcslib, portablegroup, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  after     += FTORB_Utils
+  libs      += TAO_FTORB_Utils
+  tagchecks += FTORB_Utils
+}

@@ -1,0 +1,6 @@
+// $Id: test.idl 83826 2008-11-17 18:44:47Z smcqueen $
+
+#include <orb.idl>
+
+interface Foo : CORBA::Policy
+{};

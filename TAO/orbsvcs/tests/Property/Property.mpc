@@ -1,0 +1,17 @@
+// -*- MPC -*-
+// $Id: Property.mpc 79413 2007-08-20 14:02:40Z johnnyw $
+
+project(*server): namingexe, property_serv, avoids_corba_e_micro {
+  exename = server
+  Source_Files {
+    server.cpp
+  }
+}
+
+project(*client): namingexe, property, utils {
+  exename = client
+  Source_Files {
+    client.cpp
+  }
+}
+

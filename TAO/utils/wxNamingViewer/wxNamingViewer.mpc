@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: wxNamingViewer.mpc 55218 2004-01-07 19:31:16Z elliott_c $
+
+project: namingexe, portableserver, wxwindows {
+  exename = wxNamingViewer
+}

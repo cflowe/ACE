@@ -1,0 +1,10 @@
+//
+// $Id: test.idl 39278 2001-04-24 19:49:42Z coryan $
+//
+
+interface test
+{
+  oneway void method (in unsigned long request_number);
+
+  void shutdown ();
+};

@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<!-- Converted from ./performance-tests/Latency/DII/svc.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  -->
+ <!--  $Id: svc.conf.xml 93359 2011-02-11 11:33:12Z mcorino $ -->
+ <!--  -->
+ <static id="Advanced_Resource_Factory" params="-ORBReactorMaskSignals 0 -ORBInputCDRAllocator null -ORBReactorType select_st -ORBConnectionCacheLock null"/>
+ <static id="Server_Strategy_Factory" params="-ORBAllowReactivationOfSystemids 0"/>
+ <static id="Client_Strategy_Factory" params="-ORBClientConnectionHandler RW"/>
+</ACE_Svc_Conf>

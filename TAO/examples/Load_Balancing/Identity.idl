@@ -1,0 +1,22 @@
+
+//=============================================================================
+/**
+ *  @file    Identity.idl
+ *
+ *  $Id: Identity.idl 93677 2011-03-29 12:36:41Z johnnyw $
+ *
+ *  Interface for a toy CORBA service useful for
+ *  testing/demonstrating functionality of the Load
+ *  Balancing service defined in Load_Balancer.idl.
+ *
+ *
+ *  @author Marina Spivak <marina@cs.wustl.edu>
+ */
+//=============================================================================
+
+
+interface Identity
+{
+  void get_name (out string name);
+  // Obtain the name of this object.
+};

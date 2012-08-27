@@ -1,0 +1,15 @@
+/* -*- C++ -*- */
+// $Id: Receiver.idl 15651 1998-09-22 04:25:34Z pradeep $
+
+interface Receiver
+{
+  // = TITLE
+  //    The Receiver interface is implemented by the simple chat
+  //    clients.The interface functions are called by the chat server.
+
+  void message (in string msg);
+  // Displays the message in the client application.
+
+  oneway void shutdown ();
+  // Called by the chat server before it goes away.
+};

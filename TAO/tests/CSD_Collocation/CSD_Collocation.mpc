@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: CSD_Collocation.mpc 81391 2008-04-23 14:09:49Z johnnyw $
+
+project : taoserver, taoidldefaults, strategies, csd_threadpool, avoids_corba_e_micro, avoids_corba_e_compact, avoids_minimum_corba {
+  idlflags += -Gd -St -Sa
+  exename   = Collocation
+}

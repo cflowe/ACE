@@ -1,0 +1,9 @@
+/*
+ * $Id: test.idl 35515 2000-10-12 20:12:00Z bala $
+ */
+
+interface Simple_Server
+{
+  long remote_call ();
+  oneway void shutdown ();
+};

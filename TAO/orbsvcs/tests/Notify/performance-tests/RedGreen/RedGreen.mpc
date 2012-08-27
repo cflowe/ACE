@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: RedGreen.mpc 59431 2004-08-11 07:54:42Z jwillemsen $
+
+project(*Ntf Perf RedGreen): notifytest {
+  exename = RedGreen_Test
+}

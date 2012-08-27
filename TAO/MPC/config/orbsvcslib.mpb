@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: orbsvcslib.mpb 95491 2012-01-24 13:51:36Z johnnyw $
+
+project : taolib_with_idl, anytypecode {
+  tagname     = TAO_ORBSVCS
+  includes += $(TAO_ROOT)/orbsvcs
+  idlflags += -I$(TAO_ROOT)/orbsvcs
+}

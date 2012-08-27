@@ -1,0 +1,14 @@
+// $Id: simple_test.idl 88211 2009-12-17 09:58:03Z vzykov $
+
+#ifndef _SIMPLE_TEST_
+#define _SIMPLE_TEST_
+
+module simple {
+    interface SimpleTest_T
+    {
+        void shutdown();
+    };
+};
+
+#endif
+

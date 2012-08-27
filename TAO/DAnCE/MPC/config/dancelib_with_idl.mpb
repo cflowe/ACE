@@ -1,0 +1,4 @@
+// $Id: dancelib_with_idl.mpb 91707 2010-09-10 15:11:23Z wotte $
+project : dance_lib, danceidldefaults {
+
+}

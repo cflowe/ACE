@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Simple_Naming.mpc 78771 2007-07-04 05:39:51Z sowayaa $
+
+project(*Client) : namingexe, utils, portableserver {
+  exename = client
+  Source_Files {
+    client.cpp
+  }
+}
+

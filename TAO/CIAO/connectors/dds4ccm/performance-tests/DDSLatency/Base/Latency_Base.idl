@@ -1,0 +1,16 @@
+// $Id: Latency_Base.idl 95819 2012-06-04 09:31:50Z johnnyw $
+
+#ifndef LATENCY_BASE_IDL
+#define LATENCY_BASE_IDL
+
+#pragma DCPS_DATA_TYPE "LatencyTest"
+
+const short MAX_DATA_SEQUENCE_LENGTH = 8192;
+typedef sequence<octet, MAX_DATA_SEQUENCE_LENGTH> octet_sequence;
+
+struct LatencyTest {
+  long seq_num;
+  octet_sequence data;
+ };
+
+#endif

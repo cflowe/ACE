@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>PortableServer_Idl</ProjectName>
+    <ProjectGuid>{B18C73D8-FECA-1BAD-0254-2F597F3FDA71}</ProjectGuid>
+    <RootNamespace>PortableServer_Idl</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\PortableServer_Idl_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\PortableServer_Idl_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\PortableServer_Idl_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\PortableServer_Idl_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/noentry %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalOptions>/noentry %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/noentry /machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/noentry /machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PortableServer.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AdapterActivator.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;AdapterActivator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on AdapterActivator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AdapterActivatorA.cpp;AdapterActivatorA.h;AdapterActivatorC.cpp;AdapterActivatorC.h;AdapterActivatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;AdapterActivator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on AdapterActivator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AdapterActivatorA.cpp;AdapterActivatorA.h;AdapterActivatorC.cpp;AdapterActivatorC.h;AdapterActivatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;AdapterActivator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on AdapterActivator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdapterActivatorA.cpp;AdapterActivatorA.h;AdapterActivatorC.cpp;AdapterActivatorC.h;AdapterActivatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;AdapterActivator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on AdapterActivator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdapterActivatorA.cpp;AdapterActivatorA.h;AdapterActivatorC.cpp;AdapterActivatorC.h;AdapterActivatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ForwardRequest.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ForwardRequest.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on ForwardRequest.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ForwardRequestA.cpp;ForwardRequestA.h;ForwardRequestC.cpp;ForwardRequestC.h;ForwardRequestS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ForwardRequest.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on ForwardRequest.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ForwardRequestA.cpp;ForwardRequestA.h;ForwardRequestC.cpp;ForwardRequestC.h;ForwardRequestS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ForwardRequest.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on ForwardRequest.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ForwardRequestA.cpp;ForwardRequestA.h;ForwardRequestC.cpp;ForwardRequestC.h;ForwardRequestS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ForwardRequest.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on ForwardRequest.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ForwardRequestA.cpp;ForwardRequestA.h;ForwardRequestC.cpp;ForwardRequestC.h;ForwardRequestS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="IdAssignmentPolicy.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;IdAssignmentPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on IdAssignmentPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">IdAssignmentPolicyA.cpp;IdAssignmentPolicyA.h;IdAssignmentPolicyC.cpp;IdAssignmentPolicyC.h;IdAssignmentPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;IdAssignmentPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on IdAssignmentPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">IdAssignmentPolicyA.cpp;IdAssignmentPolicyA.h;IdAssignmentPolicyC.cpp;IdAssignmentPolicyC.h;IdAssignmentPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;IdAssignmentPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on IdAssignmentPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">IdAssignmentPolicyA.cpp;IdAssignmentPolicyA.h;IdAssignmentPolicyC.cpp;IdAssignmentPolicyC.h;IdAssignmentPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;IdAssignmentPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on IdAssignmentPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">IdAssignmentPolicyA.cpp;IdAssignmentPolicyA.h;IdAssignmentPolicyC.cpp;IdAssignmentPolicyC.h;IdAssignmentPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="IdUniquenessPolicy.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;IdUniquenessPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on IdUniquenessPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">IdUniquenessPolicyA.cpp;IdUniquenessPolicyA.h;IdUniquenessPolicyC.cpp;IdUniquenessPolicyC.h;IdUniquenessPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;IdUniquenessPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on IdUniquenessPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">IdUniquenessPolicyA.cpp;IdUniquenessPolicyA.h;IdUniquenessPolicyC.cpp;IdUniquenessPolicyC.h;IdUniquenessPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;IdUniquenessPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on IdUniquenessPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">IdUniquenessPolicyA.cpp;IdUniquenessPolicyA.h;IdUniquenessPolicyC.cpp;IdUniquenessPolicyC.h;IdUniquenessPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;IdUniquenessPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on IdUniquenessPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">IdUniquenessPolicyA.cpp;IdUniquenessPolicyA.h;IdUniquenessPolicyC.cpp;IdUniquenessPolicyC.h;IdUniquenessPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ImplicitActivationPolicy.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ImplicitActivationPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on ImplicitActivationPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ImplicitActivationPolicyA.cpp;ImplicitActivationPolicyA.h;ImplicitActivationPolicyC.cpp;ImplicitActivationPolicyC.h;ImplicitActivationPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ImplicitActivationPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on ImplicitActivationPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ImplicitActivationPolicyA.cpp;ImplicitActivationPolicyA.h;ImplicitActivationPolicyC.cpp;ImplicitActivationPolicyC.h;ImplicitActivationPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ImplicitActivationPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on ImplicitActivationPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ImplicitActivationPolicyA.cpp;ImplicitActivationPolicyA.h;ImplicitActivationPolicyC.cpp;ImplicitActivationPolicyC.h;ImplicitActivationPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ImplicitActivationPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on ImplicitActivationPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ImplicitActivationPolicyA.cpp;ImplicitActivationPolicyA.h;ImplicitActivationPolicyC.cpp;ImplicitActivationPolicyC.h;ImplicitActivationPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="LifespanPolicy.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;LifespanPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on LifespanPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">LifespanPolicyA.cpp;LifespanPolicyA.h;LifespanPolicyC.cpp;LifespanPolicyC.h;LifespanPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;LifespanPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on LifespanPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">LifespanPolicyA.cpp;LifespanPolicyA.h;LifespanPolicyC.cpp;LifespanPolicyC.h;LifespanPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;LifespanPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on LifespanPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LifespanPolicyA.cpp;LifespanPolicyA.h;LifespanPolicyC.cpp;LifespanPolicyC.h;LifespanPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;LifespanPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on LifespanPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LifespanPolicyA.cpp;LifespanPolicyA.h;LifespanPolicyC.cpp;LifespanPolicyC.h;LifespanPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="POA.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POA.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on POA.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">POAC.cpp;POAC.h;POAS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POA.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on POA.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">POAC.cpp;POAC.h;POAS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POA.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on POA.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">POAC.cpp;POAC.h;POAS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POA.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on POA.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">POAC.cpp;POAC.h;POAS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="POAManager.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POAManager.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on POAManager.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">POAManagerC.cpp;POAManagerC.h;POAManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POAManager.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on POAManager.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">POAManagerC.cpp;POAManagerC.h;POAManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POAManager.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on POAManager.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">POAManagerC.cpp;POAManagerC.h;POAManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POAManager.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on POAManager.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">POAManagerC.cpp;POAManagerC.h;POAManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="POAManagerFactory.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POAManagerFactory.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on POAManagerFactory.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">POAManagerFactoryC.cpp;POAManagerFactoryC.h;POAManagerFactoryS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POAManagerFactory.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on POAManagerFactory.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">POAManagerFactoryC.cpp;POAManagerFactoryC.h;POAManagerFactoryS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POAManagerFactory.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on POAManagerFactory.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">POAManagerFactoryC.cpp;POAManagerFactoryC.h;POAManagerFactoryS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;POAManagerFactory.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on POAManagerFactory.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">POAManagerFactoryC.cpp;POAManagerFactoryC.h;POAManagerFactoryS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="PortableServer.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Sorb -Sa -GX -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -Wb,include_guard=TAO_PORTABLESERVER_SAFE_INCLUDE -Wb,safe_include=tao/PortableServer/PortableServer.h -iC tao/PortableServer &quot;PortableServer.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on PortableServer.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PortableServerA.h;PortableServerC.cpp;PortableServerC.h;PortableServerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Sorb -Sa -GX -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -Wb,include_guard=TAO_PORTABLESERVER_SAFE_INCLUDE -Wb,safe_include=tao/PortableServer/PortableServer.h -iC tao/PortableServer &quot;PortableServer.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on PortableServer.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PortableServerA.h;PortableServerC.cpp;PortableServerC.h;PortableServerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Sorb -Sa -GX -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -Wb,include_guard=TAO_PORTABLESERVER_SAFE_INCLUDE -Wb,safe_include=tao/PortableServer/PortableServer.h -iC tao/PortableServer &quot;PortableServer.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on PortableServer.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PortableServerA.h;PortableServerC.cpp;PortableServerC.h;PortableServerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Sorb -Sa -GX -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -Wb,include_guard=TAO_PORTABLESERVER_SAFE_INCLUDE -Wb,safe_include=tao/PortableServer/PortableServer.h -iC tao/PortableServer &quot;PortableServer.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on PortableServer.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PortableServerA.h;PortableServerC.cpp;PortableServerC.h;PortableServerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="PortableServer_include.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Sorb -Sa -GX -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -Wb,unique_include=tao/PortableServer/PortableServer.h -iC tao/PortableServer &quot;PortableServer_include.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on PortableServer_include.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PortableServer_includeA.h;PortableServer_includeC.cpp;PortableServer_includeC.h;PortableServer_includeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Sorb -Sa -GX -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -Wb,unique_include=tao/PortableServer/PortableServer.h -iC tao/PortableServer &quot;PortableServer_include.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on PortableServer_include.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PortableServer_includeA.h;PortableServer_includeC.cpp;PortableServer_includeC.h;PortableServer_includeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Sorb -Sa -GX -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -Wb,unique_include=tao/PortableServer/PortableServer.h -iC tao/PortableServer &quot;PortableServer_include.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on PortableServer_include.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PortableServer_includeA.h;PortableServer_includeC.cpp;PortableServer_includeC.h;PortableServer_includeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Sorb -Sa -GX -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -Wb,unique_include=tao/PortableServer/PortableServer.h -iC tao/PortableServer &quot;PortableServer_include.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on PortableServer_include.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PortableServer_includeA.h;PortableServer_includeC.cpp;PortableServer_includeC.h;PortableServer_includeS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="PS_Current.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;PS_Current.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on PS_Current.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PS_CurrentC.cpp;PS_CurrentC.h;PS_CurrentS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;PS_Current.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on PS_Current.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PS_CurrentC.cpp;PS_CurrentC.h;PS_CurrentS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;PS_Current.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on PS_Current.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PS_CurrentC.cpp;PS_CurrentC.h;PS_CurrentS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;PS_Current.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on PS_Current.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PS_CurrentC.cpp;PS_CurrentC.h;PS_CurrentS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="RequestProcessingPolicy.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;RequestProcessingPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on RequestProcessingPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RequestProcessingPolicyA.cpp;RequestProcessingPolicyA.h;RequestProcessingPolicyC.cpp;RequestProcessingPolicyC.h;RequestProcessingPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;RequestProcessingPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on RequestProcessingPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RequestProcessingPolicyA.cpp;RequestProcessingPolicyA.h;RequestProcessingPolicyC.cpp;RequestProcessingPolicyC.h;RequestProcessingPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;RequestProcessingPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on RequestProcessingPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RequestProcessingPolicyA.cpp;RequestProcessingPolicyA.h;RequestProcessingPolicyC.cpp;RequestProcessingPolicyC.h;RequestProcessingPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;RequestProcessingPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on RequestProcessingPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RequestProcessingPolicyA.cpp;RequestProcessingPolicyA.h;RequestProcessingPolicyC.cpp;RequestProcessingPolicyC.h;RequestProcessingPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ServantActivator.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantActivator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on ServantActivator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ServantActivatorA.cpp;ServantActivatorA.h;ServantActivatorC.cpp;ServantActivatorC.h;ServantActivatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantActivator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on ServantActivator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ServantActivatorA.cpp;ServantActivatorA.h;ServantActivatorC.cpp;ServantActivatorC.h;ServantActivatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantActivator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on ServantActivator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ServantActivatorA.cpp;ServantActivatorA.h;ServantActivatorC.cpp;ServantActivatorC.h;ServantActivatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantActivator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on ServantActivator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ServantActivatorA.cpp;ServantActivatorA.h;ServantActivatorC.cpp;ServantActivatorC.h;ServantActivatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ServantLocator.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantLocator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on ServantLocator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ServantLocatorA.cpp;ServantLocatorA.h;ServantLocatorC.cpp;ServantLocatorC.h;ServantLocatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantLocator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on ServantLocator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ServantLocatorA.cpp;ServantLocatorA.h;ServantLocatorC.cpp;ServantLocatorC.h;ServantLocatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantLocator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on ServantLocator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ServantLocatorA.cpp;ServantLocatorA.h;ServantLocatorC.cpp;ServantLocatorC.h;ServantLocatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantLocator.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on ServantLocator.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ServantLocatorA.cpp;ServantLocatorA.h;ServantLocatorC.cpp;ServantLocatorC.h;ServantLocatorS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ServantManager.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantManager.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on ServantManager.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ServantManagerA.cpp;ServantManagerA.h;ServantManagerC.cpp;ServantManagerC.h;ServantManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantManager.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on ServantManager.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ServantManagerA.cpp;ServantManagerA.h;ServantManagerC.cpp;ServantManagerC.h;ServantManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantManager.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on ServantManager.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ServantManagerA.cpp;ServantManagerA.h;ServantManagerC.cpp;ServantManagerC.h;ServantManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantManager.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on ServantManager.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ServantManagerA.cpp;ServantManagerA.h;ServantManagerC.cpp;ServantManagerC.h;ServantManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ServantRetentionPolicy.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantRetentionPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on ServantRetentionPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ServantRetentionPolicyA.cpp;ServantRetentionPolicyA.h;ServantRetentionPolicyC.cpp;ServantRetentionPolicyC.h;ServantRetentionPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantRetentionPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on ServantRetentionPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ServantRetentionPolicyA.cpp;ServantRetentionPolicyA.h;ServantRetentionPolicyC.cpp;ServantRetentionPolicyC.h;ServantRetentionPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantRetentionPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on ServantRetentionPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ServantRetentionPolicyA.cpp;ServantRetentionPolicyA.h;ServantRetentionPolicyC.cpp;ServantRetentionPolicyC.h;ServantRetentionPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ServantRetentionPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on ServantRetentionPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ServantRetentionPolicyA.cpp;ServantRetentionPolicyA.h;ServantRetentionPolicyC.cpp;ServantRetentionPolicyC.h;ServantRetentionPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ThreadPolicy.pidl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ThreadPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on ThreadPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ThreadPolicyA.cpp;ThreadPolicyA.h;ThreadPolicyC.cpp;ThreadPolicyC.h;ThreadPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ThreadPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on ThreadPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ThreadPolicyA.cpp;ThreadPolicyA.h;ThreadPolicyC.cpp;ThreadPolicyC.h;ThreadPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ThreadPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on ThreadPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ThreadPolicyA.cpp;ThreadPolicyA.h;ThreadPolicyC.cpp;ThreadPolicyC.h;ThreadPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sci -SS -Sorb -GA -Sal -Wb,export_macro=TAO_PortableServer_Export -Wb,export_include=tao/PortableServer/portableserver_export.h -iC tao/PortableServer &quot;ThreadPolicy.pidl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on ThreadPolicy.pidl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ThreadPolicyA.cpp;ThreadPolicyA.h;ThreadPolicyC.cpp;ThreadPolicyC.h;ThreadPolicyS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PS_Forward.pidl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

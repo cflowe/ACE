@@ -1,0 +1,14 @@
+// $Id: PIDLInclude.idl 86227 2009-07-24 17:53:33Z johnnyw $
+
+#include <Components.idl>
+#include "tao/StringSeq.pidl"
+
+interface foo_intf
+{
+  typedef sequence<string> MyStringSeq;
+};
+
+component Foo
+{
+  provides foo_intf foo_port;
+};

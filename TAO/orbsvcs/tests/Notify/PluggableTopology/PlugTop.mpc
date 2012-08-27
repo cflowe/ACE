@@ -1,0 +1,19 @@
+// $Id: PlugTop.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+
+project(*lib): orbsvcslib, notify_serv {
+  sharedname = NotifyPlugTop
+  dynamicflags += PLUGTOP_BUILD_DLL
+  source_files {
+    Test_Saver.cpp
+    Test_Topology_Factory.cpp
+  }
+}
+
+project : orbsvcsexe, notify_serv {
+  after += *lib
+  source_files {
+    main.cpp
+  }
+  header_files {
+  }
+}

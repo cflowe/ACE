@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-F0BC-F15E960D6ACA}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-F0BC-F15E960D6ACA}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-F0BC-F15E960D6ACA}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-F0BC-F15E960D6ACA}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Deployment_ApplicationC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_BaseC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_ConnectionC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_DataC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_DeploymentPlanC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_InvalidComponentExecParameterC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_InvalidConnectionC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_InvalidNodeExecParameterC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_InvalidPropertyC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_Packaging_DataC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_PlanErrorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_ResourceCommitmentManagerC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_ResourceNotAvailableC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_StartErrorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_StopErrorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deployment_TargetDataC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeploymentC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Deployment_ApplicationC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_ApplicationS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_BaseC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_BaseS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_ConnectionC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_ConnectionS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_DataC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_DataS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_DeploymentPlanC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_DeploymentPlanS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_InvalidComponentExecParameterC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_InvalidComponentExecParameterS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_InvalidConnectionC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_InvalidConnectionS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_InvalidNodeExecParameterC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_InvalidNodeExecParameterS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_InvalidPropertyC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_InvalidPropertyS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_Packaging_DataC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_Packaging_DataS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_PlanErrorC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_PlanErrorS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_ResourceCommitmentManagerC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_ResourceCommitmentManagerS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_ResourceNotAvailableC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_ResourceNotAvailableS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_StartErrorC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_StartErrorS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_StopErrorC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_StopErrorS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_stub_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_TargetDataC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deployment_TargetDataS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeploymentC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeploymentS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Deployment_Core.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Deployment_ApplicationC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Deployment_BaseC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Deployment_ResourceCommitmentManagerC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

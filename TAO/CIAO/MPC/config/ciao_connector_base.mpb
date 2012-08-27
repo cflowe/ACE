@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: ciao_connector_base.mpb 86037 2009-07-14 14:25:26Z msmit $
+
+project {
+  includes += $(CIAO_ROOT)/connectors
+}

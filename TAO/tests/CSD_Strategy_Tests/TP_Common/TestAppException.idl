@@ -1,0 +1,7 @@
+// $Id: TestAppException.idl 68816 2005-10-19 00:27:51Z dai_y $
+#ifndef TESTAPPXCEPTION_IDL
+#define TESTAPPXCEPTION_IDL
+
+exception TestAppException {};
+
+#endif

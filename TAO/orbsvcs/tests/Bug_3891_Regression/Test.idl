@@ -1,0 +1,10 @@
+//
+// $Id: Test.idl 92056 2010-09-27 14:31:54Z mitza $
+//
+
+module Test
+{
+  interface Hello
+  {
+  };
+};

@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: svc_utils.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project : portableserver, orbsvcslib {
+  after   += Svc_Utils
+  libs    += TAO_Svc_Utils
+}

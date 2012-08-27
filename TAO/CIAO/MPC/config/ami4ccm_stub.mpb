@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: ami4ccm_stub.mpb 88483 2010-01-12 11:08:47Z johnnyw $
+
+project : ciao_connector_base, messaging {
+  after += AMI4CCM_stub
+  libs += AMI4CCM_stub
+  includes += $(CIAO_ROOT)/connectors/ami4ccm
+}

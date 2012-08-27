@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Interpreter.mpc 75957 2006-12-12 15:06:16Z elliott_c $
+
+project: trading_serv, portableserver {
+  exename = Interpreter
+}

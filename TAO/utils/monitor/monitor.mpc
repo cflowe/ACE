@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: monitor.mpc 81580 2008-05-02 08:20:10Z johnnyw $
+
+project(monitor_client): taoexe, tao_monitor, strategies {
+  Source_Files {
+    monitor_client.cpp
+  }
+}
+

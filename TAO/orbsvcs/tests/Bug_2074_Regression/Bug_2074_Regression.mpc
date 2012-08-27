@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Bug_2074_Regression.mpc 75850 2006-12-06 08:36:30Z johnnyw $
+
+project(*Test): taoclient, messaging, naming, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  exename = test
+  Source_Files {
+    test.cpp
+    ORB_Task.cpp
+  }
+}

@@ -1,0 +1,41 @@
+// -*- MPC -*-
+// $Id: Bug_1495.mpc 77008 2007-02-12 11:52:38Z johnnyw $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    test.idl
+  }
+  custom_only = 1
+}
+
+project(*Server): taoserver, pi_server, interceptors {
+  after += *idl
+  Source_Files {
+    test_i.cpp
+    testC.cpp
+    testS.cpp
+    Server_ORBInitializer.cpp
+    server_interceptor.cpp
+    Threaded_Server.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client): taoserver, pi, interceptors {
+  exename = client
+  after += *idl
+  Source_Files {
+    test_i.cpp
+    testC.cpp
+    testS.cpp
+    client_interceptor.cpp
+    Threaded_Client.cpp
+
+    Server_Task.cpp
+    Client_Task.cpp
+  }
+  IDL_Files {
+  }
+}
+

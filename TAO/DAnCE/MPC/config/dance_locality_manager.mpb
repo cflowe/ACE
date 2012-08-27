@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_locality_manager.mpb 91467 2010-08-26 02:49:37Z wotte $
+
+project : dance_deployment_scheduler, dance_skel, naming, dance_locality_handler {
+  after += DAnCE_LocalityManager_Impl
+  libs += DAnCE_LocalityManager_Impl
+}

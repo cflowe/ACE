@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: taoidl3toid2_ccm_lw.mpb 89876 2010-04-14 07:10:40Z johnnyw $
+
+feature (ccm_lw) : taobaseidl3toidl2defaults {
+  macros += CCM_LW
+  idl3toidl2flags += -DCCM_LW
+}

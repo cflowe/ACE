@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-73B1-CD759D13AB94}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-73B1-CD759D13AB94}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-73B1-CD759D13AB94}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-73B1-CD759D13AB94}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-73B1-CD759D13AB94}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CSD_ThreadPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Cancel_Visitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Collocated_Asynch_Request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Collocated_Synch_Request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Collocated_Synch_With_Server_Request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Corba_Request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Custom_Asynch_Request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Custom_Request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Custom_Request_Operation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Custom_Synch_Request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Dispatchable_Visitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Queue_Visitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Remote_Request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Servant_State.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Servant_State_Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Strategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Strategy_Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Synch_Helper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSD_TP_Task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CSD_ThreadPool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Cancel_Visitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Collocated_Asynch_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Collocated_Synch_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Collocated_Synch_With_Server_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Corba_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Custom_Asynch_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Custom_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Custom_Request_Operation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Custom_Synch_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Dispatchable_Visitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Queue_Visitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Remote_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Servant_State.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Servant_State_Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Strategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Strategy_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Synch_Helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSD_TP_Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CSD_ThreadPool.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_CSD_ThreadPool.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CSD_TP_Cancel_Visitor.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Collocated_Asynch_Request.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Collocated_Synch_Request.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Collocated_Synch_With_Server_Request.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Corba_Request.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Custom_Asynch_Request.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Custom_Request.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Custom_Request_Operation.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Custom_Synch_Request.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Dispatchable_Visitor.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Queue.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Queue_Visitor.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Remote_Request.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Request.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Servant_State.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Servant_State_Map.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Strategy.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Synch_Helper.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CSD_TP_Task.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

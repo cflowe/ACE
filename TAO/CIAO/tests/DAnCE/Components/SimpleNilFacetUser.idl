@@ -1,0 +1,21 @@
+// $Id: SimpleNilFacetUser.idl 93359 2011-02-11 11:33:12Z mcorino $
+
+#ifndef SIMPLE_USER_IDL
+#define SIMPLE_USER_IDL
+
+#include "SimpleCommon.idl"
+#include "Components.idl"
+
+module Simple
+{
+  component SimpleNilFacetUser
+  {
+    uses Trigger trig_uses;
+  };
+
+  home SimpleNilFacetUserHome manages SimpleNilFacetUser
+  {
+  };
+};
+
+#endif /*SIMPLE_USER_IDL*/

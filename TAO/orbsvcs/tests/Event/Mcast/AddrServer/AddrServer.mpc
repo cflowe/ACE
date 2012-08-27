@@ -1,0 +1,23 @@
+// -*- MPC -*-
+// $Id: AddrServer.mpc 95491 2012-01-24 13:51:36Z johnnyw $
+
+project(*Server): rteventexe, rtevent_serv {
+  exename   = server
+
+  includes += ../Common
+
+  Source_Files {
+    TestAddrServer.cpp
+    Server.cpp
+  }
+}
+
+project(*Client): rteventexe,  {
+  exename   = client
+
+  includes += ../Common
+
+  Source_Files {
+    Client.cpp
+  }
+}

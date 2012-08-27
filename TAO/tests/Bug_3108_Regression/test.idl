@@ -1,0 +1,7 @@
+// $Id: test.idl 79850 2007-10-25 09:51:28Z johnnyw $
+
+interface test
+{
+  long test_method();
+  oneway void shutdown ();
+};

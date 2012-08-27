@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-33A3-01DA294668FE}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-33A3-01DA294668FE}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-33A3-01DA294668FE}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-33A3-01DA294668FE}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Ddsgenerator Files">
+      <UniqueIdentifier>{D6A8D862-FECA-1BAD-33A3-01DA294668FE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NoModuleC.cpp">
+      <Filter>default_group</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NoModule_Common_stub_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NoModuleC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NoModuleS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NoModule.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="NoModule_Connector.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="NoModule.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NoModule.idl">
+      <Filter>Ddsgenerator Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

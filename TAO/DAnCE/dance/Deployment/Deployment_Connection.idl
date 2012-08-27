@@ -1,0 +1,18 @@
+// $Id: Deployment_Connection.idl 91982 2010-09-23 20:43:54Z wotte $
+
+#ifndef DEPLOYMENT_CONNECTION_IDL
+#define DEPLOYMENT_CONNECTION_IDL
+
+#include "dance/Deployment/Deployment_DeploymentPlan.idl"
+
+module Deployment
+{
+  typedef sequence < Object > Endpoints;
+  struct Connection {
+    string name;
+    Endpoints endpoint;
+  };
+
+  typedef sequence < Connection > Connections;
+};
+#endif /* DEPLOYMENT_CONNECTION_IDL */

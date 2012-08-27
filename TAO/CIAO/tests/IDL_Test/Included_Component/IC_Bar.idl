@@ -1,0 +1,9 @@
+// $Id: IC_Bar.idl 88671 2010-01-22 15:03:22Z msmit $
+
+#include "IC_Foo.idl"
+
+#pragma ciao lem "IC_BarE.idl"
+
+component Bar
+{
+};

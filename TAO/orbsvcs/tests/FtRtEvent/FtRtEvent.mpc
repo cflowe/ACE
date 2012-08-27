@@ -1,0 +1,28 @@
+// -*- MPC -*-
+// $Id: FtRtEvent.mpc 72983 2006-06-06 17:26:06Z elliott_c $
+
+project(*Consumer):  orbsvcsexe, ftrteventclient, strategies {
+  exename = consumer
+
+  Source_Files {
+    consumer.cpp
+    PushConsumer.cpp
+  }
+
+  Header_Files {
+    PushConsumer.h
+  }
+}
+
+project(*Supplier):  orbsvcsexe, ftrteventclient, strategies {
+  exename = supplier
+
+  Source_Files {
+    supplier.cpp
+    PushSupplier.cpp
+  }
+
+  Header_Files {
+    PushSupplier.h
+  }
+}

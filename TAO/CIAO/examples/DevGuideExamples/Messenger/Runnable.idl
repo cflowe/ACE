@@ -1,0 +1,19 @@
+// $Id: Runnable.idl 88679 2010-01-23 07:50:05Z johnnyw $
+
+/**
+ *  @file Runnable.idl
+ *
+ *  @author Don Busch <busch_d@ociweb.com>
+ */
+
+#ifndef RUNNABLE_IDL
+#define RUNNABLE_IDL
+
+#pragma ciao lem "RunnableE.idl"
+
+interface Runnable {
+   void start();
+   void stop();
+};
+
+#endif

@@ -1,0 +1,15 @@
+//$Id: Shapes_defn.idl 92657 2010-11-19 19:21:12Z johnnyw $
+
+#ifndef SHAPES_DEFN_IDL_
+#define SHAPES_DEFN_IDL_
+
+module Shapes
+{
+  enum ReturnStatus
+  {
+    RETURN_OK,
+    RETURN_ERROR
+  };
+};
+
+#endif /* SHAPES_DEFN_IDL_ */

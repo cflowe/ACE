@@ -1,0 +1,8 @@
+// $Id: test.idl 39670 2001-05-17 14:24:17Z oci $
+
+interface test
+{
+    void send_stuff(in string foo);
+
+//    oneway void shutdown ();
+};

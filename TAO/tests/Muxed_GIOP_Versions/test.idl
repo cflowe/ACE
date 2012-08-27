@@ -1,0 +1,10 @@
+//
+// $Id: test.idl 43916 2002-03-10 03:12:57Z bala $
+//
+
+interface Simple_Server
+{
+  long test_method (in long x);
+
+  oneway void shutdown ();
+};

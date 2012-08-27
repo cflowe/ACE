@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance.mpb 91659 2010-09-08 15:05:08Z wotte $
+
+project {
+  includes += $(DANCE_ROOT)
+  libpaths += $(ACE_ROOT)/lib
+}

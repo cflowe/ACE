@@ -1,0 +1,21 @@
+// -*- MPC -*-
+// $Id: Logger.mpc 90824 2010-06-24 09:01:40Z johnnyw $
+
+project(CIAO_Logger): install, ciao_lib, taolib, acelib {
+  sharedname   = CIAO_Logger
+  dynamicflags += CIAO_LOGGER_BUILD_DLL
+
+  Source_Files {
+    Logger_Service.cpp
+    Log_Macros.cpp
+  }
+
+  Header_Files {
+    CIAO_Logger_Export.h
+  }
+
+  specific {
+    install_dir = ciao/Logger
+  }
+}
+

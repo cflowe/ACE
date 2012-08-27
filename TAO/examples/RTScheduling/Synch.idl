@@ -1,0 +1,6 @@
+//$Id: Synch.idl 51237 2003-07-24 07:10:39Z yamuna $
+
+interface Synch
+{
+  oneway void go (in long  base_time);
+};

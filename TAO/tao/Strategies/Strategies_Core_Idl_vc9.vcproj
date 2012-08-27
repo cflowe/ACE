@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="Strategies_Core_Idl"
+	ProjectGUID="{A8931F3D-FECA-1BAD-1A62-CC409E04C065}"
+	RootNamespace="Strategies_Core_Idl"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Strategies_Core_Idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Strategies_Core_Idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Strategies_Core_Idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Strategies_Core_Idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="Strategies.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="COIOP_Endpoints.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on COIOP_Endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;COIOP_Endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="COIOP_EndpointsC.cpp;COIOP_EndpointsC.h;COIOP_EndpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on COIOP_Endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;COIOP_Endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="COIOP_EndpointsC.cpp;COIOP_EndpointsC.h;COIOP_EndpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on COIOP_Endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;COIOP_Endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="COIOP_EndpointsC.cpp;COIOP_EndpointsC.h;COIOP_EndpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on COIOP_Endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;COIOP_Endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="COIOP_EndpointsC.cpp;COIOP_EndpointsC.h;COIOP_EndpointsS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="sciop_endpoints.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on sciop_endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;sciop_endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="sciop_endpointsC.cpp;sciop_endpointsC.h;sciop_endpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on sciop_endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;sciop_endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="sciop_endpointsC.cpp;sciop_endpointsC.h;sciop_endpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on sciop_endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;sciop_endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="sciop_endpointsC.cpp;sciop_endpointsC.h;sciop_endpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on sciop_endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;sciop_endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="sciop_endpointsC.cpp;sciop_endpointsC.h;sciop_endpointsS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="uiop_endpoints.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on uiop_endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;uiop_endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="uiop_endpointsC.cpp;uiop_endpointsC.h;uiop_endpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on uiop_endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;uiop_endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="uiop_endpointsC.cpp;uiop_endpointsC.h;uiop_endpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on uiop_endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;uiop_endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="uiop_endpointsC.cpp;uiop_endpointsC.h;uiop_endpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on uiop_endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Sci -SS -Gp -Gd -Sorb -DCORBA3 -Wb,export_macro=TAO_Strategies_Export -Wb,export_include=tao/Strategies/strategies_export.h -iC tao/Strategies &quot;uiop_endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="uiop_endpointsC.cpp;uiop_endpointsC.h;uiop_endpointsS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

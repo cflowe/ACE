@@ -1,0 +1,36 @@
+// -*- MPC -*-
+// $Id: Bug_3683_Regression.mpc 95323 2011-12-14 12:37:01Z msmit $
+
+project(*IDL): taoidldefaults {
+  IDL_Files {
+    Echo.idl
+  }
+  custom_only = 1
+}
+
+project(*server): iortable, utils, avoids_corba_e_micro {
+  exename = server
+  after += *IDL
+  Source_Files {
+    Echo_i.cpp
+    Simple_util.cpp
+    server.cpp
+    EchoS.cpp
+    EchoC.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*client): iortable, utils, messaging {
+  exename = client
+  after += *IDL
+  Source_Files {
+    Echo_Client_i.cpp
+    Simple_util.cpp
+    client.cpp
+    EchoC.cpp
+  }
+  IDL_Files {
+  }
+}

@@ -1,0 +1,16 @@
+// -*- IDL -*-
+//
+// $Id: ObjectReferenceFactory.idl 62436 2004-12-03 15:22:02Z jwillemsen $
+
+#ifndef OBJECT_REFERENCE_FACTORY_IDL
+#define OBJECT_REFERENCE_FACTORY_IDL
+
+#include "tao/ObjRefTemplate/ObjectReferenceTemplate_include.pidl"
+
+module ORT
+{
+  valuetype ObjectReferenceFactory
+    : PortableInterceptor::ObjectReferenceFactory {};
+};
+
+#endif  /* OBJECT_REFERENCE_FACTORY_IDL */

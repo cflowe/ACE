@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: idl_anon_silent.mpb 91219 2010-07-27 20:08:16Z parsons $
+
+project : taobaseidldefaults {
+  idlflags += -as
+}

@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>TAO</ProjectName>
+    <ProjectGuid>{151C56EC-FECA-1BAD-727D-8A63505D827F}</ProjectGuid>
+    <RootNamespace>TAO</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\TAO_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TAOd</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\TAO_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TAO</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\TAO_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TAOd</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\TAO_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TAO</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_BUILD_DLL;_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_VALUETYPE_OUT_INDIRECTION;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_VALUETYPE_OUT_INDIRECTION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAOd.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAOd.lib</ImportLibrary>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_BUILD_DLL;NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_VALUETYPE_OUT_INDIRECTION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_VALUETYPE_OUT_INDIRECTION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>..\..\lib\TAO.lib</ImportLibrary>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_BUILD_DLL;_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_VALUETYPE_OUT_INDIRECTION;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_VALUETYPE_OUT_INDIRECTION;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAOd.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAOd.lib</ImportLibrary>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_BUILD_DLL;NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_VALUETYPE_OUT_INDIRECTION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_VALUETYPE_OUT_INDIRECTION;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>..\..\lib\TAO.lib</ImportLibrary>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Abstract_Servant_Base.cpp">
+    </ClCompile>
+    <ClCompile Include="Acceptor_Filter.cpp">
+    </ClCompile>
+    <ClCompile Include="Acceptor_Registry.cpp">
+    </ClCompile>
+    <ClCompile Include="Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="Adapter_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Adapter_Registry.cpp">
+    </ClCompile>
+    <ClCompile Include="AnyTypeCode_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="Argument.cpp">
+    </ClCompile>
+    <ClCompile Include="Asynch_Queued_Message.cpp">
+    </ClCompile>
+    <ClCompile Include="Asynch_Reply_Dispatcher_Base.cpp">
+    </ClCompile>
+    <ClCompile Include="Base_Transport_Property.cpp">
+    </ClCompile>
+    <ClCompile Include="BiDir_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="Bind_Dispatcher_Guard.cpp">
+    </ClCompile>
+    <ClCompile Include="Block_Flushing_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="Blocked_Connect_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="BooleanSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="CDR.cpp">
+    </ClCompile>
+    <ClCompile Include="CharSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="Cleanup_Func_Registry.cpp">
+    </ClCompile>
+    <ClCompile Include="Client_Strategy_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientRequestInterceptor_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="ClientRequestInterceptor_Adapter_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Codeset_Manager.cpp">
+    </ClCompile>
+    <ClCompile Include="Codeset_Manager_Factory_Base.cpp">
+    </ClCompile>
+    <ClCompile Include="Codeset_Translator_Base.cpp">
+    </ClCompile>
+    <ClCompile Include="Collocated_Invocation.cpp">
+    </ClCompile>
+    <ClCompile Include="Collocation_Resolver.cpp">
+    </ClCompile>
+    <ClCompile Include="Connect_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="Connection_Handler.cpp">
+    </ClCompile>
+    <ClCompile Include="Connection_Purging_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="Connector_Registry.cpp">
+    </ClCompile>
+    <ClCompile Include="CONV_FRAMEC.cpp">
+    </ClCompile>
+    <ClCompile Include="CORBA_String.cpp">
+    </ClCompile>
+    <ClCompile Include="CORBALOC_Parser.cpp">
+    </ClCompile>
+    <ClCompile Include="CORBANAME_Parser.cpp">
+    </ClCompile>
+    <ClCompile Include="CurrentC.cpp">
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+    </ClCompile>
+    <ClCompile Include="default_client.cpp">
+    </ClCompile>
+    <ClCompile Include="Default_Collocation_Resolver.cpp">
+    </ClCompile>
+    <ClCompile Include="Default_Endpoint_Selector_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="default_resource.cpp">
+    </ClCompile>
+    <ClCompile Include="default_server.cpp">
+    </ClCompile>
+    <ClCompile Include="Default_Stub_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Default_Thread_Lane_Resources_Manager.cpp">
+    </ClCompile>
+    <ClCompile Include="DLL_Parser.cpp">
+    </ClCompile>
+    <ClCompile Include="DoubleSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="Dynamic_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="Endpoint.cpp">
+    </ClCompile>
+    <ClCompile Include="Endpoint_Selector_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Environment.cpp">
+    </ClCompile>
+    <ClCompile Include="Exception.cpp">
+    </ClCompile>
+    <ClCompile Include="Exclusive_TMS.cpp">
+    </ClCompile>
+    <ClCompile Include="Fault_Tolerance_Service.cpp">
+    </ClCompile>
+    <ClCompile Include="FILE_Parser.cpp">
+    </ClCompile>
+    <ClCompile Include="FloatSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="Flushing_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Fragmentation_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Message_Base.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Message_Generator_Parser.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Message_Generator_Parser_10.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Message_Generator_Parser_11.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Message_Generator_Parser_12.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Message_Generator_Parser_Impl.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Message_Locate_Header.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Message_State.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOP_Message_Version.cpp">
+    </ClCompile>
+    <ClCompile Include="GIOPC.cpp">
+    </ClCompile>
+    <ClCompile Include="GUIResource_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="HR_Time_Policy_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="HTTP_Client.cpp">
+    </ClCompile>
+    <ClCompile Include="HTTP_Handler.cpp">
+    </ClCompile>
+    <ClCompile Include="HTTP_Parser.cpp">
+    </ClCompile>
+    <ClCompile Include="IFR_Client_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="IIOP_Acceptor.cpp">
+    </ClCompile>
+    <ClCompile Include="IIOP_Connection_Handler.cpp">
+    </ClCompile>
+    <ClCompile Include="IIOP_Connector.cpp">
+    </ClCompile>
+    <ClCompile Include="IIOP_Endpoint.cpp">
+    </ClCompile>
+    <ClCompile Include="IIOP_EndpointsC.cpp">
+    </ClCompile>
+    <ClCompile Include="IIOP_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="IIOP_Profile.cpp">
+    </ClCompile>
+    <ClCompile Include="IIOP_Transport.cpp">
+    </ClCompile>
+    <ClCompile Include="IIOPC.cpp">
+    </ClCompile>
+    <ClCompile Include="Incoming_Message_Queue.cpp">
+    </ClCompile>
+    <ClCompile Include="Incoming_Message_Stack.cpp">
+    </ClCompile>
+    <ClCompile Include="Invocation_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="Invocation_Base.cpp">
+    </ClCompile>
+    <ClCompile Include="Invocation_Endpoint_Selectors.cpp">
+    </ClCompile>
+    <ClCompile Include="IOPC.cpp">
+    </ClCompile>
+    <ClCompile Include="IOR_Parser.cpp">
+    </ClCompile>
+    <ClCompile Include="IORInterceptor_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="IORInterceptor_Adapter_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Leader_Follower.cpp">
+    </ClCompile>
+    <ClCompile Include="Leader_Follower_Flushing_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_CH_Event.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Connect_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Event.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Event_Binder.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Event_Loop_Thread_Helper.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Follower.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Follower_Auto_Adder.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Follower_Auto_Ptr.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Invocation_Event.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Multi_Event.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="LF_Strategy_Complete.cpp">
+    </ClCompile>
+    <ClCompile Include="LocalObject.cpp">
+    </ClCompile>
+    <ClCompile Include="LocateRequest_Invocation.cpp">
+    </ClCompile>
+    <ClCompile Include="LocateRequest_Invocation_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="LongDoubleSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="LongLongSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="LongSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="LRU_Connection_Purging_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="MCAST_Parser.cpp">
+    </ClCompile>
+    <ClCompile Include="Messaging_PolicyValueC.cpp">
+    </ClCompile>
+    <ClCompile Include="Messaging_SyncScopeC.cpp">
+    </ClCompile>
+    <ClCompile Include="MMAP_Allocator.cpp">
+    </ClCompile>
+    <ClCompile Include="MProfile.cpp">
+    </ClCompile>
+    <ClCompile Include="Muxed_TMS.cpp">
+    </ClCompile>
+    <ClCompile Include="Network_Priority_Protocols_Hooks.cpp">
+    </ClCompile>
+    <ClCompile Include="New_Leader_Generator.cpp">
+    </ClCompile>
+    <ClCompile Include="Null_Fragmentation_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="NVList_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+    </ClCompile>
+    <ClCompile Include="Object_KeyC.cpp">
+    </ClCompile>
+    <ClCompile Include="Object_Loader.cpp">
+    </ClCompile>
+    <ClCompile Include="Object_Proxy_Broker.cpp">
+    </ClCompile>
+    <ClCompile Include="Object_Ref_Table.cpp">
+    </ClCompile>
+    <ClCompile Include="ObjectIdListC.cpp">
+    </ClCompile>
+    <ClCompile Include="ObjectKey_Table.cpp">
+    </ClCompile>
+    <ClCompile Include="OctetSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="On_Demand_Fragmentation_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="operation_details.cpp">
+    </ClCompile>
+    <ClCompile Include="ORB.cpp">
+    </ClCompile>
+    <ClCompile Include="ORB_Core.cpp">
+    </ClCompile>
+    <ClCompile Include="ORB_Core_Auto_Ptr.cpp">
+    </ClCompile>
+    <ClCompile Include="ORB_Core_TSS_Resources.cpp">
+    </ClCompile>
+    <ClCompile Include="ORB_Table.cpp">
+    </ClCompile>
+    <ClCompile Include="ORB_Time_Policy.cpp">
+    </ClCompile>
+    <ClCompile Include="orb_typesC.cpp">
+    </ClCompile>
+    <ClCompile Include="ORBInitializer_Registry.cpp">
+    </ClCompile>
+    <ClCompile Include="ORBInitializer_Registry_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="ParameterModeC.cpp">
+    </ClCompile>
+    <ClCompile Include="params.cpp">
+    </ClCompile>
+    <ClCompile Include="Parser_Registry.cpp">
+    </ClCompile>
+    <ClCompile Include="PI_ForwardC.cpp">
+    </ClCompile>
+    <ClCompile Include="Pluggable_Messaging_Utils.cpp">
+    </ClCompile>
+    <ClCompile Include="Policy_Current.cpp">
+    </ClCompile>
+    <ClCompile Include="Policy_Current_Impl.cpp">
+    </ClCompile>
+    <ClCompile Include="Policy_CurrentC.cpp">
+    </ClCompile>
+    <ClCompile Include="Policy_ForwardC.cpp">
+    </ClCompile>
+    <ClCompile Include="Policy_Manager.cpp">
+    </ClCompile>
+    <ClCompile Include="Policy_ManagerC.cpp">
+    </ClCompile>
+    <ClCompile Include="Policy_Set.cpp">
+    </ClCompile>
+    <ClCompile Include="Policy_Validator.cpp">
+    </ClCompile>
+    <ClCompile Include="PolicyC.cpp">
+    </ClCompile>
+    <ClCompile Include="PolicyFactory_Registry_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="PolicyFactory_Registry_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="PortableInterceptorC.cpp">
+    </ClCompile>
+    <ClCompile Include="Principal.cpp">
+    </ClCompile>
+    <ClCompile Include="Profile.cpp">
+    </ClCompile>
+    <ClCompile Include="Profile_Transport_Resolver.cpp">
+    </ClCompile>
+    <ClCompile Include="Protocol_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Protocols_Hooks.cpp">
+    </ClCompile>
+    <ClCompile Include="Queued_Data.cpp">
+    </ClCompile>
+    <ClCompile Include="Queued_Message.cpp">
+    </ClCompile>
+    <ClCompile Include="Reactive_Connect_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="Reactive_Flushing_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="Refcounted_ObjectKey.cpp">
+    </ClCompile>
+    <ClCompile Include="Remote_Invocation.cpp">
+    </ClCompile>
+    <ClCompile Include="Remote_Object_Proxy_Broker.cpp">
+    </ClCompile>
+    <ClCompile Include="Reply_Dispatcher.cpp">
+    </ClCompile>
+    <ClCompile Include="Request_Dispatcher.cpp">
+    </ClCompile>
+    <ClCompile Include="RequestInterceptor_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="Resource_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Resume_Handle.cpp">
+    </ClCompile>
+    <ClCompile Include="Server_Strategy_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="ServerRequestInterceptor_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="ServerRequestInterceptor_Adapter_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Service_Callbacks.cpp">
+    </ClCompile>
+    <ClCompile Include="Service_Context.cpp">
+    </ClCompile>
+    <ClCompile Include="Service_Context_Handler.cpp">
+    </ClCompile>
+    <ClCompile Include="Service_Context_Handler_Registry.cpp">
+    </ClCompile>
+    <ClCompile Include="Services_Activate.cpp">
+    </ClCompile>
+    <ClCompile Include="ServicesC.cpp">
+    </ClCompile>
+    <ClCompile Include="ShortSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="String_Alloc.cpp">
+    </ClCompile>
+    <ClCompile Include="StringSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="Stub.cpp">
+    </ClCompile>
+    <ClCompile Include="Stub_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Synch_Invocation.cpp">
+    </ClCompile>
+    <ClCompile Include="Synch_Queued_Message.cpp">
+    </ClCompile>
+    <ClCompile Include="Synch_Reply_Dispatcher.cpp">
+    </ClCompile>
+    <ClCompile Include="System_Time_Policy_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="SystemException.cpp">
+    </ClCompile>
+    <ClCompile Include="Tagged_Components.cpp">
+    </ClCompile>
+    <ClCompile Include="Tagged_Profile.cpp">
+    </ClCompile>
+    <ClCompile Include="TAO_Internal.cpp">
+    </ClCompile>
+    <ClCompile Include="TAO_Server_Request.cpp">
+    </ClCompile>
+    <ClCompile Include="TAO_Singleton_Manager.cpp">
+    </ClCompile>
+    <ClCompile Include="TAOC.cpp">
+    </ClCompile>
+    <ClCompile Include="target_specification.cpp">
+    </ClCompile>
+    <ClCompile Include="Thread_Lane_Resources.cpp">
+    </ClCompile>
+    <ClCompile Include="Thread_Lane_Resources_Manager.cpp">
+    </ClCompile>
+    <ClCompile Include="Thread_Per_Connection_Handler.cpp">
+    </ClCompile>
+    <ClCompile Include="Time_Policy_Manager.cpp">
+    </ClCompile>
+    <ClCompile Include="TimeBaseC.cpp">
+    </ClCompile>
+    <ClCompile Include="Transport.cpp">
+    </ClCompile>
+    <ClCompile Include="Transport_Acceptor.cpp">
+    </ClCompile>
+    <ClCompile Include="Transport_Connector.cpp">
+    </ClCompile>
+    <ClCompile Include="Transport_Descriptor_Interface.cpp">
+    </ClCompile>
+    <ClCompile Include="Transport_Mux_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="Transport_Queueing_Strategies.cpp">
+    </ClCompile>
+    <ClCompile Include="Transport_Selection_Guard.cpp">
+    </ClCompile>
+    <ClCompile Include="Transport_Timer.cpp">
+    </ClCompile>
+    <ClCompile Include="TSS_Resources.cpp">
+    </ClCompile>
+    <ClCompile Include="Typecode_typesC.cpp">
+    </ClCompile>
+    <ClCompile Include="TypeCodeFactory_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="ULongLongSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="ULongSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="UserException.cpp">
+    </ClCompile>
+    <ClCompile Include="UShortSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="Valuetype_Adapter.cpp">
+    </ClCompile>
+    <ClCompile Include="Valuetype_Adapter_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Wait_On_Leader_Follower.cpp">
+    </ClCompile>
+    <ClCompile Include="Wait_On_LF_No_Upcall.cpp">
+    </ClCompile>
+    <ClCompile Include="Wait_On_Reactor.cpp">
+    </ClCompile>
+    <ClCompile Include="Wait_On_Read.cpp">
+    </ClCompile>
+    <ClCompile Include="Wait_Strategy.cpp">
+    </ClCompile>
+    <ClCompile Include="WCharSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="WrongTransactionC.cpp">
+    </ClCompile>
+    <ClCompile Include="WStringSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="ZIOP_Adapter.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Acceptor_Impl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Array_VarOut_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Basic_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BD_String_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Buffer_Allocator_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Cache_Entries_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Condition.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Connector_Impl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Fixed_Array_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Fixed_Size_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Intrusive_Ref_Count_Base_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Intrusive_Ref_Count_Handle_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Intrusive_Ref_Count_Object_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Object_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Object_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Objref_VarOut_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Pseudo_VarOut_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Seq_Out_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Seq_Var_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Special_Basic_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TAO_Singleton.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Transport_Cache_Manager_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="UB_String_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Var_Array_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Var_Size_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="VarOut_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Vector_Argument_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Abstract_Servant_Base.h" />
+    <ClInclude Include="Acceptor_Filter.h" />
+    <ClInclude Include="Acceptor_Impl.h" />
+    <ClInclude Include="Acceptor_Registry.h" />
+    <ClInclude Include="Adapter.h" />
+    <ClInclude Include="Adapter_Factory.h" />
+    <ClInclude Include="Adapter_Registry.h" />
+    <ClInclude Include="Allocator.h" />
+    <ClInclude Include="Any_Insert_Policy_T.h" />
+    <ClInclude Include="AnyTypeCode_Adapter.h" />
+    <ClInclude Include="Arg_Traits_T.h" />
+    <ClInclude Include="Argument.h" />
+    <ClInclude Include="Array_Traits_T.h" />
+    <ClInclude Include="Array_VarOut_T.h" />
+    <ClInclude Include="Asynch_Queued_Message.h" />
+    <ClInclude Include="Asynch_Reply_Dispatcher_Base.h" />
+    <ClInclude Include="Base_Transport_Property.h" />
+    <ClInclude Include="Basic_Argument_T.h" />
+    <ClInclude Include="Basic_Arguments.h" />
+    <ClInclude Include="Basic_Types.h" />
+    <ClInclude Include="BD_String_Argument_T.h" />
+    <ClInclude Include="BiDir_Adapter.h" />
+    <ClInclude Include="Bind_Dispatcher_Guard.h" />
+    <ClInclude Include="Block_Flushing_Strategy.h" />
+    <ClInclude Include="Blocked_Connect_Strategy.h" />
+    <ClInclude Include="BooleanSeqC.h" />
+    <ClInclude Include="BooleanSeqS.h" />
+    <ClInclude Include="Bounded_Array_Allocation_Traits_T.h" />
+    <ClInclude Include="Bounded_Array_Sequence_T.h" />
+    <ClInclude Include="Bounded_Basic_String_Sequence_T.h" />
+    <ClInclude Include="Bounded_BD_String_Sequence_T.h" />
+    <ClInclude Include="Bounded_Object_Reference_Sequence_T.h" />
+    <ClInclude Include="Bounded_Reference_Allocation_Traits_T.h" />
+    <ClInclude Include="Bounded_Sequence_CDR_T.h" />
+    <ClInclude Include="Bounded_Value_Allocation_Traits_T.h" />
+    <ClInclude Include="Bounded_Value_Sequence_T.h" />
+    <ClInclude Include="Buffer_Allocator_T.h" />
+    <ClInclude Include="Cache_Entries_T.h" />
+    <ClInclude Include="CDR.h" />
+    <ClInclude Include="CharSeqC.h" />
+    <ClInclude Include="CharSeqS.h" />
+    <ClInclude Include="Cleanup_Func_Registry.h" />
+    <ClInclude Include="Client_Strategy_Factory.h" />
+    <ClInclude Include="ClientRequestInterceptor_Adapter.h" />
+    <ClInclude Include="ClientRequestInterceptor_Adapter_Factory.h" />
+    <ClInclude Include="Codeset_Descriptor_Base.h" />
+    <ClInclude Include="Codeset_Manager.h" />
+    <ClInclude Include="Codeset_Manager_Factory_Base.h" />
+    <ClInclude Include="Codeset_Translator_Base.h" />
+    <ClInclude Include="Collocated_Invocation.h" />
+    <ClInclude Include="Collocation_Resolver.h" />
+    <ClInclude Include="Collocation_Strategy.h" />
+    <ClInclude Include="Condition.h" />
+    <ClInclude Include="Connect_Strategy.h" />
+    <ClInclude Include="Connection_Handler.h" />
+    <ClInclude Include="Connection_Purging_Strategy.h" />
+    <ClInclude Include="Connector_Impl.h" />
+    <ClInclude Include="Connector_Registry.h" />
+    <ClInclude Include="CONV_FRAMEC.h" />
+    <ClInclude Include="CONV_FRAMES.h" />
+    <ClInclude Include="corba.h" />
+    <ClInclude Include="CORBA_methods.h" />
+    <ClInclude Include="CORBA_String.h" />
+    <ClInclude Include="corbafwd.h" />
+    <ClInclude Include="CORBALOC_Parser.h" />
+    <ClInclude Include="CORBANAME_Parser.h" />
+    <ClInclude Include="CurrentC.h" />
+    <ClInclude Include="CurrentS.h" />
+    <ClInclude Include="debug.h" />
+    <ClInclude Include="default_client.h" />
+    <ClInclude Include="Default_Collocation_Resolver.h" />
+    <ClInclude Include="Default_Endpoint_Selector_Factory.h" />
+    <ClInclude Include="default_environment.h" />
+    <ClInclude Include="default_ports.h" />
+    <ClInclude Include="default_resource.h" />
+    <ClInclude Include="default_server.h" />
+    <ClInclude Include="Default_Stub_Factory.h" />
+    <ClInclude Include="Default_Thread_Lane_Resources_Manager.h" />
+    <ClInclude Include="DLL_Parser.h" />
+    <ClInclude Include="DoubleSeqC.h" />
+    <ClInclude Include="DoubleSeqS.h" />
+    <ClInclude Include="Dynamic_Adapter.h" />
+    <ClInclude Include="Endpoint.h" />
+    <ClInclude Include="Endpoint_Selector_Factory.h" />
+    <ClInclude Include="Environment.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="Exception_Data.h" />
+    <ClInclude Include="Exclusive_TMS.h" />
+    <ClInclude Include="Fault_Tolerance_Service.h" />
+    <ClInclude Include="FILE_Parser.h" />
+    <ClInclude Include="Fixed_Array_Argument_T.h" />
+    <ClInclude Include="Fixed_Size_Argument_T.h" />
+    <ClInclude Include="FloatSeqC.h" />
+    <ClInclude Include="FloatSeqS.h" />
+    <ClInclude Include="Flushing_Strategy.h" />
+    <ClInclude Include="Generic_Sequence_T.h" />
+    <ClInclude Include="GIOP_Fragmentation_Strategy.h" />
+    <ClInclude Include="GIOP_Message_Base.h" />
+    <ClInclude Include="GIOP_Message_Generator_Parser.h" />
+    <ClInclude Include="GIOP_Message_Generator_Parser_10.h" />
+    <ClInclude Include="GIOP_Message_Generator_Parser_11.h" />
+    <ClInclude Include="GIOP_Message_Generator_Parser_12.h" />
+    <ClInclude Include="GIOP_Message_Generator_Parser_Impl.h" />
+    <ClInclude Include="GIOP_Message_Locate_Header.h" />
+    <ClInclude Include="GIOP_Message_State.h" />
+    <ClInclude Include="GIOP_Message_Version.h" />
+    <ClInclude Include="GIOP_Utils.h" />
+    <ClInclude Include="GIOPC.h" />
+    <ClInclude Include="GIOPS.h" />
+    <ClInclude Include="GUIResource_Factory.h" />
+    <ClInclude Include="HR_Time_Policy_Strategy.h" />
+    <ClInclude Include="HTTP_Client.h" />
+    <ClInclude Include="HTTP_Handler.h" />
+    <ClInclude Include="HTTP_Parser.h" />
+    <ClInclude Include="IFR_Client_Adapter.h" />
+    <ClInclude Include="IIOP_Acceptor.h" />
+    <ClInclude Include="IIOP_Connection_Handler.h" />
+    <ClInclude Include="IIOP_Connector.h" />
+    <ClInclude Include="IIOP_Endpoint.h" />
+    <ClInclude Include="IIOP_EndpointsC.h" />
+    <ClInclude Include="IIOP_EndpointsS.h" />
+    <ClInclude Include="IIOP_Factory.h" />
+    <ClInclude Include="IIOP_Profile.h" />
+    <ClInclude Include="IIOP_Transport.h" />
+    <ClInclude Include="IIOPC.h" />
+    <ClInclude Include="IIOPS.h" />
+    <ClInclude Include="Incoming_Message_Queue.h" />
+    <ClInclude Include="Incoming_Message_Stack.h" />
+    <ClInclude Include="Intrusive_Ref_Count_Base_T.h" />
+    <ClInclude Include="Intrusive_Ref_Count_Handle_T.h" />
+    <ClInclude Include="Intrusive_Ref_Count_Object_T.h" />
+    <ClInclude Include="Invocation_Adapter.h" />
+    <ClInclude Include="Invocation_Base.h" />
+    <ClInclude Include="Invocation_Endpoint_Selectors.h" />
+    <ClInclude Include="Invocation_Utils.h" />
+    <ClInclude Include="IOPC.h" />
+    <ClInclude Include="IOPS.h" />
+    <ClInclude Include="IOR_Parser.h" />
+    <ClInclude Include="IORInterceptor_Adapter.h" />
+    <ClInclude Include="IORInterceptor_Adapter_Factory.h" />
+    <ClInclude Include="Leader_Follower.h" />
+    <ClInclude Include="Leader_Follower_Flushing_Strategy.h" />
+    <ClInclude Include="LF_CH_Event.h" />
+    <ClInclude Include="LF_Connect_Strategy.h" />
+    <ClInclude Include="LF_Event.h" />
+    <ClInclude Include="LF_Event_Binder.h" />
+    <ClInclude Include="LF_Event_Loop_Thread_Helper.h" />
+    <ClInclude Include="LF_Follower.h" />
+    <ClInclude Include="LF_Follower_Auto_Adder.h" />
+    <ClInclude Include="LF_Follower_Auto_Ptr.h" />
+    <ClInclude Include="LF_Invocation_Event.h" />
+    <ClInclude Include="LF_Multi_Event.h" />
+    <ClInclude Include="LF_Strategy.h" />
+    <ClInclude Include="LF_Strategy_Complete.h" />
+    <ClInclude Include="Load_Protocol_Factory_T.h" />
+    <ClInclude Include="LocalObject.h" />
+    <ClInclude Include="LocateRequest_Invocation.h" />
+    <ClInclude Include="LocateRequest_Invocation_Adapter.h" />
+    <ClInclude Include="LongDoubleSeqC.h" />
+    <ClInclude Include="LongDoubleSeqS.h" />
+    <ClInclude Include="LongLongSeqC.h" />
+    <ClInclude Include="LongLongSeqS.h" />
+    <ClInclude Include="LongSeqC.h" />
+    <ClInclude Include="LongSeqS.h" />
+    <ClInclude Include="LRU_Connection_Purging_Strategy.h" />
+    <ClInclude Include="MCAST_Parser.h" />
+    <ClInclude Include="Message_Semantics.h" />
+    <ClInclude Include="Messaging_PolicyValueC.h" />
+    <ClInclude Include="Messaging_PolicyValueS.h" />
+    <ClInclude Include="Messaging_SyncScopeC.h" />
+    <ClInclude Include="Messaging_SyncScopeS.h" />
+    <ClInclude Include="MM_Sequence_Iterator_T.h" />
+    <ClInclude Include="MMAP_Allocator.h" />
+    <ClInclude Include="MProfile.h" />
+    <ClInclude Include="Muxed_TMS.h" />
+    <ClInclude Include="Network_Priority_Protocols_Hooks.h" />
+    <ClInclude Include="New_Leader_Generator.h" />
+    <ClInclude Include="Null_Fragmentation_Strategy.h" />
+    <ClInclude Include="NVList_Adapter.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Object_Argument_T.h" />
+    <ClInclude Include="Object_KeyC.h" />
+    <ClInclude Include="Object_Loader.h" />
+    <ClInclude Include="Object_Proxy_Broker.h" />
+    <ClInclude Include="Object_Ref_Table.h" />
+    <ClInclude Include="Object_Reference_Const_Sequence_Element_T.h" />
+    <ClInclude Include="Object_Reference_Sequence_Element_T.h" />
+    <ClInclude Include="Object_Reference_Traits_Base_T.h" />
+    <ClInclude Include="Object_Reference_Traits_T.h" />
+    <ClInclude Include="Object_T.h" />
+    <ClInclude Include="objectid.h" />
+    <ClInclude Include="ObjectIdListC.h" />
+    <ClInclude Include="ObjectIdListS.h" />
+    <ClInclude Include="ObjectKey_Table.h" />
+    <ClInclude Include="Objref_VarOut_T.h" />
+    <ClInclude Include="OctetSeqC.h" />
+    <ClInclude Include="OctetSeqS.h" />
+    <ClInclude Include="On_Demand_Fragmentation_Strategy.h" />
+    <ClInclude Include="operation_details.h" />
+    <ClInclude Include="ORB.h" />
+    <ClInclude Include="ORB_Constants.h" />
+    <ClInclude Include="ORB_Core.h" />
+    <ClInclude Include="ORB_Core_Auto_Ptr.h" />
+    <ClInclude Include="ORB_Core_TSS_Resources.h" />
+    <ClInclude Include="ORB_Table.h" />
+    <ClInclude Include="ORB_Time_Policy.h" />
+    <ClInclude Include="orb_typesC.h" />
+    <ClInclude Include="orb_typesS.h" />
+    <ClInclude Include="orbconf.h" />
+    <ClInclude Include="ORBInitializer_Registry.h" />
+    <ClInclude Include="ORBInitializer_Registry_Adapter.h" />
+    <ClInclude Include="ParameterModeC.h" />
+    <ClInclude Include="ParameterModeS.h" />
+    <ClInclude Include="params.h" />
+    <ClInclude Include="Parser_Registry.h" />
+    <ClInclude Include="PI_ForwardC.h" />
+    <ClInclude Include="PI_ForwardS.h" />
+    <ClInclude Include="Pluggable_Messaging_Utils.h" />
+    <ClInclude Include="Policy_Current.h" />
+    <ClInclude Include="Policy_Current_Impl.h" />
+    <ClInclude Include="Policy_CurrentC.h" />
+    <ClInclude Include="Policy_CurrentS.h" />
+    <ClInclude Include="Policy_ForwardC.h" />
+    <ClInclude Include="Policy_ForwardS.h" />
+    <ClInclude Include="Policy_Manager.h" />
+    <ClInclude Include="Policy_ManagerC.h" />
+    <ClInclude Include="Policy_ManagerS.h" />
+    <ClInclude Include="Policy_Set.h" />
+    <ClInclude Include="Policy_Validator.h" />
+    <ClInclude Include="PolicyC.h" />
+    <ClInclude Include="PolicyFactory_Registry_Adapter.h" />
+    <ClInclude Include="PolicyFactory_Registry_Factory.h" />
+    <ClInclude Include="PolicyS.h" />
+    <ClInclude Include="PortableInterceptor.h" />
+    <ClInclude Include="PortableInterceptorC.h" />
+    <ClInclude Include="PortableInterceptorS.h" />
+    <ClInclude Include="Principal.h" />
+    <ClInclude Include="Profile.h" />
+    <ClInclude Include="Profile_Transport_Resolver.h" />
+    <ClInclude Include="Protocol_Factory.h" />
+    <ClInclude Include="Protocols_Hooks.h" />
+    <ClInclude Include="Pseudo_VarOut_T.h" />
+    <ClInclude Include="Queued_Data.h" />
+    <ClInclude Include="Queued_Message.h" />
+    <ClInclude Include="Range_Checking_T.h" />
+    <ClInclude Include="Reactive_Connect_Strategy.h" />
+    <ClInclude Include="Reactive_Flushing_Strategy.h" />
+    <ClInclude Include="Refcounted_ObjectKey.h" />
+    <ClInclude Include="Remote_Invocation.h" />
+    <ClInclude Include="Remote_Object_Proxy_Broker.h" />
+    <ClInclude Include="Reply_Dispatcher.h" />
+    <ClInclude Include="Request_Dispatcher.h" />
+    <ClInclude Include="RequestInterceptor_Adapter.h" />
+    <ClInclude Include="Resource_Factory.h" />
+    <ClInclude Include="Resume_Handle.h" />
+    <ClInclude Include="Seq_Out_T.h" />
+    <ClInclude Include="Seq_Var_T.h" />
+    <ClInclude Include="Sequence_T.h" />
+    <ClInclude Include="Server_Strategy_Factory.h" />
+    <ClInclude Include="ServerRequestInterceptor_Adapter.h" />
+    <ClInclude Include="ServerRequestInterceptor_Adapter_Factory.h" />
+    <ClInclude Include="Service_Callbacks.h" />
+    <ClInclude Include="Service_Context.h" />
+    <ClInclude Include="Service_Context_Handler.h" />
+    <ClInclude Include="Service_Context_Handler_Registry.h" />
+    <ClInclude Include="Services_Activate.h" />
+    <ClInclude Include="ServicesC.h" />
+    <ClInclude Include="ServicesS.h" />
+    <ClInclude Include="ShortSeqC.h" />
+    <ClInclude Include="ShortSeqS.h" />
+    <ClInclude Include="Special_Basic_Argument_T.h" />
+    <ClInclude Include="Special_Basic_Arguments.h" />
+    <ClInclude Include="String_Alloc.h" />
+    <ClInclude Include="String_Const_Sequence_Element_T.h" />
+    <ClInclude Include="String_Manager_T.h" />
+    <ClInclude Include="String_Sequence_Element_T.h" />
+    <ClInclude Include="String_Traits_Base_T.h" />
+    <ClInclude Include="String_Traits_T.h" />
+    <ClInclude Include="StringSeqC.h" />
+    <ClInclude Include="StringSeqS.h" />
+    <ClInclude Include="Stub.h" />
+    <ClInclude Include="Stub_Factory.h" />
+    <ClInclude Include="Synch_Invocation.h" />
+    <ClInclude Include="Synch_Queued_Message.h" />
+    <ClInclude Include="Synch_Reply_Dispatcher.h" />
+    <ClInclude Include="System_Time_Policy_Strategy.h" />
+    <ClInclude Include="SystemException.h" />
+    <ClInclude Include="Tagged_Components.h" />
+    <ClInclude Include="Tagged_Profile.h" />
+    <ClInclude Include="TAO_Export.h" />
+    <ClInclude Include="TAO_Internal.h" />
+    <ClInclude Include="TAO_Server_Request.h" />
+    <ClInclude Include="TAO_Singleton.h" />
+    <ClInclude Include="TAO_Singleton_Manager.h" />
+    <ClInclude Include="TAOC.h" />
+    <ClInclude Include="TAOS.h" />
+    <ClInclude Include="target_specification.h" />
+    <ClInclude Include="Thread_Lane_Resources.h" />
+    <ClInclude Include="Thread_Lane_Resources_Manager.h" />
+    <ClInclude Include="Thread_Per_Connection_Handler.h" />
+    <ClInclude Include="Time_Policy_Manager.h" />
+    <ClInclude Include="Time_Policy_Strategy.h" />
+    <ClInclude Include="TimeBaseC.h" />
+    <ClInclude Include="TimeBaseS.h" />
+    <ClInclude Include="Timeprobe.h" />
+    <ClInclude Include="Transport.h" />
+    <ClInclude Include="Transport_Acceptor.h" />
+    <ClInclude Include="Transport_Cache_Manager.h" />
+    <ClInclude Include="Transport_Cache_Manager_T.h" />
+    <ClInclude Include="Transport_Connector.h" />
+    <ClInclude Include="Transport_Descriptor_Interface.h" />
+    <ClInclude Include="Transport_Mux_Strategy.h" />
+    <ClInclude Include="Transport_Queueing_Strategies.h" />
+    <ClInclude Include="Transport_Selection_Guard.h" />
+    <ClInclude Include="Transport_Timer.h" />
+    <ClInclude Include="TSS_Resources.h" />
+    <ClInclude Include="Typecode_typesC.h" />
+    <ClInclude Include="Typecode_typesS.h" />
+    <ClInclude Include="TypeCodeFactory_Adapter.h" />
+    <ClInclude Include="UB_String_Argument_T.h" />
+    <ClInclude Include="UB_String_Arguments.h" />
+    <ClInclude Include="ULongLongSeqC.h" />
+    <ClInclude Include="ULongLongSeqS.h" />
+    <ClInclude Include="ULongSeqC.h" />
+    <ClInclude Include="ULongSeqS.h" />
+    <ClInclude Include="Unbounded_Array_Allocation_Traits_T.h" />
+    <ClInclude Include="Unbounded_Array_Sequence_T.h" />
+    <ClInclude Include="Unbounded_Basic_String_Sequence_T.h" />
+    <ClInclude Include="Unbounded_BD_String_Sequence_T.h" />
+    <ClInclude Include="Unbounded_Object_Reference_Sequence_T.h" />
+    <ClInclude Include="Unbounded_Octet_Sequence_T.h" />
+    <ClInclude Include="Unbounded_Reference_Allocation_Traits_T.h" />
+    <ClInclude Include="Unbounded_Sequence_CDR_T.h" />
+    <ClInclude Include="Unbounded_Value_Allocation_Traits_T.h" />
+    <ClInclude Include="Unbounded_Value_Sequence_T.h" />
+    <ClInclude Include="UserException.h" />
+    <ClInclude Include="UShortSeqC.h" />
+    <ClInclude Include="UShortSeqS.h" />
+    <ClInclude Include="Value_Traits_T.h" />
+    <ClInclude Include="Valuetype_Adapter.h" />
+    <ClInclude Include="Valuetype_Adapter_Factory.h" />
+    <ClInclude Include="Var_Array_Argument_T.h" />
+    <ClInclude Include="Var_Size_Argument_T.h" />
+    <ClInclude Include="varbase.h" />
+    <ClInclude Include="VarOut_T.h" />
+    <ClInclude Include="Vector_Argument_T.h" />
+    <ClInclude Include="Vector_CDR_T.h" />
+    <ClInclude Include="Version.h" />
+    <ClInclude Include="Versioned_Namespace.h" />
+    <ClInclude Include="Wait_On_Leader_Follower.h" />
+    <ClInclude Include="Wait_On_LF_No_Upcall.h" />
+    <ClInclude Include="Wait_On_Reactor.h" />
+    <ClInclude Include="Wait_On_Read.h" />
+    <ClInclude Include="Wait_Strategy.h" />
+    <ClInclude Include="WCharSeqC.h" />
+    <ClInclude Include="WCharSeqS.h" />
+    <ClInclude Include="WrongTransactionC.h" />
+    <ClInclude Include="WrongTransactionS.h" />
+    <ClInclude Include="WStringSeqC.h" />
+    <ClInclude Include="WStringSeqS.h" />
+    <ClInclude Include="ZIOP_Adapter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="extra_core.mpb">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="tao.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="tao.mwc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO.pc.in">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\COPYING">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\COPYING.sun">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\docs">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\MPC">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\NEWS">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\PROBLEM-REPORT-FORM">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\README">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\README.sun">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\rules.tao.GNU">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\VERSION">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="orb.idl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Abstract_Servant_Base.inl" />
+    <None Include="Acceptor_Registry.inl" />
+    <None Include="Array_VarOut_T.inl" />
+    <None Include="Asynch_Reply_Dispatcher_Base.inl" />
+    <None Include="Base_Transport_Property.inl" />
+    <None Include="Basic_Argument_T.inl" />
+    <None Include="BD_String_Argument_T.inl" />
+    <None Include="Bind_Dispatcher_Guard.inl" />
+    <None Include="Cache_Entries_T.inl" />
+    <None Include="CDR.inl" />
+    <None Include="Cleanup_Func_Registry.inl" />
+    <None Include="Condition.inl" />
+    <None Include="Connection_Handler.inl" />
+    <None Include="Connection_Purging_Strategy.inl" />
+    <None Include="Connector_Registry.inl" />
+    <None Include="CORBA_String.inl" />
+    <None Include="CORBALOC_Parser.inl" />
+    <None Include="default_resource.inl" />
+    <None Include="Endpoint.inl" />
+    <None Include="Environment.inl" />
+    <None Include="Exception.inl" />
+    <None Include="Fault_Tolerance_Service.inl" />
+    <None Include="Fixed_Array_Argument_T.inl" />
+    <None Include="Fixed_Size_Argument_T.inl" />
+    <None Include="GIOP_Message_Generator_Parser_Impl.inl" />
+    <None Include="GIOP_Message_Locate_Header.inl" />
+    <None Include="GIOP_Message_State.inl" />
+    <None Include="GIOP_Message_Version.inl" />
+    <None Include="GIOPC.inl" />
+    <None Include="IIOP_Acceptor.inl" />
+    <None Include="IIOP_Endpoint.inl" />
+    <None Include="Incoming_Message_Queue.inl" />
+    <None Include="Incoming_Message_Stack.inl" />
+    <None Include="Intrusive_Ref_Count_Base_T.inl" />
+    <None Include="Intrusive_Ref_Count_Handle_T.inl" />
+    <None Include="Intrusive_Ref_Count_Object_T.inl" />
+    <None Include="Invocation_Adapter.inl" />
+    <None Include="Invocation_Base.inl" />
+    <None Include="Leader_Follower.inl" />
+    <None Include="LF_Event.inl" />
+    <None Include="LF_Event_Binder.inl" />
+    <None Include="LF_Event_Loop_Thread_Helper.inl" />
+    <None Include="LF_Follower.inl" />
+    <None Include="LF_Follower_Auto_Adder.inl" />
+    <None Include="LF_Follower_Auto_Ptr.inl" />
+    <None Include="LocalObject.inl" />
+    <None Include="MCAST_Parser.inl" />
+    <None Include="MProfile.inl" />
+    <None Include="Object.inl" />
+    <None Include="Object_Argument_T.inl" />
+    <None Include="Object_Ref_Table.inl" />
+    <None Include="ObjectKey_Table.inl" />
+    <None Include="Objref_VarOut_T.inl" />
+    <None Include="operation_details.inl" />
+    <None Include="ORB.inl" />
+    <None Include="ORB_Core.inl" />
+    <None Include="ORB_Core_Auto_Ptr.inl" />
+    <None Include="ORB_Table.inl" />
+    <None Include="ORB_Time_Policy.inl" />
+    <None Include="params.inl" />
+    <None Include="Parser_Registry.inl" />
+    <None Include="Pluggable_Messaging_Utils.inl" />
+    <None Include="Policy_Current.inl" />
+    <None Include="Policy_Current_Impl.inl" />
+    <None Include="Policy_Manager.inl" />
+    <None Include="Policy_Set.inl" />
+    <None Include="PolicyC.inl" />
+    <None Include="Principal.inl" />
+    <None Include="Profile.inl" />
+    <None Include="Profile_Transport_Resolver.inl" />
+    <None Include="Pseudo_VarOut_T.inl" />
+    <None Include="Queued_Data.inl" />
+    <None Include="Queued_Message.inl" />
+    <None Include="Refcounted_ObjectKey.inl" />
+    <None Include="Reply_Dispatcher.inl" />
+    <None Include="Resume_Handle.inl" />
+    <None Include="Seq_Out_T.inl" />
+    <None Include="Seq_Var_T.inl" />
+    <None Include="Service_Context.inl" />
+    <None Include="Special_Basic_Argument_T.inl" />
+    <None Include="Stub.inl" />
+    <None Include="Synch_Invocation.inl" />
+    <None Include="SystemException.inl" />
+    <None Include="Tagged_Components.inl" />
+    <None Include="Tagged_Profile.inl" />
+    <None Include="TAO_Server_Request.inl" />
+    <None Include="TAO_Singleton.inl" />
+    <None Include="TAO_Singleton_Manager.inl" />
+    <None Include="target_specification.inl" />
+    <None Include="Transport.inl" />
+    <None Include="Transport_Acceptor.inl" />
+    <None Include="Transport_Cache_Manager_T.inl" />
+    <None Include="Transport_Connector.inl" />
+    <None Include="Transport_Descriptor_Interface.inl" />
+    <None Include="UB_String_Argument_T.inl" />
+    <None Include="UserException.inl" />
+    <None Include="Var_Array_Argument_T.inl" />
+    <None Include="Var_Size_Argument_T.inl" />
+    <None Include="VarOut_T.inl" />
+    <None Include="Vector_Argument_T.inl" />
+    <None Include="Wait_Strategy.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tao.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

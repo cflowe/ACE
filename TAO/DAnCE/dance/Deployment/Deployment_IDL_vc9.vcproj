@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="Deployment_IDL"
+	ProjectGUID="{847C17E1-FECA-1BAD-F0BC-F15E960D6ACA}"
+	RootNamespace="Deployment_IDL"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Deployment_IDL_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Deployment_IDL_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Deployment_IDL_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Deployment_IDL_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="Deployment_Core.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="Deployment.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DeploymentC.cpp;DeploymentC.h;DeploymentS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DeploymentC.cpp;DeploymentC.h;DeploymentS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DeploymentC.cpp;DeploymentC.h;DeploymentS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DeploymentC.cpp;DeploymentC.h;DeploymentS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_Application.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Application.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -Gxhst -Gxhsk &quot;Deployment_Application.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_ApplicationC.cpp;Deployment_ApplicationC.h;Deployment_ApplicationC.inl;Deployment_ApplicationS.cpp;Deployment_ApplicationS.h;Deployment_skel_export.h;Deployment_stub_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Application.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -Gxhst -Gxhsk &quot;Deployment_Application.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_ApplicationC.cpp;Deployment_ApplicationC.h;Deployment_ApplicationC.inl;Deployment_ApplicationS.cpp;Deployment_ApplicationS.h;Deployment_skel_export.h;Deployment_stub_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Application.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -Gxhst -Gxhsk &quot;Deployment_Application.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_ApplicationC.cpp;Deployment_ApplicationC.h;Deployment_ApplicationC.inl;Deployment_ApplicationS.cpp;Deployment_ApplicationS.h;Deployment_skel_export.h;Deployment_stub_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Application.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -Gxhst -Gxhsk &quot;Deployment_Application.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_ApplicationC.cpp;Deployment_ApplicationC.h;Deployment_ApplicationC.inl;Deployment_ApplicationS.cpp;Deployment_ApplicationS.h;Deployment_skel_export.h;Deployment_stub_export.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_Base.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Base.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS &quot;Deployment_Base.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_BaseC.cpp;Deployment_BaseC.h;Deployment_BaseC.inl;Deployment_BaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Base.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS &quot;Deployment_Base.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_BaseC.cpp;Deployment_BaseC.h;Deployment_BaseC.inl;Deployment_BaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Base.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS &quot;Deployment_Base.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_BaseC.cpp;Deployment_BaseC.h;Deployment_BaseC.inl;Deployment_BaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Base.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS &quot;Deployment_Base.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_BaseC.cpp;Deployment_BaseC.h;Deployment_BaseC.inl;Deployment_BaseS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_Connection.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Connection.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Connection.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_ConnectionC.cpp;Deployment_ConnectionC.h;Deployment_ConnectionS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Connection.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Connection.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_ConnectionC.cpp;Deployment_ConnectionC.h;Deployment_ConnectionS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Connection.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Connection.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_ConnectionC.cpp;Deployment_ConnectionC.h;Deployment_ConnectionS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Connection.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Connection.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_ConnectionC.cpp;Deployment_ConnectionC.h;Deployment_ConnectionS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_Data.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Data.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Data.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_DataC.cpp;Deployment_DataC.h;Deployment_DataS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Data.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Data.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_DataC.cpp;Deployment_DataC.h;Deployment_DataS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Data.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Data.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_DataC.cpp;Deployment_DataC.h;Deployment_DataS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Data.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Data.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_DataC.cpp;Deployment_DataC.h;Deployment_DataS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_DeploymentPlan.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_DeploymentPlan.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_DeploymentPlan.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_DeploymentPlanC.cpp;Deployment_DeploymentPlanC.h;Deployment_DeploymentPlanS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_DeploymentPlan.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_DeploymentPlan.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_DeploymentPlanC.cpp;Deployment_DeploymentPlanC.h;Deployment_DeploymentPlanS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_DeploymentPlan.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_DeploymentPlan.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_DeploymentPlanC.cpp;Deployment_DeploymentPlanC.h;Deployment_DeploymentPlanS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_DeploymentPlan.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_DeploymentPlan.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_DeploymentPlanC.cpp;Deployment_DeploymentPlanC.h;Deployment_DeploymentPlanS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_InvalidComponentExecParameter.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidComponentExecParameter.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidComponentExecParameter.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_InvalidComponentExecParameterC.cpp;Deployment_InvalidComponentExecParameterC.h;Deployment_InvalidComponentExecParameterS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidComponentExecParameter.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidComponentExecParameter.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_InvalidComponentExecParameterC.cpp;Deployment_InvalidComponentExecParameterC.h;Deployment_InvalidComponentExecParameterS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidComponentExecParameter.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidComponentExecParameter.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_InvalidComponentExecParameterC.cpp;Deployment_InvalidComponentExecParameterC.h;Deployment_InvalidComponentExecParameterS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidComponentExecParameter.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidComponentExecParameter.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_InvalidComponentExecParameterC.cpp;Deployment_InvalidComponentExecParameterC.h;Deployment_InvalidComponentExecParameterS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_InvalidConnection.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidConnection.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidConnection.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_InvalidConnectionC.cpp;Deployment_InvalidConnectionC.h;Deployment_InvalidConnectionS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidConnection.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidConnection.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_InvalidConnectionC.cpp;Deployment_InvalidConnectionC.h;Deployment_InvalidConnectionS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidConnection.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidConnection.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_InvalidConnectionC.cpp;Deployment_InvalidConnectionC.h;Deployment_InvalidConnectionS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidConnection.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidConnection.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_InvalidConnectionC.cpp;Deployment_InvalidConnectionC.h;Deployment_InvalidConnectionS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_InvalidNodeExecParameter.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidNodeExecParameter.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidNodeExecParameter.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_InvalidNodeExecParameterC.cpp;Deployment_InvalidNodeExecParameterC.h;Deployment_InvalidNodeExecParameterS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidNodeExecParameter.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidNodeExecParameter.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_InvalidNodeExecParameterC.cpp;Deployment_InvalidNodeExecParameterC.h;Deployment_InvalidNodeExecParameterS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidNodeExecParameter.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidNodeExecParameter.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_InvalidNodeExecParameterC.cpp;Deployment_InvalidNodeExecParameterC.h;Deployment_InvalidNodeExecParameterS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidNodeExecParameter.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidNodeExecParameter.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_InvalidNodeExecParameterC.cpp;Deployment_InvalidNodeExecParameterC.h;Deployment_InvalidNodeExecParameterS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_InvalidProperty.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidProperty.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidProperty.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_InvalidPropertyC.cpp;Deployment_InvalidPropertyC.h;Deployment_InvalidPropertyS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidProperty.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidProperty.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_InvalidPropertyC.cpp;Deployment_InvalidPropertyC.h;Deployment_InvalidPropertyS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidProperty.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidProperty.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_InvalidPropertyC.cpp;Deployment_InvalidPropertyC.h;Deployment_InvalidPropertyS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_InvalidProperty.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_InvalidProperty.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_InvalidPropertyC.cpp;Deployment_InvalidPropertyC.h;Deployment_InvalidPropertyS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_Packaging_Data.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Packaging_Data.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Packaging_Data.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_Packaging_DataC.cpp;Deployment_Packaging_DataC.h;Deployment_Packaging_DataS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Packaging_Data.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Packaging_Data.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_Packaging_DataC.cpp;Deployment_Packaging_DataC.h;Deployment_Packaging_DataS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Packaging_Data.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Packaging_Data.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_Packaging_DataC.cpp;Deployment_Packaging_DataC.h;Deployment_Packaging_DataS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_Packaging_Data.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_Packaging_Data.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_Packaging_DataC.cpp;Deployment_Packaging_DataC.h;Deployment_Packaging_DataS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_PlanError.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_PlanError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_PlanError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_PlanErrorC.cpp;Deployment_PlanErrorC.h;Deployment_PlanErrorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_PlanError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_PlanError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_PlanErrorC.cpp;Deployment_PlanErrorC.h;Deployment_PlanErrorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_PlanError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_PlanError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_PlanErrorC.cpp;Deployment_PlanErrorC.h;Deployment_PlanErrorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_PlanError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_PlanError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_PlanErrorC.cpp;Deployment_PlanErrorC.h;Deployment_PlanErrorS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_ResourceCommitmentManager.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_ResourceCommitmentManager.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h &quot;Deployment_ResourceCommitmentManager.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_ResourceCommitmentManagerC.cpp;Deployment_ResourceCommitmentManagerC.h;Deployment_ResourceCommitmentManagerC.inl;Deployment_ResourceCommitmentManagerS.cpp;Deployment_ResourceCommitmentManagerS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_ResourceCommitmentManager.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h &quot;Deployment_ResourceCommitmentManager.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_ResourceCommitmentManagerC.cpp;Deployment_ResourceCommitmentManagerC.h;Deployment_ResourceCommitmentManagerC.inl;Deployment_ResourceCommitmentManagerS.cpp;Deployment_ResourceCommitmentManagerS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_ResourceCommitmentManager.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h &quot;Deployment_ResourceCommitmentManager.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_ResourceCommitmentManagerC.cpp;Deployment_ResourceCommitmentManagerC.h;Deployment_ResourceCommitmentManagerC.inl;Deployment_ResourceCommitmentManagerS.cpp;Deployment_ResourceCommitmentManagerS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_ResourceCommitmentManager.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h &quot;Deployment_ResourceCommitmentManager.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_ResourceCommitmentManagerC.cpp;Deployment_ResourceCommitmentManagerC.h;Deployment_ResourceCommitmentManagerC.inl;Deployment_ResourceCommitmentManagerS.cpp;Deployment_ResourceCommitmentManagerS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_ResourceNotAvailable.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_ResourceNotAvailable.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_ResourceNotAvailable.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_ResourceNotAvailableC.cpp;Deployment_ResourceNotAvailableC.h;Deployment_ResourceNotAvailableS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_ResourceNotAvailable.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_ResourceNotAvailable.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_ResourceNotAvailableC.cpp;Deployment_ResourceNotAvailableC.h;Deployment_ResourceNotAvailableS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_ResourceNotAvailable.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_ResourceNotAvailable.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_ResourceNotAvailableC.cpp;Deployment_ResourceNotAvailableC.h;Deployment_ResourceNotAvailableS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_ResourceNotAvailable.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_ResourceNotAvailable.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_ResourceNotAvailableC.cpp;Deployment_ResourceNotAvailableC.h;Deployment_ResourceNotAvailableS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_StartError.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_StartError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_StartError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_StartErrorC.cpp;Deployment_StartErrorC.h;Deployment_StartErrorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_StartError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_StartError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_StartErrorC.cpp;Deployment_StartErrorC.h;Deployment_StartErrorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_StartError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_StartError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_StartErrorC.cpp;Deployment_StartErrorC.h;Deployment_StartErrorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_StartError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_StartError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_StartErrorC.cpp;Deployment_StartErrorC.h;Deployment_StartErrorS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_StopError.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_StopError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_StopError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_StopErrorC.cpp;Deployment_StopErrorC.h;Deployment_StopErrorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_StopError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_StopError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_StopErrorC.cpp;Deployment_StopErrorC.h;Deployment_StopErrorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_StopError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_StopError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_StopErrorC.cpp;Deployment_StopErrorC.h;Deployment_StopErrorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_StopError.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_StopError.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_StopErrorC.cpp;Deployment_StopErrorC.h;Deployment_StopErrorS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Deployment_TargetData.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_TargetData.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_TargetData.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_TargetDataC.cpp;Deployment_TargetDataC.h;Deployment_TargetDataS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_TargetData.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_TargetData.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_TargetDataC.cpp;Deployment_TargetDataC.h;Deployment_TargetDataS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_TargetData.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_TargetData.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Deployment_TargetDataC.cpp;Deployment_TargetDataC.h;Deployment_TargetDataS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_TargetData.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -GC -GH -Wb,stub_export_macro=DEPLOYMENT_STUB_Export -Wb,stub_export_include=Deployment_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_SKEL_Export -Wb,skel_export_include=Deployment_skel_export.h -SS -Sci &quot;Deployment_TargetData.idl&quot;"
+						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Deployment_TargetDataC.cpp;Deployment_TargetDataC.h;Deployment_TargetDataS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="DAnCE_IDL"
+	ProjectGUID="{B2D0EB3D-FECA-1BAD-5C40-2D6827CFC82F}"
+	RootNamespace="DAnCE_IDL"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\DAnCE_IDL_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\DAnCE_IDL_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\DAnCE_IDL_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\DAnCE_IDL_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="DAnCE_Core.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="DAnCE_Properties.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="DAnCE_ArtifactInstallation.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_ArtifactInstallation.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h &quot;DAnCE_ArtifactInstallation.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DAnCE_ArtifactInstallationC.cpp;DAnCE_ArtifactInstallationC.h;DAnCE_ArtifactInstallationC.inl;DAnCE_ArtifactInstallationS.cpp;DAnCE_ArtifactInstallationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_ArtifactInstallation.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h &quot;DAnCE_ArtifactInstallation.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DAnCE_ArtifactInstallationC.cpp;DAnCE_ArtifactInstallationC.h;DAnCE_ArtifactInstallationC.inl;DAnCE_ArtifactInstallationS.cpp;DAnCE_ArtifactInstallationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_ArtifactInstallation.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h &quot;DAnCE_ArtifactInstallation.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DAnCE_ArtifactInstallationC.cpp;DAnCE_ArtifactInstallationC.h;DAnCE_ArtifactInstallationC.inl;DAnCE_ArtifactInstallationS.cpp;DAnCE_ArtifactInstallationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_ArtifactInstallation.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h &quot;DAnCE_ArtifactInstallation.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DAnCE_ArtifactInstallationC.cpp;DAnCE_ArtifactInstallationC.h;DAnCE_ArtifactInstallationC.inl;DAnCE_ArtifactInstallationS.cpp;DAnCE_ArtifactInstallationS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="DAnCE_DeploymentInterceptors.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_DeploymentInterceptors.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -SS -Sci &quot;DAnCE_DeploymentInterceptors.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DAnCE_DeploymentInterceptorsC.cpp;DAnCE_DeploymentInterceptorsC.h;DAnCE_DeploymentInterceptorsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_DeploymentInterceptors.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -SS -Sci &quot;DAnCE_DeploymentInterceptors.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DAnCE_DeploymentInterceptorsC.cpp;DAnCE_DeploymentInterceptorsC.h;DAnCE_DeploymentInterceptorsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_DeploymentInterceptors.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -SS -Sci &quot;DAnCE_DeploymentInterceptors.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DAnCE_DeploymentInterceptorsC.cpp;DAnCE_DeploymentInterceptorsC.h;DAnCE_DeploymentInterceptorsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_DeploymentInterceptors.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -SS -Sci &quot;DAnCE_DeploymentInterceptors.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DAnCE_DeploymentInterceptorsC.cpp;DAnCE_DeploymentInterceptorsC.h;DAnCE_DeploymentInterceptorsS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="DAnCE_LocalityManager.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_LocalityManager.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -Gxhst -Gxhsk &quot;DAnCE_LocalityManager.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DAnCE_LocalityManagerC.cpp;DAnCE_LocalityManagerC.h;DAnCE_LocalityManagerC.inl;DAnCE_LocalityManagerS.cpp;DAnCE_LocalityManagerS.h;DAnCE_skel_export.h;DAnCE_stub_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_LocalityManager.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -Gxhst -Gxhsk &quot;DAnCE_LocalityManager.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DAnCE_LocalityManagerC.cpp;DAnCE_LocalityManagerC.h;DAnCE_LocalityManagerC.inl;DAnCE_LocalityManagerS.cpp;DAnCE_LocalityManagerS.h;DAnCE_skel_export.h;DAnCE_stub_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_LocalityManager.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -Gxhst -Gxhsk &quot;DAnCE_LocalityManager.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DAnCE_LocalityManagerC.cpp;DAnCE_LocalityManagerC.h;DAnCE_LocalityManagerC.inl;DAnCE_LocalityManagerS.cpp;DAnCE_LocalityManagerS.h;DAnCE_skel_export.h;DAnCE_stub_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_LocalityManager.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -Gxhst -Gxhsk &quot;DAnCE_LocalityManager.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DAnCE_LocalityManagerC.cpp;DAnCE_LocalityManagerC.h;DAnCE_LocalityManagerC.inl;DAnCE_LocalityManagerS.cpp;DAnCE_LocalityManagerS.h;DAnCE_skel_export.h;DAnCE_stub_export.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="DAnCE_Properties.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_Properties.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -SS -Sci &quot;DAnCE_Properties.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DAnCE_PropertiesC.cpp;DAnCE_PropertiesC.h;DAnCE_PropertiesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_Properties.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -SS -Sci &quot;DAnCE_Properties.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DAnCE_PropertiesC.cpp;DAnCE_PropertiesC.h;DAnCE_PropertiesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_Properties.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -SS -Sci &quot;DAnCE_Properties.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="DAnCE_PropertiesC.cpp;DAnCE_PropertiesC.h;DAnCE_PropertiesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on DAnCE_Properties.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I.. -I.. -Wb,stub_export_macro=DANCE_STUB_Export -Wb,stub_export_include=DAnCE_stub_export.h -Wb,skel_export_macro=DANCE_SKEL_Export -Wb,skel_export_include=DAnCE_skel_export.h -SS -Sci &quot;DAnCE_Properties.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="DAnCE_PropertiesC.cpp;DAnCE_PropertiesC.h;DAnCE_PropertiesS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

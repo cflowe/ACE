@@ -1,0 +1,29 @@
+// -*- MPC -*-
+// $Id: CosEC_Simple.mpc 80754 2008-02-27 15:24:53Z sowayaa $
+
+project(*Service) : orbsvcsexe, event, event_serv, naming {
+
+  exename = Service
+
+  Source_Files {
+    Service.cpp
+  }
+}
+
+project(*Consumer) : orbsvcsexe, event, event_skel {
+
+  exename = Consumer
+
+  Source_Files {
+    Consumer.cpp
+  }
+}
+
+project(*Supplier) : orbsvcsexe, event, event_skel {
+
+  exename = Supplier
+
+  Source_Files {
+    Supplier.cpp
+  }
+}

@@ -1,0 +1,6 @@
+// $Id: Test.idl 61846 2004-11-14 05:02:41Z bala $
+
+interface Test
+{
+  void print_hello_world();
+};

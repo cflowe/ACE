@@ -1,0 +1,8 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+This is a build only test. A failure in the IDL compilation will probably indicate a regression.
+
+The IDL is compiled with a temporary file location specified using the -t parameter. The location is ./mytmp/.
+
+The file included.idl in ./mytmp/. is uncompilable - the test is intended to prove that it is not getting included instead of the correct included.idl (the one in *this* directory).
+

@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: RTCORBA_RTMutex.mpc 54747 2003-12-23 21:05:25Z dhinton $
+
+project(*Server): rt_server {
+}

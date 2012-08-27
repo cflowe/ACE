@@ -1,0 +1,15 @@
+
+//=============================================================================
+/**
+ *  $Id: Parent.idl 75136 2006-10-30 15:27:31Z smcqueen $
+ */
+//=============================================================================
+
+#pragma prefix "parent.pragma.prefix"
+
+interface ParentInterface {};
+
+module ParentModule
+  {
+    interface ParentInterface {};
+  };

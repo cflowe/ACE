@@ -1,0 +1,32 @@
+// -*- MPC -*-
+// $Id: Null_Cipher.mpc 90222 2010-05-21 17:23:45Z mesnier_p $
+
+project(*idl) : taoidldefaults {
+  IDL_Files {
+    Foo.idl
+  }
+  custom_only = 1
+}
+
+project(*security server): taoserver, orbsvcslib, security, ssliop, pi_server, codecfactory, interceptors {
+  after += *idl
+  Source_Files {
+    Foo_i.cpp
+    FooS.cpp
+    FooC.cpp
+    server.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*security client): taoexe, orbsvcslib, security, pi, codecfactory, interceptors {
+  after += *idl
+  exename = client
+  Source_Files {
+    FooC.cpp
+    client.cpp
+  }
+  IDL_Files {
+  }
+}

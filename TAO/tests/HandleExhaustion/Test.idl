@@ -1,0 +1,7 @@
+// $Id: Test.idl 81470 2008-04-28 12:40:23Z elliott_c $
+
+interface Test
+{
+  void simple ();
+  oneway void shutdown ();
+};

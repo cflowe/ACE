@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: examples.mwc 90164 2010-05-18 21:47:55Z mitza $
+
+workspace {
+  cmdline += -include $PWD/../tests    // for notifytest.mpb
+}

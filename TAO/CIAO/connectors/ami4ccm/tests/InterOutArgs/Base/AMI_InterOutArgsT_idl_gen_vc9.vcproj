@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="AMI_InterOutArgsT_idl_gen"
+	ProjectGUID="{BD37E483-FECA-1BAD-D240-082AF84271E6}"
+	RootNamespace="AMI_InterOutArgsT_idl_gen"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\AMI_InterOutArgsT_idl_gen_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\AMI_InterOutArgsT_idl_gen_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\AMI_InterOutArgsT_idl_gen_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\AMI_InterOutArgsT_idl_gen_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="InterOutArgsT.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="InterOutArgsT.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on InterOutArgsT.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -GC -Wb,stub_export_macro=INTEROUTARGS_T_STUB_Export -Wb,stub_export_include=InterOutArgsT_stub_export.h -Wb,skel_export_macro=INTEROUTARGS_T_SKEL_Export -Wb,skel_export_include=InterOutArgsT_skel_export.h -Wb,conn_export_macro=INTEROUTARGS_T_CONN_Export -Wb,conn_export_include=InterOutArgsT_conn_export.h -Wb,exec_export_macro=INTEROUTARGS_T_EXEC_Export -Wb,exec_export_include=InterOutArgsT_exec_export.h -I.. -GM -Gxhcn &quot;InterOutArgsT.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="InterOutArgsT_conn_export.h;InterOutArgsT_exec_export.h;InterOutArgsT_skel_export.h;InterOutArgsT_stub_export.h;InterOutArgsT_svnt.cpp;InterOutArgsT_svnt.h;InterOutArgsT_svnt_T.cpp;InterOutArgsT_svnt_T.h;InterOutArgsTA.idl;InterOutArgsTC.cpp;InterOutArgsTC.h;InterOutArgsTC.inl;InterOutArgsTE.idl;InterOutArgsTS.cpp;InterOutArgsTS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on InterOutArgsT.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -GC -Wb,stub_export_macro=INTEROUTARGS_T_STUB_Export -Wb,stub_export_include=InterOutArgsT_stub_export.h -Wb,skel_export_macro=INTEROUTARGS_T_SKEL_Export -Wb,skel_export_include=InterOutArgsT_skel_export.h -Wb,conn_export_macro=INTEROUTARGS_T_CONN_Export -Wb,conn_export_include=InterOutArgsT_conn_export.h -Wb,exec_export_macro=INTEROUTARGS_T_EXEC_Export -Wb,exec_export_include=InterOutArgsT_exec_export.h -I.. -GM -Gxhcn &quot;InterOutArgsT.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="InterOutArgsT_conn_export.h;InterOutArgsT_exec_export.h;InterOutArgsT_skel_export.h;InterOutArgsT_stub_export.h;InterOutArgsT_svnt.cpp;InterOutArgsT_svnt.h;InterOutArgsT_svnt_T.cpp;InterOutArgsT_svnt_T.h;InterOutArgsTA.idl;InterOutArgsTC.cpp;InterOutArgsTC.h;InterOutArgsTC.inl;InterOutArgsTE.idl;InterOutArgsTS.cpp;InterOutArgsTS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on InterOutArgsT.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -GC -Wb,stub_export_macro=INTEROUTARGS_T_STUB_Export -Wb,stub_export_include=InterOutArgsT_stub_export.h -Wb,skel_export_macro=INTEROUTARGS_T_SKEL_Export -Wb,skel_export_include=InterOutArgsT_skel_export.h -Wb,conn_export_macro=INTEROUTARGS_T_CONN_Export -Wb,conn_export_include=InterOutArgsT_conn_export.h -Wb,exec_export_macro=INTEROUTARGS_T_EXEC_Export -Wb,exec_export_include=InterOutArgsT_exec_export.h -I.. -GM -Gxhcn &quot;InterOutArgsT.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="InterOutArgsT_conn_export.h;InterOutArgsT_exec_export.h;InterOutArgsT_skel_export.h;InterOutArgsT_stub_export.h;InterOutArgsT_svnt.cpp;InterOutArgsT_svnt.h;InterOutArgsT_svnt_T.cpp;InterOutArgsT_svnt_T.h;InterOutArgsTA.idl;InterOutArgsTC.cpp;InterOutArgsTC.h;InterOutArgsTC.inl;InterOutArgsTE.idl;InterOutArgsTS.cpp;InterOutArgsTS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\..\..\bin\tao_idl on InterOutArgsT.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\..\.. -I..\..\..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -GC -Wb,stub_export_macro=INTEROUTARGS_T_STUB_Export -Wb,stub_export_include=InterOutArgsT_stub_export.h -Wb,skel_export_macro=INTEROUTARGS_T_SKEL_Export -Wb,skel_export_include=InterOutArgsT_skel_export.h -Wb,conn_export_macro=INTEROUTARGS_T_CONN_Export -Wb,conn_export_include=InterOutArgsT_conn_export.h -Wb,exec_export_macro=INTEROUTARGS_T_EXEC_Export -Wb,exec_export_include=InterOutArgsT_exec_export.h -I.. -GM -Gxhcn &quot;InterOutArgsT.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="InterOutArgsT_conn_export.h;InterOutArgsT_exec_export.h;InterOutArgsT_skel_export.h;InterOutArgsT_stub_export.h;InterOutArgsT_svnt.cpp;InterOutArgsT_svnt.h;InterOutArgsT_svnt_T.cpp;InterOutArgsT_svnt_T.h;InterOutArgsTA.idl;InterOutArgsTC.cpp;InterOutArgsTC.h;InterOutArgsTC.inl;InterOutArgsTE.idl;InterOutArgsTS.cpp;InterOutArgsTS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

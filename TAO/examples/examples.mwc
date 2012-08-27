@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: examples.mwc 90164 2010-05-18 21:47:55Z mitza $
+
+workspace {
+  cmdline += -include $PWD
+  exclude {
+   // todo : get the mfc projects working correctly.
+   mfc 
+  }
+}

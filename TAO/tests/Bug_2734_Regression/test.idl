@@ -1,0 +1,12 @@
+//
+// $Id: test.idl 79994 2007-11-12 09:26:33Z johnnyw $
+//
+
+interface Simple_Server {
+
+  /// Returns <x>, but sleep for <msecs> milliseconds before returning
+  long echo (in long x, in long msecs);
+
+  /// Shutdown the ORB
+  oneway void shutdown ();
+};

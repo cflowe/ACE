@@ -1,0 +1,21 @@
+// $Id: Hello_Sender.idl 95242 2011-12-07 11:54:56Z johnnyw $
+
+#ifndef HELLO_SENDER_IDL
+#define HELLO_SENDER_IDL
+
+#include <Components.idl>
+
+#include "Base/Hello.idl"
+
+#pragma ciao ami4ccm receptacle "Hello::Sender::run_my_foo"
+
+module Hello
+{
+  component Sender
+  {
+    /// For synchronous invocation
+    uses MyFoo run_my_foo;
+  };
+};
+
+#endif

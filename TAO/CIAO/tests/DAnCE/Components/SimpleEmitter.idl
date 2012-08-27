@@ -1,0 +1,23 @@
+// $Id: SimpleEmitter.idl 93359 2011-02-11 11:33:12Z mcorino $
+
+#ifndef SIMPLE_EMITTER_IDL
+#define SIMPLE_EMITTER_IDL
+
+#include "SimpleCommon.idl"
+#include "Components.idl"
+
+module Simple
+{
+  component SimpleEmitter
+  {
+#if !defined (CCM_NOEVENT)
+    emits Hello hello_emits;
+#endif
+  };
+
+  home SimpleEmitterHome manages SimpleEmitter
+  {
+  };
+};
+
+#endif /*SIMPLE_EMITTER_IDL*/

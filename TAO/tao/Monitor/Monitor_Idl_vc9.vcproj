@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="Monitor_Idl"
+	ProjectGUID="{C64F62B2-FECA-1BAD-E280-C1FBEBC560FF}"
+	RootNamespace="Monitor_Idl"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Monitor_Idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Monitor_Idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\Monitor_Idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\Monitor_Idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="Monitor.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="Monitor.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -Wb,include_guard=TAO_MONITOR_SAFE_INCLUDE -Wb,safe_include=tao/Monitor/Monitor.h &quot;Monitor.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="MonitorA.cpp;MonitorA.h;MonitorC.cpp;MonitorC.h;MonitorC.inl;MonitorS.cpp;MonitorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -Wb,include_guard=TAO_MONITOR_SAFE_INCLUDE -Wb,safe_include=tao/Monitor/Monitor.h &quot;Monitor.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="MonitorA.cpp;MonitorA.h;MonitorC.cpp;MonitorC.h;MonitorC.inl;MonitorS.cpp;MonitorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -Wb,include_guard=TAO_MONITOR_SAFE_INCLUDE -Wb,safe_include=tao/Monitor/Monitor.h &quot;Monitor.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="MonitorA.cpp;MonitorA.h;MonitorC.cpp;MonitorC.h;MonitorC.inl;MonitorS.cpp;MonitorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -Wb,include_guard=TAO_MONITOR_SAFE_INCLUDE -Wb,safe_include=tao/Monitor/Monitor.h &quot;Monitor.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="MonitorA.cpp;MonitorA.h;MonitorC.cpp;MonitorC.h;MonitorC.inl;MonitorS.cpp;MonitorS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Monitor_include.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor_include.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -Wb,unique_include=tao/Monitor/Monitor.h -SS -Sci &quot;Monitor_include.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Monitor_includeA.cpp;Monitor_includeA.h;Monitor_includeC.cpp;Monitor_includeC.h;Monitor_includeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor_include.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -Wb,unique_include=tao/Monitor/Monitor.h -SS -Sci &quot;Monitor_include.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Monitor_includeA.cpp;Monitor_includeA.h;Monitor_includeC.cpp;Monitor_includeC.h;Monitor_includeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor_include.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -Wb,unique_include=tao/Monitor/Monitor.h -SS -Sci &quot;Monitor_include.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Monitor_includeA.cpp;Monitor_includeA.h;Monitor_includeC.cpp;Monitor_includeC.h;Monitor_includeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor_include.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Sa -St -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -Wb,unique_include=tao/Monitor/Monitor.h -SS -Sci &quot;Monitor_include.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Monitor_includeA.cpp;Monitor_includeA.h;Monitor_includeC.cpp;Monitor_includeC.h;Monitor_includeS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Monitor_Types.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor_Types.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -SS -Wb,include_guard=TAO_MONITOR_SAFE_INCLUDE -Wb,safe_include=tao/Monitor/Monitor.h &quot;Monitor_Types.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Monitor_TypesA.cpp;Monitor_TypesA.h;Monitor_TypesC.cpp;Monitor_TypesC.h;Monitor_TypesC.inl;Monitor_TypesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor_Types.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -SS -Wb,include_guard=TAO_MONITOR_SAFE_INCLUDE -Wb,safe_include=tao/Monitor/Monitor.h &quot;Monitor_Types.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Monitor_TypesA.cpp;Monitor_TypesA.h;Monitor_TypesC.cpp;Monitor_TypesC.h;Monitor_TypesC.inl;Monitor_TypesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor_Types.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -SS -Wb,include_guard=TAO_MONITOR_SAFE_INCLUDE -Wb,safe_include=tao/Monitor/Monitor.h &quot;Monitor_Types.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Monitor_TypesA.cpp;Monitor_TypesA.h;Monitor_TypesC.cpp;Monitor_TypesC.h;Monitor_TypesC.inl;Monitor_TypesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Monitor_Types.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -GA -Wb,export_macro=TAO_Monitor_Export -Wb,export_include=tao/Monitor/Monitor_export.h -iC tao/Monitor -SS -Wb,include_guard=TAO_MONITOR_SAFE_INCLUDE -Wb,safe_include=tao/Monitor/Monitor.h &quot;Monitor_Types.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Monitor_TypesA.cpp;Monitor_TypesA.h;Monitor_TypesC.cpp;Monitor_TypesC.h;Monitor_TypesC.inl;Monitor_TypesS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

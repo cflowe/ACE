@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: notify_serv.mpb 81086 2008-03-25 14:14:47Z mitza $
+// NOTE: this is for *users* of CosNotification_serv.  Use
+// Notification_serv.mpb to build CosNotification_serv.
+
+project : orbsvcslib, notification, event_serv, etcl, dynamicany {
+  after     += CosNotification_Serv
+  libs      += TAO_CosNotification_Serv TAO_CosNotification_Skel
+}

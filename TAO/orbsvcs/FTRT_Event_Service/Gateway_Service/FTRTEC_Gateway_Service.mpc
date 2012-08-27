@@ -1,0 +1,12 @@
+// -*- MPC -*-
+// $Id: FTRTEC_Gateway_Service.mpc 77215 2007-02-19 20:35:17Z johnnyw $
+
+project(FTRTEC_Gateway_Service): orbsvcsexe, ftrteventclient, strategies, install {
+  exename   = ftrtec_gateway_service
+  includes += $(TAO_ROOT)/orbsvcs/FtRtEvent/Utils
+
+  Source_Files {
+    FTRTEC_Gateway_Service.cpp
+  }
+}
+

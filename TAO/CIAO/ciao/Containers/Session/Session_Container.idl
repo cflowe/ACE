@@ -1,0 +1,15 @@
+/**
+ * @file Session_Container.idl
+ * @author William R. Otte <wotte@dre.vanderbilt.edu>
+ * $Id: Session_Container.idl 84406 2009-02-11 14:59:08Z wotte $
+ * Extends the basic container interface for session capabilities.
+ */
+
+#include "ciao/Containers/Container_Base.idl"
+
+module CIAO
+{
+  local interface Session_Container : Container
+  {
+  };
+};

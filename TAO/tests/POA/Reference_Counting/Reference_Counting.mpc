@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: Reference_Counting.mpc 66291 2005-06-09 18:29:41Z jwillemsen $
+
+project(*Server): taoserver {
+  Source_Files {
+    test.cpp
+  }
+}

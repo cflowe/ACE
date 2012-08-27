@@ -1,0 +1,9 @@
+// $Id: MonitorTestInterface.idl 79325 2007-08-13 11:36:33Z elliott_c $
+
+interface MonitorTestInterface
+{
+  enum Which { NotifyService, Supplier, Consumer };
+
+  oneway void running(in Which proc);
+  oneway void finished(in Which proc);
+};

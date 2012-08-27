@@ -1,0 +1,7 @@
+// $Id: test.idl 85325 2009-05-13 13:36:08Z sma $
+
+interface testInterface
+{
+  void firstCalling ();
+  void secondCalling ();
+};

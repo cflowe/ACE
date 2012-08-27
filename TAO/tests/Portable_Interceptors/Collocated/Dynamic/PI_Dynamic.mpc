@@ -1,0 +1,16 @@
+// -*- MPC -*-
+// $Id: PI_Dynamic.mpc 66741 2005-07-01 11:30:20Z jwillemsen $
+
+project(*Collocated): taoserver, pi, pi_server, interceptors {
+  exename = Collocated_Test
+  Source_Files {
+    testC.cpp
+    testS.cpp
+    test_i.cpp
+    interceptors.cpp
+    Echo_Collocated_ORBInitializer.cpp
+    Collocated_Test.cpp
+    Client_Task.cpp
+    Server_Task.cpp
+  }
+}

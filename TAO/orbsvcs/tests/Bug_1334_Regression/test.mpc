@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: test.mpc 55008 2004-01-01 15:51:00Z jwillemsen $
+
+project(Bug_1334_client) : namingexe {
+  exename  = client
+  Source_Files {
+    client.cpp
+  }
+}

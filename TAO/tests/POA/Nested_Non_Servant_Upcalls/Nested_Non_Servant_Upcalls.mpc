@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Nested_Non_Servant_Upcalls.mpc 78765 2007-07-03 18:27:51Z johnnyw $
+
+project(POA*): taoserver, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  exename = Nested_Non_Servant_Upcalls
+}

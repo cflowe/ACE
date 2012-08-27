@@ -1,0 +1,6 @@
+// $Id: foo.idl 77357 2007-02-24 06:58:14Z johnnyw $
+
+interface foo
+{
+    void check();
+};

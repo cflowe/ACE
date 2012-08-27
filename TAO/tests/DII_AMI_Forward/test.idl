@@ -1,0 +1,17 @@
+/* -*- Mode: IDL; tab-width: 2; indent-tabs-mode: f; c-basic-offset: 2 -*- */
+
+/*
+ * $Id: test.idl 81963 2008-06-16 10:20:06Z sma $
+ */
+
+#include "tao/PortableServer/ForwardRequest.pidl"
+
+module Forward
+{
+  interface Test
+  {
+    string do_forward (in string text);
+
+    oneway void shutdown ();
+  };
+};

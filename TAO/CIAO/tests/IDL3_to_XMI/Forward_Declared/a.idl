@@ -1,0 +1,20 @@
+// $Id: a.idl 92524 2010-11-10 10:58:06Z vzykov $
+
+#ifndef A_IDL
+#define A_IDL
+
+#include "b.idl"
+
+module M
+{
+
+    interface b;
+
+    interface a
+    {
+        attribute b b1;
+    };
+
+};
+
+#endif // A_IDL

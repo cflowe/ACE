@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: CodeSets_libs_IMB1047_ISO8859.mpc 66979 2005-07-13 22:15:31Z mesnier_p $
+
+project : taolib, codeset {
+  sharedname = IBM1047_ISO8859
+  dynamicflags += IBM1047_ISO8859_BUILD_DLL
+}

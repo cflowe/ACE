@@ -1,0 +1,7 @@
+// $Id: test.idl 48516 2003-02-21 18:23:14Z eas $
+
+interface test
+{
+  void testme ();
+  void TESTME ();
+};

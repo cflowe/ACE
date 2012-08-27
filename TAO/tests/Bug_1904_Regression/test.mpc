@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: test.mpc 59490 2004-08-13 11:51:46Z smcqueen $
+project : taoserver {
+  exename = test
+  Source_Files {
+    test.cpp
+    }
+}
+

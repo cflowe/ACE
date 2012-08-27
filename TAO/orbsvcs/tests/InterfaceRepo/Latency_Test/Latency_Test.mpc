@@ -1,0 +1,5 @@
+// $Id: Latency_Test.mpc 78771 2007-07-04 05:39:51Z sowayaa $
+project: ifr_client {
+  avoids += ace_for_tao
+  exename = client
+}

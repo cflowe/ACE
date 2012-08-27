@@ -1,0 +1,12 @@
+//
+// $Id: test.idl 95323 2011-12-14 12:37:01Z msmit $
+//
+
+interface test
+{
+  long method (in long client_id,
+               in long iteration,
+               out long thread_count);
+
+  oneway void shutdown ();
+};

@@ -1,0 +1,14 @@
+// $Id: Test.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+#ifndef _TEST_IDL_
+#define _TEST_IDL_
+
+module Test
+{
+  interface Server
+  {
+    oneway void shutdown ();
+  };
+};
+
+#endif // _TEST_IDL_

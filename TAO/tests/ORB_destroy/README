@@ -1,0 +1,4 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+Simple ORB destruction test to make sure that it's possible to destroy
+the ORB correctly.

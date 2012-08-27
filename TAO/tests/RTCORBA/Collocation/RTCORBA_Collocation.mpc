@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: RTCORBA_Collocation.mpc 78744 2007-07-03 06:49:36Z johnnyw $
+
+project(*Server): rt_server {
+  exename = Collocation
+}
+
+

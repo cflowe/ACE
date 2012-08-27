@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: tao_etcl.mpb 81641 2008-05-07 19:18:59Z parsons $
+
+project : ace_etcl, anytypecode {
+  after += TAO_ETCL
+  libs += TAO_ETCL
+}

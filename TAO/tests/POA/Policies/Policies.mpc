@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Policies.mpc 78744 2007-07-03 06:49:36Z johnnyw $
+
+project(POA*): taoserver, pi_server, avoids_corba_e_micro {
+  exename = Policies
+}

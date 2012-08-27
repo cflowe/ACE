@@ -1,0 +1,11 @@
+// -*- MPC -*-
+// $Id: Bug_3755_Ext_Regression.mpc 90302 2010-05-26 10:27:29Z vzykov $
+
+project(*Server) : taoexe {
+  exename=server
+
+  Source_Files {
+    common.cpp
+    server.cpp
+  }
+}

@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: valuetype.mpb 75814 2006-12-05 11:31:39Z johnnyw $
+
+project: taolib, anytypecode, avoids_corba_e_micro {
+  after    += Valuetype
+  libs     += TAO_Valuetype
+}

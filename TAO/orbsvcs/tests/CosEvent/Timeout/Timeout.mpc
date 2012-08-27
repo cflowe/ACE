@@ -1,0 +1,4 @@
+//$Id: Timeout.mpc 73617 2006-07-18 13:53:22Z mitza $
+project(*Timeout): orbsvcsexe, naming, event, event_skel, messaging, threads {
+  exename = TimeoutTest
+}

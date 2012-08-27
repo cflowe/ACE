@@ -1,0 +1,16 @@
+// -*- MPC -*-
+// $Id: TCM.mpc 84296 2009-02-02 11:48:29Z johnnyw $
+
+project(*Bug_3549_Regression): taoclient {
+  exename = Bug_3549_Regression
+  Source_Files {
+    Bug_3549_Regression.cpp
+  }
+}
+
+project(*Bug_3558_Regression): taoclient {
+  exename = Bug_3558_Regression
+  Source_Files {
+    Bug_3558_Regression.cpp
+  }
+}

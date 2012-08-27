@@ -1,0 +1,5 @@
+// $Id: Bug_3942_Regression.mpc 93601 2011-03-21 17:28:31Z mitza $
+project: taoexe {
+  macros += LOCAL
+  idlflags += -DLOCAL
+}

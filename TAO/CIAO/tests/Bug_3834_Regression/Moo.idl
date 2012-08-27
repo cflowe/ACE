@@ -1,0 +1,14 @@
+// $Id: Moo.idl 95291 2011-12-12 08:52:52Z johnnyw $
+
+#ifndef MOO_IDL_
+#define MOO_IDL_
+
+#pragma ciao lem "MooE.idl"
+
+interface Moo
+{
+  void do_something();
+};
+
+#endif /* MOO_IDL_ */
+

@@ -1,0 +1,14 @@
+// -*- MPC -*-
+// $Id: Single_Endpoint.mpc 55405 2004-01-15 16:49:22Z jwillemsen $
+
+project(*server): rt_server, strategies, rtcorbacommon {
+  Source_Files {
+    server.cpp
+  }
+}
+
+project(*client): rt_client, strategies, rtcorbacommon {
+  Source_Files {
+    client.cpp
+  }
+}

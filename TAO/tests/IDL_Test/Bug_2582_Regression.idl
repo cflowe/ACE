@@ -1,0 +1,22 @@
+// $Id: Bug_2582_Regression.idl 73434 2006-07-11 01:43:12Z jwillemsen $
+
+// Test Bug 2582
+
+enum EncodingID_T
+  {
+    ENCODING_XML
+  };
+
+struct Encoding_T
+{
+  EncodingID_T           id;
+};
+
+typedef EncodingID_T EncodingID2_T;
+
+interface FieldDevice_T
+{
+  EncodingID2_T getEncodingID();
+  Encoding_T getEncoding();
+};
+

@@ -1,0 +1,18 @@
+// $Id: TimeModule.idl 62657 2004-12-11 17:22:25Z bala $
+module TimeModule {
+
+  struct TimeOfDay {
+    short hour;    // 0 - 23
+    short minute;  // 0 - 59
+    short second;  // 0 - 59
+  };
+
+  interface Time {
+    TimeOfDay   get_gmt();
+
+    // Make this a oneway call to allow
+    // the server to shut down immediately.
+    oneway void Shutdown();
+  };
+
+};

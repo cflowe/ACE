@@ -1,0 +1,14 @@
+//
+// $Id: Test.idl 49187 2003-04-03 17:06:21Z bala $
+//
+
+/// Put the interfaces in a module, to avoid global namespace pollution
+module Test
+{
+  /// A very simple interface
+  interface Hello
+  {
+    /// Return a simple string
+    unsigned long next_prime ();
+  };
+};

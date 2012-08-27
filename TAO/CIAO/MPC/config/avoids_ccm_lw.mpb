@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: avoids_ccm_lw.mpb 89797 2010-04-08 06:38:03Z johnnyw $
+
+feature(ccm_lw) {
+  avoids += ccm_lw
+}

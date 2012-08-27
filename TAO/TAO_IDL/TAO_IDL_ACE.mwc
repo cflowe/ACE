@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: TAO_IDL_ACE.mwc 89421 2010-03-09 14:28:12Z johnnyw $
+
+workspace {
+  $(ACE_ROOT)/ace/ace.mpc
+  $(ACE_ROOT)/apps/gperf/src
+  $(TAO_ROOT)/TAO_IDL/tao_idl.mpc
+  $(TAO_ROOT)/TAO_IDL/tao_idl_fe.mpc
+  $(TAO_ROOT)/TAO_IDL/tao_idl_be.mpc
+}

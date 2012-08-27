@@ -1,0 +1,6 @@
+// $Id: local_child.idl 71308 2006-02-27 16:38:52Z smcqueen $
+#include "abstract_parent.idl"
+
+local interface local_child : abstract_parent
+{
+};

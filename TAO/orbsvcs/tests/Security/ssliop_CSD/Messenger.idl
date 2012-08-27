@@ -1,0 +1,11 @@
+/* -*- C++ -*- $Id: Messenger.idl 79751 2007-10-04 20:11:46Z johnc $ */
+
+// messenger.idl
+
+interface Messenger
+    {
+        boolean send_message ( in    string user_name,
+                               in    string subject,
+                               inout string message );
+    };
+

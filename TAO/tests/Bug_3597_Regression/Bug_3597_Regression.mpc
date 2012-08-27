@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: Bug_3597_Regression.mpc 84617 2009-02-26 12:08:52Z johnnyw $
+
+project(*Server): taoserver {
+  Source_Files {
+    server.cpp
+  }
+}
+

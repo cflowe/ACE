@@ -1,0 +1,14 @@
+//
+// $Id: test.idl 74052 2006-08-15 15:49:02Z mitza $
+//
+
+interface test
+{
+  typedef sequence<octet> data;
+  oneway void method (in unsigned long request_number,
+                      in long start_time,
+                      in data d,
+                      in unsigned long work);
+  void flush ();
+  oneway void shutdown (in long start_time);
+};

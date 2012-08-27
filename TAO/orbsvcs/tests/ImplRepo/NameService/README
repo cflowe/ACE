@@ -1,0 +1,5 @@
+$Id: README 94621 2011-10-06 12:14:28Z johnnyw $
+
+================================================================================
+Soon there will be a test to show off how the Implementation Repository can
+automatically activate the NameService and other common services.

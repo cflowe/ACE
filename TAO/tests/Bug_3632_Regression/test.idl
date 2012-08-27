@@ -1,0 +1,6 @@
+// $Id: test.idl 85142 2009-04-22 09:09:02Z vzykov $
+
+module Test
+{
+  typedef sequence <string, 10> bounded_string_seq;
+};

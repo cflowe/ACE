@@ -1,0 +1,4 @@
+// $Id: test.idl 60703 2004-09-24 20:19:09Z fields_t $
+interface test {
+  long get();
+};

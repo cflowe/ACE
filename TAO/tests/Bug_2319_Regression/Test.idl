@@ -1,0 +1,17 @@
+//
+// $Id: Test.idl 70896 2006-02-10 11:10:35Z jwillemsen $
+//
+
+/// A simple module to avoid namespace pollution
+module Test
+{
+
+  /// Use a timestamp to measure the roundtrip delay
+  typedef unsigned long long Timestamp;
+
+  /// Measure roundtrip Delay
+  interface Roundtrip
+  {
+    oneway void test_method (in Timestamp send_time);
+  };
+};

@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: lifecycle.mpb 82815 2008-09-23 21:50:40Z jtc $
+
+project : orbsvcslib, naming {
+  after     += CosLifeCycle
+  libs      += TAO_CosLifeCycle
+  tagchecks += LifeCycle
+}

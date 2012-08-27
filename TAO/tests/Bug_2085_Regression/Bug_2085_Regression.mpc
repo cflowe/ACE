@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: Bug_2085_Regression.mpc 81727 2008-05-19 14:31:20Z johnnyw $
+
+project(*): taoclient {
+}

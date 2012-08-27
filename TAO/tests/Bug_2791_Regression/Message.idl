@@ -1,0 +1,14 @@
+// $Id: Message.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+valuetype Message
+{
+  private string user_;
+  private string subject_;
+  private string text_;
+
+  attribute string user;
+  attribute string subject;
+  attribute string text;
+
+  void print ();
+};

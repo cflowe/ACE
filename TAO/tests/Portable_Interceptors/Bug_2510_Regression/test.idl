@@ -1,0 +1,22 @@
+// $Id: test.idl 75773 2006-12-04 13:04:24Z johnnyw $
+
+module Test_Interceptors
+{
+  exception Silly
+    {};
+
+  interface Visual
+  {
+    // = TITLE
+    //   A test idl for checking interceptor visually.
+    //
+    // = DESCRIPTION
+    //
+
+    void normal (in long arg);
+    // Normal operation.
+
+    oneway void shutdown ();
+    // shutdown the ORB
+  };
+};

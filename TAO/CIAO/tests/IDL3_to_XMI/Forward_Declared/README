@@ -1,0 +1,5 @@
+$Id: README 94655 2011-10-07 09:19:07Z msmit $
+
+According to the original report c_ok.idl compiled fine and
+c_nok.idl didn't compile. After this is fixed both of the files
+should compile.

@@ -1,0 +1,18 @@
+// -*- MPC -*-
+// $Id: Bug_3542.mpc 84112 2009-01-09 08:28:50Z johnnyw $
+
+project(*server) : taoserver, threads {
+  after += *lib
+  Source_Files {
+    server.cpp
+  }
+}
+
+project(*lib): taolib, portableserver, threads, avoids_corba_e_micro, avoids_corba_e_compact, avoids_minimum_corba {
+  libout = .
+  sharedname = Bug_3542
+  dynamicflags += BUG_3542_REGRESSION_BUILD_DLL
+  Source_Files {
+    DllOrb.cpp
+  }
+}

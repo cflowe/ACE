@@ -1,0 +1,33 @@
+// -*- MPC -*-
+// $Id: Single_Threaded.mpc 75456 2006-11-22 10:24:10Z johnnyw $
+
+project(*latency_idl): taoidldefaults, strategies {
+  IDL_Files {
+    Test.idl
+  }
+  custom_only = 1
+}
+
+project(*latency server): taoserver, strategies {
+  after += *latency_idl
+  Source_Files {
+    Roundtrip.cpp
+    TestS.cpp
+    TestC.cpp
+    server.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*latency client): taoclient, strategies {
+  after += *latency_idl
+  avoids += ace_for_tao
+  Source_Files {
+    TestC.cpp
+    client.cpp
+  }
+  IDL_Files {
+  }
+}
+

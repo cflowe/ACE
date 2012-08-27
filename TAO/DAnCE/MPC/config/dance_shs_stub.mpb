@@ -1,0 +1,7 @@
+// $Id: dance_shs_stub.mpb 91163 2010-07-22 03:56:40Z wotte $
+project : dance_deployment_stub {
+  after += DAnCE_System_Health_stub
+  libs += DAnCE_System_Health_stub
+  includes += $(DANCE_ROOT)/tools
+  idlflags += -I $(DANCE_ROOT)/tools
+}

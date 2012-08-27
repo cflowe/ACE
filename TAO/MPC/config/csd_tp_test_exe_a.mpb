@@ -1,0 +1,4 @@
+// -*- MPC -*-
+//$Id: csd_tp_test_exe_a.mpb 90586 2010-06-14 13:48:01Z parsons $
+project : csd_tp_foo_a_lib, taoexe {
+}

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-4334-FDEB7D589086}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-4334-FDEB7D589086}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-4334-FDEB7D589086}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-4334-FDEB7D589086}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CCM_BaseC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_ConfiguratorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_CookieC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_EnumerationC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_EventBaseC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_EventConsumerBaseC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_EventsC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_ExceptionsC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_HomeC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_HomeConfigurationC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_HomeFinderC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_HomesC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_KeylessCCMHomeC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_NavigationC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_ObjectC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_PrimaryKeyBaseC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_ReceptacleC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CCM_StandardConfiguratorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentsC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CCM_BaseC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_BaseS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ConfiguratorC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ConfiguratorS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_CookieC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_CookieS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EnumerationC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EnumerationS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EventBaseC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EventBaseS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EventConsumerBaseC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EventConsumerBaseS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EventsC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_EventsS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ExceptionsC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ExceptionsS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomeC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomeConfigurationC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomeConfigurationS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomeFinderC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomeFinderS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomeS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomesC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_HomesS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_KeylessCCMHomeC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_KeylessCCMHomeS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_NavigationC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_NavigationS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ObjectC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ObjectS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_PrimaryKeyBaseC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_PrimaryKeyBaseS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ReceptacleC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_ReceptacleS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_StandardConfiguratorC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_StandardConfiguratorS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CCM_Stub_Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentsC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentsS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCM_lem_stub.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CCM_stub.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CCM_svnt.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCM_ConfiguratorC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_CookieC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_EnumerationC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_EventBaseC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_EventConsumerBaseC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_EventsC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_HomeC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_HomeConfigurationC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_HomeFinderC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_HomesC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_KeylessCCMHomeC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_NavigationC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_ObjectC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_PrimaryKeyBaseC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_ReceptacleC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="CCM_StandardConfiguratorC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

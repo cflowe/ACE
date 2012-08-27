@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="IFR_Client_Idl"
+	ProjectGUID="{954343EE-FECA-1BAD-F745-F139A37D2D42}"
+	RootNamespace="IFR_Client_Idl"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\IFR_Client_Idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\IFR_Client_Idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\IFR_Client_Idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\IFR_Client_Idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="IFR_Client.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="IFR_Base.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Base.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT -Gxhst -Gxhsk &quot;IFR_Base.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="IFR_BaseA.h;IFR_BaseC.cpp;IFR_BaseC.h;IFR_BaseC.inl;IFR_BaseS.cpp;IFR_BaseS.h;IFR_BaseS_T.cpp;IFR_BaseS_T.h;ifr_client_export.h;ifr_client_skel_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Base.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT -Gxhst -Gxhsk &quot;IFR_Base.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="IFR_BaseA.h;IFR_BaseC.cpp;IFR_BaseC.h;IFR_BaseC.inl;IFR_BaseS.cpp;IFR_BaseS.h;IFR_BaseS_T.cpp;IFR_BaseS_T.h;ifr_client_export.h;ifr_client_skel_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Base.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT -Gxhst -Gxhsk &quot;IFR_Base.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="IFR_BaseA.h;IFR_BaseC.cpp;IFR_BaseC.h;IFR_BaseC.inl;IFR_BaseS.cpp;IFR_BaseS.h;IFR_BaseS_T.cpp;IFR_BaseS_T.h;ifr_client_export.h;ifr_client_skel_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Base.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT -Gxhst -Gxhsk &quot;IFR_Base.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="IFR_BaseA.h;IFR_BaseC.cpp;IFR_BaseC.h;IFR_BaseC.inl;IFR_BaseS.cpp;IFR_BaseS.h;IFR_BaseS_T.cpp;IFR_BaseS_T.h;ifr_client_export.h;ifr_client_skel_export.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="IFR_Basic.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Basic.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Basic.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="IFR_BasicA.h;IFR_BasicC.cpp;IFR_BasicC.h;IFR_BasicC.inl;IFR_BasicS.cpp;IFR_BasicS.h;IFR_BasicS_T.cpp;IFR_BasicS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Basic.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Basic.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="IFR_BasicA.h;IFR_BasicC.cpp;IFR_BasicC.h;IFR_BasicC.inl;IFR_BasicS.cpp;IFR_BasicS.h;IFR_BasicS_T.cpp;IFR_BasicS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Basic.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Basic.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="IFR_BasicA.h;IFR_BasicC.cpp;IFR_BasicC.h;IFR_BasicC.inl;IFR_BasicS.cpp;IFR_BasicS.h;IFR_BasicS_T.cpp;IFR_BasicS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Basic.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Basic.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="IFR_BasicA.h;IFR_BasicC.cpp;IFR_BasicC.h;IFR_BasicC.inl;IFR_BasicS.cpp;IFR_BasicS.h;IFR_BasicS_T.cpp;IFR_BasicS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="IFR_Components.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Components.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Components.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="IFR_ComponentsA.h;IFR_ComponentsC.cpp;IFR_ComponentsC.h;IFR_ComponentsC.inl;IFR_ComponentsS.cpp;IFR_ComponentsS.h;IFR_ComponentsS_T.cpp;IFR_ComponentsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Components.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Components.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="IFR_ComponentsA.h;IFR_ComponentsC.cpp;IFR_ComponentsC.h;IFR_ComponentsC.inl;IFR_ComponentsS.cpp;IFR_ComponentsS.h;IFR_ComponentsS_T.cpp;IFR_ComponentsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Components.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Components.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="IFR_ComponentsA.h;IFR_ComponentsC.cpp;IFR_ComponentsC.h;IFR_ComponentsC.inl;IFR_ComponentsS.cpp;IFR_ComponentsS.h;IFR_ComponentsS_T.cpp;IFR_ComponentsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Components.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Components.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="IFR_ComponentsA.h;IFR_ComponentsC.cpp;IFR_ComponentsC.h;IFR_ComponentsC.inl;IFR_ComponentsS.cpp;IFR_ComponentsS.h;IFR_ComponentsS_T.cpp;IFR_ComponentsS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="IFR_Extended.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Extended.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Extended.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="IFR_ExtendedA.h;IFR_ExtendedC.cpp;IFR_ExtendedC.h;IFR_ExtendedC.inl;IFR_ExtendedS.cpp;IFR_ExtendedS.h;IFR_ExtendedS_T.cpp;IFR_ExtendedS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Extended.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Extended.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="IFR_ExtendedA.h;IFR_ExtendedC.cpp;IFR_ExtendedC.h;IFR_ExtendedC.inl;IFR_ExtendedS.cpp;IFR_ExtendedS.h;IFR_ExtendedS_T.cpp;IFR_ExtendedS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Extended.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Extended.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="IFR_ExtendedA.h;IFR_ExtendedC.cpp;IFR_ExtendedC.h;IFR_ExtendedC.inl;IFR_ExtendedS.cpp;IFR_ExtendedS.h;IFR_ExtendedS_T.cpp;IFR_ExtendedS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on IFR_Extended.pidl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GX -Wb,stub_export_macro=TAO_IFR_CLIENT_Export -Wb,stub_export_include=tao/IFR_Client/ifr_client_export.h -Wb,stub_export_file=ifr_client_export.h -Wb,skel_export_macro=TAO_IFR_CLIENT_SKEL_Export -Wb,skel_export_include=tao/IFR_Client/ifr_client_skel_export.h -Wb,skel_export_file=ifr_client_skel_export.h -iC tao/IFR_Client -GT &quot;IFR_Extended.pidl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="IFR_ExtendedA.h;IFR_ExtendedC.cpp;IFR_ExtendedC.h;IFR_ExtendedC.inl;IFR_ExtendedS.cpp;IFR_ExtendedS.h;IFR_ExtendedS_T.cpp;IFR_ExtendedS_T.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

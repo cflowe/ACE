@@ -1,0 +1,9 @@
+//
+// $Id: test.idl 77376 2007-02-25 17:12:10Z jai $
+//
+
+interface Test
+{
+  void test_method ();
+  oneway void shutdown ();
+};

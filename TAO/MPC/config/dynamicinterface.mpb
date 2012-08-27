@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dynamicinterface.mpb 80887 2008-03-10 08:03:12Z johnnyw $
+
+project : valuetype, messaging, portableserver, avoids_minimum_corba, avoids_corba_e_compact {
+  after    += DynamicInterface
+  libs     += TAO_DynamicInterface
+}

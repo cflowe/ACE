@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<!-- Converted from native-svc.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  -->
+ <!--  $Id: native-svc.conf.xml 94649 2011-10-07 07:54:59Z msmit $ -->
+ <!--  -->
+ <!--  For testing of RT threads (with native priority) -->
+ <static id="RT_ORB_Loader" params="-ORBSchedPolicy SCHED_FIFO -ORBScopePolicy SYSTEM"/>
+ <static id="Client_Strategy_Factory" params="-ORBTransportMuxStrategy EXCLUSIVE"/>
+</ACE_Svc_Conf>

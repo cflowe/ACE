@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+<!-- Converted from ./tests/AMI/server.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  $Id: server.conf.xml 88307 2009-12-23 09:09:46Z johnnyw $ -->
+ <!--  -->
+ <static id="Server_Strategy_Factory" params="-ORBconcurrency thread-per-connection"/>
+</ACE_Svc_Conf>

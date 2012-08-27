@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ciao_output.mpb 84544 2009-02-20 14:50:03Z johnnyw $
+
+project {
+  libout = $(ACE_ROOT)/lib
+}
+

@@ -1,0 +1,22 @@
+// $Id: test.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+module C1
+{
+  valuetype EB  // NOT abstract
+  {
+  };
+};
+
+module M1
+{
+  valuetype VT; // Forward declare
+};
+
+module M1
+{
+  valuetype VT :  // Full definition
+   ::C1::EB
+  {
+    public long id;
+  };
+};

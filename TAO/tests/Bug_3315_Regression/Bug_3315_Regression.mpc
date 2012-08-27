@@ -1,0 +1,4 @@
+// $Id: Bug_3315_Regression.mpc 81584 2008-05-02 09:37:14Z johnnyw $
+
+project : taoserver, threads {
+}

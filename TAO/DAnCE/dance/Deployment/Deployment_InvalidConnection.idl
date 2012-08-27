@@ -1,0 +1,13 @@
+// $Id: Deployment_InvalidConnection.idl 90214 2010-05-21 13:59:45Z wotte $
+
+#ifndef DEPLOYMENT_INVALIDCONNECTION_IDL
+#define DEPLOYMENT_INVALIDCONNECTION_IDL
+
+module Deployment {
+  exception InvalidConnection {
+    string name;
+    string reason;
+  };
+};
+
+#endif

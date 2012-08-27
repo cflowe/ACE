@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: ccm_stub.mpb 84544 2009-02-20 14:50:03Z johnnyw $
+
+project : ifr_client, valuetype, pi, codecfactory, ciao_vcwarnings, ccm, ciaoidldefaults {
+  includes += $(CIAO_ROOT)
+  after += CCM_stub
+  libs  += CCM_stub
+}

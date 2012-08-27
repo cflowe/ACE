@@ -1,0 +1,18 @@
+//
+// $Id: Test.idl 91816 2010-09-17 08:35:56Z johnnyw $
+//
+
+/// A simple module to avoid namespace pollution
+module Test
+{
+  typedef unsigned long long Timestamp;
+
+  interface Roundtrip
+  {
+    /// The operation simply returns its argument.
+    Timestamp test_method (in Timestamp send_time);
+
+    /// Shutdown the ORB
+    oneway void shutdown ();
+  };
+};

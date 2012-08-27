@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: destroy.mpc 76081 2006-12-19 11:36:15Z johnnyw $
+
+project: taoserver, anytypecode, bidir_giop, avoids_corba_e_micro {
+  exename = destroy
+  Source_Files {
+    destroy.cpp
+  }
+}
+

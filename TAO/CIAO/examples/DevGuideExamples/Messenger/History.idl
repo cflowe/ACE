@@ -1,0 +1,21 @@
+// $Id: History.idl 91815 2010-09-17 08:35:19Z johnnyw $
+
+/**
+ *  @file History.idl
+ *
+ *  @author Don Busch <busch_d@ociweb.com>
+ */
+
+#ifndef HISTORY_IDL
+#define HISTORY_IDL
+
+#include "Message.idl"
+
+#pragma ciao lem "HistoryE.idl"
+
+interface History {
+  Messages get_all();
+  Message get_latest();
+};
+
+#endif

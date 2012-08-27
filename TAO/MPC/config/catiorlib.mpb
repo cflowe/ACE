@@ -1,0 +1,6 @@
+// $Id: catiorlib.mpb 86673 2009-09-09 12:45:11Z elliott_c $
+
+project: rtportableserver, messaging, ziop {
+  after += catior_lib
+  libs  += TAO_Catior_i
+}

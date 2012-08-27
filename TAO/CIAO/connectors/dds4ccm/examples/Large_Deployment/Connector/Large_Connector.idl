@@ -1,0 +1,19 @@
+// $Id: Large_Connector.idl 95758 2012-05-15 13:42:33Z msmit $
+
+#ifndef LARGE_CONNECTOR_IDL
+#define LARGE_CONNECTOR_IDL
+
+#include <Components.idl>
+#include <ccm_dds.idl>
+
+#include "Common/Common.idl"
+
+#pragma ciao lem "Connector/Large_ConnectorE.idl"
+
+#if (CIAO_DDS4CCM_OPENDDS==1)
+# include "Common/CommonTypeSupport.idl"
+#endif
+
+module ::CCM_DDS::Typed < ::LargeType, ::LargeTypeSeq> LargeTypeConn;
+
+#endif

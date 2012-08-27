@@ -1,0 +1,4 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+This test is a modified version of Secure_Invocation.  It tests the fixes
+for bug 1107.

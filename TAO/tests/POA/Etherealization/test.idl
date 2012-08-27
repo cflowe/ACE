@@ -1,0 +1,6 @@
+// $Id: test.idl 39349 2001-04-27 21:05:10Z irfan $
+
+interface test
+{
+  void method ();
+};

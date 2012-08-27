@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: notify_monitor_control.mpb 87335 2009-11-04 21:00:22Z dai_y $
+
+feature(notify_monitor_control) {
+  avoids += wince
+  after += TAO_Monitor CosNotification_MC CosNotification_MC_Ext
+  libs  += TAO_CosNotification_MC_Ext TAO_CosNotification_MC TAO_Monitor
+  macros += TAO_HAS_NOTIFICATION_MONITOR_CONTROL
+}

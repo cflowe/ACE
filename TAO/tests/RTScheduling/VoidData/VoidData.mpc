@@ -1,0 +1,11 @@
+// -*- MPC -*-
+// $Id: VoidData.mpc 54747 2003-12-23 21:05:25Z dhinton $
+
+project(VoidData) : rtscheduling_client {
+ exename = VoidData
+ Source_Files {
+    test_client.cpp
+    testC.cpp
+  }
+}
+

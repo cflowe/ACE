@@ -1,0 +1,10 @@
+// $Id: w32_test.idl 29146 1999-10-06 13:05:48Z schmidt $
+
+interface W32_Test_Interface
+{
+  // = TITLE
+  //    Defines an interface that returns a response string.
+
+  string getresponse (in long respnr);
+};
+

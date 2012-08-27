@@ -1,0 +1,11 @@
+// $Id: TestData.idl 69015 2005-10-27 09:26:50Z jwillemsen $
+
+module SeqTest {
+  typedef sequence<long> LongSeq;
+
+  struct Node {
+    LongSeq ls;
+  };
+
+  typedef sequence<Node> NodeSeq;
+};

@@ -1,0 +1,2395 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="IDL_Test_IDL"
+	ProjectGUID="{EFDD4EBE-FECA-1BAD-2242-5AF908B8645A}"
+	RootNamespace="IDL_Test_IDL"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\IDL_Test_IDL_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\IDL_Test_IDL_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\IDL_Test_IDL_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\IDL_Test_IDL_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="IDL_Test.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Test Files"
+			Filter="">
+			<File
+				RelativePath="run_test.pl">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="anonymous.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on anonymous.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA -as &quot;anonymous.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="anonymousA.cpp;anonymousA.h;anonymousC.cpp;anonymousC.h;anonymousC.inl;anonymousS.cpp;anonymousS.h;anonymousS_T.cpp;anonymousS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on anonymous.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA -as &quot;anonymous.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="anonymousA.cpp;anonymousA.h;anonymousC.cpp;anonymousC.h;anonymousC.inl;anonymousS.cpp;anonymousS.h;anonymousS_T.cpp;anonymousS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on anonymous.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA -as &quot;anonymous.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="anonymousA.cpp;anonymousA.h;anonymousC.cpp;anonymousC.h;anonymousC.inl;anonymousS.cpp;anonymousS.h;anonymousS_T.cpp;anonymousS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on anonymous.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA -as &quot;anonymous.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="anonymousA.cpp;anonymousA.h;anonymousC.cpp;anonymousC.h;anonymousC.inl;anonymousS.cpp;anonymousS.h;anonymousS_T.cpp;anonymousS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="anyunion.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on anyunion.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;anyunion.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="anyunionC.cpp;anyunionC.h;anyunionC.inl;anyunionS.cpp;anyunionS.h;anyunionS_T.cpp;anyunionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on anyunion.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;anyunion.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="anyunionC.cpp;anyunionC.h;anyunionC.inl;anyunionS.cpp;anyunionS.h;anyunionS_T.cpp;anyunionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on anyunion.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;anyunion.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="anyunionC.cpp;anyunionC.h;anyunionC.inl;anyunionS.cpp;anyunionS.h;anyunionS_T.cpp;anyunionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on anyunion.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;anyunion.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="anyunionC.cpp;anyunionC.h;anyunionC.inl;anyunionS.cpp;anyunionS.h;anyunionS_T.cpp;anyunionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="array.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;array.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="arrayC.cpp;arrayC.h;arrayC.inl;arrayS.cpp;arrayS.h;arrayS_T.cpp;arrayS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;array.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="arrayC.cpp;arrayC.h;arrayC.inl;arrayS.cpp;arrayS.h;arrayS_T.cpp;arrayS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;array.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="arrayC.cpp;arrayC.h;arrayC.inl;arrayS.cpp;arrayS.h;arrayS_T.cpp;arrayS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;array.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="arrayC.cpp;arrayC.h;arrayC.inl;arrayS.cpp;arrayS.h;arrayS_T.cpp;arrayS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="array_anon_nested.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array_anon_nested.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;array_anon_nested.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="array_anon_nestedC.cpp;array_anon_nestedC.h;array_anon_nestedC.inl;array_anon_nestedS.cpp;array_anon_nestedS.h;array_anon_nestedS_T.cpp;array_anon_nestedS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array_anon_nested.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;array_anon_nested.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="array_anon_nestedC.cpp;array_anon_nestedC.h;array_anon_nestedC.inl;array_anon_nestedS.cpp;array_anon_nestedS.h;array_anon_nestedS_T.cpp;array_anon_nestedS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array_anon_nested.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;array_anon_nested.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="array_anon_nestedC.cpp;array_anon_nestedC.h;array_anon_nestedC.inl;array_anon_nestedS.cpp;array_anon_nestedS.h;array_anon_nestedS_T.cpp;array_anon_nestedS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array_anon_nested.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;array_anon_nested.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="array_anon_nestedC.cpp;array_anon_nestedC.h;array_anon_nestedC.inl;array_anon_nestedS.cpp;array_anon_nestedS.h;array_anon_nestedS_T.cpp;array_anon_nestedS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="array_only.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array_only.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;array_only.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="array_onlyA.cpp;array_onlyA.h;array_onlyC.cpp;array_onlyC.h;array_onlyC.inl;array_onlyS.cpp;array_onlyS.h;array_onlyS_T.cpp;array_onlyS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array_only.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;array_only.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="array_onlyA.cpp;array_onlyA.h;array_onlyC.cpp;array_onlyC.h;array_onlyC.inl;array_onlyS.cpp;array_onlyS.h;array_onlyS_T.cpp;array_onlyS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array_only.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;array_only.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="array_onlyA.cpp;array_onlyA.h;array_onlyC.cpp;array_onlyC.h;array_onlyC.inl;array_onlyS.cpp;array_onlyS.h;array_onlyS_T.cpp;array_onlyS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on array_only.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;array_only.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="array_onlyA.cpp;array_onlyA.h;array_onlyC.cpp;array_onlyC.h;array_onlyC.inl;array_onlyS.cpp;array_onlyS.h;array_onlyS_T.cpp;array_onlyS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="attribute.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on attribute.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -Gxhst &quot;attribute.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="attributeC.cpp;attributeC.h;attributeC.inl;attributeS.cpp;attributeS.h;attributeS_T.cpp;attributeS_T.h;TAO_IDL_TEST_stub_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on attribute.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -Gxhst &quot;attribute.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="attributeC.cpp;attributeC.h;attributeC.inl;attributeS.cpp;attributeS.h;attributeS_T.cpp;attributeS_T.h;TAO_IDL_TEST_stub_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on attribute.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -Gxhst &quot;attribute.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="attributeC.cpp;attributeC.h;attributeC.inl;attributeS.cpp;attributeS.h;attributeS_T.cpp;attributeS_T.h;TAO_IDL_TEST_stub_export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on attribute.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -Gxhst &quot;attribute.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="attributeC.cpp;attributeC.h;attributeC.inl;attributeS.cpp;attributeS.h;attributeS_T.cpp;attributeS_T.h;TAO_IDL_TEST_stub_export.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_2350_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2350_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2350_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2350_RegressionC.cpp;Bug_2350_RegressionC.h;Bug_2350_RegressionC.inl;Bug_2350_RegressionS.cpp;Bug_2350_RegressionS.h;Bug_2350_RegressionS_T.cpp;Bug_2350_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2350_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2350_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2350_RegressionC.cpp;Bug_2350_RegressionC.h;Bug_2350_RegressionC.inl;Bug_2350_RegressionS.cpp;Bug_2350_RegressionS.h;Bug_2350_RegressionS_T.cpp;Bug_2350_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2350_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2350_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2350_RegressionC.cpp;Bug_2350_RegressionC.h;Bug_2350_RegressionC.inl;Bug_2350_RegressionS.cpp;Bug_2350_RegressionS.h;Bug_2350_RegressionS_T.cpp;Bug_2350_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2350_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2350_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2350_RegressionC.cpp;Bug_2350_RegressionC.h;Bug_2350_RegressionC.inl;Bug_2350_RegressionS.cpp;Bug_2350_RegressionS.h;Bug_2350_RegressionS_T.cpp;Bug_2350_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_2577_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2577_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2577_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2577_RegressionC.cpp;Bug_2577_RegressionC.h;Bug_2577_RegressionC.inl;Bug_2577_RegressionS.cpp;Bug_2577_RegressionS.h;Bug_2577_RegressionS_T.cpp;Bug_2577_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2577_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2577_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2577_RegressionC.cpp;Bug_2577_RegressionC.h;Bug_2577_RegressionC.inl;Bug_2577_RegressionS.cpp;Bug_2577_RegressionS.h;Bug_2577_RegressionS_T.cpp;Bug_2577_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2577_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2577_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2577_RegressionC.cpp;Bug_2577_RegressionC.h;Bug_2577_RegressionC.inl;Bug_2577_RegressionS.cpp;Bug_2577_RegressionS.h;Bug_2577_RegressionS_T.cpp;Bug_2577_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2577_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2577_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2577_RegressionC.cpp;Bug_2577_RegressionC.h;Bug_2577_RegressionC.inl;Bug_2577_RegressionS.cpp;Bug_2577_RegressionS.h;Bug_2577_RegressionS_T.cpp;Bug_2577_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_2582_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2582_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2582_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2582_RegressionC.cpp;Bug_2582_RegressionC.h;Bug_2582_RegressionC.inl;Bug_2582_RegressionS.cpp;Bug_2582_RegressionS.h;Bug_2582_RegressionS_T.cpp;Bug_2582_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2582_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2582_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2582_RegressionC.cpp;Bug_2582_RegressionC.h;Bug_2582_RegressionC.inl;Bug_2582_RegressionS.cpp;Bug_2582_RegressionS.h;Bug_2582_RegressionS_T.cpp;Bug_2582_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2582_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2582_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2582_RegressionC.cpp;Bug_2582_RegressionC.h;Bug_2582_RegressionC.inl;Bug_2582_RegressionS.cpp;Bug_2582_RegressionS.h;Bug_2582_RegressionS_T.cpp;Bug_2582_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2582_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2582_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2582_RegressionC.cpp;Bug_2582_RegressionC.h;Bug_2582_RegressionC.inl;Bug_2582_RegressionS.cpp;Bug_2582_RegressionS.h;Bug_2582_RegressionS_T.cpp;Bug_2582_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_2583_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2583_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2583_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2583_RegressionC.cpp;Bug_2583_RegressionC.h;Bug_2583_RegressionC.inl;Bug_2583_RegressionS.cpp;Bug_2583_RegressionS.h;Bug_2583_RegressionS_T.cpp;Bug_2583_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2583_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2583_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2583_RegressionC.cpp;Bug_2583_RegressionC.h;Bug_2583_RegressionC.inl;Bug_2583_RegressionS.cpp;Bug_2583_RegressionS.h;Bug_2583_RegressionS_T.cpp;Bug_2583_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2583_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2583_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2583_RegressionC.cpp;Bug_2583_RegressionC.h;Bug_2583_RegressionC.inl;Bug_2583_RegressionS.cpp;Bug_2583_RegressionS.h;Bug_2583_RegressionS_T.cpp;Bug_2583_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2583_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2583_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2583_RegressionC.cpp;Bug_2583_RegressionC.h;Bug_2583_RegressionC.inl;Bug_2583_RegressionS.cpp;Bug_2583_RegressionS.h;Bug_2583_RegressionS_T.cpp;Bug_2583_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_2616_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2616_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2616_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2616_RegressionC.cpp;Bug_2616_RegressionC.h;Bug_2616_RegressionC.inl;Bug_2616_RegressionS.cpp;Bug_2616_RegressionS.h;Bug_2616_RegressionS_T.cpp;Bug_2616_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2616_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2616_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2616_RegressionC.cpp;Bug_2616_RegressionC.h;Bug_2616_RegressionC.inl;Bug_2616_RegressionS.cpp;Bug_2616_RegressionS.h;Bug_2616_RegressionS_T.cpp;Bug_2616_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2616_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2616_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2616_RegressionC.cpp;Bug_2616_RegressionC.h;Bug_2616_RegressionC.inl;Bug_2616_RegressionS.cpp;Bug_2616_RegressionS.h;Bug_2616_RegressionS_T.cpp;Bug_2616_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2616_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2616_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2616_RegressionC.cpp;Bug_2616_RegressionC.h;Bug_2616_RegressionC.inl;Bug_2616_RegressionS.cpp;Bug_2616_RegressionS.h;Bug_2616_RegressionS_T.cpp;Bug_2616_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_2619_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2619_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2619_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2619_RegressionC.cpp;Bug_2619_RegressionC.h;Bug_2619_RegressionC.inl;Bug_2619_RegressionS.cpp;Bug_2619_RegressionS.h;Bug_2619_RegressionS_T.cpp;Bug_2619_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2619_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2619_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2619_RegressionC.cpp;Bug_2619_RegressionC.h;Bug_2619_RegressionC.inl;Bug_2619_RegressionS.cpp;Bug_2619_RegressionS.h;Bug_2619_RegressionS_T.cpp;Bug_2619_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2619_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2619_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_2619_RegressionC.cpp;Bug_2619_RegressionC.h;Bug_2619_RegressionC.inl;Bug_2619_RegressionS.cpp;Bug_2619_RegressionS.h;Bug_2619_RegressionS_T.cpp;Bug_2619_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_2619_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_2619_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_2619_RegressionC.cpp;Bug_2619_RegressionC.h;Bug_2619_RegressionC.inl;Bug_2619_RegressionS.cpp;Bug_2619_RegressionS.h;Bug_2619_RegressionS_T.cpp;Bug_2619_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_3243_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3243_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3243_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_3243_RegressionC.cpp;Bug_3243_RegressionC.h;Bug_3243_RegressionC.inl;Bug_3243_RegressionS.cpp;Bug_3243_RegressionS.h;Bug_3243_RegressionS_T.cpp;Bug_3243_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3243_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3243_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_3243_RegressionC.cpp;Bug_3243_RegressionC.h;Bug_3243_RegressionC.inl;Bug_3243_RegressionS.cpp;Bug_3243_RegressionS.h;Bug_3243_RegressionS_T.cpp;Bug_3243_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3243_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3243_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_3243_RegressionC.cpp;Bug_3243_RegressionC.h;Bug_3243_RegressionC.inl;Bug_3243_RegressionS.cpp;Bug_3243_RegressionS.h;Bug_3243_RegressionS_T.cpp;Bug_3243_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3243_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3243_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_3243_RegressionC.cpp;Bug_3243_RegressionC.h;Bug_3243_RegressionC.inl;Bug_3243_RegressionS.cpp;Bug_3243_RegressionS.h;Bug_3243_RegressionS_T.cpp;Bug_3243_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_3312_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3312_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3312_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_3312_RegressionC.cpp;Bug_3312_RegressionC.h;Bug_3312_RegressionC.inl;Bug_3312_RegressionS.cpp;Bug_3312_RegressionS.h;Bug_3312_RegressionS_T.cpp;Bug_3312_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3312_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3312_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_3312_RegressionC.cpp;Bug_3312_RegressionC.h;Bug_3312_RegressionC.inl;Bug_3312_RegressionS.cpp;Bug_3312_RegressionS.h;Bug_3312_RegressionS_T.cpp;Bug_3312_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3312_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3312_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_3312_RegressionC.cpp;Bug_3312_RegressionC.h;Bug_3312_RegressionC.inl;Bug_3312_RegressionS.cpp;Bug_3312_RegressionS.h;Bug_3312_RegressionS_T.cpp;Bug_3312_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3312_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3312_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_3312_RegressionC.cpp;Bug_3312_RegressionC.h;Bug_3312_RegressionC.inl;Bug_3312_RegressionS.cpp;Bug_3312_RegressionS.h;Bug_3312_RegressionS_T.cpp;Bug_3312_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_3819_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3819_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3819_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_3819_RegressionC.cpp;Bug_3819_RegressionC.h;Bug_3819_RegressionC.inl;Bug_3819_RegressionS.cpp;Bug_3819_RegressionS.h;Bug_3819_RegressionS_T.cpp;Bug_3819_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3819_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3819_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_3819_RegressionC.cpp;Bug_3819_RegressionC.h;Bug_3819_RegressionC.inl;Bug_3819_RegressionS.cpp;Bug_3819_RegressionS.h;Bug_3819_RegressionS_T.cpp;Bug_3819_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3819_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3819_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_3819_RegressionC.cpp;Bug_3819_RegressionC.h;Bug_3819_RegressionC.inl;Bug_3819_RegressionS.cpp;Bug_3819_RegressionS.h;Bug_3819_RegressionS_T.cpp;Bug_3819_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3819_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3819_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_3819_RegressionC.cpp;Bug_3819_RegressionC.h;Bug_3819_RegressionC.inl;Bug_3819_RegressionS.cpp;Bug_3819_RegressionS.h;Bug_3819_RegressionS_T.cpp;Bug_3819_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Bug_3821_Regression.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3821_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3821_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_3821_RegressionC.cpp;Bug_3821_RegressionC.h;Bug_3821_RegressionC.inl;Bug_3821_RegressionS.cpp;Bug_3821_RegressionS.h;Bug_3821_RegressionS_T.cpp;Bug_3821_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3821_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3821_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_3821_RegressionC.cpp;Bug_3821_RegressionC.h;Bug_3821_RegressionC.inl;Bug_3821_RegressionS.cpp;Bug_3821_RegressionS.h;Bug_3821_RegressionS_T.cpp;Bug_3821_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3821_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3821_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Bug_3821_RegressionC.cpp;Bug_3821_RegressionC.h;Bug_3821_RegressionC.inl;Bug_3821_RegressionS.cpp;Bug_3821_RegressionS.h;Bug_3821_RegressionS_T.cpp;Bug_3821_RegressionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Bug_3821_Regression.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;Bug_3821_Regression.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Bug_3821_RegressionC.cpp;Bug_3821_RegressionC.h;Bug_3821_RegressionC.inl;Bug_3821_RegressionS.cpp;Bug_3821_RegressionS.h;Bug_3821_RegressionS_T.cpp;Bug_3821_RegressionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="constants.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on constants.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;constants.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="constantsA.cpp;constantsA.h;constantsC.cpp;constantsC.h;constantsC.inl;constantsS.cpp;constantsS.h;constantsS_T.cpp;constantsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on constants.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;constants.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="constantsA.cpp;constantsA.h;constantsC.cpp;constantsC.h;constantsC.inl;constantsS.cpp;constantsS.h;constantsS_T.cpp;constantsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on constants.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;constants.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="constantsA.cpp;constantsA.h;constantsC.cpp;constantsC.h;constantsC.inl;constantsS.cpp;constantsS.h;constantsS_T.cpp;constantsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on constants.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;constants.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="constantsA.cpp;constantsA.h;constantsC.cpp;constantsC.h;constantsC.inl;constantsS.cpp;constantsS.h;constantsS_T.cpp;constantsS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="dif2.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on dif2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA -as &quot;dif2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="dif2A.cpp;dif2A.h;dif2C.cpp;dif2C.h;dif2C.inl;dif2S.cpp;dif2S.h;dif2S_T.cpp;dif2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on dif2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA -as &quot;dif2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="dif2A.cpp;dif2A.h;dif2C.cpp;dif2C.h;dif2C.inl;dif2S.cpp;dif2S.h;dif2S_T.cpp;dif2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on dif2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA -as &quot;dif2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="dif2A.cpp;dif2A.h;dif2C.cpp;dif2C.h;dif2C.inl;dif2S.cpp;dif2S.h;dif2S_T.cpp;dif2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on dif2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA -as &quot;dif2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="dif2A.cpp;dif2A.h;dif2C.cpp;dif2C.h;dif2C.inl;dif2S.cpp;dif2S.h;dif2S_T.cpp;dif2S_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="enum_in_struct.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on enum_in_struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;enum_in_struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="enum_in_structC.cpp;enum_in_structC.h;enum_in_structC.inl;enum_in_structS.cpp;enum_in_structS.h;enum_in_structS_T.cpp;enum_in_structS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on enum_in_struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;enum_in_struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="enum_in_structC.cpp;enum_in_structC.h;enum_in_structC.inl;enum_in_structS.cpp;enum_in_structS.h;enum_in_structS_T.cpp;enum_in_structS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on enum_in_struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;enum_in_struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="enum_in_structC.cpp;enum_in_structC.h;enum_in_structC.inl;enum_in_structS.cpp;enum_in_structS.h;enum_in_structS_T.cpp;enum_in_structS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on enum_in_struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;enum_in_struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="enum_in_structC.cpp;enum_in_structC.h;enum_in_structC.inl;enum_in_structS.cpp;enum_in_structS.h;enum_in_structS_T.cpp;enum_in_structS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="full.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on full.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;full.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="fullC.cpp;fullC.h;fullC.inl;fullS.cpp;fullS.h;fullS_T.cpp;fullS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on full.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;full.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="fullC.cpp;fullC.h;fullC.inl;fullS.cpp;fullS.h;fullS_T.cpp;fullS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on full.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;full.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="fullC.cpp;fullC.h;fullC.inl;fullS.cpp;fullS.h;fullS_T.cpp;fullS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on full.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;full.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="fullC.cpp;fullC.h;fullC.inl;fullS.cpp;fullS.h;fullS_T.cpp;fullS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="fwd.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on fwd.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;fwd.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="fwdC.cpp;fwdC.h;fwdC.inl;fwdS.cpp;fwdS.h;fwdS_T.cpp;fwdS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on fwd.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;fwd.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="fwdC.cpp;fwdC.h;fwdC.inl;fwdS.cpp;fwdS.h;fwdS_T.cpp;fwdS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on fwd.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;fwd.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="fwdC.cpp;fwdC.h;fwdC.inl;fwdS.cpp;fwdS.h;fwdS_T.cpp;fwdS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on fwd.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;fwd.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="fwdC.cpp;fwdC.h;fwdC.inl;fwdS.cpp;fwdS.h;fwdS_T.cpp;fwdS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="generic_object.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on generic_object.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;generic_object.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="generic_objectA.cpp;generic_objectA.h;generic_objectC.cpp;generic_objectC.h;generic_objectC.inl;generic_objectS.cpp;generic_objectS.h;generic_objectS_T.cpp;generic_objectS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on generic_object.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;generic_object.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="generic_objectA.cpp;generic_objectA.h;generic_objectC.cpp;generic_objectC.h;generic_objectC.inl;generic_objectS.cpp;generic_objectS.h;generic_objectS_T.cpp;generic_objectS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on generic_object.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;generic_object.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="generic_objectA.cpp;generic_objectA.h;generic_objectC.cpp;generic_objectC.h;generic_objectC.inl;generic_objectS.cpp;generic_objectS.h;generic_objectS_T.cpp;generic_objectS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on generic_object.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;generic_object.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="generic_objectA.cpp;generic_objectA.h;generic_objectC.cpp;generic_objectC.h;generic_objectC.inl;generic_objectS.cpp;generic_objectS.h;generic_objectS_T.cpp;generic_objectS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="gperf.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on gperf.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;gperf.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="gperfC.cpp;gperfC.h;gperfC.inl;gperfS.cpp;gperfS.h;gperfS_T.cpp;gperfS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on gperf.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;gperf.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="gperfC.cpp;gperfC.h;gperfC.inl;gperfS.cpp;gperfS.h;gperfS_T.cpp;gperfS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on gperf.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;gperf.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="gperfC.cpp;gperfC.h;gperfC.inl;gperfS.cpp;gperfS.h;gperfS_T.cpp;gperfS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on gperf.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;gperf.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="gperfC.cpp;gperfC.h;gperfC.inl;gperfS.cpp;gperfS.h;gperfS_T.cpp;gperfS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="included.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on included.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;included.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="includedC.cpp;includedC.h;includedC.inl;includedS.cpp;includedS.h;includedS_T.cpp;includedS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on included.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;included.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="includedC.cpp;includedC.h;includedC.inl;includedS.cpp;includedS.h;includedS_T.cpp;includedS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on included.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;included.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="includedC.cpp;includedC.h;includedC.inl;includedS.cpp;includedS.h;includedS_T.cpp;includedS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on included.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;included.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="includedC.cpp;includedC.h;includedC.inl;includedS.cpp;includedS.h;includedS_T.cpp;includedS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="including.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on including.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;including.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="includingC.cpp;includingC.h;includingC.inl;includingS.cpp;includingS.h;includingS_T.cpp;includingS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on including.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;including.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="includingC.cpp;includingC.h;includingC.inl;includingS.cpp;includingS.h;includingS_T.cpp;includingS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on including.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;including.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="includingC.cpp;includingC.h;includingC.inl;includingS.cpp;includingS.h;includingS_T.cpp;includingS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on including.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;including.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="includingC.cpp;includingC.h;includingC.inl;includingS.cpp;includingS.h;includingS_T.cpp;includingS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="inherit.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on inherit.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;inherit.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="inheritA.cpp;inheritA.h;inheritC.cpp;inheritC.h;inheritC.inl;inheritS.cpp;inheritS.h;inheritS_T.cpp;inheritS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on inherit.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;inherit.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="inheritA.cpp;inheritA.h;inheritC.cpp;inheritC.h;inheritC.inl;inheritS.cpp;inheritS.h;inheritS_T.cpp;inheritS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on inherit.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;inherit.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="inheritA.cpp;inheritA.h;inheritC.cpp;inheritC.h;inheritC.inl;inheritS.cpp;inheritS.h;inheritS_T.cpp;inheritS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on inherit.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;inherit.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="inheritA.cpp;inheritA.h;inheritC.cpp;inheritC.h;inheritC.inl;inheritS.cpp;inheritS.h;inheritS_T.cpp;inheritS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="interface.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on interface.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;interface.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="interfaceC.cpp;interfaceC.h;interfaceC.inl;interfaceS.cpp;interfaceS.h;interfaceS_T.cpp;interfaceS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on interface.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;interface.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="interfaceC.cpp;interfaceC.h;interfaceC.inl;interfaceS.cpp;interfaceS.h;interfaceS_T.cpp;interfaceS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on interface.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;interface.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="interfaceC.cpp;interfaceC.h;interfaceC.inl;interfaceS.cpp;interfaceS.h;interfaceS_T.cpp;interfaceS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on interface.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;interface.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="interfaceC.cpp;interfaceC.h;interfaceC.inl;interfaceS.cpp;interfaceS.h;interfaceS_T.cpp;interfaceS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="keywords.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on keywords.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;keywords.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="keywordsA.cpp;keywordsA.h;keywordsC.cpp;keywordsC.h;keywordsC.inl;keywordsS.cpp;keywordsS.h;keywordsS_T.cpp;keywordsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on keywords.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;keywords.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="keywordsA.cpp;keywordsA.h;keywordsC.cpp;keywordsC.h;keywordsC.inl;keywordsS.cpp;keywordsS.h;keywordsS_T.cpp;keywordsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on keywords.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;keywords.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="keywordsA.cpp;keywordsA.h;keywordsC.cpp;keywordsC.h;keywordsC.inl;keywordsS.cpp;keywordsS.h;keywordsS_T.cpp;keywordsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on keywords.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;keywords.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="keywordsA.cpp;keywordsA.h;keywordsC.cpp;keywordsC.h;keywordsC.inl;keywordsS.cpp;keywordsS.h;keywordsS_T.cpp;keywordsS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="module.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on module.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;module.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="moduleA.cpp;moduleA.h;moduleC.cpp;moduleC.h;moduleC.inl;moduleS.cpp;moduleS.h;moduleS_T.cpp;moduleS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on module.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;module.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="moduleA.cpp;moduleA.h;moduleC.cpp;moduleC.h;moduleC.inl;moduleS.cpp;moduleS.h;moduleS_T.cpp;moduleS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on module.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;module.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="moduleA.cpp;moduleA.h;moduleC.cpp;moduleC.h;moduleC.inl;moduleS.cpp;moduleS.h;moduleS_T.cpp;moduleS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on module.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;module.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="moduleA.cpp;moduleA.h;moduleC.cpp;moduleC.h;moduleC.inl;moduleS.cpp;moduleS.h;moduleS_T.cpp;moduleS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="nested_scope.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on nested_scope.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;nested_scope.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="nested_scopeC.cpp;nested_scopeC.h;nested_scopeC.inl;nested_scopeS.cpp;nested_scopeS.h;nested_scopeS_T.cpp;nested_scopeS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on nested_scope.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;nested_scope.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="nested_scopeC.cpp;nested_scopeC.h;nested_scopeC.inl;nested_scopeS.cpp;nested_scopeS.h;nested_scopeS_T.cpp;nested_scopeS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on nested_scope.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;nested_scope.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="nested_scopeC.cpp;nested_scopeC.h;nested_scopeC.inl;nested_scopeS.cpp;nested_scopeS.h;nested_scopeS_T.cpp;nested_scopeS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on nested_scope.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;nested_scope.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="nested_scopeC.cpp;nested_scopeC.h;nested_scopeC.inl;nested_scopeS.cpp;nested_scopeS.h;nested_scopeS_T.cpp;nested_scopeS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="old_array.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_array.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_array.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_arrayC.cpp;old_arrayC.h;old_arrayC.inl;old_arrayS.cpp;old_arrayS.h;old_arrayS_T.cpp;old_arrayS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_array.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_array.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_arrayC.cpp;old_arrayC.h;old_arrayC.inl;old_arrayS.cpp;old_arrayS.h;old_arrayS_T.cpp;old_arrayS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_array.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_array.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_arrayC.cpp;old_arrayC.h;old_arrayC.inl;old_arrayS.cpp;old_arrayS.h;old_arrayS_T.cpp;old_arrayS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_array.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_array.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_arrayC.cpp;old_arrayC.h;old_arrayC.inl;old_arrayS.cpp;old_arrayS.h;old_arrayS_T.cpp;old_arrayS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="old_constants.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_constants.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_constants.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_constantsC.cpp;old_constantsC.h;old_constantsC.inl;old_constantsS.cpp;old_constantsS.h;old_constantsS_T.cpp;old_constantsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_constants.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_constants.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_constantsC.cpp;old_constantsC.h;old_constantsC.inl;old_constantsS.cpp;old_constantsS.h;old_constantsS_T.cpp;old_constantsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_constants.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_constants.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_constantsC.cpp;old_constantsC.h;old_constantsC.inl;old_constantsS.cpp;old_constantsS.h;old_constantsS_T.cpp;old_constantsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_constants.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_constants.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_constantsC.cpp;old_constantsC.h;old_constantsC.inl;old_constantsS.cpp;old_constantsS.h;old_constantsS_T.cpp;old_constantsS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="old_sequence.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_sequence.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_sequence.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_sequenceC.cpp;old_sequenceC.h;old_sequenceC.inl;old_sequenceS.cpp;old_sequenceS.h;old_sequenceS_T.cpp;old_sequenceS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_sequence.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_sequence.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_sequenceC.cpp;old_sequenceC.h;old_sequenceC.inl;old_sequenceS.cpp;old_sequenceS.h;old_sequenceS_T.cpp;old_sequenceS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_sequence.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_sequence.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_sequenceC.cpp;old_sequenceC.h;old_sequenceC.inl;old_sequenceS.cpp;old_sequenceS.h;old_sequenceS_T.cpp;old_sequenceS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_sequence.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_sequence.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_sequenceC.cpp;old_sequenceC.h;old_sequenceC.inl;old_sequenceS.cpp;old_sequenceS.h;old_sequenceS_T.cpp;old_sequenceS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="old_struct.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_structC.cpp;old_structC.h;old_structC.inl;old_structS.cpp;old_structS.h;old_structS_T.cpp;old_structS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_structC.cpp;old_structC.h;old_structC.inl;old_structS.cpp;old_structS.h;old_structS_T.cpp;old_structS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_structC.cpp;old_structC.h;old_structC.inl;old_structS.cpp;old_structS.h;old_structS_T.cpp;old_structS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_structC.cpp;old_structC.h;old_structC.inl;old_structS.cpp;old_structS.h;old_structS_T.cpp;old_structS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="old_union.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_union.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_union.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_unionC.cpp;old_unionC.h;old_unionC.inl;old_unionS.cpp;old_unionS.h;old_unionS_T.cpp;old_unionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_union.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_union.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_unionC.cpp;old_unionC.h;old_unionC.inl;old_unionS.cpp;old_unionS.h;old_unionS_T.cpp;old_unionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_union.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_union.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_unionC.cpp;old_unionC.h;old_unionC.inl;old_unionS.cpp;old_unionS.h;old_unionS_T.cpp;old_unionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_union.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_union.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_unionC.cpp;old_unionC.h;old_unionC.inl;old_unionS.cpp;old_unionS.h;old_unionS_T.cpp;old_unionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="old_union2.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_union2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_union2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_union2C.cpp;old_union2C.h;old_union2C.inl;old_union2S.cpp;old_union2S.h;old_union2S_T.cpp;old_union2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_union2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_union2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_union2C.cpp;old_union2C.h;old_union2C.inl;old_union2S.cpp;old_union2S.h;old_union2S_T.cpp;old_union2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_union2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_union2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="old_union2C.cpp;old_union2C.h;old_union2C.inl;old_union2S.cpp;old_union2S.h;old_union2S_T.cpp;old_union2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on old_union2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;old_union2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="old_union2C.cpp;old_union2C.h;old_union2C.inl;old_union2S.cpp;old_union2S.h;old_union2S_T.cpp;old_union2S_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="params.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on params.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;params.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="paramsC.cpp;paramsC.h;paramsC.inl;paramsS.cpp;paramsS.h;paramsS_T.cpp;paramsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on params.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;params.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="paramsC.cpp;paramsC.h;paramsC.inl;paramsS.cpp;paramsS.h;paramsS_T.cpp;paramsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on params.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;params.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="paramsC.cpp;paramsC.h;paramsC.inl;paramsS.cpp;paramsS.h;paramsS_T.cpp;paramsS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on params.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;params.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="paramsC.cpp;paramsC.h;paramsC.inl;paramsS.cpp;paramsS.h;paramsS_T.cpp;paramsS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="pragma.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on pragma.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;pragma.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="pragmaA.cpp;pragmaA.h;pragmaC.cpp;pragmaC.h;pragmaC.inl;pragmaS.cpp;pragmaS.h;pragmaS_T.cpp;pragmaS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on pragma.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;pragma.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="pragmaA.cpp;pragmaA.h;pragmaC.cpp;pragmaC.h;pragmaC.inl;pragmaS.cpp;pragmaS.h;pragmaS_T.cpp;pragmaS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on pragma.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;pragma.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="pragmaA.cpp;pragmaA.h;pragmaC.cpp;pragmaC.h;pragmaC.inl;pragmaS.cpp;pragmaS.h;pragmaS_T.cpp;pragmaS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on pragma.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;pragma.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="pragmaA.cpp;pragmaA.h;pragmaC.cpp;pragmaC.h;pragmaC.inl;pragmaS.cpp;pragmaS.h;pragmaS_T.cpp;pragmaS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="primtypes.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on primtypes.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;primtypes.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="primtypesA.cpp;primtypesA.h;primtypesC.cpp;primtypesC.h;primtypesC.inl;primtypesS.cpp;primtypesS.h;primtypesS_T.cpp;primtypesS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on primtypes.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;primtypes.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="primtypesA.cpp;primtypesA.h;primtypesC.cpp;primtypesC.h;primtypesC.inl;primtypesS.cpp;primtypesS.h;primtypesS_T.cpp;primtypesS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on primtypes.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;primtypes.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="primtypesA.cpp;primtypesA.h;primtypesC.cpp;primtypesC.h;primtypesC.inl;primtypesS.cpp;primtypesS.h;primtypesS_T.cpp;primtypesS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on primtypes.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;primtypes.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="primtypesA.cpp;primtypesA.h;primtypesC.cpp;primtypesC.h;primtypesC.inl;primtypesS.cpp;primtypesS.h;primtypesS_T.cpp;primtypesS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="reopen_include1.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopen_include1.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopen_include1.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="reopen_include1C.cpp;reopen_include1C.h;reopen_include1C.inl;reopen_include1S.cpp;reopen_include1S.h;reopen_include1S_T.cpp;reopen_include1S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopen_include1.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopen_include1.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="reopen_include1C.cpp;reopen_include1C.h;reopen_include1C.inl;reopen_include1S.cpp;reopen_include1S.h;reopen_include1S_T.cpp;reopen_include1S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopen_include1.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopen_include1.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="reopen_include1C.cpp;reopen_include1C.h;reopen_include1C.inl;reopen_include1S.cpp;reopen_include1S.h;reopen_include1S_T.cpp;reopen_include1S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopen_include1.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopen_include1.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="reopen_include1C.cpp;reopen_include1C.h;reopen_include1C.inl;reopen_include1S.cpp;reopen_include1S.h;reopen_include1S_T.cpp;reopen_include1S_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="reopen_include2.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopen_include2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopen_include2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="reopen_include2C.cpp;reopen_include2C.h;reopen_include2C.inl;reopen_include2S.cpp;reopen_include2S.h;reopen_include2S_T.cpp;reopen_include2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopen_include2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopen_include2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="reopen_include2C.cpp;reopen_include2C.h;reopen_include2C.inl;reopen_include2S.cpp;reopen_include2S.h;reopen_include2S_T.cpp;reopen_include2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopen_include2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopen_include2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="reopen_include2C.cpp;reopen_include2C.h;reopen_include2C.inl;reopen_include2S.cpp;reopen_include2S.h;reopen_include2S_T.cpp;reopen_include2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopen_include2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopen_include2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="reopen_include2C.cpp;reopen_include2C.h;reopen_include2C.inl;reopen_include2S.cpp;reopen_include2S.h;reopen_include2S_T.cpp;reopen_include2S_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="reopened_modules.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopened_modules.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopened_modules.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="reopened_modulesC.cpp;reopened_modulesC.h;reopened_modulesC.inl;reopened_modulesS.cpp;reopened_modulesS.h;reopened_modulesS_T.cpp;reopened_modulesS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopened_modules.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopened_modules.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="reopened_modulesC.cpp;reopened_modulesC.h;reopened_modulesC.inl;reopened_modulesS.cpp;reopened_modulesS.h;reopened_modulesS_T.cpp;reopened_modulesS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopened_modules.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopened_modules.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="reopened_modulesC.cpp;reopened_modulesC.h;reopened_modulesC.inl;reopened_modulesS.cpp;reopened_modulesS.h;reopened_modulesS_T.cpp;reopened_modulesS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on reopened_modules.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;reopened_modules.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="reopened_modulesC.cpp;reopened_modulesC.h;reopened_modulesC.inl;reopened_modulesS.cpp;reopened_modulesS.h;reopened_modulesS_T.cpp;reopened_modulesS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="repo_id_mod.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on repo_id_mod.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;repo_id_mod.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="repo_id_modA.cpp;repo_id_modA.h;repo_id_modC.cpp;repo_id_modC.h;repo_id_modC.inl;repo_id_modS.cpp;repo_id_modS.h;repo_id_modS_T.cpp;repo_id_modS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on repo_id_mod.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;repo_id_mod.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="repo_id_modA.cpp;repo_id_modA.h;repo_id_modC.cpp;repo_id_modC.h;repo_id_modC.inl;repo_id_modS.cpp;repo_id_modS.h;repo_id_modS_T.cpp;repo_id_modS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on repo_id_mod.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;repo_id_mod.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="repo_id_modA.cpp;repo_id_modA.h;repo_id_modC.cpp;repo_id_modC.h;repo_id_modC.inl;repo_id_modS.cpp;repo_id_modS.h;repo_id_modS_T.cpp;repo_id_modS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on repo_id_mod.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;repo_id_mod.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="repo_id_modA.cpp;repo_id_modA.h;repo_id_modC.cpp;repo_id_modC.h;repo_id_modC.inl;repo_id_modS.cpp;repo_id_modS.h;repo_id_modS_T.cpp;repo_id_modS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="sequence.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on sequence.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;sequence.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="sequenceC.cpp;sequenceC.h;sequenceC.inl;sequenceS.cpp;sequenceS.h;sequenceS_T.cpp;sequenceS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on sequence.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;sequence.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="sequenceC.cpp;sequenceC.h;sequenceC.inl;sequenceS.cpp;sequenceS.h;sequenceS_T.cpp;sequenceS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on sequence.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;sequence.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="sequenceC.cpp;sequenceC.h;sequenceC.inl;sequenceS.cpp;sequenceS.h;sequenceS_T.cpp;sequenceS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on sequence.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;sequence.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="sequenceC.cpp;sequenceC.h;sequenceC.inl;sequenceS.cpp;sequenceS.h;sequenceS_T.cpp;sequenceS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="simple.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on simple.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;simple.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="simpleC.cpp;simpleC.h;simpleC.inl;simpleS.cpp;simpleS.h;simpleS_T.cpp;simpleS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on simple.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;simple.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="simpleC.cpp;simpleC.h;simpleC.inl;simpleS.cpp;simpleS.h;simpleS_T.cpp;simpleS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on simple.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;simple.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="simpleC.cpp;simpleC.h;simpleC.inl;simpleS.cpp;simpleS.h;simpleS_T.cpp;simpleS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on simple.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;simple.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="simpleC.cpp;simpleC.h;simpleC.inl;simpleS.cpp;simpleS.h;simpleS_T.cpp;simpleS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="simple2.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on simple2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;simple2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="simple2C.cpp;simple2C.h;simple2C.inl;simple2S.cpp;simple2S.h;simple2S_T.cpp;simple2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on simple2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;simple2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="simple2C.cpp;simple2C.h;simple2C.inl;simple2S.cpp;simple2S.h;simple2S_T.cpp;simple2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on simple2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;simple2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="simple2C.cpp;simple2C.h;simple2C.inl;simple2S.cpp;simple2S.h;simple2S_T.cpp;simple2S_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on simple2.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;simple2.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="simple2C.cpp;simple2C.h;simple2C.inl;simple2S.cpp;simple2S.h;simple2S_T.cpp;simple2S_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="struct.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="structC.cpp;structC.h;structC.inl;structS.cpp;structS.h;structS_T.cpp;structS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="structC.cpp;structC.h;structC.inl;structS.cpp;structS.h;structS_T.cpp;structS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="structC.cpp;structC.h;structC.inl;structS.cpp;structS.h;structS_T.cpp;structS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on struct.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;struct.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="structC.cpp;structC.h;structC.inl;structS.cpp;structS.h;structS_T.cpp;structS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="typecode.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typecode.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;typecode.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="typecodeA.cpp;typecodeA.h;typecodeC.cpp;typecodeC.h;typecodeC.inl;typecodeS.cpp;typecodeS.h;typecodeS_T.cpp;typecodeS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typecode.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;typecode.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="typecodeA.cpp;typecodeA.h;typecodeC.cpp;typecodeC.h;typecodeC.inl;typecodeS.cpp;typecodeS.h;typecodeS_T.cpp;typecodeS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typecode.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;typecode.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="typecodeA.cpp;typecodeA.h;typecodeC.cpp;typecodeC.h;typecodeC.inl;typecodeS.cpp;typecodeS.h;typecodeS_T.cpp;typecodeS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typecode.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;typecode.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="typecodeA.cpp;typecodeA.h;typecodeC.cpp;typecodeC.h;typecodeC.inl;typecodeS.cpp;typecodeS.h;typecodeS_T.cpp;typecodeS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="typedef.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typedef.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;typedef.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="typedefA.cpp;typedefA.h;typedefC.cpp;typedefC.h;typedefC.inl;typedefS.cpp;typedefS.h;typedefS_T.cpp;typedefS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typedef.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;typedef.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="typedefA.cpp;typedefA.h;typedefC.cpp;typedefC.h;typedefC.inl;typedefS.cpp;typedefS.h;typedefS_T.cpp;typedefS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typedef.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;typedef.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="typedefA.cpp;typedefA.h;typedefC.cpp;typedefC.h;typedefC.inl;typedefS.cpp;typedefS.h;typedefS_T.cpp;typedefS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typedef.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -GA &quot;typedef.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="typedefA.cpp;typedefA.h;typedefC.cpp;typedefC.h;typedefC.inl;typedefS.cpp;typedefS.h;typedefS_T.cpp;typedefS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="typeprefix.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typeprefix.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;typeprefix.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="typeprefixC.cpp;typeprefixC.h;typeprefixC.inl;typeprefixS.cpp;typeprefixS.h;typeprefixS_T.cpp;typeprefixS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typeprefix.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;typeprefix.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="typeprefixC.cpp;typeprefixC.h;typeprefixC.inl;typeprefixS.cpp;typeprefixS.h;typeprefixS_T.cpp;typeprefixS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typeprefix.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;typeprefix.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="typeprefixC.cpp;typeprefixC.h;typeprefixC.inl;typeprefixS.cpp;typeprefixS.h;typeprefixS_T.cpp;typeprefixS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on typeprefix.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h &quot;typeprefix.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="typeprefixC.cpp;typeprefixC.h;typeprefixC.inl;typeprefixS.cpp;typeprefixS.h;typeprefixS_T.cpp;typeprefixS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="union.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on union.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;union.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="unionC.cpp;unionC.h;unionC.inl;unionS.cpp;unionS.h;unionS_T.cpp;unionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on union.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;union.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="unionC.cpp;unionC.h;unionC.inl;unionS.cpp;unionS.h;unionS_T.cpp;unionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on union.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;union.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="unionC.cpp;unionC.h;unionC.inl;unionS.cpp;unionS.h;unionS_T.cpp;unionS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on union.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;union.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="unionC.cpp;unionC.h;unionC.inl;unionS.cpp;unionS.h;unionS_T.cpp;unionS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="valuetype.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on valuetype.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;valuetype.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="valuetypeC.cpp;valuetypeC.h;valuetypeC.inl;valuetypeS.cpp;valuetypeS.h;valuetypeS_T.cpp;valuetypeS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on valuetype.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;valuetype.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="valuetypeC.cpp;valuetypeC.h;valuetypeC.inl;valuetypeS.cpp;valuetypeS.h;valuetypeS_T.cpp;valuetypeS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on valuetype.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;valuetype.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="valuetypeC.cpp;valuetypeC.h;valuetypeC.inl;valuetypeS.cpp;valuetypeS.h;valuetypeS_T.cpp;valuetypeS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on valuetype.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -GC -GH -Gd -GT -Wb,stub_export_macro=TAO_IDL_TEST_STUB_Export -Wb,stub_export_include=TAO_IDL_TEST_stub_export.h -Wb,skel_export_macro=TAO_IDL_TEST_STUB_Export -Wb,skel_export_include=TAO_IDL_TEST_stub_export.h -as &quot;valuetype.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="valuetypeC.cpp;valuetypeC.h;valuetypeC.inl;valuetypeS.cpp;valuetypeS.h;valuetypeS_T.cpp;valuetypeS_T.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

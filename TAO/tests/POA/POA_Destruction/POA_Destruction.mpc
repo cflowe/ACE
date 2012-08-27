@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: POA_Destruction.mpc 78765 2007-07-03 18:27:51Z johnnyw $
+
+project(POA*): taoserver {
+  exename = POA_Destruction
+}

@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ccm_noevent.mpb 92086 2010-09-29 12:24:20Z mhengstmengel $
+
+feature (ccm_noevent) : taobaseidldefaults {
+  macros += CCM_NOEVENT
+  idlflags += -DCCM_NOEVENT -Gcm
+}

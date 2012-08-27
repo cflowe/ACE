@@ -1,0 +1,18 @@
+// $Id: PragmaT_Receiver.idl 95242 2011-12-07 11:54:56Z johnnyw $
+
+#ifndef PRAGMAT_RECEIVER_IDL
+#define PRAGMAT_RECEIVER_IDL
+
+#include <Components.idl>
+
+#include "Base/PragmaT.idl"
+
+module PragmaT
+{
+  component Receiver
+  {
+    /// Provides
+    provides MyFoo do_my_foo;
+  };
+};
+#endif

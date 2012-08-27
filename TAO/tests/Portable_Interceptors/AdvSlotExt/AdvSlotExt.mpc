@@ -1,0 +1,28 @@
+// $Id: AdvSlotExt.mpc 77097 2007-02-13 13:00:23Z elliott_c $
+project(*idl): taoidldefaults {
+  IDL_Files {
+    StateTransfer.idl
+  }
+  custom_only = 1
+}
+
+project(*Server): taoserver, pi_server {
+  after += *idl
+  Source_Files {
+    StateTransferC.cpp
+    StateTransferS.cpp
+    server.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client): taoclient {
+  after += *idl
+  Source_Files {
+    StateTransferC.cpp
+    client.cpp
+  }
+  IDL_Files {
+  }
+}

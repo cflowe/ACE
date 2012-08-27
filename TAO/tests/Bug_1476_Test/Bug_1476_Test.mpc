@@ -1,0 +1,11 @@
+// -*- MPC -*-
+// $Id: Bug_1476_Test.mpc 74398 2006-09-01 16:53:16Z johnc $
+
+project(*Client): taoidldefaults, taoclient, messaging {
+  idlflags += -Sa -St
+
+  Source_Files {
+    HelloC.cpp
+    client.cpp
+  }
+}

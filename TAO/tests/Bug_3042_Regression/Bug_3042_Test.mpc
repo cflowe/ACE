@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Bug_3042_Test.mpc 79348 2007-08-15 11:18:53Z johnnyw $
+
+project(*Client): taoclient {
+}
+

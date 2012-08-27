@@ -1,0 +1,19 @@
+// $Id: Extra.idl 73377 2006-07-03 01:07:26Z mesnier_p $
+
+//
+// This file contains extra valuetypes which are unknown by the test
+// server. We should be able to pass these values and have the server
+// truncate them to the most derived known type.
+
+#include "Truncatable.idl"
+
+module OBV_TruncatableTest
+{
+  //
+  // Base valuetype.
+  //
+  valuetype Extra1 : truncatable TValue1
+  {
+    public unsigned long edata1;
+  };
+};

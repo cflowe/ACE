@@ -1,0 +1,15 @@
+// $Id: Event.idl 83402 2008-10-22 16:45:38Z sowayaa $
+
+#include "tao/LongSeq.pidl"
+
+valuetype MyEvent
+{
+  public string name;
+  public long kind;
+  private CORBA::LongSeq payload;
+
+  void dump();
+  long size();
+  void add_long(in long n);
+};
+

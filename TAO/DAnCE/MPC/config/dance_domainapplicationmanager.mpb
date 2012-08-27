@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_domainapplicationmanager.mpb 92402 2010-10-28 12:38:33Z mhengstmengel $
+
+project : dance, dance_domainapplication, dance_nodemanager_skel, naming, dance_domainapplicationmanager_skel, dance_split_plan, dance_tools, dance_config_handlers {
+  after += DomainApplicationManager
+  libs  += DAnCE_DomainApplicationManager
+}

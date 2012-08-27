@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: ftclientorb.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project : ftorbutils, pi, interceptors {
+  avoids    += ace_for_tao      // Requires ace/UUID
+  after     += FT_ClientORB
+  libs      += TAO_FT_ClientORB
+  requires  += ace_uuid
+  tagchecks += FT_ClientORB
+}

@@ -1,0 +1,29 @@
+// -*- MPC -*-
+// $Id: Bug_3382_Regression.mpc 82826 2008-09-25 08:12:53Z smcqueen $
+
+project(*Server): rt_server {
+  Source_Files {
+    server.cpp
+  }
+}
+
+project(*Client): rt_client, interceptors {
+  after += *Server
+  Source_Files {
+    testC.cpp
+    interceptors.cpp
+    Client_ORBInitializer.cpp
+    client.cpp
+  }
+}
+
+project(*SimpleClient): rt_client {
+  exename = simple_client
+
+  Source_Files {
+    simple_client.cpp
+  }
+
+  IDL_Files {
+  }
+}

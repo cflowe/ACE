@@ -1,0 +1,9 @@
+// $Id: sum_server.idl 81985 2008-06-16 18:13:50Z sowayaa $
+
+module ORT
+{
+  interface sum_server
+  {
+    long add_variables (in long a, in long b);
+  };
+};

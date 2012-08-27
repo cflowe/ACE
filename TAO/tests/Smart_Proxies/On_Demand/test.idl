@@ -1,0 +1,21 @@
+// $Id: test.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+interface Test
+{
+  // = TITLE
+  //    Interface for testing this example.
+  //
+  // = DESCRIPTION
+  //    This interface defines a simple object
+  //    which has a method which can be 'smartified'
+  //    to provide extra functionality.
+
+  exception Oops
+    {
+      string reason;
+    };
+
+  short method (in short boo) raises (Oops);
+
+  oneway void shutdown ();
+};

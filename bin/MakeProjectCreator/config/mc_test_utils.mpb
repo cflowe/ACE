@@ -1,0 +1,7 @@
+// $Id: mc_test_utils.mpb 90166 2010-05-19 02:19:25Z mitza $
+project {
+  includes += ../../.. //TODO: support for ^(HERE) variable expansion
+  libpaths += ..
+  after    += MC_Test_Utilities
+  libs     += MC_Test_Utilities
+}

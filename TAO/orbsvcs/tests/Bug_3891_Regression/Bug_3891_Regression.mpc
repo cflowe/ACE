@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: Bug_3891_Regression.mpc 92950 2010-12-27 16:08:00Z mitza $
+
+project: taoserver, avoids_corba_e_micro, imr_client {
+}

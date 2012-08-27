@@ -1,0 +1,17 @@
+// $Id: SecurityUnawareApp.mpc 93647 2011-03-25 15:33:44Z mitza $ 
+
+project(*Server): taoexe, portableserver, security, ssl {
+  Source_Files {
+    Messenger_i.cpp
+    MessengerServer.cpp
+  }
+}
+
+project(*Client): taoexe, security, ssl {
+  after += *Server
+
+  Source_Files {
+    MessengerC.cpp
+    MessengerClient.cpp
+  }
+}

@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<!-- Converted from ./orbsvcs/tests/EC_Mcast/svc.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  $Id: svc.conf.xml 51118 2003-07-18 14:53:21Z jwillemsen $ -->
+ <static id="EC_Factory" params="-ECfiltering basic -ECproxyconsumerlock thread -ECproxysupplierlock thread -ECsupplierfiltering per-supplier -ECObserver basic"/>
+</ACE_Svc_Conf>

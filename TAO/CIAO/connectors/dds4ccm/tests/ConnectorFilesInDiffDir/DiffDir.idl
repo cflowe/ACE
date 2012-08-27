@@ -1,0 +1,20 @@
+// $Id: DiffDir.idl 95758 2012-05-15 13:42:33Z msmit $
+
+#ifndef DIFFDIR_IDL
+#define DIFFDIR_IDL
+
+#pragma ndds typesupport "DiffDirSupport.h"
+#pragma opendds typesupport "DiffDirTypeSupportImpl.h"
+
+#pragma DCPS_DATA_TYPE "DiffDirType"
+#pragma DCPS_DATA_KEY "DiffDirType value"
+
+struct DiffDirType {
+  string value; //@key
+};
+
+#if defined DDS4CCM_NEEDS_SEQUENCES_DEFINED
+typedef sequence<DiffDirType> DiffDirTypeSeq;
+#endif
+
+#endif

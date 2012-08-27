@@ -1,0 +1,12 @@
+// $Id: Foo.idl 93601 2011-03-21 17:28:31Z mitza $
+
+#ifdef LOCAL
+local
+#endif
+interface X {
+  void op();
+};
+struct Y {
+  X theX;
+};
+typedef sequence<X> XSeq;

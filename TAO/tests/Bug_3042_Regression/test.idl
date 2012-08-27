@@ -1,0 +1,25 @@
+// -*- IDL -*-
+
+//=============================================================================
+/**
+ * @file test.idl
+ *
+ * $Id: test.idl 91849 2010-09-20 09:29:54Z msmit $
+ *
+ * "test" IDL interface for the Codec test.
+ *
+ * @author Balachandran Natarajan <bala@dre.vanderbilt.edu>
+ */
+//=============================================================================
+
+module Foo
+{
+  struct Node;
+
+  typedef sequence <Node,5> nodesequence;
+
+  struct Node {
+    nodesequence nodes;
+  };
+
+};

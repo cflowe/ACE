@@ -1,0 +1,5 @@
+// $Id: simple.idl 42322 2001-12-06 17:06:38Z michel_j $
+
+interface simple {
+    void test();
+};

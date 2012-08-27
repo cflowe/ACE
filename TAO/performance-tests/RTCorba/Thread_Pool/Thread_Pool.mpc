@@ -1,0 +1,33 @@
+// -*- MPC -*-
+// $Id: Thread_Pool.mpc 90164 2010-05-18 21:47:55Z mitza $
+
+project(*RTCorba idl): taoidldefaults {
+  IDL_Files {
+    test.idl
+  }
+  custom_only = 1
+}
+
+project(*RTCorba server): rt_server, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  after += *RTCorba_idl
+  includes += ../../..
+  Source_Files {
+    testC.cpp
+    testS.cpp
+    server.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*RTCorba client): rt_client, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  avoids += ace_for_tao
+  after  += *RTCorba_idl
+  includes += ../../..
+  Source_Files {
+    testC.cpp
+    client.cpp
+  }
+  IDL_Files {
+  }
+}

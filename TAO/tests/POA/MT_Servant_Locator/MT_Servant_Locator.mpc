@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: MT_Servant_Locator.mpc 77363 2007-02-24 12:33:23Z johnnyw $
+
+project(POA*): taoserver, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  exename = MT_Servant_Locator
+}

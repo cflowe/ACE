@@ -1,0 +1,8 @@
+// $Id: Test.idl 73712 2006-07-21 13:23:05Z jwillemsen $
+
+interface Test
+{
+  void the_operation(out long x);
+
+  oneway void shutdown ();
+};

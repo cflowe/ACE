@@ -1,0 +1,7 @@
+// $Id: CustomException.idl 68816 2005-10-19 00:27:51Z dai_y $
+#ifndef CUSTOMEXCEPTION_IDL
+#define CUSTOMEXCEPTION_IDL
+
+exception CustomException {};
+
+#endif

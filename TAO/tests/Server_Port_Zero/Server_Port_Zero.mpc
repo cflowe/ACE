@@ -1,0 +1,11 @@
+// -*- MPC -*-
+// $Id: Server_Port_Zero.mpc 64167 2005-02-22 10:35:17Z jwillemsen $
+
+project(*Server): taoserver {
+  Source_Files {
+    Hello.cpp
+    server.cpp
+  }
+}
+
+

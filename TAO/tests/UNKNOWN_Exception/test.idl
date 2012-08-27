@@ -1,0 +1,18 @@
+//
+// $Id: test.idl 52456 2003-09-25 21:58:58Z irfan $
+//
+
+
+interface test
+{
+  void normal_method ();
+  void unknown_exception_in_method ();
+  void unknown_exception_during_deactivation ();
+};
+
+interface test_factory
+{
+  test create_test ();
+  void shutdown ();
+};
+

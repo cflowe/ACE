@@ -1,0 +1,11 @@
+// $Id: Test.idl 70834 2006-02-03 23:19:11Z ossama $
+
+module Test
+{
+  interface Hang
+  {
+    void send_stuff (in string foo,
+                     in boolean flag);
+  };
+};
+

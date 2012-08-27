@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>TAO_IDL_FE</ProjectName>
+    <ProjectGuid>{F2E6EBE0-FECA-1BAD-9E20-2391A05AED51}</ProjectGuid>
+    <RootNamespace>TAO_IDL_FE</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\TAO_IDL_FE_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TAO_IDL_FEd</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\TAO_IDL_FE_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TAO_IDL_FE</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\TAO_IDL_FE_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TAO_IDL_FEd</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\TAO_IDL_FE_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TAO_IDL_FE</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..;..;include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_IDL_FE_BUILD_DLL;_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..;include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_IDL_FEd.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAO_IDL_FEd.lib</ImportLibrary>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..;..;include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_IDL_FE_BUILD_DLL;NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..;include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_IDL_FE.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAO_IDL_FE.lib</ImportLibrary>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..;..;include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_IDL_FE_BUILD_DLL;_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..;include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_IDL_FEd.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAO_IDL_FEd.lib</ImportLibrary>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..;..;include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_IDL_FE_BUILD_DLL;NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..;..;include;fe;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_IDL_FE.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\lib\TAO_IDL_FE.lib</ImportLibrary>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ast\ast_argument.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_array.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_attribute.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_check.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_component.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_component_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_concrete_type.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_connector.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_constant.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_consumes.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_decl.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_emits.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_enum.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_enum_val.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_eventtype.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_eventtype_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_exception.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_expression.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_extended_port.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_factory.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_field.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_finder.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_generator.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_home.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_interface.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_interface_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_mirror_port.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_module.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_native.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_operation.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_param_holder.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_porttype.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_predefined_type.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_provides.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_publishes.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_recursive.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_root.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_sequence.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_string.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_structure.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_structure_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_template_module.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_template_module_inst.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_template_module_ref.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_type.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_typedef.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_union.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_union_branch.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_union_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_union_label.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_uses.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_valuebox.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_valuetype.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_valuetype_fwd.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_visitor.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_visitor_context.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_visitor_reifying.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_visitor_tmpl_module_inst.cpp">
+    </ClCompile>
+    <ClCompile Include="ast\ast_visitor_tmpl_module_ref.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_component_header.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_declarator.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_extern.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_global.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_home_header.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_init.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_interface_header.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_lookup.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_obv_header.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_private.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\fe_utils.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\lex.yy.cpp">
+    </ClCompile>
+    <ClCompile Include="fe\y.tab.cpp">
+    </ClCompile>
+    <ClCompile Include="narrow\narrow.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_decllist.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_err.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_exceptlist.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_exprlist.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_global.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_identifier.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_idlist.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_indenter.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_labellist.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_list.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_namelist.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_scope.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_stack.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_string.cpp">
+    </ClCompile>
+    <ClCompile Include="util\utl_strlist.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="include\utl_scope_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fe\y.tab.h" />
+    <ClInclude Include="include\ast.h" />
+    <ClInclude Include="include\ast_argument.h" />
+    <ClInclude Include="include\ast_array.h" />
+    <ClInclude Include="include\ast_attribute.h" />
+    <ClInclude Include="include\ast_component.h" />
+    <ClInclude Include="include\ast_component_fwd.h" />
+    <ClInclude Include="include\ast_concrete_type.h" />
+    <ClInclude Include="include\ast_connector.h" />
+    <ClInclude Include="include\ast_constant.h" />
+    <ClInclude Include="include\ast_consumes.h" />
+    <ClInclude Include="include\ast_decl.h" />
+    <ClInclude Include="include\ast_emits.h" />
+    <ClInclude Include="include\ast_enum.h" />
+    <ClInclude Include="include\ast_enum_val.h" />
+    <ClInclude Include="include\ast_eventtype.h" />
+    <ClInclude Include="include\ast_eventtype_fwd.h" />
+    <ClInclude Include="include\ast_exception.h" />
+    <ClInclude Include="include\ast_expression.h" />
+    <ClInclude Include="include\ast_extended_port.h" />
+    <ClInclude Include="include\ast_extern.h" />
+    <ClInclude Include="include\ast_factory.h" />
+    <ClInclude Include="include\ast_field.h" />
+    <ClInclude Include="include\ast_finder.h" />
+    <ClInclude Include="include\ast_generator.h" />
+    <ClInclude Include="include\ast_home.h" />
+    <ClInclude Include="include\ast_interface.h" />
+    <ClInclude Include="include\ast_interface_fwd.h" />
+    <ClInclude Include="include\ast_mirror_port.h" />
+    <ClInclude Include="include\ast_module.h" />
+    <ClInclude Include="include\ast_native.h" />
+    <ClInclude Include="include\ast_operation.h" />
+    <ClInclude Include="include\ast_param_holder.h" />
+    <ClInclude Include="include\ast_porttype.h" />
+    <ClInclude Include="include\ast_predefined_type.h" />
+    <ClInclude Include="include\ast_provides.h" />
+    <ClInclude Include="include\ast_publishes.h" />
+    <ClInclude Include="include\ast_root.h" />
+    <ClInclude Include="include\ast_sequence.h" />
+    <ClInclude Include="include\ast_string.h" />
+    <ClInclude Include="include\ast_structure.h" />
+    <ClInclude Include="include\ast_structure_fwd.h" />
+    <ClInclude Include="include\ast_template_module.h" />
+    <ClInclude Include="include\ast_template_module_inst.h" />
+    <ClInclude Include="include\ast_template_module_ref.h" />
+    <ClInclude Include="include\ast_type.h" />
+    <ClInclude Include="include\ast_typedef.h" />
+    <ClInclude Include="include\ast_union.h" />
+    <ClInclude Include="include\ast_union_branch.h" />
+    <ClInclude Include="include\ast_union_fwd.h" />
+    <ClInclude Include="include\ast_union_label.h" />
+    <ClInclude Include="include\ast_uses.h" />
+    <ClInclude Include="include\ast_valuebox.h" />
+    <ClInclude Include="include\ast_valuetype.h" />
+    <ClInclude Include="include\ast_valuetype_fwd.h" />
+    <ClInclude Include="include\ast_visitor.h" />
+    <ClInclude Include="include\ast_visitor_context.h" />
+    <ClInclude Include="include\ast_visitor_reifying.h" />
+    <ClInclude Include="include\ast_visitor_tmpl_module_inst.h" />
+    <ClInclude Include="include\ast_visitor_tmpl_module_ref.h" />
+    <ClInclude Include="include\drv_extern.h" />
+    <ClInclude Include="include\fe_component_header.h" />
+    <ClInclude Include="include\fe_declarator.h" />
+    <ClInclude Include="include\fe_extern.h" />
+    <ClInclude Include="include\fe_home_header.h" />
+    <ClInclude Include="include\fe_interface_header.h" />
+    <ClInclude Include="include\fe_obv_header.h" />
+    <ClInclude Include="include\fe_private.h" />
+    <ClInclude Include="include\fe_utils.h" />
+    <ClInclude Include="include\global_extern.h" />
+    <ClInclude Include="include\idl_defines.h" />
+    <ClInclude Include="include\idl_global.h" />
+    <ClInclude Include="include\idl_narrow.h" />
+    <ClInclude Include="include\nr_extern.h" />
+    <ClInclude Include="include\TAO_IDL_FE_Export.h" />
+    <ClInclude Include="include\utl_decllist.h" />
+    <ClInclude Include="include\utl_err.h" />
+    <ClInclude Include="include\utl_exceptlist.h" />
+    <ClInclude Include="include\utl_exprlist.h" />
+    <ClInclude Include="include\utl_identifier.h" />
+    <ClInclude Include="include\utl_idlist.h" />
+    <ClInclude Include="include\utl_indenter.h" />
+    <ClInclude Include="include\utl_labellist.h" />
+    <ClInclude Include="include\utl_list.h" />
+    <ClInclude Include="include\utl_namelist.h" />
+    <ClInclude Include="include\utl_scope.h" />
+    <ClInclude Include="include\utl_scoped_name.h" />
+    <ClInclude Include="include\utl_stack.h" />
+    <ClInclude Include="include\utl_string.h" />
+    <ClInclude Include="include\utl_strlist.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tao_idl.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="TAO_IDL.mwc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="TAO_IDL_ACE.mwc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="tao_idl_be.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="tao_idl_fe.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

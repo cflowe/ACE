@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: rtevent_skel.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project : orbsvcslib, rtevent, portableserver {
+  after     += RTEvent_Skel
+  libs      += TAO_RTEvent_Skel
+}

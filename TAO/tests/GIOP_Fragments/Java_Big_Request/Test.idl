@@ -1,0 +1,21 @@
+//
+// $Id: Test.idl 63330 2005-01-19 14:27:41Z elliott_c $
+//
+
+module Test
+{
+  typedef sequence<octet> Payload;
+
+  interface Payload_Receiver
+  {
+    exception Invalid_Payload {
+    };
+
+    /// Send the data using a twoway operation
+    void more_data (in Payload the_payload)
+       raises (Invalid_Payload);
+
+    /// Shudown the remote ORB
+    oneway void shutdown ();
+  };
+};

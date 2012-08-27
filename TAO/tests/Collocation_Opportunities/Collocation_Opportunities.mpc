@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Collocation_Opportunities.mpc 76089 2006-12-19 15:30:03Z johnnyw $
+
+project(Collocation Opportunities): taoserver, avoids_corba_e_micro {
+  exename = Collocation_Opportunities
+}

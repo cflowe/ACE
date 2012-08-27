@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: lzocompressor.mpb 84759 2009-03-09 07:17:54Z johnnyw $
+
+project : taolib, compression, lzo1 {
+  requires += lzo1
+  after   += LzoCompressor
+  libs    += TAO_LzoCompressor
+}

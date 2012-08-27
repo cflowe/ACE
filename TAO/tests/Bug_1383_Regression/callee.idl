@@ -1,0 +1,5 @@
+// $Id: callee.idl 81963 2008-06-16 10:20:06Z sma $
+
+interface Callee {
+  void callback(in string message);
+};

@@ -1,0 +1,14 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+Description:
+
+This is the simple "ThreadPool" test modified to use the TIE approach.
+
+
+To run the test use the run_test.pl script:
+
+$ ./run_test.pl
+
+     The script returns 0 if the test was successful.
+
+

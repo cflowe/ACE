@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: lifecycle_skel.mpb 82815 2008-09-23 21:50:40Z jtc $
+
+project : orbsvcslib, lifecycle, portableserver {
+  after     += CosLifeCycle_Skel
+  libs      += TAO_CosLifeCycle_Skel
+}

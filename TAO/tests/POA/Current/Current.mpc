@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Current.mpc 67791 2005-08-22 10:49:31Z jwillemsen $
+
+project(POA*): taoserver {
+  exename = Current
+}

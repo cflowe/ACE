@@ -1,0 +1,6 @@
+// $Id: ciao_base.mpb 94802 2011-10-20 09:46:10Z mcorino $
+
+project : ccm_cookie, ccm_configvalue, ccm_direct_collocation {
+  after += CIAO_Base_stub
+  libs += CIAO_Base_stub
+}

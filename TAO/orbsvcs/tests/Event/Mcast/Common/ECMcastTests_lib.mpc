@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ECMcastTests_lib.mpc 67842 2005-08-24 01:12:24Z jtc $
+
+project: rtevent_serv {
+  sharedname = ECMcastTests
+  dynamicflags   = ECMCASTTESTS_BUILD_DLL
+}

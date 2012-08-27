@@ -1,0 +1,12 @@
+//
+// $Id: test.idl 84402 2009-02-11 13:41:22Z johnnyw $
+//
+
+interface Simple_Server
+{
+  string test_method (in Simple_Server objref);
+
+  void client_done ();
+
+  oneway void shutdown ();
+};

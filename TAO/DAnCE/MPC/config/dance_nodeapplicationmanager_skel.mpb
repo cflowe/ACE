@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_nodeapplicationmanager_skel.mpb 89008 2010-02-15 12:51:29Z johnnyw $
+
+project : dance, dance_applicationmanager_skel, dance_nodeapplicationmanager_stub {
+  after += Deployment_NAM_skel
+  libs  += DAnCE_NodeApplicationManager_skel
+}

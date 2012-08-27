@@ -1,0 +1,8 @@
+// $Id: Logger.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+// Logger.idl
+
+interface Logger
+{
+  boolean log_message(in string message);
+};

@@ -1,0 +1,6 @@
+//$Id: test.idl 54503 2003-12-12 04:25:06Z bala $
+#include "tao/RTScheduling/RTScheduler_include.pidl"
+local interface test
+{
+   void bar (in CORBA::VoidData data );
+};

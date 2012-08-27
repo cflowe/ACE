@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>NotifyTests_Lib</ProjectName>
+    <ProjectGuid>{A3EA9DAD-FECA-1BAD-9E78-A57F890980BB}</ProjectGuid>
+    <RootNamespace>NotifyTests_Lib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\NotifyTests_Lib_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TAO_NotifyTestsd</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\NotifyTests_Lib_vc10\I386\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TAO_NotifyTests</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\NotifyTests_Lib_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TAO_NotifyTestsd</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\NotifyTests_Lib_vc10\AMD64\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TAO_NotifyTests</TargetName>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\..;..\..\..\..;..\..\..\..\orbsvcs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_NOTIFY_TEST_BUILD_DLL;_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_TYPED_EVENT_CHANNEL;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_TYPED_EVENT_CHANNEL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..\..\..\..;..\..\..\..;..\..\..\..\orbsvcs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CosEventd.lib;TAO_CosNotificationd.lib;TAO_PortableServerd.lib;TAO_CosEvent_Skeld.lib;TAO_CosNotification_Skeld.lib;TAO_Valuetyped.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_DynamicInterfaced.lib;TAO_IFR_Clientd.lib;TAO_CosNamingd.lib;TAO_Svc_Utilsd.lib;TAO_CosEvent_Servd.lib;ACE_ETCLd.lib;TAO_ETCLd.lib;ACE_ETCL_Parserd.lib;TAO_DynamicAnyd.lib;TAO_CosNotification_Servd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_NotifyTestsd.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>.\TAO_NotifyTestsd.lib</ImportLibrary>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\..\..;..\..\..\..;..\..\..\..\orbsvcs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_NOTIFY_TEST_BUILD_DLL;NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_TYPED_EVENT_CHANNEL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_TYPED_EVENT_CHANNEL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..\..\..\..;..\..\..\..;..\..\..\..\orbsvcs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CosEvent.lib;TAO_CosNotification.lib;TAO_PortableServer.lib;TAO_CosEvent_Skel.lib;TAO_CosNotification_Skel.lib;TAO_Valuetype.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_DynamicInterface.lib;TAO_IFR_Client.lib;TAO_CosNaming.lib;TAO_Svc_Utils.lib;TAO_CosEvent_Serv.lib;ACE_ETCL.lib;TAO_ETCL.lib;ACE_ETCL_Parser.lib;TAO_DynamicAny.lib;TAO_CosNotification_Serv.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_NotifyTests.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>.\TAO_NotifyTests.lib</ImportLibrary>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\..\..;..\..\..\..;..\..\..\..\orbsvcs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_NOTIFY_TEST_BUILD_DLL;_DEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_TYPED_EVENT_CHANNEL;MPC_LIB_MODIFIER=&quot;d&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_TYPED_EVENT_CHANNEL;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..\..\..\..;..\..\..\..;..\..\..\..\orbsvcs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CosEventd.lib;TAO_CosNotificationd.lib;TAO_PortableServerd.lib;TAO_CosEvent_Skeld.lib;TAO_CosNotification_Skeld.lib;TAO_Valuetyped.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_DynamicInterfaced.lib;TAO_IFR_Clientd.lib;TAO_CosNamingd.lib;TAO_Svc_Utilsd.lib;TAO_CosEvent_Servd.lib;ACE_ETCLd.lib;TAO_ETCLd.lib;ACE_ETCL_Parserd.lib;TAO_DynamicAnyd.lib;TAO_CosNotification_Servd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_NotifyTestsd.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>.\TAO_NotifyTestsd.lib</ImportLibrary>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TargetEnvironment>x64</TargetEnvironment>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\..\..;..\..\..\..;..\..\..\..\orbsvcs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TAO_NOTIFY_TEST_BUILD_DLL;NDEBUG;WIN32;_WINDOWS;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_TYPED_EVENT_CHANNEL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4355;4250;4290;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;TAO_HAS_TYPED_EVENT_CHANNEL;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>1033</Culture>
+      <AdditionalIncludeDirectories>..\..\..\..\..;..\..\..\..;..\..\..\..\orbsvcs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CosEvent.lib;TAO_CosNotification.lib;TAO_PortableServer.lib;TAO_CosEvent_Skel.lib;TAO_CosNotification_Skel.lib;TAO_Valuetype.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_DynamicInterface.lib;TAO_IFR_Client.lib;TAO_CosNaming.lib;TAO_Svc_Utils.lib;TAO_CosEvent_Serv.lib;ACE_ETCL.lib;TAO_ETCL.lib;ACE_ETCL_Parser.lib;TAO_DynamicAny.lib;TAO_CosNotification_Serv.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)TAO_NotifyTests.dll</OutputFile>
+      <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>.\TAO_NotifyTests.lib</ImportLibrary>
+<!--
+  Though we can set TargetMachine explicitly, VC++
+  can figure it out by project type. We don't need
+  to set it by ourselves.
+-->
+<!--      <TargetMachine>0</TargetMachine>-->
+      <AdditionalOptions>/machine:AMD64 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+<!-- "postclean" was made-up by MPC for use by vs_postclean.pl.
+     Check if msbuild has any support for a custom post-cleaning step
+ -->
+<!-- No known equivalent for DeploymentTool in vc10:
+-->
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Activation_Manager.cpp">
+    </ClCompile>
+    <ClCompile Include="Activation_ManagerC.cpp">
+    </ClCompile>
+    <ClCompile Include="Activation_ManagerS.cpp">
+    </ClCompile>
+    <ClCompile Include="Application_Command.cpp">
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+    </ClCompile>
+    <ClCompile Include="Command_Builder.cpp">
+    </ClCompile>
+    <ClCompile Include="Command_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="common.cpp">
+    </ClCompile>
+    <ClCompile Include="ConsumerAdmin_Command.cpp">
+    </ClCompile>
+    <ClCompile Include="Direct_Consumer.cpp">
+    </ClCompile>
+    <ClCompile Include="Direct_Supplier.cpp">
+    </ClCompile>
+    <ClCompile Include="Driver.cpp">
+    </ClCompile>
+    <ClCompile Include="EventChannel_Command.cpp">
+    </ClCompile>
+    <ClCompile Include="Factories_Define.cpp">
+    </ClCompile>
+    <ClCompile Include="Filter_Command.cpp">
+    </ClCompile>
+    <ClCompile Include="LookupManager.cpp">
+    </ClCompile>
+    <ClCompile Include="Name.cpp">
+    </ClCompile>
+    <ClCompile Include="Notify_Test_Client.cpp">
+    </ClCompile>
+    <ClCompile Include="Options_Parser.cpp">
+    </ClCompile>
+    <ClCompile Include="Peer.cpp">
+    </ClCompile>
+    <ClCompile Include="Periodic_Consumer.cpp">
+    </ClCompile>
+    <ClCompile Include="Periodic_Consumer_Command.cpp">
+    </ClCompile>
+    <ClCompile Include="Periodic_Supplier.cpp">
+    </ClCompile>
+    <ClCompile Include="Periodic_Supplier_Command.cpp">
+    </ClCompile>
+    <ClCompile Include="Priority_Mapping.cpp">
+    </ClCompile>
+    <ClCompile Include="PushConsumer.cpp">
+    </ClCompile>
+    <ClCompile Include="PushSupplier.cpp">
+    </ClCompile>
+    <ClCompile Include="Relay_Consumer.cpp">
+    </ClCompile>
+    <ClCompile Include="SequencePushConsumer.cpp">
+    </ClCompile>
+    <ClCompile Include="SequencePushSupplier.cpp">
+    </ClCompile>
+    <ClCompile Include="StructuredEvent.cpp">
+    </ClCompile>
+    <ClCompile Include="StructuredPushConsumer.cpp">
+    </ClCompile>
+    <ClCompile Include="StructuredPushSupplier.cpp">
+    </ClCompile>
+    <ClCompile Include="SupplierAdmin_Command.cpp">
+    </ClCompile>
+    <ClCompile Include="Task_Callback.cpp">
+    </ClCompile>
+    <ClCompile Include="Task_Stats.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Command_Factory_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Consumer_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Peer_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Supplier_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Activation_Manager.h" />
+    <ClInclude Include="Activation_ManagerC.h" />
+    <ClInclude Include="Activation_ManagerS.h" />
+    <ClInclude Include="Application_Command.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="Command_Builder.h" />
+    <ClInclude Include="Command_Factory.h" />
+    <ClInclude Include="Command_Factory_T.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="Consumer_T.h" />
+    <ClInclude Include="ConsumerAdmin_Command.h" />
+    <ClInclude Include="Direct_Consumer.h" />
+    <ClInclude Include="Direct_Supplier.h" />
+    <ClInclude Include="Driver.h" />
+    <ClInclude Include="Driver_Base.h" />
+    <ClInclude Include="EventChannel_Command.h" />
+    <ClInclude Include="Factories_Define.h" />
+    <ClInclude Include="Filter_Command.h" />
+    <ClInclude Include="LookupManager.h" />
+    <ClInclude Include="Name.h" />
+    <ClInclude Include="Notify_PushConsumer.h" />
+    <ClInclude Include="Notify_PushSupplier.h" />
+    <ClInclude Include="Notify_SequencePushConsumer.h" />
+    <ClInclude Include="Notify_SequencePushSupplier.h" />
+    <ClInclude Include="Notify_StructuredPushConsumer.h" />
+    <ClInclude Include="Notify_StructuredPushSupplier.h" />
+    <ClInclude Include="Notify_Test_Client.h" />
+    <ClInclude Include="notify_test_export.h" />
+    <ClInclude Include="Options_Parser.h" />
+    <ClInclude Include="Peer.h" />
+    <ClInclude Include="Peer_T.h" />
+    <ClInclude Include="Periodic_Consumer.h" />
+    <ClInclude Include="Periodic_Consumer_Command.h" />
+    <ClInclude Include="Periodic_Supplier.h" />
+    <ClInclude Include="Periodic_Supplier_Command.h" />
+    <ClInclude Include="Priority_Mapping.h" />
+    <ClInclude Include="PushConsumer.h" />
+    <ClInclude Include="PushSupplier.h" />
+    <ClInclude Include="Relay_Consumer.h" />
+    <ClInclude Include="SequencePushConsumer.h" />
+    <ClInclude Include="SequencePushSupplier.h" />
+    <ClInclude Include="StructuredEvent.h" />
+    <ClInclude Include="StructuredPushConsumer.h" />
+    <ClInclude Include="StructuredPushSupplier.h" />
+    <ClInclude Include="Supplier_T.h" />
+    <ClInclude Include="SupplierAdmin_Command.h" />
+    <ClInclude Include="Task_Callback.h" />
+    <ClInclude Include="Task_Stats.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Notify_lib.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Activation_Manager.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -I..\..\..\../orbsvcs &quot;Activation_Manager.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\..\bin\tao_idl on Activation_Manager.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Activation_ManagerC.cpp;Activation_ManagerC.h;Activation_ManagerC.inl;Activation_ManagerS.cpp;Activation_ManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -I..\..\..\../orbsvcs &quot;Activation_Manager.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\..\bin\tao_idl on Activation_Manager.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Activation_ManagerC.cpp;Activation_ManagerC.h;Activation_ManagerC.inl;Activation_ManagerS.cpp;Activation_ManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -I..\..\..\../orbsvcs &quot;Activation_Manager.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\..\bin\tao_idl on Activation_Manager.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Activation_ManagerC.cpp;Activation_ManagerC.h;Activation_ManagerC.inl;Activation_ManagerS.cpp;Activation_ManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -I..\..\..\../orbsvcs &quot;Activation_Manager.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\..\bin\tao_idl on Activation_Manager.idl</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Activation_ManagerC.cpp;Activation_ManagerC.h;Activation_ManagerC.inl;Activation_ManagerS.cpp;Activation_ManagerS.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Activation_ManagerC.inl" />
+    <None Include="Direct_Supplier.inl" />
+    <None Include="Peer.inl" />
+    <None Include="PushConsumer.inl" />
+    <None Include="PushSupplier.inl" />
+    <None Include="Relay_Consumer.inl" />
+    <None Include="SequencePushConsumer.inl" />
+    <None Include="SequencePushSupplier.inl" />
+    <None Include="StructuredPushConsumer.inl" />
+    <None Include="StructuredPushSupplier.inl" />
+    <None Include="Task_Stats.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="README">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

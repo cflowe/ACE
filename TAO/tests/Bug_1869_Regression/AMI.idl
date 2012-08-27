@@ -1,0 +1,7 @@
+// $Id: AMI.idl 70416 2006-01-13 13:23:21Z jwillemsen $
+
+module AMI_test {
+  interface adder {
+    long add(in long a, in long b);
+  };
+};

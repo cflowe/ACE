@@ -1,0 +1,5 @@
+// $Id: Null_MediaCtrl.idl 11135 1998-05-13 14:28:14Z levine $
+
+interface Null_MediaCtrl
+{
+};

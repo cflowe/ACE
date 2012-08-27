@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: eventperftestexe.mpb 95491 2012-01-24 13:51:36Z johnnyw $
+
+project: messaging, rteventexe, rtevent_serv, naming, iortable {
+  after    += Event_Test_Lib
+  libs     += ECTests
+  libpaths += ../lib
+  includes += ../lib
+}

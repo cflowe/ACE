@@ -1,0 +1,35 @@
+// -*- MPC -*-
+// $Id: Bug_1020_Basic_Regression.mpc 77008 2007-02-12 11:52:38Z johnnyw $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    Test.idl
+  }
+  custom_only = 1
+}
+
+project(*Server): taoserver, messaging {
+  after += *idl
+  Source_Files {
+    Echo_Caller.cpp
+    Server_Task.cpp
+    server.cpp
+    TestC.cpp
+    TestS.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client): taoclient, messaging {
+  after += *idl
+  Source_Files {
+    Echo.cpp
+    Client_Task.cpp
+    client.cpp
+    TestC.cpp
+    TestS.cpp
+  }
+  IDL_Files {
+  }
+}

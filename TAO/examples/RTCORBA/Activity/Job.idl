@@ -1,0 +1,10 @@
+//
+// $Id: Job.idl 79942 2007-11-06 15:54:27Z vzykov $
+//
+
+interface Job
+{
+  void work (in unsigned long work);
+
+  oneway void shutdown ();
+};

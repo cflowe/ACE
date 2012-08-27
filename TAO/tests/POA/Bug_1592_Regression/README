@@ -1,0 +1,9 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+This test verifies that server side interceptor flow is correct when a
+PortableServer::ServantLocator is in use.
+
+Test output should be similar to the following:
+
+==== Running PortableInterceptor / ServantLocator test
+

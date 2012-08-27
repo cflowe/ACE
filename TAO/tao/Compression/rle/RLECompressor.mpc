@@ -1,0 +1,10 @@
+//$Id: RLECompressor.mpc 95546 2012-02-23 08:01:58Z johnnyw $
+
+project(RLECompressor) : ace_rlecompressionlib, taolib, tao_output, install, compression, taoidldefaults {
+  sharedname    = TAO_RLECompressor
+  dynamicflags += TAO_RLECOMPRESSOR_BUILD_DLL
+
+  specific {
+    install_dir = tao/Compression/rle
+  }
+}

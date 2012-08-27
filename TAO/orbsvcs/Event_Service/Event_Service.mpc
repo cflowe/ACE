@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Event_Service.mpc 91910 2010-09-22 09:38:46Z msmit $
+
+project : orbsvcsexe, install, rtevent_serv, rtschedevent, bidir_giop, svc_utils {
+  exename  = tao_rtevent
+}

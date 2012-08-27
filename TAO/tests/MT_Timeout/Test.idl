@@ -1,0 +1,19 @@
+//
+// $Id: Test.idl 38689 2001-03-31 03:58:21Z coryan $
+//
+
+module Test
+{
+  /// A very simple interface
+  interface Sleep_Service
+  {
+    /// Sleep for @c microseconds
+    void go_to_sleep (in unsigned long microseconds);
+
+    /// A method to shutdown the ORB
+    /**
+     * This method is used to simplify the test shutdown process
+     */
+    oneway void shutdown ();
+  };
+};

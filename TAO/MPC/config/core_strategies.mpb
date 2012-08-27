@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: core_strategies.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+feature(ace_for_tao) {
+  macros += TAO_HAS_SHMIOP=0 TAO_HAS_UIOP=0
+}

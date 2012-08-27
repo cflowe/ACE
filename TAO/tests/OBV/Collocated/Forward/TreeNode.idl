@@ -1,0 +1,11 @@
+// $Id: TreeNode.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+#include "TreeBase.idl"
+
+//
+// A concrete node type
+//
+valuetype StringNode : BaseNode
+{
+  public string name;
+};

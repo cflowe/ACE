@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<!-- Converted from ./orbsvcs/tests/Notify/MT_Dispatching/notify_nothreads.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!-- # $Id: notify_nothreads.conf.xml 66770 2005-07-01 20:27:01Z michel_j $ -->
+ <static id="Notify_Default_Event_Manager_Objects_Factory"/>
+</ACE_Svc_Conf>

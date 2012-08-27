@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Excessive_Object_Deactivations.mpc 77361 2007-02-24 12:10:04Z johnnyw $
+
+project(POA*): taoserver, avoids_corba_e_micro {
+  exename = Excessive_Object_Deactivations
+}

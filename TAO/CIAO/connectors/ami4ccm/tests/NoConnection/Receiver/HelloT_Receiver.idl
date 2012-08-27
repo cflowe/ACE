@@ -1,0 +1,18 @@
+// $Id: HelloT_Receiver.idl 93359 2011-02-11 11:33:12Z mcorino $
+
+#ifndef HELLO_T_RECEIVER_IDL
+#define HELLO_T_RECEIVER_IDL
+
+#include <Components.idl>
+
+#include "Base/HelloT.idl"
+
+module HelloT
+{
+  component Receiver
+  {
+    /// Provides
+    provides MyFoo do_my_foo;
+  };
+};
+#endif

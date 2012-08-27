@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: ciaoexe.mpb 90929 2010-06-29 11:31:45Z johnnyw $
+
+project {
+   install = $(CIAO_ROOT)/bin
+}

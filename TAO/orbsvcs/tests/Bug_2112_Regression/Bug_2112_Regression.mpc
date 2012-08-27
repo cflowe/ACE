@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: Bug_2112_Regression.mpc 92051 2010-09-27 12:02:27Z johnnyw $
+
+project(*Client) : namingexe, portableserver, messaging {
+  exename  = client
+}
+

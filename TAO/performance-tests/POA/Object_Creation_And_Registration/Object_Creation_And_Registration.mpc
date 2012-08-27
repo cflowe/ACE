@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Object_Creation_And_Registration.mpc 76080 2006-12-19 11:32:56Z johnnyw $
+
+project(registration): taoexe, portableserver, avoids_corba_e_micro, avoids_ace_for_tao {
+  exename = registration
+}

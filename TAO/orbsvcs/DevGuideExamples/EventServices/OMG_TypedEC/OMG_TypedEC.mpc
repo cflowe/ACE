@@ -1,0 +1,22 @@
+// $Id: OMG_TypedEC.mpc 93647 2011-03-25 15:33:44Z mitza $
+
+project(*Supplier): namingexe, event_skel {
+  exename   = Supplier
+  includes += ../common
+  Source_Files {
+    SupplierMain.cpp
+    MessengerC.cpp
+  }
+}
+
+project(*Consumer): namingexe, event_skel {
+  exename   = Consumer
+  includes += ../common
+  after    += *Supplier
+
+  Source_Files {
+    ConsumerMain.cpp
+    Consumer_i.cpp
+    Messenger_i.cpp
+  }
+}

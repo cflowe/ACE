@@ -1,0 +1,5 @@
+// $Id: RTEvent_Logging_Service.mpc 91896 2010-09-22 08:22:58Z msmit $
+
+project: namingexe, iortable, install, rteventlogadmin_serv, valuetype {
+  exename   = tao_tls_rtevent
+}

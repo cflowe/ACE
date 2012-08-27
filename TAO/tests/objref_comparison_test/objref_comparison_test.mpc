@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: objref_comparison_test.mpc 78859 2007-07-12 23:35:57Z sowayaa $
+
+project : taoserver {
+  Source_Files {
+    main.cpp
+  }
+}

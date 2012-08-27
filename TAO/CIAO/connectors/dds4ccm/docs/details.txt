@@ -1,0 +1,5 @@
+$Id: details.txt 92038 2010-09-27 08:55:21Z johnnyw $
+
+For more information regarding DDS4CCM also check the CCM tutoral, see
+$CIAO_ROOT/docs/OMG-CCM-Tutorial.ppt
+

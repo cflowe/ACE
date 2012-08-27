@@ -1,0 +1,10 @@
+/*
+ * $Id: test.idl 34075 2000-07-17 20:41:23Z othman $
+ */
+
+interface Simple_Server
+{
+  void send_line (in string line);
+
+  oneway void shutdown ();
+};

@@ -1,0 +1,13 @@
+// $Id: test.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+interface Stopwatch
+{
+   void start ();
+   // Start the Stop watch
+
+   void stop ();
+   // Stop the watch
+
+  void shutdown ();
+  // Shutdown the ORB
+};

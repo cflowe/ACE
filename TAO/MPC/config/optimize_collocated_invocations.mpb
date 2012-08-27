@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: optimize_collocated_invocations.mpb 80697 2008-02-22 08:57:18Z johnnyw $
+
+feature (!optimize_collocated_invocations) : taobaseidldefaults {
+  idlflags += -Sp -Sd
+}

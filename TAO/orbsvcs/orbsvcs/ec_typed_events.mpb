@@ -1,0 +1,21 @@
+// -*- MPC -*-
+// $Id: ec_typed_events.mpb 68744 2005-10-14 17:04:03Z jtc $
+
+feature(ec_typed_events) {
+  macros   += TAO_HAS_TYPED_EVENT_CHANNEL
+
+  Source_Files {
+    CosTypedEventCommC.cpp
+    CosTypedEventChannelAdminC.cpp
+  }
+
+  Header_Files {
+    CosTypedEventCommC.h
+    CosTypedEventChannelAdminC.h
+  }
+
+  Inline_Files {
+    CosTypedEventCommC.inl
+    CosTypedEventChannelAdminC.inl
+  }
+}

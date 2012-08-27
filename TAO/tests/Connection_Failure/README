@@ -1,0 +1,10 @@
+/**
+
+$Id: README 94612 2011-10-06 11:57:27Z johnnyw $
+
+@page Connection_Failure Test README File
+
+A simple test for connection failures. The client tries to connect to
+an non-existent server.
+
+*/

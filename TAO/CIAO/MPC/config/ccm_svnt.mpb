@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: ccm_svnt.mpb 94929 2011-11-01 19:25:02Z johnnyw $
+
+project : ccm_session_stub, portableserver, avoids_minimum_corba, \
+        avoids_corba_e_micro, ccm_direct_collocation {
+  after += CCM_svnt
+  libs += CCM_svnt
+}

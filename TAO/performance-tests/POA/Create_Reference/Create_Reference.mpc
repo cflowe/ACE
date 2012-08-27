@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Create_Reference.mpc 76080 2006-12-19 11:32:56Z johnnyw $
+
+project: taoserver, avoids_corba_e_micro, avoids_ace_for_tao {
+  exename = create_reference
+}

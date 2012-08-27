@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-2720-CDE965CC3DFA}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-2720-CDE965CC3DFA}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-2720-CDE965CC3DFA}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Test Files">
+      <UniqueIdentifier>{4190FD01-FECA-1BAD-2720-CDE965CC3DFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Svc Conf Files">
+      <UniqueIdentifier>{84D0937A-FECA-1BAD-2720-CDE965CC3DFA}</UniqueIdentifier>
+      <Extensions>conf;confxml</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-2720-CDE965CC3DFA}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{B14BBA74-FECA-1BAD-2720-CDE965CC3DFA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="any.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bd_array_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bd_long_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bd_short_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bd_str_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bd_string.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bd_struct_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bd_wstr_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bd_wstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="big_union.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="complex_any.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="except.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fixed_array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fixed_struct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="helper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multdim_array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nested_struct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="objref.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="objref_struct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="param_testC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="recursive_struct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="recursive_union.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="results.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="short.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="small_union.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typecode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_any_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_array_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_long_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_objref_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_short_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_str_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_string.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_struct_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_wstr_seq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ub_wstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ulonglong.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="var_array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="var_struct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="any.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bd_array_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bd_long_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bd_short_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bd_str_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bd_string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bd_struct_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bd_wstr_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bd_wstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="big_union.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="complex_any.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="except.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fixed_array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fixed_struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multdim_array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nested_struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objref.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objref_struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="param_testC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="recursive_struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="recursive_union.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="results.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="short.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="small_union.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typecode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_any_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_array_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_long_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_objref_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_short_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_str_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_struct_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_wstr_seq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ub_wstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ulonglong.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="var_array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="var_struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Param_Test.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="run_test.pl">
+      <Filter>Test Files</Filter>
+    </None>
+    <None Include="run_test_dii.pl">
+      <Filter>Test Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="svc.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="param_testC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="README">
+      <Filter>Documentation</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

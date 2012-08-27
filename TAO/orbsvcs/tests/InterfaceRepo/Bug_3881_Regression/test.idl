@@ -1,0 +1,9 @@
+// $Id: test.idl 91323 2010-08-09 13:14:34Z parsons $
+
+#pragma prefix "omg.org"
+
+module CORBA
+{
+  typedef sequence<long> LSeq;
+};
+

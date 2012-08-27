@@ -1,0 +1,4 @@
+// -*- MPC -*-
+//$Id: csd_pt_test_exe.mpb 90586 2010-06-14 13:48:01Z parsons $
+project : csd_pt_testinf_lib, csd_pt_testservant_lib, taoexe, pi {
+}

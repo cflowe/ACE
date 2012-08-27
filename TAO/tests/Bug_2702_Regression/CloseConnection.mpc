@@ -1,0 +1,22 @@
+// -*- MPC -*-
+// $Id: CloseConnection.mpc 80937 2008-03-14 11:13:07Z johnnyw $
+
+project(*idl): taoidldefaults {
+  idlflags += -GA
+  IDL_Files {
+    Test.idl
+  }
+  custom_only = 1
+}
+
+
+project(*Client): taoclient {
+  after += *idl
+  Source_Files {
+    TestC.cpp
+    client.cpp
+  }
+  IDL_Files {
+  }
+}
+

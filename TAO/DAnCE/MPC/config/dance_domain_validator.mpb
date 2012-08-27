@@ -1,0 +1,5 @@
+// $Id: dance_domain_validator.mpb 94761 2011-10-14 14:47:32Z wotte $
+project : dance_config_handlers, dance_deployment_stub, dance_stub {
+  after += DAnCE_Domain_Validator_Base DAnCE_CORBA_Domain_Validator
+  libs += DAnCE_Domain_Validator_Base DAnCE_CORBA_Domain_Validator
+}

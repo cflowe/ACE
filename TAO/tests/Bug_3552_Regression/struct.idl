@@ -1,0 +1,12 @@
+//
+// $Id: struct.idl 84258 2009-01-29 09:05:27Z sma $
+//
+
+/// Put the interfaces in a module, to avoid global namespace pollution
+module Test
+{
+  struct theStruct
+  {
+    string theString;
+  };
+};

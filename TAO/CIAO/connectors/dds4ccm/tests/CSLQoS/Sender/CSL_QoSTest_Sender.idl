@@ -1,0 +1,22 @@
+// $Id: CSL_QoSTest_Sender.idl 95883 2012-06-13 18:45:09Z johnnyw $
+
+/**
+ * @author Marijke Hengstmengel (mhengstmengel@remedy.nl)
+ */
+
+#ifndef DDS_CSL_QOSTEST_SENDER_IDL
+#define DDS_CSL_QOSTEST_SENDER_IDL
+
+#include "Connector/CSL_QoSTest_Connector.idl"
+
+module CSL_QoSTest
+{
+  component Sender
+  {
+     port CSLQoSConnector::DDS_Write info_write;
+     provides CCM_DDS::ConnectorStatusListener test_topic_connector_status;
+
+  };
+};
+
+#endif

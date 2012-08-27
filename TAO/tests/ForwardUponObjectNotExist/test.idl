@@ -1,0 +1,8 @@
+// $Id: test.idl 85228 2009-05-01 07:10:33Z dai_y $
+
+interface Simple_Server
+{
+  boolean test_is_a (in string type);
+
+  oneway void shutdown ();
+};

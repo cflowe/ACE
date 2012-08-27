@@ -1,0 +1,39 @@
+// -*- MPC -*-
+// $Id: Bug_3853_Regression.mpc 90442 2010-06-07 20:58:38Z dai_y $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    Hello.idl
+  }
+  custom_only = 1
+}
+
+project(*Server): taoserver, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  after += *idl
+  Source_Files {
+    Hello_i.cpp
+    server.cpp
+  }
+  Source_Files {
+    HelloS.cpp
+    HelloC.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client): taoclient, pi_server, interceptors, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  after += *idl
+  after += *Server
+  Source_Files {
+    client_interceptor.cpp
+    Client_ORBInitializer.cpp
+    client.cpp
+  }
+  Source_Files {
+    HelloC.cpp
+  }
+  IDL_Files {
+  }
+}
+

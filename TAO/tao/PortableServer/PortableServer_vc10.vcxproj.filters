@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="Pidl Files">
+      <UniqueIdentifier>{2990FD4C-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+      <Extensions>pidl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{5635C877-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{502A2050-FECA-1BAD-0254-2F597F3FDA71}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Acceptor_Filter_Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Active_Object_Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Active_Object_Map_Entry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Active_Policy_Strategies.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdapterActivatorA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdapterActivatorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Collocated_Arguments_Converter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Collocated_Object_Proxy_Broker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Creation_Time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Default_Acceptor_Filter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Default_Policy_Validator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Default_Servant_Dispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct_Collocation_Upcall_Wrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardRequestA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardRequestC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdAssignmentPolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdAssignmentPolicyA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdAssignmentPolicyC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdAssignmentStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdAssignmentStrategyFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdAssignmentStrategySystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdAssignmentStrategyUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdUniquenessPolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdUniquenessPolicyA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdUniquenessPolicyC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdUniquenessStrategyFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdUniquenessStrategyMultiple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdUniquenessStrategyUnique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IdUniquenessStrategyUniqueFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplicitActivationPolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplicitActivationPolicyA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplicitActivationPolicyC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplicitActivationStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplicitActivationStrategyExplicit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplicitActivationStrategyFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplicitActivationStrategyImplicit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImR_Client_Adapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Key_Adapters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifespanPolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifespanPolicyA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifespanPolicyC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifespanStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifespanStrategyFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifespanStrategyPersistent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifespanStrategyPersistentFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifespanStrategyTransient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LifespanStrategyTransientFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Network_Priority_Hook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Non_Servant_Upcall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object_Adapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object_Adapter_Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Operation_Table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Operation_Table_Binary_Search.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Operation_Table_Dynamic_Hash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Operation_Table_Linear_Search.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Operation_Table_Perfect_Hash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ORT_Adapter_Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POA_Cached_Policies.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POA_Current.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POA_Current_Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POA_Current_Impl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POA_Guard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POA_Policy_Set.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POAC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POAManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POAManagerC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POAManagerFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="POAManagerFactoryC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PolicyS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortableServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortableServer_Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortableServer_includeC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortableServer_WFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortableServerC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PS_CurrentC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PS_ForwardA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PS_ForwardC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Regular_POA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingPolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingPolicyA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingPolicyC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyAOMOnly.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyAOMOnlyFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyDefaultServant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyDefaultServantFI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyServantActivator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyServantActivatorFI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyServantLocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyServantLocatorFI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestProcessingStrategyServantManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Root_POA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Servant_Base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Servant_Dispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Servant_Upcall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantActivatorA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantActivatorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantLocatorA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantLocatorC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantManagerA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantManagerC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantRetentionPolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantRetentionPolicyA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantRetentionPolicyC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantRetentionStrategyFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantRetentionStrategyNonRetain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantRetentionStrategyNonRetainFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantRetentionStrategyRetain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServantRetentionStrategyRetainFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StrategyFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SUpcall_commands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPolicyA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPolicyC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadStrategyFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadStrategyORBControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadStrategySingle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadStrategySingleFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Upcall_Command.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Upcall_Wrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Acceptor_Filter_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Active_Object_Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Active_Object_Map_Entry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Active_Policy_Strategies.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdapterActivatorA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdapterActivatorC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdapterActivatorS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Any_SArg_Traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Basic_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Basic_SArguments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BD_String_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Collocated_Arguments_Converter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Collocated_Object_Proxy_Broker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Creation_Time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Default_Acceptor_Filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Default_Policy_Validator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Default_Servant_Dispatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct_Collocation_Upcall_Wrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Fixed_Array_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Fixed_Size_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardRequestA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardRequestC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardRequestS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="get_arg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdAssignmentPolicy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdAssignmentPolicyA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdAssignmentPolicyC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdAssignmentPolicyS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdAssignmentStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdAssignmentStrategyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdAssignmentStrategyFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdAssignmentStrategySystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdAssignmentStrategyUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessPolicy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessPolicyA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessPolicyC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessPolicyS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessStrategyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessStrategyFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessStrategyMultiple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessStrategyUnique.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IdUniquenessStrategyUniqueFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitActivationPolicy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitActivationPolicyA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitActivationPolicyC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitActivationPolicyS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitActivationStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitActivationStrategyExplicit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitActivationStrategyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitActivationStrategyFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImplicitActivationStrategyImplicit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImR_Client_Adapter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Key_Adapters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanPolicy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanPolicyA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanPolicyC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanPolicyS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanStrategyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanStrategyFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanStrategyPersistent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanStrategyPersistentFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanStrategyTransient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LifespanStrategyTransientFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Network_Priority_Hook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Non_Servant_Upcall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object_Adapter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object_Adapter_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object_SArg_Traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation_Table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation_Table_Binary_Search.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation_Table_Dynamic_Hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation_Table_Linear_Search.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation_Table_Perfect_Hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ORT_Adapter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ORT_Adapter_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POA_Cached_Policies.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POA_Current.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POA_Current_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POA_Current_Impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POA_Guard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="poa_macros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POA_Policy_Set.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POAC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POAManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POAManagerC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POAManagerFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POAManagerFactoryC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POAManagerFactoryS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POAManagerS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="POAS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Policy_Strategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PolicyS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PolicyS_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="portableserver_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableServer_Functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableServer_includeA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableServer_includeC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableServer_includeS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableServer_WFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableServerA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableServerC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableServerS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PS_CurrentC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PS_CurrentS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PS_ForwardA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PS_ForwardC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PS_ForwardS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Regular_POA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingPolicy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingPolicyA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingPolicyC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingPolicyS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyAOMOnly.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyAOMOnlyFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyDefaultServant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyDefaultServantFI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyServantActivator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyServantActivatorFI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyServantLocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyServantLocatorFI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestProcessingStrategyServantManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Root_POA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SArg_Traits_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Servant_Base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Servant_Dispatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Servant_Location.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Servant_Upcall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Servant_var.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantActivatorA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantActivatorC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantActivatorS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantLocatorA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantLocatorC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantLocatorS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantManagerA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantManagerC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantManagerS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionPolicy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionPolicyA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionPolicyC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionPolicyS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionStrategyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionStrategyFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionStrategyNonRetain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionStrategyNonRetainFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionStrategyRetain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServantRetentionStrategyRetainFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Special_Basic_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Special_Basic_SArguments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StrategyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SUpcall_commands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPolicy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPolicyA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPolicyC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPolicyS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadStrategyFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadStrategyFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadStrategyORBControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadStrategySingle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadStrategySingleFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeCode_SArg_Traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UB_String_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UB_String_SArguments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Upcall_Command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Upcall_Wrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Var_Array_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Var_Size_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector_SArgument_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PortableServer.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_PortableServer.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AdapterActivator.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="ForwardRequest.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="IdAssignmentPolicy.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="IdUniquenessPolicy.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="ImplicitActivationPolicy.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="LifespanPolicy.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="POA.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="POAManager.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="POAManagerFactory.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="PortableServer.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="PortableServer_include.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="PS_Current.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="PS_Forward.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="RequestProcessingPolicy.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="ServantActivator.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="ServantLocator.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="ServantManager.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="ServantRetentionPolicy.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+    <None Include="ThreadPolicy.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Active_Object_Map.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Active_Policy_Strategies.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Basic_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="BD_String_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Creation_Time.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Fixed_Array_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Fixed_Size_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Non_Servant_Upcall.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Object_Adapter.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Object_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="POA_Cached_Policies.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="POA_Current_Impl.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="POA_Policy_Set.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="POAManager.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Regular_POA.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Root_POA.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Servant_Base.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Servant_Upcall.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Servant_var.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Special_Basic_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="UB_String_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Var_Array_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Var_Size_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Vector_SArgument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Basic_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BD_String_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fixed_Array_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fixed_Size_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PolicyS_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Servant_var.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Special_Basic_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UB_String_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Var_Array_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Var_Size_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector_SArgument_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TAO_PortableServer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: UTF16_UCS2_Translator.mpc 90164 2010-05-18 21:47:55Z mitza $
+
+project(*) : taolib, codeset {
+  sharedname   = UTF16_UCS2
+  dynamicflags += UTF16_UCS2_BUILD_DLL
+}

@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: negotiate_codesets.mpb 87253 2009-10-28 23:29:32Z dai_y $
+
+feature(negotiate_codesets) {
+  after += Codeset
+  libs   += TAO_Codeset
+  macros += TAO_EXPLICIT_NEGOTIATE_CODESETS
+}

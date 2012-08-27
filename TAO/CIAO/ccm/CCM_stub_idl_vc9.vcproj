@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="CCM_stub_idl"
+	ProjectGUID="{878E68A9-FECA-1BAD-4334-FDEB7D589086}"
+	RootNamespace="CCM_stub_idl"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\CCM_stub_idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\CCM_stub_idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\CCM_stub_idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\CCM_stub_idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="CCM_lem_stub.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_stub.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_svnt.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="CCM_Base.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Base.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci -Gxhst -Gxhsk &quot;CCM_Base.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_BaseC.cpp;CCM_BaseC.h;CCM_BaseS.h;CCM_Stub_Export.h;CCM_Svnt_Export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Base.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci -Gxhst -Gxhsk &quot;CCM_Base.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_BaseC.cpp;CCM_BaseC.h;CCM_BaseS.h;CCM_Stub_Export.h;CCM_Svnt_Export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Base.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci -Gxhst -Gxhsk &quot;CCM_Base.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_BaseC.cpp;CCM_BaseC.h;CCM_BaseS.h;CCM_Stub_Export.h;CCM_Svnt_Export.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Base.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci -Gxhst -Gxhsk &quot;CCM_Base.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_BaseC.cpp;CCM_BaseC.h;CCM_BaseS.h;CCM_Stub_Export.h;CCM_Svnt_Export.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Configurator.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Configurator.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Configurator.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_ConfiguratorC.cpp;CCM_ConfiguratorC.h;CCM_ConfiguratorC.inl;CCM_ConfiguratorS.cpp;CCM_ConfiguratorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Configurator.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Configurator.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_ConfiguratorC.cpp;CCM_ConfiguratorC.h;CCM_ConfiguratorC.inl;CCM_ConfiguratorS.cpp;CCM_ConfiguratorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Configurator.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Configurator.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_ConfiguratorC.cpp;CCM_ConfiguratorC.h;CCM_ConfiguratorC.inl;CCM_ConfiguratorS.cpp;CCM_ConfiguratorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Configurator.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Configurator.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_ConfiguratorC.cpp;CCM_ConfiguratorC.h;CCM_ConfiguratorC.inl;CCM_ConfiguratorS.cpp;CCM_ConfiguratorS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Cookie.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Cookie.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Cookie.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_CookieC.cpp;CCM_CookieC.h;CCM_CookieC.inl;CCM_CookieS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Cookie.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Cookie.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_CookieC.cpp;CCM_CookieC.h;CCM_CookieC.inl;CCM_CookieS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Cookie.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Cookie.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_CookieC.cpp;CCM_CookieC.h;CCM_CookieC.inl;CCM_CookieS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Cookie.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Cookie.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_CookieC.cpp;CCM_CookieC.h;CCM_CookieC.inl;CCM_CookieS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Enumeration.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Enumeration.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Enumeration.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_EnumerationC.cpp;CCM_EnumerationC.h;CCM_EnumerationC.inl;CCM_EnumerationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Enumeration.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Enumeration.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_EnumerationC.cpp;CCM_EnumerationC.h;CCM_EnumerationC.inl;CCM_EnumerationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Enumeration.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Enumeration.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_EnumerationC.cpp;CCM_EnumerationC.h;CCM_EnumerationC.inl;CCM_EnumerationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Enumeration.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_Enumeration.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_EnumerationC.cpp;CCM_EnumerationC.h;CCM_EnumerationC.inl;CCM_EnumerationS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_EventBase.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_EventBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_EventBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_EventBaseC.cpp;CCM_EventBaseC.h;CCM_EventBaseC.inl;CCM_EventBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_EventBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_EventBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_EventBaseC.cpp;CCM_EventBaseC.h;CCM_EventBaseC.inl;CCM_EventBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_EventBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_EventBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_EventBaseC.cpp;CCM_EventBaseC.h;CCM_EventBaseC.inl;CCM_EventBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_EventBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS &quot;CCM_EventBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_EventBaseC.cpp;CCM_EventBaseC.h;CCM_EventBaseC.inl;CCM_EventBaseS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_EventConsumerBase.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_EventConsumerBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_EventConsumerBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_EventConsumerBaseC.cpp;CCM_EventConsumerBaseC.h;CCM_EventConsumerBaseC.inl;CCM_EventConsumerBaseS.cpp;CCM_EventConsumerBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_EventConsumerBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_EventConsumerBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_EventConsumerBaseC.cpp;CCM_EventConsumerBaseC.h;CCM_EventConsumerBaseC.inl;CCM_EventConsumerBaseS.cpp;CCM_EventConsumerBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_EventConsumerBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_EventConsumerBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_EventConsumerBaseC.cpp;CCM_EventConsumerBaseC.h;CCM_EventConsumerBaseC.inl;CCM_EventConsumerBaseS.cpp;CCM_EventConsumerBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_EventConsumerBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_EventConsumerBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_EventConsumerBaseC.cpp;CCM_EventConsumerBaseC.h;CCM_EventConsumerBaseC.inl;CCM_EventConsumerBaseS.cpp;CCM_EventConsumerBaseS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Events.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Events.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Events.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_EventsC.cpp;CCM_EventsC.h;CCM_EventsC.inl;CCM_EventsS.cpp;CCM_EventsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Events.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Events.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_EventsC.cpp;CCM_EventsC.h;CCM_EventsC.inl;CCM_EventsS.cpp;CCM_EventsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Events.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Events.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_EventsC.cpp;CCM_EventsC.h;CCM_EventsC.inl;CCM_EventsS.cpp;CCM_EventsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Events.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Events.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_EventsC.cpp;CCM_EventsC.h;CCM_EventsC.inl;CCM_EventsS.cpp;CCM_EventsS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Exceptions.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Exceptions.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;CCM_Exceptions.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_ExceptionsC.cpp;CCM_ExceptionsC.h;CCM_ExceptionsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Exceptions.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;CCM_Exceptions.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_ExceptionsC.cpp;CCM_ExceptionsC.h;CCM_ExceptionsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Exceptions.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;CCM_Exceptions.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_ExceptionsC.cpp;CCM_ExceptionsC.h;CCM_ExceptionsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Exceptions.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;CCM_Exceptions.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_ExceptionsC.cpp;CCM_ExceptionsC.h;CCM_ExceptionsS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Home.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Home.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Home.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_HomeC.cpp;CCM_HomeC.h;CCM_HomeC.inl;CCM_HomeS.cpp;CCM_HomeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Home.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Home.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_HomeC.cpp;CCM_HomeC.h;CCM_HomeC.inl;CCM_HomeS.cpp;CCM_HomeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Home.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Home.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_HomeC.cpp;CCM_HomeC.h;CCM_HomeC.inl;CCM_HomeS.cpp;CCM_HomeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Home.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Home.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_HomeC.cpp;CCM_HomeC.h;CCM_HomeC.inl;CCM_HomeS.cpp;CCM_HomeS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_HomeConfiguration.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_HomeConfiguration.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeConfiguration.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_HomeConfigurationC.cpp;CCM_HomeConfigurationC.h;CCM_HomeConfigurationC.inl;CCM_HomeConfigurationS.cpp;CCM_HomeConfigurationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_HomeConfiguration.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeConfiguration.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_HomeConfigurationC.cpp;CCM_HomeConfigurationC.h;CCM_HomeConfigurationC.inl;CCM_HomeConfigurationS.cpp;CCM_HomeConfigurationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_HomeConfiguration.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeConfiguration.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_HomeConfigurationC.cpp;CCM_HomeConfigurationC.h;CCM_HomeConfigurationC.inl;CCM_HomeConfigurationS.cpp;CCM_HomeConfigurationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_HomeConfiguration.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeConfiguration.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_HomeConfigurationC.cpp;CCM_HomeConfigurationC.h;CCM_HomeConfigurationC.inl;CCM_HomeConfigurationS.cpp;CCM_HomeConfigurationS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_HomeFinder.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_HomeFinder.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeFinder.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_HomeFinderC.cpp;CCM_HomeFinderC.h;CCM_HomeFinderC.inl;CCM_HomeFinderS.cpp;CCM_HomeFinderS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_HomeFinder.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeFinder.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_HomeFinderC.cpp;CCM_HomeFinderC.h;CCM_HomeFinderC.inl;CCM_HomeFinderS.cpp;CCM_HomeFinderS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_HomeFinder.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeFinder.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_HomeFinderC.cpp;CCM_HomeFinderC.h;CCM_HomeFinderC.inl;CCM_HomeFinderS.cpp;CCM_HomeFinderS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_HomeFinder.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_HomeFinder.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_HomeFinderC.cpp;CCM_HomeFinderC.h;CCM_HomeFinderC.inl;CCM_HomeFinderS.cpp;CCM_HomeFinderS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Homes.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Homes.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Homes.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_HomesC.cpp;CCM_HomesC.h;CCM_HomesC.inl;CCM_HomesS.cpp;CCM_HomesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Homes.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Homes.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_HomesC.cpp;CCM_HomesC.h;CCM_HomesC.inl;CCM_HomesS.cpp;CCM_HomesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Homes.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Homes.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_HomesC.cpp;CCM_HomesC.h;CCM_HomesC.inl;CCM_HomesS.cpp;CCM_HomesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Homes.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Homes.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_HomesC.cpp;CCM_HomesC.h;CCM_HomesC.inl;CCM_HomesS.cpp;CCM_HomesS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_KeylessCCMHome.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_KeylessCCMHome.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_KeylessCCMHome.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_KeylessCCMHomeC.cpp;CCM_KeylessCCMHomeC.h;CCM_KeylessCCMHomeC.inl;CCM_KeylessCCMHomeS.cpp;CCM_KeylessCCMHomeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_KeylessCCMHome.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_KeylessCCMHome.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_KeylessCCMHomeC.cpp;CCM_KeylessCCMHomeC.h;CCM_KeylessCCMHomeC.inl;CCM_KeylessCCMHomeS.cpp;CCM_KeylessCCMHomeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_KeylessCCMHome.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_KeylessCCMHome.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_KeylessCCMHomeC.cpp;CCM_KeylessCCMHomeC.h;CCM_KeylessCCMHomeC.inl;CCM_KeylessCCMHomeS.cpp;CCM_KeylessCCMHomeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_KeylessCCMHome.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_KeylessCCMHome.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_KeylessCCMHomeC.cpp;CCM_KeylessCCMHomeC.h;CCM_KeylessCCMHomeC.inl;CCM_KeylessCCMHomeS.cpp;CCM_KeylessCCMHomeS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Navigation.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Navigation.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Navigation.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_NavigationC.cpp;CCM_NavigationC.h;CCM_NavigationC.inl;CCM_NavigationS.cpp;CCM_NavigationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Navigation.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Navigation.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_NavigationC.cpp;CCM_NavigationC.h;CCM_NavigationC.inl;CCM_NavigationS.cpp;CCM_NavigationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Navigation.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Navigation.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_NavigationC.cpp;CCM_NavigationC.h;CCM_NavigationC.inl;CCM_NavigationS.cpp;CCM_NavigationS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Navigation.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Navigation.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_NavigationC.cpp;CCM_NavigationC.h;CCM_NavigationC.inl;CCM_NavigationS.cpp;CCM_NavigationS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Object.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Object.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Object.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_ObjectC.cpp;CCM_ObjectC.h;CCM_ObjectC.inl;CCM_ObjectS.cpp;CCM_ObjectS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Object.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Object.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_ObjectC.cpp;CCM_ObjectC.h;CCM_ObjectC.inl;CCM_ObjectS.cpp;CCM_ObjectS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Object.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Object.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_ObjectC.cpp;CCM_ObjectC.h;CCM_ObjectC.inl;CCM_ObjectS.cpp;CCM_ObjectS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Object.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Object.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_ObjectC.cpp;CCM_ObjectC.h;CCM_ObjectC.inl;CCM_ObjectS.cpp;CCM_ObjectS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_PrimaryKeyBase.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_PrimaryKeyBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_PrimaryKeyBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_PrimaryKeyBaseC.cpp;CCM_PrimaryKeyBaseC.h;CCM_PrimaryKeyBaseC.inl;CCM_PrimaryKeyBaseS.cpp;CCM_PrimaryKeyBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_PrimaryKeyBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_PrimaryKeyBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_PrimaryKeyBaseC.cpp;CCM_PrimaryKeyBaseC.h;CCM_PrimaryKeyBaseC.inl;CCM_PrimaryKeyBaseS.cpp;CCM_PrimaryKeyBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_PrimaryKeyBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_PrimaryKeyBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_PrimaryKeyBaseC.cpp;CCM_PrimaryKeyBaseC.h;CCM_PrimaryKeyBaseC.inl;CCM_PrimaryKeyBaseS.cpp;CCM_PrimaryKeyBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_PrimaryKeyBase.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_PrimaryKeyBase.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_PrimaryKeyBaseC.cpp;CCM_PrimaryKeyBaseC.h;CCM_PrimaryKeyBaseC.inl;CCM_PrimaryKeyBaseS.cpp;CCM_PrimaryKeyBaseS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_Receptacle.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Receptacle.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Receptacle.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_ReceptacleC.cpp;CCM_ReceptacleC.h;CCM_ReceptacleC.inl;CCM_ReceptacleS.cpp;CCM_ReceptacleS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Receptacle.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Receptacle.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_ReceptacleC.cpp;CCM_ReceptacleC.h;CCM_ReceptacleC.inl;CCM_ReceptacleS.cpp;CCM_ReceptacleS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Receptacle.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Receptacle.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_ReceptacleC.cpp;CCM_ReceptacleC.h;CCM_ReceptacleC.inl;CCM_ReceptacleS.cpp;CCM_ReceptacleS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_Receptacle.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_Receptacle.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_ReceptacleC.cpp;CCM_ReceptacleC.h;CCM_ReceptacleC.inl;CCM_ReceptacleS.cpp;CCM_ReceptacleS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CCM_StandardConfigurator.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_StandardConfigurator.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_StandardConfigurator.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_StandardConfiguratorC.cpp;CCM_StandardConfiguratorC.h;CCM_StandardConfiguratorC.inl;CCM_StandardConfiguratorS.cpp;CCM_StandardConfiguratorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_StandardConfigurator.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_StandardConfigurator.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_StandardConfiguratorC.cpp;CCM_StandardConfiguratorC.h;CCM_StandardConfiguratorC.inl;CCM_StandardConfiguratorS.cpp;CCM_StandardConfiguratorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_StandardConfigurator.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_StandardConfigurator.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="CCM_StandardConfiguratorC.cpp;CCM_StandardConfiguratorC.h;CCM_StandardConfiguratorC.inl;CCM_StandardConfiguratorS.cpp;CCM_StandardConfiguratorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on CCM_StandardConfigurator.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export &quot;CCM_StandardConfigurator.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="CCM_StandardConfiguratorC.cpp;CCM_StandardConfiguratorC.h;CCM_StandardConfiguratorC.inl;CCM_StandardConfiguratorS.cpp;CCM_StandardConfiguratorS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Components.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Components.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;Components.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="ComponentsC.cpp;ComponentsC.h;ComponentsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Components.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;Components.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="ComponentsC.cpp;ComponentsC.h;ComponentsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Components.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;Components.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="ComponentsC.cpp;ComponentsC.h;ComponentsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\bin\tao_idl on Components.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -DCCM_LW -Gcl -I.. -I../ccm -Wb,stub_export_include=CCM_Stub_Export.h -Wb,stub_export_macro=CCM_STUB_Export -Wb,skel_export_include=CCM_Svnt_Export.h -Wb,skel_export_macro=CCM_SVNT_Export -SS -Sci &quot;Components.idl&quot;"
+						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="ComponentsC.cpp;ComponentsC.h;ComponentsS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

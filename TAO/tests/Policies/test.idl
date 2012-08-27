@@ -1,0 +1,7 @@
+//
+// $Id: test.idl 32540 2000-05-12 21:45:57Z coryan $
+//
+
+interface Test
+{
+};

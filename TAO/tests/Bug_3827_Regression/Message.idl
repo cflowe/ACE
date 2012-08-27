@@ -1,0 +1,8 @@
+// $Id: Message.idl 89152 2010-02-23 09:57:24Z vzykov $
+
+valuetype Message
+{
+  public string user;
+  public string subject;
+  public string text;
+};

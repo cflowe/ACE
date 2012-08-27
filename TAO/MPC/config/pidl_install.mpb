@@ -1,0 +1,9 @@
+// $Id: pidl_install.mpb 91782 2010-09-15 13:12:04Z johnnyw $
+project {
+  Define_Custom(PidlInstallWithoutBuilding) {
+    automatic = 0
+  }
+  specific {
+    custom_install += pidlinstallwithoutbuilding_files
+  }
+}

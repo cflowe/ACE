@@ -1,0 +1,12 @@
+//
+// $Id: Test.idl 51079 2003-07-15 19:53:30Z dengg $
+//
+
+module Test
+{
+  /// A very simple interface
+  interface Hello
+  {
+    void short_sleep();
+  };
+};

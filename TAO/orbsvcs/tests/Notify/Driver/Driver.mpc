@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Driver.mpc 54747 2003-12-23 21:05:25Z dhinton $
+
+project (Notify_Test_Driver): notifytest {
+  exename  = Notify_Tests_Driver
+
+  Source_Files {
+  main.cpp     
+  }
+}

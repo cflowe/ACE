@@ -1,0 +1,20 @@
+// $Id: State_Connection_Test_Sender.idl 95881 2012-06-13 18:29:33Z johnnyw $
+
+/**
+ * @author Marcel Smit (msmit@remedy.nl)
+ */
+
+#ifndef DDS_STATE_CONNECTION_TEST_SENDER_IDL
+#define DDS_STATE_CONNECTION_TEST_SENDER_IDL
+
+#include "Connector/State_Connection_Test_Connector.idl"
+
+module State_Connection_Test
+{
+  component Sender
+  {
+    port State_ConnectionTestConnector::DDS_Update info_update;
+  };
+};
+
+#endif

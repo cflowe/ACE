@@ -1,0 +1,11 @@
+//
+// $Id: Hello.idl 91816 2010-09-17 08:35:56Z johnnyw $
+//
+module Demo
+{
+  interface HelloWorld
+  {
+    void sayHello(in string msg);
+    oneway void shutdown();
+  };
+};

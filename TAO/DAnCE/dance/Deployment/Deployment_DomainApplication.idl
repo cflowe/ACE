@@ -1,0 +1,17 @@
+// $Id: Deployment_DomainApplication.idl 91982 2010-09-23 20:43:54Z wotte $
+
+#ifndef DEPLOYMENT_DOMAINAPPLICATION_IDL
+#define DEPLOYMENT_DOMAINAPPLICATION_IDL
+
+#include "dance/Deployment/Deployment_Application.idl"
+
+module Deployment
+{
+  interface DomainApplication :
+    Application
+  {
+  };
+};
+
+
+#endif //DEPLOYMENT_DOMAINAPPLICATION_IDL

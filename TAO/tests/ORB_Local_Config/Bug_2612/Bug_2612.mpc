@@ -1,0 +1,26 @@
+
+// $Id: Bug_2612.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+
+project (DllOrb) : taolib, portableserver {
+
+        dynamicflags += DLLORB_BUILD_DLL
+
+        source_files {
+                DllOrb.cpp
+        }
+        header_files {
+                DllOrb.h
+                DllOrb_Export.h
+        }
+}
+
+project : taoexe {
+
+        exename = Test
+
+        after += DllOrb
+
+        source_files {
+                Test.cpp
+        }
+}

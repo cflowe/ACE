@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-34AB-83D7DDDBAE97}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-34AB-83D7DDDBAE97}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Test Files">
+      <UniqueIdentifier>{4190FD01-FECA-1BAD-34AB-83D7DDDBAE97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Svc Conf Files">
+      <UniqueIdentifier>{84D0937A-FECA-1BAD-34AB-83D7DDDBAE97}</UniqueIdentifier>
+      <Extensions>conf;confxml</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IDL_Cubit.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cubit.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="run_test.pl">
+      <Filter>Test Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="server_shmiop.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="server_shmiop.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.mt_server.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.mt_server.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.st_client.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.st_client.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.st_server.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.st_server.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.zero_lock.conf">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+    <None Include="svc.zero_lock.conf.xml">
+      <Filter>Svc Conf Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

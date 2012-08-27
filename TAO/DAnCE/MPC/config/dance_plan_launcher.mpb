@@ -1,0 +1,13 @@
+// -*- MPC -*-
+// $Id: dance_plan_launcher.mpb 93861 2011-04-11 11:13:37Z wotte $
+
+project : dance_logger, dance_convert_plan, \
+          dance_executionmanager_stub, \
+          dance_domainapplicationmanager_stub, \
+          dance_domainapplication_stub, \
+          dance_nodemanager_stub, \
+          dance_nodeapplicationmanager_stub, \
+          dance_nodeapplication_stub, dance_stub {
+  after += DAnCE_Plan_Launcher_Impl
+  libs += DAnCE_Plan_Launcher_Impl
+}

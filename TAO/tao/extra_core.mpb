@@ -1,0 +1,14 @@
+// -*- MPC -*-
+// $Id: extra_core.mpb 79231 2007-08-06 18:32:54Z johnnyw $
+
+feature(!minimum_corba) {
+  Source_Files(TAO_COMPONENTS) {
+    Dynamic_Adapter.cpp
+  }
+}
+
+feature(corba_messaging) {
+  Source_Files(TAO_COMPONENTS) {
+    Policy_Manager.cpp
+  }
+}

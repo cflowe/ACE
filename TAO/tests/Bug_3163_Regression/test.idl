@@ -1,0 +1,12 @@
+//
+// $Id: test.idl 80181 2007-12-03 19:41:10Z johnnyw $
+//
+#include "tao/CharSeq.pidl"
+
+interface ctest {
+        typedef CORBA::CharSeq UCSeq;
+
+        long ctestfn(in long size, out UCSeq data);
+
+        oneway void shutdown ();
+};

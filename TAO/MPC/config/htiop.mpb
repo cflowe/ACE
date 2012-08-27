@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: htiop.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project : htbp {
+  after     += HTIOP
+  libs      += TAO_HTIOP
+  tagchecks += HTIOP
+}

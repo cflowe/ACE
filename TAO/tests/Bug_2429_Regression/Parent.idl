@@ -1,0 +1,8 @@
+// $Id: Parent.idl 71453 2006-03-08 15:08:23Z smcqueen $
+
+interface Parent
+{
+  void parentMethod ();
+
+  oneway void shutdown ();
+};

@@ -1,0 +1,14 @@
+// $Id: Deployment_NodeApplicationManager.idl 91982 2010-09-23 20:43:54Z wotte $
+#ifndef NODEAPPLICATIONMANAGER_IDL
+#define NODEAPPLICATIONMANAGER_IDL
+
+#include "dance/Deployment/Deployment_ApplicationManager.idl"
+
+module Deployment {
+  interface NodeApplicationManager :
+    ApplicationManager
+  {
+  };
+};
+
+#endif /* NODEAPPLICATIONMANAGER_IDL */

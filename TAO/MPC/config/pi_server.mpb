@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: pi_server.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project : taolib, pi, portableserver {
+  after   += PI_Server
+  libs    += TAO_PI_Server
+}

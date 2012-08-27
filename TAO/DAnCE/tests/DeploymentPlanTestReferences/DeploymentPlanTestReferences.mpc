@@ -1,0 +1,9 @@
+// $Id: DeploymentPlanTestReferences.mpc 89019 2010-02-16 08:24:39Z johnnyw $
+project : dance, taolib, xerces, dance_config_handlers, dance_logger {
+  exename   = DeploymentPlanTestReferences
+
+  Source_Files {
+    test.cpp
+  }
+}
+

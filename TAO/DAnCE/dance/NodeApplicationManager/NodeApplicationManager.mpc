@@ -1,0 +1,17 @@
+// -*- MPC -*-
+// $Id: NodeApplicationManager.mpc 92008 2010-09-24 14:50:21Z wotte $
+
+project (DAnCE_NodeApplicationManager) : install, dance_lib, naming, \
+        dance_nodeapplicationmanager_skel,dynamicinterface, \
+        dance_nodeapplication, dance_stub, avoids_ace_for_tao {
+  sharedname   = DAnCE_NodeApplicationManager
+  dynamicflags += NODEAPPLICATIONMANAGER_BUILD_DLL
+
+  Source_Files {
+    NodeApplicationManager_Impl.cpp
+  }
+
+  specific {
+    install_dir = dance/NodeApplicationManager
+  }
+}

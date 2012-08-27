@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Installheader Files">
+      <UniqueIdentifier>{003A76C5-FECA-1BAD-8469-6ECBD58902C8}</UniqueIdentifier>
+      <Extensions>h;_Tcpp</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contexts\Context_Impl_Base_T.cpp">
+      <Filter>Installheader Files</Filter>
+    </None>
+    <None Include="Contexts\Context_Impl_Base_T.h">
+      <Filter>Installheader Files</Filter>
+    </None>
+    <None Include="Contexts\Session\Session_Context_T.cpp">
+      <Filter>Installheader Files</Filter>
+    </None>
+    <None Include="Contexts\Session\Session_Context_T.h">
+      <Filter>Installheader Files</Filter>
+    </None>
+    <None Include="Servants\Session\Servant_Impl_T.cpp">
+      <Filter>Installheader Files</Filter>
+    </None>
+    <None Include="Servants\Session\Servant_Impl_T.h">
+      <Filter>Installheader Files</Filter>
+    </None>
+    <None Include="Version.h">
+      <Filter>Installheader Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+// -*- MPC -*-
+// $Id: Union_Forward_Test.mpc 82806 2008-09-22 19:26:34Z mesnier_p $
+
+project(*Client): taoclient, dynamicinterface, dynamicany, anytypecode, ifr_client {
+
+  Source_Files {
+    client.cpp
+  }
+  IDL_Files {
+  }
+}
+

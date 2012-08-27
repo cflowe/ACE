@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: RootPOA.mpc 64141 2005-02-21 08:56:36Z jwillemsen $
+
+project(*Server): taoserver {
+  exename = RootPOA
+}
+

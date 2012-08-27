@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-727D-8A63505D827F}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-727D-8A63505D827F}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Pidlinstallwithoutbuilding Files">
+      <UniqueIdentifier>{B5581BA1-FECA-1BAD-727D-8A63505D827F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="extra_core.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="tao.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="tao.mwc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="BooleanSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CharSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CONV_FRAME.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Current.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DoubleSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FloatSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GIOP.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="IIOP.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="IIOP_Endpoints.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="IOP.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LongDoubleSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LongLongSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LongSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Messaging_PolicyValue.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Messaging_SyncScope.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ObjectIdList.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OctetSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="orb_types.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ParameterMode.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PI_Forward.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Policy.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Policy_Current.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Policy_Forward.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Policy_Manager.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PortableInterceptor.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Services.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ShortSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="StringSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TAO.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TimeBase.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ULongLongSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ULongSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UShortSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WCharSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WStringSeq.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InterfaceDef.pidl">
+      <Filter>Pidlinstallwithoutbuilding Files</Filter>
+    </None>
+    <None Include="InvalidName.pidl">
+      <Filter>Pidlinstallwithoutbuilding Files</Filter>
+    </None>
+    <None Include="Object_Key.pidl">
+      <Filter>Pidlinstallwithoutbuilding Files</Filter>
+    </None>
+    <None Include="orb.idl">
+      <Filter>Pidlinstallwithoutbuilding Files</Filter>
+    </None>
+    <None Include="Typecode_types.pidl">
+      <Filter>Pidlinstallwithoutbuilding Files</Filter>
+    </None>
+    <None Include="WrongTransaction.pidl">
+      <Filter>Pidlinstallwithoutbuilding Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

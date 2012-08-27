@@ -1,0 +1,14 @@
+// $Id: Single_Service.idl 92671 2010-11-22 14:39:22Z msmit $
+
+#ifndef SINGLE_SERVICE_IDL
+#define SINGLE_SERVICE_IDL
+
+#include <Components.idl>
+#include "Common/Single_Service_Common.idl"
+
+component Single_Service
+{
+  provides Simple_Service ping_port;
+};
+
+#endif

@@ -1,0 +1,14 @@
+// $Id: Deployment_NodeApplication.idl 91982 2010-09-23 20:43:54Z wotte $
+
+#ifndef DEPLOYMENT_NODEAPPLICATION_IDL
+#define DEPLOYMENT_NODEAPPLICATION_IDL
+
+#include "dance/Deployment/Deployment_Application.idl"
+
+module Deployment {
+  interface NodeApplication : Application
+  {
+  };
+};
+#endif /* DEPLOYMENT_NODEAPPLICATION_IDL */
+

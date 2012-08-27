@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: core_anytypecode.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+// N.B. This project is only intended for use within ORB core mpc files.
+// Use anytypecode.mpb in all other circumstances.
+
+project {
+  after   += AnyTypeCode
+  libs    += TAO_AnyTypeCode
+}

@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: Bug_2826_Regression.mpc 77378 2007-02-25 17:26:34Z johnnyw $
+
+project(*) : taoserver, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  exename = server
+  Source_Files {
+    bug_2826_regression.cpp
+  }
+}

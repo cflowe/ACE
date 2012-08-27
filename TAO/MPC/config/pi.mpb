@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: pi.mpb 93439 2011-02-26 14:27:45Z mesnier_p $
+
+project : taolib, codecfactory {
+  after   += PI
+  libs    += TAO_PI
+}

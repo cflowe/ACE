@@ -1,0 +1,12 @@
+// $Id: Test.idl 72876 2006-05-31 14:22:17Z schmidt $
+
+interface Test
+{
+  // = TITLE
+  //   A simple interface to test the Object Loading features in the
+  //   ORB.
+
+  long instance_count ();
+
+  void destroy ();
+};

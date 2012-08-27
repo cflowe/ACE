@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: Bug_2375_Regression.mpc 75478 2006-11-22 13:58:29Z jtc $
+project (*Test) : taoserver, valuetype {
+  exename = test
+  Source_Files {
+    test.cpp
+    }
+}

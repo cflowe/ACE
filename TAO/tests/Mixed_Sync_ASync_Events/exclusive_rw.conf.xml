@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<!-- Converted from ./tests/AMI/exclusive.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  -->
+ <!--  $Id: exclusive_rw.conf.xml 95015 2011-11-11 11:24:51Z mcorino $ -->
+ <!--  -->
+ <static id="Client_Strategy_Factory" params="-ORBTransportMuxStrategy EXCLUSIVE -ORBclientconnectionhandler RW -ORBConnectStrategy blocked"/>
+ <static id="Resource_Factory" params="-ORBFlushingStrategy blocking"/>
+</ACE_Svc_Conf>

@@ -1,0 +1,16 @@
+// $Id: Gateway.idl 81985 2008-06-16 18:13:50Z sowayaa $
+
+#ifndef GATEWAY_IDL
+#define GATEWAY_IDL
+
+module Gateway
+{
+  interface Object_Factory
+  {
+    Object create_object (in string interface_repository_id,
+                          in Object gatewayed_object);
+  };
+
+};
+
+#endif  /* GATEWAY_IDL */

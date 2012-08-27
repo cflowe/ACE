@@ -1,0 +1,28 @@
+// -*- MPC -*-
+// $Id: AVS_Pluggable_Flow_Protocol.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+
+project(*ts) : orbsvcslib, portableserver, avstreams, naming {
+  sharedname   = TAO_TS
+  dynamicflags += TAO_TS_BUILD_DLL
+
+  Source_Files {
+    TimeStamp.cpp
+  }
+}
+
+project(*send): avstreamsexe {
+  exename  = sender
+
+  Source_Files {
+    sender.cpp
+  }
+}
+
+project(*recv): avstreamsexe {
+  exename  = receiver
+
+  Source_Files {
+    receiver.cpp
+  }
+}
+

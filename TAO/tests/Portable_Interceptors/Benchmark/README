@@ -1,0 +1,10 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+This test allows you to visually check the correct invocation of
+TAO's portable interceptors, especially the Dynamic interface.
+
+  To run the test, try:
+
+  server -o test.ior
+
+  client

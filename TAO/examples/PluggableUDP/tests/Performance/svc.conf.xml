@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<!-- Converted from ./examples/PluggableUDP/tests/Performance/svc.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  -->
+ <!--  $Id: svc.conf.xml 94649 2011-10-07 07:54:59Z msmit $ -->
+ <!--  -->
+ <static id="Advanced_Resource_Factory" params="-ORBProtocolFactory DIOP_Factory -ORBReactorType tp"/>
+</ACE_Svc_Conf>

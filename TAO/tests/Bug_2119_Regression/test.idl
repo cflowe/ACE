@@ -1,0 +1,12 @@
+// $Id: test.idl 91178 2010-07-22 19:24:36Z mesnier_p $
+
+valuetype MyValueType;
+typedef sequence<MyValueType> MyValueType_Seq;
+
+valuetype MyValueType
+{
+   private MyValueType_Seq myValueTypes;
+};
+
+
+

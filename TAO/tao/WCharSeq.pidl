@@ -1,0 +1,14 @@
+// -*- IDL -*-
+// $Id: WCharSeq.pidl 92104 2010-09-30 09:53:25Z johnnyw $
+
+#ifndef TAO_CORBA_WCHAR_SEQ_IDL
+#define TAO_CORBA_WCHAR_SEQ_IDL
+
+#pragma prefix "omg.org"
+
+module CORBA
+{
+  typedef sequence<wchar> WCharSeq;
+};
+
+#endif  /* TAO_CORBA_WCHAR_SEQ_IDL */

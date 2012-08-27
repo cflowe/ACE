@@ -1,0 +1,19 @@
+// -*- MPC -*-
+// $Id: Bug_3827_Regression.mpc 89152 2010-02-23 09:57:24Z vzykov $
+
+project(*IDL): taoidldefaults, anytypecode {
+  IDL_Files {
+    Message.idl
+  }
+  custom_only = 1
+}
+
+project (*test) : taoexe, valuetype {
+  after     += *IDL
+  exename    = test
+
+  Source_Files {
+    MessageC.cpp
+    test.cpp
+  }
+}

@@ -1,0 +1,19 @@
+// $Id: incorrect_emits.idl 89824 2010-04-09 11:41:21Z johnnyw $
+
+#include <Components.idl>
+
+eventtype foo_event
+{
+};
+
+interface A
+{
+  long do_something ();
+};
+
+connector B
+{
+  provides A x;
+  uses A y;
+  emits foo_event e_foo;
+};

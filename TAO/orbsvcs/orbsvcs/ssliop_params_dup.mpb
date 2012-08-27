@@ -1,0 +1,17 @@
+//$Id: ssliop_params_dup.mpb 80368 2008-01-03 14:37:39Z mitza $
+
+feature(mfc) {
+  Source_Files(ORBSVCS_COMPONENTS) {
+    SSLIOP {
+      ./SSLIOP/params_dup.cpp
+    }
+  }
+}
+
+feature(!mfc) {
+  Source_Files(ORBSVCS_COMPONENTS) {
+    SSLIOP {
+      ./SSLIOP/params_dup.c
+    }
+  }
+}

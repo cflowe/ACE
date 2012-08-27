@@ -1,0 +1,23 @@
+// $Id: SimplePublisher.idl 93359 2011-02-11 11:33:12Z mcorino $
+
+#ifndef SIMPLE_PUBLISHER_IDL
+#define SIMPLE_PUBLISHER_IDL
+
+#include "SimpleCommon.idl"
+#include "Components.idl"
+
+module Simple
+{
+  component SimplePublisher
+  {
+#if !defined (CCM_NOEVENT)
+    publishes Hello hello_publishes;
+#endif
+  };
+
+  home SimplePublisherHome manages SimplePublisher
+  {
+  };
+};
+
+#endif /*SIMPLE_PUBLISHER_IDL*/

@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: ec_use_typed_events_serv.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+feature(ec_typed_events) : dynamicinterface, ifr_client {
+}

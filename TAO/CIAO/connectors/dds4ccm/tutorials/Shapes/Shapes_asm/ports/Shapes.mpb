@@ -1,0 +1,9 @@
+// $Id: Shapes.mpb 94128 2011-05-31 12:32:38Z johnnyw $
+
+feature (dds4ccm_ndds) {
+  dds_ts_flags += -d GeneratedCode
+}
+
+feature (dds4ccm_opendds) {
+  dds_ts_flags += -o GeneratedCode
+}

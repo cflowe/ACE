@@ -1,0 +1,3 @@
+// $Id: TestType.idl 75478 2006-11-22 13:58:29Z jtc $
+
+typedef octet Array_Typedef[1];

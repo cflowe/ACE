@@ -1,0 +1,25 @@
+// $Id: test.idl 91947 2010-09-23 07:52:31Z msmit $
+
+#ifndef TEST_IDL
+#define TEST_IDL
+
+module TestXMISequence {
+  typedef sequence<char> SeqChar;
+  typedef sequence<char, 10> SeqChar10;
+
+  struct A {
+    SeqChar field;
+  };
+  struct A10 {
+    SeqChar10 field;
+  };
+
+  struct B {
+    SeqChar field;
+  };
+  struct B10 {
+    SeqChar10 field;
+  };
+};
+
+#endif // TEST_IDL

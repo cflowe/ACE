@@ -1,0 +1,11 @@
+// $Id: Stock_Quoter_Types.idl 84189 2009-01-19 15:54:51Z johnnyw $
+
+#ifndef Stock_Quoter_Types_idl
+#define Stock_Quoter_Types_idl
+
+module Stock_Quoter_Types
+{
+   typedef string Stock_ID;
+};
+
+#endif /* Stock_Quoter_Types_idl */

@@ -1,0 +1,18 @@
+// -*- IDL -*-
+
+// $Id: AsyncStartupWaiter.idl 65388 2005-04-12 22:18:49Z michel_j $
+
+module ImplementationRepository
+{
+  struct StartupInfo {
+    string name;
+    string partial_ior;
+    string ior;
+  };
+
+  interface AsyncStartupWaiter
+  {
+    StartupInfo wait_for_startup(in string name);
+  };
+};
+

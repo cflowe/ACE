@@ -1,0 +1,22 @@
+// $Id: Multiple_Inheritance.idl 75221 2006-11-06 10:33:28Z johnnyw $
+
+interface A
+{
+  string method1 ();
+};
+
+interface intB : A
+{
+  string method2 ();
+};
+
+interface C : A
+{
+  string method3 ();
+};
+
+interface D : intB, C
+{
+  string method4 ();
+};
+

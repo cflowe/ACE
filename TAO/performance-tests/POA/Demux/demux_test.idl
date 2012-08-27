@@ -1,0 +1,8 @@
+// $Id: demux_test.idl 22289 1999-04-28 03:47:33Z vishal $
+// Interface for TAO's Demux_Test
+
+interface Demux_Test
+{
+   void M302 ();
+   oneway void shutdown ();
+};

@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AV">
+      <UniqueIdentifier>{00000446-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="AV">
+      <UniqueIdentifier>{00000446-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="AV">
+      <UniqueIdentifier>{00000446-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{5635C877-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{502A2050-FECA-1BAD-0444-8A630000505F}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AV\AV_Core.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\AVStreams_i.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\default_resource.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\Endpoint_Strategy.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\Fill_ACE_QoS.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\FlowSpec_Entry.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\MCast.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\md5c.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\media_timer.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\Policy.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\Protocol_Factory.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\QoS_UDP.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\RTCP.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\RTCP_Channel.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\RTCP_Packet.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\RTP.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\SCTP_SEQ.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\sfp.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\TCP.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\Transport.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\UDP.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AVStreamsC.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="AVStreamsS.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="Null_MediaCtrlC.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="Null_MediaCtrlS.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="sfpC.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+    <ClCompile Include="sfpS.cpp">
+      <Filter>AV</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AV\TCP.h">
+      <Filter>AV</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\Transport.h">
+      <Filter>AV</Filter>
+    </ClInclude>
+    <ClInclude Include="AVStreamsC.h">
+      <Filter>AV</Filter>
+    </ClInclude>
+    <ClInclude Include="AVStreamsS.h">
+      <Filter>AV</Filter>
+    </ClInclude>
+    <ClInclude Include="Null_MediaCtrlC.h">
+      <Filter>AV</Filter>
+    </ClInclude>
+    <ClInclude Include="Null_MediaCtrlS.h">
+      <Filter>AV</Filter>
+    </ClInclude>
+    <ClInclude Include="sfpC.h">
+      <Filter>AV</Filter>
+    </ClInclude>
+    <ClInclude Include="sfpS.h">
+      <Filter>AV</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\AV_Core.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\AV_export.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\AVStreams_i.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\default_resource.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\Endpoint_Strategy.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\Endpoint_Strategy_T.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\Fill_ACE_QoS.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\Flows_T.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\FlowSpec_Entry.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\global.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\MCast.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\md5.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\media_timer.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\ntp-time.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\Policy.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\Protocol_Factory.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\QoS_UDP.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\Resource_Factory.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\RTCP.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\RTCP_Channel.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\RTCP_Packet.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\RTP.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\SCTP_SEQ.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\sfp.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="AV\UDP.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AV.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosConcurrency.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLifeCycle.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLoadBalancing.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="cosnaming_serv_persistence.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNotification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosProperty.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTime.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTrading.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsNotifyLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_idl.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_serv.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_skel.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FaultTolerance.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FTORB.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtRtEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="HTIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="IFRService.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="orbsvcs.mwc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="PortableGroup.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RT_Notification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTCORBAEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTKokyuEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSched.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSchedEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Security.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SSLIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ssliop_params_dup.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Svc_Utils.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_CosConcurrency.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosConcurrency_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosConcurrency_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosEvent.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosEvent_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosEvent_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosLifeCycle.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosLifeCycle_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosLoadBalancing.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNaming.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNaming_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNaming_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNotification.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNotification_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNotification_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosProperty.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosProperty_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosProperty_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTime.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTime_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTime_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTrading.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTrading_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTrading_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsEventLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsEventLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsEventLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsNotifyLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsNotifyLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsNotifyLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FaultTolerance.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FT_ClientORB.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FT_ServerORB.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FTORB_Utils.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_PortableGroup.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEvent.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEvent_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEvent_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEventLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEventLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEventLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_Svc_Utils.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AVStreams.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Null_MediaCtrl.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sfp.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AV\AVStreams_i.inl">
+      <Filter>AV</Filter>
+    </None>
+    <None Include="AV\FlowSpec_Entry.inl">
+      <Filter>AV</Filter>
+    </None>
+    <None Include="AV\MCast.inl">
+      <Filter>AV</Filter>
+    </None>
+    <None Include="AV\Policy.inl">
+      <Filter>AV</Filter>
+    </None>
+    <None Include="AV\QoS_UDP.inl">
+      <Filter>AV</Filter>
+    </None>
+    <None Include="AV\Transport.inl">
+      <Filter>AV</Filter>
+    </None>
+    <None Include="AV\UDP.inl">
+      <Filter>AV</Filter>
+    </None>
+    <None Include="AVStreamsC.inl">
+      <Filter>AV</Filter>
+    </None>
+    <None Include="Null_MediaCtrlC.inl">
+      <Filter>AV</Filter>
+    </None>
+    <None Include="sfpC.inl">
+      <Filter>AV</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AV\Endpoint_Strategy_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AV\Flows_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AV.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

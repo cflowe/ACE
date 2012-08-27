@@ -1,0 +1,17 @@
+/**
+
+$Id: README 94612 2011-10-06 11:57:27Z johnnyw $
+
+@page Crashed Callback Test README File
+
+	On TAO-1.1.12 the ORB would dead-lock when trying to send a
+callback to a crashed server.  As far as we know it only happens with
+reliable oneways.
+
+	To run the test use the run_test.pl script:
+
+$ ./run_test.pl
+
+	the script returns 0 if the test was successful.
+
+*/

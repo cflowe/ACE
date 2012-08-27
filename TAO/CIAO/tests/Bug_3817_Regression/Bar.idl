@@ -1,0 +1,20 @@
+// $Id: Bar.idl 95323 2011-12-14 12:37:01Z msmit $
+
+#ifndef BAR_IDL_
+#define BAR_IDL_
+
+#include <Components.idl>
+
+interface Foo
+{
+  void do_foo();
+};
+
+component Bar
+{
+  provides Foo foo1;
+  provides Foo foo2;
+};
+
+#endif /* BAR_IDL_ */
+

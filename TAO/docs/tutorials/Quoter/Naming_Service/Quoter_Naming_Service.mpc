@@ -1,0 +1,26 @@
+// -*- MPC -*-
+// $Id: Quoter_Naming_Service.mpc 95491 2012-01-24 13:51:36Z johnnyw $
+
+project(*client) : orbsvcsexe, portableserver, naming  {
+  libs += Quoter_Idl_Lib
+  after += Quoter_Idl_Lib
+  includes += ../idl
+  libpaths += ../idl
+
+  source_files {
+    client.cpp
+  }
+}
+
+project(*server) : orbsvcsexe, portableserver, naming {
+  libs += Quoter_Idl_Lib
+  after += Quoter_Idl_Lib
+  includes += ../idl
+  libpaths += ../idl
+
+  source_files {
+    server.cpp
+    Stock_Factory_i.cpp
+    Stock_i.cpp
+  }
+}

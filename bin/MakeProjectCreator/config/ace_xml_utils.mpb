@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ace_xml_utils.mpb 95801 2012-05-31 09:14:36Z johnnyw $
+
+project : acelib, xerces {
+  after += ACE_XML_Utils
+  libs += ACE_XML_Utils
+}

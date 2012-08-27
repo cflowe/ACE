@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: test.mpc 66049 2005-05-23 12:27:51Z jwillemsen $
+
+project (tao67_test) : taolib_with_idl, valuetype, portableserver  {
+}
+

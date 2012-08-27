@@ -1,0 +1,13 @@
+// $Id: RepositoryManagerDaemon.idl 91982 2010-09-23 20:43:54Z wotte $
+
+#include "dance/Deployment/Deployment_RepositoryManager.idl"
+
+module CIAO
+{
+  interface RepositoryManagerDaemon : Deployment::RepositoryManager
+  {
+    // Shutdown the daemon process.
+    oneway void shutdown ();
+  };
+};
+

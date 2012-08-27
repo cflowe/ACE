@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="CIAO_Session_Container_idl"
+	ProjectGUID="{CB66BF09-FECA-1BAD-63C0-371BA7777BCE}"
+	RootNamespace="CIAO_Session_Container_idl"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\CIAO_Session_Container_idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\CIAO_Session_Container_idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\CIAO_Session_Container_idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\CIAO_Session_Container_idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="Session_Container.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="Session_Container.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\bin\tao_idl on Session_Container.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -Sa -St -DCCM_LW -Gcl -I..\..\.. -I..\..\../ccm -Wb,stub_export_include=Session_Container_stub_export.h -Wb,stub_export_macro=SESSION_CONTAINER_STUB_Export -Wb,skel_export_include=Session_Container_export.h -Wb,skel_export_macro=SESSION_CONTAINER_Export -Gxhst -Gxhsk -SS -Sci &quot;Session_Container.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Session_Container_export.h;Session_Container_stub_export.h;Session_ContainerC.cpp;Session_ContainerC.h;Session_ContainerS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\bin\tao_idl on Session_Container.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -Sa -St -DCCM_LW -Gcl -I..\..\.. -I..\..\../ccm -Wb,stub_export_include=Session_Container_stub_export.h -Wb,stub_export_macro=SESSION_CONTAINER_STUB_Export -Wb,skel_export_include=Session_Container_export.h -Wb,skel_export_macro=SESSION_CONTAINER_Export -Gxhst -Gxhsk -SS -Sci &quot;Session_Container.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Session_Container_export.h;Session_Container_stub_export.h;Session_ContainerC.cpp;Session_ContainerC.h;Session_ContainerS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\bin\tao_idl on Session_Container.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -Sa -St -DCCM_LW -Gcl -I..\..\.. -I..\..\../ccm -Wb,stub_export_include=Session_Container_stub_export.h -Wb,stub_export_macro=SESSION_CONTAINER_STUB_Export -Wb,skel_export_include=Session_Container_export.h -Wb,skel_export_macro=SESSION_CONTAINER_Export -Gxhst -Gxhsk -SS -Sci &quot;Session_Container.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="Session_Container_export.h;Session_Container_stub_export.h;Session_ContainerC.cpp;Session_ContainerC.h;Session_ContainerS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\..\..\..\bin\tao_idl on Session_Container.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -Sa -St -DCCM_LW -Gcl -I..\..\.. -I..\..\../ccm -Wb,stub_export_include=Session_Container_stub_export.h -Wb,stub_export_macro=SESSION_CONTAINER_STUB_Export -Wb,skel_export_include=Session_Container_export.h -Wb,skel_export_macro=SESSION_CONTAINER_Export -Gxhst -Gxhsk -SS -Sci &quot;Session_Container.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\lib\TAO_IDL_FE.dll"
+						Outputs="Session_Container_export.h;Session_Container_stub_export.h;Session_ContainerC.cpp;Session_ContainerC.h;Session_ContainerS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

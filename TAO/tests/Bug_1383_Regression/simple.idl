@@ -1,0 +1,12 @@
+// $Id: simple.idl 81963 2008-06-16 10:20:06Z sma $
+
+#ifndef SIMPLE_IDL
+#define SIMPLE_IDL
+
+#include "callee.idl"
+
+interface Simple {
+  void registerCallee(in Callee value);
+};
+
+#endif

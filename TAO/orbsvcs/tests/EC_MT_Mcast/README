@@ -1,0 +1,13 @@
+$Id: README 94654 2011-10-07 09:17:20Z msmit $
+
+	This directory contains a regression test for a thread safety problem
+	in the TAO_ECG_UDP_Receiver class.
+	The code is a copy of
+		$TAO_ROOT/orbsvcs/examples/RtEC/MCast
+	with only minor modifications.
+	For further details, see the README there.
+
+	The crash will only show up when running multiple MCast processes.
+	Therefore, it is easiest use the run_test.pl script to invoke this
+	test.
+

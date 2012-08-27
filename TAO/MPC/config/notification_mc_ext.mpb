@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: notification_mc_ext.mpb 79084 2007-07-30 13:13:45Z elliott_c $
+
+project: notification_serv, notification_mc {
+  after += CosNotification_MC_Ext
+  libs  += TAO_CosNotification_MC_Ext
+}

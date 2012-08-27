@@ -1,0 +1,17 @@
+// $Id: lookup_test.mpc 90231 2010-05-21 23:18:48Z parsons $
+
+project(LookupTest_stub): ccm_stub {
+  sharedname = LookupTest_stub
+
+  IDL_Files {
+    lookup_test.idl
+  }
+
+  Source_Files {
+    lookup_testC.cpp
+  }
+
+  Header_Files {
+    lookup_testC.h
+  }
+}

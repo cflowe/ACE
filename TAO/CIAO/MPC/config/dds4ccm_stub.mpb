@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dds4ccm_stub.mpb 93875 2011-04-12 10:40:03Z johnnyw $
+
+project : dds4ccm, ccm_stub {
+  libs += DDS4CCM_stub
+  after += DDS4CCM_stub
+}

@@ -1,0 +1,33 @@
+// -*- MPC -*-
+// $Id: fp_example.mpc 77036 2007-02-12 15:39:42Z elliott_c $
+
+project(*IDL): taoidldefaults {
+  IDL_Files {
+    test.idl
+  }
+  custom_only = 1
+}
+
+project(fp_server): kokyu_dsrt_scheduler_server {
+  exename = fp_server
+  after += *IDL
+  Source_Files {
+    testC.cpp
+    testS.cpp
+    test_i.cpp
+    server.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(fp_client): kokyu_dsrt_scheduler_client {
+  exename = fp_client
+  after += *IDL
+  Source_Files {
+    testC.cpp
+    client.cpp
+  }
+  IDL_Files {
+  }
+}

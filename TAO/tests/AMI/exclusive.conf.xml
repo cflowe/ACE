@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<!-- Converted from ./tests/AMI/exclusive.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  -->
+ <!--  $Id: exclusive.conf.xml 94649 2011-10-07 07:54:59Z msmit $ -->
+ <!--  -->
+ <static id="Client_Strategy_Factory" params="-ORBTransportMuxStrategy EXCLUSIVE -ORBclientconnectionhandler ST"/>
+</ACE_Svc_Conf>

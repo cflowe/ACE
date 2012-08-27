@@ -1,0 +1,5 @@
+// $Id: Collocation.mpc 75456 2006-11-22 10:24:10Z johnnyw $
+project(Latency*): taoserver, strategies {
+  exename = Collocated_Test
+  avoids += ace_for_tao
+}

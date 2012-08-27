@@ -1,0 +1,15 @@
+// -*- MPC -*-
+// $Id: CSD_Test_ThreadPool4.mpc 75871 2006-12-06 19:33:28Z johnnyw $
+
+project(*Server): csd_threadpool, messaging, taoserver, pi, avoids_corba_e_micro {
+  exename = server_main
+
+  Source_Files {
+    Foo_i.cpp
+    Callback_i.cpp
+    ServerApp.cpp
+    server_main.cpp
+    ClientTask.cpp
+    OrbShutdownTask.cpp
+  }
+}

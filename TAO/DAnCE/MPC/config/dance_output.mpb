@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_output.mpb 89019 2010-02-16 08:24:39Z johnnyw $
+
+project {
+  libout = $(ACE_ROOT)/lib
+}
+

@@ -1,0 +1,8 @@
+// $Id: foo.idl 92288 2010-10-20 18:30:09Z johnnyw $
+
+interface foo
+{
+  oneway void destroy ();
+
+  oneway void shutdown ();
+};

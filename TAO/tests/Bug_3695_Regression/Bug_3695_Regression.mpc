@@ -1,0 +1,4 @@
+// $Id: Bug_3695_Regression.mpc 85582 2009-06-08 22:26:21Z mitza $
+project: taoclient {
+  exename = * 
+}

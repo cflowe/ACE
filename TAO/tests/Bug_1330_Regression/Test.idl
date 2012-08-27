@@ -1,0 +1,10 @@
+//
+// $Id: Test.idl 94802 2011-10-20 09:46:10Z mcorino $
+//
+
+interface Test
+{
+  void test_method();
+
+  oneway void shutdown ();
+};

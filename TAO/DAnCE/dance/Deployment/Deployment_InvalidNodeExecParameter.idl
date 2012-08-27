@@ -1,0 +1,13 @@
+// $Id: Deployment_InvalidNodeExecParameter.idl 90214 2010-05-21 13:59:45Z wotte $
+
+#ifndef DEPLOYMENT_INVALIDNODEEXECPARAMETER_IDL
+#define DEPLOYMENT_INVALIDNODEEXECPARAMETER_IDL
+
+module Deployment {
+  exception InvalidNodeExecParameter {
+    string name;
+    string reason;
+  };
+};
+
+#endif

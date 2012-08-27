@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: tao_no_iiop.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+feature(tao_no_iiop) : taoidldefaults {
+  idlflags += -DTAO_LACKS_IIOP
+  macros += TAO_HAS_IIOP=0
+}

@@ -1,0 +1,14 @@
+// $Id: CCM_HomeExecutorBase.idl 83421 2008-10-23 09:52:43Z johnnyw $
+
+#if !defined (CCM_HOMEEXECUTORBASE_IDL)
+#define CCM_HOMEEXECUTORBASE_IDL
+
+module Components
+{
+  typeprefix Components "omg.org";
+
+  local interface HomeExecutorBase
+  {
+  };
+};
+#endif /* CCM_HOMEEXECUTORBASE_IDL */

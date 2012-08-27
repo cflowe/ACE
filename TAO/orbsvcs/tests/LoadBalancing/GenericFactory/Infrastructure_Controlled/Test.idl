@@ -1,0 +1,15 @@
+//
+// $Id: Test.idl 51203 2003-07-22 21:51:01Z jai $
+
+/// Put the interfaces in a module, to avoid global namespace pollution
+module Test
+{
+  /// A very simple interface
+  interface Simple
+  {
+    /// Return a simple string
+    string get_string ();
+
+  };
+};
+

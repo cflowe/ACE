@@ -1,0 +1,8 @@
+// $Id: test.idl 80281 2007-12-17 12:33:07Z sma $
+// TAO579
+
+module m1
+{
+  enum e1 {e1_1, e1_2};
+  const e1 c2 = e1_2;
+};

@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: tao_idl_fe.mpb 90700 2010-06-18 13:57:56Z wotte $
+
+project: acelib, conv_lib {
+  includes    += $(TAO_ROOT)/TAO_IDL/fe $(TAO_ROOT)/TAO_IDL/include
+  after       += TAO_IDL_FE
+  libs        += TAO_IDL_FE
+}

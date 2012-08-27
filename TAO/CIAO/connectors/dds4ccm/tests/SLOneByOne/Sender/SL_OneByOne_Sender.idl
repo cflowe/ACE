@@ -1,0 +1,21 @@
+// $Id: SL_OneByOne_Sender.idl 95883 2012-06-13 18:45:09Z johnnyw $
+
+/**
+ * @author Marijke Hengstmengel (mhengstmengel@remedy.nl)
+ */
+
+#ifndef DDS_SL_ONEBYONE_SENDER_IDL
+#define DDS_SL_ONEBYONE_SENDER_IDL
+
+#include "Connector/SL_OneByOne_Connector.idl"
+
+module SL_OneByOne
+{
+  component Sender
+  {
+     port SL_OneByOneConnector::DDS_Update test_topic_update;
+     provides CCM_DDS::ConnectorStatusListener test_topic_connector_status;
+  };
+};
+
+#endif

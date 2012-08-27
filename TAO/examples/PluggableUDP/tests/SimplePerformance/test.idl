@@ -1,0 +1,16 @@
+/*
+ * $Id: test.idl 38945 2001-04-09 21:43:08Z mk1 $
+ */
+
+typedef sequence<char> Char_Seq;
+typedef sequence<octet> Octet_Seq;
+
+interface Simple_Server
+{
+  oneway void sendCharSeq (in Char_Seq charSeq);
+  oneway void sendOctetSeq (in Octet_Seq charSeq);
+
+  long get_number (in long num);
+
+  oneway void shutdown ();
+};

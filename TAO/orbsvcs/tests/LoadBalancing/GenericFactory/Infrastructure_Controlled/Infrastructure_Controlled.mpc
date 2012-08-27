@@ -1,0 +1,36 @@
+// $Id: Infrastructure_Controlled.mpc 78771 2007-07-04 05:39:51Z sowayaa $
+project(*idl): taoidldefaults {
+  IDL_Files {
+    Test.idl
+  }
+  custom_only = 1
+}
+
+project(*Server): loadbalancing {
+  after += *idl
+  exename = server
+  Source_Files {
+    TestC.cpp
+    TestS.cpp
+    server.cpp
+    LB_server.cpp
+    Simple.cpp
+    Factory.cpp
+    Factory_Map.cpp
+    Factory_Struct.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client): loadbalancing {
+  after += *idl
+  exename = client
+  Source_Files {
+    TestC.cpp
+    client.cpp
+  }
+  IDL_Files {
+  }
+}
+

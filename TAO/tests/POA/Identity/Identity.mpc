@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Identity.mpc 76089 2006-12-19 15:30:03Z johnnyw $
+
+project(POA*): taoserver, avoids_corba_e_micro {
+  exename = Identity
+}

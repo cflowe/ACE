@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: stl_mapping.mpb 90586 2010-06-14 13:48:01Z parsons $
+
+feature(stl_mapping) : taoidldefaults {
+  requires += stl_mapping
+  idlflags += -Gstl
+}

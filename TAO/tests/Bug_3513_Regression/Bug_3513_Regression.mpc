@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Bug_3513_Regression.mpc 83823 2008-11-17 18:03:17Z smcqueen $
+
+project(*Test) : taoserver, messaging, rtcorba, objreftemplate, rtscheduling, rtportableserver, ziop, tao_monitor {
+  exename   = test
+
+  Source_Files {
+    test.cpp
+  }
+}

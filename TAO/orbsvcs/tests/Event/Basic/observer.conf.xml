@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<!-- Converted from ./orbsvcs/tests/Event/Basic/observer.conf by svcconf-convert.pl -->
+<ACE_Svc_Conf>
+ <!--  $Id: observer.conf.xml 51118 2003-07-18 14:53:21Z jwillemsen $ -->
+ <static id="EC_Factory" params="-ECObserver basic -ECProxyPushConsumerCollection mt:delayed:list -ECProxyPushSupplierCollection mt:delayed:list -ECDispatching reactive -ECscheduling null -ECfiltering basic -ECproxyconsumerlock thread -ECproxysupplierlock thread -ECsupplierfiltering per-supplier"/>
+</ACE_Svc_Conf>

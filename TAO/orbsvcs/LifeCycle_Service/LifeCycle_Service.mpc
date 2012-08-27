@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: LifeCycle_Service.mpc 91875 2010-09-21 09:42:16Z msmit $
+
+project : orbsvcsexe, lifecycle_skel, naming, trading_serv, avoids_minimum_corba, utils, install {
+  exename  = tao_coslifecycle
+}

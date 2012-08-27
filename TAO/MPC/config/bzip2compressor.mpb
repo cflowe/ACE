@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: bzip2compressor.mpb 95502 2012-01-25 12:04:12Z sma $
+
+project : taolib, compression, bzip2 {
+  requires += bzip2
+  after   += Bzip2Compressor
+  libs    += TAO_Bzip2Compressor
+}

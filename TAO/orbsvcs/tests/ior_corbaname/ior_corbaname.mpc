@@ -1,0 +1,37 @@
+// -*- MPC -*-
+// $Id: ior_corbaname.mpc 68466 2005-10-04 06:54:19Z jtc $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    corbaname.idl
+  }
+  custom_only = 1
+}
+
+project(*server): namingexe, portableserver {
+  exename = server
+
+  after += *idl
+  Source_Files {
+    status_i.cpp
+    server.cpp
+    corbanameS.cpp
+    corbanameC.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*client): namingexe, portableserver {
+  exename = client
+
+  after += *idl
+  Source_Files {
+    ior_corbaname_client_i.cpp
+    client.cpp
+    corbanameC.cpp
+  }
+  IDL_Files {
+  }
+}
+

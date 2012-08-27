@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: dance_repositorymanagerbase.mpb 86119 2009-07-19 09:46:45Z johnnyw $
+
+feature(jaws) {
+  includes += $(ACE_ROOT)/apps
+  libs += JAWS
+  after += JAWS
+  macros += DANCE_RM_USES_JAWS
+}

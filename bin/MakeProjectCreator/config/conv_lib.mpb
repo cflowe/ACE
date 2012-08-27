@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: conv_lib.mpb 95495 2012-01-24 15:26:47Z johnnyw $
+
+project {
+ specific {
+   install_this_target = 1
+ }
+}

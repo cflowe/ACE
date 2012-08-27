@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: ciaolib_with_idl.mpb 84526 2009-02-19 13:14:02Z johnnyw $
+
+project : ciao_lib, ciaoidldefaults {
+}

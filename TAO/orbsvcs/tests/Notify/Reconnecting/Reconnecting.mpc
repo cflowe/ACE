@@ -1,0 +1,16 @@
+// $Id: Reconnecting.mpc 78771 2007-07-04 05:39:51Z sowayaa $
+
+project(*Supplier): notifytest {
+  exename = Supplier
+  Source_Files {
+    Supplier.cpp
+  }
+}
+
+project(*Consumer): notifytest {
+  exename = Consumer
+  Source_Files {
+    Consumer.cpp
+  }
+}
+

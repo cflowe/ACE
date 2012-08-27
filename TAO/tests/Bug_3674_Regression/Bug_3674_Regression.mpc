@@ -1,0 +1,13 @@
+// -*- MPC -*-
+// $Id: Bug_3674_Regression.mpc 85325 2009-05-13 13:36:08Z sma $
+
+
+project(*): taoserver, pi_server, iorinterceptor {
+  requires += interceptors
+  exename  = *
+  Source_Files {
+    test.cpp
+    testS.cpp
+    testC.cpp
+  }
+}

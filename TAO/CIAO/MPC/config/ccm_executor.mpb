@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: ccm_executor.mpb 89324 2010-03-04 16:57:04Z parsons $
+
+project : ccm_lem_stub {
+}

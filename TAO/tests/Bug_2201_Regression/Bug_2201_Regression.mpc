@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: Bug_2201_Regression.mpc 69015 2005-10-27 09:26:50Z jwillemsen $
+
+project(*Test): taoclient {
+  exename = test
+  Source_Files {
+    test.cpp
+  }
+}

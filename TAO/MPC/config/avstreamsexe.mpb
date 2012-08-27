@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: avstreamsexe.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project: namingexe, avstreams {
+}
+

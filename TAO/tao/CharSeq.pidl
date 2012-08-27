@@ -1,0 +1,19 @@
+// -*- IDL -*-
+
+/**
+ * @file CharSeq.pidl
+ *
+ * $Id: CharSeq.pidl 92104 2010-09-30 09:53:25Z johnnyw $
+ */
+
+#ifndef TAO_CORBA_CHAR_SEQ_IDL
+#define TAO_CORBA_CHAR_SEQ_IDL
+
+#pragma prefix "omg.org"
+
+module CORBA
+{
+  typedef sequence<char> CharSeq;
+};
+
+#endif  /* TAO_CORBA_CHAR_SEQ_IDL */

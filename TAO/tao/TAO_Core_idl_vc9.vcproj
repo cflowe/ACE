@@ -1,0 +1,1825 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="TAO_Core_idl"
+	ProjectGUID="{E0AC591E-FECA-1BAD-727D-8A63505D827F}"
+	RootNamespace="TAO_Core_idl"
+	Keyword="Win32Proj"
+	SignManifests="true"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\TAO_Core_idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\TAO_Core_idl_vc9\I386"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="."
+			IntermediateDirectory="Debug\TAO_Core_idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release\TAO_Core_idl_vc9\AMD64"
+			ConfigurationType="10"
+			CharacterSet="0"
+
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Build Files"
+			Filter="mpc;mpb;mwc">
+			<File
+				RelativePath="extra_core.mpb">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="tao.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="tao.mwc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Idl Files"
+			Filter="idl">
+			<File
+				RelativePath="BooleanSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on BooleanSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;BooleanSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\BooleanSeqA.cpp;AnyTypeCode\BooleanSeqA.h;BooleanSeqC.cpp;BooleanSeqC.h;BooleanSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on BooleanSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;BooleanSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\BooleanSeqA.cpp;AnyTypeCode\BooleanSeqA.h;BooleanSeqC.cpp;BooleanSeqC.h;BooleanSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on BooleanSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;BooleanSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\BooleanSeqA.cpp;AnyTypeCode\BooleanSeqA.h;BooleanSeqC.cpp;BooleanSeqC.h;BooleanSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on BooleanSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;BooleanSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\BooleanSeqA.cpp;AnyTypeCode\BooleanSeqA.h;BooleanSeqC.cpp;BooleanSeqC.h;BooleanSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CharSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on CharSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;CharSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\CharSeqA.cpp;AnyTypeCode\CharSeqA.h;CharSeqC.cpp;CharSeqC.h;CharSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on CharSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;CharSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\CharSeqA.cpp;AnyTypeCode\CharSeqA.h;CharSeqC.cpp;CharSeqC.h;CharSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on CharSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;CharSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\CharSeqA.cpp;AnyTypeCode\CharSeqA.h;CharSeqC.cpp;CharSeqC.h;CharSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on CharSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;CharSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\CharSeqA.cpp;AnyTypeCode\CharSeqA.h;CharSeqC.cpp;CharSeqC.h;CharSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="CONV_FRAME.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on CONV_FRAME.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;CONV_FRAME.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\CONV_FRAMEA.cpp;AnyTypeCode\CONV_FRAMEA.h;CONV_FRAMEC.cpp;CONV_FRAMEC.h;CONV_FRAMES.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on CONV_FRAME.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;CONV_FRAME.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\CONV_FRAMEA.cpp;AnyTypeCode\CONV_FRAMEA.h;CONV_FRAMEC.cpp;CONV_FRAMEC.h;CONV_FRAMES.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on CONV_FRAME.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;CONV_FRAME.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\CONV_FRAMEA.cpp;AnyTypeCode\CONV_FRAMEA.h;CONV_FRAMEC.cpp;CONV_FRAMEC.h;CONV_FRAMES.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on CONV_FRAME.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;CONV_FRAME.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\CONV_FRAMEA.cpp;AnyTypeCode\CONV_FRAMEA.h;CONV_FRAMEC.cpp;CONV_FRAMEC.h;CONV_FRAMES.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Current.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Current.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Current.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\CurrentA.cpp;AnyTypeCode\CurrentA.h;CurrentC.cpp;CurrentC.h;CurrentS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Current.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Current.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\CurrentA.cpp;AnyTypeCode\CurrentA.h;CurrentC.cpp;CurrentC.h;CurrentS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Current.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Current.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\CurrentA.cpp;AnyTypeCode\CurrentA.h;CurrentC.cpp;CurrentC.h;CurrentS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Current.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Current.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\CurrentA.cpp;AnyTypeCode\CurrentA.h;CurrentC.cpp;CurrentC.h;CurrentS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="DoubleSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on DoubleSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;DoubleSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\DoubleSeqA.cpp;AnyTypeCode\DoubleSeqA.h;DoubleSeqC.cpp;DoubleSeqC.h;DoubleSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on DoubleSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;DoubleSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\DoubleSeqA.cpp;AnyTypeCode\DoubleSeqA.h;DoubleSeqC.cpp;DoubleSeqC.h;DoubleSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on DoubleSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;DoubleSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\DoubleSeqA.cpp;AnyTypeCode\DoubleSeqA.h;DoubleSeqC.cpp;DoubleSeqC.h;DoubleSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on DoubleSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;DoubleSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\DoubleSeqA.cpp;AnyTypeCode\DoubleSeqA.h;DoubleSeqC.cpp;DoubleSeqC.h;DoubleSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="FloatSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on FloatSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;FloatSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\FloatSeqA.cpp;AnyTypeCode\FloatSeqA.h;FloatSeqC.cpp;FloatSeqC.h;FloatSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on FloatSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;FloatSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\FloatSeqA.cpp;AnyTypeCode\FloatSeqA.h;FloatSeqC.cpp;FloatSeqC.h;FloatSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on FloatSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;FloatSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\FloatSeqA.cpp;AnyTypeCode\FloatSeqA.h;FloatSeqC.cpp;FloatSeqC.h;FloatSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on FloatSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;FloatSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\FloatSeqA.cpp;AnyTypeCode\FloatSeqA.h;FloatSeqC.cpp;FloatSeqC.h;FloatSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="GIOP.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on GIOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h &quot;GIOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\GIOPA.cpp;AnyTypeCode\GIOPA.h;GIOPC.cpp;GIOPC.h;GIOPC.inl;GIOPS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on GIOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h &quot;GIOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\GIOPA.cpp;AnyTypeCode\GIOPA.h;GIOPC.cpp;GIOPC.h;GIOPC.inl;GIOPS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on GIOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h &quot;GIOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\GIOPA.cpp;AnyTypeCode\GIOPA.h;GIOPC.cpp;GIOPC.h;GIOPC.inl;GIOPS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on GIOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h &quot;GIOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\GIOPA.cpp;AnyTypeCode\GIOPA.h;GIOPC.cpp;GIOPC.h;GIOPC.inl;GIOPS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="IIOP.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IIOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IIOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\IIOPA.cpp;AnyTypeCode\IIOPA.h;IIOPC.cpp;IIOPC.h;IIOPS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IIOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IIOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\IIOPA.cpp;AnyTypeCode\IIOPA.h;IIOPC.cpp;IIOPC.h;IIOPS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IIOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IIOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\IIOPA.cpp;AnyTypeCode\IIOPA.h;IIOPC.cpp;IIOPC.h;IIOPS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IIOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IIOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\IIOPA.cpp;AnyTypeCode\IIOPA.h;IIOPC.cpp;IIOPC.h;IIOPS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="IIOP_Endpoints.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IIOP_Endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IIOP_Endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\IIOP_EndpointsA.cpp;AnyTypeCode\IIOP_EndpointsA.h;IIOP_EndpointsC.cpp;IIOP_EndpointsC.h;IIOP_EndpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IIOP_Endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IIOP_Endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\IIOP_EndpointsA.cpp;AnyTypeCode\IIOP_EndpointsA.h;IIOP_EndpointsC.cpp;IIOP_EndpointsC.h;IIOP_EndpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IIOP_Endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IIOP_Endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\IIOP_EndpointsA.cpp;AnyTypeCode\IIOP_EndpointsA.h;IIOP_EndpointsC.cpp;IIOP_EndpointsC.h;IIOP_EndpointsS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IIOP_Endpoints.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IIOP_Endpoints.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\IIOP_EndpointsA.cpp;AnyTypeCode\IIOP_EndpointsA.h;IIOP_EndpointsC.cpp;IIOP_EndpointsC.h;IIOP_EndpointsS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="IOP.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\IOPA.cpp;AnyTypeCode\IOPA.h;IOPC.cpp;IOPC.h;IOPS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\IOPA.cpp;AnyTypeCode\IOPA.h;IOPC.cpp;IOPC.h;IOPS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\IOPA.cpp;AnyTypeCode\IOPA.h;IOPC.cpp;IOPC.h;IOPS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on IOP.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;IOP.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\IOPA.cpp;AnyTypeCode\IOPA.h;IOPC.cpp;IOPC.h;IOPS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="LongDoubleSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongDoubleSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongDoubleSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\LongDoubleSeqA.cpp;AnyTypeCode\LongDoubleSeqA.h;LongDoubleSeqC.cpp;LongDoubleSeqC.h;LongDoubleSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongDoubleSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongDoubleSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\LongDoubleSeqA.cpp;AnyTypeCode\LongDoubleSeqA.h;LongDoubleSeqC.cpp;LongDoubleSeqC.h;LongDoubleSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongDoubleSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongDoubleSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\LongDoubleSeqA.cpp;AnyTypeCode\LongDoubleSeqA.h;LongDoubleSeqC.cpp;LongDoubleSeqC.h;LongDoubleSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongDoubleSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongDoubleSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\LongDoubleSeqA.cpp;AnyTypeCode\LongDoubleSeqA.h;LongDoubleSeqC.cpp;LongDoubleSeqC.h;LongDoubleSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="LongLongSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongLongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongLongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\LongLongSeqA.cpp;AnyTypeCode\LongLongSeqA.h;LongLongSeqC.cpp;LongLongSeqC.h;LongLongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongLongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongLongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\LongLongSeqA.cpp;AnyTypeCode\LongLongSeqA.h;LongLongSeqC.cpp;LongLongSeqC.h;LongLongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongLongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongLongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\LongLongSeqA.cpp;AnyTypeCode\LongLongSeqA.h;LongLongSeqC.cpp;LongLongSeqC.h;LongLongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongLongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongLongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\LongLongSeqA.cpp;AnyTypeCode\LongLongSeqA.h;LongLongSeqC.cpp;LongLongSeqC.h;LongLongSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="LongSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\LongSeqA.cpp;AnyTypeCode\LongSeqA.h;LongSeqC.cpp;LongSeqC.h;LongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\LongSeqA.cpp;AnyTypeCode\LongSeqA.h;LongSeqC.cpp;LongSeqC.h;LongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\LongSeqA.cpp;AnyTypeCode\LongSeqA.h;LongSeqC.cpp;LongSeqC.h;LongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on LongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;LongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\LongSeqA.cpp;AnyTypeCode\LongSeqA.h;LongSeqC.cpp;LongSeqC.h;LongSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Messaging_PolicyValue.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Messaging_PolicyValue.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Messaging_PolicyValue.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Messaging_PolicyValueA.cpp;AnyTypeCode\Messaging_PolicyValueA.h;Messaging_PolicyValueC.cpp;Messaging_PolicyValueC.h;Messaging_PolicyValueS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Messaging_PolicyValue.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Messaging_PolicyValue.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Messaging_PolicyValueA.cpp;AnyTypeCode\Messaging_PolicyValueA.h;Messaging_PolicyValueC.cpp;Messaging_PolicyValueC.h;Messaging_PolicyValueS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Messaging_PolicyValue.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Messaging_PolicyValue.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Messaging_PolicyValueA.cpp;AnyTypeCode\Messaging_PolicyValueA.h;Messaging_PolicyValueC.cpp;Messaging_PolicyValueC.h;Messaging_PolicyValueS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Messaging_PolicyValue.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Messaging_PolicyValue.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Messaging_PolicyValueA.cpp;AnyTypeCode\Messaging_PolicyValueA.h;Messaging_PolicyValueC.cpp;Messaging_PolicyValueC.h;Messaging_PolicyValueS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Messaging_SyncScope.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Messaging_SyncScope.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Messaging_SyncScope.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Messaging_SyncScopeA.cpp;AnyTypeCode\Messaging_SyncScopeA.h;Messaging_SyncScopeC.cpp;Messaging_SyncScopeC.h;Messaging_SyncScopeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Messaging_SyncScope.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Messaging_SyncScope.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Messaging_SyncScopeA.cpp;AnyTypeCode\Messaging_SyncScopeA.h;Messaging_SyncScopeC.cpp;Messaging_SyncScopeC.h;Messaging_SyncScopeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Messaging_SyncScope.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Messaging_SyncScope.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Messaging_SyncScopeA.cpp;AnyTypeCode\Messaging_SyncScopeA.h;Messaging_SyncScopeC.cpp;Messaging_SyncScopeC.h;Messaging_SyncScopeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Messaging_SyncScope.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Messaging_SyncScope.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Messaging_SyncScopeA.cpp;AnyTypeCode\Messaging_SyncScopeA.h;Messaging_SyncScopeC.cpp;Messaging_SyncScopeC.h;Messaging_SyncScopeS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="ObjectIdList.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ObjectIdList.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;ObjectIdList.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ObjectIdListA.cpp;AnyTypeCode\ObjectIdListA.h;ObjectIdListC.cpp;ObjectIdListC.h;ObjectIdListS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ObjectIdList.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;ObjectIdList.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ObjectIdListA.cpp;AnyTypeCode\ObjectIdListA.h;ObjectIdListC.cpp;ObjectIdListC.h;ObjectIdListS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ObjectIdList.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;ObjectIdList.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ObjectIdListA.cpp;AnyTypeCode\ObjectIdListA.h;ObjectIdListC.cpp;ObjectIdListC.h;ObjectIdListS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ObjectIdList.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;ObjectIdList.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ObjectIdListA.cpp;AnyTypeCode\ObjectIdListA.h;ObjectIdListC.cpp;ObjectIdListC.h;ObjectIdListS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="OctetSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on OctetSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;OctetSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\OctetSeqA.cpp;AnyTypeCode\OctetSeqA.h;OctetSeqC.cpp;OctetSeqC.h;OctetSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on OctetSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;OctetSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\OctetSeqA.cpp;AnyTypeCode\OctetSeqA.h;OctetSeqC.cpp;OctetSeqC.h;OctetSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on OctetSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;OctetSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\OctetSeqA.cpp;AnyTypeCode\OctetSeqA.h;OctetSeqC.cpp;OctetSeqC.h;OctetSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on OctetSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;OctetSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\OctetSeqA.cpp;AnyTypeCode\OctetSeqA.h;OctetSeqC.cpp;OctetSeqC.h;OctetSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="orb_types.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on orb_types.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;orb_types.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\orb_typesA.cpp;AnyTypeCode\orb_typesA.h;orb_typesC.cpp;orb_typesC.h;orb_typesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on orb_types.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;orb_types.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\orb_typesA.cpp;AnyTypeCode\orb_typesA.h;orb_typesC.cpp;orb_typesC.h;orb_typesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on orb_types.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;orb_types.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\orb_typesA.cpp;AnyTypeCode\orb_typesA.h;orb_typesC.cpp;orb_typesC.h;orb_typesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on orb_types.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;orb_types.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\orb_typesA.cpp;AnyTypeCode\orb_typesA.h;orb_typesC.cpp;orb_typesC.h;orb_typesS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="ParameterMode.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ParameterMode.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Sat &quot;ParameterMode.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ParameterModeA.cpp;AnyTypeCode\ParameterModeA.h;ParameterModeC.cpp;ParameterModeC.h;ParameterModeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ParameterMode.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Sat &quot;ParameterMode.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ParameterModeA.cpp;AnyTypeCode\ParameterModeA.h;ParameterModeC.cpp;ParameterModeC.h;ParameterModeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ParameterMode.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Sat &quot;ParameterMode.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ParameterModeA.cpp;AnyTypeCode\ParameterModeA.h;ParameterModeC.cpp;ParameterModeC.h;ParameterModeS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ParameterMode.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Sat &quot;ParameterMode.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ParameterModeA.cpp;AnyTypeCode\ParameterModeA.h;ParameterModeC.cpp;ParameterModeC.h;ParameterModeS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="PI_Forward.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on PI_Forward.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;PI_Forward.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\PI_ForwardA.cpp;AnyTypeCode\PI_ForwardA.h;PI_ForwardC.cpp;PI_ForwardC.h;PI_ForwardS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on PI_Forward.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;PI_Forward.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\PI_ForwardA.cpp;AnyTypeCode\PI_ForwardA.h;PI_ForwardC.cpp;PI_ForwardC.h;PI_ForwardS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on PI_Forward.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;PI_Forward.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\PI_ForwardA.cpp;AnyTypeCode\PI_ForwardA.h;PI_ForwardC.cpp;PI_ForwardC.h;PI_ForwardS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on PI_Forward.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;PI_Forward.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\PI_ForwardA.cpp;AnyTypeCode\PI_ForwardA.h;PI_ForwardC.cpp;PI_ForwardC.h;PI_ForwardS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Policy.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -GT -oS PortableServer -Gd -Wb,safe_include=tao/PolicyC.h -Wb,skel_export_macro=TAO_PortableServer_Export -Wb,skel_export_include=tao/PortableServer/portableserver_export.h &quot;Policy.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\PolicyA.cpp;AnyTypeCode\PolicyA.h;PolicyC.cpp;PolicyC.h;PolicyC.inl;PortableServer\PolicyS.cpp;PortableServer\PolicyS.h;PortableServer\PolicyS_T.cpp;PortableServer\PolicyS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -GT -oS PortableServer -Gd -Wb,safe_include=tao/PolicyC.h -Wb,skel_export_macro=TAO_PortableServer_Export -Wb,skel_export_include=tao/PortableServer/portableserver_export.h &quot;Policy.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\PolicyA.cpp;AnyTypeCode\PolicyA.h;PolicyC.cpp;PolicyC.h;PolicyC.inl;PortableServer\PolicyS.cpp;PortableServer\PolicyS.h;PortableServer\PolicyS_T.cpp;PortableServer\PolicyS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -GT -oS PortableServer -Gd -Wb,safe_include=tao/PolicyC.h -Wb,skel_export_macro=TAO_PortableServer_Export -Wb,skel_export_include=tao/PortableServer/portableserver_export.h &quot;Policy.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\PolicyA.cpp;AnyTypeCode\PolicyA.h;PolicyC.cpp;PolicyC.h;PolicyC.inl;PortableServer\PolicyS.cpp;PortableServer\PolicyS.h;PortableServer\PolicyS_T.cpp;PortableServer\PolicyS_T.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -GT -oS PortableServer -Gd -Wb,safe_include=tao/PolicyC.h -Wb,skel_export_macro=TAO_PortableServer_Export -Wb,skel_export_include=tao/PortableServer/portableserver_export.h &quot;Policy.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\PolicyA.cpp;AnyTypeCode\PolicyA.h;PolicyC.cpp;PolicyC.h;PolicyC.inl;PortableServer\PolicyS.cpp;PortableServer\PolicyS.h;PortableServer\PolicyS_T.cpp;PortableServer\PolicyS_T.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Policy_Current.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Current.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Policy_Current.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Policy_CurrentA.cpp;AnyTypeCode\Policy_CurrentA.h;Policy_CurrentC.cpp;Policy_CurrentC.h;Policy_CurrentS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Current.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Policy_Current.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Policy_CurrentA.cpp;AnyTypeCode\Policy_CurrentA.h;Policy_CurrentC.cpp;Policy_CurrentC.h;Policy_CurrentS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Current.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Policy_Current.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Policy_CurrentA.cpp;AnyTypeCode\Policy_CurrentA.h;Policy_CurrentC.cpp;Policy_CurrentC.h;Policy_CurrentS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Current.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Policy_Current.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Policy_CurrentA.cpp;AnyTypeCode\Policy_CurrentA.h;Policy_CurrentC.cpp;Policy_CurrentC.h;Policy_CurrentS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Policy_Forward.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Forward.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Sa &quot;Policy_Forward.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Policy_ForwardA.cpp;AnyTypeCode\Policy_ForwardA.h;Policy_ForwardC.cpp;Policy_ForwardC.h;Policy_ForwardS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Forward.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Sa &quot;Policy_Forward.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Policy_ForwardA.cpp;AnyTypeCode\Policy_ForwardA.h;Policy_ForwardC.cpp;Policy_ForwardC.h;Policy_ForwardS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Forward.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Sa &quot;Policy_Forward.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Policy_ForwardA.cpp;AnyTypeCode\Policy_ForwardA.h;Policy_ForwardC.cpp;Policy_ForwardC.h;Policy_ForwardS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Forward.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Sa &quot;Policy_Forward.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Policy_ForwardA.cpp;AnyTypeCode\Policy_ForwardA.h;Policy_ForwardC.cpp;Policy_ForwardC.h;Policy_ForwardS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Policy_Manager.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Manager.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Policy_Manager.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Policy_ManagerA.cpp;AnyTypeCode\Policy_ManagerA.h;Policy_ManagerC.cpp;Policy_ManagerC.h;Policy_ManagerS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Manager.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Policy_Manager.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Policy_ManagerA.cpp;AnyTypeCode\Policy_ManagerA.h;Policy_ManagerC.cpp;Policy_ManagerC.h;Policy_ManagerS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Manager.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Policy_Manager.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\Policy_ManagerA.cpp;AnyTypeCode\Policy_ManagerA.h;Policy_ManagerC.cpp;Policy_ManagerC.h;Policy_ManagerS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Policy_Manager.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Policy_Manager.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\Policy_ManagerA.cpp;AnyTypeCode\Policy_ManagerA.h;Policy_ManagerC.cpp;Policy_ManagerC.h;Policy_ManagerS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="PortableInterceptor.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on PortableInterceptor.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;PortableInterceptor.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\PortableInterceptorA.cpp;AnyTypeCode\PortableInterceptorA.h;PortableInterceptorC.cpp;PortableInterceptorC.h;PortableInterceptorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on PortableInterceptor.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;PortableInterceptor.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\PortableInterceptorA.cpp;AnyTypeCode\PortableInterceptorA.h;PortableInterceptorC.cpp;PortableInterceptorC.h;PortableInterceptorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on PortableInterceptor.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;PortableInterceptor.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\PortableInterceptorA.cpp;AnyTypeCode\PortableInterceptorA.h;PortableInterceptorC.cpp;PortableInterceptorC.h;PortableInterceptorS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on PortableInterceptor.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;PortableInterceptor.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\PortableInterceptorA.cpp;AnyTypeCode\PortableInterceptorA.h;PortableInterceptorC.cpp;PortableInterceptorC.h;PortableInterceptorS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Services.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Services.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Services.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ServicesA.cpp;AnyTypeCode\ServicesA.h;ServicesC.cpp;ServicesC.h;ServicesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Services.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Services.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ServicesA.cpp;AnyTypeCode\ServicesA.h;ServicesC.cpp;ServicesC.h;ServicesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Services.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Services.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ServicesA.cpp;AnyTypeCode\ServicesA.h;ServicesC.cpp;ServicesC.h;ServicesS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on Services.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;Services.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ServicesA.cpp;AnyTypeCode\ServicesA.h;ServicesC.cpp;ServicesC.h;ServicesS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="ShortSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ShortSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ShortSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ShortSeqA.cpp;AnyTypeCode\ShortSeqA.h;ShortSeqC.cpp;ShortSeqC.h;ShortSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ShortSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ShortSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ShortSeqA.cpp;AnyTypeCode\ShortSeqA.h;ShortSeqC.cpp;ShortSeqC.h;ShortSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ShortSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ShortSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ShortSeqA.cpp;AnyTypeCode\ShortSeqA.h;ShortSeqC.cpp;ShortSeqC.h;ShortSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ShortSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ShortSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ShortSeqA.cpp;AnyTypeCode\ShortSeqA.h;ShortSeqC.cpp;ShortSeqC.h;ShortSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="StringSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on StringSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;StringSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\StringSeqA.cpp;AnyTypeCode\StringSeqA.h;StringSeqC.cpp;StringSeqC.h;StringSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on StringSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;StringSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\StringSeqA.cpp;AnyTypeCode\StringSeqA.h;StringSeqC.cpp;StringSeqC.h;StringSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on StringSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;StringSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\StringSeqA.cpp;AnyTypeCode\StringSeqA.h;StringSeqC.cpp;StringSeqC.h;StringSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on StringSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;StringSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\StringSeqA.cpp;AnyTypeCode\StringSeqA.h;StringSeqC.cpp;StringSeqC.h;StringSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="TAO.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on TAO.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;TAO.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\TAOA.cpp;AnyTypeCode\TAOA.h;TAOC.cpp;TAOC.h;TAOS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on TAO.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;TAO.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\TAOA.cpp;AnyTypeCode\TAOA.h;TAOC.cpp;TAOC.h;TAOS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on TAO.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;TAO.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\TAOA.cpp;AnyTypeCode\TAOA.h;TAOC.cpp;TAOC.h;TAOS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on TAO.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;TAO.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\TAOA.cpp;AnyTypeCode\TAOA.h;TAOC.cpp;TAOC.h;TAOS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="TimeBase.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on TimeBase.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;TimeBase.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\TimeBaseA.cpp;AnyTypeCode\TimeBaseA.h;TimeBaseC.cpp;TimeBaseC.h;TimeBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on TimeBase.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;TimeBase.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\TimeBaseA.cpp;AnyTypeCode\TimeBaseA.h;TimeBaseC.cpp;TimeBaseC.h;TimeBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on TimeBase.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;TimeBase.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\TimeBaseA.cpp;AnyTypeCode\TimeBaseA.h;TimeBaseC.cpp;TimeBaseC.h;TimeBaseS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on TimeBase.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci &quot;TimeBase.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\TimeBaseA.cpp;AnyTypeCode\TimeBaseA.h;TimeBaseC.cpp;TimeBaseC.h;TimeBaseS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="ULongLongSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ULongLongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ULongLongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ULongLongSeqA.cpp;AnyTypeCode\ULongLongSeqA.h;ULongLongSeqC.cpp;ULongLongSeqC.h;ULongLongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ULongLongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ULongLongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ULongLongSeqA.cpp;AnyTypeCode\ULongLongSeqA.h;ULongLongSeqC.cpp;ULongLongSeqC.h;ULongLongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ULongLongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ULongLongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ULongLongSeqA.cpp;AnyTypeCode\ULongLongSeqA.h;ULongLongSeqC.cpp;ULongLongSeqC.h;ULongLongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ULongLongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ULongLongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ULongLongSeqA.cpp;AnyTypeCode\ULongLongSeqA.h;ULongLongSeqC.cpp;ULongLongSeqC.h;ULongLongSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="ULongSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ULongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ULongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ULongSeqA.cpp;AnyTypeCode\ULongSeqA.h;ULongSeqC.cpp;ULongSeqC.h;ULongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ULongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ULongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ULongSeqA.cpp;AnyTypeCode\ULongSeqA.h;ULongSeqC.cpp;ULongSeqC.h;ULongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ULongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ULongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\ULongSeqA.cpp;AnyTypeCode\ULongSeqA.h;ULongSeqC.cpp;ULongSeqC.h;ULongSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on ULongSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;ULongSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\ULongSeqA.cpp;AnyTypeCode\ULongSeqA.h;ULongSeqC.cpp;ULongSeqC.h;ULongSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="UShortSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on UShortSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;UShortSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\UShortSeqA.cpp;AnyTypeCode\UShortSeqA.h;UShortSeqC.cpp;UShortSeqC.h;UShortSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on UShortSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;UShortSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\UShortSeqA.cpp;AnyTypeCode\UShortSeqA.h;UShortSeqC.cpp;UShortSeqC.h;UShortSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on UShortSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;UShortSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\UShortSeqA.cpp;AnyTypeCode\UShortSeqA.h;UShortSeqC.cpp;UShortSeqC.h;UShortSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on UShortSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;UShortSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\UShortSeqA.cpp;AnyTypeCode\UShortSeqA.h;UShortSeqC.cpp;UShortSeqC.h;UShortSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="WCharSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on WCharSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;WCharSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\WCharSeqA.cpp;AnyTypeCode\WCharSeqA.h;WCharSeqC.cpp;WCharSeqC.h;WCharSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on WCharSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;WCharSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\WCharSeqA.cpp;AnyTypeCode\WCharSeqA.h;WCharSeqC.cpp;WCharSeqC.h;WCharSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on WCharSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;WCharSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\WCharSeqA.cpp;AnyTypeCode\WCharSeqA.h;WCharSeqC.cpp;WCharSeqC.h;WCharSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on WCharSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;WCharSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\WCharSeqA.cpp;AnyTypeCode\WCharSeqA.h;WCharSeqC.cpp;WCharSeqC.h;WCharSeqS.h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="WStringSeq.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on WStringSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;WStringSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\WStringSeqA.cpp;AnyTypeCode\WStringSeqA.h;WStringSeqC.cpp;WStringSeqC.h;WStringSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on WStringSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;WStringSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\WStringSeqA.cpp;AnyTypeCode\WStringSeqA.h;WStringSeqC.cpp;WStringSeqC.h;WStringSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on WStringSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;WStringSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BEd.dll;..\..\lib\TAO_IDL_FEd.dll"
+						Outputs="AnyTypeCode\WStringSeqA.cpp;AnyTypeCode\WStringSeqA.h;WStringSeqC.cpp;WStringSeqC.h;WStringSeqS.h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+				>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Invoking ..\..\bin\tao_idl on WStringSeq.pidl"
+						CommandLine="PATH=%PATH%;..\..\lib&#x0D;&#x0A;..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -SS -Sorb -GA -Gp -Gd -oA AnyTypeCode -Wb,export_macro=TAO_Export -Wb,export_include=tao/TAO_Export.h -Wb,anyop_export_macro=TAO_AnyTypeCode_Export -Wb,anyop_export_include=tao/AnyTypeCode/TAO_AnyTypeCode_Export.h -Sci -Gse -Gata &quot;WStringSeq.pidl&quot;"
+						AdditionalDependencies="..\..\bin\tao_idl.exe;..\..\lib\TAO_IDL_BE.dll;..\..\lib\TAO_IDL_FE.dll"
+						Outputs="AnyTypeCode\WStringSeqA.cpp;AnyTypeCode\WStringSeqA.h;WStringSeqC.cpp;WStringSeqC.h;WStringSeqS.h"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Pidlinstallwithoutbuilding Files"
+			Filter="">
+			<File
+				RelativePath="InterfaceDef.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="InvalidName.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Object_Key.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="orb.idl">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Typecode_types.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="WrongTransaction.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,35 @@
+// -*- MPC -*-
+// $Id: ForwardOnceUponException.mpc 86232 2009-07-24 21:52:20Z dai_y $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    test.idl
+  }
+  custom_only = 1
+}
+
+project(*Server): taoserver, iortable {
+  after += *idl
+  Source_Files {
+    test_i.cpp
+    server.cpp
+  }
+  Source_Files {
+    testC.cpp
+    testS.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client): taoclient, anytypecode {
+  after += *idl
+  Source_Files {
+    client.cpp
+  }
+  Source_Files {
+    testC.cpp
+  }
+  IDL_Files {
+  }
+}

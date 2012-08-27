@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: Collocated_Best_Direct.mpc 94802 2011-10-20 09:46:10Z mcorino $
+
+// Enable DIRECT Collocation, disable Thru_Poa
+
+project(Collocated_Best_Direct): taoserver {
+  exename = Collocated_Best_Direct
+  idlflags += -Sp -Gd
+}

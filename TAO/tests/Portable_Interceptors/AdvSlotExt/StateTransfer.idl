@@ -1,0 +1,12 @@
+// file      : StateTransfer.idl
+// author    : Boris Kolpackov <boris@dre.vanderbilt.edu>
+// cvs-id    : $Id: StateTransfer.idl 71067 2006-02-15 11:31:42Z jwillemsen $
+
+interface StateTransfer
+{
+  short
+  number ();
+
+  oneway void
+  shutdown ();
+};

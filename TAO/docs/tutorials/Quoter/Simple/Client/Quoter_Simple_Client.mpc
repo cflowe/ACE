@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: Quoter_Simple_Client.mpc 95491 2012-01-24 13:51:36Z johnnyw $
+
+project : taoexe, portableserver {
+  libs += Quoter_Idl_Lib
+  after += Quoter_Idl_Lib
+  includes += ../../idl
+  libpaths += ../../idl
+}

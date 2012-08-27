@@ -1,0 +1,12 @@
+// $Id: b1.idl 80539 2008-02-01 15:02:57Z cleeland $
+
+#ifndef __FMK_B1_IDL__
+#define __FMK_B1_IDL__
+
+#include "a.idl"
+
+module wtk_B {
+
+};
+
+#endif

@@ -1,0 +1,21 @@
+// $Id: NonChangeable_Component.idl 95809 2012-06-03 17:56:00Z johnnyw $
+
+/**
+ * @file NonChangeable_Component.idl
+ * @author Marcel Smit (msmit@remedy.nl)
+ */
+
+#ifndef COMPONENT_IDL
+#define COMPONENT_IDL
+
+#include "Connector/NonChangeable_Connector.idl"
+
+module NonChangeable
+{
+  component NonChangeableComponent
+  {
+    port NonChangeableTestConnector::DDS_Get info_get;
+  };
+};
+
+#endif

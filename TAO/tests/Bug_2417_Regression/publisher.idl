@@ -1,0 +1,10 @@
+// $Id: publisher.idl 81963 2008-06-16 10:20:06Z sma $
+
+#include "subscriber.idl"
+
+interface Publisher
+{
+  void subscribe(in Subscriber _subscriber);
+
+  oneway void shutdown ();
+};

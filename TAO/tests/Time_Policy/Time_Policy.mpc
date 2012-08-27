@@ -1,0 +1,12 @@
+// -*- MPC -*-
+// $Id: Time_Policy.mpc 95332 2011-12-15 11:09:41Z mcorino $
+
+project(*Exe): taoserver {
+  exename = test
+  Source_Files {
+    main.cpp
+  }
+  IDL_Files {
+  }
+}
+

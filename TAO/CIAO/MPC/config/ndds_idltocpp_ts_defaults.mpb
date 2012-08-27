@@ -1,0 +1,19 @@
+// -*- MPC -*-
+// $Id: ndds_idltocpp_ts_defaults.mpb 95758 2012-05-15 13:42:33Z msmit $
+
+project : ndds_cck_ts_defaults, nddslib, taolib {
+  Define_Custom(DDSGenerator) : NDDSTypeSupport {
+    commandflags += -typeSequenceSuffix RTISeq -verbosity 1
+    commandflags += -I $(CIAO_ROOT)/connectors/dds4ccm/idl
+    commandflags += -I $(CIAO_ROOT)/ccm -I $(CIAO_ROOT)
+    keyword dds_ts_flags = commandflags
+  }
+
+  dynamicflags += NDDS_USER_DLL_EXPORT
+
+  verbatim(gnuace, macros) {
+    override no_hidden_visibility = 1
+    override no_strict_aliasing = 1
+  }
+
+}

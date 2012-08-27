@@ -1,0 +1,12 @@
+// $Id: foo.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+#ifndef FOO_IDL
+#define FOO_IDL
+
+interface foo
+{
+  boolean match_references ();
+};
+
+#endif /* FOO_IDL */
+

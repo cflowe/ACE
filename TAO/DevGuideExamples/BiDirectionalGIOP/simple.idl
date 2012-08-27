@@ -1,0 +1,16 @@
+// $Id: simple.idl 83358 2008-10-21 23:02:02Z sowayaa $
+
+#include "callback.idl"
+
+interface Simple
+{
+  // Just call a method on the server,
+  long test_method(in boolean do_callback);
+
+  // send the callback object to the server
+  void callback_object(in Callback cb);
+
+  // A safe way to shutdown the server, it is a oneway function so we
+  // will never get a COMM_FAILURE error
+  oneway void shutdown();
+};

@@ -1,0 +1,10 @@
+// $Id: go.idl 77999 2007-04-12 13:47:46Z elliott_c $
+
+interface sig
+{
+  // Tell the server to start
+  oneway void go ();
+
+  // Tell the server the consumer is done
+  oneway void done ();
+};

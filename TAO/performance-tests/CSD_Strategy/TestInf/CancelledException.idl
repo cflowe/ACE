@@ -1,0 +1,7 @@
+// $Id: CancelledException.idl 68816 2005-10-19 00:27:51Z dai_y $
+#ifndef CANCELAPPXCEPTION_IDL
+#define CANCELAPPXCEPTION_IDL
+
+exception CancelledException {};
+
+#endif

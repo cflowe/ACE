@@ -1,0 +1,18 @@
+// $Id: DelReplyH_Receiver.idl 90141 2010-05-12 14:39:28Z mhengstmengel $
+
+#ifndef DELREPLYH_RECEIVER_IDL
+#define DELREPLYH_RECEIVER_IDL
+
+#include <Components.idl>
+
+#include "Base/DelReplyH.idl"
+
+module DelReplyH
+{
+  component Receiver
+  {
+    /// Provides
+    provides MyFoo do_my_foo;
+  };
+};
+#endif

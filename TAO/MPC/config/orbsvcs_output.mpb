@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: orbsvcs_output.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project {
+  // We tested with all orbsvcs libs going to $(TAO_ROOT)/orbsvcs/lib, but
+  // decided that it was easier to deal with all libs in one place.
+  libout = $(ACE_ROOT)/lib
+}

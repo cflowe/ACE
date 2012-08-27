@@ -1,0 +1,11 @@
+//
+// $Id: test.idl 51027 2003-07-12 20:59:57Z irfan $
+//
+
+interface test
+{
+  void initialize (in unsigned long total_iterations);
+
+  oneway void method (in unsigned long work,
+                      in string iteration);
+};

@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: Codec.mpc 68953 2005-10-24 13:51:33Z jwillemsen $
+
+project(*Client): taoclient, codecfactory, codeset {
+  Source_Files {
+    testC.cpp
+    client.cpp
+  }
+}
+

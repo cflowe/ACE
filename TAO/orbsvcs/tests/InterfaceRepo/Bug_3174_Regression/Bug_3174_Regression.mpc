@@ -1,0 +1,13 @@
+// -*- MPC -*-
+// $Id: Bug_3174_Regression.mpc 80284 2007-12-17 13:54:12Z sma $
+
+project(*test_idl): taoexe, ifr_client,dynamicany  {
+  exename = test_idl
+
+  Source_Files {
+    test_idl.cpp
+  }
+
+  IDL_Files {
+  }
+}

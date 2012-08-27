@@ -1,0 +1,13 @@
+// -*- MPC -*-
+// $Id: BiDirCORBALOC.mpc 78771 2007-07-04 05:39:51Z sowayaa $
+
+project(*Server): namingexe, portableserver, bidir_giop, utils, avoids_corba_e_micro {
+
+  exename = TimeServer
+
+  Source_Files {
+    TimeServer.cpp
+  }
+}
+
+

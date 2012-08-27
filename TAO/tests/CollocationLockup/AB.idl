@@ -1,0 +1,8 @@
+// $Id: AB.idl 75219 2006-11-06 10:29:49Z johnnyw $
+
+interface A {
+};
+
+interface C {
+  A makeA ();
+};

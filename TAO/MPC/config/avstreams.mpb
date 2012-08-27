@@ -1,0 +1,10 @@
+// -*- MPC -*-
+// $Id: avstreams.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project: property_serv, naming, qos {
+  avoids    += ace_for_tao
+  after     += AV
+  libs      += TAO_AV
+  tagchecks += AV
+}
+

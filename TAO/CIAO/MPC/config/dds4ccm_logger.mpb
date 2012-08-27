@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dds4ccm_logger.mpb 92471 2010-11-02 07:41:20Z msmit $
+
+project : ciao, acelib {
+  after += DDS4CCM_Logger
+  libs  += DDS4CCM_Logger
+}

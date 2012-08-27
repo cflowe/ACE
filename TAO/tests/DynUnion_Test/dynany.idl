@@ -1,0 +1,11 @@
+// $Id: dynany.idl 77688 2007-03-13 09:55:49Z johnnyw $
+
+module DynAnyTest {
+
+    enum EventKind {ALARM_EVENT, LOG_EVENT};
+
+    union EventData switch (EventKind) {
+        case ALARM_EVENT:        any        ev_data;
+        case LOG_EVENT:          string     ev_desc;
+    };
+};

@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ccm_lw.mpb 89803 2010-04-08 09:55:45Z johnnyw $
+
+feature (ccm_lw) : taobaseidldefaults {
+  macros += CCM_LW
+  idlflags += -DCCM_LW -Gcl
+}

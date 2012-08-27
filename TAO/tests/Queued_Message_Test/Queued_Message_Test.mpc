@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: Queued_Message_Test.mpc 54747 2003-12-23 21:05:25Z dhinton $
+
+project: taoexe {
+  exename = Queued_Message_Test
+}
+

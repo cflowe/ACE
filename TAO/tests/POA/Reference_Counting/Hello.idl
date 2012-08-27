@@ -1,0 +1,7 @@
+//
+// $Id: Hello.idl 66291 2005-06-09 18:29:41Z jwillemsen $
+//
+
+interface Hello {
+  void moo ();
+};

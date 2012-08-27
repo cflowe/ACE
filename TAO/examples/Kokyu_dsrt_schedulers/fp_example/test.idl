@@ -1,0 +1,10 @@
+//
+// $Id: test.idl 52574 2003-10-08 13:26:32Z venkita $
+//
+
+interface Simple_Server
+{
+  long test_method (in long x);
+
+  void shutdown ();
+};

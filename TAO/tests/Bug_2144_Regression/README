@@ -1,0 +1,4 @@
+$Id: README 94587 2011-10-05 13:43:25Z johnnyw $
+
+There is nothing to run for this test. It passes if the generated code
+compiles. See bugzilla #2144.

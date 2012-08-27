@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-054B-8A63D827DF4C}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-054B-8A63D827DF4C}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Pidlinstallwithoutbuilding Files">
+      <UniqueIdentifier>{B5581BA1-FECA-1BAD-054B-8A63D827DF4C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PI.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ClientRequestInfo.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ClientRequestInterceptor.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Interceptor.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="InvalidSlot.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ORBInitializer.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ORBInitInfo.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PI_include.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PICurrent.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PIForwardRequest.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ProcessingModePolicy.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RequestInfo.pidl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PolicyFactory.pidl">
+      <Filter>Pidlinstallwithoutbuilding Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

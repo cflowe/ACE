@@ -1,0 +1,12 @@
+//
+// $Id: test.idl 35605 2000-10-17 06:20:50Z marina $
+//
+
+interface Test
+{
+  void test_method ();
+  // no-op.
+
+  oneway void shutdown ();
+  // Shut down the ORB.
+};

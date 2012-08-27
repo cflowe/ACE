@@ -1,0 +1,9 @@
+//
+// $Id: test.idl 30764 2000-01-28 18:55:28Z irfan $
+//
+
+interface test
+{
+  unsigned long method (in unsigned long work);
+  oneway void shutdown ();
+};

@@ -1,0 +1,45 @@
+// -*- MPC -*-
+// $Id: Bug_2429_Regression.mpc 77008 2007-02-12 11:52:38Z johnnyw $
+
+project(*idl): taoidldefaults {
+  idlflags += -GC
+
+  IDL_Files {
+    Child.idl
+    Parent.idl
+  }
+  custom_only = 1
+}
+
+project(*Server) : taoserver, messaging {
+  exename   = server
+  after += *idl
+  Source_Files {
+    server.cpp
+    ChildServant.cpp
+  }
+  Source_Files {
+    ChildC.cpp
+    ChildS.cpp
+    ParentC.cpp
+    ParentS.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*Client) : taoclient, messaging {
+  exename   = client
+  after += *idl
+  Source_Files {
+    client.cpp
+  }
+  Source_Files {
+    ChildC.cpp
+    ChildS.cpp
+    ParentC.cpp
+    ParentS.cpp
+  }
+  IDL_Files {
+  }
+}

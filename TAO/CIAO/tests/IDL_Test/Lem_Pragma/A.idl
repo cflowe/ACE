@@ -1,0 +1,12 @@
+// $Id: A.idl 88637 2010-01-21 08:43:35Z johnnyw $
+
+#ifndef A_IDL
+#define A_IDL
+
+#pragma ciao lem "AE.idl"
+
+interface A
+{
+};
+
+#endif /* A_IDL */

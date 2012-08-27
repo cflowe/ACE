@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Policies.mpc 94802 2011-10-20 09:46:10Z mcorino $
+
+project(Policies Manipulation): taoserver, messaging {
+  exename   = Manipulation
+}

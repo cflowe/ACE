@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: zlibcompressor.mpb 81672 2008-05-09 18:37:19Z jtc $
+
+project : taolib, compression, ace_zlib {
+  requires += zlib
+  after   += ZlibCompressor
+  libs    += TAO_ZlibCompressor
+}

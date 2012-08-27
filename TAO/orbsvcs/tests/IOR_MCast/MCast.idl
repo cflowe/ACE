@@ -1,0 +1,19 @@
+// $Id: MCast.idl 91816 2010-09-17 08:35:56Z johnnyw $
+
+module MCast
+{
+
+  interface Server
+  {
+    // = TITLE
+    //
+    // = DESCRIPTION
+    //     Prints out the status.
+
+    boolean connect_server ();
+    // Return <true> if the server received the
+    // request from the client.
+
+  };
+
+};

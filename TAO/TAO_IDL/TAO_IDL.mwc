@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: TAO_IDL.mwc 80417 2008-01-14 01:05:36Z wotte $
+
+// Many existing MPC builds rely on this workspace.  It is not
+// necessary other than that.
+workspace {
+}

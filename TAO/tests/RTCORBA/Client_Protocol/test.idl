@@ -1,0 +1,13 @@
+//
+// $Id: test.idl 44571 2002-04-26 15:20:59Z bala $
+//
+
+interface Test
+{
+  void test_method ();
+  // Test method.
+
+  oneway void shutdown ();
+  // Shut down the ORB.
+
+};

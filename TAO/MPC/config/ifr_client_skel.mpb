@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: ifr_client_skel.mpb 94332 2011-07-18 19:02:15Z mesnier_p $
+
+project : taolib, portableserver, anytypecode, ifr_client {
+  libs    += TAO_IFR_Client_skel
+  after   += IFR_Client_skel
+}

@@ -1,0 +1,16 @@
+// -*- MPC -*-
+// $Id: Log_Event.mpc 62190 2004-11-25 17:17:58Z jtc $
+
+project(*Consumer) : orbsvcsexe, dseventlogadmin, event_skel, naming {
+  exename = Event_Consumer
+  source_files {
+    Event_Consumer.cpp
+  }
+}
+
+project(*Supplier) : orbsvcsexe, dseventlogadmin, event_skel, naming {
+  exename = Event_Supplier
+  source_files {
+    Event_Supplier.cpp
+  }
+}

@@ -1,0 +1,13 @@
+//
+// $Id: test.idl 23134 1999-05-19 03:20:25Z coryan $
+//
+
+interface Simple_Server {
+
+  oneway void set_x_angle (in long x);
+  oneway void set_y_angle (in long y);
+  // Set the X and Y angles in the view port..
+
+  void shutdown ();
+  // Shutdown the ORB
+};

@@ -1,0 +1,29 @@
+/**
+ * @file Test.idl
+ *
+ * $Id: Test.idl 47059 2002-11-04 19:56:39Z bala $
+ *
+ * @author Carlos O'Ryan <coryan@atdesk.com>
+ *
+ */
+#ifndef BUG_1020_TEST_IDL
+#define BUG_1020_TEST_IDL
+
+module Test
+{
+  typedef sequence<octet> Payload;
+
+  interface Echo
+  {
+    void echo_payload (inout Payload data);
+  };
+
+  interface Echo_Caller
+  {
+    void start_task(in Echo client);
+
+    oneway void shutdown();
+  };
+};
+
+#endif /* BUG_1020_TEST_IDL */

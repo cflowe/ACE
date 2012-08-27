@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: taoexe.mpb 77928 2007-04-05 11:53:03Z elliott_c $
+
+project : aceexe, taodefaults, taoidldefaults, core_minimum_corba, corba_e_compact, corba_e_micro, link_codecfactory {
+  after += TAO Codeset
+  libs  += TAO
+}

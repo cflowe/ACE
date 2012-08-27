@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: etcl.mpb 81660 2008-05-09 12:01:34Z parsons $
+
+project : tao_etcl, ace_etcl_parser {
+  tagchecks += Notify
+}

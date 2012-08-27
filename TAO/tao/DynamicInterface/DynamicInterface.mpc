@@ -1,0 +1,10 @@
+//$Id: DynamicInterface.mpc 91840 2010-09-17 20:23:03Z mitza $
+
+project(DynamicInterface) : taolib, tao_output, install, messaging, minimum_corba {
+  sharedname   = TAO_DynamicInterface
+  dynamicflags += TAO_DYNAMICINTERFACE_BUILD_DLL
+
+  specific {
+    install_dir = tao/DynamicInterface
+  }
+}

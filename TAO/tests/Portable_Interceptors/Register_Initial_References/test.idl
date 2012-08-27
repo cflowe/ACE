@@ -1,0 +1,21 @@
+// -*- IDL -*-
+
+//=============================================================================
+/**
+ * @file test.idl
+ *
+ * $Id: test.idl 67100 2005-07-19 13:58:34Z jwillemsen $
+ *
+ * Simple IDL file
+ *
+ * @author Johnny Willemsen  <jwillemsen@remedy.nl>
+ */
+//=============================================================================
+
+module TestModule
+{
+
+  interface test
+  {
+  };
+};

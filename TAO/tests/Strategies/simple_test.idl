@@ -1,0 +1,10 @@
+/*
+ * $Id: simple_test.idl 43216 2002-01-22 18:28:44Z parsons $
+ */
+
+interface Simple_Server
+{
+  boolean print_status ();
+
+  oneway void shutdown ();
+};

@@ -1,0 +1,19 @@
+// -*- MPC -*-
+// $Id: AVS_Multicast_Full_Profile.mpc 57499 2004-05-06 23:20:08Z mbrudka $
+
+project(*server): avstreamsexe {
+  exename  = server
+
+  Source_Files {
+    server.cpp
+  }
+}
+
+project(*ftp): avstreamsexe {
+  exename  = ftp
+
+  Source_Files {
+    ftp.cpp
+  }
+}
+

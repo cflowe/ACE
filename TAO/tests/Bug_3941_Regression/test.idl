@@ -1,0 +1,15 @@
+// $Id: test.idl 92909 2010-12-20 10:04:25Z vzykov $
+
+module test {
+    abstract valuetype EventBase { };
+
+    valuetype event0 : EventBase
+    {
+        public string message;
+    };
+
+    valuetype event1 : EventBase
+    {
+        public long l;
+    };
+};

@@ -1,0 +1,11 @@
+// $Id: Test.idl 80606 2008-02-12 10:31:14Z smcqueen $
+
+interface test
+{
+  /*
+   * A simple remote operation..
+   */
+  void send_stuff(in string foo);
+
+  oneway void shutdown ();
+};

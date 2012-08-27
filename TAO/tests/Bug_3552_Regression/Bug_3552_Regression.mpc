@@ -1,0 +1,22 @@
+// -*- MPC -*-
+// $Id: Bug_3552_Regression.mpc 84258 2009-01-29 09:05:27Z sma $
+
+project(*IDL): taoidldefaults, anytypecode {
+  idlflags += -SS
+  IDL_Files {
+    struct.idl
+  }
+  custom_only = 1
+}
+
+project(*CDRTest): taoclient, anytypecode, codecfactory {
+  after += *IDL
+  exename = check
+
+  Source_Files {
+    structC.cpp
+    check.cpp
+  }
+  IDL_Files {
+  }
+}

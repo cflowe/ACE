@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: kokyu_dsrt_scheduler_client.mpb 90586 2010-06-14 13:48:01Z parsons $
+
+project : taoclient, kokyu_dsrt_schedulers {
+}

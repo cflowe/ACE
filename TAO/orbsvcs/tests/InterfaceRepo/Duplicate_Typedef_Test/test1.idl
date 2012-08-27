@@ -1,0 +1,14 @@
+// $Id: test1.idl 80539 2008-02-01 15:02:57Z cleeland $
+
+#ifndef __TEST1_IDL__
+#define __TEST1_IDL__
+module test {
+  typedef sequence<string> StringSeq;
+};
+#endif // __TEST1_IDL__
+#ifndef __TEST1_IDL__
+#define __TEST1_IDL__
+module test {
+  typedef sequence<string> StringSeq;
+};
+#endif // __TEST1_IDL__

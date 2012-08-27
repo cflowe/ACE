@@ -1,0 +1,11 @@
+//
+// Client interface definition.
+//
+// $Id: client.idl 42364 2001-12-09 18:20:56Z ossama $
+//
+
+
+interface client
+{
+  void test_reply (in string msg);
+};

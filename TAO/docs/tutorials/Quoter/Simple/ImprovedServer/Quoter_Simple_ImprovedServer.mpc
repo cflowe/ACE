@@ -1,0 +1,7 @@
+// $Id: Quoter_Simple_ImprovedServer.mpc 95491 2012-01-24 13:51:36Z johnnyw $
+project : taoserver, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  libs += Quoter_Idl_Lib
+  after += Quoter_Idl_Lib
+  includes += ../../idl
+  libpaths += ../../idl
+}

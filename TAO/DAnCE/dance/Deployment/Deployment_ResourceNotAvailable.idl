@@ -1,0 +1,16 @@
+// $Id: Deployment_ResourceNotAvailable.idl 90214 2010-05-21 13:59:45Z wotte $
+
+#ifndef DEPLOYMENT_RESOURCENOTAVAILABLE_IDL
+#define DEPLOYMENT_RESOURCENOTAVAILABLE_IDL
+
+module Deployment {
+  exception ResourceNotAvailable {
+    string name;
+    string resourceType;
+    string propertyName;
+    string elementName;
+    string resourceName;
+  };
+};
+
+#endif

@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Log_Basic_Log_Test.mpc 62180 2004-11-25 02:39:16Z jtc $
+
+project : orbsvcsexe, dslogadmin, naming, dynamicany, iortable, etcl {
+    exename = client
+}

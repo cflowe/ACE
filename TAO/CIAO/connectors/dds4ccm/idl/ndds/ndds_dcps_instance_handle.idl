@@ -1,0 +1,12 @@
+// $Id: ndds_dcps_instance_handle.idl 93117 2011-01-20 12:11:28Z mcorino $
+
+#ifndef NDDS_DCPS_INSTANCE_HANDLE_IDL
+#define NDDS_DCPS_INSTANCE_HANDLE_IDL
+
+#include "connectors/dds4ccm/idl/ndds/ndds_dcps_i_handle.idl"
+
+module DDS {
+    native HANDLE_NIL;
+};
+
+#endif

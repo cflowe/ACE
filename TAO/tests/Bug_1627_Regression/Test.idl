@@ -1,0 +1,7 @@
+//
+// $Id: Test.idl 53705 2003-11-18 14:55:10Z smcqueen $
+//
+interface Test
+{
+   void test_method();
+};

@@ -1,0 +1,4 @@
+// $Id: RtECKokyu.mpc 80754 2008-02-27 15:24:53Z sowayaa $
+project: orbsvcsexe, rtkokyuevent, rtevent_serv {
+  exename = Service
+}

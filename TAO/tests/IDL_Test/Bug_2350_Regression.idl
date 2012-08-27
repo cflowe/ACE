@@ -1,0 +1,16 @@
+// $Id: Bug_2350_Regression.idl 76443 2007-01-10 09:12:57Z johnnyw $
+
+exception something
+{
+};
+
+struct _user_ExceptionHolder
+{
+  long a;
+};
+
+interface Bug_2350_Regression
+{
+  void Bug_2350_Regression_excep(in _user_ExceptionHolder a)
+         raises(something);
+};

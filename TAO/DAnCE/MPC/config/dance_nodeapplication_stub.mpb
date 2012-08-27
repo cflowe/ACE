@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_nodeapplication_stub.mpb 89008 2010-02-15 12:51:29Z johnnyw $
+
+project : dance, dance_deployment_stub {
+  after += Deployment_NodeApplication_stub
+  libs  += DAnCE_NodeApplication_stub
+}

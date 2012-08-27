@@ -1,0 +1,6 @@
+$Id: README 94655 2011-10-07 09:19:07Z msmit $
+
+UnkeyedSamples consists of a Sender and a Receiver.
+The Sender writes samples unkeyed; the Receiver should
+receive the same number of samples. An error is printed
+when this isn't the case.

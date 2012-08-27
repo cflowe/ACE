@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-67AE-8A63E9B838D7}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-67AE-8A63E9B838D7}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Idl3toidl2 Files">
+      <UniqueIdentifier>{0564D3D7-FECA-1BAD-67AE-8A63E9B838D7}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-67AE-8A63E9B838D7}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-67AE-8A63E9B838D7}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Idl And Idl3toidl2 Files">
+      <UniqueIdentifier>{F7FDABCE-FECA-1BAD-67AE-8A63E9B838D7}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-67AE-8A63E9B838D7}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{B14BBA74-FECA-1BAD-67AE-8A63E9B838D7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="convert_IDL2C.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="convert_IDL2S.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include_IDL2C.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include_IDL2S.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="keyword_clash_IDL2C.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="keyword_clash_IDL2S.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pass_through_IDL2C.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pass_through_IDL2S.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="raw_includeC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="raw_includeS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="convert_IDL2C.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="convert_IDL2S.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include_IDL2C.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include_IDL2S.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includeC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includeS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keyword_clash_IDL2C.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keyword_clash_IDL2S.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pass_through_IDL2C.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pass_through_IDL2S.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="raw_includeC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="raw_includeS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="convert.idl">
+      <Filter>Idl3toidl2 Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="keyword_clash.idl">
+      <Filter>Idl3toidl2 Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pass_through.idl">
+      <Filter>Idl3toidl2 Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="all.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="convert_IDL2.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="include_IDL2.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="keyword_clash_IDL2.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pass_through_IDL2.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="raw_include.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="include.idl">
+      <Filter>Idl And Idl3toidl2 Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="convert_IDL2C.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="include_IDL2C.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="includeC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="keyword_clash_IDL2C.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="pass_through_IDL2C.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="raw_includeC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="README">
+      <Filter>Documentation</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+// -*- MPC -*-
+// $Id: ftserverorb.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project : ftorbutils, portablegroup, pi_server, interceptors {
+  after     += FT_ServerORB
+  libs      += TAO_FT_ServerORB
+  tagchecks += FT_ServerORB
+}
+

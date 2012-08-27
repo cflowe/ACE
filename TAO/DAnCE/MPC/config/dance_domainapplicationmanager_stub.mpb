@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dance_domainapplicationmanager_stub.mpb 89008 2010-02-15 12:51:29Z johnnyw $
+
+project : dance, dance_applicationmanager_stub {
+  after += Deployment_DAM_stub
+  libs  += DAnCE_DomainApplicationManager_stub
+}

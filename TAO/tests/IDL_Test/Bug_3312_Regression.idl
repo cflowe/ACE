@@ -1,0 +1,18 @@
+// $Id: Bug_3312_Regression.idl 92513 2010-11-09 12:57:53Z vzykov $
+
+module CallMe
+  {
+    enum Colors { Red, Green, Blue };
+
+    union YourColorBaby switch (enum ColorMe { Red, Blue })
+      {
+        case Red: enum Val { one, two } c_1;
+        case Blue: long c_2;
+      };
+
+    union YourCar switch (enum ColorMe { Green, Pink })
+      {
+        case Green: short c_1;
+        case Pink: short c_2;
+      };
+  };

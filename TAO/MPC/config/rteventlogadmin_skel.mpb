@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: rteventlogadmin_skel.mpb 75786 2006-12-04 15:51:05Z johnnyw $
+
+project : orbsvcslib, rteventlogadmin, dslogadmin_skel, rtevent_skel, portableserver {
+  after      += RTEventLogAdmin_Skel
+  libs       += TAO_RTEventLogAdmin_Skel
+}

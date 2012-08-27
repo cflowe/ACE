@@ -1,0 +1,21 @@
+// $Id: CSL_DeadlineTest_Sender.idl 95881 2012-06-13 18:29:33Z johnnyw $
+
+/**
+ * @author Marijke Hengstmengel <mhengstmengel@remedy.nl>
+ */
+
+#ifndef DDS_CSL_DEADLINETEST_SENDER_IDL
+#define DDS_CSL_DEADLINETEST_SENDER_IDL
+
+#include "Connector/CSL_DeadlineTest_Connector.idl"
+
+module CSL_DeadlineTest
+{
+  component Sender
+  {
+    port CSLDeadlineConnector::DDS_Write test_topic_write;
+    provides CCM_DDS::ConnectorStatusListener test_topic_connector_status;
+  };
+};
+
+#endif

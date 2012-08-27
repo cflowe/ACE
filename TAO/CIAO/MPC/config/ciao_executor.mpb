@@ -1,0 +1,5 @@
+// -*- MPC -*-
+// $Id: ciao_executor.mpb 91961 2010-09-23 10:45:07Z johnnyw $
+
+project : ccm_svnt, ciao_container_base_stub {
+}

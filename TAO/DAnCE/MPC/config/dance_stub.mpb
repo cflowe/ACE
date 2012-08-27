@@ -1,0 +1,8 @@
+// -*- MPC -*-
+// $Id: dance_stub.mpb 91720 2010-09-10 17:19:31Z wotte $
+
+project : dance_deployment_stub, dance_applicationmanager_stub, dance_logger {
+  after += DAnCE_stub
+  libs += DAnCE_stub
+  includes += $(DANCE_ROOT)
+}

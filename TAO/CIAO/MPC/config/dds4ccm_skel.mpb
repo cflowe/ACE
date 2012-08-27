@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dds4ccm_skel.mpb 89356 2010-03-05 22:11:56Z parsons $
+
+project : dds4ccm_stub {
+  libs += DDS4CCM_skel
+  after += DDS4CCM_skel
+}

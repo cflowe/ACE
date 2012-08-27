@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: corba_e_compact.mpb 80683 2008-02-21 15:36:05Z johnnyw $
+
+feature (corba_e_compact) : taobaseidldefaults {
+  macros += CORBA_E_COMPACT
+  idlflags += -DCORBA_E_COMPACT -Gce
+}

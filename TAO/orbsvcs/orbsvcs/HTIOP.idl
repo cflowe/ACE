@@ -1,0 +1,30 @@
+// -*- IDL -*-
+//
+// $Id: HTIOP.idl 86799 2009-09-28 06:05:45Z johnnyw $
+
+#ifndef HTIOP_IDL
+#define HTIOP_IDL
+
+// This is a OMG specified IDL. When HTIOP modules start getting
+// complicated we may want to have them here.
+#pragma prefix "omg.org"
+
+
+module HTIOP
+{
+  struct ListenPoint
+  {
+    string host;
+    unsigned short _port;
+    string htid;
+  };
+
+  typedef sequence<ListenPoint> ListenPointList;
+
+  struct BiDirHTIOPServiceContext
+  {
+    ListenPointList listen_points;
+  };
+};
+
+#endif  /* TAO_IIOP_PIDL */
