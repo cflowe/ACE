@@ -1,7 +1,7 @@
 /**
  * @file Bug_3911_Regression_Test.cpp
  *
- * $Id: Bug_3911_Regression_Test.cpp 92900 2010-12-17 14:45:11Z mcorino $
+ * $Id: Bug_3911_Regression_Test.cpp 96055 2012-08-15 14:10:34Z sma $
  *
  * Reproduces the problem reported in bug 3911
  *   http://deuce.doc.wustl.edu/bugzilla/show_bug.cgi?id=3911
@@ -116,7 +116,8 @@ public:
                           block_name,
                           ACE_OS::last_error()));
       shared = c_memory_pool->malloc(block_size);
-      if (shared < 0)
+      // reinterpret_cast due to some compilers warning against ordering pointers with integers
+      if (reinterpret_cast<ssize_t> (shared) < 0)
       {
         ACE_DEBUG((LM_INFO, ACE_TEXT("New Shared Memory block could not be allocated. errno = %d.\n"),
                             ACE_OS::last_error()));

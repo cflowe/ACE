@@ -2,7 +2,7 @@
  * @author William R. Otte <wotte@dre.vanderbilt.edu>
  * @author Johnny Willemsen (jwillemsen@remedy.nl)
  *
- * $Id: DomainParticipantManager.h 95953 2012-07-23 13:37:10Z johnnyw $
+ * $Id: DomainParticipantManager.h 96064 2012-08-16 10:32:29Z johnnyw $
  *
  */
 
@@ -43,10 +43,7 @@ namespace CIAO
     friend class ACE_Singleton<DomainParticipantManager, TAO_SYNCH_MUTEX>;
 
     /**
-     *
-     * @class : DDSParticipantTopic
-     *
-     * @brief :
+     * @class DDSParticipantTopic
      *
      * Stores a list of topics for a specific domain. If
      * several connectors run in the same process and those

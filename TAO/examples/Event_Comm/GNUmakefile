@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,31 +20,31 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Event_Comm_IDL Event_Comm_Supplier Event_Comm_Consumer Event_Comm_Notifier
+all: Event_Comm_IDL Event_Comm_Notifier Event_Comm_Consumer Event_Comm_Supplier
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_IDL $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Supplier $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Consumer $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Notifier $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Consumer $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Supplier $(@)
 
 .PHONY: Event_Comm_IDL
 Event_Comm_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_IDL all
 
-.PHONY: Event_Comm_Supplier
-Event_Comm_Supplier: Event_Comm_IDL
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Supplier all
+.PHONY: Event_Comm_Notifier
+Event_Comm_Notifier: Event_Comm_IDL
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Notifier all
 
 .PHONY: Event_Comm_Consumer
-Event_Comm_Consumer: Event_Comm_IDL Event_Comm_Supplier
+Event_Comm_Consumer: Event_Comm_IDL Event_Comm_Notifier
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Consumer all
 
-.PHONY: Event_Comm_Notifier
-Event_Comm_Notifier: Event_Comm_IDL Event_Comm_Supplier
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Notifier all
+.PHONY: Event_Comm_Supplier
+Event_Comm_Supplier: Event_Comm_IDL Event_Comm_Notifier
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Comm_Supplier all
 
 project_name_list:
 	@echo Event_Comm_Consumer

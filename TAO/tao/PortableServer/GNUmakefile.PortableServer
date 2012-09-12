@@ -350,23 +350,23 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#PS_Forward.pidl
-#ServantActivator.pidl
-#ImplicitActivationPolicy.pidl
 #IdAssignmentPolicy.pidl
-#PortableServer_include.pidl
-#POAManagerFactory.pidl
-#ServantLocator.pidl
-#ForwardRequest.pidl
-#PortableServer.pidl
-#POAManager.pidl
-#PS_Current.pidl
-#ThreadPolicy.pidl
-#POA.pidl
-#RequestProcessingPolicy.pidl
 #LifespanPolicy.pidl
-#IdUniquenessPolicy.pidl
+#POAManagerFactory.pidl
 #ServantRetentionPolicy.pidl
+#ServantActivator.pidl
+#PS_Forward.pidl
+#ThreadPolicy.pidl
+#PS_Current.pidl
+#ForwardRequest.pidl
+#ImplicitActivationPolicy.pidl
+#IdUniquenessPolicy.pidl
+#PortableServer.pidl
+#POA.pidl
+#POAManager.pidl
+#ServantLocator.pidl
+#PortableServer_include.pidl
+#RequestProcessingPolicy.pidl
 #ServantManager.pidl
 #AdapterActivator.pidl
 #

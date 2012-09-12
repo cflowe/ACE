@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: ImplRepo_Basic_Idl ImplRepo_Basic_Client ImplRepo_Basic_Server
+all: ImplRepo_Basic_Idl ImplRepo_Basic_Server ImplRepo_Basic_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImplRepo_Basic_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImplRepo_Basic_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImplRepo_Basic_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImplRepo_Basic_Client $(@)
 
 .PHONY: ImplRepo_Basic_Idl
 ImplRepo_Basic_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImplRepo_Basic_Idl all
 
-.PHONY: ImplRepo_Basic_Client
-ImplRepo_Basic_Client: ImplRepo_Basic_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImplRepo_Basic_Client all
-
 .PHONY: ImplRepo_Basic_Server
-ImplRepo_Basic_Server: ImplRepo_Basic_Idl ImplRepo_Basic_Client
+ImplRepo_Basic_Server: ImplRepo_Basic_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImplRepo_Basic_Server all
+
+.PHONY: ImplRepo_Basic_Client
+ImplRepo_Basic_Client: ImplRepo_Basic_Idl ImplRepo_Basic_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImplRepo_Basic_Client all
 
 project_name_list:
 	@echo ImplRepo_Basic_Client

@@ -1,4 +1,4 @@
-// $Id: Log_Backend.h 93749 2011-04-06 01:23:11Z wotte $
+// $Id: Log_Backend.h 95977 2012-07-26 16:31:57Z johnnyw $
 
 /**
  * @file Log_Backend.h
@@ -25,7 +25,7 @@ namespace DAnCE
 {
   /**
    * @class NDDS_Log_Backend
-   * @breif Provides a logging backend that transmits records over DDS/.
+   * @brief Provides a logging backend that transmits records over DDS/.
    */
   class DAnCE_NDDS_Log_Export NDDS_Log_Backend :
     public virtual ACE_Log_Msg_Backend,

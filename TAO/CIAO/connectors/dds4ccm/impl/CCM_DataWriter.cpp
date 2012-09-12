@@ -1,4 +1,4 @@
-// $Id: CCM_DataWriter.cpp 93953 2011-04-20 08:46:28Z johnnyw $
+// $Id: CCM_DataWriter.cpp 95989 2012-07-31 12:40:59Z johnnyw $
 
 #include "CCM_DataWriter.h"
 #include "dds4ccm/impl/logger/Log_Macros.h"
@@ -111,11 +111,13 @@ CIAO::DDS4CCM::CCM_DataWriter::assert_liveliness (void)
   return this->impl ()->assert_liveliness ();
 }
 
+#if !defined (DDS_HAS_MINIMUM_BIT)
 ::DDS::ReturnCode_t
 CIAO::DDS4CCM::CCM_DataWriter::get_matched_subscriptions (::DDS::InstanceHandleSeq &seq)
 {
   return this->impl ()->get_matched_subscriptions (seq);
 }
+#endif
 
 ::DDS::ReturnCode_t
 CIAO::DDS4CCM::CCM_DataWriter::get_matched_subscription_data (

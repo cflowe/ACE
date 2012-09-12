@@ -434,14 +434,6 @@
 
 				</File>
 				<File
-					RelativePath="HTIOP\htiop_endpointsC.h">
-
-				</File>
-				<File
-					RelativePath="HTIOP\htiop_endpointsS.h">
-
-				</File>
-				<File
 					RelativePath="HTIOP\HTIOP_Factory.h">
 
 				</File>
@@ -453,15 +445,19 @@
 					RelativePath="HTIOP\HTIOP_Transport.h">
 
 				</File>
-				<File
-					RelativePath="HTIOPC.h">
-
-				</File>
-				<File
-					RelativePath="HTIOPS.h">
-
-				</File>
 			</Filter>
+			<File
+				RelativePath="HTIOP\htiop_endpointsC.h">
+			</File>
+			<File
+				RelativePath="HTIOP\htiop_endpointsS.h">
+			</File>
+			<File
+				RelativePath="HTIOPC.h">
+			</File>
+			<File
+				RelativePath="HTIOPS.h">
+			</File>
 		</Filter>
 		<Filter
 			Name="Build Files"

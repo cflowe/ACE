@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Stock_i.cpp \
   Stock_Factory_i.cpp \
+  Stock_i.cpp \
   server.cpp
 
 #----------------------------------------------------------------------------

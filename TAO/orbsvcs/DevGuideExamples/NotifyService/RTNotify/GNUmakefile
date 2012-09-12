@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,31 +20,31 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: RTNotify_Idl RTNotify_Server RTNotify_Client RTNotify_Consumer
+all: RTNotify_Idl RTNotify_Consumer RTNotify_Client RTNotify_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Server $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Consumer $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Server $(@)
 
 .PHONY: RTNotify_Idl
 RTNotify_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Idl all
 
-.PHONY: RTNotify_Server
-RTNotify_Server: RTNotify_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Server all
+.PHONY: RTNotify_Consumer
+RTNotify_Consumer: RTNotify_Idl
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Consumer all
 
 .PHONY: RTNotify_Client
-RTNotify_Client: RTNotify_Idl RTNotify_Server
+RTNotify_Client: RTNotify_Idl RTNotify_Consumer
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Client all
 
-.PHONY: RTNotify_Consumer
-RTNotify_Consumer: RTNotify_Idl RTNotify_Server
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Consumer all
+.PHONY: RTNotify_Server
+RTNotify_Server: RTNotify_Idl RTNotify_Consumer
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTNotify_Server all
 
 project_name_list:
 	@echo RTNotify_Client

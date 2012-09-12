@@ -278,7 +278,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alt_Resource_Factory.h" />
-    <ClInclude Include="Time_Date.h" />
     <ClInclude Include="Time_Date_i.h" />
     <ClInclude Include="Time_DateC.h" />
     <ClInclude Include="Time_DateS.h" />

@@ -1,5 +1,5 @@
 /* -*- C++ -*- */
-// $Id: CommandModule.h 80826 2008-03-04 14:51:23Z wotte $
+// $Id: CommandModule.h 96098 2012-08-24 10:28:27Z johnnyw $
 
 #ifndef COMMAND_MODULE_H
 #define COMMAND_MODULE_H
@@ -9,11 +9,11 @@
 #include "CommandTask.h"
 
 // Listing 01 code/ch18
-class CommandModule : public ACE_Module<ACE_MT_SYNCH>
+class CommandModule : public ACE_Module<ACE_MT_SYNCH, ACE_System_Time_Policy>
 {
 public:
-  typedef ACE_Module<ACE_MT_SYNCH> inherited;
-  typedef ACE_Task<ACE_MT_SYNCH> Task;
+  typedef ACE_Module<ACE_MT_SYNCH, ACE_System_Time_Policy> inherited;
+  typedef ACE_Task<ACE_MT_SYNCH, ACE_System_Time_Policy> Task;
 
   CommandModule (const ACE_TCHAR *module_name,
                    CommandTask *writer,

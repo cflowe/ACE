@@ -1,7 +1,7 @@
 /**
  * @author Marcel Smit (msmit@remedy.nl)
  *
- * $Id: CCM_DataReader.h 95809 2012-06-03 17:56:00Z johnnyw $
+ * $Id: CCM_DataReader.h 95989 2012-07-31 12:40:59Z johnnyw $
  *
  * Wrapper facade for DDS.
  */
@@ -98,9 +98,11 @@ namespace CIAO
       virtual ::DDS::ReturnCode_t
       get_matched_publications (::DDS::InstanceHandleSeq & );
 
+#if !defined (DDS_HAS_MINIMUM_BIT)
       virtual ::DDS::ReturnCode_t
       get_matched_publication_data (::DDS::PublicationBuiltinTopicData & ,
                                     DDS_INSTANCE_HANDLE_T_IN );
+#endif
 
       void set_dds_entity (::DDS::DataReader_ptr dr);
 

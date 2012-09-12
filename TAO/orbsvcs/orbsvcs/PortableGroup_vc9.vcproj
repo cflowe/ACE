@@ -365,10 +365,16 @@
 				RelativePath="miopS.cpp">
 			</File>
 			<File
+				RelativePath="PortableGroup\Fragments_Cleanup_Strategy.cpp">
+			</File>
+			<File
 				RelativePath="PortableGroup\GOA.cpp">
 			</File>
 			<File
 				RelativePath="PortableGroup\MIOP.cpp">
+			</File>
+			<File
+				RelativePath="PortableGroup\miop_resource.cpp">
 			</File>
 			<File
 				RelativePath="PortableGroup\PG_Default_Property_Validator.cpp">
@@ -467,6 +473,9 @@
 				RelativePath="PortableGroup\UIPMC_Mcast_Connection_Handler.cpp">
 			</File>
 			<File
+				RelativePath="PortableGroup\UIPMC_Mcast_Transport.cpp">
+			</File>
+			<File
 				RelativePath="PortableGroup\UIPMC_Message_Block_Data_Iterator.cpp">
 			</File>
 			<File
@@ -474,6 +483,9 @@
 			</File>
 			<File
 				RelativePath="PortableGroup\UIPMC_Transport.cpp">
+			</File>
+			<File
+				RelativePath="PortableGroup\UIPMC_Transport_Recv_Packet.cpp">
 			</File>
 			<File
 				RelativePath="PortableGroup\UIPMC_Wait_Never.cpp">
@@ -501,10 +513,16 @@
 				RelativePath="miopS.h">
 			</File>
 			<File
+				RelativePath="PortableGroup\Fragments_Cleanup_Strategy.h">
+			</File>
+			<File
 				RelativePath="PortableGroup\GOA.h">
 			</File>
 			<File
 				RelativePath="PortableGroup\MIOP.h">
+			</File>
+			<File
+				RelativePath="PortableGroup\miop_resource.h">
 			</File>
 			<File
 				RelativePath="PortableGroup\miopconf.h">
@@ -627,6 +645,9 @@
 				RelativePath="PortableGroup\UIPMC_Mcast_Connection_Handler.h">
 			</File>
 			<File
+				RelativePath="PortableGroup\UIPMC_Mcast_Transport.h">
+			</File>
+			<File
 				RelativePath="PortableGroup\UIPMC_Message_Block_Data_Iterator.h">
 			</File>
 			<File
@@ -634,6 +655,9 @@
 			</File>
 			<File
 				RelativePath="PortableGroup\UIPMC_Transport.h">
+			</File>
+			<File
+				RelativePath="PortableGroup\UIPMC_Transport_Recv_Packet.h">
 			</File>
 			<File
 				RelativePath="PortableGroup\UIPMC_Wait_Never.h">
@@ -1740,6 +1764,9 @@
 			Filter="i;ipp;inl">
 			<File
 				RelativePath="miopC.inl">
+			</File>
+			<File
+				RelativePath="PortableGroup\Fragments_Cleanup_Strategy.inl">
 			</File>
 			<File
 				RelativePath="PortableGroup\PG_Location_Equal_To.inl">

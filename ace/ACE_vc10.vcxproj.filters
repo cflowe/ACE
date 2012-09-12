@@ -432,6 +432,9 @@
     <ClCompile Include="Monitor_Size.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Monotonic_Time_Policy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Msg_WFMO_Reactor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1751,6 +1754,9 @@
     <ClInclude Include="Monitor_Size.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Monotonic_Time_Policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Msg_WFMO_Reactor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2600,6 +2606,9 @@
     <ClInclude Include="Time_Value.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Time_Value_T.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Timeprobe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -3226,6 +3235,9 @@
     <None Include="Monitor_Base.inl">
       <Filter>Inline Files</Filter>
     </None>
+    <None Include="Monotonic_Time_Policy.inl">
+      <Filter>Inline Files</Filter>
+    </None>
     <None Include="Msg_WFMO_Reactor.inl">
       <Filter>Inline Files</Filter>
     </None>
@@ -3607,6 +3619,9 @@
     <None Include="Time_Value.inl">
       <Filter>Inline Files</Filter>
     </None>
+    <None Include="Time_Value_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
     <None Include="Timeprobe.inl">
       <Filter>Inline Files</Filter>
     </None>
@@ -3904,6 +3919,9 @@
       <Filter>Template Files</Filter>
     </ClCompile>
     <ClCompile Include="Time_Policy_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Time_Value_T.cpp">
       <Filter>Template Files</Filter>
     </ClCompile>
     <ClCompile Include="Timeprobe_T.cpp">

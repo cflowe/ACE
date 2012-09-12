@@ -1,4 +1,4 @@
-// $Id: Options_Parser.cpp 91675 2010-09-08 19:09:19Z johnnyw $
+// $Id: Options_Parser.cpp 96091 2012-08-22 09:13:39Z sma $
 
 #include "Options_Parser.h"
 #include "orbsvcs/NotifyExtC.h"
@@ -48,13 +48,13 @@ void
 TAO_Notify_Tests_Options_Parser::execute (CosNotification::QoSProperties& qos, ACE_Arg_Shifter& arg_shifter)
 {
   const ACE_TCHAR *current_arg = 0;
-  int default_priority = ACE_DEFAULT_THREAD_PRIORITY;
+  NotifyExt::Priority default_priority = NotifyExt::minPriority;
 
   if (arg_shifter.cur_arg_strncasecmp (ACE_TEXT("-ThreadPool")) == 0) // -ThreadPool [-Threads static_threads] [-Priority default_priority]
     {
       arg_shifter.consume_arg ();
 
-      int static_threads = 1;
+      CORBA::ULong static_threads = 1u;
 
       if (arg_shifter.cur_arg_strncasecmp (ACE_TEXT("-Threads")) == 0)
         {
@@ -62,7 +62,7 @@ TAO_Notify_Tests_Options_Parser::execute (CosNotification::QoSProperties& qos, A
 
           current_arg = arg_shifter.get_current ();
 
-          static_threads = ACE_OS::atoi (current_arg);
+          static_threads = static_cast<CORBA::ULong> (ACE_OS::atoi (current_arg));
 
           arg_shifter.consume_arg ();
         }
@@ -70,10 +70,22 @@ TAO_Notify_Tests_Options_Parser::execute (CosNotification::QoSProperties& qos, A
       if (arg_shifter.cur_arg_strncasecmp (ACE_TEXT("-Priority")) == 0)
         {
           arg_shifter.consume_arg ();
-
           current_arg = arg_shifter.get_current ();
-
-          default_priority = ACE_OS::atoi (current_arg);
+          const int priority= ACE_OS::atoi (current_arg);
+          if (priority < NotifyExt::minPriority)
+            {
+              NotifyExt::Priority default_priority = NotifyExt::minPriority;
+              ACE_DEBUG ((LM_DEBUG, "-Priority %d is too small (min priority %d used)\n",
+                          priority, static_cast<int> (default_priority)));
+            }
+          else if (NotifyExt::maxPriority < priority)
+            {
+              NotifyExt::Priority default_priority = NotifyExt::maxPriority;
+              ACE_DEBUG ((LM_DEBUG, "-Priority %d is too large (max priority %d used)\n",
+                          priority, static_cast<int> (default_priority)));
+            }
+          else
+            default_priority = static_cast<NotifyExt::Priority> (priority);
 
           arg_shifter.consume_arg ();
         }

@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: OS_NS_unistd.inl 95761 2012-05-15 18:23:04Z johnnyw $
+// $Id: OS_NS_unistd.inl 96017 2012-08-08 22:18:09Z mitza $
 
 #include "ace/OS_NS_sys_utsname.h"
 #include "ace/OS_NS_string.h"
@@ -1110,7 +1110,11 @@ ACE_OS::ualarm (useconds_t usecs, useconds_t interval)
   return ::ualarm (usecs, interval);
 #elif !defined (ACE_LACKS_UNIX_SIGNALS)
   ACE_UNUSED_ARG (interval);
+# if defined (ACE_VXWORKS) && ACE_VXWORKS >= 0x690 && defined (_WRS_CONFIG_LP64)
+  return ::alarm (static_cast<unsigned int> (usecs * ACE_ONE_SECOND_IN_USECS));
+# else
   return ::alarm (usecs * ACE_ONE_SECOND_IN_USECS);
+#endif
 #else
   ACE_UNUSED_ARG (usecs);
   ACE_UNUSED_ARG (interval);
@@ -1131,7 +1135,11 @@ ACE_OS::ualarm (const ACE_Time_Value &tv,
   return ::ualarm (usecs, interval);
 #elif !defined (ACE_LACKS_UNIX_SIGNALS)
   ACE_UNUSED_ARG (tv_interval);
+# if defined (ACE_VXWORKS) && ACE_VXWORKS >= 0x690 && defined (_WRS_CONFIG_LP64)
+  return ::alarm (static_cast<unsigned int> (tv.sec ()));
+# else
   return ::alarm (tv.sec ());
+# endif
 #else
   ACE_UNUSED_ARG (tv_interval);
   ACE_UNUSED_ARG (tv);

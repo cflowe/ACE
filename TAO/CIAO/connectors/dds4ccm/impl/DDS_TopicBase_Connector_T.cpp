@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: DDS_TopicBase_Connector_T.cpp 95951 2012-07-23 07:57:39Z johnnyw $
+// $Id: DDS_TopicBase_Connector_T.cpp 96068 2012-08-16 18:32:26Z johnnyw $
 
 #include "dds4ccm/impl/logger/Log_Macros.h"
 #include "ace/Reactor.h"
@@ -271,11 +271,11 @@ DDS_TopicBase_Connector_T<CCM_TYPE, DDS_TYPE, SEQ_TYPE>::register_type (
                     dds_type_factory (),
                     ::CORBA::NO_MEMORY ());
 
-  if (! ::CIAO::NDDS::DDS_TypeSupport_i::register_type (typesupport_name, factory, participant))
+  if (! ::CIAO::NDDS::DDS_TypeSupport_i::register_type (participant, typesupport_name, factory))
     {
       DDS4CCM_DEBUG (DDS4CCM_LOG_LEVEL_ACTION, (LM_DEBUG, DDS4CCM_INFO
                     ACE_TEXT ("DDS_TopicBase_Connector_T::register_type - ")
-                    ACE_TEXT ("Type <%C> is already registered.\n"),
+                    ACE_TEXT ("Type <%C> is already registered or failed.\n"),
                     typesupport_name));
       delete factory;
     }
@@ -308,10 +308,16 @@ DDS_TopicBase_Connector_T<CCM_TYPE, DDS_TYPE, SEQ_TYPE>::unregister_type (
   DDS4CCM_TRACE ("DDS_TopicBase_Connector_T::unregister_type");
 
 #if (CIAO_DDS4CCM_NDDS==1)
-  ::CIAO::NDDS::DDS_TypeFactory_i * factory =
-    ::CIAO::NDDS::DDS_TypeSupport_i::unregister_type (typesupport_name, participant);
-
-  delete factory;
+  // Unregister the type from NDDS, it will delete the type factory when
+  // it is not used anymore
+  if (!::CIAO::NDDS::DDS_TypeSupport_i::unregister_type (participant, typesupport_name))
+    {
+      DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+          "DDS_TopicBase_Connector_T::unregister_type - "
+          "Error unregistering type <%C> from type support factory\n",
+          typesupport_name));
+      throw ::CCM_DDS::InternalError (::DDS::RETCODE_ERROR, 0);
+    }
 #else
   ACE_UNUSED_ARG (participant);
   ACE_UNUSED_ARG (typesupport_name);

@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: UIPMC_Endpoint.inl 73791 2006-07-27 20:54:56Z wotte $
+// $Id: UIPMC_Endpoint.inl 96015 2012-08-08 15:31:24Z sma $
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -47,6 +47,13 @@ TAO_UIPMC_Endpoint::update_object_addr (void)
 {
   this->object_addr_.set (this->port_,
                           this->uint_ip_addr ());
+}
+
+
+ACE_INLINE const char*
+TAO_UIPMC_Endpoint::preferred_if () const
+{
+  return this->preferred_if_.in();
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL

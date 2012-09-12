@@ -37,10 +37,16 @@
     <ClCompile Include="miopS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PortableGroup\Fragments_Cleanup_Strategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="PortableGroup\GOA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PortableGroup\MIOP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortableGroup\miop_resource.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PortableGroup\PG_Default_Property_Validator.cpp">
@@ -139,6 +145,9 @@
     <ClCompile Include="PortableGroup\UIPMC_Mcast_Connection_Handler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PortableGroup\UIPMC_Mcast_Transport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="PortableGroup\UIPMC_Message_Block_Data_Iterator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -146,6 +155,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PortableGroup\UIPMC_Transport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortableGroup\UIPMC_Transport_Recv_Packet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PortableGroup\UIPMC_Wait_Never.cpp">
@@ -171,10 +183,16 @@
     <ClInclude Include="miopS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PortableGroup\Fragments_Cleanup_Strategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="PortableGroup\GOA.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PortableGroup\MIOP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableGroup\miop_resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PortableGroup\miopconf.h">
@@ -297,6 +315,9 @@
     <ClInclude Include="PortableGroup\UIPMC_Mcast_Connection_Handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PortableGroup\UIPMC_Mcast_Transport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="PortableGroup\UIPMC_Message_Block_Data_Iterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -304,6 +325,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PortableGroup\UIPMC_Transport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableGroup\UIPMC_Transport_Recv_Packet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PortableGroup\UIPMC_Wait_Never.h">
@@ -462,6 +486,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="miopC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="PortableGroup\Fragments_Cleanup_Strategy.inl">
       <Filter>Inline Files</Filter>
     </None>
     <None Include="PortableGroup\PG_Location_Equal_To.inl">

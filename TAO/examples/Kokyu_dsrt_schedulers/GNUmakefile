@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,15 +20,15 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Kokyu_DSRT_Schedulers fp_example_IDL fp_server fp_client mif_example_IDL mif_example_client mif_example_server muf_example_IDL muf_client muf_server
+all: Kokyu_DSRT_Schedulers fp_example_IDL fp_client fp_server mif_example_IDL mif_example_client mif_example_server muf_example_IDL muf_client muf_server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Kokyu_DSRT_Schedulers $(@)
 	$(KEEP_GOING)@cd fp_example && $(MAKE) -f GNUmakefile.fp_example_IDL $(@)
-	$(KEEP_GOING)@cd fp_example && $(MAKE) -f GNUmakefile.fp_server $(@)
 	$(KEEP_GOING)@cd fp_example && $(MAKE) -f GNUmakefile.fp_client $(@)
+	$(KEEP_GOING)@cd fp_example && $(MAKE) -f GNUmakefile.fp_server $(@)
 	$(KEEP_GOING)@cd mif_example && $(MAKE) -f GNUmakefile.mif_example_IDL $(@)
 	$(KEEP_GOING)@cd mif_example && $(MAKE) -f GNUmakefile.mif_example_client $(@)
 	$(KEEP_GOING)@cd mif_example && $(MAKE) -f GNUmakefile.mif_example_server $(@)
@@ -44,13 +44,13 @@ Kokyu_DSRT_Schedulers:
 fp_example_IDL:
 	$(KEEP_GOING)@cd fp_example && $(MAKE) -f GNUmakefile.fp_example_IDL all
 
-.PHONY: fp_server
-fp_server: Kokyu_DSRT_Schedulers fp_example_IDL
-	$(KEEP_GOING)@cd fp_example && $(MAKE) -f GNUmakefile.fp_server all
-
 .PHONY: fp_client
-fp_client: Kokyu_DSRT_Schedulers fp_example_IDL fp_server
+fp_client: Kokyu_DSRT_Schedulers fp_example_IDL
 	$(KEEP_GOING)@cd fp_example && $(MAKE) -f GNUmakefile.fp_client all
+
+.PHONY: fp_server
+fp_server: Kokyu_DSRT_Schedulers fp_example_IDL fp_client
+	$(KEEP_GOING)@cd fp_example && $(MAKE) -f GNUmakefile.fp_server all
 
 .PHONY: mif_example_IDL
 mif_example_IDL:

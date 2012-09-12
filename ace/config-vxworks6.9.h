@@ -1,5 +1,5 @@
 //* -*- C++ -*- */
-// $Id: config-vxworks6.9.h 95949 2012-07-20 17:38:29Z mitza $
+// $Id: config-vxworks6.9.h 96017 2012-08-08 22:18:09Z mitza $
 
 // The following configuration file is designed to work for VxWorks
 // 6.9 platforms using one of these compilers:
@@ -13,6 +13,8 @@
 #if !defined (ACE_VXWORKS)
 # define ACE_VXWORKS 0x690
 #endif /* ! ACE_VXWORKS */
+
+#define ACE_HAS_SSIZE_T
 
 #include "ace/config-vxworks6.8.h"
 

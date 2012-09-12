@@ -281,8 +281,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#RTCORBA.pidl
 #RTCORBA_include.pidl
+#RTCORBA.pidl
 #RT_ProtocolProperties.pidl
 #
 #build_files:

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: ami_sequence_idl ami_sequence_client ami_sequence_server
+all: ami_sequence_idl ami_sequence_server ami_sequence_client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ami_sequence_idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ami_sequence_client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ami_sequence_server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ami_sequence_client $(@)
 
 .PHONY: ami_sequence_idl
 ami_sequence_idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ami_sequence_idl all
 
-.PHONY: ami_sequence_client
-ami_sequence_client: ami_sequence_idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ami_sequence_client all
-
 .PHONY: ami_sequence_server
-ami_sequence_server: ami_sequence_idl ami_sequence_client
+ami_sequence_server: ami_sequence_idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ami_sequence_server all
+
+.PHONY: ami_sequence_client
+ami_sequence_client: ami_sequence_idl ami_sequence_server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ami_sequence_client all
 
 project_name_list:
 	@echo ami_sequence_client

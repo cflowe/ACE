@@ -4,7 +4,7 @@
 /**
  *  @file    Basic_Types.h
  *
- *  $Id: Basic_Types.h 95763 2012-05-16 06:43:51Z johnnyw $
+ *  $Id: Basic_Types.h 96017 2012-08-08 22:18:09Z mitza $
  *
  *  @author David L. Levine
  *
@@ -577,6 +577,8 @@ ACE_END_VERSIONED_NAMESPACE_DECL
 #if !defined (ACE_SSIZE_T_FORMAT_SPECIFIER_ASCII)
 # if defined (ACE_WIN64)
 #  define ACE_SSIZE_T_FORMAT_SPECIFIER_ASCII "%I64d"
+# elif defined (_WRS_CONFIG_LP64)
+#  define ACE_SSIZE_T_FORMAT_SPECIFIER_ASCII "%ld"
 # else
 #  define ACE_SSIZE_T_FORMAT_SPECIFIER_ASCII "%d"
 # endif /* ACE_WIN64 */
@@ -589,6 +591,8 @@ ACE_END_VERSIONED_NAMESPACE_DECL
 #if !defined (ACE_SIZE_T_FORMAT_SPECIFIER_ASCII)
 # if defined (ACE_WIN64)
 #  define ACE_SIZE_T_FORMAT_SPECIFIER_ASCII "%I64u"
+# elif defined (_WRS_CONFIG_LP64)
+#  define ACE_SIZE_T_FORMAT_SPECIFIER_ASCII "%lu"
 # else
 #  define ACE_SIZE_T_FORMAT_SPECIFIER_ASCII "%u"
 # endif /* ACE_WIN64 */

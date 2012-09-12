@@ -232,8 +232,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#IFR_Components.pidl
 #IFR_Base.pidl
+#IFR_Components.pidl
 #IFR_Extended.pidl
 #IFR_Basic.pidl
 #

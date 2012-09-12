@@ -3,7 +3,7 @@
 /**
  *  @file    be_global.cpp
  *
- *  $Id: be_global.cpp 95759 2012-05-15 13:43:42Z msmit $
+ *  $Id: be_global.cpp 96034 2012-08-12 19:06:55Z johnnyw $
  *
  *  Stores global data specific to the compiler back end.
  *
@@ -57,6 +57,7 @@ BE_GlobalData::BE_GlobalData (void)
     include_guard_ (0),
     safe_include_ (0),
     unique_include_ (0),
+    stripped_filename_ (0),
     core_versioning_begin_ ("\nTAO_BEGIN_VERSIONED_NAMESPACE_DECL\n"),
     core_versioning_end_   ("\nTAO_END_VERSIONED_NAMESPACE_DECL\n"),
     versioning_begin_ (),
@@ -130,7 +131,9 @@ BE_GlobalData::BE_GlobalData (void)
     gen_svnt_t_files_ (true),
     gen_client_inline_ (true),
     gen_client_stub_ (true),
+    gen_client_header_ (true),
     gen_server_skeleton_ (true),
+    gen_server_header_ (true),
     gen_local_iface_anyops_ (true),
     use_clonable_in_args_ (false),
     gen_template_export_ (false),
@@ -1094,6 +1097,19 @@ BE_GlobalData::unique_include (const char *s)
   this->unique_include_ = ACE::strnew (s);
 }
 
+const char*
+BE_GlobalData::stripped_filename (void) const
+{
+  return this->stripped_filename_;
+}
+
+void
+BE_GlobalData::stripped_filename (const char *s)
+{
+  ACE::strdelete (this->stripped_filename_);
+  this->stripped_filename_ = ACE::strnew (s);
+}
+
 void
 BE_GlobalData::versioning_begin (const char * s)
 {
@@ -2010,6 +2026,9 @@ BE_GlobalData::destroy (void)
   ACE::strdelete (this->unique_include_);
   this->unique_include_ = 0;
 
+  ACE::strdelete (this->stripped_filename_);
+  this->stripped_filename_ = 0;
+
   ACE::strdelete (this->client_hdr_ending_);
   this->client_hdr_ending_ = 0;
 
@@ -2417,6 +2436,18 @@ BE_GlobalData::gen_client_stub (bool val)
 }
 
 bool
+BE_GlobalData::gen_client_header (void) const
+{
+  return this->gen_client_header_;
+}
+
+void
+BE_GlobalData::gen_client_header (bool val)
+{
+  this->gen_client_header_ = val;
+}
+
+bool
 BE_GlobalData::gen_server_skeleton (void) const
 {
   return this->gen_server_skeleton_;
@@ -2426,6 +2457,18 @@ void
 BE_GlobalData::gen_server_skeleton (bool val)
 {
   this->gen_server_skeleton_ = val;
+}
+
+bool
+BE_GlobalData::gen_server_header (void) const
+{
+  return this->gen_server_header_;
+}
+
+void
+BE_GlobalData::gen_server_header (bool val)
+{
+  this->gen_server_header_ = val;
 }
 
 bool
@@ -3526,6 +3569,11 @@ BE_GlobalData::parse_args (long &i, char **av)
                 // No stub
                 be_global->gen_client_stub (false);
               }
+            else if (av[i][3] == 'h')
+              {
+                // No stub
+                be_global->gen_client_header (false);
+              }
             else if (av[i][3] == 'd' && av[i][4] == 'r')
               {
                 // No cdr support.
@@ -3568,6 +3616,11 @@ BE_GlobalData::parse_args (long &i, char **av)
               {
                 // No skeleton inline.
                 be_global->gen_server_skeleton (false);
+              }
+            else if (av[i][3] == 'h')
+              {
+                // No skeleton inline.
+                be_global->gen_server_header (false);
               }
             else
               {

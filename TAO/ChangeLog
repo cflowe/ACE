@@ -1,3 +1,539 @@
+Wed Aug 29 08:16:04 CEST 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * TAO version 2.1.4 released.
+
+Tue Aug 28 09:30:31 UTC 2012  Johnny Willemsen <jwillemsen@remedy.nl>
+
+        * orbsvcs/tests/Security/BiDirectional/ssl/ca.pem:
+        * orbsvcs/tests/Security/BiDirectional/ssl/client-cert.pem:
+        * orbsvcs/tests/Security/BiDirectional/ssl/client-key.pem:
+        * orbsvcs/tests/Security/BiDirectional/ssl/make-client-keys:
+        * orbsvcs/tests/Security/BiDirectional/ssl/server-cert.pem:
+        * orbsvcs/tests/Security/BiDirectional/ssl/server-key.pem:
+        * orbsvcs/tests/Security/Bug_2908_Regression/client.conf:
+        * orbsvcs/tests/Security/Bug_2908_Regression/run_test.pl:
+        * orbsvcs/tests/Security/Bug_2908_Regression/server.conf:
+        * orbsvcs/tests/Security/MT_BiDir_SSL/ssl/ca.pem:
+        * orbsvcs/tests/Security/MT_BiDir_SSL/ssl/client-cert.pem:
+        * orbsvcs/tests/Security/MT_BiDir_SSL/ssl/client-key.pem:
+        * orbsvcs/tests/Security/MT_BiDir_SSL/ssl/make-client-keys:
+        * orbsvcs/tests/Security/MT_BiDir_SSL/ssl/server-cert.pem:
+        * orbsvcs/tests/Security/MT_BiDir_SSL/ssl/server-key.pem:
+        * orbsvcs/tests/Security/Bug_2908_Regression/cacert.pem:
+        * orbsvcs/tests/Security/Bug_2908_Regression/clientCert.pem:
+        * orbsvcs/tests/Security/Bug_2908_Regression/clientKey.pem:
+        * orbsvcs/tests/Security/Bug_2908_Regression/serverCert.pem:
+        * orbsvcs/tests/Security/Bug_2908_Regression/serverKey.pem:
+          Updated certificates, expired all last week, made them valid
+          for 3650 days
+
+Thu Aug 23 15:24:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * NEWS:
+        * doc/Options.html:
+          Update the MIOP_Strategy_Factory with more useful configuration help
+          and move the detail of these options out of the NEW files, referring
+          instead to the doc/Options.html section.
+
+Wed Aug 22 09:12:45 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/tests/Notify/lib/Options_Parser.cpp:
+
+          Missed a C+11 invalid type converstion warning.
+
+Mon Aug 20 10:20:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/GOA.cpp:
+        * orbsvcs/PortableGroup/PG_ObjectGroupManager.cpp:
+        * orbsvcs/PortableGroup/UIPMC_Endpoint.cpp:
+
+          Coverity detected faults fixed.
+
+Mon Aug 20 09:26:30 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Transport.cpp:
+
+          Coverity detected very unlikely fault fixed.
+
+Thu Aug 16 12:32:58 UTC 2012  Olli Savia  <ops@iki.fi>
+
+        * orbsvcs/orbsvcs/FTORB.mpc:
+          This project needs threads.
+
+Thu Aug 16 07:57:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/tests/Notify/lib/Options_Parser.cpp:
+
+          Correct default value and range check -Priority option to correct
+          original bad default value.
+
+Wed Aug 15 15:13:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/run_test.pl:
+
+          Stop running the client for part two to shutdown server, if part
+          one server has already exited.
+
+Wed Aug 15 14:28:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/tests/Notify/lib/Options_Parser.cpp:
+        * orbsvcs/examples/Notify/ThreadPool/Consumer.cpp:
+        * orbsvcs/examples/Notify/ThreadPool/Supplier.cpp:
+        * orbsvcs/examples/Notify/ThreadPool/Supplier_Client.cpp:
+
+          Correct types, removes C++11 warning about {} initalization miss-match.
+
+Wed Aug 15 10:08:20 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * tao/IIOP_Connector.cpp:
+
+          Correct types for time, removes C++11 warning.
+
+Wed Aug 15 08:44:07 UTC 2012  Olli Savia  <ops@iki.fi>
+
+        * docs/tutorials/Quoter/RTCORBA/StockQuoter.mpc:
+          This project needs threads.
+
+Tue Aug 14 11:08:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Transport_Recv_Packet.h:
+
+          Move #pragma once below header that sets ACE_LACKS_PRAGMA_ONCE.
+
+Tue Aug 14 11:00:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/tests/Miop/McastZIOP/client.cpp:
+
+          Add .in() to var use to stop warning on lyxos.
+
+Tue Aug 14 08:41:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * NEWS:
+
+          Advisory note added concerning the generic testability
+          of the -ORBPreferredInterfaces feature.
+
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/run_test_ipv6.pl:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/run_test.pl:
+
+          Stop these tests from erroring due to possiable problems in
+          loopback feature. This test is effectivly for information
+          purposes.
+
+Mon Aug 13 14:55:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Profile.cpp:
+          And again (there were two of them)!
+
+Mon Aug 13 14:44:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Profile.cpp:
+          Major and Minor should be set output with debug message!
+
+Mon Aug 13 14:38:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Profile.cpp:
+          Major and Minor should be set not Major and Major!
+
+Mon Aug 13 13:42:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * doc/Options.html:
+          Cut and paste type errors.
+
+Mon Aug 13 13:28:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * doc/Options.html:
+          Missed a couple of points.
+
+Mon Aug 13 12:58:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * doc/Options.html:
+          Missed copying those extra helpful bits of information from the
+          NEWS file entry of the MIOP_Strategy_Factory options.
+
+Mon Aug 13 12:36:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * doc/Options.html:
+        * tao/GIOP_Message_Base.cpp:
+
+          Minor fixes.
+
+Mon Aug 13 09:04:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connection_Handler.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Message_Block_Data_Iterator.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Transport.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Transport_Recv_Packet.h:
+
+          Minor fixes.
+
+Sun Aug 12 19:05:59 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * TAO_IDL/be/be_codegen.cpp:
+        * TAO_IDL/be/be_global.cpp:
+        * TAO_IDL/be/be_util.cpp:
+        * TAO_IDL/be_include/be_global.h:
+        * docs/compiler.html:
+          Added stripped_filename option to overrule stripped filename of
+          input file
+
+Sun Aug 12 18:06:49 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        Reverted change below, seems to break VMS and the methods are still
+        declared in the header
+
+        Fri Jul 20 17:38:45 UTC 2012  Adam Mitz  <mitza@ociweb.com>
+        * tao/CDR.inl:
+          Changes to build for VxWorks 6.8 kernel mode
+          which does not define ACE_HAS_WCHAR.
+
+Sat Aug 11 08:40:30 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Transport.cpp:
+
+          Fuzz error was wrong, need try_aquire here, not ACE_GUARD,
+          macro. Reverted change and disabled the fuzz check.
+
+Fri Aug 10 14:42:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connection_Handler.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Transport.cpp:
+        * orbsvcs/tests/Miop/McastFragmentation/uipmc_client.conf:
+        * orbsvcs/tests/Miop/McastFragmentation/uipmc_server.conf:
+        * orbsvcs/tests/Miop/McastFragmentation/uipmc_server_m.conf:
+        * orbsvcs/tests/Miop/McastFragmentation/uipmc_server_n.conf:
+
+          Fuzz errors corrected.
+
+Fri Aug 10 14:00:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * NEWS:
+        * docs/Options.html:
+        * tao/Connection_Handler.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/MIOP.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/miopconf.h:
+        * orbsvcs/orbsvcs/PortableGroup/PortableGroup_Loader.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/README:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Acceptor.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Acceptor.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connector.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connector.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connection_Handler.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connection_Handler.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Endpoint.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Factory.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Message_Block_Data_Iterator.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Message_Block_Data_Iterator.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Profile.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Profile.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Transport.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Transport.cpp:
+
+          Enhanced the MIOP protocol to support MIOP Fragmentation.
+
+        * orbsvcs/orbsvcs/PortableGroup/Fragments_Cleanup_Strategy.h:
+        * orbsvcs/orbsvcs/PortableGroup/Fragments_Cleanup_Strategy.inl:
+        * orbsvcs/orbsvcs/PortableGroup/Fragments_Cleanup_Strategy.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/miop_resource.h:
+        * orbsvcs/orbsvcs/PortableGroup/miop_resource.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Transport.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Transport.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Transport_Recv_Packet.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Transport_Recv_Packet.cpp:
+
+          New files added to support MIOP Fragmentation.
+
+        * bin/tao_other_tests.lst:
+        * orbsvcs/tests/Miop/McastFragmentation/client.cpp:
+        * orbsvcs/tests/Miop/McastFragmentation/Hello_Impl.h:
+        * orbsvcs/tests/Miop/McastFragmentation/Hello_Impl.cpp:
+        * orbsvcs/tests/Miop/McastFragmentation/Hello.idl:
+        * orbsvcs/tests/Miop/McastFragmentation/McastFragmentation.mpc:
+        * orbsvcs/tests/Miop/McastFragmentation/README:
+        * orbsvcs/tests/Miop/McastFragmentation/run_test.pl:
+        * orbsvcs/tests/Miop/McastFragmentation/run_test_ipv6.pl:
+        * orbsvcs/tests/Miop/McastFragmentation/server.cpp:
+        * orbsvcs/tests/Miop/McastFragmentation/uipmc_client.conf:
+        * orbsvcs/tests/Miop/McastFragmentation/uipmc_server.conf:
+        * orbsvcs/tests/Miop/McastFragmentation/uipmc_server_m.conf:
+        * orbsvcs/tests/Miop/McastFragmentation/uipmc_server_n.conf:
+
+          Added a test for MIOP Fragmentation.
+
+Fri Aug 10 08:30:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/FaultTolerance/FT_Invocation_Endpoint_Selectors.cpp:
+          ReFixed the race condition with the correct mutex code. (Why does
+          the stub->profile_lock () return a const mutex reference, anywhere
+          where this is used, it has to be const_cast to a non-const form
+          doesn't it?)
+
+Tue Aug  7 15:45:42 UTC 2012  Douglas C. Schmidt  <schmidt@dre.vanderbilt.edu>
+
+        * examples/PluggableUDP/tests/SimplePerformance/test.idl (Simple_Server):
+
+          Added a comment to make it clear that twoway operations don't
+          work with DIOP.  Thanks to Ali Akbar Zarezadeh <akzare at cs dot
+          uni-potsdam dot de> for reporting this.
+
+Thu Aug  9 15:10:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/FaultTolerance/FT_Invocation_Endpoint_Selectors.cpp:
+          Reverted this change until I can work out what has changed
+          from when this change was valid.
+
+Thu Aug  9 08:33:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * orbsvcs/FaultTolerance/FT_Invocation_Endpoint_Selectors.cpp:
+          Fixed race condition.
+
+Thu Aug  9 07:20:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * tao/String_Alloc.cpp:
+          Removed trailing whitespace.
+
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/TestC.cpp:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/TestC.h:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/TestC.inl:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/TestS.cpp:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/TestS.h:
+          Removed these generated files they shouldn't have been committed.
+
+Wed Aug  8 15:20:00 UTC 2012  Simon Massey  <sma at prismtech dot com>
+
+        * NEWS:
+        * tao/String_Alloc.cpp:
+
+          Enhanced CORBA::string_dup() and CORBA::string_free() to use
+          non-allocated and shared static null strings, this allows for
+          optimized default null string initialization in CORBA string
+          members and a reduction in dynamic memory management required
+          for such. This enhancement can be removed by including
+          #define TAO_NO_SHARED_NULL_CORBA_STRING in the config.h
+          NOTE that it is a (CORBA spec) requirement that all
+          CORBA::strings are deleted via the CORBA::string_free()
+          (and allocated via CORBA::string_dup() or CORBA::string_alloc()
+          calls); you must not use the c++ keywords new and delete[]
+          directly. Previously it was possiable to ignore this requirement,
+          however if you do so now, the enhancement for null strings will
+          catch you out, as deleting these null CORBA::strings will cause
+          corrupt heap and/or segfaults.
+
+        for Simon McQueen  <sm at prismtech dot com>
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Acceptor.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Acceptor.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connection_Handler.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connector.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Endpoint.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Endpoint.inl:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Endpoint.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Factory.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Factory.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Profile.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Transport.cpp:
+
+          Add support for -ORBPreferredInterfaces option to UIPMC. The form follows
+          the same pattern as IIOP for IPv4 i.e. a local interface IP address should
+          be specified as the mapping. e.g. -ORBPreferredInterfaces 225.*=192.168.0.2.
+          For IPv6 the preferred interface should (neccessarily) be set as an interface
+          name (e.g. 'eth0' for linux, or 'Loopback Pseudo-Interface' on windows) or an
+          interface index number on windows. e.g. -ORBPreferredInterfaces FF01:*=eth0.
+          Also add support an -ORBListenOnAll 0|1 UIPMCFactory option that can
+          be specified in the svc.conf to make the acceptor listen on all multicast
+          enabled interfaces on platforms that this is not the default. This has been
+          observed to be required for the UIPMCAcceptor to open on the most recent
+          Linux distribs. Improve error handling & reporting.
+
+        * tao/IIOP_Endpoint.h:
+        * tao/IIOP_Endpoint.cpp:
+
+          Export the method that handles -ORBPreferredInterfaces values so it can be
+          reused. Add ability to specify interface names when IPv6 is enabled. For now
+          this is ignored in IIOP.
+
+        * tao/IIOP_Profile.cpp:
+        * tao/Strategies/SCIOP_Profile.cpp:
+
+          Added CORBALOC support to the existing -ORBPreferredInterfaces option processing.
+
+        * tao/Strategies/COIOP_Endpoint.h:
+        * tao/Strategies/DIOP_Endpoint.h:
+        * tao/Strategies/SCIOP_Endpoint.h:
+        * tao/Strategies/SHMIOP_Endpoint.h:
+        * tao/Strategies/UIOP_Endpoint.h:
+        * orbsvcs/orbsvcs/SSLIOP/SSLIOP_Endpoint.h:
+        * orbsvcs/orbsvcs/HTIOP/HTIOP_Endpoint.h:
+
+          Correct minor comment annoyance.
+
+        * bin/tao_other_tests.lst:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/client.cpp:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/McastPreferredInterfaces.mpc:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/miop_svc.conf:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/miop_svc_ipv6.conf:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/README:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/run_test_ipv6.pl:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/run_test.pl:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/server.cpp:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/Test.idl:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/Test_impl.cpp:
+        * orbsvcs/tests/Miop/McastPreferredInterfaces/Test_impl.h:
+
+          Test for the above.
+
+Mon Aug  6 07:57:41 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/taobaseidldefaults.mpb:
+          There is no S.inl file anymore, so cleaned up some rules
+
+Fri Aug  3 08:17:55 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/taobaseidldefaults.mpb:
+          Ran more tests, this file is really complex to maintain
+
+Fri Aug  3 07:41:33 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/taobaseidldefaults.mpb:
+          Another set of fixes, this file is getting way too complex
+
+Fri Aug  3 07:03:59 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/taobaseidldefaults.mpb:
+          Fixed duplicate files being added
+
+Thu Aug  2 17:55:12 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/taobaseidldefaults.mpb:
+          More improvements to file handling, thanks to Adam Mitz for testing
+          more cases
+
+Thu Aug  2 12:28:04 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/taobaseidldefaults.mpb:
+          Further improved this file for the new options
+
+Thu Aug  2 09:20:20 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/taobaseidldefaults.mpb:
+        * TAO_IDL/be/be_global.cpp:
+        * TAO_IDL/be/be_produce.cpp:
+        * TAO_IDL/be/be_util.cpp:
+        * TAO_IDL/be_include/be_global.h:
+        * docs/compiler.html:
+          Added -Sch to disable stub header generation, -Ssh to disable
+          servant header
+
+Wed Aug  1 07:07:33 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * TAO_IDL/be/be_visitor_sequence/sequence_cs.cpp:
+          Fixed compile error with C++11
+
+Fri Jul 27 10:54:07 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * etc/tao.doxygen:
+        * etc/tao_anytypecode.doxygen:
+        * etc/tao_av.doxygen:
+        * etc/tao_compression.doxygen:
+        * etc/tao_cosevent.doxygen:
+        * etc/tao_cosnaming.doxygen:
+        * etc/tao_cosnotification.doxygen:
+        * etc/tao_costime.doxygen:
+        * etc/tao_costrader.doxygen:
+        * etc/tao_dynamicany.doxygen:
+        * etc/tao_dynamicinterface.doxygen:
+        * etc/tao_esf.doxygen:
+        * etc/tao_ifr.doxygen:
+        * etc/tao_implrepo.doxygen:
+        * etc/tao_iormanip.doxygen:
+        * etc/tao_iortable.doxygen:
+        * etc/tao_pi.doxygen:
+        * etc/tao_pi_server.doxygen:
+        * etc/tao_portablegroup.doxygen:
+        * etc/tao_portableserver.doxygen:
+        * etc/tao_rtcorba.doxygen:
+        * etc/tao_rtevent.doxygen:
+        * etc/tao_rtportableserver.doxygen:
+        * etc/tao_security.doxygen:
+        * etc/tao_smartproxies.doxygen:
+        * etc/tao_ssliop.doxygen:
+        * etc/tao_strategies.doxygen:
+        * etc/tao_transportcurrent.doxygen:
+        * etc/tao_ziop.doxygen:
+          Generate UML diagrams, assume stl is buildin
+
+Fri Jul 27 08:57:54 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * etc/tao.doxygen:
+        * etc/tao_anytypecode.doxygen:
+        * etc/tao_av.doxygen:
+        * etc/tao_compression.doxygen:
+        * etc/tao_cosevent.doxygen:
+        * etc/tao_cosnaming.doxygen:
+        * etc/tao_cosnotification.doxygen:
+        * etc/tao_costime.doxygen:
+        * etc/tao_costrader.doxygen:
+        * etc/tao_dynamicany.doxygen:
+        * etc/tao_dynamicinterface.doxygen:
+        * etc/tao_esf.doxygen:
+        * etc/tao_ifr.doxygen:
+        * etc/tao_implrepo.doxygen:
+        * etc/tao_iormanip.doxygen:
+        * etc/tao_iortable.doxygen:
+        * etc/tao_pi.doxygen:
+        * etc/tao_pi_server.doxygen:
+        * etc/tao_portablegroup.doxygen:
+        * etc/tao_portableserver.doxygen:
+        * etc/tao_rtcorba.doxygen:
+        * etc/tao_rtevent.doxygen:
+        * etc/tao_rtportableserver.doxygen:
+        * etc/tao_security.doxygen:
+        * etc/tao_smartproxies.doxygen:
+        * etc/tao_ssliop.doxygen:
+        * etc/tao_strategies.doxygen:
+        * etc/tao_transportcurrent.doxygen:
+        * etc/tao_ziop.doxygen:
+          Upgraded with doxygen -u
+
+Thu Jul 26 09:31:16 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * NEWS:
+          Updated for next release
+
+        * etc/tao.doxygen:
+        * etc/tao_anytypecode.doxygen:
+        * etc/tao_av.doxygen:
+        * etc/tao_compression.doxygen:
+        * etc/tao_cosevent.doxygen:
+        * etc/tao_cosnaming.doxygen:
+        * etc/tao_cosnotification.doxygen:
+        * etc/tao_costime.doxygen:
+        * etc/tao_costrader.doxygen:
+        * etc/tao_dynamicany.doxygen:
+        * etc/tao_dynamicinterface.doxygen:
+        * etc/tao_esf.doxygen:
+        * etc/tao_ifr.doxygen:
+        * etc/tao_implrepo.doxygen:
+        * etc/tao_iormanip.doxygen:
+        * etc/tao_iortable.doxygen:
+        * etc/tao_pi.doxygen:
+        * etc/tao_pi_server.doxygen:
+        * etc/tao_portablegroup.doxygen:
+        * etc/tao_portableserver.doxygen:
+        * etc/tao_rtcorba.doxygen:
+        * etc/tao_rtevent.doxygen:
+        * etc/tao_rtportableserver.doxygen:
+        * etc/tao_security.doxygen:
+        * etc/tao_smartproxies.doxygen:
+        * etc/tao_ssliop.doxygen:
+        * etc/tao_strategies.doxygen:
+        * etc/tao_transportcurrent.doxygen:
+        * etc/tao_ziop.doxygen:
+          Removed deprecated tag
+
 Thu Jul 26 09:12:26 CEST 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * TAO version 2.1.3 released.

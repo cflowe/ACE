@@ -5,7 +5,7 @@
 <meta name="GENERATOR" content="Mozilla/4.5 [en] (X11; I; SunOS 5.5.1 sun4u) [Netscape]">
 <title>TAO IDL compiler User's Guide</title>
 
-<!-- $Id: compiler.html 95461 2012-01-20 10:31:59Z johnnyw $ -->
+<!-- $Id: compiler.html 96034 2012-08-12 19:06:55Z johnnyw $ -->
 
 </head>
 <body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#CC0000">
@@ -524,6 +524,15 @@ also receives other options that are specific to it.<p>
 
     <td>File that the user should include instead of the normal includes in the C.h file.
         Useful for regenerating the *_include pidl files in the archive.</td>
+  </tr>
+
+  <tr><a name="stripped_filename">
+    <td></td>
+
+    <td><tt>stripped_filename=</tt><i>file</i></td>
+
+    <td>File that should be generated as stripped_filename instead of taking
+        the stripped filename of the input file.</td>
   </tr>
 
   <tr><a name="ciao_container_type">
@@ -1183,18 +1192,34 @@ also receives other options that are specific to it.<p>
         just suppresses it without looking at any possible contents;</td>
   </tr>
 
-  <tr><a name="Ssi">
-    <td><tt>-Ssi</tt></td>
+  <tr><a name="Sch">
+    <td><tt>-Sch</tt></td>
 
-    <td>Suppress generation of the server inline file.</td>
+    <td>Suppress generation of the client header file.</td>
     <td>This option doesn't check whether something is generated in the file. It
         just suppresses it without looking at any possible contents;</td>
   </tr>
 
-  <tr><a name="Ssc">
-    <td><tt>-Ssc</tt></td>
+  <tr><a name="Ssi">
+    <td><tt>-Ssi</tt></td>
 
-    <td>Suppress generation of the server skeleton file.</td>
+    <td>Suppress generation of the servant inline file.</td>
+    <td>This option doesn't check whether something is generated in the file. It
+        just suppresses it without looking at any possible contents;</td>
+  </tr>
+
+  <tr><a name="SS">
+    <td><tt>-SS</tt></td>
+
+    <td>Suppress generation of the servant skeleton file.</td>
+    <td>This option doesn't check whether something is generated in the file. It
+        just suppresses it without looking at any possible contents;</td>
+  </tr>
+
+  <tr><a name="Ssh">
+    <td><tt>-Ssh</tt></td>
+
+    <td>Suppress generation of the servant header file.</td>
     <td>This option doesn't check whether something is generated in the file. It
         just suppresses it without looking at any possible contents;</td>
   </tr>

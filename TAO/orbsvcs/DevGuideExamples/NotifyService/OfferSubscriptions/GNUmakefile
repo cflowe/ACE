@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,15 +20,15 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: OfferSubscriptions_Idl OfferSubscriptions_Client OfferSubscriptions_Consumer OfferSubscriptions_Server
+all: OfferSubscriptions_Idl OfferSubscriptions_Client OfferSubscriptions_Server OfferSubscriptions_Consumer
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OfferSubscriptions_Idl $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OfferSubscriptions_Client $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OfferSubscriptions_Consumer $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OfferSubscriptions_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OfferSubscriptions_Consumer $(@)
 
 .PHONY: OfferSubscriptions_Idl
 OfferSubscriptions_Idl:
@@ -38,13 +38,13 @@ OfferSubscriptions_Idl:
 OfferSubscriptions_Client: OfferSubscriptions_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OfferSubscriptions_Client all
 
-.PHONY: OfferSubscriptions_Consumer
-OfferSubscriptions_Consumer: OfferSubscriptions_Idl OfferSubscriptions_Client
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OfferSubscriptions_Consumer all
-
 .PHONY: OfferSubscriptions_Server
-OfferSubscriptions_Server: OfferSubscriptions_Idl OfferSubscriptions_Client OfferSubscriptions_Consumer
+OfferSubscriptions_Server: OfferSubscriptions_Idl OfferSubscriptions_Client
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OfferSubscriptions_Server all
+
+.PHONY: OfferSubscriptions_Consumer
+OfferSubscriptions_Consumer: OfferSubscriptions_Idl OfferSubscriptions_Client OfferSubscriptions_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OfferSubscriptions_Consumer all
 
 project_name_list:
 	@echo OfferSubscriptions_Client

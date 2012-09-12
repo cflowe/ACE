@@ -755,6 +755,9 @@
 				RelativePath="Monitor_Size.cpp">
 			</File>
 			<File
+				RelativePath="Monotonic_Time_Policy.cpp">
+			</File>
+			<File
 				RelativePath="Msg_WFMO_Reactor.cpp">
 			</File>
 			<File
@@ -2076,6 +2079,9 @@
 				RelativePath="Monitor_Size.h">
 			</File>
 			<File
+				RelativePath="Monotonic_Time_Policy.h">
+			</File>
+			<File
 				RelativePath="Msg_WFMO_Reactor.h">
 			</File>
 			<File
@@ -2923,6 +2929,9 @@
 			</File>
 			<File
 				RelativePath="Time_Value.h">
+			</File>
+			<File
+				RelativePath="Time_Value_T.h">
 			</File>
 			<File
 				RelativePath="Timeprobe.h">
@@ -4079,6 +4088,9 @@
 				RelativePath="Monitor_Base.inl">
 			</File>
 			<File
+				RelativePath="Monotonic_Time_Policy.inl">
+			</File>
+			<File
 				RelativePath="Msg_WFMO_Reactor.inl">
 			</File>
 			<File
@@ -4458,6 +4470,9 @@
 			</File>
 			<File
 				RelativePath="Time_Value.inl">
+			</File>
+			<File
+				RelativePath="Time_Value_T.inl">
 			</File>
 			<File
 				RelativePath="Timeprobe.inl">
@@ -6463,6 +6478,33 @@
 			</File>
 			<File
 				RelativePath="Time_Policy_T.cpp">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Time_Value_T.cpp">
 				<FileConfiguration
 					Name="Debug|Win32"
 					ExcludedFromBuild="true">

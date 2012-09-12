@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: config-linux.h 95533 2012-02-14 22:59:17Z wotte $
+// $Id: config-linux.h 96072 2012-08-17 12:29:59Z mcorino $
 
 // The following configuration file is designed to work for Linux
 // platforms using GNU C++.
@@ -341,8 +341,11 @@
 // According to man pages Linux uses different (compared to UNIX systems) types
 // for setting IP_MULTICAST_TTL and IPV6_MULTICAST_LOOP / IP_MULTICAST_LOOP
 // in setsockopt/getsockopt.
+// In the current (circa 2012) kernel source however there is an explicit check
+// for IPV6_MULTICAST_LOOP being sizeof(int). Anything else is rejected so it must
+// not be a passed a bool, irrespective of what the man pages (still) say.
+// i.e. #define ACE_HAS_IPV6_MULTICAST_LOOP_AS_BOOL 1 is wrong
 #define ACE_HAS_IP_MULTICAST_TTL_AS_INT 1
-#define ACE_HAS_IPV6_MULTICAST_LOOP_AS_BOOL 1
 #define ACE_HAS_IP_MULTICAST_LOOP_AS_INT 1
 
 #if defined (ACE_LACKS_NETWORKING)
@@ -372,6 +375,19 @@
 # endif /* !ACE_LACKS_LINUX_VERSION_H */
 # if (LINUX_VERSION_CODE > KERNEL_VERSION (2,6,0))
 #  define ACE_HAS_EVENT_POLL
+# endif
+#endif
+
+// This is ghastly, but as long as there are platforms supported
+// which define the right POSIX macros but lack actual support
+// we have no choice.
+// RHEL4 fails (2.6.9) while RHEL5 works (2.6.18)
+#if !defined (ACE_LACKS_CONDATTR_SETCLOCK)
+# if !defined (ACE_LACKS_LINUX_VERSION_H)
+#  include <linux/version.h>
+# endif /* !ACE_LACKS_LINUX_VERSION_H */
+# if (LINUX_VERSION_CODE < KERNEL_VERSION (2,6,18))
+#  define ACE_LACKS_CONDATTR_SETCLOCK
 # endif
 #endif
 

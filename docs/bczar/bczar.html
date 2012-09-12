@@ -1,4 +1,4 @@
-<!-- $Id: bczar.html 95876 2012-06-13 05:57:47Z johnnyw $ -->
+<!-- $Id: bczar.html 96018 2012-08-09 07:04:36Z johnnyw $ -->
 <body>
   <html>
     <head>
@@ -107,7 +107,7 @@
           </ul>
           If you want to perform a full build with qt support, than run:
           <ul>
-            <li><code>yum ant setuptool system-config-network-tui system-config-firewall-tui install lcov gnuplot java-1.6.0-openjdk git-svn perl svn screen pysvn automake doxygen bzip2 tar gzip openssh graphviz zip libtool gcc-c++ boost-devel valgrind openssl-devel gcc qt4 fltk-devel bzip2-devel rsync openssl lzo-devel zziplib-devel acpid acpi nfs-utils java xerces-c xerces-c-devel mc qt qt-devel icecream ruby ruby-devel lksctp-tools-devel git glibc.i686 libstdc++.i686 ncurses-libs.i686 zlib.i686 telnet GitPython NetworkManager wget mailx</code></li>
+            <li><code>yum libcgroup-devel ant setuptool system-config-network-tui system-config-firewall-tui install lcov gnuplot java-1.6.0-openjdk git-svn perl svn screen pysvn automake doxygen bzip2 tar gzip openssh graphviz zip libtool gcc-c++ boost-devel valgrind openssl-devel gcc qt4 fltk-devel bzip2-devel rsync openssl lzo-devel zziplib-devel acpid acpi nfs-utils java xerces-c xerces-c-devel mc qt qt-devel icecream ruby ruby-devel lksctp-tools-devel git glibc.i686 libstdc++.i686 ncurses-libs.i686 zlib.i686 telnet GitPython NetworkManager wget mailx</code></li>
           </ul>
         </li>
         <li>
@@ -285,7 +285,11 @@
           cd ACE_wrappers</li>
           <li>
             Set the needed environment variables using<br>
-            <code>export ACE_ROOT=$PWD</code></li>
+            <code>export ACE_ROOT=$PWD</code><br>
+        <code>export TAO_ROOT=$ACE_ROOT/TAO</code><br>
+        <code>export CIAO_ROOT=$TAO_ROOT/CIAO</code><br>
+        <code>export DANCE_ROOT=$TAO_ROOT/DAnCE</code><br>
+        <code>export DDS_ROOT=</code><br></li>
           <li>
             Check the doxygen version at the shell by executing the command:<br>
             <code>doxygen --version</code>
@@ -307,12 +311,16 @@
         mkdir doxygen<br>
         cd doxygen<br>
 		wget https://svn.dre.vanderbilt.edu/viewvc/Middleware/trunk/ACE/docs/svn/config?view=co -O $HOME/.subversion/config<br>
-        svn co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-6_1_2/ACE ACE_wrappers<br>
-        svn co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-6_1_2/TAO ACE_wrappers/TAO<br>
-        svn co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-6_1_2/CIAO ACE_wrappers/TAO/CIAO<br>
-        svn co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-6_1_2/DAnCE ACE_wrappers/TAO/DAnCE<br>
+        svn co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-6_1_3/ACE ACE_wrappers<br>
+        svn co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-6_1_3/TAO ACE_wrappers/TAO<br>
+        svn co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-6_1_3/CIAO ACE_wrappers/TAO/CIAO<br>
+        svn co svn://svn.dre.vanderbilt.edu/DOC/Middleware/tags/ACE+TAO+CIAO-6_1_3/DAnCE ACE_wrappers/TAO/DAnCE<br>
         cd ACE_wrappers<br>
         export ACE_ROOT=$PWD<br>
+        export TAO_ROOT=$ACE_ROOT/TAO<br>
+        export CIAO_ROOT=$TAO_ROOT/CIAO<br>
+        export DANCE_ROOT=$TAO_ROOT/DAnCE<br>
+        export DDS_ROOT=<br>
         $ACE_ROOT/bin/generate_rel_manpages<br>
         scp ACE-html.tar.gz ACE-html.tar.bz2 ACE-html.zip ACE-html.tar.gz.md5 ACE-html.tar.bz2.md5 ACE-html.zip.md5 bczar@download.dre.vanderbilt.edu:/export/www/download.dre/ACE+TAO-distribution
  </code>

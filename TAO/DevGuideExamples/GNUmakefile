@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: AMH_Idl AMH_Server AMH_Client AMH_AMI_Idl AMH_AMI_Inner_Server AMH_AMI_Middle_Server AMH_AMI_Client BiDirectionalGIOP_Idl BiDirectionalGIOP_Client BiDirectionalGIOP_Server GettingStarted_Idl GettingStarted_Client GettingStarted_Server LocalObject_Messenger_Idl LocalObject_Messenger_Server ServantLocator_Idl ServantLocator_Server ServantLocator_Client AMIcallback_Server AMIcallback_Client RelativeRoundtripTimeout_Idl RelativeRoundtripTimeout_Client RelativeRoundtripTimeout_Server GracefulShutdown_Idl Multithreading_GracefulShutdown_Client Multithreading_GracefulShutdown_Server Reactive_Idl Multithreading_Reactive_Server Multithreading_Reactive_Client ThreadPerConnection_Idl Multi_ThreadPerConnection_Server Multi_ThreadPerConnection_Client ThreadPool_Idl Multithreading_ThreadPool_Client Multithreading_ThreadPool_Server Auth_Idl Auth_Client Auth_Server IOR_Idl IOR_Client IOR_Server PICurrent_Idl PICurrent_Client PICurrent_Server SimpleCode_Idl SimpleCode_Client SimpleCode_Server RTCORBA_Idl RTCORBA_Client RTCORBA_Server SmartProxies_Server SmartProxies_Logger SmartProxies_Client Bank_Dev_Bank_Idl Bank__Dev_Server Bank__Dev_Client ValueTypes_DevGuideIDL ValueTypes_DevGuideMsgClient ValueTypes_DevGuideMsgServer
+all: AMH_Idl AMH_Server AMH_Client AMH_AMI_Idl AMH_AMI_Client AMH_AMI_Inner_Server AMH_AMI_Middle_Server BiDirectionalGIOP_Idl BiDirectionalGIOP_Client BiDirectionalGIOP_Server GettingStarted_Idl GettingStarted_Client GettingStarted_Server LocalObject_Messenger_Idl LocalObject_Messenger_Server ServantLocator_Idl ServantLocator_Client ServantLocator_Server AMIcallback_Server AMIcallback_Client RelativeRoundtripTimeout_Idl RelativeRoundtripTimeout_Client RelativeRoundtripTimeout_Server GracefulShutdown_Idl Multithreading_GracefulShutdown_Client Multithreading_GracefulShutdown_Server Reactive_Idl Multithreading_Reactive_Server Multithreading_Reactive_Client ThreadPerConnection_Idl Multi_ThreadPerConnection_Server Multi_ThreadPerConnection_Client ThreadPool_Idl Multithreading_ThreadPool_Client Multithreading_ThreadPool_Server Auth_Idl Auth_Client Auth_Server IOR_Idl IOR_Client IOR_Server PICurrent_Idl PICurrent_Client PICurrent_Server SimpleCode_Idl SimpleCode_Server SimpleCode_Client RTCORBA_Idl RTCORBA_Client RTCORBA_Server SmartProxies_Logger SmartProxies_Server SmartProxies_Client Bank_Dev_Bank_Idl Bank__Dev_Client Bank__Dev_Server ValueTypes_DevGuideIDL ValueTypes_DevGuideMsgClient ValueTypes_DevGuideMsgServer
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -29,9 +29,9 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd AMH && $(MAKE) -f GNUmakefile.AMH_Server $(@)
 	$(KEEP_GOING)@cd AMH && $(MAKE) -f GNUmakefile.AMH_Client $(@)
 	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Idl $(@)
+	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Client $(@)
 	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Inner_Server $(@)
 	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Middle_Server $(@)
-	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Client $(@)
 	$(KEEP_GOING)@cd BiDirectionalGIOP && $(MAKE) -f GNUmakefile.BiDirectionalGIOP_Idl $(@)
 	$(KEEP_GOING)@cd BiDirectionalGIOP && $(MAKE) -f GNUmakefile.BiDirectionalGIOP_Client $(@)
 	$(KEEP_GOING)@cd BiDirectionalGIOP && $(MAKE) -f GNUmakefile.BiDirectionalGIOP_Server $(@)
@@ -41,8 +41,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd LocalObjects/Messenger && $(MAKE) -f GNUmakefile.LocalObject_Messenger_Idl $(@)
 	$(KEEP_GOING)@cd LocalObjects/Messenger && $(MAKE) -f GNUmakefile.LocalObject_Messenger_Server $(@)
 	$(KEEP_GOING)@cd LocalObjects/ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Idl $(@)
-	$(KEEP_GOING)@cd LocalObjects/ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Server $(@)
 	$(KEEP_GOING)@cd LocalObjects/ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Client $(@)
+	$(KEEP_GOING)@cd LocalObjects/ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Server $(@)
 	$(KEEP_GOING)@cd Messaging/AMIcallback && $(MAKE) -f GNUmakefile.AMIcallback_Server $(@)
 	$(KEEP_GOING)@cd Messaging/AMIcallback && $(MAKE) -f GNUmakefile.AMIcallback_Client $(@)
 	$(KEEP_GOING)@cd Messaging/RelativeRoundtripTimeout && $(MAKE) -f GNUmakefile.RelativeRoundtripTimeout_Idl $(@)
@@ -70,17 +70,17 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd PortableInterceptors/PICurrent && $(MAKE) -f GNUmakefile.PICurrent_Client $(@)
 	$(KEEP_GOING)@cd PortableInterceptors/PICurrent && $(MAKE) -f GNUmakefile.PICurrent_Server $(@)
 	$(KEEP_GOING)@cd PortableInterceptors/SimpleCodec && $(MAKE) -f GNUmakefile.SimpleCode_Idl $(@)
-	$(KEEP_GOING)@cd PortableInterceptors/SimpleCodec && $(MAKE) -f GNUmakefile.SimpleCode_Client $(@)
 	$(KEEP_GOING)@cd PortableInterceptors/SimpleCodec && $(MAKE) -f GNUmakefile.SimpleCode_Server $(@)
+	$(KEEP_GOING)@cd PortableInterceptors/SimpleCodec && $(MAKE) -f GNUmakefile.SimpleCode_Client $(@)
 	$(KEEP_GOING)@cd RTCORBA && $(MAKE) -f GNUmakefile.RTCORBA_Idl $(@)
 	$(KEEP_GOING)@cd RTCORBA && $(MAKE) -f GNUmakefile.RTCORBA_Client $(@)
 	$(KEEP_GOING)@cd RTCORBA && $(MAKE) -f GNUmakefile.RTCORBA_Server $(@)
-	$(KEEP_GOING)@cd SmartProxies && $(MAKE) -f GNUmakefile.SmartProxies_Server $(@)
 	$(KEEP_GOING)@cd SmartProxies && $(MAKE) -f GNUmakefile.SmartProxies_Logger $(@)
+	$(KEEP_GOING)@cd SmartProxies && $(MAKE) -f GNUmakefile.SmartProxies_Server $(@)
 	$(KEEP_GOING)@cd SmartProxies && $(MAKE) -f GNUmakefile.SmartProxies_Client $(@)
 	$(KEEP_GOING)@cd ValueTypes/Bank && $(MAKE) -f GNUmakefile.Bank_Dev_Bank_Idl $(@)
-	$(KEEP_GOING)@cd ValueTypes/Bank && $(MAKE) -f GNUmakefile.Bank__Dev_Server $(@)
 	$(KEEP_GOING)@cd ValueTypes/Bank && $(MAKE) -f GNUmakefile.Bank__Dev_Client $(@)
+	$(KEEP_GOING)@cd ValueTypes/Bank && $(MAKE) -f GNUmakefile.Bank__Dev_Server $(@)
 	$(KEEP_GOING)@cd ValueTypes/Messenger && $(MAKE) -f GNUmakefile.ValueTypes_DevGuideIDL $(@)
 	$(KEEP_GOING)@cd ValueTypes/Messenger && $(MAKE) -f GNUmakefile.ValueTypes_DevGuideMsgClient $(@)
 	$(KEEP_GOING)@cd ValueTypes/Messenger && $(MAKE) -f GNUmakefile.ValueTypes_DevGuideMsgServer $(@)
@@ -101,17 +101,17 @@ AMH_Client: AMH_Idl AMH_Server
 AMH_AMI_Idl:
 	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Idl all
 
+.PHONY: AMH_AMI_Client
+AMH_AMI_Client: AMH_AMI_Idl
+	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Client all
+
 .PHONY: AMH_AMI_Inner_Server
 AMH_AMI_Inner_Server: AMH_AMI_Idl
 	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Inner_Server all
 
 .PHONY: AMH_AMI_Middle_Server
-AMH_AMI_Middle_Server: AMH_AMI_Idl AMH_AMI_Inner_Server
+AMH_AMI_Middle_Server: AMH_AMI_Idl AMH_AMI_Client AMH_AMI_Inner_Server
 	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Middle_Server all
-
-.PHONY: AMH_AMI_Client
-AMH_AMI_Client: AMH_AMI_Idl AMH_AMI_Middle_Server
-	$(KEEP_GOING)@cd AMH_AMI && $(MAKE) -f GNUmakefile.AMH_AMI_Client all
 
 .PHONY: BiDirectionalGIOP_Idl
 BiDirectionalGIOP_Idl:
@@ -149,13 +149,13 @@ LocalObject_Messenger_Server: LocalObject_Messenger_Idl
 ServantLocator_Idl:
 	$(KEEP_GOING)@cd LocalObjects/ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Idl all
 
-.PHONY: ServantLocator_Server
-ServantLocator_Server: ServantLocator_Idl
-	$(KEEP_GOING)@cd LocalObjects/ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Server all
-
 .PHONY: ServantLocator_Client
-ServantLocator_Client: ServantLocator_Idl ServantLocator_Server
+ServantLocator_Client: ServantLocator_Idl
 	$(KEEP_GOING)@cd LocalObjects/ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Client all
+
+.PHONY: ServantLocator_Server
+ServantLocator_Server: ServantLocator_Idl ServantLocator_Client
+	$(KEEP_GOING)@cd LocalObjects/ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Server all
 
 .PHONY: AMIcallback_Server
 AMIcallback_Server:
@@ -265,13 +265,13 @@ PICurrent_Server: PICurrent_Idl PICurrent_Client
 SimpleCode_Idl:
 	$(KEEP_GOING)@cd PortableInterceptors/SimpleCodec && $(MAKE) -f GNUmakefile.SimpleCode_Idl all
 
-.PHONY: SimpleCode_Client
-SimpleCode_Client: SimpleCode_Idl
-	$(KEEP_GOING)@cd PortableInterceptors/SimpleCodec && $(MAKE) -f GNUmakefile.SimpleCode_Client all
-
 .PHONY: SimpleCode_Server
-SimpleCode_Server: SimpleCode_Idl SimpleCode_Client
+SimpleCode_Server: SimpleCode_Idl
 	$(KEEP_GOING)@cd PortableInterceptors/SimpleCodec && $(MAKE) -f GNUmakefile.SimpleCode_Server all
+
+.PHONY: SimpleCode_Client
+SimpleCode_Client: SimpleCode_Idl SimpleCode_Server
+	$(KEEP_GOING)@cd PortableInterceptors/SimpleCodec && $(MAKE) -f GNUmakefile.SimpleCode_Client all
 
 .PHONY: RTCORBA_Idl
 RTCORBA_Idl:
@@ -285,29 +285,29 @@ RTCORBA_Client: RTCORBA_Idl
 RTCORBA_Server: RTCORBA_Idl RTCORBA_Client
 	$(KEEP_GOING)@cd RTCORBA && $(MAKE) -f GNUmakefile.RTCORBA_Server all
 
-.PHONY: SmartProxies_Server
-SmartProxies_Server:
-	$(KEEP_GOING)@cd SmartProxies && $(MAKE) -f GNUmakefile.SmartProxies_Server all
-
 .PHONY: SmartProxies_Logger
 SmartProxies_Logger:
 	$(KEEP_GOING)@cd SmartProxies && $(MAKE) -f GNUmakefile.SmartProxies_Logger all
 
+.PHONY: SmartProxies_Server
+SmartProxies_Server:
+	$(KEEP_GOING)@cd SmartProxies && $(MAKE) -f GNUmakefile.SmartProxies_Server all
+
 .PHONY: SmartProxies_Client
-SmartProxies_Client: SmartProxies_Server SmartProxies_Logger
+SmartProxies_Client: SmartProxies_Logger SmartProxies_Server
 	$(KEEP_GOING)@cd SmartProxies && $(MAKE) -f GNUmakefile.SmartProxies_Client all
 
 .PHONY: Bank_Dev_Bank_Idl
 Bank_Dev_Bank_Idl:
 	$(KEEP_GOING)@cd ValueTypes/Bank && $(MAKE) -f GNUmakefile.Bank_Dev_Bank_Idl all
 
-.PHONY: Bank__Dev_Server
-Bank__Dev_Server: Bank_Dev_Bank_Idl
-	$(KEEP_GOING)@cd ValueTypes/Bank && $(MAKE) -f GNUmakefile.Bank__Dev_Server all
-
 .PHONY: Bank__Dev_Client
-Bank__Dev_Client: Bank_Dev_Bank_Idl Bank__Dev_Server
+Bank__Dev_Client: Bank_Dev_Bank_Idl
 	$(KEEP_GOING)@cd ValueTypes/Bank && $(MAKE) -f GNUmakefile.Bank__Dev_Client all
+
+.PHONY: Bank__Dev_Server
+Bank__Dev_Server: Bank_Dev_Bank_Idl Bank__Dev_Client
+	$(KEEP_GOING)@cd ValueTypes/Bank && $(MAKE) -f GNUmakefile.Bank__Dev_Server all
 
 .PHONY: ValueTypes_DevGuideIDL
 ValueTypes_DevGuideIDL:

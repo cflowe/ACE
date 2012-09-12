@@ -1,7 +1,7 @@
 # Set the version number here.
-%define ACEVER  6.1.3
-%define TAOVER  2.1.3
-%define CIAOVER 1.1.3
+%define ACEVER  6.1.4
+%define TAOVER  2.1.4
+%define CIAOVER 1.1.4
 
 # Conditional build
 # Default values are
@@ -1874,7 +1874,6 @@ fi
 %{_libdir}/libACE_INet_SSL.so.%{ACEVERSO}
 %{_libdir}/libACE_Compression.so.%{ACEVERSO}
 %{_libdir}/libACE_RLECompression.so.%{ACEVERSO}
-%{_libdir}/libACE_XML_Utils.so.%{ACEVERSO}
 
 %doc ACE-INSTALL.html
 %doc AUTHORS

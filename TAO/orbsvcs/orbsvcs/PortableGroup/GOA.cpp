@@ -1,4 +1,4 @@
-// $Id: GOA.cpp 91677 2010-09-08 19:18:49Z johnnyw $
+// $Id: GOA.cpp 96083 2012-08-20 10:20:43Z sma $
 
 #include "orbsvcs/PortableGroup/GOA.h"
 #include "orbsvcs/PortableGroup/PortableGroup_Acceptor_Registry.h"
@@ -498,6 +498,13 @@ TAO_GOA::associate_group_with_ref (
   PortableGroup_Request_Dispatcher *rd =
     dynamic_cast <PortableGroup_Request_Dispatcher*>(
       this->orb_core_.request_dispatcher());
+  if (!rd)
+    {
+      // Group component was found, but then could not be dynamic_cast.
+      // The group reference that was passed in must be bogus in
+      // some unknown way.
+      throw PortableGroup::NotAGroupObject ();
+    }
 
   // Create the acceptors necessary to receive requests for the
   // specified group reference.

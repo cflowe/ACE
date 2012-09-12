@@ -1,4 +1,4 @@
-// $Id: be_produce.cpp 95461 2012-01-20 10:31:59Z johnnyw $
+// $Id: be_produce.cpp 95992 2012-08-02 09:22:05Z johnnyw $
 
 /*
 
@@ -152,9 +152,12 @@ BE_produce (void)
       BE_abort ();
     }
 
-  ctx.state (TAO_CodeGen::TAO_ROOT_CH);
-  be_visitor_root_ch root_ch_visitor (&ctx);
-  BE_visit_root (root_ch_visitor, "client header");
+  if (be_global->gen_client_header ())
+    {
+      ctx.state (TAO_CodeGen::TAO_ROOT_CH);
+      be_visitor_root_ch root_ch_visitor (&ctx);
+      BE_visit_root (root_ch_visitor, "client header");
+    }
 
   // Initialize the anyop source stream, if the option is set.
   // It has to be done after the stub header file generation,
@@ -182,9 +185,12 @@ BE_produce (void)
       BE_visit_root (root_cs_visitor, "client stub");
     }
 
-  ctx.state (TAO_CodeGen::TAO_ROOT_SH);
-  be_visitor_root_sh root_sh_visitor (&ctx);
-  BE_visit_root (root_sh_visitor, "server header");
+  if (be_global->gen_server_header ())
+    {
+      ctx.state (TAO_CodeGen::TAO_ROOT_SH);
+      be_visitor_root_sh root_sh_visitor (&ctx);
+      BE_visit_root (root_sh_visitor, "server header");
+    }
 
   if (be_global->gen_server_skeleton ())
     {

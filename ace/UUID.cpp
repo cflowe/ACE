@@ -1,4 +1,4 @@
-//$Id: UUID.cpp 95761 2012-05-15 18:23:04Z johnnyw $
+//$Id: UUID.cpp 96017 2012-08-08 22:18:09Z mitza $
 
 #include "ace/UUID.h"
 #include "ace/Guard_T.h"
@@ -359,7 +359,7 @@ namespace ACE_Utils
     uuid.time_mid (static_cast<ACE_UINT16> ((timestamp >> 32) & 0xFFFF));
 
     ACE_UINT16 tHAV = static_cast<ACE_UINT16> ((timestamp >> 48) & 0xFFFF);
-    tHAV |= (version << 12);
+    tHAV = static_cast<ACE_UINT16> (tHAV | (version << 12));
     uuid.time_hi_and_version (tHAV);
 
     u_char cseqHAV;
@@ -367,7 +367,7 @@ namespace ACE_Utils
     cseqHAV = static_cast<u_char> ((clock_sequence & 0x3f00) >> 8);
     uuid_state_.timestamp = timestamp;
 
-    cseqHAV |= variant;
+    cseqHAV = static_cast<u_char> (cseqHAV | variant);
     uuid.clock_seq_hi_and_reserved (cseqHAV);
     uuid.node (uuid_state_.node);
 

@@ -1,4 +1,4 @@
-// $Id: CIAO_Handler_Common.cpp 95214 2011-12-05 12:35:34Z johnnyw $
+// $Id: CIAO_Handler_Common.cpp 96013 2012-08-07 12:47:56Z johnnyw $
 #include "CIAO_Handler_Common.h"
 
 #include "dance/Deployment/Deployment_PlanErrorC.h"
@@ -32,7 +32,7 @@ namespace CIAO
             else
               {
                 CIAO_ERROR (1, (LM_ERROR, CLINFO
-                                "Component_Handler_i::get_implementation - "
+                                "Deployment_Common::get_implementation - "
                                 "No valid location for artifact <%C>\n",
                                 name));
                 throw ::Deployment::PlanError (name,
@@ -42,7 +42,7 @@ namespace CIAO
       }
 
     CIAO_ERROR (1, (LM_ERROR, CLINFO
-                    "Component_Handler_i::get_implementation - "
+                    "Deployment_Common::get_implementation - "
                     "Unable to locate artifact <%C>\n",
                     name));
 

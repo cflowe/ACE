@@ -1,11 +1,11 @@
 # -*- Makefile -*-
-# $Id: platform_linux.GNU 95319 2011-12-13 14:54:44Z mhengstmengel $
+# $Id: platform_linux.GNU 96104 2012-08-27 20:51:09Z shuston $
 
 include $(ACE_ROOT)/include/makeinclude/platform_linux_common.GNU
 
 ifeq ($(insure),0)
-  CC  = gcc
-  CXX = g++
+  CC  ?= gcc
+  CXX ?= g++
   CXX_FOR_VERSION_TEST ?= $(CXX)
 else
   CXX_FOR_VERSION_TEST ?= g++

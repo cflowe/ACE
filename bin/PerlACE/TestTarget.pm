@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-# $Id: TestTarget.pm 95949 2012-07-20 17:38:29Z mitza $
+# $Id: TestTarget.pm 96010 2012-08-06 20:55:13Z mitza $
 #
 # The TestTarget class is for operations that are per-target while testing.
 # They can be overridden for specific needs like embedded systems, etc.
@@ -10,6 +10,7 @@ use strict;
 use English;
 use POSIX qw(:time_h);
 use File::Copy;
+use File::Spec;
 use PerlACE::Run_Test;
 use Sys::Hostname;
 
@@ -408,7 +409,8 @@ sub PutFile ($)
     my $self = shift;
     my $src = shift;
     my $dest = $self->LocalFile ($src);
-    if ($src ne $dest) {
+    if (($src ne $dest) &&
+        (File::Spec->rel2abs($src) ne File::Spec->rel2abs($dest))) {
         copy ($src, $dest);
     }
     return 0;

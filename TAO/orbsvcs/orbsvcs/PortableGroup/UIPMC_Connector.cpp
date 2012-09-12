@@ -1,17 +1,19 @@
-// $Id: UIPMC_Connector.cpp 91677 2010-09-08 19:18:49Z johnnyw $
+// $Id: UIPMC_Connector.cpp 96029 2012-08-10 14:01:17Z sma $
 
-#include "orbsvcs/PortableGroup/UIPMC_Profile.h"
 #include "orbsvcs/PortableGroup/UIPMC_Connector.h"
+#include "orbsvcs/PortableGroup/UIPMC_Profile.h"
+#include "orbsvcs/PortableGroup/UIPMC_Connection_Handler.h"
 
 #include "tao/debug.h"
 #include "tao/ORB_Core.h"
-#include "tao/Base_Transport_Property.h"
-#include "tao/Protocols_Hooks.h"
+#include "tao/Transport_Descriptor_Interface.h"
+#include "tao/Transport.h"
 #include "tao/Thread_Lane_Resources.h"
 
 #include "ace/Connector.h"
 #include "ace/OS_NS_strings.h"
 #include "ace/os_include/os_netdb.h"
+#include "ace/OS_NS_sys_socket.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -111,7 +113,8 @@ TAO_UIPMC_Connector::make_connection (TAO::Profile_Transport_Resolver *,
 
           ACE_ERROR ((LM_ERROR,
                       ACE_TEXT ("TAO (%P|%t) - UIPMC_Connector::open, ")
-                      ACE_TEXT ("invalid connection to IPv4 mapped IPv6 interface <%s>!\n"),
+                      ACE_TEXT ("invalid connection to IPv4 mapped IPv6 ")
+                      ACE_TEXT ("interface <%s>!\n"),
                       remote_as_string));
         }
       return 0;
@@ -129,18 +132,63 @@ TAO_UIPMC_Connector::make_connection (TAO::Profile_Transport_Resolver *,
 
   u_short port = 0;
   const ACE_UINT32 ia_any = INADDR_ANY;
-  ACE_INET_Addr local_addr(port, ia_any);
+  ACE_INET_Addr any_addr(port, ia_any);
 
 #if defined (ACE_HAS_IPV6)
   if (remote_address.get_type () == AF_INET6)
-    local_addr.set (port,
-                    ACE_IPV6_ANY);
+    any_addr.set (port,
+                  ACE_IPV6_ANY);
 #endif /* ACE_HAS_IPV6 */
-
-  svc_handler->local_addr (local_addr);
+  ACE_INET_Addr local_addr(any_addr);
   svc_handler->addr (remote_address);
 
-  int retval = svc_handler->open (0);
+  int retval= 0;
+  while (uipmc_endpoint != 0)
+    {
+      if (uipmc_endpoint->is_preferred_network ())
+        {
+          local_addr.set(port, uipmc_endpoint->preferred_network ());
+        }
+      else
+        {
+           local_addr.set(any_addr);
+        }
+      svc_handler->local_addr (local_addr);
+      retval = svc_handler->open (0);
+      if (retval == 0)
+        {
+#if defined (ACE_HAS_IPV6)
+          const char* prefer_if = uipmc_endpoint->preferred_if();
+          if (prefer_if && ACE_OS::strlen(prefer_if))
+            {
+              if (svc_handler->peer ().set_nic(prefer_if, AF_INET6))
+                {
+                  if (TAO_debug_level > 0)
+                        ACE_ERROR ((LM_ERROR,
+                            "TAO (%P|%t) - UIPMC_Connector::make_connection, "
+                            "connection to <%C:%u> - failed to set requested local network interface <%s>\n",
+                             uipmc_endpoint->host (),
+                             uipmc_endpoint->port (),
+                             prefer_if));
+                  retval = -1;
+                }
+            }
+#endif /* ACE_HAS_IPV6 */
+          break;
+        }
+      else
+       {
+           if (TAO_debug_level > 3)
+                ACE_ERROR ((LM_ERROR,
+                            "TAO (%P|%t) - UIPMC_Connector::make_connection, "
+                            "connection to <%C:%u> from interface <%s> failed (%p)\n",
+                             uipmc_endpoint->host (),
+                             uipmc_endpoint->port (),
+                             uipmc_endpoint->is_preferred_network () ? uipmc_endpoint->preferred_network () : "ANY",
+                             ACE_TEXT ("errno")));
+       }
+      uipmc_endpoint = dynamic_cast<TAO_UIPMC_Endpoint *> (uipmc_endpoint->next());
+    }
 
   // Failure to open a connection.
   if (retval != 0)
@@ -151,20 +199,37 @@ TAO_UIPMC_Connector::make_connection (TAO::Profile_Transport_Resolver *,
         {
           ACE_ERROR ((LM_ERROR,
                       "TAO (%P|%t) - UIPMC_Connector::make_connection, "
-                      "could not make a new connection\n"));
+                      "failed to open the connection to <%C:%u>\n",
+                      remote_address.get_host_addr (),
+                      remote_address.get_port_number ()));
         }
 
       return 0;
     }
 
-  if (TAO_debug_level > 2)
-    ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT ("TAO (%P|%t) - UIPMC_Connector::make_connection, ")
-                ACE_TEXT ("new connection on HANDLE %d\n"),
-                svc_handler->get_handle ()));
+  // After the handler is opened we can try to obtain the real local address.
+  svc_handler->peer ().get_local_addr (local_addr);
+  svc_handler->local_addr (local_addr);
 
-  UIPMC_TRANSPORT *transport =
-    dynamic_cast<UIPMC_TRANSPORT *> (svc_handler->transport ());
+  if (TAO_debug_level > 2)
+    {
+      char local_hostaddr[INET6_ADDRSTRLEN];
+      local_addr.get_host_addr (local_hostaddr, sizeof local_hostaddr);
+      char remote_hostaddr[INET6_ADDRSTRLEN];
+      remote_address.get_host_addr (remote_hostaddr, sizeof remote_hostaddr);
+
+      ACE_DEBUG ((LM_DEBUG,
+                  ACE_TEXT ("TAO (%P|%t) - UIPMC_Connector::make_connection, ")
+                  ACE_TEXT ("new connection from <%C:%u> to <%C:%u> on ")
+                  ACE_TEXT ("HANDLE %d\n"),
+                  local_hostaddr,
+                  local_addr.get_port_number (),
+                  remote_hostaddr,
+                  remote_address.get_port_number (),
+                  svc_handler->get_handle ()));
+    }
+
+  TAO_Transport *transport = svc_handler->transport ();
 
   // In case of errors transport is zero
   if (transport == 0)
@@ -172,10 +237,11 @@ TAO_UIPMC_Connector::make_connection (TAO::Profile_Transport_Resolver *,
       svc_handler->close ();
 
       // Give users a clue to the problem.
-      if (TAO_debug_level > 3)
+      if (TAO_debug_level)
           ACE_ERROR ((LM_ERROR,
-                      "TAO (%P|%t) - UIPMC_Connector::make_connection, "
-                      "connection to <%C:%u> failed (%p)\n",
+                      ACE_TEXT ("TAO (%P|%t) - UIPMC_Connector:")
+                      ACE_TEXT (":make_connection, connection to ")
+                      ACE_TEXT ("<%C:%u> failed (%p)\n"),
                       uipmc_endpoint->host (),
                       uipmc_endpoint->port (),
                       ACE_TEXT ("errno")));
@@ -193,11 +259,12 @@ TAO_UIPMC_Connector::make_connection (TAO::Profile_Transport_Resolver *,
     {
       svc_handler->close ();
 
-      if (TAO_debug_level > 0)
+      if (TAO_debug_level)
         {
           ACE_ERROR ((LM_ERROR,
-                      "TAO (%P|%t) - UIPMC_Connector::make_connection, "
-                      "could not add the new connection to cache\n"));
+                      ACE_TEXT ("TAO (%P|%t) - UIPMC_Connector::")
+                      ACE_TEXT ("make_connection, could not add the ")
+                      ACE_TEXT ("new connection to cache\n")));
         }
 
       return 0;
@@ -283,4 +350,3 @@ TAO_UIPMC_Connector::cancel_svc_handler (
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

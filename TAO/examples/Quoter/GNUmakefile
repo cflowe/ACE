@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,35 +20,35 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Quoter_IDL Quoter_Generic_Factory Quoter_Client Quoter_Factory_Finder Quoter_Server
+all: Quoter_IDL Quoter_Factory_Finder Quoter_Client Quoter_Generic_Factory Quoter_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_IDL $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Generic_Factory $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Factory_Finder $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Generic_Factory $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Server $(@)
 
 .PHONY: Quoter_IDL
 Quoter_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_IDL all
 
-.PHONY: Quoter_Generic_Factory
-Quoter_Generic_Factory: Quoter_IDL
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Generic_Factory all
-
-.PHONY: Quoter_Client
-Quoter_Client: Quoter_IDL Quoter_Generic_Factory
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Client all
-
 .PHONY: Quoter_Factory_Finder
-Quoter_Factory_Finder: Quoter_IDL Quoter_Generic_Factory
+Quoter_Factory_Finder: Quoter_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Factory_Finder all
 
+.PHONY: Quoter_Client
+Quoter_Client: Quoter_IDL Quoter_Factory_Finder
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Client all
+
+.PHONY: Quoter_Generic_Factory
+Quoter_Generic_Factory: Quoter_IDL Quoter_Factory_Finder
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Generic_Factory all
+
 .PHONY: Quoter_Server
-Quoter_Server: Quoter_IDL Quoter_Generic_Factory
+Quoter_Server: Quoter_IDL Quoter_Factory_Finder
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Quoter_Server all
 
 project_name_list:

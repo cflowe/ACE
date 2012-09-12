@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_clang_common.GNU 94795 2011-10-19 19:14:06Z wotte $
+# $Id: platform_clang_common.GNU 96053 2012-08-15 11:30:15Z johnnyw $
 #
 # Common file help turn on/off explicit template instantiation
 
@@ -65,6 +65,10 @@ endif # GNU_LD
 
 ifeq ($(no_strict_aliasing), 1)
   CCFLAGS += -fno-strict-aliasing
+endif
+
+ifeq ($(c++0x),1)
+  CCFLAGS += -std=c++0x
 endif
 
 ifeq ($(shared_libs), 1)

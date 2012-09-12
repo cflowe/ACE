@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Locality_Manager_Impl.cpp 94926 2011-11-01 13:19:12Z wotte $
+// $Id: Locality_Manager_Impl.cpp 96027 2012-08-10 11:25:58Z johnnyw $
 
 #include "Locality_Manager_Impl.h"
 #include "dance/Logger/Log_Macros.h"
@@ -88,7 +88,7 @@ namespace DAnCE
           {
             DANCE_DEBUG (DANCE_LOG_MAJOR_DEBUG_INFO,
                          (LM_DEBUG, DLINFO
-                          ACE_TEXT ("LocalityManager_i::configure - ")
+                          ACE_TEXT ("LocalityManager_i::init - ")
                           ACE_TEXT ("Using provided spawn delay %u\n"),
                           this->spawn_delay_));
           }
@@ -125,6 +125,7 @@ namespace DAnCE
       {
         DANCE_ERROR (DANCE_LOG_MAJOR_DEBUG_INFO,
                      (LM_WARNING, DLINFO
+                      ACE_TEXT ("LocalityManager_i::init - ")
                       ACE_TEXT ("Warning: No configuration properties\n")));
       }
   }
@@ -162,9 +163,9 @@ namespace DAnCE
          i < plan_.instance.length ();
          ++i)
       {
-        CORBA::ULong implRef = plan.instance[i].implementationRef;
+        CORBA::ULong const implRef = plan.instance[i].implementationRef;
 
-        const char  *instance_type =
+        const char *instance_type =
           Utility::get_instance_type (plan.implementation[implRef].execParameter);
 
         instance_handlers_[instance_type].push_back (i);
@@ -203,7 +204,7 @@ namespace DAnCE
       {
         DANCE_DEBUG (DANCE_LOG_EVENT_TRACE,
                      (LM_TRACE, DLINFO
-                      ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                      ACE_TEXT ("LocalityManager_i::install_instances - ")
                       ACE_TEXT ("Starting installation of %C type instances\n"),
                       i->c_str ()));
 
@@ -215,7 +216,7 @@ namespace DAnCE
           {
             DANCE_DEBUG (DANCE_LOG_EVENT_TRACE,
                          (LM_TRACE, DLINFO
-                          ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                          ACE_TEXT ("LocalityManager_i::install_instances - ")
                           ACE_TEXT ("Starting installation of instance %C\n"),
                           this->plan_.instance[*j].name.in ()));
 
@@ -241,7 +242,7 @@ namespace DAnCE
       {
         DANCE_ERROR (DANCE_LOG_ERROR,
                      (LM_ERROR, DLINFO
-                      ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                      ACE_TEXT ("LocalityManager_i::install_instances - ")
                       ACE_TEXT ("Timed out while waiting on completion of scheduler\n")));
       }
 
@@ -254,7 +255,7 @@ namespace DAnCE
       {
         DANCE_ERROR (DANCE_LOG_ERROR,
                      (LM_WARNING, DLINFO
-                      ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                      ACE_TEXT ("LocalityManager_i::install_instances - ")
                       ACE_TEXT ("Received only %u completed events, expected %u\n"),
                       dispatched,
                       completed_events.size ()));
@@ -269,7 +270,7 @@ namespace DAnCE
           {
             DANCE_ERROR (DANCE_LOG_ERROR,
                          (LM_ERROR, DLINFO
-                          ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                          ACE_TEXT ("LocalityManager_i::install_instances - ")
                           ACE_TEXT ("Failed to get future value for current instance\n")));
             continue;
           }
@@ -287,7 +288,7 @@ namespace DAnCE
           {
             DANCE_ERROR (DANCE_LOG_TERMINAL_ERROR,
                          (LM_ERROR, DLINFO
-                          ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                          ACE_TEXT ("LocalityManager_i::install_instances - ")
                           ACE_TEXT ("Error: Unknown exception propagated\n")));
             throw ::Deployment::StartError (event.id_.c_str (),
                                             "Unknown exception");
@@ -295,7 +296,7 @@ namespace DAnCE
 
         DANCE_DEBUG (DANCE_LOG_MAJOR_EVENT,
                      (LM_INFO, DLINFO
-                      ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                      ACE_TEXT ("LocalityManager_i::install_instances - ")
                       ACE_TEXT ("Instance <%C> successfully deployed\n"),
                       event.id_.c_str ()));
 
@@ -375,7 +376,7 @@ namespace DAnCE
       {
         DANCE_ERROR (DANCE_LOG_ERROR,
                      (LM_ERROR, DLINFO
-                      ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                      ACE_TEXT ("LocalityManager_i::collect_references - ")
                       ACE_TEXT ("Timed out while waiting on completion of scheduler\n")));
       }
 
@@ -388,7 +389,7 @@ namespace DAnCE
       {
         DANCE_ERROR (DANCE_LOG_ERROR,
                      (LM_WARNING, DLINFO
-                      ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                      ACE_TEXT ("LocalityManager_i::collect_references - ")
                       ACE_TEXT ("Received only %u completed events, expected %u\n"),
                       dispatched,
                       completed_events.size ()));
@@ -403,7 +404,7 @@ namespace DAnCE
           {
             DANCE_ERROR (DANCE_LOG_ERROR,
                          (LM_ERROR, DLINFO
-                          ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                          ACE_TEXT ("LocalityManager_i::collect_references - ")
                           ACE_TEXT ("Failed to get future value for current instance\n")));
             continue;
           }
@@ -416,7 +417,7 @@ namespace DAnCE
           {
             DANCE_ERROR (DANCE_LOG_ERROR,
                          (LM_ERROR, DLINFO
-                          ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                          ACE_TEXT ("LocalityManager_i::collect_references - ")
                           ACE_TEXT ("Error: Unknown exception propagated\n")));
             throw ::Deployment::StartError (event.id_.c_str (),
                                             "Unknown exception");
@@ -430,7 +431,7 @@ namespace DAnCE
           {
             DANCE_DEBUG (DANCE_LOG_MAJOR_DEBUG_INFO,
                          (LM_DEBUG, DLINFO
-                          ACE_TEXT ("LocalityManager_i::startLaunch - ")
+                          ACE_TEXT ("LocalityManager_i::collect_references - ")
                           ACE_TEXT ("No reference returned for connection <%C>\n"),
                           event.id_.c_str ()));
           }

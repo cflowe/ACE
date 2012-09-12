@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: IIOP_Profile.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: IIOP_Profile.cpp 96015 2012-08-08 15:31:24Z sma $
 
 #include "tao/IIOP_Profile.h"
 
@@ -299,8 +299,12 @@ TAO_IIOP_Profile::parse_string_i (const char *ior)
                          EINVAL),
                        CORBA::COMPLETED_NO);
         }
-      else
-        this->endpoint_.host_ = CORBA::string_dup (tmp_host);
+
+      this->endpoint_.host_ = CORBA::string_dup (tmp_host);
+      const char* csv = this->orb_core()->orb_params()->preferred_interfaces();
+      bool const enforce =
+        this->orb_core()->orb_params()->enforce_pref_interfaces();
+      this->endpoint_.preferred_interfaces (csv, enforce, *this);
     }
 
   TAO::ObjectKey ok;

@@ -19,9 +19,9 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  MCast.cpp \
   Consumer.cpp \
   AddrServer.cpp \
+  MCast.cpp \
   Supplier.cpp
 
 #----------------------------------------------------------------------------

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: SimpleCode_Idl SimpleCode_Client SimpleCode_Server
+all: SimpleCode_Idl SimpleCode_Server SimpleCode_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SimpleCode_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SimpleCode_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SimpleCode_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SimpleCode_Client $(@)
 
 .PHONY: SimpleCode_Idl
 SimpleCode_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SimpleCode_Idl all
 
-.PHONY: SimpleCode_Client
-SimpleCode_Client: SimpleCode_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SimpleCode_Client all
-
 .PHONY: SimpleCode_Server
-SimpleCode_Server: SimpleCode_Idl SimpleCode_Client
+SimpleCode_Server: SimpleCode_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SimpleCode_Server all
+
+.PHONY: SimpleCode_Client
+SimpleCode_Client: SimpleCode_Idl SimpleCode_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SimpleCode_Client all
 
 project_name_list:
 	@echo SimpleCode_Client

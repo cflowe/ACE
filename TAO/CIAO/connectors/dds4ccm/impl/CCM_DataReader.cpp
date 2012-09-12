@@ -1,4 +1,4 @@
-// $Id: CCM_DataReader.cpp 94802 2011-10-20 09:46:10Z mcorino $
+// $Id: CCM_DataReader.cpp 95989 2012-07-31 12:40:59Z johnnyw $
 
 #include "CCM_DataReader.h"
 #include "dds4ccm/impl/logger/Log_Macros.h"
@@ -172,6 +172,7 @@ CIAO::DDS4CCM::CCM_DataReader::get_matched_publications (
   return this->dds_entity ()->get_matched_publications (publication_handles);
 }
 
+#if !defined (DDS_HAS_MINIMUM_BIT)
 ::DDS::ReturnCode_t
 CIAO::DDS4CCM::CCM_DataReader::get_matched_publication_data (
   ::DDS::PublicationBuiltinTopicData & publication_data,
@@ -180,7 +181,7 @@ CIAO::DDS4CCM::CCM_DataReader::get_matched_publication_data (
   return this->dds_entity ()->get_matched_publication_data (publication_data,
                                                             publication_handle);
 }
-
+#endif
 
 void
 CIAO::DDS4CCM::CCM_DataReader::set_dds_entity (::DDS::DataReader_ptr dr)

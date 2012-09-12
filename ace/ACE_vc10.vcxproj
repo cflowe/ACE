@@ -531,6 +531,8 @@
     </ClCompile>
     <ClCompile Include="Monitor_Size.cpp">
     </ClCompile>
+    <ClCompile Include="Monotonic_Time_Policy.cpp">
+    </ClCompile>
     <ClCompile Include="Msg_WFMO_Reactor.cpp">
     </ClCompile>
     <ClCompile Include="Multihomed_INET_Addr.cpp">
@@ -1317,6 +1319,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Time_Value_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Timeprobe_T.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -1678,6 +1686,7 @@
     <ClInclude Include="Monitor_Control_Types.h" />
     <ClInclude Include="Monitor_Point_Registry.h" />
     <ClInclude Include="Monitor_Size.h" />
+    <ClInclude Include="Monotonic_Time_Policy.h" />
     <ClInclude Include="Msg_WFMO_Reactor.h" />
     <ClInclude Include="Multihomed_INET_Addr.h" />
     <ClInclude Include="Mutex.h" />
@@ -1961,6 +1970,7 @@
     <ClInclude Include="Time_Policy.h" />
     <ClInclude Include="Time_Policy_T.h" />
     <ClInclude Include="Time_Value.h" />
+    <ClInclude Include="Time_Value_T.h" />
     <ClInclude Include="Timeprobe.h" />
     <ClInclude Include="Timeprobe_T.h" />
     <ClInclude Include="Timer_Hash.h" />
@@ -2305,6 +2315,7 @@
     <None Include="MMAP_Memory_Pool.inl" />
     <None Include="Module.inl" />
     <None Include="Monitor_Base.inl" />
+    <None Include="Monotonic_Time_Policy.inl" />
     <None Include="Msg_WFMO_Reactor.inl" />
     <None Include="Multihomed_INET_Addr.inl" />
     <None Include="Mutex.inl" />
@@ -2432,6 +2443,7 @@
     <None Include="Time_Policy.inl" />
     <None Include="Time_Policy_T.inl" />
     <None Include="Time_Value.inl" />
+    <None Include="Time_Value_T.inl" />
     <None Include="Timeprobe.inl" />
     <None Include="Timer_Queue_Adapters.inl" />
     <None Include="Timer_Queue_Iterator.inl" />

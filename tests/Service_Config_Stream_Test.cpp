@@ -1,4 +1,4 @@
-// $Id: Service_Config_Stream_Test.cpp 91671 2010-09-08 18:39:23Z johnnyw $
+// $Id: Service_Config_Stream_Test.cpp 96098 2012-08-24 10:28:27Z johnnyw $
 
 // ============================================================================
 //
@@ -69,14 +69,15 @@ public:
   }
 };
 
-class Decrypter : public ACE_Service_Object, public ACE_Module<ACE_SYNCH>
+class Decrypter : public ACE_Service_Object, public ACE_Module<ACE_SYNCH, ACE_System_Time_Policy>
 {
 public:
   Decrypter ()
-    : ACE_Module<ACE_SYNCH> (ACE_TEXT ("Decrypter"),
-                             &writer_, &reader_,
-                             0,
-                             M_DELETE_NONE) // Tasks are members; don't delete
+    : ACE_Module<ACE_SYNCH, ACE_System_Time_Policy> (
+        ACE_TEXT ("Decrypter"),
+        &writer_, &reader_,
+        0,
+        M_DELETE_NONE) // Tasks are members; don't delete
   {}
 
 private:

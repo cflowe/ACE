@@ -1,4 +1,4 @@
-// $Id: Supplier_Client.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: Supplier_Client.cpp 96056 2012-08-15 14:31:20Z sma $
 
 #include "Supplier_Client.h"
 
@@ -127,7 +127,8 @@ TAO_Notify_ThreadPool_Supplier_Client::create_ec (void)
   if (this->ec_thread_count_)
     {
       NotifyExt::ThreadPoolParams tp_params = { NotifyExt::CLIENT_PROPAGATED, 0,
-                                                0, this->ec_thread_count_, 0, 0, 0, 0, 0 };
+                                                0, static_cast<CORBA::ULong> (this->ec_thread_count_),
+                                                0, 0, 0, 0, 0 };
 
       CosNotification::QoSProperties qos (1);
       qos.length (1);

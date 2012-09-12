@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: CDR.inl 95950 2012-07-20 17:39:20Z mitza $
+// $Id: CDR.inl 96033 2012-08-12 18:08:00Z johnnyw $
 
 #include "tao/SystemException.h"
 
@@ -593,8 +593,7 @@ ACE_INLINE CORBA::Boolean operator>> (TAO_InputCDR &is,
 ACE_INLINE CORBA::Boolean operator>> (TAO_InputCDR &is,
                                       TAO_InputCDR::to_std_string x)
 {
-  CORBA::Boolean const marshal_flag =
-    is >> x.val_;
+  CORBA::Boolean const marshal_flag = is >> x.val_;
   if (marshal_flag && x.bound_ != 0 && x.val_.size () > x.bound_)
     {
       throw ::CORBA::BAD_PARAM ();
@@ -602,7 +601,7 @@ ACE_INLINE CORBA::Boolean operator>> (TAO_InputCDR &is,
   return marshal_flag;
 }
 
-#if !defined(ACE_LACKS_STD_WSTRING) && defined (ACE_HAS_WCHAR)
+#if !defined(ACE_LACKS_STD_WSTRING)
 ACE_INLINE CORBA::Boolean operator>> (TAO_InputCDR &is,
                                       std::wstring &x)
 {
@@ -616,8 +615,7 @@ ACE_INLINE CORBA::Boolean operator>> (TAO_InputCDR &is,
 ACE_INLINE CORBA::Boolean operator>> (TAO_InputCDR &is,
                                       TAO_InputCDR::to_std_wstring x)
 {
-  CORBA::Boolean const marshal_flag =
-    is >> x.val_;
+  CORBA::Boolean const marshal_flag = is >> x.val_;
   if (marshal_flag && x.bound_ != 0 && x.val_.size () > x.bound_)
     {
       throw ::CORBA::BAD_PARAM ();

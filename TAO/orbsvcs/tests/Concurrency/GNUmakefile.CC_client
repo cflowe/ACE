@@ -19,13 +19,13 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  CC_naming_service.cpp \
-  CC_command.cpp \
-  lex.CC_command.cpp \
-  CC_command.tab.cpp \
   CC_client.cpp \
+  CC_command.cpp \
+  CC_naming_service.cpp \
+  CC_command.tab.cpp \
   CC_tests.cpp \
-  CC_test_utils.cpp
+  CC_test_utils.cpp \
+  lex.CC_command.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

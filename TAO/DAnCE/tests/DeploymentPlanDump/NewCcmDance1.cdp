@@ -1,4 +1,4 @@
-<!-- $Id: NewCcmDance1.cdp 91817 2010-09-17 08:37:42Z msmit $ -->
+<!-- $Id: NewCcmDance1.cdp 96093 2012-08-22 10:55:32Z sma $ -->
 <Deployment:DeploymentPlan
   xmlns:Deployment="http://www.omg.org/Deployment"
   xmlns:xmi="http://www.omg.org/XMI"
@@ -39,7 +39,7 @@
           <kind>tk_enum</kind>
           <enum>
             <name>ComponentKindValue</name>
-            <typeId>IDL:thalesgroup.com/CdmwDeployment/ComponentKindValue:1.0</typeId>
+            <typeId>IDL:cardamom.eu/CdmwDeployment/ComponentKindValue:1.0</typeId>
             <member>SERVICE</member>
             <member>SESSION</member>
             <member>PROCESS</member>
@@ -61,7 +61,7 @@
           <kind>tk_enum</kind>
           <enum>
             <name>ServantLifeTimeValue</name>
-            <typeId>IDL:thalesgroup.com/CdmwDeployment/ServantLifetimeValue:1.0</typeId>
+            <typeId>IDL:cardamom.eu/CdmwDeployment/ServantLifetimeValue:1.0</typeId>
             <member>COMPONENT_LIFETIME</member>
             <member>METHOD_LIFETIME</member>
             <member>TRANSACTION_LIFETIME</member>
@@ -82,7 +82,7 @@
           <kind>tk_enum</kind>
           <enum>
             <name>ThreadingPolicyValue</name>
-            <typeId>IDL:thalesgroup.com/CdmwDeployment/ThreadingPolicyValue:1.0</typeId>
+            <typeId>IDL:cardamom.eu/CdmwDeployment/ThreadingPolicyValue:1.0</typeId>
             <member>SERIALIZE</member>
             <member>MULTITHREAD</member>
           </enum>
@@ -130,7 +130,7 @@
               <kind>tk_struct</kind>
               <struct>
                 <name>ValuetypeFactoryDescription</name>
-                <typeId>IDL:thalesgroup.com/CdmwDeployment/ValuetypeFactoryDescription:1.0</typeId>
+                <typeId>IDL:cardamom.eu/CdmwDeployment/ValuetypeFactoryDescription:1.0</typeId>
                 <member>
                   <name>repid</name>
                   <type>
@@ -211,7 +211,7 @@
           <kind>tk_enum</kind>
           <enum>
             <name>ComponentKindValue</name>
-            <typeId>IDL:thalesgroup.com/CdmwDeployment/ComponentKindValue:1.0</typeId>
+            <typeId>IDL:cardamom.eu/CdmwDeployment/ComponentKindValue:1.0</typeId>
             <member>SERVICE</member>
             <member>SESSION</member>
             <member>PROCESS</member>
@@ -233,7 +233,7 @@
           <kind>tk_enum</kind>
           <enum>
             <name>ServantLifeTimeValue</name>
-            <typeId>IDL:thalesgroup.com/CdmwDeployment/ServantLifetimeValue:1.0</typeId>
+            <typeId>IDL:cardamom.eu/CdmwDeployment/ServantLifetimeValue:1.0</typeId>
             <member>COMPONENT_LIFETIME</member>
             <member>METHOD_LIFETIME</member>
             <member>TRANSACTION_LIFETIME</member>
@@ -254,7 +254,7 @@
           <kind>tk_enum</kind>
           <enum>
             <name>ThreadingPolicyValue</name>
-            <typeId>IDL:thalesgroup.com/CdmwDeployment/ThreadingPolicyValue:1.0</typeId>
+            <typeId>IDL:cardamom.eu/CdmwDeployment/ThreadingPolicyValue:1.0</typeId>
             <member>SERIALIZE</member>
             <member>MULTITHREAD</member>
           </enum>
@@ -302,7 +302,7 @@
               <kind>tk_struct</kind>
               <struct>
                 <name>ValuetypeFactoryDescription</name>
-                <typeId>IDL:thalesgroup.com/CdmwDeployment/ValuetypeFactoryDescription:1.0</typeId>
+                <typeId>IDL:cardamom.eu/CdmwDeployment/ValuetypeFactoryDescription:1.0</typeId>
                 <member>
                   <name>repid</name>
                   <type>
@@ -382,7 +382,7 @@
           <kind>tk_enum</kind>
           <enum>
             <name>ComponentKindValue</name>
-            <typeId>IDL:thalesgroup.com/CdmwDeployment/ComponentKindValue:1.0</typeId>
+            <typeId>IDL:cardamom.eu/CdmwDeployment/ComponentKindValue:1.0</typeId>
             <member>SERVICE</member>
             <member>SESSION</member>
             <member>PROCESS</member>
@@ -404,7 +404,7 @@
           <kind>tk_enum</kind>
           <enum>
             <name>ServantLifeTimeValue</name>
-            <typeId>IDL:thalesgroup.com/CdmwDeployment/ServantLifetimeValue:1.0</typeId>
+            <typeId>IDL:cardamom.eu/CdmwDeployment/ServantLifetimeValue:1.0</typeId>
             <member>COMPONENT_LIFETIME</member>
             <member>METHOD_LIFETIME</member>
             <member>TRANSACTION_LIFETIME</member>
@@ -425,7 +425,7 @@
           <kind>tk_enum</kind>
           <enum>
             <name>ThreadingPolicyValue</name>
-            <typeId>IDL:thalesgroup.com/CdmwDeployment/ThreadingPolicyValue:1.0</typeId>
+            <typeId>IDL:cardamom.eu/CdmwDeployment/ThreadingPolicyValue:1.0</typeId>
             <member>SERIALIZE</member>
             <member>MULTITHREAD</member>
           </enum>
@@ -473,7 +473,7 @@
               <kind>tk_struct</kind>
               <struct>
                 <name>ValuetypeFactoryDescription</name>
-                <typeId>IDL:thalesgroup.com/CdmwDeployment/ValuetypeFactoryDescription:1.0</typeId>
+                <typeId>IDL:cardamom.eu/CdmwDeployment/ValuetypeFactoryDescription:1.0</typeId>
                 <member>
                   <name>repid</name>
                   <type>

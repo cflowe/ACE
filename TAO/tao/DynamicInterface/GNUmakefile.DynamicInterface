@@ -27,20 +27,20 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
+  DII_Reply_Dispatcher.cpp \
+  Request.cpp \
+  Dynamic_Implementation.cpp \
+  Unknown_User_Exception.cpp \
+  Context.cpp \
+  DII_Invocation_Adapter.cpp \
+  ExceptionList.cpp \
   DII_Invocation.cpp \
   DII_Reply_Handler.cpp \
   Dynamic_Adapter_Impl.cpp \
-  Server_Request.cpp \
   DII_Arguments_Converter_Impl.cpp \
-  Dynamic_Implementation.cpp \
-  Request.cpp \
-  DII_Invocation_Adapter.cpp \
-  DII_Arguments.cpp \
+  Server_Request.cpp \
   AMH_DSI_Response_Handler.cpp \
-  ExceptionList.cpp \
-  Unknown_User_Exception.cpp \
-  Context.cpp \
-  DII_Reply_Dispatcher.cpp
+  DII_Arguments.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -270,8 +270,8 @@ endif
 #Server_Request.inl
 #Context.inl
 #ExceptionList.inl
-#DII_Reply_Handler.inl
 #Request.inl
+#DII_Reply_Handler.inl
 #AMH_DSI_Response_Handler.inl
 #
 #resource_files:
@@ -288,8 +288,8 @@ endif
 #Unknown_User_Exception.h
 #DII_Arguments_Converter_Impl.h
 #DII_Reply_Dispatcher.h
-#DII_Reply_Handler.h
 #Request.h
+#DII_Reply_Handler.h
 #AMH_DSI_Response_Handler.h
 #Dynamic_Adapter_Impl.h
 #dynamicinterface_export.h
@@ -299,20 +299,20 @@ endif
 #TAO_DynamicInterface.pc.in
 #
 #source_files:
+#DII_Reply_Dispatcher.cpp
+#Request.cpp
+#Dynamic_Implementation.cpp
+#Unknown_User_Exception.cpp
+#Context.cpp
+#DII_Invocation_Adapter.cpp
+#ExceptionList.cpp
 #DII_Invocation.cpp
 #DII_Reply_Handler.cpp
 #Dynamic_Adapter_Impl.cpp
-#Server_Request.cpp
 #DII_Arguments_Converter_Impl.cpp
-#Dynamic_Implementation.cpp
-#Request.cpp
-#DII_Invocation_Adapter.cpp
-#DII_Arguments.cpp
+#Server_Request.cpp
 #AMH_DSI_Response_Handler.cpp
-#ExceptionList.cpp
-#Unknown_User_Exception.cpp
-#Context.cpp
-#DII_Reply_Dispatcher.cpp
+#DII_Arguments.cpp
 #
 #lib_output:
 #../../../lib TAO_DynamicInterface

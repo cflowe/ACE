@@ -1,5 +1,5 @@
 /* -*- C++ -*- */
-// $Id: config-win32-common.h 95740 2012-05-12 11:03:20Z johnnyw $
+// $Id: config-win32-common.h 96094 2012-08-22 11:51:11Z johnnyw $
 
 
 #ifndef ACE_CONFIG_WIN32_COMMON_H
@@ -246,6 +246,10 @@
 #define ACE_LACKS_REWINDDIR
 #define ACE_LACKS_SEEKDIR
 #define ACE_LACKS_TELLDIR
+
+#define ACE_LACKS_CLOCKID_T
+#define ACE_LACKS_CLOCK_REALTIME
+#define ACE_LACKS_CLOCK_MONOTONIC
 
 /* LACKS gid/pid/sid/uid facilities */
 #define ACE_LACKS_GETPGID

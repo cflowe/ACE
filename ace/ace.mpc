@@ -1,5 +1,5 @@
 //  -*- MPC -*- now wouldn't this be cool...
-// $Id: ace.mpc 95922 2012-06-25 09:33:03Z johnnyw $
+// $Id: ace.mpc 96069 2012-08-16 18:48:59Z johnnyw $
 
 project(ACE) : ace_output, acedefaults, install, other, codecs, token, svcconf, uuid, filecache, versioned_namespace, pkgconfig, support_ostream {
   avoids       = ace_for_tao
@@ -131,6 +131,7 @@ project(ACE) : ace_output, acedefaults, install, other, codecs, token, svcconf, 
     Monitor_Size.cpp
     Monitor_Control_Types.cpp
     Monitor_Control_Action.cpp
+    Monotonic_Time_Policy.cpp
     Multihomed_INET_Addr.cpp
     Mutex.cpp
     Netlink_Addr.cpp
@@ -358,6 +359,7 @@ project(ACE) : ace_output, acedefaults, install, other, codecs, token, svcconf, 
     Test_and_Set.cpp
     Timeprobe_T.cpp
     Time_Policy_T.cpp
+    Time_Value_T.cpp
     Timer_Hash_T.cpp
     Timer_Heap_T.cpp
     Timer_List_T.cpp
@@ -385,6 +387,7 @@ project(ACE) : ace_output, acedefaults, install, other, codecs, token, svcconf, 
     Refcounted_Auto_Ptr.inl
     Reverse_Lock_T.inl
     TSS_T.inl
+    Time_Value_T.inl
   }
 
   Header_Files {
@@ -414,6 +417,7 @@ project(ACE) : ace_output, acedefaults, install, other, codecs, token, svcconf, 
     Metrics_Cache_T.h
     Memory_Pool.h
     Min_Max.h
+    Monotonic_Time_Policy.h
     Netlink_Addr.h
     Null_Barrier.h
     Null_Condition.h
@@ -444,6 +448,8 @@ project(ACE) : ace_output, acedefaults, install, other, codecs, token, svcconf, 
     Synch.h
     Synch_Traits.h
     TSS_T.h
+    Time_Policy.h
+    Time_Value_T.h
     Timer_Hash.h
     Timer_Heap.h
     Timer_List.h

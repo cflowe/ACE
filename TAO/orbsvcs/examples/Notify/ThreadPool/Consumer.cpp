@@ -1,4 +1,4 @@
-// $Id: Consumer.cpp 95746 2012-05-13 12:51:05Z johnnyw $
+// $Id: Consumer.cpp 96056 2012-08-15 14:31:20Z sma $
 
 #include "Consumer.h"
 
@@ -65,7 +65,8 @@ TAO_Notify_ThreadPool_Consumer::connect (void)
       NotifyExt::ConsumerAdmin_var admin_ext = NotifyExt::ConsumerAdmin::_narrow (this->admin_.in ());
 
       NotifyExt::ThreadPoolParams tp_params = { NotifyExt::CLIENT_PROPAGATED, 0,
-                                                0, this->proxy_supplier_thread_count_, 0, 0, 0, 0, 0 };
+                                                0, static_cast<CORBA::ULong> (this->proxy_supplier_thread_count_),
+                                                0, 0, 0, 0, 0 };
 
       CosNotification::QoSProperties qos (1);
       qos.length (1);

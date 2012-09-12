@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,16 +20,23 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: INet-target FTP_Simple_exec INet_SSL HTTPS_Simple_exec HTTP_Simple_exec
+all: HTBP-target INet-target FTP_Simple_exec INet_SSL HTTPS_Simple_exec HTTP_Simple_exec RMCast-target TMCast-target
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
+	$(KEEP_GOING)@cd HTBP && $(MAKE) -f GNUmakefile.HTBP $(@)
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.INet $(@)
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.FTP_Simple_exec $(@)
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.INet_SSL $(@)
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec $(@)
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.HTTP_Simple_exec $(@)
+	$(KEEP_GOING)@cd RMCast && $(MAKE) -f GNUmakefile.RMCast $(@)
+	$(KEEP_GOING)@cd TMCast && $(MAKE) -f GNUmakefile.TMCast $(@)
+
+.PHONY: HTBP-target
+HTBP-target:
+	$(KEEP_GOING)@cd HTBP && $(MAKE) -f GNUmakefile.HTBP all
 
 .PHONY: INet-target
 INet-target:
@@ -48,12 +55,23 @@ HTTPS_Simple_exec: INet-target INet_SSL
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec all
 
 .PHONY: HTTP_Simple_exec
-HTTP_Simple_exec: INet-target
+HTTP_Simple_exec: INet-target HTTPS_Simple_exec
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.HTTP_Simple_exec all
 
+.PHONY: RMCast-target
+RMCast-target:
+	$(KEEP_GOING)@cd RMCast && $(MAKE) -f GNUmakefile.RMCast all
+
+.PHONY: TMCast-target
+TMCast-target:
+	$(KEEP_GOING)@cd TMCast && $(MAKE) -f GNUmakefile.TMCast all
+
 project_name_list:
+	@echo HTBP-target
 	@echo FTP_Simple_exec
 	@echo HTTPS_Simple_exec
 	@echo HTTP_Simple_exec
 	@echo INet-target
 	@echo INet_SSL
+	@echo RMCast-target
+	@echo TMCast-target

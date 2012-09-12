@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: taobaseidldefaults.mpb 95491 2012-01-24 13:51:36Z johnnyw $
+// $Id: taobaseidldefaults.mpb 96008 2012-08-06 07:58:13Z johnnyw $
 
 project: build_files {
   // Set the idl compiler and flags as template values
@@ -17,15 +17,22 @@ project: build_files {
     command              = $(TAO_IDL)
     libpath              = $(ACE_ROOT)/lib
     inputext             = .idl
-    source_pre_extension = C
-    header_pre_extension = C
-    source_outputext     = .cpp, .cxx, .cc, .C
-    header_outputext     = .h, .hpp, .hxx, .hh
     keyword idlflags     = commandflags
+    header_outputext = .h, .hpp, .hxx, .hh
+
+    optional(source_pre_extension) {
+      commandflags(!-Scc) = C
+    }
+    optional(header_pre_extension) {
+      commandflags(!-Sch) = C
+    }
+    optional(source_outputext) {
+      commandflags(!-Scc && !-Ssc) = .cpp, .cxx, .cc, .C
+    }
 
     // Inline related options
     optional(inline_outputext) {
-      commandflags(!-SS && !-Ssi || !-Sci || -GT && !-SS && !-oS) += .inl, .i
+      commandflags(!-Sci) += .inl, .i
     }
     optional(inline_pre_extension) {
       commandflags(!-Sci) += C
@@ -38,11 +45,13 @@ project: build_files {
     optional(source_pre_extension) {
       commandflags(-GA && !-oA) += A
     }
+
+    // Header related options
     optional(header_outputext) {
-      commandflags(-SS && !-oS) += S
+      commandflags(-SS && !-oS && !-Ssh) += S
     }
     optional(header_pre_extension) {
-      commandflags(!-oS) += S
+      commandflags(!-oS && !-Ssh) += S
     }
 
     // Other

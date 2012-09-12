@@ -2,7 +2,7 @@
 /**
  *  @file    Bug_4055_Regression_Test.cpp
  *
- *  $Id: Bug_4055_Regression_Test.cpp 95927 2012-06-26 13:18:48Z johnnyw $
+ *  $Id: Bug_4055_Regression_Test.cpp 96070 2012-08-17 09:07:16Z mcorino $
  *
  *  @author Johnny Willemsen  (jwillemsen@remedy.nl)
  */
@@ -11,8 +11,10 @@
 #include "test_config.h"
 #include "ace/Reactor.h"
 #include "ace/Timer_Queue.h"
-#include "ace/Time_Value.h"
+#include "ace/Time_Value_T.h"
+#include "ace/Monotonic_Time_Policy.h"
 #include "ace/Condition_Thread_Mutex.h"
+#include "ace/Condition_Attributes.h"
 #include "ace/OS_NS_sys_time.h"
 #include "ace/High_Res_Timer.h"
 #include "ace/Get_Opt.h"
@@ -20,15 +22,17 @@
 #include "ace/Event_Handler_Handle_Timeout_Upcall.h"
 #include "ace/TP_Reactor.h"
 #include "ace/Task_T.h"
+#include "ace/Truncate.h"
 
-#if (defined (ACE_HAS_HI_RES_TIMER) || \
-     defined (ACE_HAS_AIX_HI_RES_TIMER) || \
-     defined (ACE_WIN32) || \
-     (defined (ghs) && defined (ACE_HAS_PENTIUM)) || \
-     ((defined (__GNUG__) || defined (__INTEL_COMPILER)) && !defined(ACE_VXWORKS) && defined (ACE_HAS_PENTIUM)) || \
-     (defined (linux) && defined (ACE_HAS_ALPHA_TIMER)) || \
-     (defined (ACE_HAS_POWERPC_TIMER) && (defined (ghs) || defined (__GNUG__))) || \
-     (defined (ACE_HAS_CLOCK_GETTIME) && defined (ACE_HAS_CLOCK_GETTIME_MONOTONIC)))
+# if defined (ACE_WIN32) || \
+     (defined (_POSIX_MONOTONIC_CLOCK) && !defined (ACE_LACKS_MONOTONIC_TIME)) || \
+     defined (ACE_HAS_CLOCK_GETTIME_MONOTONIC)
+
+# if defined (ACE_HAS_THREADS)
+
+#   if defined (ACE_WIN32)
+#     include "ace/Date_Time.h"
+#   endif
 
 // Create timer queue with hr support
 ACE_Timer_Queue *
@@ -48,7 +52,7 @@ create_timer_queue (void)
 class MyTask : public ACE_Task<ACE_MT_SYNCH>
 {
 public:
-  MyTask (ACE_Condition_Thread_Mutex& condition): my_reactor_ (0), condition_ (condition) {}
+  MyTask () : my_reactor_ (0) {}
 
   virtual ~MyTask () { stop (); }
 
@@ -64,7 +68,6 @@ private:
 
   ACE_SYNCH_RECURSIVE_MUTEX lock_;
   ACE_Reactor *my_reactor_;
-  ACE_Condition_Thread_Mutex& condition_;
 };
 
 ACE_Reactor*
@@ -201,15 +204,10 @@ bool TestHandler::trigger_in(const ACE_Time_Value &delay)
   return -1 != reactor_->schedule_timer (this, 0, delay, ACE_Time_Value (0));
 }
 
-int
-run_main (int , ACE_TCHAR *[])
+bool test_timer (ACE_Condition_Thread_Mutex& condition_, ACE_Time_Value& waittime, bool monotonic = false)
 {
-  ACE_START_TEST (ACE_TEXT ("Bug_4055_Regression_Test"));
-  int status = 0;
-
-  ACE_Thread_Mutex mutex_;
-  ACE_Condition_Thread_Mutex condition_ (mutex_);
-  MyTask task1 (condition_);
+  bool status = true;
+  MyTask task1;
   task1.create_reactor ();
   task1.start (1);
   TestHandler test_handler (task1.get_reactor ());
@@ -224,18 +222,29 @@ run_main (int , ACE_TCHAR *[])
   if (!test_handler.trigger_in (ACE_Time_Value (5, 0)))
     ACE_ERROR_RETURN ((LM_ERROR,
                         "(%P|%t) Unable to schedule trigger.\n"),
-                      1);
+                      false);
 
-  ACE_Time_Value waittime = ACE_OS::gettimeofday ();
-  //ACE_Time_Value waittime = ACE_High_Res_Timer::gettimeofday_hr();
   waittime += ACE_Time_Value (3,0);
 
-  // reset system clock 4 seconds backwords
-  timespec_t curts;
+  // reset system clock 4 seconds backwards
   ACE_Time_Value curtime = ACE_OS::gettimeofday ();
   curtime -= ACE_Time_Value (4, 0);
+# if defined (ACE_WIN32)
+  ACE_Date_Time curdt (curtime);
+  SYSTEMTIME sys_time;
+  sys_time.wDay = ACE_Utils::truncate_cast <WORD> (curdt.day ());
+  sys_time.wMonth = ACE_Utils::truncate_cast <WORD> (curdt.month ());
+  sys_time.wYear = ACE_Utils::truncate_cast <WORD> (curdt.year ());
+  sys_time.wHour = ACE_Utils::truncate_cast <WORD> (curdt.hour ());
+  sys_time.wMinute = ACE_Utils::truncate_cast <WORD> (curdt.minute ());
+  sys_time.wSecond = ACE_Utils::truncate_cast <WORD> (curdt.second ());
+  sys_time.wMilliseconds = ACE_Utils::truncate_cast <WORD> (curdt.microsec () / 1000);
+  if (!::SetLocalTime (&sys_time))
+# else
+  timespec_t curts;
   curts = curtime;
   if (ACE_OS::clock_settime (CLOCK_REALTIME, &curts) != 0)
+# endif
     {
       ACE_DEBUG((LM_INFO,
                   "(%P|%t) Unable to reset OS time. Insufficient privileges or not supported.\n"));
@@ -254,16 +263,47 @@ run_main (int , ACE_TCHAR *[])
 
       if (test_handler.timeout_triggered ())
         {
-          ACE_ERROR ((LM_ERROR, "(%P|%t) ERROR: timer handler shouldn't have "
-          "triggered, conditions are dependent on user time!\n"));
-          status = 1;
+          if (monotonic)
+            {
+              ACE_ERROR ((LM_ERROR, "(%P|%t) ERROR: timer handler shouldn't have "
+              "triggered because we used monotonic condition timing!\n"));
+              status = false;
+            }
+          else
+            ACE_DEBUG ((LM_INFO, "(%P|%t) timer handler "
+            "triggered because we used non-monotonic condition timing!\n"));
+        }
+      else
+        {
+          if (!monotonic)
+            {
+              ACE_ERROR ((LM_ERROR, "(%P|%t) ERROR: timer handler should have "
+              "triggered because we used non-monotonic condition timing!\n"));
+              status = false;
+            }
+          else
+            ACE_DEBUG ((LM_INFO, "(%P|%t) timer handler has not "
+            "triggered because we used monotonic condition timing!\n"));
         }
 
       // reset system clock to correct time
       curtime = ACE_OS::gettimeofday ();
       curtime += ACE_Time_Value (4, 0);
+# if defined (ACE_WIN32)
+      curdt.update (curtime);
+      SYSTEMTIME sys_time;
+      sys_time.wDay = ACE_Utils::truncate_cast <WORD> (curdt.day ());
+      sys_time.wMonth = ACE_Utils::truncate_cast <WORD> (curdt.month ());
+      sys_time.wYear = ACE_Utils::truncate_cast <WORD> (curdt.year ());
+      sys_time.wHour = ACE_Utils::truncate_cast <WORD> (curdt.hour ());
+      sys_time.wMinute = ACE_Utils::truncate_cast <WORD> (curdt.minute ());
+      sys_time.wSecond = ACE_Utils::truncate_cast <WORD> (curdt.second ());
+      sys_time.wMilliseconds = ACE_Utils::truncate_cast <WORD> (curdt.microsec () / 1000);
+      ::SetLocalTime (&sys_time);
+# else
       curts = curtime;
       ACE_OS::clock_settime (CLOCK_REALTIME, &curts);
+# endif
     }
 
   ACE_DEBUG((LM_INFO,
@@ -271,6 +311,42 @@ run_main (int , ACE_TCHAR *[])
   task1.stop ();
 
   ACE_Thread_Manager::instance ()->wait ();
+
+  return status;
+}
+# endif
+
+int
+run_main (int , ACE_TCHAR *[])
+{
+  ACE_START_TEST (ACE_TEXT ("Bug_4055_Regression_Test"));
+# if defined (ACE_HAS_THREADS)
+  int status = 1;
+
+  ACE_Thread_Mutex mutex_;
+  ACE_Condition_Thread_Mutex condition_ (mutex_);
+  ACE_Condition_Attributes_T<ACE_Monotonic_Time_Policy> monotonic_cond_attr_;
+  ACE_Condition_Thread_Mutex monotonic_condition_ (mutex_, monotonic_cond_attr_);
+
+  if (mutex_.acquire () != 0)
+  {
+    ACE_ERROR ((LM_ERROR, "(%P|%t) ERROR: Failed to acquire mutex.\n"));
+  }
+  else
+  {
+    ACE_Time_Value waittime;
+    waittime = waittime.now ();
+    if (test_timer (condition_, waittime))
+    {
+      ACE_Time_Value_T<ACE_Monotonic_Time_Policy> monotonic_waittime;
+      monotonic_waittime = monotonic_waittime.now ();
+      if (test_timer (monotonic_condition_, monotonic_waittime, true))
+        status = 0;
+    }
+  }
+# else
+  int status = 0;
+# endif
   ACE_END_TEST;
   return status;
 }

@@ -1,4 +1,4 @@
-// $Id: OS_NS_stdlib.cpp 94456 2011-09-08 17:54:04Z johnnyw $
+// $Id: OS_NS_stdlib.cpp 96017 2012-08-08 22:18:09Z mitza $
 
 #include "ace/OS_NS_stdlib.h"
 
@@ -842,7 +842,7 @@ ACE_OS::strtoll_emulation (const char *nptr,
       break;
     if (c >= base)
       break;
-    if (any < 0 || acc > cutoff || acc == cutoff && c > cutlim)
+    if (any < 0 || acc > cutoff || (acc == cutoff && c > cutlim))
       any = -1;
     else {
       any = 1;

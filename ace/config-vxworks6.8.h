@@ -1,5 +1,5 @@
 //* -*- C++ -*- */
-// $Id: config-vxworks6.8.h 95949 2012-07-20 17:38:29Z mitza $
+// $Id: config-vxworks6.8.h 96050 2012-08-14 22:22:54Z mitza $
 
 // The following configuration file is designed to work for VxWorks
 // 6.8 platforms using one of these compilers:
@@ -18,6 +18,10 @@
 
 #ifndef ACE_LACKS_RAND_R
 # define ACE_LACKS_RAND_R 1
+#endif
+
+#ifndef __RTP__
+# define ACE_LACKS_STD_WSTRING
 #endif
 
 #include /**/ "ace/post.h"

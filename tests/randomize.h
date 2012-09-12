@@ -4,7 +4,7 @@
 /**
  * @file randomize.h
  *
- * $Id: randomize.h 93586 2011-03-17 21:14:39Z olli $
+ * $Id: randomize.h 96018 2012-08-09 07:04:36Z johnnyw $
  *
  * Randomize the contents of an array.
  *
@@ -27,7 +27,7 @@ namespace
   /**
    * @class randomize_index
    *
-   * @brief Functor that randomoly swaps the order of two array
+   * @brief Functor that randomly swaps the order of two array
    *        elements.
    *
    * @internal Do not directly use this class.  Use the @c randomize()

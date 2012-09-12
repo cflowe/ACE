@@ -378,9 +378,6 @@
 				RelativePath="Alt_Resource_Factory.h">
 			</File>
 			<File
-				RelativePath="Time_Date.h">
-			</File>
-			<File
 				RelativePath="Time_Date_i.h">
 			</File>
 			<File

@@ -1,4 +1,4 @@
-// $Id: Thread_Manager.cpp 95587 2012-03-03 20:48:36Z johnnyw $
+// $Id: Thread_Manager.cpp 96067 2012-08-16 13:45:10Z mcorino $
 
 #include "ace/TSS_T.h"
 #include "ace/Thread_Manager.h"
@@ -371,6 +371,25 @@ ACE_Thread_Manager::ACE_Thread_Manager (size_t prealloc,
     , thread_desc_freelist_ (ACE_FREE_LIST_WITH_POOL,
                              prealloc, lwm, hwm, inc)
 {
+  ACE_TRACE ("ACE_Thread_Manager::ACE_Thread_Manager");
+}
+
+ACE_Thread_Manager::ACE_Thread_Manager (const ACE_Condition_Attributes &attributes,
+                                        size_t prealloc,
+                                        size_t lwm,
+                                        size_t inc,
+                                        size_t hwm)
+  : grp_id_ (1),
+    automatic_wait_ (1)
+#if defined (ACE_HAS_THREADS)
+    , zero_cond_ (lock_, attributes)
+#endif /* ACE_HAS_THREADS */
+    , thread_desc_freelist_ (ACE_FREE_LIST_WITH_POOL,
+                             prealloc, lwm, hwm, inc)
+{
+#if !defined (ACE_HAS_THREADS)
+  ACE_UNUSED_ARG (attributes);
+#endif /* ACE_HAS_THREADS */
   ACE_TRACE ("ACE_Thread_Manager::ACE_Thread_Manager");
 }
 
@@ -1608,13 +1627,16 @@ ACE_Thread_Manager::wait (const ACE_Time_Value *timeout,
 {
   ACE_TRACE ("ACE_Thread_Manager::wait");
 
-  ACE_Time_Value local_timeout;
+  ACE_Auto_Ptr<ACE_Time_Value> local_timeout;
   // Check to see if we're using absolute time or not.
   if (use_absolute_time == false && timeout != 0)
     {
-      local_timeout = *timeout;
-      local_timeout += ACE_OS::gettimeofday ();
-      timeout = &local_timeout;
+      // create time value duplicate (preserves time policy)
+      local_timeout.reset (timeout->duplicate ());
+      // convert time value to absolute time
+      (*local_timeout) = local_timeout->to_absolute_time ();
+      // replace original time by abs time duplicate
+      timeout = local_timeout.get ();
     }
 
 #if !defined (ACE_HAS_VXTHREADS)

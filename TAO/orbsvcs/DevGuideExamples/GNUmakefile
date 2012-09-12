@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: OMG_Basic_Consumer OMG_Basic_Supplier OMG_SupplierSideEC_Consumer OMG_SupplierSideEC_Supplier OMG_TypedEC_Supplier OMG_TypedEC_Consumer RTEC_Basic_Consumer RTEC_Basic_Supplier RTEC_Federated_Consumer RTEC_Federated_Supplier RTEC_Filter_Consumer RTEC_Filter_Supplier RTEC_MCast_Federated__Dev_Consumer RTEC_MCast_Federated__Dev_Supplier ImplRepo_Basic_Idl ImplRepo_Basic_Client ImplRepo_Basic_Server ImplRepo_Idl ImplRepo_Client ImplRepo_Server ImplRepo_IORTable_Idl ImplRepo_IORTable_Client ImplRepo_IORTable_Server InterfaceRepo_Browser NamingService_Messenger_Idl NamingService_Messenger_Client NamingService_Messenger_Server Naming_Client_Idl Naming_Client_Client Naming_Client_Server Naming_Context_Ext_Idl Naming_Context_Ext_Server Naming_Context_Ext_Client Naming_Server_Messenger Corbaloc_Messenger_Idl Corbaloc_Messenger_Server Corbaloc_Messenger_Client Corbaname_Messenger_Idl Corbaname_Messenger_Server Corbaname_Messenger_Client EventSequence_Idl EventSequence_Server EventSequence_Client EventSequence_Consumer Filtering_Idl Filtering_Server Filtering_Client Filtering_Consumer NotifyServiceMessenger_Idl NotifyServiceMessenger_Client NotifyServiceMessenger_Server NotifyServiceMessenger_Consumer OfferSubscriptions_Idl OfferSubscriptions_Client OfferSubscriptions_Consumer OfferSubscriptions_Server QoSProperties_Idl QoSProperties_Server QoSProperties_Client QoSProperties_Consumer RTNotify_Idl RTNotify_Server RTNotify_Client RTNotify_Consumer SupplierSideNC_Idl SupplierSideNC_Consumer SupplierSideNC_Client SupplierSideNC_Server PICurrent_NameService_Idl PICurrent_NameService_Client PICurrent_NameService_Server ParticipatingApp_Server ParticipatingApp_Client PolicyControllingApp_Server PolicyControllingApp_Client SecurityUnawareApp_Server SecurityUnawareApp_Client Notify_Consumer Notify_Supplier
+all: OMG_Basic_Consumer OMG_Basic_Supplier OMG_SupplierSideEC_Consumer OMG_SupplierSideEC_Supplier OMG_TypedEC_Supplier OMG_TypedEC_Consumer RTEC_Basic_Consumer RTEC_Basic_Supplier RTEC_Federated_Consumer RTEC_Federated_Supplier RTEC_Filter_Consumer RTEC_Filter_Supplier RTEC_MCast_Federated__Dev_Consumer RTEC_MCast_Federated__Dev_Supplier ImplRepo_Basic_Idl ImplRepo_Basic_Server ImplRepo_Basic_Client ImplRepo_Idl ImplRepo_Server ImplRepo_Client ImplRepo_IORTable_Idl ImplRepo_IORTable_Client ImplRepo_IORTable_Server InterfaceRepo_Browser NamingService_Messenger_Idl NamingService_Messenger_Client NamingService_Messenger_Server Naming_Client_Idl Naming_Client_Client Naming_Client_Server Naming_Context_Ext_Idl Naming_Context_Ext_Server Naming_Context_Ext_Client Naming_Server_Messenger Corbaloc_Messenger_Idl Corbaloc_Messenger_Server Corbaloc_Messenger_Client Corbaname_Messenger_Idl Corbaname_Messenger_Client Corbaname_Messenger_Server EventSequence_Idl EventSequence_Client EventSequence_Server EventSequence_Consumer Filtering_Idl Filtering_Server Filtering_Client Filtering_Consumer NotifyServiceMessenger_Idl NotifyServiceMessenger_Client NotifyServiceMessenger_Server NotifyServiceMessenger_Consumer OfferSubscriptions_Idl OfferSubscriptions_Client OfferSubscriptions_Server OfferSubscriptions_Consumer QoSProperties_Idl QoSProperties_Server QoSProperties_Client QoSProperties_Consumer RTNotify_Idl RTNotify_Consumer RTNotify_Client RTNotify_Server SupplierSideNC_Idl SupplierSideNC_Client SupplierSideNC_Consumer SupplierSideNC_Server PICurrent_NameService_Idl PICurrent_NameService_Client PICurrent_NameService_Server ParticipatingApp_Server ParticipatingApp_Client PolicyControllingApp_Server PolicyControllingApp_Client SecurityUnawareApp_Server SecurityUnawareApp_Client Notify_Consumer Notify_Supplier
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -40,11 +40,11 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd EventServices/RTEC_MCast_Federated && $(MAKE) -f GNUmakefile.RTEC_MCast_Federated__Dev_Consumer $(@)
 	$(KEEP_GOING)@cd EventServices/RTEC_MCast_Federated && $(MAKE) -f GNUmakefile.RTEC_MCast_Federated__Dev_Supplier $(@)
 	$(KEEP_GOING)@cd ImplRepo/Basic && $(MAKE) -f GNUmakefile.ImplRepo_Basic_Idl $(@)
-	$(KEEP_GOING)@cd ImplRepo/Basic && $(MAKE) -f GNUmakefile.ImplRepo_Basic_Client $(@)
 	$(KEEP_GOING)@cd ImplRepo/Basic && $(MAKE) -f GNUmakefile.ImplRepo_Basic_Server $(@)
+	$(KEEP_GOING)@cd ImplRepo/Basic && $(MAKE) -f GNUmakefile.ImplRepo_Basic_Client $(@)
 	$(KEEP_GOING)@cd ImplRepo && $(MAKE) -f GNUmakefile.ImplRepo_Idl $(@)
-	$(KEEP_GOING)@cd ImplRepo && $(MAKE) -f GNUmakefile.ImplRepo_Client $(@)
 	$(KEEP_GOING)@cd ImplRepo && $(MAKE) -f GNUmakefile.ImplRepo_Server $(@)
+	$(KEEP_GOING)@cd ImplRepo && $(MAKE) -f GNUmakefile.ImplRepo_Client $(@)
 	$(KEEP_GOING)@cd ImplRepo/IORTable && $(MAKE) -f GNUmakefile.ImplRepo_IORTable_Idl $(@)
 	$(KEEP_GOING)@cd ImplRepo/IORTable && $(MAKE) -f GNUmakefile.ImplRepo_IORTable_Client $(@)
 	$(KEEP_GOING)@cd ImplRepo/IORTable && $(MAKE) -f GNUmakefile.ImplRepo_IORTable_Server $(@)
@@ -63,11 +63,11 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd NamingService/corbaloc_Messenger && $(MAKE) -f GNUmakefile.Corbaloc_Messenger_Server $(@)
 	$(KEEP_GOING)@cd NamingService/corbaloc_Messenger && $(MAKE) -f GNUmakefile.Corbaloc_Messenger_Client $(@)
 	$(KEEP_GOING)@cd NamingService/corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Idl $(@)
-	$(KEEP_GOING)@cd NamingService/corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Server $(@)
 	$(KEEP_GOING)@cd NamingService/corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Client $(@)
+	$(KEEP_GOING)@cd NamingService/corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Server $(@)
 	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Idl $(@)
-	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Server $(@)
 	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Client $(@)
+	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Server $(@)
 	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Consumer $(@)
 	$(KEEP_GOING)@cd NotifyService/Filtering && $(MAKE) -f GNUmakefile.Filtering_Idl $(@)
 	$(KEEP_GOING)@cd NotifyService/Filtering && $(MAKE) -f GNUmakefile.Filtering_Server $(@)
@@ -79,19 +79,19 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd NotifyService/Messenger && $(MAKE) -f GNUmakefile.NotifyServiceMessenger_Consumer $(@)
 	$(KEEP_GOING)@cd NotifyService/OfferSubscriptions && $(MAKE) -f GNUmakefile.OfferSubscriptions_Idl $(@)
 	$(KEEP_GOING)@cd NotifyService/OfferSubscriptions && $(MAKE) -f GNUmakefile.OfferSubscriptions_Client $(@)
-	$(KEEP_GOING)@cd NotifyService/OfferSubscriptions && $(MAKE) -f GNUmakefile.OfferSubscriptions_Consumer $(@)
 	$(KEEP_GOING)@cd NotifyService/OfferSubscriptions && $(MAKE) -f GNUmakefile.OfferSubscriptions_Server $(@)
+	$(KEEP_GOING)@cd NotifyService/OfferSubscriptions && $(MAKE) -f GNUmakefile.OfferSubscriptions_Consumer $(@)
 	$(KEEP_GOING)@cd NotifyService/QoSProperties && $(MAKE) -f GNUmakefile.QoSProperties_Idl $(@)
 	$(KEEP_GOING)@cd NotifyService/QoSProperties && $(MAKE) -f GNUmakefile.QoSProperties_Server $(@)
 	$(KEEP_GOING)@cd NotifyService/QoSProperties && $(MAKE) -f GNUmakefile.QoSProperties_Client $(@)
 	$(KEEP_GOING)@cd NotifyService/QoSProperties && $(MAKE) -f GNUmakefile.QoSProperties_Consumer $(@)
 	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Idl $(@)
-	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Server $(@)
-	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Client $(@)
 	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Consumer $(@)
+	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Client $(@)
+	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Server $(@)
 	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Idl $(@)
-	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Consumer $(@)
 	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Client $(@)
+	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Consumer $(@)
 	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Server $(@)
 	$(KEEP_GOING)@cd PortableInterceptors/PICurrent_NameService && $(MAKE) -f GNUmakefile.PICurrent_NameService_Idl $(@)
 	$(KEEP_GOING)@cd PortableInterceptors/PICurrent_NameService && $(MAKE) -f GNUmakefile.PICurrent_NameService_Client $(@)
@@ -165,25 +165,25 @@ RTEC_MCast_Federated__Dev_Supplier:
 ImplRepo_Basic_Idl:
 	$(KEEP_GOING)@cd ImplRepo/Basic && $(MAKE) -f GNUmakefile.ImplRepo_Basic_Idl all
 
-.PHONY: ImplRepo_Basic_Client
-ImplRepo_Basic_Client: ImplRepo_Basic_Idl
-	$(KEEP_GOING)@cd ImplRepo/Basic && $(MAKE) -f GNUmakefile.ImplRepo_Basic_Client all
-
 .PHONY: ImplRepo_Basic_Server
-ImplRepo_Basic_Server: ImplRepo_Basic_Idl ImplRepo_Basic_Client
+ImplRepo_Basic_Server: ImplRepo_Basic_Idl
 	$(KEEP_GOING)@cd ImplRepo/Basic && $(MAKE) -f GNUmakefile.ImplRepo_Basic_Server all
+
+.PHONY: ImplRepo_Basic_Client
+ImplRepo_Basic_Client: ImplRepo_Basic_Idl ImplRepo_Basic_Server
+	$(KEEP_GOING)@cd ImplRepo/Basic && $(MAKE) -f GNUmakefile.ImplRepo_Basic_Client all
 
 .PHONY: ImplRepo_Idl
 ImplRepo_Idl:
 	$(KEEP_GOING)@cd ImplRepo && $(MAKE) -f GNUmakefile.ImplRepo_Idl all
 
-.PHONY: ImplRepo_Client
-ImplRepo_Client: ImplRepo_Idl
-	$(KEEP_GOING)@cd ImplRepo && $(MAKE) -f GNUmakefile.ImplRepo_Client all
-
 .PHONY: ImplRepo_Server
-ImplRepo_Server: ImplRepo_Idl ImplRepo_Client
+ImplRepo_Server: ImplRepo_Idl
 	$(KEEP_GOING)@cd ImplRepo && $(MAKE) -f GNUmakefile.ImplRepo_Server all
+
+.PHONY: ImplRepo_Client
+ImplRepo_Client: ImplRepo_Idl ImplRepo_Server
+	$(KEEP_GOING)@cd ImplRepo && $(MAKE) -f GNUmakefile.ImplRepo_Client all
 
 .PHONY: ImplRepo_IORTable_Idl
 ImplRepo_IORTable_Idl:
@@ -257,28 +257,28 @@ Corbaloc_Messenger_Client: Corbaloc_Messenger_Idl Corbaloc_Messenger_Server
 Corbaname_Messenger_Idl:
 	$(KEEP_GOING)@cd NamingService/corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Idl all
 
-.PHONY: Corbaname_Messenger_Server
-Corbaname_Messenger_Server: Corbaname_Messenger_Idl
-	$(KEEP_GOING)@cd NamingService/corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Server all
-
 .PHONY: Corbaname_Messenger_Client
-Corbaname_Messenger_Client: Corbaname_Messenger_Idl Corbaname_Messenger_Server
+Corbaname_Messenger_Client: Corbaname_Messenger_Idl
 	$(KEEP_GOING)@cd NamingService/corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Client all
+
+.PHONY: Corbaname_Messenger_Server
+Corbaname_Messenger_Server: Corbaname_Messenger_Idl Corbaname_Messenger_Client
+	$(KEEP_GOING)@cd NamingService/corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Server all
 
 .PHONY: EventSequence_Idl
 EventSequence_Idl:
 	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Idl all
 
-.PHONY: EventSequence_Server
-EventSequence_Server: EventSequence_Idl
-	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Server all
-
 .PHONY: EventSequence_Client
-EventSequence_Client: EventSequence_Idl EventSequence_Server
+EventSequence_Client: EventSequence_Idl
 	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Client all
 
+.PHONY: EventSequence_Server
+EventSequence_Server: EventSequence_Idl EventSequence_Client
+	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Server all
+
 .PHONY: EventSequence_Consumer
-EventSequence_Consumer: EventSequence_Idl EventSequence_Server
+EventSequence_Consumer: EventSequence_Idl EventSequence_Client EventSequence_Server
 	$(KEEP_GOING)@cd NotifyService/EventSequence && $(MAKE) -f GNUmakefile.EventSequence_Consumer all
 
 .PHONY: Filtering_Idl
@@ -321,13 +321,13 @@ OfferSubscriptions_Idl:
 OfferSubscriptions_Client: OfferSubscriptions_Idl
 	$(KEEP_GOING)@cd NotifyService/OfferSubscriptions && $(MAKE) -f GNUmakefile.OfferSubscriptions_Client all
 
-.PHONY: OfferSubscriptions_Consumer
-OfferSubscriptions_Consumer: OfferSubscriptions_Idl OfferSubscriptions_Client
-	$(KEEP_GOING)@cd NotifyService/OfferSubscriptions && $(MAKE) -f GNUmakefile.OfferSubscriptions_Consumer all
-
 .PHONY: OfferSubscriptions_Server
-OfferSubscriptions_Server: OfferSubscriptions_Idl OfferSubscriptions_Client OfferSubscriptions_Consumer
+OfferSubscriptions_Server: OfferSubscriptions_Idl OfferSubscriptions_Client
 	$(KEEP_GOING)@cd NotifyService/OfferSubscriptions && $(MAKE) -f GNUmakefile.OfferSubscriptions_Server all
+
+.PHONY: OfferSubscriptions_Consumer
+OfferSubscriptions_Consumer: OfferSubscriptions_Idl OfferSubscriptions_Client OfferSubscriptions_Server
+	$(KEEP_GOING)@cd NotifyService/OfferSubscriptions && $(MAKE) -f GNUmakefile.OfferSubscriptions_Consumer all
 
 .PHONY: QoSProperties_Idl
 QoSProperties_Idl:
@@ -349,32 +349,32 @@ QoSProperties_Consumer: QoSProperties_Idl QoSProperties_Server
 RTNotify_Idl:
 	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Idl all
 
-.PHONY: RTNotify_Server
-RTNotify_Server: RTNotify_Idl
-	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Server all
+.PHONY: RTNotify_Consumer
+RTNotify_Consumer: RTNotify_Idl
+	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Consumer all
 
 .PHONY: RTNotify_Client
-RTNotify_Client: RTNotify_Idl RTNotify_Server
+RTNotify_Client: RTNotify_Idl RTNotify_Consumer
 	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Client all
 
-.PHONY: RTNotify_Consumer
-RTNotify_Consumer: RTNotify_Idl RTNotify_Server
-	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Consumer all
+.PHONY: RTNotify_Server
+RTNotify_Server: RTNotify_Idl RTNotify_Consumer
+	$(KEEP_GOING)@cd NotifyService/RTNotify && $(MAKE) -f GNUmakefile.RTNotify_Server all
 
 .PHONY: SupplierSideNC_Idl
 SupplierSideNC_Idl:
 	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Idl all
 
-.PHONY: SupplierSideNC_Consumer
-SupplierSideNC_Consumer: SupplierSideNC_Idl
-	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Consumer all
-
 .PHONY: SupplierSideNC_Client
-SupplierSideNC_Client: SupplierSideNC_Idl SupplierSideNC_Consumer
+SupplierSideNC_Client: SupplierSideNC_Idl
 	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Client all
 
+.PHONY: SupplierSideNC_Consumer
+SupplierSideNC_Consumer: SupplierSideNC_Idl SupplierSideNC_Client
+	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Consumer all
+
 .PHONY: SupplierSideNC_Server
-SupplierSideNC_Server: SupplierSideNC_Idl SupplierSideNC_Consumer
+SupplierSideNC_Server: SupplierSideNC_Idl SupplierSideNC_Client SupplierSideNC_Consumer
 	$(KEEP_GOING)@cd NotifyService/SupplierSideNC && $(MAKE) -f GNUmakefile.SupplierSideNC_Server all
 
 .PHONY: PICurrent_NameService_Idl

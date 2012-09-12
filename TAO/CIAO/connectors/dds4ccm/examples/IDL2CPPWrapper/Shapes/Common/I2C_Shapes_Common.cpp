@@ -1,4 +1,4 @@
-// $Id: I2C_Shapes_Common.cpp 94187 2011-06-14 08:46:50Z msmit $
+// $Id: I2C_Shapes_Common.cpp 96068 2012-08-16 18:32:26Z johnnyw $
 
 #include "I2C_Shapes_Common.h"
 
@@ -62,9 +62,9 @@ I2C_Shapes_Common::initialize (void)
 
   const char* typesupport_name = ShapeType_DDS_Traits::type_support::get_type_name ();
 
-  if (! ::CIAO::NDDS::DDS_TypeSupport_i::register_type (typesupport_name,
-                                                        this->factory_,
-                                                        this->participant_))
+  if (! ::CIAO::NDDS::DDS_TypeSupport_i::register_type (this->participant_,
+                                                        typesupport_name,
+                                                        this->factory_))
     {
       DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
           "I2C_Shapes_Common::initialize - Unable to register type factory\n"));

@@ -1,0 +1,18 @@
+// $Id: Hello.idl 96029 2012-08-10 14:01:17Z sma $
+
+module Test {
+    typedef sequence<octet> Octets;
+
+    const string ClientIDs =
+        "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    interface UIPMC_Object {
+        oneway void process (in Octets payload);
+    };
+
+    interface Hello {
+        UIPMC_Object get_object ();
+
+        oneway void shutdown ();
+    };
+};

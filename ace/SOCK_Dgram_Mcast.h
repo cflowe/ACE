@@ -4,7 +4,7 @@
 /**
  *  @file    SOCK_Dgram_Mcast.h
  *
- *  $Id: SOCK_Dgram_Mcast.h 95633 2012-03-22 16:38:18Z shuston $
+ *  $Id: SOCK_Dgram_Mcast.h 96014 2012-08-08 15:30:01Z sma $
  *
  *  @author Irfan Pyrali <irfan@cs.wustl.edu>
  *  @author Tim Harrison <harrison@cs.wustl.edu>
@@ -338,6 +338,14 @@ public:
 
   /// Declare the dynamic allocation hooks.
   ACE_ALLOC_HOOK_DECLARE;
+
+  /// Override write acessor for the constructor options (@see enum options above)
+  /// This class is typically default instantiated in a connection handler templated
+  /// framework so these cannot be specified on construction.
+  void opts (int opts);
+
+  /// Read acessor for the constructor options (@see enum options above)
+  int opts () const;
 
 private:
 

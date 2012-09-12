@@ -4,7 +4,7 @@
 /**
  *  @file     UIPMC_Mcast_Connection_Handler.h
  *
- *  $Id: UIPMC_Mcast_Connection_Handler.h 95793 2012-05-25 11:16:49Z sma $
+ *  $Id: UIPMC_Mcast_Connection_Handler.h 96029 2012-08-10 14:01:17Z sma $
  *
  *  @author Vadym Ridosh <vridosh@prismtech.com>
  */
@@ -21,15 +21,12 @@
 #pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-#include "orbsvcs/PortableGroup/UIPMC_Transport.h"
-
 #include "tao/Wait_Strategy.h"
 #include "tao/Connection_Handler.h"
 
 #include "ace/Acceptor.h"
 #include "ace/Reactor.h"
 #include "ace/SOCK_Dgram_Mcast.h"
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -94,20 +91,17 @@ public:
   int add_transport_to_cache (void);
 
   // UIPMC Additions - Begin
-  const ACE_INET_Addr &addr (void);
+  const ACE_INET_Addr &addr (void) const;
 
   void addr (const ACE_INET_Addr &addr);
 
-  const ACE_INET_Addr &local_addr (void);
+  const ACE_INET_Addr &local_addr (void) const;
 
   void local_addr (const ACE_INET_Addr &addr);
 
-  /// This is only to be able to use client and server
-  /// connection handlers in the same way in transport.
-  ssize_t send (const iovec iov[],
-                int n,
-                const ACE_Addr &addr,
-                int flags = 0) const;
+  /// Set this to listen on all interfaces
+  void listen_on_all(bool value);
+
   // UIPMC Additions - End
 
 protected:
@@ -120,6 +114,9 @@ protected:
   // This is always the local address for the connector
   ACE_INET_Addr local_addr_;
 
+  // Should we listen on all interfaces
+  bool listen_on_all_;
+
   // UIPMC Additions - End
 
   //@{
@@ -129,16 +126,7 @@ protected:
   virtual int release_os_resources (void);
   virtual int handle_write_ready (const ACE_Time_Value *timeout);
   //@}
-
 };
-
-// Transport for this handler.
-typedef TAO_UIPMC_Transport<TAO_UIPMC_Mcast_Connection_Handler>
-        UIPMC_MULTICAST_TRANSPORT;
-
-#if defined ACE_HAS_EXPLICIT_TEMPLATE_INSTANTIATION_EXPORT
-template class TAO_PortableGroup_Export TAO_UIPMC_Transport<TAO_UIPMC_Mcast_Connection_Handler>;
-#endif /* ACE_HAS_EXPLICIT_TEMPLATE_INSTANTIATION_EXPORT */
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

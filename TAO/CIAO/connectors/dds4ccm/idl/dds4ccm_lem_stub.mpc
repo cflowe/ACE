@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: dds4ccm_lem_stub.mpc 95459 2012-01-20 09:58:55Z johnnyw $
+// $Id: dds4ccm_lem_stub.mpc 95998 2012-08-02 14:00:17Z johnnyw $
 
 project (DDS4CCM_lem_gen) : install, dds4ccm, ciaoidldefaults {
   custom_only = 1
@@ -30,7 +30,7 @@ project (DDS4CCM_lem_gen) : install, dds4ccm, ciaoidldefaults {
 project (DDS4CCM_lem_stub) : install, dds4ccm, ccm_lem_stub, ccm_session_stub, \
                             ciaolib_with_idl, ciao_output, taolib, valuetype, \
                             ifr_client {
-  after += DDS4CCM_stub DDS4CCM_lem_gen CIAO_NDDS_lem_stub
+  after += DDS4CCM_stub DDS4CCM_lem_gen CIAO_NDDS_lem_stub CIAO_OpenDDS_Dcps_lem_stub
   libs  += DDS4CCM_stub
   includes += $(CIAO_ROOT)/connectors
   sharedname = DDS4CCM_lem_stub

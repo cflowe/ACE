@@ -1,7 +1,7 @@
 #!/bin/sh
-# $Id: diff-builds-and-group-fixed-tests-only.sh 95862 2012-06-11 17:08:25Z johnnyw $
+# $Id: diff-builds-and-group-fixed-tests-only.sh 95971 2012-07-26 09:35:59Z johnnyw $
 
-if test -z $1; then olddate=2012_05_19; else olddate=$1; fi
+if test -z $1; then olddate=2012_07_26; else olddate=$1; fi
 if test -z $2; then newdate=`date -u +%Y_%m_%d`; else newdate=$2; fi
 if test -z $3; then prefix=`date -u +%Y%m%d%a`; else prefix=$3; fi
 if test -z $ACE_ROOT; then ACE_ROOT=..; fi

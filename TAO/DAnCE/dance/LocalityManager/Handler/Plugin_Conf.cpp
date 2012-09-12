@@ -1,4 +1,4 @@
-// $Id: Plugin_Conf.cpp 95549 2012-02-23 11:59:40Z johnnyw $
+// $Id: Plugin_Conf.cpp 96027 2012-08-10 11:25:58Z johnnyw $
 
 #include "Plugin_Conf.h"
 #include "ace/Read_Buffer.h"
@@ -164,25 +164,19 @@ namespace DAnCE
                             DAnCE::DANCE_INSTALLATIONHANDLER) == 0)
           {
             CORBA::Any_var any;
-            inst_handler.install_instance (plan,
-                                           i,
-                                           any.out ());
+            inst_handler.install_instance (plan, i, any.out ());
           }
         else if (ACE_OS::strcmp (inst_type.in (),
                                  DAnCE::DANCE_DEPLOYMENTINTERCEPTOR) == 0)
           {
             CORBA::Any_var any;
-            interceptor_handler.install_instance (plan,
-                                                  i,
-                                                  any.out ());
+            interceptor_handler.install_instance (plan, i, any.out ());
           }
         else if (ACE_OS::strcmp (inst_type.in (),
                                  DAnCE::DANCE_CONFIGPLUGIN) == 0)
           {
             CORBA::Any_var any;
-            config_handler.install_instance (plan,
-                                             i,
-                                             any.out ());
+            config_handler.install_instance (plan, i, any.out ());
           }
       }
   }

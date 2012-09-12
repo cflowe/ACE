@@ -271,9 +271,9 @@ endif
 #DAnCE_Artifact_Installation_Handler.inl
 #
 #header_files:
+#Installation_Repository_Manager.h
 #Artifact_Installation_Impl.h
 #DAnCE_Artifact_Installation_Handler.h
-#Installation_Repository_Manager.h
 #Artifact_Installation_Handler_Svc.h
 #
 #source_files:

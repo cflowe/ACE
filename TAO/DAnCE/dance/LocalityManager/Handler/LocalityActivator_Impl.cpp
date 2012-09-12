@@ -1,4 +1,4 @@
-// $Id: LocalityActivator_Impl.cpp 93585 2011-03-17 15:07:56Z wotte $
+// $Id: LocalityActivator_Impl.cpp 96027 2012-08-10 11:25:58Z johnnyw $
 
 #include "LocalityActivator_Impl.h"
 #include "ace/Log_Msg.h"
@@ -44,7 +44,7 @@ namespace DAnCE
       const char * server_UUID,
       ::Deployment::Properties_out config)
     {
-      DANCE_TRACE("DAnCE_LocalityActivator_i::locaity_manager_callback");
+      DANCE_TRACE("DAnCE_LocalityActivator_i::locality_manager_callback");
 
       DANCE_DEBUG (DANCE_LOG_MINOR_EVENT,
                    (LM_TRACE, DLINFO
@@ -468,6 +468,7 @@ namespace DAnCE
 
           DANCE_ERROR (DANCE_LOG_ERROR,
                        (LM_ERROR, DLINFO
+                        ACE_TEXT ("DAnCE_LocalityActivator_i::spawn_locality_manager - ")
                         ACE_TEXT ("Failed to spawn a LocalityManager process\n")));
           throw Deployment::StartError ("locality_manager",
                                         "Failed to spawn process");

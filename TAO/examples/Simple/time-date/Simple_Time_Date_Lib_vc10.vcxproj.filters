@@ -50,9 +50,6 @@
     <ClInclude Include="Alt_Resource_Factory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Time_Date.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Time_Date_i.h">
       <Filter>Header Files</Filter>
     </ClInclude>

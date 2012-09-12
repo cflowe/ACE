@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 87621 2009-11-18 13:00:45Z dbudko $
+# $Id: run_test.pl 96105 2012-08-28 09:34:54Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -21,7 +21,7 @@ my $server = PerlACE::TestTarget::create_target (1) || die "Create target 1 fail
 my $client = PerlACE::TestTarget::create_target (2) || die "Create target 2 failed\n";
 
 my $iorbase = "server.ior";
-my $certificate = "cacert.pem";
+my $certificate = "ssl/ca.pem";
 my $server_conf = "server.conf";
 my $client_conf = "client.conf";
 my $server_iorfile = $server->LocalFile ($iorbase);

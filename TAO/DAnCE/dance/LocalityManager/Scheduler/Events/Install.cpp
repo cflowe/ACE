@@ -1,4 +1,4 @@
-// $Id: Install.cpp 93566 2011-03-17 03:20:28Z wotte $
+// $Id: Install.cpp 96026 2012-08-10 11:00:15Z johnnyw $
 #include "Install.h"
 
 #include "tao/AnyTypeCode/ExceptionA.h"
@@ -42,8 +42,7 @@ namespace DAnCE
   {
     DANCE_TRACE ("Install_Instance::invoke_pre_interceptor");
 
-    (*i)->pre_install (this->plan_,
-                                this->instanceRef_);
+    (*i)->pre_install (this->plan_, this->instanceRef_);
   }
 
 
@@ -92,7 +91,6 @@ namespace DAnCE
     this->instance_excep_ =
       DAnCE::Utility::create_any_from_exception (ex_tmp);
   }
-
 
   void
   Install_Instance::create_valid_result (Event_Result &result)

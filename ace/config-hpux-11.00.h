@@ -1,5 +1,5 @@
 /* -*- C++ -*- */
-// $Id: config-hpux-11.00.h 93530 2011-03-11 12:12:40Z olli $
+// $Id: config-hpux-11.00.h 96096 2012-08-23 12:34:02Z johnnyw $
 
 // The following configuration file is designed to work for HP
 // platforms running HP-UX 11.00 using aC++ or gcc (2.95 and up).
@@ -163,6 +163,9 @@
 // Platform supports POSIX.1b clock_gettime ()
 #define ACE_HAS_CLOCK_GETTIME
 #define ACE_HAS_CLOCK_SETTIME
+
+#define ACE_LACKS_CLOCK_MONOTONIC
+#define ACE_LACKS_MONOTONIC_TIME
 
 // Prototypes for both signal() and struct sigaction are consistent.
 #define ACE_HAS_CONSISTENT_SIGNAL_PROTOTYPES
@@ -418,6 +421,7 @@
 #  define ACE_HAS_RECURSIVE_MUTEXES
 #  define ACE_HAS_THREAD_SPECIFIC_STORAGE
 #  define ACE_LACKS_PTHREAD_ATTR_SETSTACK
+#  define ACE_LACKS_CONDATTR_SETCLOCK
 #endif /* ACE_HAS_THREADS */
 
 #define ACE_HAS_POSIX_SEM

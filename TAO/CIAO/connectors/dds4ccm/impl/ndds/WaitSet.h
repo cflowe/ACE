@@ -1,7 +1,7 @@
 /**
  * @author Marcel Smit (msmit@remedy.nl)
  *
- * $Id: WaitSet.h 95847 2012-06-08 13:04:51Z johnnyw $
+ * $Id: WaitSet.h 95974 2012-07-26 14:57:02Z johnnyw $
  *
  * Wrapper facade for NDDS.
  */
@@ -85,7 +85,7 @@ namespace CIAO
         * occurs and the lookup_handle exists, this method will return
         * the lookup_handle.
         *
-        * @todp We actually want this method to be in the DDS4CCM
+        * @todo We actually want this method to be in the DDS4CCM
         * connector but since we're not allowed to use RTI specific code
         * there it's located here.
         *

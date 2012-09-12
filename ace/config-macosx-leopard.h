@@ -1,5 +1,5 @@
 /* -*- C++ -*- */
-// $Id: config-macosx-leopard.h 93550 2011-03-15 21:26:56Z olli $
+// $Id: config-macosx-leopard.h 96085 2012-08-21 02:48:37Z mesnier_p $
 
 // This configuration file is designed to work with the MacOS X operating system.
 
@@ -204,6 +204,7 @@
 #define ACE_HAS_VOID_UNSETENV
 #endif
 
+#define ACE_LACKS_CONDATTR_SETCLOCK
 
 // dlcompat package (not part of base Darwin) is needed for dlopen().
 // You may download directly from sourceforge and install or use fink

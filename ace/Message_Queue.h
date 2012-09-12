@@ -4,7 +4,7 @@
 /**
  *  @file    Message_Queue.h
  *
- *  $Id: Message_Queue.h 95839 2012-06-07 10:13:33Z johnnyw $
+ *  $Id: Message_Queue.h 96061 2012-08-16 09:36:07Z mcorino $
  *
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  */
@@ -26,8 +26,8 @@ ACE_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Forward decls.
 class ACE_Notification_Strategy;
-template <ACE_SYNCH_DECL> class ACE_Message_Queue_Iterator;
-template <ACE_SYNCH_DECL> class ACE_Message_Queue_Reverse_Iterator;
+template <ACE_SYNCH_DECL, class TIME_POLICY> class ACE_Message_Queue_Iterator;
+template <ACE_SYNCH_DECL, class TIME_POLICY> class ACE_Message_Queue_Reverse_Iterator;
 
 /**
  * @class ACE_Message_Queue_Base

@@ -17,8 +17,8 @@ BIN_UNCHECKED    = test_io
 LIB_PREFIX      ?= lib
 
 FILES = \
-  test_io.cpp \
-  IO_Test.cpp
+  IO_Test.cpp \
+  test_io.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

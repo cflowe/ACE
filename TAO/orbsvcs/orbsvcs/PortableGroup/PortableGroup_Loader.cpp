@@ -1,8 +1,9 @@
-// $Id: PortableGroup_Loader.cpp 91677 2010-09-08 19:18:49Z johnnyw $
+// $Id: PortableGroup_Loader.cpp 96029 2012-08-10 14:01:17Z sma $
 
 #include "orbsvcs/PortableGroup/PortableGroup_Loader.h"
 #include "orbsvcs/PortableGroup/PG_Object_Adapter_Factory.h"
 #include "orbsvcs/PortableGroup/PortableGroup_ORBInitializer.h"
+#include "orbsvcs/PortableGroup/miop_resource.h"
 #include "ace/Dynamic_Service.h"
 #include "tao/ORB_Core.h"
 #include "tao/ORBInitializer_Registry.h"
@@ -51,6 +52,7 @@ int
 TAO_PortableGroup_Loader::Initializer (void)
 {
   ACE_Service_Config::process_directive (ace_svc_desc_TAO_PortableGroup_Loader);
+  ACE_Service_Config::process_directive (ace_svc_desc_TAO_MIOP_Resource_Factory);
 
   return -1;
 }

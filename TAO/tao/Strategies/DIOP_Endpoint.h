@@ -4,7 +4,7 @@
 /**
  *  @file     DIOP_Endpoint.h
  *
- *  $Id: DIOP_Endpoint.h 93359 2011-02-11 11:33:12Z mcorino $
+ *  $Id: DIOP_Endpoint.h 96015 2012-08-08 15:31:24Z sma $
  *
  *   DIOP implementation of PP Framework Endpoint interface.
  *
@@ -138,7 +138,7 @@ private:
   /// Flag to indicate if the address has been resolved and set.
   mutable bool object_addr_set_;
 
-  /// DIOP Endpoints can be stringed into a list.  Return the next
+  /// DIOP Endpoints can be strung into a list.  Return the next
   /// endpoint in the list, if any.
   TAO_DIOP_Endpoint *next_;
 };

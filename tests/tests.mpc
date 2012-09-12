@@ -1,5 +1,5 @@
 //  -*- MPC -*-
-// $Id: tests.mpc 95923 2012-06-25 18:05:06Z johnnyw $
+// $Id: tests.mpc 96061 2012-08-16 09:36:07Z mcorino $
 
 project(Test_Output) : acelib, script {
   libout       = .
@@ -467,7 +467,7 @@ project(Bug_3974_Regression_Test) : acetest {
   }
 }
 
-project(Bug_4055_Regression_Test) : acetest {
+project(Bug_4055_Regression_Test) : acetest, threads {
   exename = Bug_4055_Regression_Test
   Source_Files {
     Bug_4055_Regression_Test.cpp
@@ -955,6 +955,22 @@ project(Message Queue Test) : acetest {
     ifdef AIX_VERS
       LDFLAGS += -bmaxdata:0x20000000
     endif
+  }
+}
+
+project(Monotonic_Task Test) : acetest {
+  avoids += ace_for_tao
+  exename = Monotonic_Task_Test
+  Source_Files {
+    Monotonic_Task_Test.cpp
+  }
+}
+
+project(Monotonic_Message Queue Test) : acetest {
+  avoids += ace_for_tao
+  exename = Monotonic_Message_Queue_Test
+  Source_Files {
+    Monotonic_Message_Queue_Test.cpp
   }
 }
 

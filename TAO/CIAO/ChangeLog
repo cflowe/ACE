@@ -1,3 +1,217 @@
+Wed Aug 29 08:16:04 CEST 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * CIAO version 1.1.4 released.
+
+Tue Aug 28 13:51:23 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * bin/ciao_tests.lst:
+          Removed COPI tests, they have been removed from the repository
+          some time ago
+
+Fri Aug 24 10:35:48 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ciao/Servants/Connector_Servant_Impl_Base.h:
+          Doxygen fix
+
+Thu Aug 16 18:30:32 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/examples/IDL2CPPWrapper/Shapes/Common/I2C_Shapes_Common.cpp:
+        * connectors/dds4ccm/tests/TypeSupport/main.cpp:
+          Updated because of type support changes
+
+        * connectors/dds4ccm/impl/DDS_TopicBase_Connector_T.cpp:
+          If unregistering the type support factory fails throw an exception
+
+        * connectors/dds4ccm/impl/ndds/TypeSupport.h:
+        * connectors/dds4ccm/impl/ndds/TypeSupport.cpp:
+          Added bool return to unregister_type() to indicate success or failure
+
+Thu Aug 16 10:31:55 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/dds4ccm_impl.mpb:
+          Removed obsolete include path
+
+        * connectors/dds4ccm/impl/DomainParticipantManager.h:
+          Doxygen fix
+
+Thu Aug 16 10:30:43 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/impl/DDS_TopicBase_Connector_T.cpp:
+        * connectors/dds4ccm/impl/ndds/TypeSupport.h:
+        * connectors/dds4ccm/impl/ndds/TypeSupport.cpp:
+          Fixed problem when shutting down the system. The type factories
+          wheren't reference counted, the first connector that was
+          shutting down destroyed the type factory. Added a refcount to
+          the typesupport administration and greatly simplified the code
+          and improved the logging.
+
+Tue Aug 14 11:02:10 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ccm/Session/CCM_session.mpc:
+          Simplified this mpc file, the base project should do the trick
+
+Mon Aug 13 07:01:37 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/dds/opendds_lem_stub.mpc:
+          Fixed install location
+
+Sun Aug 12 19:07:08 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/dds4ccm.mpb:
+        * connectors/dds4ccm/idl/dds:
+        * connectors/dds4ccm/idl/dds/opendds_lem_stub.mpc:
+        * connectors/dds4ccm/idl/OpenDDS:
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Moved OpenDDS to dds and made some more changes to improve the
+          lem generation for OpenDDS
+
+Fri Aug 10 11:59:55 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ciao/Deployment/Interceptors/Deployment_Interceptors.cpp:
+          Fixed debug message
+
+Thu Aug  9 07:15:33 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Fixed windows problems
+
+Tue Aug  7 12:47:24 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ciao/Deployment/Handlers/CIAO_Handler_Common.cpp:
+        * ciao/Deployment/Handlers/Connection_Handler.cpp:
+          Fixed incorrect debug statements
+
+Tue Aug  7 12:37:45 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ciao/Deployment/Handlers/Component_Handler.cpp:
+          Fixed incorrect debug statements
+
+        * ciao/Deployment/Interceptors/Name_Utilities.h:
+          Layout changes
+
+Tue Aug  7 08:01:29 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Added missing base to get the library installed
+
+Mon Aug  6 18:22:22 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/dds4ccm.mpb:
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Install fixes and corrected library name
+
+Mon Aug  6 06:43:33 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/dds4ccm_opendds_lem_stub.mpb:
+          Corrected library name for opendds lem
+
+Sat Aug  4 19:21:49 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Fixed install problems
+
+Fri Aug  3 07:42:52 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Use -Ssc instead of -SS
+
+Thu Aug  2 18:01:01 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Fixed mpc problems when opendds is not available
+
+Thu Aug  2 13:59:22 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/dds4ccm.mpb:
+        * connectors/dds4ccm/idl/dds4ccm_lem_stub.mpc:
+          Updated after statements
+
+Thu Aug  2 12:04:57 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Explicit list output files
+
+Thu Aug  2 09:52:00 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * MPC/config/dds4ccm_opendds_lem_stub.mpb:
+          New file for dds4ccm with opendds
+
+Thu Aug  2 09:34:14 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Fixed duplicate project name
+
+Thu Aug  2 09:29:22 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/OpenDDS:
+        * connectors/dds4ccm/idl/OpenDDS/opendds_lem_stub.mpc:
+          Generate the lem for OpenDDS as part of ciao
+
+        * MPC/config/dds4ccm.mpb:
+        * MPC/config/dds4ccm_base.mpb:
+        * MPC/config/dds4ccm_impl.mpb:
+          Updated base projects and includes for OpenDDS
+
+        * connectors/dds4ccm/idl/dds_rtf2_dcps.idl:
+          Updated include for opendds
+
+Tue Jul 31 13:01:24 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/impl/DomainParticipantManager.cpp:
+          Simplified make_pair usage
+
+Tue Jul 31 12:39:42 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/DDS4CCM-INSTALL.html:
+          Fixed typo
+
+        * connectors/dds4ccm/impl/CCM_DataReader.h:
+        * connectors/dds4ccm/impl/CCM_DataReader.cpp:
+        * connectors/dds4ccm/impl/CCM_DataWriter.h:
+        * connectors/dds4ccm/impl/CCM_DataWriter.cpp:
+          Fixed compile problems when OpenDDS is configured with less features
+
+Fri Jul 27 18:05:48 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/DDS4CCM-INSTALL.html:
+          Improved instructions
+
+Fri Jul 27 10:56:24 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * etc/ciao.doxygen:
+        * etc/ciao_dds4ccm.doxygen:
+        * tests/IDL_Test/Cornucopia/Cornucopia.doxygen:
+          Generate UML diagrams, assume stl is buildin
+
+Fri Jul 27 08:59:40 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tests/IDL_Test/Cornucopia/Cornucopia.doxygen:
+          Upgraded to latest doxygen
+
+Thu Jul 26 16:29:47 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/tests/PSLSampleLost/Receiver/PSL_SampleLost_Receiver_exec.cpp:
+          One return path
+
+        * etc/ciao.doxygen:
+        * etc/ciao_dds4ccm.doxygen:
+          Upgraded to latest doxygen
+
+Thu Jul 26 14:56:20 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/impl/ndds/WaitSet.h:
+          Doxygen fix
+
+Thu Jul 26 09:31:13 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * NEWS:
+          Updated for next release
+
+        * etc/ciao.doxygen:
+        * etc/ciao_dds4ccm.doxygen:
+        * tests/IDL_Test/Cornucopia/Cornucopia.doxygen:
+          Removed deprecated tag
+
 Thu Jul 26 09:12:26 CEST 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * CIAO version 1.1.3 released.

@@ -20,8 +20,8 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
   Factory_Trader.cpp \
-  Criteria_Evaluator.cpp \
   LifeCycle_Service.cpp \
+  Criteria_Evaluator.cpp \
   LifeCycle_Service_i.cpp
 
 #----------------------------------------------------------------------------
@@ -242,8 +242,8 @@ endif
 #
 #source_files:
 #Factory_Trader.cpp
-#Criteria_Evaluator.cpp
 #LifeCycle_Service.cpp
+#Criteria_Evaluator.cpp
 #LifeCycle_Service_i.cpp
 #
 #exe_output:

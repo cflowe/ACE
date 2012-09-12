@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,15 +20,33 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: McastHello_Idl McastHello_Client McastHello_Server McastZIOP_Idl
+all: McastFragmentation_IDL McastFragmentation_Client McastFragmentation_Server McastHello_Idl McastHello_Client McastHello_Server McastPreferredInterfaces_IDL McastPreferredInterfaces_Server McastPreferredInterfaces_Client McastZIOP_Idl
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
+	$(KEEP_GOING)@cd McastFragmentation && $(MAKE) -f GNUmakefile.McastFragmentation_IDL $(@)
+	$(KEEP_GOING)@cd McastFragmentation && $(MAKE) -f GNUmakefile.McastFragmentation_Client $(@)
+	$(KEEP_GOING)@cd McastFragmentation && $(MAKE) -f GNUmakefile.McastFragmentation_Server $(@)
 	$(KEEP_GOING)@cd McastHello && $(MAKE) -f GNUmakefile.McastHello_Idl $(@)
 	$(KEEP_GOING)@cd McastHello && $(MAKE) -f GNUmakefile.McastHello_Client $(@)
 	$(KEEP_GOING)@cd McastHello && $(MAKE) -f GNUmakefile.McastHello_Server $(@)
+	$(KEEP_GOING)@cd McastPreferredInterfaces && $(MAKE) -f GNUmakefile.McastPreferredInterfaces_IDL $(@)
+	$(KEEP_GOING)@cd McastPreferredInterfaces && $(MAKE) -f GNUmakefile.McastPreferredInterfaces_Server $(@)
+	$(KEEP_GOING)@cd McastPreferredInterfaces && $(MAKE) -f GNUmakefile.McastPreferredInterfaces_Client $(@)
 	$(KEEP_GOING)@cd McastZIOP && $(MAKE) -f GNUmakefile.McastZIOP_Idl $(@)
+
+.PHONY: McastFragmentation_IDL
+McastFragmentation_IDL:
+	$(KEEP_GOING)@cd McastFragmentation && $(MAKE) -f GNUmakefile.McastFragmentation_IDL all
+
+.PHONY: McastFragmentation_Client
+McastFragmentation_Client: McastFragmentation_IDL
+	$(KEEP_GOING)@cd McastFragmentation && $(MAKE) -f GNUmakefile.McastFragmentation_Client all
+
+.PHONY: McastFragmentation_Server
+McastFragmentation_Server: McastFragmentation_IDL McastFragmentation_Client
+	$(KEEP_GOING)@cd McastFragmentation && $(MAKE) -f GNUmakefile.McastFragmentation_Server all
 
 .PHONY: McastHello_Idl
 McastHello_Idl:
@@ -42,12 +60,30 @@ McastHello_Client: McastHello_Idl
 McastHello_Server: McastHello_Idl McastHello_Client
 	$(KEEP_GOING)@cd McastHello && $(MAKE) -f GNUmakefile.McastHello_Server all
 
+.PHONY: McastPreferredInterfaces_IDL
+McastPreferredInterfaces_IDL:
+	$(KEEP_GOING)@cd McastPreferredInterfaces && $(MAKE) -f GNUmakefile.McastPreferredInterfaces_IDL all
+
+.PHONY: McastPreferredInterfaces_Server
+McastPreferredInterfaces_Server: McastPreferredInterfaces_IDL
+	$(KEEP_GOING)@cd McastPreferredInterfaces && $(MAKE) -f GNUmakefile.McastPreferredInterfaces_Server all
+
+.PHONY: McastPreferredInterfaces_Client
+McastPreferredInterfaces_Client: McastPreferredInterfaces_IDL McastPreferredInterfaces_Server
+	$(KEEP_GOING)@cd McastPreferredInterfaces && $(MAKE) -f GNUmakefile.McastPreferredInterfaces_Client all
+
 .PHONY: McastZIOP_Idl
 McastZIOP_Idl:
 	$(KEEP_GOING)@cd McastZIOP && $(MAKE) -f GNUmakefile.McastZIOP_Idl all
 
 project_name_list:
+	@echo McastFragmentation_Client
+	@echo McastFragmentation_IDL
+	@echo McastFragmentation_Server
 	@echo McastHello_Client
 	@echo McastHello_Idl
 	@echo McastHello_Server
+	@echo McastPreferredInterfaces_Client
+	@echo McastPreferredInterfaces_IDL
+	@echo McastPreferredInterfaces_Server
 	@echo McastZIOP_Idl

@@ -1,4 +1,4 @@
-// $Id: Bug_3943_Regression_Test.cpp 95534 2012-02-17 23:19:33Z mitza $
+// $Id: Bug_3943_Regression_Test.cpp 96062 2012-08-16 09:44:31Z sma $
 
 // ============================================================================
 //
@@ -744,7 +744,7 @@ Svc_Handler::send (IovecGuard& iovec_array,
                       send_func_name, send_desc, errno));
           return -1;
         }
-      send_remainder -= send_status;
+      send_remainder -= static_cast<buffer_len> (send_status);
       offset += send_status;
     }
 
@@ -837,7 +837,7 @@ Svc_Handler::recv_data (void)
                 {
                   const char* restartLoc =
                     ACE_OS::strchr(partOfBufferStart, RESTART_CHAR);
-                  if ((restartLoc > 0) && (restartLoc < partOfBufferEnd))
+                  if (restartLoc && (restartLoc < partOfBufferEnd))
                     {
                       ++messages;
                       total_bytes_since_last_message = 0;

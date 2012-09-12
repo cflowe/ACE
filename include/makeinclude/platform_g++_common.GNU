@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_g++_common.GNU 94795 2011-10-19 19:14:06Z wotte $
+# $Id: platform_g++_common.GNU 96018 2012-08-09 07:04:36Z johnnyw $
 
 ifeq ($(openmp),1)
 FLAGS_C_CC += -fopenmp
@@ -60,7 +60,10 @@ ifeq ($(gprof),1)
 endif
 
 ifeq ($(c++0x),1)
-  CCFLAGS += --std=c++0x
+  CCFLAGS += -std=c++0x
+
+  # This is needed due to the use of the deprecated auto_ptr class
+  CCFLAGS += -Wno-deprecated
 endif
 
 ifeq ($(gcov),1)

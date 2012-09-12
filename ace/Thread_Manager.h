@@ -4,7 +4,7 @@
 /**
  *  @file    Thread_Manager.h
  *
- *  $Id: Thread_Manager.h 95595 2012-03-07 13:33:25Z johnnyw $
+ *  $Id: Thread_Manager.h 96061 2012-08-16 09:36:07Z mcorino $
  *
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  */
@@ -434,6 +434,11 @@ public:
    * @sa ACE_Free_List
    */
   ACE_Thread_Manager (size_t preaolloc = ACE_DEFAULT_THREAD_MANAGER_PREALLOC,
+                      size_t lwm = ACE_DEFAULT_THREAD_MANAGER_LWM,
+                      size_t inc = ACE_DEFAULT_THREAD_MANAGER_INC,
+                      size_t hwm = ACE_DEFAULT_THREAD_MANAGER_HWM);
+  ACE_Thread_Manager (const ACE_Condition_Attributes &attributes,
+                      size_t preaolloc = ACE_DEFAULT_THREAD_MANAGER_PREALLOC,
                       size_t lwm = ACE_DEFAULT_THREAD_MANAGER_LWM,
                       size_t inc = ACE_DEFAULT_THREAD_MANAGER_INC,
                       size_t hwm = ACE_DEFAULT_THREAD_MANAGER_HWM);

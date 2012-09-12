@@ -101,12 +101,6 @@
     <ClInclude Include="HTIOP\HTIOP_Endpoint.h">
       <Filter>HTIOP</Filter>
     </ClInclude>
-    <ClInclude Include="HTIOP\htiop_endpointsC.h">
-      <Filter>HTIOP</Filter>
-    </ClInclude>
-    <ClInclude Include="HTIOP\htiop_endpointsS.h">
-      <Filter>HTIOP</Filter>
-    </ClInclude>
     <ClInclude Include="HTIOP\HTIOP_Factory.h">
       <Filter>HTIOP</Filter>
     </ClInclude>
@@ -116,11 +110,17 @@
     <ClInclude Include="HTIOP\HTIOP_Transport.h">
       <Filter>HTIOP</Filter>
     </ClInclude>
+    <ClInclude Include="HTIOP\htiop_endpointsC.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
+    <ClInclude Include="HTIOP\htiop_endpointsS.h">
+      <Filter>default_group</Filter>
+    </ClInclude>
     <ClInclude Include="HTIOPC.h">
-      <Filter>HTIOP</Filter>
+      <Filter>default_group</Filter>
     </ClInclude>
     <ClInclude Include="HTIOPS.h">
-      <Filter>HTIOP</Filter>
+      <Filter>default_group</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

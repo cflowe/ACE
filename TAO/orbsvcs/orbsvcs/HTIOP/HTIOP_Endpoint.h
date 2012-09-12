@@ -4,7 +4,7 @@
 /**
  *  @file     HTIOP_Endpoint.h
  *
- *  $Id: HTIOP_Endpoint.h 93359 2011-02-11 11:33:12Z mcorino $
+ *  $Id: HTIOP_Endpoint.h 96015 2012-08-08 15:31:24Z sma $
  *
  *   HTIOP implementation of PP Framework Endpoint interface.
  *
@@ -145,7 +145,7 @@ namespace TAO
       /// Flag to indicate if the address has been resolved and set.
       int object_addr_set_;
 
-      /// HTIOP Endpoints can be stringed into a list.  Return the next
+      /// HTIOP Endpoints can be strung into a list.  Return the next
       /// endpoint in the list, if any.
       Endpoint *next_;
     };

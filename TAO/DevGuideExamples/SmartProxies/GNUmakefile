@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,25 +20,25 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: SmartProxies_Server SmartProxies_Logger SmartProxies_Client
+all: SmartProxies_Logger SmartProxies_Server SmartProxies_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SmartProxies_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SmartProxies_Logger $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SmartProxies_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SmartProxies_Client $(@)
-
-.PHONY: SmartProxies_Server
-SmartProxies_Server:
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SmartProxies_Server all
 
 .PHONY: SmartProxies_Logger
 SmartProxies_Logger:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SmartProxies_Logger all
 
+.PHONY: SmartProxies_Server
+SmartProxies_Server:
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SmartProxies_Server all
+
 .PHONY: SmartProxies_Client
-SmartProxies_Client: SmartProxies_Server SmartProxies_Logger
+SmartProxies_Client: SmartProxies_Logger SmartProxies_Server
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SmartProxies_Client all
 
 project_name_list:

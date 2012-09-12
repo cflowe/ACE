@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Connection_Handler.cpp 94930 2011-11-02 08:35:59Z mcorino $
+// $Id: Connection_Handler.cpp 96029 2012-08-10 14:01:17Z sma $
 
 #include "tao/Connection_Handler.h"
 #include "tao/ORB_Core.h"
@@ -61,10 +61,16 @@ TAO_Connection_Handler::set_socket_option (ACE_SOCK &sock,
       && sock.set_option (SOL_SOCKET,
                           SO_SNDBUF,
                           (void *) &snd_size,
-                          sizeof (snd_size)) == -1
-      && errno != ENOTSUP)
+                          sizeof (snd_size)) == -1)
   {
-    return -1;
+    if (TAO_debug_level)
+      ACE_DEBUG ((LM_ERROR,
+                  ACE_TEXT ("TAO (%P|%t) - Connection_Handler::")
+                  ACE_TEXT ("set_socket_option, setting SO_SNDBUF failed ")
+                  ACE_TEXT ("'%m'\n")));
+
+    if (errno != ENOTSUP)
+      return -1;
   }
 #endif /* !ACE_LACKS_SO_SNDBUF */
 
@@ -73,16 +79,22 @@ TAO_Connection_Handler::set_socket_option (ACE_SOCK &sock,
       && sock.set_option (SOL_SOCKET,
                           SO_RCVBUF,
                           (void *) &rcv_size,
-                          sizeof (int)) == -1
-      && errno != ENOTSUP)
+                          sizeof (int)) == -1)
   {
-    return -1;
+      if (TAO_debug_level)
+        ACE_ERROR ((LM_ERROR,
+                    ACE_TEXT ("TAO (%P|%t) - Connection_Handler::")
+                    ACE_TEXT ("set_socket_option, setting SO_RCVBUF failed ")
+                    ACE_TEXT ("'%m'\n")));
+
+    if (errno != ENOTSUP)
+      return -1;
   }
 #endif /* !ACE_LACKS_SO_RCVBUF */
 
 #if defined (ACE_LACKS_SO_SNDBUF) && defined (ACE_LACKS_SO_RCVBUF)
-   ACE_UNUSED_ARG (snd_size);
-   ACE_UNUSED_ARG (rcv_size);
+  ACE_UNUSED_ARG (snd_size);
+  ACE_UNUSED_ARG (rcv_size);
 #endif
 
   // Set the close-on-exec flag for that file descriptor. If the

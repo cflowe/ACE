@@ -4,7 +4,7 @@
 /**
  *  @file   OS_NS_Thread.h
  *
- *  $Id: OS_NS_Thread.h 93792 2011-04-07 11:48:50Z mcorino $
+ *  $Id: OS_NS_Thread.h 96061 2012-08-16 09:36:07Z mcorino $
  *
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  *  @author Jesper S. M|ller<stophph@diku.dk>
@@ -1087,6 +1087,10 @@ namespace ACE_OS {
 
   ACE_NAMESPACE_INLINE_FUNCTION
   int condattr_destroy (ACE_condattr_t &attributes);
+
+  ACE_NAMESPACE_INLINE_FUNCTION
+  int condattr_setclock(ACE_condattr_t &attributes,
+                        clockid_t clock_id);
 
 #if defined (ACE_LACKS_COND_T)
   extern ACE_Export

@@ -1,4 +1,4 @@
-# $Id: platform_linux_clang.GNU 93818 2011-04-08 13:36:48Z mitza $
+# $Id: platform_linux_clang.GNU 96054 2012-08-15 11:42:53Z johnnyw $
 
 # This file should allow ACE to be built on Linux, using the clang compiler.
 
@@ -28,6 +28,10 @@ OCFLAGS += -O3
 
 ifeq ($(optimize),0)
   CPPFLAGS += -O0
+endif
+
+ifeq ($(c++0x),1)
+  CCFLAGS += -std=c++0x
 endif
 
 SOFLAGS += $(CPPFLAGS) -shared

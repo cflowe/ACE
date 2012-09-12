@@ -1,4 +1,4 @@
-// $Id: dds_rtf2_dcps.idl 95758 2012-05-15 13:42:33Z msmit $
+// $Id: dds_rtf2_dcps.idl 95993 2012-08-02 09:31:21Z johnnyw $
 
 #ifndef DDS_RFT2_DCPS_IDL
 #define DDS_RFT2_DCPS_IDL
@@ -7,7 +7,7 @@
 # include "dds/DdsDcps.idl"
 #endif
 
-#if (CIAO_DDS4CCM_NDDS==1) || (CIAO_DDS4CCM_COREDX == 1)
+#if (CIAO_DDS4CCM_NDDS==1)
 # include "connectors/dds4ccm/idl/ndds/ndds_dcps.idl"
 #endif
 

@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-# $Id: ProcessVX_Win32.pm 95949 2012-07-20 17:38:29Z mitza $
+# $Id: ProcessVX_Win32.pm 96060 2012-08-16 09:27:03Z sma $
 
 package PerlACE::ProcessVX;
 
@@ -418,6 +418,7 @@ sub Wait ($)
         }
     }
     Win32::Process::GetExitCode ($self->{PROCESS}, $result);
+    $self->{RUNNING} = 0;
     if ($result != 0) {
           $PerlACE::ProcessVX::DoVxInit = 1; # force reboot on next run
     }

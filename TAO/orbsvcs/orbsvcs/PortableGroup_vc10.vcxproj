@@ -271,9 +271,13 @@
     </ClCompile>
     <ClCompile Include="miopS.cpp">
     </ClCompile>
+    <ClCompile Include="PortableGroup\Fragments_Cleanup_Strategy.cpp">
+    </ClCompile>
     <ClCompile Include="PortableGroup\GOA.cpp">
     </ClCompile>
     <ClCompile Include="PortableGroup\MIOP.cpp">
+    </ClCompile>
+    <ClCompile Include="PortableGroup\miop_resource.cpp">
     </ClCompile>
     <ClCompile Include="PortableGroup\PG_Default_Property_Validator.cpp">
     </ClCompile>
@@ -339,11 +343,15 @@
     </ClCompile>
     <ClCompile Include="PortableGroup\UIPMC_Mcast_Connection_Handler.cpp">
     </ClCompile>
+    <ClCompile Include="PortableGroup\UIPMC_Mcast_Transport.cpp">
+    </ClCompile>
     <ClCompile Include="PortableGroup\UIPMC_Message_Block_Data_Iterator.cpp">
     </ClCompile>
     <ClCompile Include="PortableGroup\UIPMC_Profile.cpp">
     </ClCompile>
     <ClCompile Include="PortableGroup\UIPMC_Transport.cpp">
+    </ClCompile>
+    <ClCompile Include="PortableGroup\UIPMC_Transport_Recv_Packet.cpp">
     </ClCompile>
     <ClCompile Include="PortableGroup\UIPMC_Wait_Never.cpp">
     </ClCompile>
@@ -359,8 +367,10 @@
   <ItemGroup>
     <ClInclude Include="miopC.h" />
     <ClInclude Include="miopS.h" />
+    <ClInclude Include="PortableGroup\Fragments_Cleanup_Strategy.h" />
     <ClInclude Include="PortableGroup\GOA.h" />
     <ClInclude Include="PortableGroup\MIOP.h" />
+    <ClInclude Include="PortableGroup\miop_resource.h" />
     <ClInclude Include="PortableGroup\miopconf.h" />
     <ClInclude Include="PortableGroup\PG_conf.h" />
     <ClInclude Include="PortableGroup\PG_Default_Property_Validator.h" />
@@ -401,9 +411,11 @@
     <ClInclude Include="PortableGroup\UIPMC_Endpoint.h" />
     <ClInclude Include="PortableGroup\UIPMC_Factory.h" />
     <ClInclude Include="PortableGroup\UIPMC_Mcast_Connection_Handler.h" />
+    <ClInclude Include="PortableGroup\UIPMC_Mcast_Transport.h" />
     <ClInclude Include="PortableGroup\UIPMC_Message_Block_Data_Iterator.h" />
     <ClInclude Include="PortableGroup\UIPMC_Profile.h" />
     <ClInclude Include="PortableGroup\UIPMC_Transport.h" />
+    <ClInclude Include="PortableGroup\UIPMC_Transport_Recv_Packet.h" />
     <ClInclude Include="PortableGroup\UIPMC_Wait_Never.h" />
     <ClInclude Include="PortableGroup_Simple_DSC.h" />
     <ClInclude Include="PortableGroup_Simple_DSS.h" />
@@ -718,6 +730,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="miopC.inl" />
+    <None Include="PortableGroup\Fragments_Cleanup_Strategy.inl" />
     <None Include="PortableGroup\PG_Location_Equal_To.inl" />
     <None Include="PortableGroup\PG_Location_Hash.inl" />
     <None Include="PortableGroup\PG_Properties_Encoder.inl" />

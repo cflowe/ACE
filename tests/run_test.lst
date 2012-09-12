@@ -1,5 +1,5 @@
 
-# $Id: run_test.lst 95949 2012-07-20 17:38:29Z mitza $
+# $Id: run_test.lst 96061 2012-08-16 09:36:07Z mcorino $
 #
 # This is the list of tests that need to be run by run_test.pl.
 # Each line has its own test, and a test can be followed by a
@@ -65,7 +65,7 @@ Bug_3911_Regression_Test: !FIXED_BUGS_ONLY !ACE_FOR_TAO
 Bug_3912_Regression_Test: !STATIC
 Bug_3943_Regression_Test: !ACE_FOR_TAO
 Bug_3974_Regression_Test
-Bug_4055_Regression_Test: !FIXED_BUGS_ONLY
+Bug_4055_Regression_Test:
 CDR_Array_Test: !ACE_FOR_TAO
 CDR_File_Test: !ACE_FOR_TAO
 CDR_Test
@@ -138,6 +138,8 @@ Message_Block_Test: !ACE_FOR_TAO
 Message_Queue_Notifications_Test
 Message_Queue_Test: !ACE_FOR_TAO
 Message_Queue_Test_Ex: !ACE_FOR_TAO
+Monotonic_Message_Queue_Test: !ACE_FOR_TAO
+Monotonic_Task_Test: !ACE_FOR_TAO
 Multicast_Test: !ST !NO_MCAST !nsk !LynxOS !LabVIEW_RT
 Multihomed_INET_Addr_Test: !ACE_FOR_TAO
 Naming_Test: !NO_OTHER !LynxOS !VxWorks !nsk !ACE_FOR_TAO !PHARLAP

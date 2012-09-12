@@ -27,11 +27,11 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Implicit_Deactivator.cpp \
-  PolicyList_Destroyer.cpp \
   ORB_Manager.cpp \
   Encodable.cpp \
-  ORB_Destroyer.cpp
+  PolicyList_Destroyer.cpp \
+  ORB_Destroyer.cpp \
+  Implicit_Deactivator.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -254,11 +254,11 @@ endif
 #TAO_Utils.pc.in
 #
 #source_files:
-#Implicit_Deactivator.cpp
-#PolicyList_Destroyer.cpp
 #ORB_Manager.cpp
 #Encodable.cpp
+#PolicyList_Destroyer.cpp
 #ORB_Destroyer.cpp
+#Implicit_Deactivator.cpp
 #
 #template_files:
 #RIR_Narrow.cpp

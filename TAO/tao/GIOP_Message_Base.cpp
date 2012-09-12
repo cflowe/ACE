@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: GIOP_Message_Base.cpp 95868 2012-06-11 21:47:00Z mitza $
+// $Id: GIOP_Message_Base.cpp 96038 2012-08-13 12:38:08Z sma $
 
 #include "tao/GIOP_Message_Base.h"
 #include "tao/operation_details.h"
@@ -1422,8 +1422,8 @@ TAO_GIOP_Message_Base::
     0x49, // 'I'
     0x4f, // 'O'
     0x50, // 'P'
-    version.major,
-    version.minor,
+    static_cast<const char> (version.major),
+    static_cast<const char> (version.minor),
     TAO_ENCAP_BYTE_ORDER,
     GIOP::CloseConnection,
     0, 0, 0, 0

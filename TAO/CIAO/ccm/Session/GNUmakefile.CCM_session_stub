@@ -114,7 +114,7 @@ LDLIBPATH     = -L. -L../../../../lib
 else
 LDFLAGS      += -L. $(if $(ARCH),-L./$(ARCH)) -L../../../../lib $(if $(ARCH),-L../../../../lib/$(ARCH))
 endif
-CPPFLAGS     += -I../.. -I../../../.. -I../../.. -I../../ccm -ICCM_lem_stub
+CPPFLAGS     += -I../.. -I../../../.. -I../../.. -I../../ccm
 CPPFLAGS     += -DCCM_LW
 ifeq ($(shared_libs),1)
   ifneq ($(SHLIB),)

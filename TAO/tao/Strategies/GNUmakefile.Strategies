@@ -274,9 +274,9 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#sciop_endpoints.pidl
-#COIOP_Endpoints.pidl
 #uiop_endpoints.pidl
+#COIOP_Endpoints.pidl
+#sciop_endpoints.pidl
 #
 #build_files:
 #Strategies.mpc

@@ -25,14 +25,14 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)ACE_SSL.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
-  SSL_SOCK.cpp \
-  SSL_SOCK_Connector.cpp \
-  SSL_Initializer.cpp \
-  SSL_SOCK_Stream.cpp \
-  SSL_Asynch_BIO.cpp \
-  SSL_Asynch_Stream.cpp \
   SSL_SOCK_Acceptor.cpp \
-  SSL_Context.cpp
+  SSL_SOCK_Connector.cpp \
+  SSL_Context.cpp \
+  SSL_SOCK_Stream.cpp \
+  SSL_SOCK.cpp \
+  SSL_Asynch_BIO.cpp \
+  SSL_Initializer.cpp \
+  SSL_Asynch_Stream.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -265,8 +265,8 @@ endif
 #SSL_Asynch_Stream.inl
 #SSL_SOCK_Stream.inl
 #SSL_SOCK_Acceptor.inl
-#SSL_SOCK.inl
 #SSL_SOCK_Connector.inl
+#SSL_SOCK.inl
 #SSL_Context.inl
 #
 #header_files:
@@ -275,8 +275,8 @@ endif
 #SSL_Initializer.h
 #SSL_SOCK_Stream.h
 #SSL_SOCK_Acceptor.h
-#SSL_SOCK.h
 #SSL_SOCK_Connector.h
+#SSL_SOCK.h
 #SSL_Context.h
 #sslconf.h
 #SSL_Export.h
@@ -285,14 +285,14 @@ endif
 #ACE_SSL.pc.in
 #
 #source_files:
-#SSL_SOCK.cpp
-#SSL_SOCK_Connector.cpp
-#SSL_Initializer.cpp
-#SSL_SOCK_Stream.cpp
-#SSL_Asynch_BIO.cpp
-#SSL_Asynch_Stream.cpp
 #SSL_SOCK_Acceptor.cpp
+#SSL_SOCK_Connector.cpp
 #SSL_Context.cpp
+#SSL_SOCK_Stream.cpp
+#SSL_SOCK.cpp
+#SSL_Asynch_BIO.cpp
+#SSL_Initializer.cpp
+#SSL_Asynch_Stream.cpp
 #
 #lib_output:
 #../../lib ACE_SSL

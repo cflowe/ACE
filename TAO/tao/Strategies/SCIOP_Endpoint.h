@@ -6,7 +6,7 @@
  *
  *  SCIOP implementation of PP Framework Endpoint interface.
  *
- *  $Id: SCIOP_Endpoint.h 93359 2011-02-11 11:33:12Z mcorino $
+ *  $Id: SCIOP_Endpoint.h 96015 2012-08-08 15:31:24Z sma $
  *
  *  @author  Jason Cohen, Lockheed Martin ATL  <jcohen@atl.lmco.com>
  *  @author  Keith O'Hara, Lockheed Martin ATL
@@ -155,7 +155,7 @@ private:
   /// Is this endpoint created encodable as part of the IOR?
   bool is_encodable_;
 
-  /// SCIOP Endpoints can be stringed into a list.  Return the next
+  /// SCIOP Endpoints can be strung into a list.  Return the next
   /// endpoint in the list, if any.
   TAO_SCIOP_Endpoint *next_;
 };

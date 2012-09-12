@@ -1,4 +1,4 @@
-// $Id: Deployment_Interceptors.cpp 94951 2011-11-03 08:53:22Z mcorino $
+// $Id: Deployment_Interceptors.cpp 96028 2012-08-10 12:00:24Z johnnyw $
 
 #include "Deployment_Interceptors.h"
 #include "tao/ORB_Core.h"
@@ -133,7 +133,7 @@ namespace CIAO
     if (CORBA::is_nil (this->orb_))
       {
         CIAO_ERROR (1, (LM_ERROR, CLINFO
-                        "Container_Handler_i::configure -"
+                        "CIAO_ReferenceLookup_i::CIAO_ReferenceLookup_i -"
                         "Unable to locate ORB.\n"));
         throw ::Deployment::StartError ("CIAO Container Handler",
                                         "Unable to locate ORB");

@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type vc10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE -workers 8 -name_modifier "*_vc10"
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE -workers 8 -name_modifier "*_vc10"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACEXML_XML_Svc_Conf_Parser", "ACEXML\apps\svcconf\ACEXML_XML_Svc_Conf_Parser_vc10.vcxproj", "{97A5797D-FECA-1BAD-5984-FE664DEC7B87}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47BC56ED-FECA-1BAD-6757-8A6300006755} = {47BC56ED-FECA-1BAD-6757-8A6300006755}
@@ -3146,6 +3146,18 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Message_Queue_Test", "tests
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Missing_Svc_Conf_Test", "tests\Missing_Svc_Conf_Test_vc10.vcxproj", "{1A0DFBB5-FECA-1BAD-2431-8A1100722433}"
+	ProjectSection(ProjectDependencies) = postProject
+		{47BC56ED-FECA-1BAD-6757-8A6300006755} = {47BC56ED-FECA-1BAD-6757-8A6300006755}
+		{40EDEECF-FECA-1BAD-2431-8A1100722433} = {40EDEECF-FECA-1BAD-2431-8A1100722433}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Monotonic_Message_Queue_Test", "tests\Monotonic_Message_Queue_Test_vc10.vcxproj", "{B138A9E6-FECA-1BAD-2431-8A1100722433}"
+	ProjectSection(ProjectDependencies) = postProject
+		{47BC56ED-FECA-1BAD-6757-8A6300006755} = {47BC56ED-FECA-1BAD-6757-8A6300006755}
+		{40EDEECF-FECA-1BAD-2431-8A1100722433} = {40EDEECF-FECA-1BAD-2431-8A1100722433}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Monotonic_Task_Test", "tests\Monotonic_Task_Test_vc10.vcxproj", "{E70221C0-FECA-1BAD-2431-8A1100722433}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47BC56ED-FECA-1BAD-6757-8A6300006755} = {47BC56ED-FECA-1BAD-6757-8A6300006755}
 		{40EDEECF-FECA-1BAD-2431-8A1100722433} = {40EDEECF-FECA-1BAD-2431-8A1100722433}
@@ -8457,6 +8469,22 @@ Global
 		{1A0DFBB5-FECA-1BAD-2431-8A1100722433}.Release|Win32.Build.0 = Release|Win32
 		{1A0DFBB5-FECA-1BAD-2431-8A1100722433}.Release|x64.ActiveCfg = Release|x64
 		{1A0DFBB5-FECA-1BAD-2431-8A1100722433}.Release|x64.Build.0 = Release|x64
+		{B138A9E6-FECA-1BAD-2431-8A1100722433}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B138A9E6-FECA-1BAD-2431-8A1100722433}.Debug|Win32.Build.0 = Debug|Win32
+		{B138A9E6-FECA-1BAD-2431-8A1100722433}.Debug|x64.ActiveCfg = Debug|x64
+		{B138A9E6-FECA-1BAD-2431-8A1100722433}.Debug|x64.Build.0 = Debug|x64
+		{B138A9E6-FECA-1BAD-2431-8A1100722433}.Release|Win32.ActiveCfg = Release|Win32
+		{B138A9E6-FECA-1BAD-2431-8A1100722433}.Release|Win32.Build.0 = Release|Win32
+		{B138A9E6-FECA-1BAD-2431-8A1100722433}.Release|x64.ActiveCfg = Release|x64
+		{B138A9E6-FECA-1BAD-2431-8A1100722433}.Release|x64.Build.0 = Release|x64
+		{E70221C0-FECA-1BAD-2431-8A1100722433}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E70221C0-FECA-1BAD-2431-8A1100722433}.Debug|Win32.Build.0 = Debug|Win32
+		{E70221C0-FECA-1BAD-2431-8A1100722433}.Debug|x64.ActiveCfg = Debug|x64
+		{E70221C0-FECA-1BAD-2431-8A1100722433}.Debug|x64.Build.0 = Debug|x64
+		{E70221C0-FECA-1BAD-2431-8A1100722433}.Release|Win32.ActiveCfg = Release|Win32
+		{E70221C0-FECA-1BAD-2431-8A1100722433}.Release|Win32.Build.0 = Release|Win32
+		{E70221C0-FECA-1BAD-2431-8A1100722433}.Release|x64.ActiveCfg = Release|x64
+		{E70221C0-FECA-1BAD-2431-8A1100722433}.Release|x64.Build.0 = Release|x64
 		{FC1CE235-FECA-1BAD-2431-8A1100722433}.Debug|Win32.ActiveCfg = Debug|Win32
 		{FC1CE235-FECA-1BAD-2431-8A1100722433}.Debug|Win32.Build.0 = Debug|Win32
 		{FC1CE235-FECA-1BAD-2431-8A1100722433}.Debug|x64.ActiveCfg = Debug|x64

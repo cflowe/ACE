@@ -3,7 +3,7 @@
 /**
  *  @file    sequence_cs.cpp
  *
- *  $Id: sequence_cs.cpp 95759 2012-05-15 13:43:42Z msmit $
+ *  $Id: sequence_cs.cpp 95991 2012-08-01 07:09:10Z johnnyw $
  *
  *  Visitor generating code for Sequences in the client stubs file
  *
@@ -70,7 +70,7 @@ int be_visitor_sequence_cs::visit_sequence (be_sequence *node)
   *os << be_nl_2;
 
   *os << "// TAO_IDL - Generated from" << be_nl
-      << "// "__FILE__ << ":" << __LINE__;
+      << "// " << __FILE__ << ":" << __LINE__;
 
   os->gen_ifdef_macro (node->flat_name ());
 

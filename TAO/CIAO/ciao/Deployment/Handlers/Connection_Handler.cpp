@@ -1,4 +1,4 @@
-// $Id: Connection_Handler.cpp 95799 2012-05-31 07:59:28Z johnnyw $
+// $Id: Connection_Handler.cpp 96013 2012-08-07 12:47:56Z johnnyw $
 #include "Connection_Handler.h"
 #include "ciao/Logger/Log_Macros.h"
 #include "dance/Deployment/Deployment_InvalidConnectionC.h"
@@ -322,7 +322,7 @@ namespace CIAO
         // pass through
         throw;
       }
-    // Since DANCE shuts down the Locality managers simultaniously,
+    // Since DANCE shuts down the Locality managers simultaneously,
     // it could be that one locality manager is shutdown while the
     // other wants to disconnect from this locality manager. Therefor
     // we catch an OBJECT_NOT_EXIST, TRANSIENT and a COMM_FAILURE at this point

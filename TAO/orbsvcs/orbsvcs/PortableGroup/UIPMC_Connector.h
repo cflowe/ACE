@@ -4,7 +4,7 @@
 /**
  *  @file     UIPMC_Connector.h
  *
- *  $Id: UIPMC_Connector.h 78934 2007-07-18 12:06:59Z johnnyw $
+ *  $Id: UIPMC_Connector.h 96029 2012-08-10 14:01:17Z sma $
  *
  *  MIOP specific connector processing.
  *
@@ -23,10 +23,7 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-#include "orbsvcs/PortableGroup/UIPMC_Connection_Handler.h"
-
 #include "tao/Transport_Connector.h"
-#include "ace/Null_Mutex.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

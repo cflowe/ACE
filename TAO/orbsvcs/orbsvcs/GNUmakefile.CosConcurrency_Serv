@@ -28,10 +28,10 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
   Concurrency/Concurrency_Utils.cpp \
-  Concurrency/CC_LockSet.cpp \
-  Concurrency/Concurrency_Loader.cpp \
   Concurrency/CC_LockSetFactory.cpp \
-  Concurrency/CC_Lock.cpp
+  Concurrency/CC_LockSet.cpp \
+  Concurrency/CC_Lock.cpp \
+  Concurrency/Concurrency_Loader.cpp
 
 VPATH = .:Concurrency
 
@@ -238,63 +238,63 @@ endif
 #BEGIN MPC-Generated Install Info
 #build_files:
 #RTSchedEvent.mpc
-#RTEvent_Skel.mpc
-#RTCORBAEvent.mpc
-#CosEvent.mpc
-#RTEventLogAdmin.mpc
-#CosProperty.mpc
-#DsLogAdmin.mpc
-#CosNaming.mpc
-#DsNotifyLogAdmin.mpc
-#CosNotification.mpc
-#Security.mpc
-#RTSched.mpc
-#CosTime.mpc
 #SSLIOP.mpc
-#FaultTolerance.mpc
-#AV.mpc
-#FtRtEvent.mpc
-#Svc_Utils.mpc
-#DsEventLogAdmin.mpc
 #PortableGroup.mpc
-#IFRService.mpc
-#RTKokyuEvent.mpc
-#RT_Notification.mpc
-#RTEvent_Serv.mpc
-#RTEvent.mpc
-#CosLifeCycle.mpc
-#CosConcurrency.mpc
-#CosNaming_Serv.mpc
-#FTORB.mpc
 #CosNaming_Skel.mpc
-#HTIOP.mpc
+#RTEvent.mpc
+#CosConcurrency.mpc
 #CosLoadBalancing.mpc
+#DsEventLogAdmin.mpc
+#DsLogAdmin.mpc
+#FTORB.mpc
+#RTSched.mpc
+#RTEvent_Skel.mpc
+#AV.mpc
+#CosLifeCycle.mpc
+#IFRService.mpc
+#CosTime.mpc
 #CosTrading.mpc
-#ec_typed_events_idl.mpb
-#ec_typed_events_skel.mpb
-#ec_typed_events_serv.mpb
-#cosnaming_serv_persistence.mpb
+#CosProperty.mpc
+#CosEvent.mpc
+#CosNaming.mpc
+#RTEventLogAdmin.mpc
+#RTEvent_Serv.mpc
+#FaultTolerance.mpc
+#Svc_Utils.mpc
+#HTIOP.mpc
+#CosNotification.mpc
+#RTCORBAEvent.mpc
+#RT_Notification.mpc
+#Security.mpc
+#DsNotifyLogAdmin.mpc
+#RTKokyuEvent.mpc
+#CosNaming_Serv.mpc
+#FtRtEvent.mpc
 #ssliop_params_dup.mpb
 #ec_typed_events.mpb
+#cosnaming_serv_persistence.mpb
+#ec_typed_events_serv.mpb
+#ec_typed_events_skel.mpb
+#ec_typed_events_idl.mpb
 #orbsvcs.mwc
 #
 #header_files:
-#Concurrency/Concurrency_Utils.h
-#Concurrency/CC_LockSet.h
 #Concurrency/Concurrency_Loader.h
-#Concurrency/concurrency_serv_export.h
-#Concurrency/CC_LockSetFactory.h
+#Concurrency/Concurrency_Utils.h
 #Concurrency/CC_Lock.h
+#Concurrency/concurrency_serv_export.h
+#Concurrency/CC_LockSet.h
+#Concurrency/CC_LockSetFactory.h
 #
 #pkgconfig_files:
 #TAO_CosConcurrency_Serv.pc.in
 #
 #source_files:
 #Concurrency/Concurrency_Utils.cpp
-#Concurrency/CC_LockSet.cpp
-#Concurrency/Concurrency_Loader.cpp
 #Concurrency/CC_LockSetFactory.cpp
+#Concurrency/CC_LockSet.cpp
 #Concurrency/CC_Lock.cpp
+#Concurrency/Concurrency_Loader.cpp
 #
 #lib_output:
 #../../../lib TAO_CosConcurrency_Serv

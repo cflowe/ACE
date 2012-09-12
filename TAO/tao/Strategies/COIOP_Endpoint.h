@@ -4,7 +4,7 @@
 /**
  *  @file     COIOP_Endpoint.h
  *
- *  $Id: COIOP_Endpoint.h 93359 2011-02-11 11:33:12Z mcorino $
+ *  $Id: COIOP_Endpoint.h 96015 2012-08-08 15:31:24Z sma $
  *
  *   COIOP implementation of PP Framework Endpoint interface.
  *
@@ -87,7 +87,7 @@ private:
   /// UUID uniquely identifying this COIOP endpoint
   mutable ACE_Utils::UUID uuid_;
 
-  /// COIOP Endpoints can be stringed into a list.  Return the next
+  /// COIOP Endpoints can be strung into a list.  Return the next
   /// endpoint in the list, if any.
   TAO_COIOP_Endpoint *next_;
 };

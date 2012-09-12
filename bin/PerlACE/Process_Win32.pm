@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-# $Id: Process_Win32.pm 95066 2011-11-18 03:55:53Z hillj $
+# $Id: Process_Win32.pm 96060 2012-08-16 09:27:03Z sma $
 
 use PerlACE::Run_Test;
 
@@ -457,6 +457,7 @@ sub Wait ($)
       }
     }
     Win32::Process::GetExitCode ($self->{PROCESS}, $result);
+    $self->{RUNNING} = 0;
     return $result;
 }
 

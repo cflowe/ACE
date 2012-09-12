@@ -1,5 +1,5 @@
 // This may look like C, but it's really -*- C++ -*-
-// $Id: SCIOP_Profile.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: SCIOP_Profile.cpp 96015 2012-08-08 15:31:24Z sma $
 
 #include "tao/Strategies/SCIOP_Profile.h"
 
@@ -220,8 +220,9 @@ TAO_SCIOP_Profile::parse_string_i (const char *ior
                          EINVAL),
                        CORBA::COMPLETED_NO);
         }
-      else
-        this->endpoint_.host_ = CORBA::string_dup (tmp_host);
+
+      this->endpoint_.host_ = CORBA::string_dup (tmp_host);
+      this->endpoint_.preferred_interfaces (this->orb_core ());
     }
 
   TAO::ObjectKey ok;

@@ -1,7 +1,7 @@
 /**
  * @author Marcel Smit (msmit@remedy.nl)
  *
- * $Id: CCM_DataWriter.h 95809 2012-06-03 17:56:00Z johnnyw $
+ * $Id: CCM_DataWriter.h 95989 2012-07-31 12:40:59Z johnnyw $
  *
  * Wrapper facade for DDS.
  */
@@ -81,9 +81,11 @@ namespace CIAO
       virtual ::DDS::ReturnCode_t
       get_matched_subscriptions (::DDS::InstanceHandleSeq & );
 
+#if !defined (DDS_HAS_MINIMUM_BIT)
       virtual ::DDS::ReturnCode_t
       get_matched_subscription_data (::DDS::SubscriptionBuiltinTopicData & ,
                                      DDS_INSTANCE_HANDLE_T_IN);
+#endif
 
       void set_dds_entity (::DDS::DataWriter_ptr dw);
 

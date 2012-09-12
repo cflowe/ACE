@@ -4,7 +4,7 @@
 /**
  *  @file     UIPMC_Acceptor.h
  *
- *  $Id: UIPMC_Acceptor.h 93359 2011-02-11 11:33:12Z mcorino $
+ *  $Id: UIPMC_Acceptor.h 96029 2012-08-10 14:01:17Z sma $
  *
  *  MIOP specific acceptor processing
  *
@@ -16,8 +16,6 @@
 #define TAO_UIPMC_ACCEPTOR_H
 
 #include /**/ "ace/pre.h"
-
-#include "orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
@@ -47,7 +45,7 @@ class TAO_PortableGroup_Export TAO_UIPMC_Acceptor : public TAO_Acceptor
 {
 public:
   /// Constructor.
-  TAO_UIPMC_Acceptor (void);
+  TAO_UIPMC_Acceptor (bool listen_on_all_ifs);
 
   /// Destructor.
   ~TAO_UIPMC_Acceptor (void);
@@ -116,8 +114,6 @@ protected:
   /// Parse protocol specific options.
   virtual int parse_options (const char *options);
 
-protected:
-
   /// Array of ACE_INET_Addr instances, each one corresponding to a
   /// given network interface.
   ACE_INET_Addr *addrs_;
@@ -146,8 +142,7 @@ protected:
   TAO_ORB_Core *orb_core_;
 
 private:
-
-  TAO_UIPMC_Mcast_Connection_Handler *connection_handler_;
+  bool listen_on_all_;
 };
 
 TAO_END_VERSIONED_NAMESPACE_DECL

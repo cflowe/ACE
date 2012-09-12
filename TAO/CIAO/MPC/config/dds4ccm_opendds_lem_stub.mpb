@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: dds4ccm_opendds_lem_stub.mpb 96007 2012-08-06 07:46:12Z johnnyw $
+
+project : dds4ccm_stub, ccm_session_stub {
+  libs += CIAO_OpenDDS_Dcps_lem_stub
+  after += CIAO_OpenDDS_Dcps_lem_stub
+}

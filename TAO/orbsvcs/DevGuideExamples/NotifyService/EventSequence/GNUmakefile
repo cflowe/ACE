@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-26662/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-26662/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,30 +20,30 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: EventSequence_Idl EventSequence_Server EventSequence_Client EventSequence_Consumer
+all: EventSequence_Idl EventSequence_Client EventSequence_Server EventSequence_Consumer
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Consumer $(@)
 
 .PHONY: EventSequence_Idl
 EventSequence_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Idl all
 
-.PHONY: EventSequence_Server
-EventSequence_Server: EventSequence_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Server all
-
 .PHONY: EventSequence_Client
-EventSequence_Client: EventSequence_Idl EventSequence_Server
+EventSequence_Client: EventSequence_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Client all
 
+.PHONY: EventSequence_Server
+EventSequence_Server: EventSequence_Idl EventSequence_Client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Server all
+
 .PHONY: EventSequence_Consumer
-EventSequence_Consumer: EventSequence_Idl EventSequence_Server
+EventSequence_Consumer: EventSequence_Idl EventSequence_Client EventSequence_Server
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.EventSequence_Consumer all
 
 project_name_list:

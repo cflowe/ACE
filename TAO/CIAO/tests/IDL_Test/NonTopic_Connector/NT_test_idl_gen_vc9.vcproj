@@ -135,7 +135,7 @@
 						Description="Invoking ..\..\..\..\..\bin\tao_idl on nontopic_test.idl"
 						CommandLine="PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -DCCM_LW -Gcl -I..\..\.. -I..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -Wb,stub_export_macro=NONTOPIC_TEST_STUB_Export -Wb,stub_export_include=nontopic_test_stub_export.h -Gxhst -Gxhsk -Gxhex -SS -Sci -Scc &quot;nontopic_test.idl&quot;"
 						AdditionalDependencies="..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\lib\TAO_IDL_FEd.dll"
-						Outputs="nontopic_test_stub_export.h;nontopic_test_svnt.cpp;nontopic_test_svnt.h;nontopic_test_svnt_T.cpp;nontopic_test_svnt_T.h;nontopic_testC.cpp;nontopic_testC.h;nontopic_testE.idl;nontopic_testS.h"/>
+						Outputs="nontopic_test_stub_export.h;nontopic_test_svnt.h;nontopic_test_svnt_T.h;nontopic_testC.h;nontopic_testE.idl;nontopic_testS.h"/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="Release|Win32"
@@ -145,7 +145,7 @@
 						Description="Invoking ..\..\..\..\..\bin\tao_idl on nontopic_test.idl"
 						CommandLine="PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -DCCM_LW -Gcl -I..\..\.. -I..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -Wb,stub_export_macro=NONTOPIC_TEST_STUB_Export -Wb,stub_export_include=nontopic_test_stub_export.h -Gxhst -Gxhsk -Gxhex -SS -Sci -Scc &quot;nontopic_test.idl&quot;"
 						AdditionalDependencies="..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\lib\TAO_IDL_FE.dll"
-						Outputs="nontopic_test_stub_export.h;nontopic_test_svnt.cpp;nontopic_test_svnt.h;nontopic_test_svnt_T.cpp;nontopic_test_svnt_T.h;nontopic_testC.cpp;nontopic_testC.h;nontopic_testE.idl;nontopic_testS.h"/>
+						Outputs="nontopic_test_stub_export.h;nontopic_test_svnt.h;nontopic_test_svnt_T.h;nontopic_testC.h;nontopic_testE.idl;nontopic_testS.h"/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="Debug|x64"
@@ -155,7 +155,7 @@
 						Description="Invoking ..\..\..\..\..\bin\tao_idl on nontopic_test.idl"
 						CommandLine="PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -DCCM_LW -Gcl -I..\..\.. -I..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -Wb,stub_export_macro=NONTOPIC_TEST_STUB_Export -Wb,stub_export_include=nontopic_test_stub_export.h -Gxhst -Gxhsk -Gxhex -SS -Sci -Scc &quot;nontopic_test.idl&quot;"
 						AdditionalDependencies="..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\lib\TAO_IDL_FEd.dll"
-						Outputs="nontopic_test_stub_export.h;nontopic_test_svnt.cpp;nontopic_test_svnt.h;nontopic_test_svnt_T.cpp;nontopic_test_svnt_T.h;nontopic_testC.cpp;nontopic_testC.h;nontopic_testE.idl;nontopic_testS.h"/>
+						Outputs="nontopic_test_stub_export.h;nontopic_test_svnt.h;nontopic_test_svnt_T.h;nontopic_testC.h;nontopic_testE.idl;nontopic_testS.h"/>
 				</FileConfiguration>
 				<FileConfiguration
 					Name="Release|x64"
@@ -165,7 +165,7 @@
 						Description="Invoking ..\..\..\..\..\bin\tao_idl on nontopic_test.idl"
 						CommandLine="PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\.. -DCCM_LW -Gcl -I..\..\.. -I..\..\../ccm -Gsv -Glem -Gxhst -Gxhsk -Gxhsv -Gxhex -Wb,stub_export_macro=NONTOPIC_TEST_STUB_Export -Wb,stub_export_include=nontopic_test_stub_export.h -Gxhst -Gxhsk -Gxhex -SS -Sci -Scc &quot;nontopic_test.idl&quot;"
 						AdditionalDependencies="..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\lib\TAO_IDL_FE.dll"
-						Outputs="nontopic_test_stub_export.h;nontopic_test_svnt.cpp;nontopic_test_svnt.h;nontopic_test_svnt_T.cpp;nontopic_test_svnt_T.h;nontopic_testC.cpp;nontopic_testC.h;nontopic_testE.idl;nontopic_testS.h"/>
+						Outputs="nontopic_test_stub_export.h;nontopic_test_svnt.h;nontopic_test_svnt_T.h;nontopic_testC.h;nontopic_testE.idl;nontopic_testS.h"/>
 				</FileConfiguration>
 			</File>
 		</Filter>

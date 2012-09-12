@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: FTORB.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+// $Id: FTORB.mpc 96065 2012-08-16 12:33:49Z olli $
 
 project(FTORB_Utils) : orbsvcslib, orbsvcs_output, install, iormanip, portableserver, portablegroup, avoids_minimum_corba, tao_versioning_idl_defaults {
   sharedname   = TAO_FTORB_Utils
@@ -29,7 +29,7 @@ project(FTORB_Utils) : orbsvcslib, orbsvcs_output, install, iormanip, portablese
   }
 }
 
-project(FT_ClientORB) : orbsvcslib, orbsvcs_output, ftorbutils, install, messaging, portablegroup, interceptors {
+project(FT_ClientORB) : orbsvcslib, orbsvcs_output, ftorbutils, install, messaging, portablegroup, interceptors, threads {
   avoids      += ace_for_tao      // Requires ace/UUID
   sharedname   = TAO_FT_ClientORB
   dynamicflags += TAO_FT_CLIENTORB_BUILD_DLL
