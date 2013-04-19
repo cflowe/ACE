@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,30 +20,30 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: QoSProperties_Idl QoSProperties_Server QoSProperties_Client QoSProperties_Consumer
+all: QoSProperties_Idl QoSProperties_Client QoSProperties_Server QoSProperties_Consumer
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Consumer $(@)
 
 .PHONY: QoSProperties_Idl
 QoSProperties_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Idl all
 
-.PHONY: QoSProperties_Server
-QoSProperties_Server: QoSProperties_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Server all
-
 .PHONY: QoSProperties_Client
-QoSProperties_Client: QoSProperties_Idl QoSProperties_Server
+QoSProperties_Client: QoSProperties_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Client all
 
+.PHONY: QoSProperties_Server
+QoSProperties_Server: QoSProperties_Idl QoSProperties_Client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Server all
+
 .PHONY: QoSProperties_Consumer
-QoSProperties_Consumer: QoSProperties_Idl QoSProperties_Server
+QoSProperties_Consumer: QoSProperties_Idl QoSProperties_Client QoSProperties_Server
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.QoSProperties_Consumer all
 
 project_name_list:

@@ -27,8 +27,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  RLECompressor_Factory.cpp \
-  RLECompressor.cpp
+  RLECompressor.cpp \
+  RLECompressor_Factory.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -239,8 +239,8 @@ endif
 #RLECompressor_export.h
 #
 #source_files:
-#RLECompressor_Factory.cpp
 #RLECompressor.cpp
+#RLECompressor_Factory.cpp
 #
 #lib_output:
 #../../../../lib TAO_RLECompressor

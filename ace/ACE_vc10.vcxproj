@@ -307,8 +307,6 @@
     </ClCompile>
     <ClCompile Include="Atomic_Op_Sparc.c">
     </ClCompile>
-    <ClCompile Include="Auto_Event.cpp">
-    </ClCompile>
     <ClCompile Include="Barrier.cpp">
     </ClCompile>
     <ClCompile Include="Base_Thread_Adapter.cpp">
@@ -387,7 +385,7 @@
     </ClCompile>
     <ClCompile Include="Encoding_Converter_Factory.cpp">
     </ClCompile>
-    <ClCompile Include="Event.cpp">
+    <ClCompile Include="Event_Base.cpp">
     </ClCompile>
     <ClCompile Include="Event_Handler.cpp">
     </ClCompile>
@@ -488,8 +486,6 @@
     <ClCompile Include="Malloc.cpp">
     </ClCompile>
     <ClCompile Include="Malloc_Allocator.cpp">
-    </ClCompile>
-    <ClCompile Include="Manual_Event.cpp">
     </ClCompile>
     <ClCompile Include="MEM_Acceptor.cpp">
     </ClCompile>
@@ -953,6 +949,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Auto_Event.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Auto_Functor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -1044,6 +1046,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Env_Value_T.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -1164,6 +1172,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Managed_Object.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Manual_Event.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -1503,6 +1517,7 @@
     <ClInclude Include="config-macosx-iOS-simulator.h" />
     <ClInclude Include="config-macosx-leopard.h" />
     <ClInclude Include="config-macosx-lion.h" />
+    <ClInclude Include="config-macosx-mountain-lion.h" />
     <ClInclude Include="config-macosx-panther.h" />
     <ClInclude Include="config-macosx-snowleopard.h" />
     <ClInclude Include="config-macosx-tiger.h" />
@@ -1579,6 +1594,7 @@
     <ClInclude Include="Encoding_Converter_Factory.h" />
     <ClInclude Include="Env_Value_T.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="Event_Base.h" />
     <ClInclude Include="Event_Handler.h" />
     <ClInclude Include="Event_Handler_Handle_Timeout_Upcall.h" />
     <ClInclude Include="Event_Handler_T.h" />
@@ -2246,6 +2262,7 @@
     <None Include="Dynamic_Service.inl" />
     <None Include="Env_Value_T.inl" />
     <None Include="Event.inl" />
+    <None Include="Event_Base.inl" />
     <None Include="Event_Handler.inl" />
     <None Include="Event_Handler_Handle_Timeout_Upcall.inl" />
     <None Include="Event_Handler_T.inl" />

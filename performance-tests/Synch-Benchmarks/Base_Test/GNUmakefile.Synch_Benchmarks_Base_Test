@@ -25,9 +25,9 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)Base_Test.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
-  base_test.cpp \
   Baseline_Test.cpp \
-  mutex_test.cpp
+  mutex_test.cpp \
+  base_test.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

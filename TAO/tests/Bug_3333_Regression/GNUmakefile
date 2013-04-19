@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Bug3333_Idl Bug3333_Client Bug3333_Server
+all: Bug3333_Idl Bug3333_Server Bug3333_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Bug3333_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Bug3333_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Bug3333_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Bug3333_Client $(@)
 
 .PHONY: Bug3333_Idl
 Bug3333_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Bug3333_Idl all
 
-.PHONY: Bug3333_Client
-Bug3333_Client: Bug3333_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Bug3333_Client all
-
 .PHONY: Bug3333_Server
-Bug3333_Server: Bug3333_Idl Bug3333_Client
+Bug3333_Server: Bug3333_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Bug3333_Server all
+
+.PHONY: Bug3333_Client
+Bug3333_Client: Bug3333_Idl Bug3333_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Bug3333_Client all
 
 project_name_list:
 	@echo Bug3333_Client

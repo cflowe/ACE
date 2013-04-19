@@ -18,17 +18,17 @@ LIB_PREFIX      ?= lib
 
 FILES = \
   Iterators.cpp \
-  main.cpp \
-  Options.cpp \
-  Web_Crawler.cpp \
   Mem_Map_Stream.cpp \
-  URL_Status.cpp \
-  URL_Addr.cpp \
-  URL_Visitor.cpp \
-  URL_Visitor_Factory.cpp \
-  URL.cpp \
+  Command_Processor.cpp \
+  main.cpp \
   HTTP_URL.cpp \
-  Command_Processor.cpp
+  URL_Status.cpp \
+  URL_Visitor_Factory.cpp \
+  Options.cpp \
+  URL_Visitor.cpp \
+  URL_Addr.cpp \
+  URL.cpp \
+  Web_Crawler.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

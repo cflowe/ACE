@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,30 +20,30 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: SupplierSideNC_Idl SupplierSideNC_Client SupplierSideNC_Consumer SupplierSideNC_Server
+all: SupplierSideNC_Idl SupplierSideNC_Consumer SupplierSideNC_Client SupplierSideNC_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Consumer $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Server $(@)
 
 .PHONY: SupplierSideNC_Idl
 SupplierSideNC_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Idl all
 
-.PHONY: SupplierSideNC_Client
-SupplierSideNC_Client: SupplierSideNC_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Client all
-
 .PHONY: SupplierSideNC_Consumer
-SupplierSideNC_Consumer: SupplierSideNC_Idl SupplierSideNC_Client
+SupplierSideNC_Consumer: SupplierSideNC_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Consumer all
 
+.PHONY: SupplierSideNC_Client
+SupplierSideNC_Client: SupplierSideNC_Idl SupplierSideNC_Consumer
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Client all
+
 .PHONY: SupplierSideNC_Server
-SupplierSideNC_Server: SupplierSideNC_Idl SupplierSideNC_Client SupplierSideNC_Consumer
+SupplierSideNC_Server: SupplierSideNC_Idl SupplierSideNC_Consumer
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SupplierSideNC_Server all
 
 project_name_list:

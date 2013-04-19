@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  main.cpp \
-  RedGreen_Test.cpp
+  RedGreen_Test.cpp \
+  main.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

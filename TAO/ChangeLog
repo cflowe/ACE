@@ -1,3 +1,82 @@
+Mon Nov 12 09:34:14 CET 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * TAO version 2.1.6 released.
+
+Fri Nov  9 12:06:03 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * examples/Simple/time/Time_Client_i.cpp:
+          Don't shutdown the orb, the client template already does
+          that
+
+        * examples/Simple/time/server.cpp:
+          Layout changes
+
+        * examples/Simple/Simple_util.cpp:
+          Fixed memory leak
+
+Tue Nov  6 14:06:48 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * NEWS:
+          Updated for ObjRefTemplate chnages
+
+Mon Nov  5 08:25:48 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tao/Cache_Entries_T.h:
+          Use bool instead of CORBA::Boolean
+
+        * tao/LocateRequest_Invocation.cpp:
+        * tao/Transport.h:
+        * tao/Transport_Cache_Manager_T.cpp:
+        * tao/Transport_Connector.cpp:
+          Const, layout, and doxygen changes
+
+Wed Oct 31 09:09:25 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tao/PortableServer/Root_POA.cpp:
+          Updated if comparison
+
+        * tests/CSD_Strategy_Tests/TP_Test_2/run_test.pl:
+          Increased wait time for slower targets
+
+Tue Oct 30 10:50:49 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tao/PortableServer/Root_POA.h:
+        * tao/PortableServer/Root_POA.cpp:
+          Cache ORT_Adapter_Factory in the POA at creation, prevents
+          a lookup when (un)registering a servant which could trigger
+          a possible deadlock when the registering of the servant is
+          coming from the init of an ACE service
+
+Fri Oct 19 07:56:56 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tao/AnyTypeCode/Alias_TypeCode.cpp:
+        * tao/AnyTypeCode/Alias_TypeCode_Static.cpp:
+        * tao/AnyTypeCode/Objref_TypeCode.cpp:
+        * tao/AnyTypeCode/Objref_TypeCode_Static.cpp:
+        * tao/Any_Insert_Policy_T.h:
+          Layout changes
+
+Wed Oct 17 12:31:27 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tao/ObjRefTemplate/ORT_Adapter_Factory_Impl.h:
+          Doxygen change
+
+        * tao/PortableServer/Root_POA.cpp:
+          Layout change
+
+Mon Oct 15 13:26:27 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tao/Messaging/AMH_Response_Handler.h:
+          Use virtual inheritance
+
+        * tao/PortableServer/Root_POA.h:
+          Doxygen fix
+
+Fri Oct 12 10:51:27 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * NEWS:
+          Updated for x.1.5
+
 Fri Oct 12 11:20:25 CEST 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * TAO version 2.1.5 released.

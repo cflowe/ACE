@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: ior_corbaname_idl ior_corbaname_client ior_corbaname_server
+all: ior_corbaname_idl ior_corbaname_server ior_corbaname_client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ior_corbaname_idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ior_corbaname_client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ior_corbaname_server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ior_corbaname_client $(@)
 
 .PHONY: ior_corbaname_idl
 ior_corbaname_idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ior_corbaname_idl all
 
-.PHONY: ior_corbaname_client
-ior_corbaname_client: ior_corbaname_idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ior_corbaname_client all
-
 .PHONY: ior_corbaname_server
-ior_corbaname_server: ior_corbaname_idl ior_corbaname_client
+ior_corbaname_server: ior_corbaname_idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ior_corbaname_server all
+
+.PHONY: ior_corbaname_client
+ior_corbaname_client: ior_corbaname_idl ior_corbaname_server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ior_corbaname_client all
 
 project_name_list:
 	@echo ior_corbaname_client

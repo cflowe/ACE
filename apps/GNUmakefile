@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Gateway-target gatewayd Gateway_Peer gateway_peerd blobby http_client JAWS-target JAWS_server JAWS2-target HTTPU JAWS3-target JAWS3_server drwho__server drwho__client gperf_docs gperf-target taoinset adainset cinset cppinset iinset iinset2 m3inset pinset preinset tinset mkcsregdb-target soreduce-target
+all: Gateway-target gatewayd Gateway_Peer gateway_peerd blobby http_client JAWS-target JAWS_server JAWS2-target HTTPU JAWS3-target JAWS3_server drwho__server drwho__client gperf_docs gperf-target cppinset adainset cinset iinset iinset2 m3inset pinset preinset taoinset tinset mkcsregdb-target soreduce-target
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -41,15 +41,15 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd drwho && $(MAKE) -f GNUmakefile.drwho__client $(@)
 	$(KEEP_GOING)@cd gperf && $(MAKE) -f GNUmakefile.gperf_docs $(@)
 	$(KEEP_GOING)@cd gperf/src && $(MAKE) -f GNUmakefile.gperf $(@)
-	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.taoinset $(@)
+	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.cppinset $(@)
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.adainset $(@)
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.cinset $(@)
-	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.cppinset $(@)
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.iinset $(@)
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.iinset2 $(@)
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.m3inset $(@)
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.pinset $(@)
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.preinset $(@)
+	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.taoinset $(@)
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.tinset $(@)
 	$(KEEP_GOING)@cd mkcsregdb && $(MAKE) -f GNUmakefile.mkcsregdb $(@)
 	$(KEEP_GOING)@cd soreduce && $(MAKE) -f GNUmakefile.soreduce $(@)
@@ -118,44 +118,44 @@ gperf_docs:
 gperf-target:
 	$(KEEP_GOING)@cd gperf/src && $(MAKE) -f GNUmakefile.gperf all
 
-.PHONY: taoinset
-taoinset: gperf-target
-	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.taoinset all
+.PHONY: cppinset
+cppinset: gperf-target
+	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.cppinset all
 
 .PHONY: adainset
-adainset: gperf-target taoinset
+adainset: gperf-target cppinset
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.adainset all
 
 .PHONY: cinset
-cinset: gperf-target taoinset
+cinset: gperf-target cppinset
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.cinset all
 
-.PHONY: cppinset
-cppinset: gperf-target taoinset
-	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.cppinset all
-
 .PHONY: iinset
-iinset: gperf-target taoinset
+iinset: gperf-target cppinset
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.iinset all
 
 .PHONY: iinset2
-iinset2: gperf-target taoinset iinset
+iinset2: gperf-target cppinset iinset
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.iinset2 all
 
 .PHONY: m3inset
-m3inset: gperf-target taoinset
+m3inset: gperf-target cppinset
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.m3inset all
 
 .PHONY: pinset
-pinset: gperf-target taoinset
+pinset: gperf-target cppinset
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.pinset all
 
 .PHONY: preinset
-preinset: gperf-target taoinset
+preinset: gperf-target cppinset
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.preinset all
 
+.PHONY: taoinset
+taoinset: gperf-target cppinset
+	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.taoinset all
+
 .PHONY: tinset
-tinset: gperf-target taoinset
+tinset: gperf-target cppinset
 	$(KEEP_GOING)@cd gperf/tests && $(MAKE) -f GNUmakefile.tinset all
 
 .PHONY: mkcsregdb-target

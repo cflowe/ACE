@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Null_Cipher_Idl Null_Cipher_Security_Client Null_Cipher_Security_Server
+all: Null_Cipher_Idl Null_Cipher_Security_Server Null_Cipher_Security_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Null_Cipher_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Null_Cipher_Security_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Null_Cipher_Security_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Null_Cipher_Security_Client $(@)
 
 .PHONY: Null_Cipher_Idl
 Null_Cipher_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Null_Cipher_Idl all
 
-.PHONY: Null_Cipher_Security_Client
-Null_Cipher_Security_Client: Null_Cipher_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Null_Cipher_Security_Client all
-
 .PHONY: Null_Cipher_Security_Server
-Null_Cipher_Security_Server: Null_Cipher_Idl Null_Cipher_Security_Client
+Null_Cipher_Security_Server: Null_Cipher_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Null_Cipher_Security_Server all
+
+.PHONY: Null_Cipher_Security_Client
+Null_Cipher_Security_Client: Null_Cipher_Idl Null_Cipher_Security_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Null_Cipher_Security_Client all
 
 project_name_list:
 	@echo Null_Cipher_Idl

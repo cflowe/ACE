@@ -25,8 +25,8 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)ACEXML_XML_Svc_Conf_Parser.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
-  Svcconf.cpp \
-  Svcconf_Handler.cpp
+  Svcconf_Handler.cpp \
+  Svcconf.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -262,8 +262,8 @@ endif
 #ACEXML_XML_Svc_Conf_Parser.pc.in
 #
 #source_files:
-#Svcconf.cpp
 #Svcconf_Handler.cpp
+#Svcconf.cpp
 #
 #lib_output:
 #../../../lib ACEXML_XML_Svc_Conf_Parser

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: NotifyTests_Lib Basic_Notify_AdminProperties Basic_Notify_ConnectDisconnect Basic_Notify_Events Basic_Notify_Extended_Filter Basic_Notify_Filter Basic_Notify_IdAssignment Basic_Notify_LifeCycle Basic_Notify_MultiTypes Basic_Notify_Sequence Basic_Notify_Simple Basic_Notify_Updates Blocking_Idl Blocking_Ntf_Struct_Cons Blocking_Ntf_Struct_Supp Bug_1385_Regression_Idl Bug_1385_Regression_Ntf_Struct_Cons Bug_1385_Regression_Ntf_Struct_Supp Bug_1884_Regression_Consumer Bug_1884_Regression_Filter Bug_1884_Regression_Supplier Bug_2415_Regression_Idl Bug_2415_Regression_Supplier Bug_2415_Regression_Consumer Bug_2561_Regression_Idl Bug_2561_Regression_Ntf_Cons Bug_2561_Regression_Ntf_Supp Bug_2926_Regression_Lib Bug_2926_Regression_Server Bug_3252_Regression_Lib Bug_3252_Regression_Server Bug_3646a_Regression_Ntf_Cons Bug_3646b_Regression_Lib Bug_3646b_Regression_Server Bug_3646c_Regression_Lib Bug_3646c_Regression_Ntf_Cons Bug_3646c_Regression_Server Bug_3646d_Regression_Lib Bug_3646d_Regression_Server Bug_3663_Regression_Lib Bug_3663_Regression_Server Bug_3688_Regression_Consumer Bug_3688_Regression_Supplier Bug_3688b_Lib Bug_3688b_Server Notify_Test_Destroy Discarding_Idl Discarding_Ntf_Struct_Supp Discarding_Ntf_Seq_Cons Discarding_Ntf_Seq_Supp Discarding_Ntf_Struct_Cons Notify_Test_Driver MonitorControl_Idl MonitorControl_Monitor MonitorControl_Consumer MonitorControl_Supplier MT_Dispatching_Idl MT_Dispatching_Ntf_Struct_Supp MT_Dispatching_Ntf_Struct_Cons Ordering_Idl Ordering_Ntf_Seq_Supp Ordering_Ntf_Seq_Cons Ordering_Ntf_Struct_Cons Ordering_Ntf_Struct_Supp consumer supplier Persistent_POA_Notify_Supplier PlugTop_Lib PlugTop RT_Notify_lib Reconnecting_Consumer Reconnecting_Supplier Seq_Multi_ETCL_Filter_Idl Seq_Multi_ETCL_Filter_Ntf_Seq_Supp Seq_Multi_ETCL_Filter_Ntf_Seq_Cons Seq_Multi_Filter_Idl Seq_Multi_Filter_Ntf_Seq_Supp Seq_Multi_Filter_Ntf_Seq_Cons Struct_Filter_Idl Struct_Filter_Ntf_Struct_Supp Struct_Filter_Ntf_Struct_Cons Struct_Multi_Filter_Idl Struct_Multi_Filter_Ntf_Struct_Cons Struct_Multi_Filter_Ntf_Struct_Supp TAO_RT_NotifyTests_Filter Tao__Timeout_Idl Timeout_Supplier Timeout_Consumer Validate_Client_Proxy_Dummy XML_Persistence-target Filter_Idl Filter_Notify_Perf_Sequence_Consumer Filter_Ntf_Perf_Seq_Supp Filter_Ntf_Perf_Struct_Cons Filter_Ntf_Perf_Struct_Supp RedGreen_Ntf_Perf_RedGreen Throughput_Ntf_Perf_Throughput
+all: NotifyTests_Lib Basic_Notify_AdminProperties Basic_Notify_ConnectDisconnect Basic_Notify_Events Basic_Notify_Extended_Filter Basic_Notify_Filter Basic_Notify_IdAssignment Basic_Notify_LifeCycle Basic_Notify_MultiTypes Basic_Notify_Sequence Basic_Notify_Simple Basic_Notify_Updates Blocking_Idl Blocking_Ntf_Struct_Cons Blocking_Ntf_Struct_Supp Bug_1385_Regression_Idl Bug_1385_Regression_Ntf_Struct_Supp Bug_1385_Regression_Ntf_Struct_Cons Bug_1884_Regression_Consumer Bug_1884_Regression_Filter Bug_1884_Regression_Supplier Bug_2415_Regression_Idl Bug_2415_Regression_Consumer Bug_2415_Regression_Supplier Bug_2561_Regression_Idl Bug_2561_Regression_Ntf_Cons Bug_2561_Regression_Ntf_Supp Bug_2926_Regression_Lib Bug_2926_Regression_Server Bug_3252_Regression_Lib Bug_3252_Regression_Server Bug_3646a_Regression_Ntf_Cons Bug_3646b_Regression_Lib Bug_3646b_Regression_Server Bug_3646c_Regression_Lib Bug_3646c_Regression_Ntf_Cons Bug_3646c_Regression_Server Bug_3646d_Regression_Lib Bug_3646d_Regression_Server Bug_3663_Regression_Lib Bug_3663_Regression_Server Bug_3688_Regression_Consumer Bug_3688_Regression_Supplier Bug_3688b_Lib Bug_3688b_Server Notify_Test_Destroy Discarding_Idl Discarding_Ntf_Struct_Supp Discarding_Ntf_Seq_Cons Discarding_Ntf_Seq_Supp Discarding_Ntf_Struct_Cons Notify_Test_Driver MonitorControl_Idl MonitorControl_Supplier MonitorControl_Consumer MonitorControl_Monitor MT_Dispatching_Idl MT_Dispatching_Ntf_Struct_Cons MT_Dispatching_Ntf_Struct_Supp Ordering_Idl Ordering_Ntf_Seq_Cons Ordering_Ntf_Seq_Supp Ordering_Ntf_Struct_Cons Ordering_Ntf_Struct_Supp consumer supplier Persistent_POA_Notify_Supplier PlugTop_Lib PlugTop RT_Notify_lib Reconnecting_Consumer Reconnecting_Supplier Seq_Multi_ETCL_Filter_Idl Seq_Multi_ETCL_Filter_Ntf_Seq_Cons Seq_Multi_ETCL_Filter_Ntf_Seq_Supp Seq_Multi_Filter_Idl Seq_Multi_Filter_Ntf_Seq_Supp Seq_Multi_Filter_Ntf_Seq_Cons Struct_Filter_Idl Struct_Filter_Ntf_Struct_Supp Struct_Filter_Ntf_Struct_Cons Struct_Multi_Filter_Idl Struct_Multi_Filter_Ntf_Struct_Cons Struct_Multi_Filter_Ntf_Struct_Supp TAO_RT_NotifyTests_Filter Tao__Timeout_Idl Timeout_Consumer Timeout_Supplier Validate_Client_Proxy_Dummy XML_Persistence-target Filter_Idl Filter_Notify_Perf_Sequence_Consumer Filter_Ntf_Perf_Seq_Supp Filter_Ntf_Perf_Struct_Cons Filter_Ntf_Perf_Struct_Supp RedGreen_Ntf_Perf_RedGreen Throughput_Ntf_Perf_Throughput
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -41,14 +41,14 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Blocking && $(MAKE) -f GNUmakefile.Blocking_Ntf_Struct_Cons $(@)
 	$(KEEP_GOING)@cd Blocking && $(MAKE) -f GNUmakefile.Blocking_Ntf_Struct_Supp $(@)
 	$(KEEP_GOING)@cd Bug_1385_Regression && $(MAKE) -f GNUmakefile.Bug_1385_Regression_Idl $(@)
-	$(KEEP_GOING)@cd Bug_1385_Regression && $(MAKE) -f GNUmakefile.Bug_1385_Regression_Ntf_Struct_Cons $(@)
 	$(KEEP_GOING)@cd Bug_1385_Regression && $(MAKE) -f GNUmakefile.Bug_1385_Regression_Ntf_Struct_Supp $(@)
+	$(KEEP_GOING)@cd Bug_1385_Regression && $(MAKE) -f GNUmakefile.Bug_1385_Regression_Ntf_Struct_Cons $(@)
 	$(KEEP_GOING)@cd Bug_1884_Regression && $(MAKE) -f GNUmakefile.Bug_1884_Regression_Consumer $(@)
 	$(KEEP_GOING)@cd Bug_1884_Regression && $(MAKE) -f GNUmakefile.Bug_1884_Regression_Filter $(@)
 	$(KEEP_GOING)@cd Bug_1884_Regression && $(MAKE) -f GNUmakefile.Bug_1884_Regression_Supplier $(@)
 	$(KEEP_GOING)@cd Bug_2415_Regression && $(MAKE) -f GNUmakefile.Bug_2415_Regression_Idl $(@)
-	$(KEEP_GOING)@cd Bug_2415_Regression && $(MAKE) -f GNUmakefile.Bug_2415_Regression_Supplier $(@)
 	$(KEEP_GOING)@cd Bug_2415_Regression && $(MAKE) -f GNUmakefile.Bug_2415_Regression_Consumer $(@)
+	$(KEEP_GOING)@cd Bug_2415_Regression && $(MAKE) -f GNUmakefile.Bug_2415_Regression_Supplier $(@)
 	$(KEEP_GOING)@cd Bug_2561_Regression && $(MAKE) -f GNUmakefile.Bug_2561_Regression_Idl $(@)
 	$(KEEP_GOING)@cd Bug_2561_Regression && $(MAKE) -f GNUmakefile.Bug_2561_Regression_Ntf_Cons $(@)
 	$(KEEP_GOING)@cd Bug_2561_Regression && $(MAKE) -f GNUmakefile.Bug_2561_Regression_Ntf_Supp $(@)
@@ -78,15 +78,15 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Discarding && $(MAKE) -f GNUmakefile.Discarding_Ntf_Struct_Cons $(@)
 	$(KEEP_GOING)@cd Driver && $(MAKE) -f GNUmakefile.Notify_Test_Driver $(@)
 	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Idl $(@)
-	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Monitor $(@)
-	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Consumer $(@)
 	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Supplier $(@)
+	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Consumer $(@)
+	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Monitor $(@)
 	$(KEEP_GOING)@cd MT_Dispatching && $(MAKE) -f GNUmakefile.MT_Dispatching_Idl $(@)
-	$(KEEP_GOING)@cd MT_Dispatching && $(MAKE) -f GNUmakefile.MT_Dispatching_Ntf_Struct_Supp $(@)
 	$(KEEP_GOING)@cd MT_Dispatching && $(MAKE) -f GNUmakefile.MT_Dispatching_Ntf_Struct_Cons $(@)
+	$(KEEP_GOING)@cd MT_Dispatching && $(MAKE) -f GNUmakefile.MT_Dispatching_Ntf_Struct_Supp $(@)
 	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Idl $(@)
-	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Seq_Supp $(@)
 	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Seq_Cons $(@)
+	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Seq_Supp $(@)
 	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Struct_Cons $(@)
 	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Struct_Supp $(@)
 	$(KEEP_GOING)@cd Persistent_Filter && $(MAKE) -f GNUmakefile.consumer $(@)
@@ -98,8 +98,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Reconnecting && $(MAKE) -f GNUmakefile.Reconnecting_Consumer $(@)
 	$(KEEP_GOING)@cd Reconnecting && $(MAKE) -f GNUmakefile.Reconnecting_Supplier $(@)
 	$(KEEP_GOING)@cd Sequence_Multi_ETCL_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_ETCL_Filter_Idl $(@)
-	$(KEEP_GOING)@cd Sequence_Multi_ETCL_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_ETCL_Filter_Ntf_Seq_Supp $(@)
 	$(KEEP_GOING)@cd Sequence_Multi_ETCL_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_ETCL_Filter_Ntf_Seq_Cons $(@)
+	$(KEEP_GOING)@cd Sequence_Multi_ETCL_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_ETCL_Filter_Ntf_Seq_Supp $(@)
 	$(KEEP_GOING)@cd Sequence_Multi_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_Filter_Idl $(@)
 	$(KEEP_GOING)@cd Sequence_Multi_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_Filter_Ntf_Seq_Supp $(@)
 	$(KEEP_GOING)@cd Sequence_Multi_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_Filter_Ntf_Seq_Cons $(@)
@@ -111,8 +111,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Structured_Multi_Filter && $(MAKE) -f GNUmakefile.Struct_Multi_Filter_Ntf_Struct_Supp $(@)
 	$(KEEP_GOING)@cd Test_Filter && $(MAKE) -f GNUmakefile.TAO_RT_NotifyTests_Filter $(@)
 	$(KEEP_GOING)@cd Timeout && $(MAKE) -f GNUmakefile.Tao__Timeout_Idl $(@)
-	$(KEEP_GOING)@cd Timeout && $(MAKE) -f GNUmakefile.Timeout_Supplier $(@)
 	$(KEEP_GOING)@cd Timeout && $(MAKE) -f GNUmakefile.Timeout_Consumer $(@)
+	$(KEEP_GOING)@cd Timeout && $(MAKE) -f GNUmakefile.Timeout_Supplier $(@)
 	$(KEEP_GOING)@cd Validate_Client && $(MAKE) -f GNUmakefile.Validate_Client_Proxy_Dummy $(@)
 	$(KEEP_GOING)@cd XML_Persistence && $(MAKE) -f GNUmakefile.XML_Persistence $(@)
 	$(KEEP_GOING)@cd performance-tests/Filter && $(MAKE) -f GNUmakefile.Filter_Idl $(@)
@@ -187,13 +187,13 @@ Blocking_Ntf_Struct_Supp: NotifyTests_Lib Blocking_Idl Blocking_Ntf_Struct_Cons
 Bug_1385_Regression_Idl:
 	$(KEEP_GOING)@cd Bug_1385_Regression && $(MAKE) -f GNUmakefile.Bug_1385_Regression_Idl all
 
-.PHONY: Bug_1385_Regression_Ntf_Struct_Cons
-Bug_1385_Regression_Ntf_Struct_Cons: NotifyTests_Lib Bug_1385_Regression_Idl
-	$(KEEP_GOING)@cd Bug_1385_Regression && $(MAKE) -f GNUmakefile.Bug_1385_Regression_Ntf_Struct_Cons all
-
 .PHONY: Bug_1385_Regression_Ntf_Struct_Supp
-Bug_1385_Regression_Ntf_Struct_Supp: NotifyTests_Lib Bug_1385_Regression_Idl Bug_1385_Regression_Ntf_Struct_Cons
+Bug_1385_Regression_Ntf_Struct_Supp: NotifyTests_Lib Bug_1385_Regression_Idl
 	$(KEEP_GOING)@cd Bug_1385_Regression && $(MAKE) -f GNUmakefile.Bug_1385_Regression_Ntf_Struct_Supp all
+
+.PHONY: Bug_1385_Regression_Ntf_Struct_Cons
+Bug_1385_Regression_Ntf_Struct_Cons: NotifyTests_Lib Bug_1385_Regression_Idl Bug_1385_Regression_Ntf_Struct_Supp
+	$(KEEP_GOING)@cd Bug_1385_Regression && $(MAKE) -f GNUmakefile.Bug_1385_Regression_Ntf_Struct_Cons all
 
 .PHONY: Bug_1884_Regression_Consumer
 Bug_1884_Regression_Consumer:
@@ -211,13 +211,13 @@ Bug_1884_Regression_Supplier:
 Bug_2415_Regression_Idl:
 	$(KEEP_GOING)@cd Bug_2415_Regression && $(MAKE) -f GNUmakefile.Bug_2415_Regression_Idl all
 
-.PHONY: Bug_2415_Regression_Supplier
-Bug_2415_Regression_Supplier: NotifyTests_Lib Bug_2415_Regression_Idl
-	$(KEEP_GOING)@cd Bug_2415_Regression && $(MAKE) -f GNUmakefile.Bug_2415_Regression_Supplier all
-
 .PHONY: Bug_2415_Regression_Consumer
-Bug_2415_Regression_Consumer: NotifyTests_Lib Bug_2415_Regression_Idl Bug_2415_Regression_Supplier
+Bug_2415_Regression_Consumer: NotifyTests_Lib Bug_2415_Regression_Idl
 	$(KEEP_GOING)@cd Bug_2415_Regression && $(MAKE) -f GNUmakefile.Bug_2415_Regression_Consumer all
+
+.PHONY: Bug_2415_Regression_Supplier
+Bug_2415_Regression_Supplier: NotifyTests_Lib Bug_2415_Regression_Idl Bug_2415_Regression_Consumer
+	$(KEEP_GOING)@cd Bug_2415_Regression && $(MAKE) -f GNUmakefile.Bug_2415_Regression_Supplier all
 
 .PHONY: Bug_2561_Regression_Idl
 Bug_2561_Regression_Idl:
@@ -335,48 +335,48 @@ Notify_Test_Driver: NotifyTests_Lib
 MonitorControl_Idl:
 	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Idl all
 
-.PHONY: MonitorControl_Monitor
-MonitorControl_Monitor: MonitorControl_Idl
-	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Monitor all
+.PHONY: MonitorControl_Supplier
+MonitorControl_Supplier: NotifyTests_Lib MonitorControl_Idl
+	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Supplier all
 
 .PHONY: MonitorControl_Consumer
-MonitorControl_Consumer: NotifyTests_Lib MonitorControl_Idl MonitorControl_Monitor
+MonitorControl_Consumer: NotifyTests_Lib MonitorControl_Idl MonitorControl_Supplier
 	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Consumer all
 
-.PHONY: MonitorControl_Supplier
-MonitorControl_Supplier: NotifyTests_Lib MonitorControl_Idl MonitorControl_Monitor
-	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Supplier all
+.PHONY: MonitorControl_Monitor
+MonitorControl_Monitor: MonitorControl_Idl MonitorControl_Supplier
+	$(KEEP_GOING)@cd MC && $(MAKE) -f GNUmakefile.MonitorControl_Monitor all
 
 .PHONY: MT_Dispatching_Idl
 MT_Dispatching_Idl:
 	$(KEEP_GOING)@cd MT_Dispatching && $(MAKE) -f GNUmakefile.MT_Dispatching_Idl all
 
-.PHONY: MT_Dispatching_Ntf_Struct_Supp
-MT_Dispatching_Ntf_Struct_Supp: NotifyTests_Lib MT_Dispatching_Idl
-	$(KEEP_GOING)@cd MT_Dispatching && $(MAKE) -f GNUmakefile.MT_Dispatching_Ntf_Struct_Supp all
-
 .PHONY: MT_Dispatching_Ntf_Struct_Cons
-MT_Dispatching_Ntf_Struct_Cons: NotifyTests_Lib MT_Dispatching_Idl MT_Dispatching_Ntf_Struct_Supp
+MT_Dispatching_Ntf_Struct_Cons: NotifyTests_Lib MT_Dispatching_Idl
 	$(KEEP_GOING)@cd MT_Dispatching && $(MAKE) -f GNUmakefile.MT_Dispatching_Ntf_Struct_Cons all
+
+.PHONY: MT_Dispatching_Ntf_Struct_Supp
+MT_Dispatching_Ntf_Struct_Supp: NotifyTests_Lib MT_Dispatching_Idl MT_Dispatching_Ntf_Struct_Cons
+	$(KEEP_GOING)@cd MT_Dispatching && $(MAKE) -f GNUmakefile.MT_Dispatching_Ntf_Struct_Supp all
 
 .PHONY: Ordering_Idl
 Ordering_Idl:
 	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Idl all
 
-.PHONY: Ordering_Ntf_Seq_Supp
-Ordering_Ntf_Seq_Supp: NotifyTests_Lib Ordering_Idl
-	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Seq_Supp all
-
 .PHONY: Ordering_Ntf_Seq_Cons
-Ordering_Ntf_Seq_Cons: NotifyTests_Lib Ordering_Idl Ordering_Ntf_Seq_Supp
+Ordering_Ntf_Seq_Cons: NotifyTests_Lib Ordering_Idl
 	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Seq_Cons all
 
+.PHONY: Ordering_Ntf_Seq_Supp
+Ordering_Ntf_Seq_Supp: NotifyTests_Lib Ordering_Idl Ordering_Ntf_Seq_Cons
+	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Seq_Supp all
+
 .PHONY: Ordering_Ntf_Struct_Cons
-Ordering_Ntf_Struct_Cons: NotifyTests_Lib Ordering_Idl Ordering_Ntf_Seq_Supp
+Ordering_Ntf_Struct_Cons: NotifyTests_Lib Ordering_Idl Ordering_Ntf_Seq_Cons
 	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Struct_Cons all
 
 .PHONY: Ordering_Ntf_Struct_Supp
-Ordering_Ntf_Struct_Supp: NotifyTests_Lib Ordering_Idl Ordering_Ntf_Seq_Supp
+Ordering_Ntf_Struct_Supp: NotifyTests_Lib Ordering_Idl Ordering_Ntf_Seq_Cons Ordering_Ntf_Seq_Supp
 	$(KEEP_GOING)@cd Ordering && $(MAKE) -f GNUmakefile.Ordering_Ntf_Struct_Supp all
 
 .PHONY: consumer
@@ -415,13 +415,13 @@ Reconnecting_Supplier: NotifyTests_Lib
 Seq_Multi_ETCL_Filter_Idl:
 	$(KEEP_GOING)@cd Sequence_Multi_ETCL_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_ETCL_Filter_Idl all
 
-.PHONY: Seq_Multi_ETCL_Filter_Ntf_Seq_Supp
-Seq_Multi_ETCL_Filter_Ntf_Seq_Supp: NotifyTests_Lib Seq_Multi_ETCL_Filter_Idl
-	$(KEEP_GOING)@cd Sequence_Multi_ETCL_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_ETCL_Filter_Ntf_Seq_Supp all
-
 .PHONY: Seq_Multi_ETCL_Filter_Ntf_Seq_Cons
-Seq_Multi_ETCL_Filter_Ntf_Seq_Cons: NotifyTests_Lib Seq_Multi_ETCL_Filter_Idl Seq_Multi_ETCL_Filter_Ntf_Seq_Supp
+Seq_Multi_ETCL_Filter_Ntf_Seq_Cons: NotifyTests_Lib Seq_Multi_ETCL_Filter_Idl
 	$(KEEP_GOING)@cd Sequence_Multi_ETCL_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_ETCL_Filter_Ntf_Seq_Cons all
+
+.PHONY: Seq_Multi_ETCL_Filter_Ntf_Seq_Supp
+Seq_Multi_ETCL_Filter_Ntf_Seq_Supp: NotifyTests_Lib Seq_Multi_ETCL_Filter_Idl Seq_Multi_ETCL_Filter_Ntf_Seq_Cons
+	$(KEEP_GOING)@cd Sequence_Multi_ETCL_Filter && $(MAKE) -f GNUmakefile.Seq_Multi_ETCL_Filter_Ntf_Seq_Supp all
 
 .PHONY: Seq_Multi_Filter_Idl
 Seq_Multi_Filter_Idl:
@@ -467,13 +467,13 @@ TAO_RT_NotifyTests_Filter:
 Tao__Timeout_Idl:
 	$(KEEP_GOING)@cd Timeout && $(MAKE) -f GNUmakefile.Tao__Timeout_Idl all
 
-.PHONY: Timeout_Supplier
-Timeout_Supplier: NotifyTests_Lib Tao__Timeout_Idl
-	$(KEEP_GOING)@cd Timeout && $(MAKE) -f GNUmakefile.Timeout_Supplier all
-
 .PHONY: Timeout_Consumer
-Timeout_Consumer: NotifyTests_Lib Tao__Timeout_Idl Timeout_Supplier
+Timeout_Consumer: NotifyTests_Lib Tao__Timeout_Idl
 	$(KEEP_GOING)@cd Timeout && $(MAKE) -f GNUmakefile.Timeout_Consumer all
+
+.PHONY: Timeout_Supplier
+Timeout_Supplier: NotifyTests_Lib Tao__Timeout_Idl Timeout_Consumer
+	$(KEEP_GOING)@cd Timeout && $(MAKE) -f GNUmakefile.Timeout_Supplier all
 
 .PHONY: Validate_Client_Proxy_Dummy
 Validate_Client_Proxy_Dummy:

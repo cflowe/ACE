@@ -25,8 +25,8 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)ACE_TMCast.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
-  MTQueue.cpp \
   Group.cpp \
+  MTQueue.cpp \
   Protocol.cpp
 
 #----------------------------------------------------------------------------
@@ -261,19 +261,19 @@ endif
 #Protocol.hpp
 #MTQueue.hpp
 #Group.hpp
-#LinkListener.hpp
+#Export.hpp
 #FaultDetector.hpp
 #Messaging.hpp
-#TransactionController.hpp
+#LinkListener.hpp
 #GroupFwd.hpp
-#Export.hpp
+#TransactionController.hpp
 #
 #pkgconfig_files:
 #ACE_TMCast.pc.in
 #
 #source_files:
-#MTQueue.cpp
 #Group.cpp
+#MTQueue.cpp
 #Protocol.cpp
 #
 #lib_output:

@@ -4,7 +4,7 @@
 /**
  *  @file    Any_Insert_Policy_T.h
  *
- *  $Id: Any_Insert_Policy_T.h 73141 2006-06-20 06:07:59Z jwillemsen $
+ *  $Id: Any_Insert_Policy_T.h 96200 2012-10-19 07:57:30Z johnnyw $
  *
  *  @author Johnny Willemsen  <jwillemsen@remedy.nl>
  */
@@ -54,8 +54,7 @@ namespace TAO
       {
         TAO_AnyTypeCode_Adapter *adapter =
           ACE_Dynamic_Service<TAO_AnyTypeCode_Adapter>::instance (
-              "AnyTypeCode_Adapter"
-          );
+              "AnyTypeCode_Adapter");
 
         if (adapter)
           {
@@ -79,8 +78,7 @@ namespace TAO
       {
         TAO_IFR_Client_Adapter *adapter =
           ACE_Dynamic_Service<TAO_IFR_Client_Adapter>::instance (
-              "Concrete_IFR_Client_Adapter"
-            );
+              "Concrete_IFR_Client_Adapter");
 
         adapter->interfacedef_any_insert (p, x);
       }

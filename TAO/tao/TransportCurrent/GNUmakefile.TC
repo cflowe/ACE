@@ -261,8 +261,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
-#TC_IIOP.mpc
 #TC.mpc
+#TC_IIOP.mpc
 #
 #header_files:
 #Current_Impl.h

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,14 +20,14 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: airplane_idl airplane_client airplane_server nestea_idl nestea_server nestea_client Bug_2604_Idl Bug_2604_Server Bug_2604_Client Bug_689_Regression_Idl Bug_689_Regression_Client Bug_689_Regression_Server ImplRepo_NameService ReconnectServer_Idl ReconnectServer_ServerB ReconnectServer_Client ReconnectServer_ServerA scaletest_idl scaletest_server scaletest_client
+all: airplane_idl airplane_server airplane_client nestea_idl nestea_server nestea_client Bug_2604_Idl Bug_2604_Server Bug_2604_Client Bug_689_Regression_Idl Bug_689_Regression_Server Bug_689_Regression_Client ImplRepo_NameService ReconnectServer_Idl ReconnectServer_ServerA ReconnectServer_Client ReconnectServer_ServerB scaletest_idl scaletest_client scaletest_server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.airplane_idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.airplane_client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.airplane_server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.airplane_client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.nestea_idl $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.nestea_server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.nestea_client $(@)
@@ -35,28 +35,28 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Bug_2604_Regression && $(MAKE) -f GNUmakefile.Bug_2604_Server $(@)
 	$(KEEP_GOING)@cd Bug_2604_Regression && $(MAKE) -f GNUmakefile.Bug_2604_Client $(@)
 	$(KEEP_GOING)@cd Bug_689_Regression && $(MAKE) -f GNUmakefile.Bug_689_Regression_Idl $(@)
-	$(KEEP_GOING)@cd Bug_689_Regression && $(MAKE) -f GNUmakefile.Bug_689_Regression_Client $(@)
 	$(KEEP_GOING)@cd Bug_689_Regression && $(MAKE) -f GNUmakefile.Bug_689_Regression_Server $(@)
+	$(KEEP_GOING)@cd Bug_689_Regression && $(MAKE) -f GNUmakefile.Bug_689_Regression_Client $(@)
 	$(KEEP_GOING)@cd NameService && $(MAKE) -f GNUmakefile.ImplRepo_NameService $(@)
 	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_Idl $(@)
-	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerB $(@)
-	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_Client $(@)
 	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerA $(@)
+	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_Client $(@)
+	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerB $(@)
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_idl $(@)
-	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_server $(@)
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_client $(@)
+	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_server $(@)
 
 .PHONY: airplane_idl
 airplane_idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.airplane_idl all
 
-.PHONY: airplane_client
-airplane_client: airplane_idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.airplane_client all
-
 .PHONY: airplane_server
-airplane_server: airplane_idl airplane_client
+airplane_server: airplane_idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.airplane_server all
+
+.PHONY: airplane_client
+airplane_client: airplane_idl airplane_server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.airplane_client all
 
 .PHONY: nestea_idl
 nestea_idl:
@@ -86,13 +86,13 @@ Bug_2604_Client: Bug_2604_Idl Bug_2604_Server
 Bug_689_Regression_Idl:
 	$(KEEP_GOING)@cd Bug_689_Regression && $(MAKE) -f GNUmakefile.Bug_689_Regression_Idl all
 
-.PHONY: Bug_689_Regression_Client
-Bug_689_Regression_Client: Bug_689_Regression_Idl
-	$(KEEP_GOING)@cd Bug_689_Regression && $(MAKE) -f GNUmakefile.Bug_689_Regression_Client all
-
 .PHONY: Bug_689_Regression_Server
-Bug_689_Regression_Server: Bug_689_Regression_Idl Bug_689_Regression_Client
+Bug_689_Regression_Server: Bug_689_Regression_Idl
 	$(KEEP_GOING)@cd Bug_689_Regression && $(MAKE) -f GNUmakefile.Bug_689_Regression_Server all
+
+.PHONY: Bug_689_Regression_Client
+Bug_689_Regression_Client: Bug_689_Regression_Idl Bug_689_Regression_Server
+	$(KEEP_GOING)@cd Bug_689_Regression && $(MAKE) -f GNUmakefile.Bug_689_Regression_Client all
 
 .PHONY: ImplRepo_NameService
 ImplRepo_NameService:
@@ -102,29 +102,29 @@ ImplRepo_NameService:
 ReconnectServer_Idl:
 	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_Idl all
 
-.PHONY: ReconnectServer_ServerB
-ReconnectServer_ServerB: ReconnectServer_Idl
-	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerB all
+.PHONY: ReconnectServer_ServerA
+ReconnectServer_ServerA: ReconnectServer_Idl
+	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerA all
 
 .PHONY: ReconnectServer_Client
-ReconnectServer_Client: ReconnectServer_Idl ReconnectServer_ServerB
+ReconnectServer_Client: ReconnectServer_Idl ReconnectServer_ServerA
 	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_Client all
 
-.PHONY: ReconnectServer_ServerA
-ReconnectServer_ServerA: ReconnectServer_Idl ReconnectServer_ServerB
-	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerA all
+.PHONY: ReconnectServer_ServerB
+ReconnectServer_ServerB: ReconnectServer_Idl ReconnectServer_ServerA
+	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerB all
 
 .PHONY: scaletest_idl
 scaletest_idl:
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_idl all
 
-.PHONY: scaletest_server
-scaletest_server: scaletest_idl
-	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_server all
-
 .PHONY: scaletest_client
-scaletest_client: scaletest_idl scaletest_server
+scaletest_client: scaletest_idl
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_client all
+
+.PHONY: scaletest_server
+scaletest_server: scaletest_idl scaletest_client
+	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_server all
 
 project_name_list:
 	@echo Bug_2604_Client

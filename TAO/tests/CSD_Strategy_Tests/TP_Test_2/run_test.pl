@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 88014 2009-12-09 10:43:57Z dbudko $
+# $Id: run_test.pl 96215 2012-10-31 09:10:01Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -146,7 +146,7 @@ for ($i = 0; $i < $num_remote_clients; $i++) {
 }
 
 for ($i = 0; $i < $num_remote_clients; $i++) {
-    $client_status = $CLS[$i]->WaitKill($client->ProcessStopWaitInterval ());
+    $client_status = $CLS[$i]->WaitKill(2 * $client->ProcessStopWaitInterval ());
 
     if ($client_status != 0) {
         print STDERR "ERROR: client $i returned $client_status\n";

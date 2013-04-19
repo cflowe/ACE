@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,27 +20,27 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Advanced_IDL Advanced_Server Advanced_Client Advanced_Manager
+all: Advanced_IDL Advanced_Client Advanced_Server Advanced_Manager
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Advanced_IDL $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Advanced_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Advanced_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Advanced_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Advanced_Manager $(@)
 
 .PHONY: Advanced_IDL
 Advanced_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Advanced_IDL all
 
-.PHONY: Advanced_Server
-Advanced_Server: Advanced_IDL
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Advanced_Server all
-
 .PHONY: Advanced_Client
-Advanced_Client: Advanced_IDL Advanced_Server
+Advanced_Client: Advanced_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Advanced_Client all
+
+.PHONY: Advanced_Server
+Advanced_Server: Advanced_IDL Advanced_Client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Advanced_Server all
 
 .PHONY: Advanced_Manager
 Advanced_Manager: Advanced_IDL Advanced_Server

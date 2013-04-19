@@ -18,8 +18,8 @@ LIB_PREFIX      ?= lib
 
 FILES = \
   BPR_Drivers.cpp \
-  bpr_thread.cpp \
-  Thread_Bounded_Packet_Relay.cpp
+  Thread_Bounded_Packet_Relay.cpp \
+  bpr_thread.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

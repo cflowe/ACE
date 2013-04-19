@@ -19,9 +19,9 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Basic.cpp \
   Supplier.cpp \
-  Consumer.cpp
+  Consumer.cpp \
+  Basic.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

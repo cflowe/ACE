@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: scaletest_idl scaletest_server scaletest_client
+all: scaletest_idl scaletest_client scaletest_server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.scaletest_idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.scaletest_server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.scaletest_client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.scaletest_server $(@)
 
 .PHONY: scaletest_idl
 scaletest_idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.scaletest_idl all
 
-.PHONY: scaletest_server
-scaletest_server: scaletest_idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.scaletest_server all
-
 .PHONY: scaletest_client
-scaletest_client: scaletest_idl scaletest_server
+scaletest_client: scaletest_idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.scaletest_client all
+
+.PHONY: scaletest_server
+scaletest_server: scaletest_idl scaletest_client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.scaletest_server all
 
 project_name_list:
 	@echo scaletest_client

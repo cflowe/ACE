@@ -1,4 +1,4 @@
-// $Id: LM_Launcher.cpp 93850 2011-04-10 19:39:19Z wotte $
+// $Id: LM_Launcher.cpp 96194 2012-10-12 11:19:20Z johnnyw $
 
 #include "LM_Launcher.h"
 
@@ -10,11 +10,8 @@ namespace DAnCE
   {
   }
 
-
-
   LM_Launcher::~LM_Launcher (void)
   {
-
   }
 
   /*

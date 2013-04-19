@@ -1,4 +1,4 @@
-// $Id: Alias_TypeCode.cpp 77000 2007-02-12 07:30:10Z johnnyw $
+// $Id: Alias_TypeCode.cpp 96200 2012-10-19 07:57:30Z johnnyw $
 
 #ifndef TAO_ALIAS_TYPECODE_CPP
 #define TAO_ALIAS_TYPECODE_CPP
@@ -120,8 +120,7 @@ TAO::TypeCode::Alias<StringType,
 {
   TAO_TypeCodeFactory_Adapter * const adapter =
     ACE_Dynamic_Service<TAO_TypeCodeFactory_Adapter>::instance (
-        TAO_ORB_Core::typecodefactory_adapter_name ()
-      );
+        TAO_ORB_Core::typecodefactory_adapter_name ());
 
   if (adapter == 0)
     {

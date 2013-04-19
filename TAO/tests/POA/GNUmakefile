@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: POA_Generic_Servant_Lib POA_Adapter_Activator_Server Bug_1592_Regression_Idl Bug_1592_Regression_Server Bug_1592_Regression_Client POA_Bug_2511_Regression POA_Current POA_DSI_IDL POA_DSI_Client POA_DSI_Server Deactivate_Object_Server POA_Default_Servant POA_Default_Servant_IDL POA_Default_Servant_Server POA_Default_Servant_Client EndpointPolicy_Idl EndpointPolicy_Client EndpointPolicy_Server POA_Etherealization POA_Excessive_Object_Deactivations Alt_Resource POA_Explicit_Activation_Server POA_FindPOA POA_Forwarding_IDL POA_Forwarding_Client POA_Forwarding_Server POA_Generic_Servant_Client POA_Identity POA_Loader_Server POA_MT_Servant_Locator POA_Nested_Non_Servant_Upcalls POA_NewPOA POA_Non_Servant_Upcalls POA_Object_Reactivation On_Demand_Act_D_Coll POA_On_Demand_Activation_Server POA_On_Demand_Loading_Server POA_POAManagerFactory POA_BiDir-target POA_POA_Destruction POA_IDL_Persistent_ID POA_Server_Persistent_ID POA_Client_Persistent_ID POA_Policies Reference_Counted_Servant_Server Reference_Counting_Server RootPOA_Server POA_Single_Threaded_POA POA_TIE_IDL POA_TIE_Server POA_TIE_Client POA_Wait_For_Completion
+all: POA_Generic_Servant_Lib POA_Adapter_Activator_Server Bug_1592_Regression_Idl Bug_1592_Regression_Client Bug_1592_Regression_Server POA_Bug_2511_Regression POA_Current POA_DSI_IDL POA_DSI_Server POA_DSI_Client Deactivate_Object_Server POA_Default_Servant POA_Default_Servant_IDL POA_Default_Servant_Server POA_Default_Servant_Client EndpointPolicy_Idl EndpointPolicy_Client EndpointPolicy_Server POA_Etherealization POA_Excessive_Object_Deactivations Alt_Resource POA_Explicit_Activation_Server POA_FindPOA POA_Forwarding_IDL POA_Forwarding_Client POA_Forwarding_Server POA_Generic_Servant_Client POA_Identity POA_Loader_Server POA_MT_Servant_Locator POA_Nested_Non_Servant_Upcalls POA_NewPOA POA_Non_Servant_Upcalls POA_Object_Reactivation On_Demand_Act_D_Coll POA_On_Demand_Activation_Server POA_On_Demand_Loading_Server POA_POAManagerFactory POA_BiDir-target POA_POA_Destruction POA_IDL_Persistent_ID POA_Server_Persistent_ID POA_Client_Persistent_ID POA_Policies Reference_Counted_Servant_Server Reference_Counting_Server RootPOA_Server POA_Single_Threaded_POA POA_TIE_IDL POA_TIE_Client POA_TIE_Server POA_Wait_For_Completion
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -28,13 +28,13 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Generic_Servant && $(MAKE) -f GNUmakefile.POA_Generic_Servant_Lib $(@)
 	$(KEEP_GOING)@cd Adapter_Activator && $(MAKE) -f GNUmakefile.POA_Adapter_Activator_Server $(@)
 	$(KEEP_GOING)@cd Bug_1592_Regression && $(MAKE) -f GNUmakefile.Bug_1592_Regression_Idl $(@)
-	$(KEEP_GOING)@cd Bug_1592_Regression && $(MAKE) -f GNUmakefile.Bug_1592_Regression_Server $(@)
 	$(KEEP_GOING)@cd Bug_1592_Regression && $(MAKE) -f GNUmakefile.Bug_1592_Regression_Client $(@)
+	$(KEEP_GOING)@cd Bug_1592_Regression && $(MAKE) -f GNUmakefile.Bug_1592_Regression_Server $(@)
 	$(KEEP_GOING)@cd Bug_2511_Regression && $(MAKE) -f GNUmakefile.POA_Bug_2511_Regression $(@)
 	$(KEEP_GOING)@cd Current && $(MAKE) -f GNUmakefile.POA_Current $(@)
 	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.POA_DSI_IDL $(@)
-	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.POA_DSI_Client $(@)
 	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.POA_DSI_Server $(@)
+	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.POA_DSI_Client $(@)
 	$(KEEP_GOING)@cd Deactivate_Object && $(MAKE) -f GNUmakefile.Deactivate_Object_Server $(@)
 	$(KEEP_GOING)@cd Default_Servant && $(MAKE) -f GNUmakefile.POA_Default_Servant $(@)
 	$(KEEP_GOING)@cd Default_Servant2 && $(MAKE) -f GNUmakefile.POA_Default_Servant_IDL $(@)
@@ -74,8 +74,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd RootPOA && $(MAKE) -f GNUmakefile.RootPOA_Server $(@)
 	$(KEEP_GOING)@cd Single_Threaded_POA && $(MAKE) -f GNUmakefile.POA_Single_Threaded_POA $(@)
 	$(KEEP_GOING)@cd TIE && $(MAKE) -f GNUmakefile.POA_TIE_IDL $(@)
-	$(KEEP_GOING)@cd TIE && $(MAKE) -f GNUmakefile.POA_TIE_Server $(@)
 	$(KEEP_GOING)@cd TIE && $(MAKE) -f GNUmakefile.POA_TIE_Client $(@)
+	$(KEEP_GOING)@cd TIE && $(MAKE) -f GNUmakefile.POA_TIE_Server $(@)
 	$(KEEP_GOING)@cd wait_for_completion && $(MAKE) -f GNUmakefile.POA_Wait_For_Completion $(@)
 
 .PHONY: POA_Generic_Servant_Lib
@@ -90,13 +90,13 @@ POA_Adapter_Activator_Server: POA_Generic_Servant_Lib
 Bug_1592_Regression_Idl:
 	$(KEEP_GOING)@cd Bug_1592_Regression && $(MAKE) -f GNUmakefile.Bug_1592_Regression_Idl all
 
-.PHONY: Bug_1592_Regression_Server
-Bug_1592_Regression_Server: Bug_1592_Regression_Idl
-	$(KEEP_GOING)@cd Bug_1592_Regression && $(MAKE) -f GNUmakefile.Bug_1592_Regression_Server all
-
 .PHONY: Bug_1592_Regression_Client
-Bug_1592_Regression_Client: Bug_1592_Regression_Idl Bug_1592_Regression_Server
+Bug_1592_Regression_Client: Bug_1592_Regression_Idl
 	$(KEEP_GOING)@cd Bug_1592_Regression && $(MAKE) -f GNUmakefile.Bug_1592_Regression_Client all
+
+.PHONY: Bug_1592_Regression_Server
+Bug_1592_Regression_Server: Bug_1592_Regression_Idl Bug_1592_Regression_Client
+	$(KEEP_GOING)@cd Bug_1592_Regression && $(MAKE) -f GNUmakefile.Bug_1592_Regression_Server all
 
 .PHONY: POA_Bug_2511_Regression
 POA_Bug_2511_Regression:
@@ -110,13 +110,13 @@ POA_Current:
 POA_DSI_IDL:
 	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.POA_DSI_IDL all
 
-.PHONY: POA_DSI_Client
-POA_DSI_Client: POA_DSI_IDL
-	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.POA_DSI_Client all
-
 .PHONY: POA_DSI_Server
-POA_DSI_Server: POA_DSI_IDL POA_DSI_Client
+POA_DSI_Server: POA_DSI_IDL
 	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.POA_DSI_Server all
+
+.PHONY: POA_DSI_Client
+POA_DSI_Client: POA_DSI_IDL POA_DSI_Server
+	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.POA_DSI_Client all
 
 .PHONY: Deactivate_Object_Server
 Deactivate_Object_Server:
@@ -274,13 +274,13 @@ POA_Single_Threaded_POA:
 POA_TIE_IDL:
 	$(KEEP_GOING)@cd TIE && $(MAKE) -f GNUmakefile.POA_TIE_IDL all
 
-.PHONY: POA_TIE_Server
-POA_TIE_Server: POA_TIE_IDL
-	$(KEEP_GOING)@cd TIE && $(MAKE) -f GNUmakefile.POA_TIE_Server all
-
 .PHONY: POA_TIE_Client
-POA_TIE_Client: POA_TIE_IDL POA_TIE_Server
+POA_TIE_Client: POA_TIE_IDL
 	$(KEEP_GOING)@cd TIE && $(MAKE) -f GNUmakefile.POA_TIE_Client all
+
+.PHONY: POA_TIE_Server
+POA_TIE_Server: POA_TIE_IDL POA_TIE_Client
+	$(KEEP_GOING)@cd TIE && $(MAKE) -f GNUmakefile.POA_TIE_Server all
 
 .PHONY: POA_Wait_For_Completion
 POA_Wait_For_Completion:

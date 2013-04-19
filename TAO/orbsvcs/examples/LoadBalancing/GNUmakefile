@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: LoadBalancing_Idl LoadBalancing_Client LoadBalancing_Server
+all: LoadBalancing_Idl LoadBalancing_Server LoadBalancing_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.LoadBalancing_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.LoadBalancing_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.LoadBalancing_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.LoadBalancing_Client $(@)
 
 .PHONY: LoadBalancing_Idl
 LoadBalancing_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.LoadBalancing_Idl all
 
-.PHONY: LoadBalancing_Client
-LoadBalancing_Client: LoadBalancing_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.LoadBalancing_Client all
-
 .PHONY: LoadBalancing_Server
-LoadBalancing_Server: LoadBalancing_Idl LoadBalancing_Client
+LoadBalancing_Server: LoadBalancing_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.LoadBalancing_Server all
+
+.PHONY: LoadBalancing_Client
+LoadBalancing_Client: LoadBalancing_Idl LoadBalancing_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.LoadBalancing_Client all
 
 project_name_list:
 	@echo LoadBalancing_Client

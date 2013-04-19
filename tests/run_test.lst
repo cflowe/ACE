@@ -1,5 +1,5 @@
 
-# $Id: run_test.lst 96157 2012-09-27 06:33:47Z johnnyw $
+# $Id: run_test.lst 96220 2012-11-06 10:03:41Z mcorino $
 #
 # This is the list of tests that need to be run by run_test.pl.
 # Each line has its own test, and a test can be followed by a
@@ -142,6 +142,7 @@ Message_Block_Test: !ACE_FOR_TAO
 Message_Queue_Notifications_Test
 Message_Queue_Test: !ACE_FOR_TAO
 Message_Queue_Test_Ex: !ACE_FOR_TAO
+Monotonic_Manual_Event_Test
 Monotonic_Message_Queue_Test: !ACE_FOR_TAO
 Monotonic_Task_Test: !ACE_FOR_TAO
 Multicast_Test: !ST !NO_MCAST !nsk !LynxOS !LabVIEW_RT

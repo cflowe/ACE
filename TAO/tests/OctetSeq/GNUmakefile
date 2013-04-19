@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,31 +20,31 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: OctetSeq_Idl OctetSeq_Server OctetSeq_Client OctetSeq_OctetSeq
+all: OctetSeq_Idl OctetSeq_Client OctetSeq_OctetSeq OctetSeq_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_OctetSeq $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_Server $(@)
 
 .PHONY: OctetSeq_Idl
 OctetSeq_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_Idl all
 
-.PHONY: OctetSeq_Server
-OctetSeq_Server: OctetSeq_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_Server all
-
 .PHONY: OctetSeq_Client
-OctetSeq_Client: OctetSeq_Idl OctetSeq_Server
+OctetSeq_Client: OctetSeq_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_Client all
 
 .PHONY: OctetSeq_OctetSeq
-OctetSeq_OctetSeq: OctetSeq_Idl OctetSeq_Server
+OctetSeq_OctetSeq: OctetSeq_Idl OctetSeq_Client
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_OctetSeq all
+
+.PHONY: OctetSeq_Server
+OctetSeq_Server: OctetSeq_Idl OctetSeq_Client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.OctetSeq_Server all
 
 project_name_list:
 	@echo OctetSeq_Client

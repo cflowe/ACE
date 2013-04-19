@@ -419,9 +419,6 @@
 				RelativePath="Atomic_Op_Sparc.c">
 			</File>
 			<File
-				RelativePath="Auto_Event.cpp">
-			</File>
-			<File
 				RelativePath="Barrier.cpp">
 			</File>
 			<File
@@ -539,7 +536,7 @@
 				RelativePath="Encoding_Converter_Factory.cpp">
 			</File>
 			<File
-				RelativePath="Event.cpp">
+				RelativePath="Event_Base.cpp">
 			</File>
 			<File
 				RelativePath="Event_Handler.cpp">
@@ -690,9 +687,6 @@
 			</File>
 			<File
 				RelativePath="Malloc_Allocator.cpp">
-			</File>
-			<File
-				RelativePath="Manual_Event.cpp">
 			</File>
 			<File
 				RelativePath="MEM_Acceptor.cpp">
@@ -1530,6 +1524,9 @@
 				RelativePath="config-macosx-lion.h">
 			</File>
 			<File
+				RelativePath="config-macosx-mountain-lion.h">
+			</File>
+			<File
 				RelativePath="config-macosx-panther.h">
 			</File>
 			<File
@@ -1756,6 +1753,9 @@
 			</File>
 			<File
 				RelativePath="Event.h">
+			</File>
+			<File
+				RelativePath="Event_Base.h">
 			</File>
 			<File
 				RelativePath="Event_Handler.h">
@@ -3881,6 +3881,9 @@
 				RelativePath="Event.inl">
 			</File>
 			<File
+				RelativePath="Event_Base.inl">
+			</File>
+			<File
 				RelativePath="Event_Handler.inl">
 			</File>
 			<File
@@ -4857,6 +4860,33 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath="Auto_Event.cpp">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+			</File>
+			<File
 				RelativePath="Auto_Functor.cpp">
 				<FileConfiguration
 					Name="Debug|Win32"
@@ -5263,6 +5293,33 @@
 			</File>
 			<File
 				RelativePath="Env_Value_T.cpp">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Event.cpp">
 				<FileConfiguration
 					Name="Debug|Win32"
 					ExcludedFromBuild="true">
@@ -5803,6 +5860,33 @@
 			</File>
 			<File
 				RelativePath="Managed_Object.cpp">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true">
+					<Tool
+						Name="VCCLCompilerTool"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="Manual_Event.cpp">
 				<FileConfiguration
 					Name="Debug|Win32"
 					ExcludedFromBuild="true">

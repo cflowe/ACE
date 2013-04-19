@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,15 +20,15 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: ORT_Idl ORT_Client ORT_Server ORT_Gateway
+all: ORT_Idl ORT_Client ORT_Gateway ORT_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ORT_Idl $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ORT_Client $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ORT_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ORT_Gateway $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ORT_Server $(@)
 
 .PHONY: ORT_Idl
 ORT_Idl:
@@ -38,13 +38,13 @@ ORT_Idl:
 ORT_Client: ORT_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ORT_Client all
 
-.PHONY: ORT_Server
-ORT_Server: ORT_Idl ORT_Client
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ORT_Server all
-
 .PHONY: ORT_Gateway
-ORT_Gateway: ORT_Idl ORT_Server
+ORT_Gateway: ORT_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ORT_Gateway all
+
+.PHONY: ORT_Server
+ORT_Server: ORT_Idl ORT_Client ORT_Gateway
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ORT_Server all
 
 project_name_list:
 	@echo ORT_Client

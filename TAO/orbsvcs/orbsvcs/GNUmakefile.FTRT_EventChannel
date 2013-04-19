@@ -27,40 +27,40 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FTRT_EventChannel = \
-  FtRtEvent/EventChannel/ProxySupplierStateWorker.cpp \
-  FtRtEvent/EventChannel/FTEC_ORBInitializer.cpp \
-  FtRtEvent/EventChannel/FTEC_ProxySupplier.cpp \
-  FtRtEvent/EventChannel/Identification_Service.cpp \
-  FtRtEvent/EventChannel/Update_Manager.cpp \
+  FtRtEvent/EventChannel/replace_key.cpp \
+  FtRtEvent/EventChannel/create_persistent_poa.cpp \
+  FtRtEvent/EventChannel/AMI_Primary_Replication_Strategy.cpp \
+  FtRtEvent/EventChannel/AMI_Replication_Strategy.cpp \
+  FtRtEvent/EventChannel/FTEC_Factory.cpp \
   FtRtEvent/EventChannel/Replication_Strategy.cpp \
   FtRtEvent/EventChannel/Basic_Replication_Strategy.cpp \
+  FtRtEvent/EventChannel/Fault_Detector_Loader.cpp \
+  FtRtEvent/EventChannel/UpdateableHandler.cpp \
+  FtRtEvent/EventChannel/FTEC_ConsumerAdmin.cpp \
+  FtRtEvent/EventChannel/ProxySupplierStateWorker.cpp \
+  FtRtEvent/EventChannel/Update_Manager.cpp \
+  FtRtEvent/EventChannel/Replication_Service.cpp \
+  FtRtEvent/EventChannel/ObjectGroupManagerHandler.cpp \
+  FtRtEvent/EventChannel/ForwardCtrlServerInterceptor.cpp \
+  FtRtEvent/EventChannel/Identification_Service.cpp \
+  FtRtEvent/EventChannel/FTEC_ProxySupplier.cpp \
+  FtRtEvent/EventChannel/ProxyConsumerStateWorker.cpp \
+  FtRtEvent/EventChannel/FtEventServiceInterceptor.cpp \
+  FtRtEvent/EventChannel/IOGR_Maker.cpp \
   FtRtEvent/EventChannel/FT_ProxyAdmin_Base.cpp \
   FtRtEvent/EventChannel/FTEC_ProxyConsumer.cpp \
-  FtRtEvent/EventChannel/FTEC_Become_Primary_Listener.cpp \
-  FtRtEvent/EventChannel/ProxyConsumerStateWorker.cpp \
-  FtRtEvent/EventChannel/replace_key.cpp \
+  FtRtEvent/EventChannel/Request_Context_Repository.cpp \
+  FtRtEvent/EventChannel/FTEC_ORBInitializer.cpp \
+  FtRtEvent/EventChannel/Set_Update_Interceptor.cpp \
   FtRtEvent/EventChannel/FTEC_Event_Channel.cpp \
   FtRtEvent/EventChannel/Dynamic_Bitset.cpp \
-  FtRtEvent/EventChannel/IOGR_Maker.cpp \
-  FtRtEvent/EventChannel/ForwardCtrlServerInterceptor.cpp \
-  FtRtEvent/EventChannel/FTEC_Group_Manager.cpp \
-  FtRtEvent/EventChannel/create_persistent_poa.cpp \
-  FtRtEvent/EventChannel/SCTP_Fault_Detector.cpp \
-  FtRtEvent/EventChannel/Fault_Detector.cpp \
-  FtRtEvent/EventChannel/Set_Update_Interceptor.cpp \
-  FtRtEvent/EventChannel/Request_Context_Repository.cpp \
-  FtRtEvent/EventChannel/AMI_Primary_Replication_Strategy.cpp \
-  FtRtEvent/EventChannel/Fault_Detector_Loader.cpp \
-  FtRtEvent/EventChannel/ObjectGroupManagerHandler.cpp \
-  FtRtEvent/EventChannel/UpdateableHandler.cpp \
-  FtRtEvent/EventChannel/FTEC_Event_Channel_Impl.cpp \
-  FtRtEvent/EventChannel/Replication_Service.cpp \
   FtRtEvent/EventChannel/FTEC_SupplierAdmin.cpp \
-  FtRtEvent/EventChannel/FtEventServiceInterceptor.cpp \
+  FtRtEvent/EventChannel/SCTP_Fault_Detector.cpp \
+  FtRtEvent/EventChannel/FTEC_Group_Manager.cpp \
+  FtRtEvent/EventChannel/Fault_Detector.cpp \
+  FtRtEvent/EventChannel/FTEC_Become_Primary_Listener.cpp \
   FtRtEvent/EventChannel/GroupInfoPublisher.cpp \
-  FtRtEvent/EventChannel/AMI_Replication_Strategy.cpp \
-  FtRtEvent/EventChannel/FTEC_ConsumerAdmin.cpp \
-  FtRtEvent/EventChannel/FTEC_Factory.cpp
+  FtRtEvent/EventChannel/FTEC_Event_Channel_Impl.cpp
 
 default_group = \
 
@@ -339,7 +339,7 @@ else
 	$(INSTALLER) -i -s $(subst $(SPACE),$(COMMA),$(INST_TAGS)) \
 	  $(INST_LOCATIONS) $(if $(ARCH),-d $(ARCH)) $(PRJINST_OPTIONS) \
 	  $(DESTDIR)$(INSTALL_PREFIX)
-	$(ACE_ROOT)/bin/ace_install_pkgconfig.pl TAO_FaultTolerance.pc.in TAO_CosProperty.pc.in TAO_Svc_Utils.pc.in TAO_FT_ServerORB.pc.in TAO_DsEventLogAdmin_Serv.pc.in TAO_CosEvent_Serv.pc.in TAO_CosTrading.pc.in TAO_CosConcurrency.pc.in TAO_CosTime_Serv.pc.in TAO_RTEventLogAdmin.pc.in TAO_CosProperty_Skel.pc.in TAO_CosProperty_Serv.pc.in TAO_CosTime.pc.in TAO_RTEventLogAdmin_Skel.pc.in TAO_CosConcurrency_Skel.pc.in TAO_RTEventLogAdmin_Serv.pc.in TAO_CosNotification_Serv.pc.in TAO_CosConcurrency_Serv.pc.in TAO_CosNaming_Skel.pc.in TAO_CosLifeCycle.pc.in TAO_CosTrading_Skel.pc.in TAO_RTEvent.pc.in TAO_DsEventLogAdmin_Skel.pc.in TAO_CosNaming.pc.in TAO_CosTrading_Serv.pc.in TAO_CosNotification.pc.in TAO_DsLogAdmin.pc.in TAO_DsLogAdmin_Skel.pc.in TAO_CosLifeCycle_Skel.pc.in TAO_DsNotifyLogAdmin_Serv.pc.in TAO_RTEvent_Skel.pc.in TAO_CosNaming_Serv.pc.in TAO_CosLoadBalancing.pc.in TAO_CosNotification_Skel.pc.in TAO_DsEventLogAdmin.pc.in TAO_PortableGroup.pc.in TAO_DsNotifyLogAdmin.pc.in TAO_RTEvent_Serv.pc.in TAO_FTORB_Utils.pc.in TAO_DsNotifyLogAdmin_Skel.pc.in TAO_CosEvent_Skel.pc.in TAO_DsLogAdmin_Serv.pc.in TAO_CosTime_Skel.pc.in TAO_FT_ClientORB.pc.in TAO_CosEvent.pc.in --destdir "$(DESTDIR)" --prefix $(INSTALL_PREFIX) --libdir $(INSTALL_LIB) --libs "$(LIBS)" --version $(GNUACE_PROJECT_VERSION)
+	$(ACE_ROOT)/bin/ace_install_pkgconfig.pl TAO_RTEvent_Serv.pc.in TAO_DsLogAdmin_Serv.pc.in TAO_CosNaming_Serv.pc.in TAO_FT_ServerORB.pc.in TAO_DsNotifyLogAdmin_Serv.pc.in TAO_CosEvent_Serv.pc.in TAO_DsEventLogAdmin.pc.in TAO_CosProperty_Skel.pc.in TAO_FTORB_Utils.pc.in TAO_RTEvent_Skel.pc.in TAO_Svc_Utils.pc.in TAO_CosNotification.pc.in TAO_CosNaming.pc.in TAO_RTEventLogAdmin.pc.in TAO_FaultTolerance.pc.in TAO_CosLifeCycle.pc.in TAO_PortableGroup.pc.in TAO_CosNotification_Serv.pc.in TAO_DsLogAdmin.pc.in TAO_RTEventLogAdmin_Serv.pc.in TAO_CosNaming_Skel.pc.in TAO_DsEventLogAdmin_Serv.pc.in TAO_CosEvent.pc.in TAO_CosProperty_Serv.pc.in TAO_DsNotifyLogAdmin_Skel.pc.in TAO_RTEvent.pc.in TAO_DsLogAdmin_Skel.pc.in TAO_FT_ClientORB.pc.in TAO_DsNotifyLogAdmin.pc.in TAO_CosConcurrency.pc.in TAO_CosTime_Skel.pc.in TAO_CosTime.pc.in TAO_RTEventLogAdmin_Skel.pc.in TAO_CosNotification_Skel.pc.in TAO_CosTrading_Skel.pc.in TAO_CosLoadBalancing.pc.in TAO_CosTrading_Serv.pc.in TAO_CosConcurrency_Serv.pc.in TAO_CosTrading.pc.in TAO_CosEvent_Skel.pc.in TAO_CosProperty.pc.in TAO_CosTime_Serv.pc.in TAO_CosLifeCycle_Skel.pc.in TAO_DsEventLogAdmin_Skel.pc.in TAO_CosConcurrency_Skel.pc.in --destdir "$(DESTDIR)" --prefix $(INSTALL_PREFIX) --libdir $(INSTALL_LIB) --libs "$(LIBS)" --version $(GNUACE_PROJECT_VERSION)
 endif
 endif
 endif
@@ -348,45 +348,45 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
+#PortableGroup.mpc
 #CosConcurrency.mpc
-#IFRService.mpc
-#CosTime.mpc
-#CosNotification.mpc
-#HTIOP.mpc
-#RTEventLogAdmin.mpc
-#CosEvent.mpc
-#RTCORBAEvent.mpc
+#FtRtEvent.mpc
 #DsNotifyLogAdmin.mpc
-#DsEventLogAdmin.mpc
-#FTORB.mpc
+#CosProperty.mpc
+#RTEvent_Skel.mpc
+#CosNaming_Serv.mpc
+#CosTrading.mpc
 #RTEvent.mpc
 #DsLogAdmin.mpc
-#RT_Notification.mpc
+#CosNotification.mpc
+#DsEventLogAdmin.mpc
+#RTKokyuEvent.mpc
 #SSLIOP.mpc
-#CosProperty.mpc
-#CosLifeCycle.mpc
-#RTSched.mpc
-#FtRtEvent.mpc
-#CosNaming_Serv.mpc
-#CosNaming.mpc
+#RTCORBAEvent.mpc
+#RTSchedEvent.mpc
 #CosNaming_Skel.mpc
-#CosTrading.mpc
+#FTORB.mpc
+#RTEventLogAdmin.mpc
+#HTIOP.mpc
+#CosEvent.mpc
+#CosNaming.mpc
+#RTEvent_Serv.mpc
 #CosLoadBalancing.mpc
 #AV.mpc
-#RTSchedEvent.mpc
-#RTKokyuEvent.mpc
 #FaultTolerance.mpc
 #Svc_Utils.mpc
-#PortableGroup.mpc
-#RTEvent_Skel.mpc
-#RTEvent_Serv.mpc
 #Security.mpc
-#ec_typed_events_skel.mpb
-#ssliop_params_dup.mpb
-#cosnaming_serv_persistence.mpb
-#ec_typed_events_serv.mpb
-#ec_typed_events_idl.mpb
+#CosTime.mpc
+#RT_Notification.mpc
+#CosLifeCycle.mpc
+#RTSched.mpc
+#IFRService.mpc
 #ec_typed_events.mpb
+#ssliop_params_dup.mpb
+#ec_typed_events_skel.mpb
+#ec_typed_events_idl.mpb
+#ec_typed_events_serv.mpb
+#cosnaming_serv_persistence.mpb
 #orbsvcs.mwc
 #
 #inline_files:
@@ -395,23 +395,23 @@ endif
 #header_files:
 #FtRtEvent/EventChannel/FTEC_ProxyConsumer.h
 #FtRtEvent/EventChannel/IOGR_Maker.h
-#FtRtEvent/EventChannel/Request_Context_Repository.h
 #FtRtEvent/EventChannel/FTEC_Event_Channel.h
+#FtRtEvent/EventChannel/Request_Context_Repository.h
 #FtRtEvent/EventChannel/ProxySupplierStateWorker.h
-#FtRtEvent/EventChannel/FTEC_ConsumerAdmin.h
 #FtRtEvent/EventChannel/Fault_Detector.h
 #FtRtEvent/EventChannel/Update_Manager.h
+#FtRtEvent/EventChannel/FTEC_ConsumerAdmin.h
 #FtRtEvent/EventChannel/Basic_Replication_Strategy.h
 #FtRtEvent/EventChannel/FTEC_ORBInitializer.h
 #FtRtEvent/EventChannel/Replication_Service.h
 #FtRtEvent/EventChannel/FTEC_SupplierAdmin.h
 #FtRtEvent/EventChannel/create_persistent_poa.h
 #FtRtEvent/EventChannel/GroupInfoPublisher.h
-#FtRtEvent/EventChannel/FtEventServiceInterceptor.h
-#FtRtEvent/EventChannel/Dynamic_Bitset.h
 #FtRtEvent/EventChannel/FTEC_Group_Manager.h
-#FtRtEvent/EventChannel/FTEC_Factory.h
+#FtRtEvent/EventChannel/Dynamic_Bitset.h
+#FtRtEvent/EventChannel/FtEventServiceInterceptor.h
 #FtRtEvent/EventChannel/FTEC_Event_Channel_Impl.h
+#FtRtEvent/EventChannel/FTEC_Factory.h
 #FtRtEvent/EventChannel/Replication_Strategy.h
 #FtRtEvent/EventChannel/UpdateableHandler.h
 #FtRtEvent/EventChannel/AMI_Replication_Strategy.h
@@ -434,87 +434,87 @@ endif
 #FtRtEvent/EventChannel/FT_ProxyAdmin_T.h
 #
 #pkgconfig_files:
-#TAO_FaultTolerance.pc.in
-#TAO_CosProperty.pc.in
-#TAO_Svc_Utils.pc.in
+#TAO_RTEvent_Serv.pc.in
+#TAO_DsLogAdmin_Serv.pc.in
+#TAO_CosNaming_Serv.pc.in
 #TAO_FT_ServerORB.pc.in
-#TAO_DsEventLogAdmin_Serv.pc.in
+#TAO_DsNotifyLogAdmin_Serv.pc.in
 #TAO_CosEvent_Serv.pc.in
-#TAO_CosTrading.pc.in
-#TAO_CosConcurrency.pc.in
-#TAO_CosTime_Serv.pc.in
-#TAO_RTEventLogAdmin.pc.in
+#TAO_DsEventLogAdmin.pc.in
 #TAO_CosProperty_Skel.pc.in
+#TAO_FTORB_Utils.pc.in
+#TAO_RTEvent_Skel.pc.in
+#TAO_Svc_Utils.pc.in
+#TAO_CosNotification.pc.in
+#TAO_CosNaming.pc.in
+#TAO_RTEventLogAdmin.pc.in
+#TAO_FaultTolerance.pc.in
+#TAO_CosLifeCycle.pc.in
+#TAO_PortableGroup.pc.in
+#TAO_CosNotification_Serv.pc.in
+#TAO_DsLogAdmin.pc.in
+#TAO_RTEventLogAdmin_Serv.pc.in
+#TAO_CosNaming_Skel.pc.in
+#TAO_DsEventLogAdmin_Serv.pc.in
+#TAO_CosEvent.pc.in
 #TAO_CosProperty_Serv.pc.in
+#TAO_DsNotifyLogAdmin_Skel.pc.in
+#TAO_RTEvent.pc.in
+#TAO_DsLogAdmin_Skel.pc.in
+#TAO_FT_ClientORB.pc.in
+#TAO_DsNotifyLogAdmin.pc.in
+#TAO_CosConcurrency.pc.in
+#TAO_CosTime_Skel.pc.in
 #TAO_CosTime.pc.in
 #TAO_RTEventLogAdmin_Skel.pc.in
-#TAO_CosConcurrency_Skel.pc.in
-#TAO_RTEventLogAdmin_Serv.pc.in
-#TAO_CosNotification_Serv.pc.in
-#TAO_CosConcurrency_Serv.pc.in
-#TAO_CosNaming_Skel.pc.in
-#TAO_CosLifeCycle.pc.in
-#TAO_CosTrading_Skel.pc.in
-#TAO_RTEvent.pc.in
-#TAO_DsEventLogAdmin_Skel.pc.in
-#TAO_CosNaming.pc.in
-#TAO_CosTrading_Serv.pc.in
-#TAO_CosNotification.pc.in
-#TAO_DsLogAdmin.pc.in
-#TAO_DsLogAdmin_Skel.pc.in
-#TAO_CosLifeCycle_Skel.pc.in
-#TAO_DsNotifyLogAdmin_Serv.pc.in
-#TAO_RTEvent_Skel.pc.in
-#TAO_CosNaming_Serv.pc.in
-#TAO_CosLoadBalancing.pc.in
 #TAO_CosNotification_Skel.pc.in
-#TAO_DsEventLogAdmin.pc.in
-#TAO_PortableGroup.pc.in
-#TAO_DsNotifyLogAdmin.pc.in
-#TAO_RTEvent_Serv.pc.in
-#TAO_FTORB_Utils.pc.in
-#TAO_DsNotifyLogAdmin_Skel.pc.in
+#TAO_CosTrading_Skel.pc.in
+#TAO_CosLoadBalancing.pc.in
+#TAO_CosTrading_Serv.pc.in
+#TAO_CosConcurrency_Serv.pc.in
+#TAO_CosTrading.pc.in
 #TAO_CosEvent_Skel.pc.in
-#TAO_DsLogAdmin_Serv.pc.in
-#TAO_CosTime_Skel.pc.in
-#TAO_FT_ClientORB.pc.in
-#TAO_CosEvent.pc.in
+#TAO_CosProperty.pc.in
+#TAO_CosTime_Serv.pc.in
+#TAO_CosLifeCycle_Skel.pc.in
+#TAO_DsEventLogAdmin_Skel.pc.in
+#TAO_CosConcurrency_Skel.pc.in
 #
 #source_files:
-#FtRtEvent/EventChannel/ProxySupplierStateWorker.cpp
-#FtRtEvent/EventChannel/FTEC_ORBInitializer.cpp
-#FtRtEvent/EventChannel/FTEC_ProxySupplier.cpp
-#FtRtEvent/EventChannel/Identification_Service.cpp
-#FtRtEvent/EventChannel/Update_Manager.cpp
+#FtRtEvent/EventChannel/replace_key.cpp
+#FtRtEvent/EventChannel/create_persistent_poa.cpp
+#FtRtEvent/EventChannel/AMI_Primary_Replication_Strategy.cpp
+#FtRtEvent/EventChannel/AMI_Replication_Strategy.cpp
+#FtRtEvent/EventChannel/FTEC_Factory.cpp
 #FtRtEvent/EventChannel/Replication_Strategy.cpp
 #FtRtEvent/EventChannel/Basic_Replication_Strategy.cpp
+#FtRtEvent/EventChannel/Fault_Detector_Loader.cpp
+#FtRtEvent/EventChannel/UpdateableHandler.cpp
+#FtRtEvent/EventChannel/FTEC_ConsumerAdmin.cpp
+#FtRtEvent/EventChannel/ProxySupplierStateWorker.cpp
+#FtRtEvent/EventChannel/Update_Manager.cpp
+#FtRtEvent/EventChannel/Replication_Service.cpp
+#FtRtEvent/EventChannel/ObjectGroupManagerHandler.cpp
+#FtRtEvent/EventChannel/ForwardCtrlServerInterceptor.cpp
+#FtRtEvent/EventChannel/Identification_Service.cpp
+#FtRtEvent/EventChannel/FTEC_ProxySupplier.cpp
+#FtRtEvent/EventChannel/ProxyConsumerStateWorker.cpp
+#FtRtEvent/EventChannel/FtEventServiceInterceptor.cpp
+#FtRtEvent/EventChannel/IOGR_Maker.cpp
 #FtRtEvent/EventChannel/FT_ProxyAdmin_Base.cpp
 #FtRtEvent/EventChannel/FTEC_ProxyConsumer.cpp
-#FtRtEvent/EventChannel/FTEC_Become_Primary_Listener.cpp
-#FtRtEvent/EventChannel/ProxyConsumerStateWorker.cpp
-#FtRtEvent/EventChannel/replace_key.cpp
+#FtRtEvent/EventChannel/Request_Context_Repository.cpp
+#FtRtEvent/EventChannel/FTEC_ORBInitializer.cpp
+#FtRtEvent/EventChannel/Set_Update_Interceptor.cpp
 #FtRtEvent/EventChannel/FTEC_Event_Channel.cpp
 #FtRtEvent/EventChannel/Dynamic_Bitset.cpp
-#FtRtEvent/EventChannel/IOGR_Maker.cpp
-#FtRtEvent/EventChannel/ForwardCtrlServerInterceptor.cpp
-#FtRtEvent/EventChannel/FTEC_Group_Manager.cpp
-#FtRtEvent/EventChannel/create_persistent_poa.cpp
-#FtRtEvent/EventChannel/SCTP_Fault_Detector.cpp
-#FtRtEvent/EventChannel/Fault_Detector.cpp
-#FtRtEvent/EventChannel/Set_Update_Interceptor.cpp
-#FtRtEvent/EventChannel/Request_Context_Repository.cpp
-#FtRtEvent/EventChannel/AMI_Primary_Replication_Strategy.cpp
-#FtRtEvent/EventChannel/Fault_Detector_Loader.cpp
-#FtRtEvent/EventChannel/ObjectGroupManagerHandler.cpp
-#FtRtEvent/EventChannel/UpdateableHandler.cpp
-#FtRtEvent/EventChannel/FTEC_Event_Channel_Impl.cpp
-#FtRtEvent/EventChannel/Replication_Service.cpp
 #FtRtEvent/EventChannel/FTEC_SupplierAdmin.cpp
-#FtRtEvent/EventChannel/FtEventServiceInterceptor.cpp
+#FtRtEvent/EventChannel/SCTP_Fault_Detector.cpp
+#FtRtEvent/EventChannel/FTEC_Group_Manager.cpp
+#FtRtEvent/EventChannel/Fault_Detector.cpp
+#FtRtEvent/EventChannel/FTEC_Become_Primary_Listener.cpp
 #FtRtEvent/EventChannel/GroupInfoPublisher.cpp
-#FtRtEvent/EventChannel/AMI_Replication_Strategy.cpp
-#FtRtEvent/EventChannel/FTEC_ConsumerAdmin.cpp
-#FtRtEvent/EventChannel/FTEC_Factory.cpp
+#FtRtEvent/EventChannel/FTEC_Event_Channel_Impl.cpp
 #
 #template_files:
 #FtRtEvent/EventChannel/ConnectionHandler_T.cpp

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Muxing_Idl Muxing_Server Muxing_Client
+all: Muxing_Idl Muxing_Client Muxing_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Muxing_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Muxing_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Muxing_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Muxing_Server $(@)
 
 .PHONY: Muxing_Idl
 Muxing_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Muxing_Idl all
 
-.PHONY: Muxing_Server
-Muxing_Server: Muxing_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Muxing_Server all
-
 .PHONY: Muxing_Client
-Muxing_Client: Muxing_Idl Muxing_Server
+Muxing_Client: Muxing_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Muxing_Client all
+
+.PHONY: Muxing_Server
+Muxing_Server: Muxing_Idl Muxing_Client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Muxing_Server all
 
 project_name_list:
 	@echo Muxing_Client

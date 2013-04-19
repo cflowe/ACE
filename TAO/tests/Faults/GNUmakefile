@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Faults_Idl Faults_Client Faults_Middle Faults_Ping Faults_Pong Faults_Server
+all: Faults_Idl Faults_Client Faults_Middle Faults_Pong Faults_Ping Faults_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -28,8 +28,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Idl $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Middle $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Ping $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Pong $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Ping $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Server $(@)
 
 .PHONY: Faults_Idl
@@ -44,13 +44,13 @@ Faults_Client: Faults_Idl
 Faults_Middle: Faults_Idl Faults_Client
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Middle all
 
-.PHONY: Faults_Ping
-Faults_Ping: Faults_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Ping all
-
 .PHONY: Faults_Pong
-Faults_Pong: Faults_Idl Faults_Ping
+Faults_Pong: Faults_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Pong all
+
+.PHONY: Faults_Ping
+Faults_Ping: Faults_Idl Faults_Pong
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Faults_Ping all
 
 .PHONY: Faults_Server
 Faults_Server: Faults_Idl Faults_Client

@@ -27,27 +27,27 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  CSD_TP_Strategy.cpp \
-  CSD_TP_Custom_Request_Operation.cpp \
-  CSD_TP_Custom_Asynch_Request.cpp \
-  CSD_TP_Collocated_Synch_With_Server_Request.cpp \
-  CSD_TP_Custom_Request.cpp \
-  CSD_TP_Collocated_Asynch_Request.cpp \
-  CSD_TP_Custom_Synch_Request.cpp \
-  CSD_TP_Queue.cpp \
-  CSD_TP_Corba_Request.cpp \
-  CSD_TP_Servant_State.cpp \
-  CSD_TP_Strategy_Factory.cpp \
-  CSD_TP_Servant_State_Map.cpp \
-  CSD_TP_Collocated_Synch_Request.cpp \
-  CSD_TP_Queue_Visitor.cpp \
-  CSD_TP_Task.cpp \
-  CSD_TP_Remote_Request.cpp \
-  CSD_TP_Synch_Helper.cpp \
-  CSD_ThreadPool.cpp \
   CSD_TP_Cancel_Visitor.cpp \
   CSD_TP_Dispatchable_Visitor.cpp \
-  CSD_TP_Request.cpp
+  CSD_TP_Strategy.cpp \
+  CSD_TP_Queue.cpp \
+  CSD_TP_Collocated_Asynch_Request.cpp \
+  CSD_TP_Custom_Request_Operation.cpp \
+  CSD_TP_Custom_Asynch_Request.cpp \
+  CSD_TP_Queue_Visitor.cpp \
+  CSD_TP_Collocated_Synch_Request.cpp \
+  CSD_TP_Corba_Request.cpp \
+  CSD_TP_Custom_Request.cpp \
+  CSD_TP_Collocated_Synch_With_Server_Request.cpp \
+  CSD_TP_Request.cpp \
+  CSD_TP_Task.cpp \
+  CSD_TP_Strategy_Factory.cpp \
+  CSD_TP_Custom_Synch_Request.cpp \
+  CSD_TP_Servant_State.cpp \
+  CSD_ThreadPool.cpp \
+  CSD_TP_Synch_Helper.cpp \
+  CSD_TP_Servant_State_Map.cpp \
+  CSD_TP_Remote_Request.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -268,8 +268,8 @@ endif
 #CSD_TP_Custom_Synch_Request.inl
 #CSD_TP_Dispatchable_Visitor.inl
 #CSD_TP_Custom_Asynch_Request.inl
-#CSD_TP_Queue.inl
 #CSD_TP_Corba_Request.inl
+#CSD_TP_Queue.inl
 #CSD_TP_Custom_Request_Operation.inl
 #CSD_TP_Cancel_Visitor.inl
 #CSD_TP_Synch_Helper.inl
@@ -278,8 +278,8 @@ endif
 #CSD_TP_Collocated_Synch_With_Server_Request.inl
 #CSD_TP_Queue_Visitor.inl
 #CSD_TP_Task.inl
-#CSD_TP_Request.inl
 #CSD_TP_Collocated_Synch_Request.inl
+#CSD_TP_Request.inl
 #CSD_TP_Strategy.inl
 #CSD_TP_Collocated_Asynch_Request.inl
 #
@@ -289,8 +289,8 @@ endif
 #CSD_TP_Custom_Synch_Request.h
 #CSD_TP_Dispatchable_Visitor.h
 #CSD_TP_Custom_Asynch_Request.h
-#CSD_TP_Queue.h
 #CSD_TP_Corba_Request.h
+#CSD_TP_Queue.h
 #CSD_TP_Custom_Request_Operation.h
 #CSD_ThreadPool.h
 #CSD_TP_Cancel_Visitor.h
@@ -300,8 +300,8 @@ endif
 #CSD_TP_Collocated_Synch_With_Server_Request.h
 #CSD_TP_Queue_Visitor.h
 #CSD_TP_Task.h
-#CSD_TP_Request.h
 #CSD_TP_Collocated_Synch_Request.h
+#CSD_TP_Request.h
 #CSD_TP_Strategy.h
 #CSD_TP_Collocated_Asynch_Request.h
 #CSD_TP_Strategy_Factory.h
@@ -311,27 +311,27 @@ endif
 #TAO_CSD_ThreadPool.pc.in
 #
 #source_files:
-#CSD_TP_Strategy.cpp
-#CSD_TP_Custom_Request_Operation.cpp
-#CSD_TP_Custom_Asynch_Request.cpp
-#CSD_TP_Collocated_Synch_With_Server_Request.cpp
-#CSD_TP_Custom_Request.cpp
-#CSD_TP_Collocated_Asynch_Request.cpp
-#CSD_TP_Custom_Synch_Request.cpp
-#CSD_TP_Queue.cpp
-#CSD_TP_Corba_Request.cpp
-#CSD_TP_Servant_State.cpp
-#CSD_TP_Strategy_Factory.cpp
-#CSD_TP_Servant_State_Map.cpp
-#CSD_TP_Collocated_Synch_Request.cpp
-#CSD_TP_Queue_Visitor.cpp
-#CSD_TP_Task.cpp
-#CSD_TP_Remote_Request.cpp
-#CSD_TP_Synch_Helper.cpp
-#CSD_ThreadPool.cpp
 #CSD_TP_Cancel_Visitor.cpp
 #CSD_TP_Dispatchable_Visitor.cpp
+#CSD_TP_Strategy.cpp
+#CSD_TP_Queue.cpp
+#CSD_TP_Collocated_Asynch_Request.cpp
+#CSD_TP_Custom_Request_Operation.cpp
+#CSD_TP_Custom_Asynch_Request.cpp
+#CSD_TP_Queue_Visitor.cpp
+#CSD_TP_Collocated_Synch_Request.cpp
+#CSD_TP_Corba_Request.cpp
+#CSD_TP_Custom_Request.cpp
+#CSD_TP_Collocated_Synch_With_Server_Request.cpp
 #CSD_TP_Request.cpp
+#CSD_TP_Task.cpp
+#CSD_TP_Strategy_Factory.cpp
+#CSD_TP_Custom_Synch_Request.cpp
+#CSD_TP_Servant_State.cpp
+#CSD_ThreadPool.cpp
+#CSD_TP_Synch_Helper.cpp
+#CSD_TP_Servant_State_Map.cpp
+#CSD_TP_Remote_Request.cpp
 #
 #lib_output:
 #../../../lib TAO_CSD_ThreadPool

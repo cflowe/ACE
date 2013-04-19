@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: CollocationLockup_Idl CollocationLockup_SimpleNamingService CollocationLockup
+all: CollocationLockup_Idl CollocationLockup CollocationLockup_SimpleNamingService
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CollocationLockup_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CollocationLockup_SimpleNamingService $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CollocationLockup $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CollocationLockup_SimpleNamingService $(@)
 
 .PHONY: CollocationLockup_Idl
 CollocationLockup_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CollocationLockup_Idl all
 
-.PHONY: CollocationLockup_SimpleNamingService
-CollocationLockup_SimpleNamingService: CollocationLockup_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CollocationLockup_SimpleNamingService all
-
 .PHONY: CollocationLockup
-CollocationLockup: CollocationLockup_Idl CollocationLockup_SimpleNamingService
+CollocationLockup: CollocationLockup_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CollocationLockup all
+
+.PHONY: CollocationLockup_SimpleNamingService
+CollocationLockup_SimpleNamingService: CollocationLockup_Idl CollocationLockup
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CollocationLockup_SimpleNamingService all
 
 project_name_list:
 	@echo CollocationLockup

@@ -382,8 +382,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
-#DAnCE_Core.mpc
 #DAnCE_Properties.mpc
+#DAnCE_Core.mpc
 #
 #idl_files:
 #DAnCE_DeploymentInterceptors.idl

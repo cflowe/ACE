@@ -25,27 +25,27 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)Perf_Test.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
+  rwwr_test.cpp \
+  adaptive_sema_test.cpp \
+  guard_test.cpp \
+  sysvsema_test.cpp \
+  token_test.cpp \
+  rwrd_test.cpp \
   condb_test.cpp \
+  adaptive_recursive_lock_test.cpp \
+  mutex_test.cpp \
+  Performance_Test_Options.cpp \
+  context_test.cpp \
+  Performance_Test.cpp \
+  adaptive_mutex_test.cpp \
+  sema_test.cpp \
+  memory_test.cpp \
+  recursive_lock_test.cpp \
+  pipe_proc_test.cpp \
   Benchmark_Performance.cpp \
   pipe_thr_test.cpp \
-  adaptive_recursive_lock_test.cpp \
-  adaptive_sema_test.cpp \
-  sysvsema_test.cpp \
-  memory_test.cpp \
-  context_test.cpp \
-  Adaptive_Lock_Performance_Test_Base.cpp \
-  recursive_lock_test.cpp \
-  sema_test.cpp \
-  Performance_Test_Options.cpp \
-  pipe_proc_test.cpp \
-  token_test.cpp \
-  adaptive_mutex_test.cpp \
-  rwrd_test.cpp \
-  rwwr_test.cpp \
-  Performance_Test.cpp \
   conds_test.cpp \
-  guard_test.cpp \
-  mutex_test.cpp
+  Adaptive_Lock_Performance_Test_Base.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

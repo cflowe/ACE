@@ -265,8 +265,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
-#DAnCE_Core.mpc
 #DAnCE_Properties.mpc
+#DAnCE_Core.mpc
 #
 #installdata_files:
 #../bin/ciao.localityconfig bin

@@ -3,7 +3,7 @@
 /**
  *  @file    Manual_Event_Test.cpp
  *
- *  $Id: Manual_Event_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Manual_Event_Test.cpp 96220 2012-11-06 10:03:41Z mcorino $
  *
  *  This test verifies the functionality of the <ACE_Manual_Event>
  *  implementation.
@@ -23,17 +23,6 @@
 #include "ace/OS_NS_time.h"
 #include "ace/OS_NS_unistd.h"
 #include "ace/Atomic_Op.h"
-
-
-
-// msec that times are allowed to differ before test fails.
-#if defined (ACE_HAS_HI_RES_TIMER) || defined (ACE_HAS_AIX_HI_RES_TIMER) || \
-    defined (ACE_HAS_PENTIUM) || defined (ACE_HAS_ALPHA_TIMER) || \
-    defined (ACE_HAS_POWERPC_TIMER)
-# define ACE_ALLOWED_SLACK 100
-#else  /* don't have a high-res timer */
-# define ACE_ALLOWED_SLACK 1100
-#endif /* don't have a high-res timer */
 
 // Test results, 'success' is 0
 static int test_result = 0;

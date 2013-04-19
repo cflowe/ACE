@@ -27,20 +27,20 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  DII_Invocation.cpp \
-  DII_Arguments.cpp \
-  Request.cpp \
-  DII_Reply_Dispatcher.cpp \
-  Server_Request.cpp \
-  DII_Invocation_Adapter.cpp \
-  Unknown_User_Exception.cpp \
-  DII_Arguments_Converter_Impl.cpp \
-  Dynamic_Adapter_Impl.cpp \
   Context.cpp \
   AMH_DSI_Response_Handler.cpp \
-  DII_Reply_Handler.cpp \
   Dynamic_Implementation.cpp \
-  ExceptionList.cpp
+  ExceptionList.cpp \
+  DII_Reply_Dispatcher.cpp \
+  DII_Invocation_Adapter.cpp \
+  DII_Invocation.cpp \
+  Unknown_User_Exception.cpp \
+  DII_Arguments_Converter_Impl.cpp \
+  DII_Arguments.cpp \
+  Server_Request.cpp \
+  DII_Reply_Handler.cpp \
+  Dynamic_Adapter_Impl.cpp \
+  Request.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -270,8 +270,8 @@ endif
 #DII_Arguments.inl
 #Context.inl
 #ExceptionList.inl
-#DII_Reply_Handler.inl
 #Request.inl
+#DII_Reply_Handler.inl
 #AMH_DSI_Response_Handler.inl
 #
 #resource_files:
@@ -287,32 +287,32 @@ endif
 #DII_Invocation_Adapter.h
 #Unknown_User_Exception.h
 #DII_Arguments_Converter_Impl.h
-#DII_Reply_Handler.h
 #Request.h
+#DII_Reply_Handler.h
 #DII_Reply_Dispatcher.h
 #AMH_DSI_Response_Handler.h
 #Dynamic_Adapter_Impl.h
-#dynamicinterface_export.h
 #DII_CORBA_methods.h
+#dynamicinterface_export.h
 #
 #pkgconfig_files:
 #TAO_DynamicInterface.pc.in
 #
 #source_files:
-#DII_Invocation.cpp
-#DII_Arguments.cpp
-#Request.cpp
-#DII_Reply_Dispatcher.cpp
-#Server_Request.cpp
-#DII_Invocation_Adapter.cpp
-#Unknown_User_Exception.cpp
-#DII_Arguments_Converter_Impl.cpp
-#Dynamic_Adapter_Impl.cpp
 #Context.cpp
 #AMH_DSI_Response_Handler.cpp
-#DII_Reply_Handler.cpp
 #Dynamic_Implementation.cpp
 #ExceptionList.cpp
+#DII_Reply_Dispatcher.cpp
+#DII_Invocation_Adapter.cpp
+#DII_Invocation.cpp
+#Unknown_User_Exception.cpp
+#DII_Arguments_Converter_Impl.cpp
+#DII_Arguments.cpp
+#Server_Request.cpp
+#DII_Reply_Handler.cpp
+#Dynamic_Adapter_Impl.cpp
+#Request.cpp
 #
 #lib_output:
 #../../../lib TAO_DynamicInterface

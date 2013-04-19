@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,14 +20,14 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Smart_Proxies_Idl Smart_Proxies_Server Smart_Proxies_Client SP_Benchmark_Idl SP_Benchmark_Client SP_Benchmark_Server SP_Collocation_Idl SP_Collocation_TestStubsLib SP_Collocation_DiamondLib SP_Collocation_Test SP_On_Demand_Idl SP_On_Demand_Client SP_On_Demand_Server SP_Policy_Idl SP_Policy_Client SP_Policy_Server dtor_idl Dtor_Client Dtor_Server
+all: Smart_Proxies_Idl Smart_Proxies_Client Smart_Proxies_Server SP_Benchmark_Idl SP_Benchmark_Client SP_Benchmark_Server SP_Collocation_Idl SP_Collocation_TestStubsLib SP_Collocation_DiamondLib SP_Collocation_Test SP_On_Demand_Idl SP_On_Demand_Client SP_On_Demand_Server SP_Policy_Idl SP_Policy_Client SP_Policy_Server dtor_idl Dtor_Client Dtor_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Smart_Proxies_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Smart_Proxies_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Smart_Proxies_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Smart_Proxies_Server $(@)
 	$(KEEP_GOING)@cd Benchmark && $(MAKE) -f GNUmakefile.SP_Benchmark_Idl $(@)
 	$(KEEP_GOING)@cd Benchmark && $(MAKE) -f GNUmakefile.SP_Benchmark_Client $(@)
 	$(KEEP_GOING)@cd Benchmark && $(MAKE) -f GNUmakefile.SP_Benchmark_Server $(@)
@@ -49,13 +49,13 @@ $(REMAINING_TARGETS):
 Smart_Proxies_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Smart_Proxies_Idl all
 
-.PHONY: Smart_Proxies_Server
-Smart_Proxies_Server: Smart_Proxies_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Smart_Proxies_Server all
-
 .PHONY: Smart_Proxies_Client
-Smart_Proxies_Client: Smart_Proxies_Idl Smart_Proxies_Server
+Smart_Proxies_Client: Smart_Proxies_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Smart_Proxies_Client all
+
+.PHONY: Smart_Proxies_Server
+Smart_Proxies_Server: Smart_Proxies_Idl Smart_Proxies_Client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Smart_Proxies_Server all
 
 .PHONY: SP_Benchmark_Idl
 SP_Benchmark_Idl:

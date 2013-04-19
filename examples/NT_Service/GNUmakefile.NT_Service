@@ -17,8 +17,8 @@ BIN_UNCHECKED    = main
 LIB_PREFIX      ?= lib
 
 FILES = \
-  main.cpp \
-  ntsvc.cpp
+  ntsvc.cpp \
+  main.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Tao__Timeout_Idl Timeout_Supplier Timeout_Consumer
+all: Tao__Timeout_Idl Timeout_Consumer Timeout_Supplier
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Tao__Timeout_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Timeout_Supplier $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Timeout_Consumer $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Timeout_Supplier $(@)
 
 .PHONY: Tao__Timeout_Idl
 Tao__Timeout_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Tao__Timeout_Idl all
 
-.PHONY: Timeout_Supplier
-Timeout_Supplier: Tao__Timeout_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Timeout_Supplier all
-
 .PHONY: Timeout_Consumer
-Timeout_Consumer: Tao__Timeout_Idl Timeout_Supplier
+Timeout_Consumer: Tao__Timeout_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Timeout_Consumer all
+
+.PHONY: Timeout_Supplier
+Timeout_Supplier: Tao__Timeout_Idl Timeout_Consumer
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Timeout_Supplier all
 
 project_name_list:
 	@echo Tao__Timeout_Idl

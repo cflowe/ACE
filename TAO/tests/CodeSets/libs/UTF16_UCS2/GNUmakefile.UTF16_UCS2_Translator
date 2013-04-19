@@ -27,8 +27,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  UTF16_UCS2_Translator.cpp \
-  UTF16_UCS2_Factory.cpp
+  UTF16_UCS2_Factory.cpp \
+  UTF16_UCS2_Translator.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

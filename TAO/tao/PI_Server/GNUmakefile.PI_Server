@@ -240,9 +240,9 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#PI_Server_include.pidl
 #ServerRequestInfo.pidl
 #ServerRequestInterceptor.pidl
+#PI_Server_include.pidl
 #
 #build_files:
 #PI_Server.mpc

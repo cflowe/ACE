@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,22 +20,22 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: gperf_docs gperf taoinset adainset cinset cppinset iinset iinset2 m3inset pinset preinset tinset
+all: gperf_docs gperf cppinset adainset cinset iinset iinset2 m3inset pinset preinset taoinset tinset
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.gperf_docs $(@)
 	$(KEEP_GOING)@cd src && $(MAKE) -f GNUmakefile.gperf $(@)
-	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.taoinset $(@)
+	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.cppinset $(@)
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.adainset $(@)
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.cinset $(@)
-	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.cppinset $(@)
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.iinset $(@)
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.iinset2 $(@)
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.m3inset $(@)
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.pinset $(@)
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.preinset $(@)
+	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.taoinset $(@)
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.tinset $(@)
 
 .PHONY: gperf_docs
@@ -46,44 +46,44 @@ gperf_docs:
 gperf:
 	$(KEEP_GOING)@cd src && $(MAKE) -f GNUmakefile.gperf all
 
-.PHONY: taoinset
-taoinset: gperf
-	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.taoinset all
+.PHONY: cppinset
+cppinset: gperf
+	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.cppinset all
 
 .PHONY: adainset
-adainset: gperf taoinset
+adainset: gperf cppinset
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.adainset all
 
 .PHONY: cinset
-cinset: gperf taoinset
+cinset: gperf cppinset
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.cinset all
 
-.PHONY: cppinset
-cppinset: gperf taoinset
-	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.cppinset all
-
 .PHONY: iinset
-iinset: gperf taoinset
+iinset: gperf cppinset
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.iinset all
 
 .PHONY: iinset2
-iinset2: gperf taoinset iinset
+iinset2: gperf cppinset iinset
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.iinset2 all
 
 .PHONY: m3inset
-m3inset: gperf taoinset
+m3inset: gperf cppinset
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.m3inset all
 
 .PHONY: pinset
-pinset: gperf taoinset
+pinset: gperf cppinset
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.pinset all
 
 .PHONY: preinset
-preinset: gperf taoinset
+preinset: gperf cppinset
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.preinset all
 
+.PHONY: taoinset
+taoinset: gperf cppinset
+	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.taoinset all
+
 .PHONY: tinset
-tinset: gperf taoinset
+tinset: gperf cppinset
 	$(KEEP_GOING)@cd tests && $(MAKE) -f GNUmakefile.tinset all
 
 project_name_list:

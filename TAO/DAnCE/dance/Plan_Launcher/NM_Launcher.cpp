@@ -1,4 +1,4 @@
-// $Id: NM_Launcher.cpp 91814 2010-09-17 08:33:40Z johnnyw $
+// $Id: NM_Launcher.cpp 96194 2012-10-12 11:19:20Z johnnyw $
 
 #include "NM_Launcher.h"
 
@@ -10,10 +10,7 @@ namespace DAnCE
   {
   }
 
-
-
   NM_Launcher::~NM_Launcher (void)
   {
-
   }
 }

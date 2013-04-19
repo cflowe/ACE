@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: fuzz.pl 95555 2012-02-24 08:47:11Z johnnyw $
+# $Id: fuzz.pl 96222 2012-11-06 11:47:52Z mcorino $
 #   Fuzz is a script whose purpose is to check through ACE/TAO/CIAO files for
 #   easy to spot (by a perl script, at least) problems.
 
@@ -264,7 +264,7 @@ sub check_for_id_string ()
                 if (/\$Id:\$/) {
                     print_error ("$file:$.: Incorrect \$Id:\$ found (remove colon)");
                 }
-                if (/\$Id: fuzz.pl 95555 2012-02-24 08:47:11Z johnnyw $/) {
+                if (/\$Id: fuzz.pl 96222 2012-11-06 11:47:52Z mcorino $/) {
                     print_error ("$file:$.: Incorrect \$Id: found (remove colon, added \$)");
                 }
                 if (/\$Id\:/ or /\$Id\$/) {
@@ -472,6 +472,7 @@ sub check_for_ACE_Thread_Mutex ()
                 }
                 if (/FUZZ\: enable check_for_ACE_Thread_Mutex/) {
                     $disable = 0;
+                    next;
                 }
                 if ($disable == 0 and /ACE_Thread_Mutex/) {
                     # It is okay to use ACE_Thread_Mutex in ACE

@@ -19,12 +19,12 @@ LIB_PREFIX      ?= lib
 FILES = \
   logWalker.cpp \
   PeerObject.cpp \
-  PeerProcess.cpp \
-  Log.cpp \
-  Invocation.cpp \
-  HostProcess.cpp \
   Thread.cpp \
-  Session.cpp
+  Session.cpp \
+  Log.cpp \
+  PeerProcess.cpp \
+  Invocation.cpp \
+  HostProcess.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

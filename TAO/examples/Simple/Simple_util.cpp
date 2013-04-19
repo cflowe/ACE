@@ -1,4 +1,4 @@
-// $Id: Simple_util.cpp 84806 2009-03-12 12:46:13Z olli $
+// $Id: Simple_util.cpp 96239 2012-11-09 12:11:06Z johnnyw $
 
 #ifndef SIMPLE_UTIL_C
 #define SIMPLE_UTIL_C
@@ -273,7 +273,7 @@ Client<ServerInterface>::read_ior (ACE_TCHAR *filename)
                        ACE_TEXT ("open")),
                       -1);
 
-  ACE_Read_Buffer ior_buffer (f_handle);
+  ACE_Read_Buffer ior_buffer (f_handle, true);
   char *data = ior_buffer.read ();
 
   if (data == 0)

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,20 +20,20 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Application_Controlled_Idl Application_Controlled_Server Application_Controlled_Client DeadMemberDetection_App_Ctrl_Idl DeadMemberDetection_App_Ctrl_Client DeadMemberDetection_App_Ctrl_Server DeadMemberDetection_Inf_Ctrl_Idl DeadMemberDetection_Inf_Ctrl_Server DeadMemberDetection_Inf_Ctrl_Client DeadMemberDetection_Inf_Ctrl_Factory Infrastructure_Controlled_Idl Infrastructure_Controlled_Server Infrastructure_Controlled_Client Manage_Object_Group_Server
+all: Application_Controlled_Idl Application_Controlled_Client Application_Controlled_Server DeadMemberDetection_App_Ctrl_Idl DeadMemberDetection_App_Ctrl_Client DeadMemberDetection_App_Ctrl_Server DeadMemberDetection_Inf_Ctrl_Idl DeadMemberDetection_Inf_Ctrl_Client DeadMemberDetection_Inf_Ctrl_Server DeadMemberDetection_Inf_Ctrl_Factory Infrastructure_Controlled_Idl Infrastructure_Controlled_Server Infrastructure_Controlled_Client Manage_Object_Group_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Application_Controlled && $(MAKE) -f GNUmakefile.Application_Controlled_Idl $(@)
-	$(KEEP_GOING)@cd Application_Controlled && $(MAKE) -f GNUmakefile.Application_Controlled_Server $(@)
 	$(KEEP_GOING)@cd Application_Controlled && $(MAKE) -f GNUmakefile.Application_Controlled_Client $(@)
+	$(KEEP_GOING)@cd Application_Controlled && $(MAKE) -f GNUmakefile.Application_Controlled_Server $(@)
 	$(KEEP_GOING)@cd DeadMemberDetection_App_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_App_Ctrl_Idl $(@)
 	$(KEEP_GOING)@cd DeadMemberDetection_App_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_App_Ctrl_Client $(@)
 	$(KEEP_GOING)@cd DeadMemberDetection_App_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_App_Ctrl_Server $(@)
 	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Idl $(@)
-	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Server $(@)
 	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Client $(@)
+	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Server $(@)
 	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Factory $(@)
 	$(KEEP_GOING)@cd Infrastructure_Controlled && $(MAKE) -f GNUmakefile.Infrastructure_Controlled_Idl $(@)
 	$(KEEP_GOING)@cd Infrastructure_Controlled && $(MAKE) -f GNUmakefile.Infrastructure_Controlled_Server $(@)
@@ -44,13 +44,13 @@ $(REMAINING_TARGETS):
 Application_Controlled_Idl:
 	$(KEEP_GOING)@cd Application_Controlled && $(MAKE) -f GNUmakefile.Application_Controlled_Idl all
 
-.PHONY: Application_Controlled_Server
-Application_Controlled_Server: Application_Controlled_Idl
-	$(KEEP_GOING)@cd Application_Controlled && $(MAKE) -f GNUmakefile.Application_Controlled_Server all
-
 .PHONY: Application_Controlled_Client
-Application_Controlled_Client: Application_Controlled_Idl Application_Controlled_Server
+Application_Controlled_Client: Application_Controlled_Idl
 	$(KEEP_GOING)@cd Application_Controlled && $(MAKE) -f GNUmakefile.Application_Controlled_Client all
+
+.PHONY: Application_Controlled_Server
+Application_Controlled_Server: Application_Controlled_Idl Application_Controlled_Client
+	$(KEEP_GOING)@cd Application_Controlled && $(MAKE) -f GNUmakefile.Application_Controlled_Server all
 
 .PHONY: DeadMemberDetection_App_Ctrl_Idl
 DeadMemberDetection_App_Ctrl_Idl:
@@ -68,16 +68,16 @@ DeadMemberDetection_App_Ctrl_Server: DeadMemberDetection_App_Ctrl_Idl DeadMember
 DeadMemberDetection_Inf_Ctrl_Idl:
 	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Idl all
 
-.PHONY: DeadMemberDetection_Inf_Ctrl_Server
-DeadMemberDetection_Inf_Ctrl_Server: DeadMemberDetection_Inf_Ctrl_Idl
-	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Server all
-
 .PHONY: DeadMemberDetection_Inf_Ctrl_Client
-DeadMemberDetection_Inf_Ctrl_Client: DeadMemberDetection_Inf_Ctrl_Idl DeadMemberDetection_Inf_Ctrl_Server
+DeadMemberDetection_Inf_Ctrl_Client: DeadMemberDetection_Inf_Ctrl_Idl
 	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Client all
 
+.PHONY: DeadMemberDetection_Inf_Ctrl_Server
+DeadMemberDetection_Inf_Ctrl_Server: DeadMemberDetection_Inf_Ctrl_Idl DeadMemberDetection_Inf_Ctrl_Client
+	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Server all
+
 .PHONY: DeadMemberDetection_Inf_Ctrl_Factory
-DeadMemberDetection_Inf_Ctrl_Factory: DeadMemberDetection_Inf_Ctrl_Idl DeadMemberDetection_Inf_Ctrl_Server
+DeadMemberDetection_Inf_Ctrl_Factory: DeadMemberDetection_Inf_Ctrl_Idl DeadMemberDetection_Inf_Ctrl_Client DeadMemberDetection_Inf_Ctrl_Server
 	$(KEEP_GOING)@cd DeadMemberDetection_Inf_Ctrl && $(MAKE) -f GNUmakefile.DeadMemberDetection_Inf_Ctrl_Factory all
 
 .PHONY: Infrastructure_Controlled_Idl

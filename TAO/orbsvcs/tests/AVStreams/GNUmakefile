@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: AVS_Asynch_Three_Stage_Send AVS_Asynch_Three_Stage_Dist AVS_Asynch_Three_Stage_Recv AVS_Bidirectional_Flows_Recv AVS_Bidirectional_Flows_Send AVS_Component_Switching_Recv AVS_Component_Switching_Dist AVS_Component_Switching_Send AVS_Full_Profile_Ftp AVS_Full_Profile_Server AVS_Latency_Cntl AVS_Latency_Ping AVS_Latency_Pong AVS_Modify_QoS_Recv AVS_Modify_QoS_Send AVS_Multicast_Ftp AVS_Multicast_Server AVS_Multicast_Full_Profile_Ftp AVS_Multicast_Full_Profile_Server AVS_Multiple_Flows_Recv AVS_Multiple_Flows_Send AVS_Pluggable_Ftp AVS_Pluggable_Server AVS_Pluggable_Flow_Protocol_Recv AVS_Pluggable_Flow_Protocol_Send AVS_Pluggable_Flow_Protocol_Ts AVS_Simple_Three_Stage_Dist AVS_Simple_Three_Stage_Recv AVS_Simple_Three_Stage_Send AVS_Simple_Two_Stage_Recv AVS_Simple_Two_Stage_Send AVS_Simple_Two_Stage_With_QoS_Recv AVS_Simple_Two_Stage_With_QoS_Send
+all: AVS_Asynch_Three_Stage_Send AVS_Asynch_Three_Stage_Dist AVS_Asynch_Three_Stage_Recv AVS_Bidirectional_Flows_Recv AVS_Bidirectional_Flows_Send AVS_Component_Switching_Send AVS_Component_Switching_Dist AVS_Component_Switching_Recv AVS_Full_Profile_Ftp AVS_Full_Profile_Server AVS_Latency_Cntl AVS_Latency_Ping AVS_Latency_Pong AVS_Modify_QoS_Recv AVS_Modify_QoS_Send AVS_Multicast_Ftp AVS_Multicast_Server AVS_Multicast_Full_Profile_Ftp AVS_Multicast_Full_Profile_Server AVS_Multiple_Flows_Recv AVS_Multiple_Flows_Send AVS_Pluggable_Ftp AVS_Pluggable_Server AVS_Pluggable_Flow_Protocol_Recv AVS_Pluggable_Flow_Protocol_Send AVS_Pluggable_Flow_Protocol_Ts AVS_Simple_Three_Stage_Dist AVS_Simple_Three_Stage_Recv AVS_Simple_Three_Stage_Send AVS_Simple_Two_Stage_Recv AVS_Simple_Two_Stage_Send AVS_Simple_Two_Stage_With_QoS_Recv AVS_Simple_Two_Stage_With_QoS_Send
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -30,9 +30,9 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Asynch_Three_Stage && $(MAKE) -f GNUmakefile.AVS_Asynch_Three_Stage_Recv $(@)
 	$(KEEP_GOING)@cd Bidirectional_Flows && $(MAKE) -f GNUmakefile.AVS_Bidirectional_Flows_Recv $(@)
 	$(KEEP_GOING)@cd Bidirectional_Flows && $(MAKE) -f GNUmakefile.AVS_Bidirectional_Flows_Send $(@)
-	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Recv $(@)
-	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Dist $(@)
 	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Send $(@)
+	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Dist $(@)
+	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Recv $(@)
 	$(KEEP_GOING)@cd Full_Profile && $(MAKE) -f GNUmakefile.AVS_Full_Profile_Ftp $(@)
 	$(KEEP_GOING)@cd Full_Profile && $(MAKE) -f GNUmakefile.AVS_Full_Profile_Server $(@)
 	$(KEEP_GOING)@cd Latency && $(MAKE) -f GNUmakefile.AVS_Latency_Cntl $(@)
@@ -79,17 +79,17 @@ AVS_Bidirectional_Flows_Recv:
 AVS_Bidirectional_Flows_Send:
 	$(KEEP_GOING)@cd Bidirectional_Flows && $(MAKE) -f GNUmakefile.AVS_Bidirectional_Flows_Send all
 
-.PHONY: AVS_Component_Switching_Recv
-AVS_Component_Switching_Recv:
-	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Recv all
+.PHONY: AVS_Component_Switching_Send
+AVS_Component_Switching_Send:
+	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Send all
 
 .PHONY: AVS_Component_Switching_Dist
-AVS_Component_Switching_Dist: AVS_Component_Switching_Recv
+AVS_Component_Switching_Dist: AVS_Component_Switching_Send
 	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Dist all
 
-.PHONY: AVS_Component_Switching_Send
-AVS_Component_Switching_Send: AVS_Component_Switching_Recv
-	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Send all
+.PHONY: AVS_Component_Switching_Recv
+AVS_Component_Switching_Recv: AVS_Component_Switching_Send
+	$(KEEP_GOING)@cd Component_Switching && $(MAKE) -f GNUmakefile.AVS_Component_Switching_Recv all
 
 .PHONY: AVS_Full_Profile_Ftp
 AVS_Full_Profile_Ftp:

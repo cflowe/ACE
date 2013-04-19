@@ -267,18 +267,18 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#ProcessingModePolicy.pidl
-#Interceptor.pidl
-#PIForwardRequest.pidl
-#PICurrent.pidl
-#InvalidSlot.pidl
-#RequestInfo.pidl
 #PI_include.pidl
-#ClientRequestInterceptor.pidl
-#ORBInitializer.pidl
 #PolicyFactory.pidl
+#ProcessingModePolicy.pidl
 #ClientRequestInfo.pidl
+#PIForwardRequest.pidl
+#RequestInfo.pidl
+#Interceptor.pidl
+#PICurrent.pidl
+#ORBInitializer.pidl
 #ORBInitInfo.pidl
+#ClientRequestInterceptor.pidl
+#InvalidSlot.pidl
 #
 #build_files:
 #PI.mpc

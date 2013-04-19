@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: ECT_Supplier ECT_Consumer ECT_Throughput
+all: ECT_Consumer ECT_Throughput ECT_Supplier
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ECT_Supplier $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ECT_Consumer $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ECT_Throughput $(@)
-
-.PHONY: ECT_Supplier
-ECT_Supplier:
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ECT_Supplier all
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ECT_Supplier $(@)
 
 .PHONY: ECT_Consumer
-ECT_Consumer: ECT_Supplier
+ECT_Consumer:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ECT_Consumer all
 
 .PHONY: ECT_Throughput
-ECT_Throughput: ECT_Supplier ECT_Consumer
+ECT_Throughput: ECT_Consumer
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ECT_Throughput all
+
+.PHONY: ECT_Supplier
+ECT_Supplier: ECT_Consumer ECT_Throughput
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ECT_Supplier all
 
 project_name_list:
 	@echo ECT_Consumer

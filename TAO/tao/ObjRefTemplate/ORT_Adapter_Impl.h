@@ -4,7 +4,7 @@
 /**
  * @file ORT_Adapter_Impl.h
  *
- * $Id: ORT_Adapter_Impl.h 76995 2007-02-11 12:51:42Z johnnyw $
+ * $Id: ORT_Adapter_Impl.h 96214 2012-10-30 11:08:59Z johnnyw $
  *
  * This is the implementation of the TAO::ORT_Adapter
  *
@@ -91,9 +91,7 @@ namespace TAO
 
     /// The ORT Factory.
     PortableInterceptor::ObjectReferenceFactory_var ort_factory_;
-
   };
-
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL

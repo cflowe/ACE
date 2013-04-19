@@ -1,4 +1,4 @@
-// $Id: CCM_Transaction.idl 90009 2010-04-26 17:36:49Z johnnyw $
+// $Id: CCM_Transaction.idl 96193 2012-10-12 11:18:30Z johnnyw $
 /// Compliant with OMG 06-04-01 Section 9.3.2.3
 
 #if !defined (CCM_TRANSACTION_IDL)
@@ -10,7 +10,6 @@ module Components
 {
   typeprefix Components "omg.org";
 
-  // @@ Components::Transaction is still there.
   module Transaction
   {
 

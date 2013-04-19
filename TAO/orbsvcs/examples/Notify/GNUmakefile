@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Gate Agent SpaceCraft Notify_Filter Notify_Lanes_Consumer Notify_Lanes_Supplier mc_monitor_example Notify_Subscribe Notify_ThreadPool_Consumer Notify_ThreadPool_Supplier
+all: Gate Agent SpaceCraft Notify_Filter Notify_Lanes_Consumer Notify_Lanes_Supplier mc_monitor_example Notify_Subscribe Notify_ThreadPool_Supplier Notify_ThreadPool_Consumer
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -33,8 +33,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Lanes && $(MAKE) -f GNUmakefile.Notify_Lanes_Supplier $(@)
 	$(KEEP_GOING)@cd MC/monitor && $(MAKE) -f GNUmakefile.mc_monitor_example $(@)
 	$(KEEP_GOING)@cd Subscribe && $(MAKE) -f GNUmakefile.Notify_Subscribe $(@)
-	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.Notify_ThreadPool_Consumer $(@)
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.Notify_ThreadPool_Supplier $(@)
+	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.Notify_ThreadPool_Consumer $(@)
 
 .PHONY: Gate
 Gate:
@@ -68,13 +68,13 @@ mc_monitor_example:
 Notify_Subscribe:
 	$(KEEP_GOING)@cd Subscribe && $(MAKE) -f GNUmakefile.Notify_Subscribe all
 
-.PHONY: Notify_ThreadPool_Consumer
-Notify_ThreadPool_Consumer:
-	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.Notify_ThreadPool_Consumer all
-
 .PHONY: Notify_ThreadPool_Supplier
-Notify_ThreadPool_Supplier: Notify_ThreadPool_Consumer
+Notify_ThreadPool_Supplier:
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.Notify_ThreadPool_Supplier all
+
+.PHONY: Notify_ThreadPool_Consumer
+Notify_ThreadPool_Consumer: Notify_ThreadPool_Supplier
+	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.Notify_ThreadPool_Consumer all
 
 project_name_list:
 	@echo Agent

@@ -1,4 +1,4 @@
-//$Id: Transport_Cache_Manager_T.cpp 94002 2011-04-26 12:22:19Z johnnyw $
+//$Id: Transport_Cache_Manager_T.cpp 96218 2012-11-05 08:26:31Z johnnyw $
 #include "tao/Transport_Cache_Manager_T.h"
 #include "tao/debug.h"
 #include "tao/Connection_Purging_Strategy.h"
@@ -236,8 +236,7 @@ namespace TAO
         return CACHE_FOUND_NONE;
       }
 
-    Find_Result find_result = this->find (
-      prop, transport, busy_count);
+    Find_Result const find_result = this->find (prop, transport, busy_count);
     if (find_result != CACHE_FOUND_NONE)
       {
         if (find_result == CACHE_FOUND_AVAILABLE)
@@ -300,7 +299,6 @@ namespace TAO
             if (this->is_entry_available_i (*entry))
               {
                 // Successfully found a transport_type.
-
                 found = CACHE_FOUND_AVAILABLE;
                 found_entry = entry;
                 entry->item ().recycle_state (ENTRY_BUSY);

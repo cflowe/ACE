@@ -27,12 +27,12 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  ProxyPushSupplier_i.cpp \
-  SupplierAdmin_i.cpp \
-  ConsumerAdmin_i.cpp \
-  CosEvent_Utilities.cpp \
   ProxyPushConsumer_i.cpp \
-  EventChannel_i.cpp
+  EventChannel_i.cpp \
+  ConsumerAdmin_i.cpp \
+  SupplierAdmin_i.cpp \
+  ProxyPushSupplier_i.cpp \
+  CosEvent_Utilities.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

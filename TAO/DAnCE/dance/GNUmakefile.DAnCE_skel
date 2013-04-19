@@ -261,8 +261,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
-#DAnCE_Core.mpc
 #DAnCE_Properties.mpc
+#DAnCE_Core.mpc
 #
 #header_files:
 #DAnCE_LocalityManagerS.h

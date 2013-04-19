@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: AO_Multiple_ORBs RTCORBA_Banded_Conn_Idl RTCORBA_Banded_Conn_Server RTCORBA_Banded_Conn_Client Bug_3382_Regression_Server Bug_3382_Regression_Client Bug_3382_Regression_SimpleClient Bug_3643_Regression_Idl Bug_3643_Regression_Client Bug_3643_Regression_Server RTCORBA_Client_Propagated_Idl RTCORBA_Client_Propagated_Client RTCORBA_Client_Propagated_Server RTCORBA_Client_Protocol_Idl RTCORBA_Client_Protocol_Client RTCORBA_Client_Protocol_Server RTCORBA_Collocation_Server RTCORBA_Destroy_Thread_Pool_Server RTCORBA_Diffserv_Idl RTCORBA_Diffserv_Client RTCORBA_Diffserv_Server RT_Dynamic_Thread_Pool_Idl RT_Dynamic_Thread_Pool_Server RT_Dynamic_Thread_Pool_Client RTCORBA_Explicit_Binding_Idl RTCORBA_Explicit_Binding_Client RTCORBA_Explicit_Binding_Server RTCORBA_Linear_Priority_Idl RTCORBA_Linear_Priority_Client RTCORBA_Linear_Priority_Server RTCORBA_MT_Client_Proto_Prio_Idl RTCORBA_MT_Client_Proto_Prio_Server RTCORBA_MT_Client_Proto_Prio_Client ORB_init_RT RTCORBA_Persistent_IOR_Idl RTCORBA_Persistent_IOR_Server RTCORBA_Persistent_IOR_Client RTCORBA_Policies_Server RTCORBA_Policy_Combinations_Idl RTCORBA_Policy_Combinations_Client RTCORBA_Policy_Combinations_Server Priority_Inversion_With_Bands_Idl Priority_Inversion_With_Bands_Client Priority_Inversion_With_Bands_Server RTCORBA_Private_Connection_Idl RTCORBA_Private_Connection_Client RTCORBA_Private_Connection_Server PaE_Selection_Idl PaE_Selection_Client PaE_Selection_Server RTCORBA_RTMutex_Server RTCORBA_Server_Declared_Idl RTCORBA_Server_Declared_Client RTCORBA_Server_Declared_Server RTCORBA_Server_Protocol_Idl RTCORBA_Server_Protocol_Client RTCORBA_Server_Protocol_Server RTCORBA_Thread_Pool_Idl RTCORBA_Thread_Pool_Client RTCORBA_Thread_Pool_Server
+all: AO_Multiple_ORBs RTCORBA_Banded_Conn_Idl RTCORBA_Banded_Conn_Server RTCORBA_Banded_Conn_Client Bug_3382_Regression_Server Bug_3382_Regression_Client Bug_3382_Regression_SimpleClient Bug_3643_Regression_Idl Bug_3643_Regression_Client Bug_3643_Regression_Server RTCORBA_Client_Propagated_Idl RTCORBA_Client_Propagated_Client RTCORBA_Client_Propagated_Server RTCORBA_Client_Protocol_Idl RTCORBA_Client_Protocol_Client RTCORBA_Client_Protocol_Server RTCORBA_Collocation_Server RTCORBA_Destroy_Thread_Pool_Server RTCORBA_Diffserv_Idl RTCORBA_Diffserv_Client RTCORBA_Diffserv_Server RT_Dynamic_Thread_Pool_Idl RT_Dynamic_Thread_Pool_Server RT_Dynamic_Thread_Pool_Client RTCORBA_Explicit_Binding_Idl RTCORBA_Explicit_Binding_Client RTCORBA_Explicit_Binding_Server RTCORBA_Linear_Priority_Idl RTCORBA_Linear_Priority_Client RTCORBA_Linear_Priority_Server RTCORBA_MT_Client_Proto_Prio_Idl RTCORBA_MT_Client_Proto_Prio_Server RTCORBA_MT_Client_Proto_Prio_Client ORB_init_RT RTCORBA_Persistent_IOR_Idl RTCORBA_Persistent_IOR_Server RTCORBA_Persistent_IOR_Client RTCORBA_Policies_Server RTCORBA_Policy_Combinations_Idl RTCORBA_Policy_Combinations_Client RTCORBA_Policy_Combinations_Server Priority_Inversion_With_Bands_Idl Priority_Inversion_With_Bands_Client Priority_Inversion_With_Bands_Server RTCORBA_Private_Connection_Idl RTCORBA_Private_Connection_Client RTCORBA_Private_Connection_Server PaE_Selection_Idl PaE_Selection_Client PaE_Selection_Server RTCORBA_RTMutex_Server RTCORBA_Server_Declared_Idl RTCORBA_Server_Declared_Client RTCORBA_Server_Declared_Server RTCORBA_Server_Protocol_Idl RTCORBA_Server_Protocol_Server RTCORBA_Server_Protocol_Client RTCORBA_Thread_Pool_Idl RTCORBA_Thread_Pool_Client RTCORBA_Thread_Pool_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -80,8 +80,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Server_Declared && $(MAKE) -f GNUmakefile.RTCORBA_Server_Declared_Client $(@)
 	$(KEEP_GOING)@cd Server_Declared && $(MAKE) -f GNUmakefile.RTCORBA_Server_Declared_Server $(@)
 	$(KEEP_GOING)@cd Server_Protocol && $(MAKE) -f GNUmakefile.RTCORBA_Server_Protocol_Idl $(@)
-	$(KEEP_GOING)@cd Server_Protocol && $(MAKE) -f GNUmakefile.RTCORBA_Server_Protocol_Client $(@)
 	$(KEEP_GOING)@cd Server_Protocol && $(MAKE) -f GNUmakefile.RTCORBA_Server_Protocol_Server $(@)
+	$(KEEP_GOING)@cd Server_Protocol && $(MAKE) -f GNUmakefile.RTCORBA_Server_Protocol_Client $(@)
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.RTCORBA_Thread_Pool_Idl $(@)
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.RTCORBA_Thread_Pool_Client $(@)
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.RTCORBA_Thread_Pool_Server $(@)
@@ -306,13 +306,13 @@ RTCORBA_Server_Declared_Server: RTCORBA_Server_Declared_Idl RTCORBA_Server_Decla
 RTCORBA_Server_Protocol_Idl:
 	$(KEEP_GOING)@cd Server_Protocol && $(MAKE) -f GNUmakefile.RTCORBA_Server_Protocol_Idl all
 
-.PHONY: RTCORBA_Server_Protocol_Client
-RTCORBA_Server_Protocol_Client: RTCORBA_Server_Protocol_Idl
-	$(KEEP_GOING)@cd Server_Protocol && $(MAKE) -f GNUmakefile.RTCORBA_Server_Protocol_Client all
-
 .PHONY: RTCORBA_Server_Protocol_Server
-RTCORBA_Server_Protocol_Server: RTCORBA_Server_Protocol_Idl RTCORBA_Server_Protocol_Client
+RTCORBA_Server_Protocol_Server: RTCORBA_Server_Protocol_Idl
 	$(KEEP_GOING)@cd Server_Protocol && $(MAKE) -f GNUmakefile.RTCORBA_Server_Protocol_Server all
+
+.PHONY: RTCORBA_Server_Protocol_Client
+RTCORBA_Server_Protocol_Client: RTCORBA_Server_Protocol_Idl RTCORBA_Server_Protocol_Server
+	$(KEEP_GOING)@cd Server_Protocol && $(MAKE) -f GNUmakefile.RTCORBA_Server_Protocol_Client all
 
 .PHONY: RTCORBA_Thread_Pool_Idl
 RTCORBA_Thread_Pool_Idl:

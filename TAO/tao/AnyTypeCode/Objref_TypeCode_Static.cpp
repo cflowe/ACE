@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Objref_TypeCode_Static.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: Objref_TypeCode_Static.cpp 96200 2012-10-19 07:57:30Z johnnyw $
 
 #include "tao/AnyTypeCode/Objref_TypeCode_Static.h"
 
@@ -72,13 +72,11 @@ TAO::TypeCode::Objref<char const *, TAO::Null_RefCount_Policy>::equivalent_i (
 
 CORBA::TypeCode_ptr
 TAO::TypeCode::Objref<char const *,
-                      TAO::Null_RefCount_Policy>::get_compact_typecode_i (
-  void) const
+                      TAO::Null_RefCount_Policy>::get_compact_typecode_i (void) const
 {
   TAO_TypeCodeFactory_Adapter * const adapter =
     ACE_Dynamic_Service<TAO_TypeCodeFactory_Adapter>::instance (
-        TAO_ORB_Core::typecodefactory_adapter_name ()
-      );
+        TAO_ORB_Core::typecodefactory_adapter_name ());
 
   if (adapter == 0)
     {

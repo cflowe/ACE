@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: CodeSets_libs_IMB1047_ISO8859 CodeSets_Libs_UCS4_UTF16 UTF16_UCS2_Translator CodeSets_Simple_Idl CodeSets_Simple_Server CodeSets_Simple_Client
+all: CodeSets_libs_IMB1047_ISO8859 CodeSets_Libs_UCS4_UTF16 UTF16_UCS2_Translator CodeSets_Simple_Idl CodeSets_Simple_Client CodeSets_Simple_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -29,8 +29,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd libs/UCS4_UTF16 && $(MAKE) -f GNUmakefile.CodeSets_Libs_UCS4_UTF16 $(@)
 	$(KEEP_GOING)@cd libs/UTF16_UCS2 && $(MAKE) -f GNUmakefile.UTF16_UCS2_Translator $(@)
 	$(KEEP_GOING)@cd simple && $(MAKE) -f GNUmakefile.CodeSets_Simple_Idl $(@)
-	$(KEEP_GOING)@cd simple && $(MAKE) -f GNUmakefile.CodeSets_Simple_Server $(@)
 	$(KEEP_GOING)@cd simple && $(MAKE) -f GNUmakefile.CodeSets_Simple_Client $(@)
+	$(KEEP_GOING)@cd simple && $(MAKE) -f GNUmakefile.CodeSets_Simple_Server $(@)
 
 .PHONY: CodeSets_libs_IMB1047_ISO8859
 CodeSets_libs_IMB1047_ISO8859:
@@ -48,13 +48,13 @@ UTF16_UCS2_Translator:
 CodeSets_Simple_Idl:
 	$(KEEP_GOING)@cd simple && $(MAKE) -f GNUmakefile.CodeSets_Simple_Idl all
 
-.PHONY: CodeSets_Simple_Server
-CodeSets_Simple_Server: CodeSets_Simple_Idl
-	$(KEEP_GOING)@cd simple && $(MAKE) -f GNUmakefile.CodeSets_Simple_Server all
-
 .PHONY: CodeSets_Simple_Client
-CodeSets_Simple_Client: CodeSets_Simple_Idl CodeSets_Simple_Server
+CodeSets_Simple_Client: CodeSets_Simple_Idl
 	$(KEEP_GOING)@cd simple && $(MAKE) -f GNUmakefile.CodeSets_Simple_Client all
+
+.PHONY: CodeSets_Simple_Server
+CodeSets_Simple_Server: CodeSets_Simple_Idl CodeSets_Simple_Client
+	$(KEEP_GOING)@cd simple && $(MAKE) -f GNUmakefile.CodeSets_Simple_Server all
 
 project_name_list:
 	@echo CodeSets_libs_IMB1047_ISO8859

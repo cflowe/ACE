@@ -81,7 +81,6 @@ FILES = \
   ATM_Stream.cpp \
   Atomic_Op.cpp \
   Atomic_Op_Sparc.c \
-  Auto_Event.cpp \
   Barrier.cpp \
   Base_Thread_Adapter.cpp \
   Based_Pointer_Repository.cpp \
@@ -115,7 +114,7 @@ FILES = \
   Dump.cpp \
   Dynamic.cpp \
   Dynamic_Message_Strategy.cpp \
-  Event.cpp \
+  Event_Base.cpp \
   Event_Handler.cpp \
   Event_Handler_Handle_Timeout_Upcall.cpp \
   FIFO.cpp \
@@ -163,7 +162,6 @@ FILES = \
   LSOCK_Stream.cpp \
   Malloc.cpp \
   Malloc_Allocator.cpp \
-  Manual_Event.cpp \
   MEM_Acceptor.cpp \
   MEM_Addr.cpp \
   MEM_Connector.cpp \
@@ -541,15 +539,15 @@ endif
 #../VERSION
 #
 #build_files:
-#ace_for_tao.mpc
 #svcconfgen.mpc
+#ace_for_tao.mpc
 #ace.mpc
 #uuid.mpb
-#filecache.mpb
-#other.mpb
 #svcconf.mpb
-#token.mpb
+#other.mpb
 #codecs.mpb
+#filecache.mpb
+#token.mpb
 #ace.mwc
 #
 #installdata_files:
@@ -680,8 +678,8 @@ endif
 #TLI_Stream.inl
 #Flag_Manip.inl
 #LSOCK_Dgram.inl
-#SOCK_SEQPACK_Association.inl
 #Auto_Event.inl
+#SOCK_SEQPACK_Association.inl
 #OS_NS_dirent.inl
 #Object_Manager.inl
 #Process_Manager.inl
@@ -745,6 +743,7 @@ endif
 #OS_NS_sys_socket.inl
 #TP_Reactor.inl
 #Pair_T.inl
+#Event_Base.inl
 #Monitor_Base.inl
 #ATM_Stream.inl
 #Thread_Adapter.inl
@@ -758,8 +757,8 @@ endif
 #Message_Block.inl
 #Service_Gestalt.inl
 #Malloc_Allocator.inl
-#Local_Tokens.inl
 #Cleanup.inl
+#Local_Tokens.inl
 #Stream.inl
 #FIFO_Send_Msg.inl
 #Task.inl
@@ -806,9 +805,9 @@ endif
 #Ping_Socket.inl
 #Event_Handler_Handle_Timeout_Upcall.inl
 #Map_Manager.inl
+#Manual_Event.inl
 #TLI_Connector.inl
 #Codeset_Registry.inl
-#Manual_Event.inl
 #Basic_Stats.inl
 #Module.inl
 #Notification_Queue.inl
@@ -865,6 +864,7 @@ endif
 #Condition_T.h
 #Countdown_Time.h
 #Default_Constants.h
+#Event_Base.h
 #Global_Macros.h
 #Guard_T.h
 #Hash_Map_Manager.h
@@ -944,6 +944,7 @@ endif
 #config-macosx-iOS-simulator.h
 #config-macosx-leopard.h
 #config-macosx-lion.h
+#config-macosx-mountain-lion.h
 #config-macosx-panther.h
 #config-macosx-snowleopard.h
 #config-macosx-tiger.h
@@ -989,101 +990,101 @@ endif
 #config-windows.h
 #config.h
 #iosfwd.h
-#os_include/os_assert.h
-#os_include/os_tar.h
-#os_include/os_float.h
 #os_include/os_fmtmsg.h
-#os_include/sys/os_select.h
-#os_include/sys/os_loadavg.h
-#os_include/sys/os_statvfs.h
-#os_include/sys/os_types.h
-#os_include/sys/os_time.h
-#os_include/sys/os_un.h
-#os_include/sys/os_mman.h
-#os_include/sys/os_times.h
-#os_include/sys/os_stat.h
-#os_include/sys/os_utsname.h
-#os_include/sys/os_sysctl.h
-#os_include/sys/os_wait.h
-#os_include/sys/os_sysinfo.h
-#os_include/sys/os_msg.h
-#os_include/sys/os_ipc.h
-#os_include/sys/os_sem.h
-#os_include/sys/os_pstat.h
-#os_include/sys/os_shm.h
-#os_include/sys/os_uio.h
-#os_include/sys/os_timeb.h
-#os_include/sys/os_resource.h
-#os_include/sys/os_socket.h
-#os_include/os_intrin.h
-#os_include/os_limits.h
-#os_include/os_pwd.h
-#os_include/os_grp.h
-#os_include/os_fcntl.h
-#os_include/os_langinfo.h
-#os_include/os_math.h
-#os_include/os_stropts.h
-#os_include/os_errno.h
-#os_include/os_dirent.h
-#os_include/os_utmpx.h
-#os_include/os_ucontext.h
-#os_include/os_ndbm.h
-#os_include/os_time.h
-#os_include/os_local.h
-#os_include/os_netdb.h
-#os_include/os_stdio.h
-#os_include/os_aio.h
-#os_include/os_typeinfo.h
-#os_include/os_poll.h
-#os_include/os_tgmath.h
-#os_include/os_setjmp.h
-#os_include/os_trace.h
-#os_include/os_spawn.h
-#os_include/os_semaphore.h
-#os_include/os_cpio.h
-#os_include/os_mqueue.h
-#os_include/netinet/os_tcp.h
-#os_include/netinet/os_in.h
-#os_include/os_iso646.h
-#os_include/os_wctype.h
-#os_include/os_monetary.h
-#os_include/os_sched.h
-#os_include/os_signal.h
-#os_include/os_unistd.h
-#os_include/os_nl_types.h
-#os_include/os_regex.h
-#os_include/os_fnmatch.h
-#os_include/os_pdhmsg.h
-#os_include/os_strings.h
-#os_include/os_iconv.h
-#os_include/os_kstat.h
-#os_include/os_string.h
-#os_include/os_stdint.h
 #os_include/os_pthread.h
 #os_include/arpa/os_inet.h
-#os_include/os_complex.h
+#os_include/os_regex.h
+#os_include/os_dirent.h
+#os_include/os_utime.h
 #os_include/os_syslog.h
-#os_include/os_fenv.h
-#os_include/os_termios.h
+#os_include/os_signal.h
+#os_include/os_monetary.h
+#os_include/os_stddef.h
+#os_include/os_local.h
+#os_include/os_netdb.h
+#os_include/os_poll.h
+#os_include/os_fnmatch.h
 #os_include/os_libgen.h
-#os_include/os_glob.h
+#os_include/os_stdio.h
+#os_include/os_stdint.h
+#os_include/sys/os_pstat.h
+#os_include/sys/os_timeb.h
+#os_include/sys/os_sysinfo.h
+#os_include/sys/os_statvfs.h
+#os_include/sys/os_ipc.h
+#os_include/sys/os_un.h
+#os_include/sys/os_uio.h
+#os_include/sys/os_mman.h
+#os_include/sys/os_wait.h
+#os_include/sys/os_times.h
+#os_include/sys/os_utsname.h
+#os_include/sys/os_time.h
+#os_include/sys/os_msg.h
+#os_include/sys/os_stat.h
+#os_include/sys/os_loadavg.h
+#os_include/sys/os_select.h
+#os_include/sys/os_types.h
+#os_include/sys/os_sysctl.h
+#os_include/sys/os_sem.h
+#os_include/sys/os_shm.h
+#os_include/sys/os_resource.h
+#os_include/sys/os_socket.h
+#os_include/os_cpio.h
+#os_include/os_math.h
+#os_include/os_dlfcn.h
+#os_include/os_semaphore.h
+#os_include/os_iso646.h
+#os_include/os_ndbm.h
+#os_include/os_ifaddrs.h
+#os_include/os_intrin.h
+#os_include/os_strings.h
+#os_include/os_limits.h
+#os_include/os_typeinfo.h
+#os_include/os_fenv.h
+#os_include/os_time.h
 #os_include/os_ctype.h
+#os_include/os_tar.h
+#os_include/os_utmpx.h
+#os_include/os_errno.h
+#os_include/os_tgmath.h
+#os_include/os_glob.h
+#os_include/os_byteswap.h
+#os_include/os_trace.h
+#os_include/os_aio.h
 #os_include/os_pdh.h
+#os_include/os_langinfo.h
+#os_include/netinet/os_in.h
+#os_include/netinet/os_tcp.h
+#os_include/os_string.h
+#os_include/os_assert.h
+#os_include/os_complex.h
+#os_include/os_pdhmsg.h
+#os_include/os_float.h
+#os_include/os_spawn.h
+#os_include/os_ftw.h
+#os_include/os_wchar.h
+#os_include/os_ucontext.h
+#os_include/net/os_if.h
+#os_include/os_kstat.h
+#os_include/os_wctype.h
+#os_include/os_sched.h
+#os_include/os_iconv.h
+#os_include/os_fcntl.h
+#os_include/os_stdarg.h
+#os_include/os_termios.h
+#os_include/os_inttypes.h
 #os_include/os_wordexp.h
+#os_include/os_nl_types.h
+#os_include/os_pwd.h
+#os_include/os_setjmp.h
+#os_include/os_grp.h
 #os_include/os_ulimit.h
 #os_include/os_stdlib.h
-#os_include/os_utime.h
-#os_include/os_ifaddrs.h
-#os_include/os_wchar.h
-#os_include/os_stddef.h
-#os_include/os_byteswap.h
-#os_include/net/os_if.h
-#os_include/os_ftw.h
 #os_include/os_search.h
-#os_include/os_stdarg.h
-#os_include/os_inttypes.h
-#os_include/os_dlfcn.h
+#os_include/os_unistd.h
 #os_include/os_stdbool.h
+#os_include/os_stropts.h
+#os_include/os_mqueue.h
 #post.h
 #pre.h
 #streams.h
@@ -1230,8 +1231,8 @@ endif
 #LSOCK_Dgram.h
 #Asynch_IO.h
 #UTF32_Encoding_Converter.h
-#SOCK_SEQPACK_Association.h
 #Auto_Event.h
+#SOCK_SEQPACK_Association.h
 #Log_Msg_NT_Event_Log.h
 #OS_NS_dirent.h
 #Object_Manager.h
@@ -1345,8 +1346,8 @@ endif
 #Monitor_Control_Action.h
 #Service_Gestalt.h
 #Malloc_Allocator.h
-#Local_Tokens.h
 #Cleanup.h
+#Local_Tokens.h
 #OS_NS_sys_utsname.h
 #Stream.h
 #FIFO_Send_Msg.h
@@ -1367,8 +1368,8 @@ endif
 #UTF8_Encoding_Converter.h
 #IO_SAP.h
 #POSIX_Asynch_IO.h
-#SOCK_IO.h
 #Dump.h
+#SOCK_IO.h
 #Connector.h
 #Token_Manager.h
 #Base_Thread_Adapter.h
@@ -1404,9 +1405,9 @@ endif
 #Ping_Socket.h
 #Event_Handler_Handle_Timeout_Upcall.h
 #Map_Manager.h
+#Manual_Event.h
 #TLI_Connector.h
 #Codeset_Registry.h
-#Manual_Event.h
 #Basic_Stats.h
 #Module.h
 #Notification_Queue.h
@@ -1520,7 +1521,6 @@ endif
 #ATM_Stream.cpp
 #Atomic_Op.cpp
 #Atomic_Op_Sparc.c
-#Auto_Event.cpp
 #Barrier.cpp
 #Base_Thread_Adapter.cpp
 #Based_Pointer_Repository.cpp
@@ -1554,7 +1554,7 @@ endif
 #Dump.cpp
 #Dynamic.cpp
 #Dynamic_Message_Strategy.cpp
-#Event.cpp
+#Event_Base.cpp
 #Event_Handler.cpp
 #Event_Handler_Handle_Timeout_Upcall.cpp
 #FIFO.cpp
@@ -1602,7 +1602,6 @@ endif
 #LSOCK_Stream.cpp
 #Malloc.cpp
 #Malloc_Allocator.cpp
-#Manual_Event.cpp
 #MEM_Acceptor.cpp
 #MEM_Addr.cpp
 #MEM_Connector.cpp
@@ -1786,6 +1785,7 @@ endif
 #Asynch_Connector.cpp
 #Atomic_Op_T.cpp
 #Atomic_Op_GCC_T.cpp
+#Auto_Event.cpp
 #Auto_Functor.cpp
 #Auto_IncDec_T.cpp
 #Auto_Ptr.cpp
@@ -1802,6 +1802,7 @@ endif
 #Dump_T.cpp
 #Dynamic_Service.cpp
 #Env_Value_T.cpp
+#Event.cpp
 #Event_Handler_T.cpp
 #Framework_Component_T.cpp
 #Free_List.cpp
@@ -1822,6 +1823,7 @@ endif
 #Lock_Adapter_T.cpp
 #Malloc_T.cpp
 #Managed_Object.cpp
+#Manual_Event.cpp
 #Map_Manager.cpp
 #Map_T.cpp
 #Message_Block_T.cpp

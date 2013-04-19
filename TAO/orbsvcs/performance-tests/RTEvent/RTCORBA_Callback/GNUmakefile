@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: RTCORBA_Callback_IDL RTCORBA_Callback_Client RTCORBA_Callback_Server
+all: RTCORBA_Callback_IDL RTCORBA_Callback_Server RTCORBA_Callback_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTCORBA_Callback_IDL $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTCORBA_Callback_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTCORBA_Callback_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTCORBA_Callback_Client $(@)
 
 .PHONY: RTCORBA_Callback_IDL
 RTCORBA_Callback_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTCORBA_Callback_IDL all
 
-.PHONY: RTCORBA_Callback_Client
-RTCORBA_Callback_Client: RTCORBA_Callback_IDL
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTCORBA_Callback_Client all
-
 .PHONY: RTCORBA_Callback_Server
-RTCORBA_Callback_Server: RTCORBA_Callback_IDL RTCORBA_Callback_Client
+RTCORBA_Callback_Server: RTCORBA_Callback_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTCORBA_Callback_Server all
+
+.PHONY: RTCORBA_Callback_Client
+RTCORBA_Callback_Client: RTCORBA_Callback_IDL RTCORBA_Callback_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTCORBA_Callback_Client all
 
 project_name_list:
 	@echo RTCORBA_Callback_Client

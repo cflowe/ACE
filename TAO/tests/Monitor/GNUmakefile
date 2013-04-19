@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: marshal_buffer_idl marshal_buffer_client marshal_buffer_server
+all: marshal_buffer_idl marshal_buffer_server marshal_buffer_client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Marshal_Buffer && $(MAKE) -f GNUmakefile.marshal_buffer_idl $(@)
-	$(KEEP_GOING)@cd Marshal_Buffer && $(MAKE) -f GNUmakefile.marshal_buffer_client $(@)
 	$(KEEP_GOING)@cd Marshal_Buffer && $(MAKE) -f GNUmakefile.marshal_buffer_server $(@)
+	$(KEEP_GOING)@cd Marshal_Buffer && $(MAKE) -f GNUmakefile.marshal_buffer_client $(@)
 
 .PHONY: marshal_buffer_idl
 marshal_buffer_idl:
 	$(KEEP_GOING)@cd Marshal_Buffer && $(MAKE) -f GNUmakefile.marshal_buffer_idl all
 
-.PHONY: marshal_buffer_client
-marshal_buffer_client: marshal_buffer_idl
-	$(KEEP_GOING)@cd Marshal_Buffer && $(MAKE) -f GNUmakefile.marshal_buffer_client all
-
 .PHONY: marshal_buffer_server
-marshal_buffer_server: marshal_buffer_idl marshal_buffer_client
+marshal_buffer_server: marshal_buffer_idl
 	$(KEEP_GOING)@cd Marshal_Buffer && $(MAKE) -f GNUmakefile.marshal_buffer_server all
+
+.PHONY: marshal_buffer_client
+marshal_buffer_client: marshal_buffer_idl marshal_buffer_server
+	$(KEEP_GOING)@cd Marshal_Buffer && $(MAKE) -f GNUmakefile.marshal_buffer_client all
 
 project_name_list:
 	@echo marshal_buffer_client

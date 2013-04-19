@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LocateRequest_Invocation.cpp 95332 2011-12-15 11:09:41Z mcorino $
+// $Id: LocateRequest_Invocation.cpp 96218 2012-11-05 08:26:31Z johnnyw $
 
 #include "tao/LocateRequest_Invocation.h"
 #include "tao/Profile_Transport_Resolver.h"
@@ -126,7 +126,7 @@ namespace TAO
     countdown.update ();
 
     // For some strategies one may want to release the transport
-    // back to  cache. If the idling is successful let the
+    // back to cache. If the idling is successful let the
     // resolver about that.
     if (this->resolver_.transport ()->idle_after_send ())
       this->resolver_.transport_released ();

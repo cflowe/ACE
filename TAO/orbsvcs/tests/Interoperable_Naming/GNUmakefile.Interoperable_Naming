@@ -22,8 +22,8 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 FILES = \
   Web_ServerS.cpp \
   Web_ServerC.cpp \
-  ncontextext_client_i.cpp \
-  client.cpp
+  client.cpp \
+  ncontextext_client_i.cpp
 
 
 #----------------------------------------------------------------------------
@@ -204,7 +204,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = Web_ServerS.cpp Web_ServerC.cpp ncontextext_client_i.cpp client.cpp  
+FORCED_IDL_STUBS = Web_ServerS.cpp Web_ServerC.cpp client.cpp ncontextext_client_i.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:Web_ServerS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:Web_ServerC.cpp=)
 

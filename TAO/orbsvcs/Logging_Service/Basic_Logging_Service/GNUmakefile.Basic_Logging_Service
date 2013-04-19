@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Basic_Logging_Server.cpp \
-  Basic_Logging_Service.cpp
+  Basic_Logging_Service.cpp \
+  Basic_Logging_Server.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -239,8 +239,8 @@ endif
 #Basic_Logging_Service.h
 #
 #source_files:
-#Basic_Logging_Server.cpp
 #Basic_Logging_Service.cpp
+#Basic_Logging_Server.cpp
 #
 #exe_output:
 # tao_tls_basic

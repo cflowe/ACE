@@ -2,7 +2,7 @@
 /**
  *  @file    Obstack_Test.cpp
  *
- *  $Id: Obstack_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Obstack_Test.cpp 96230 2012-11-06 22:18:13Z schmidt $
  *
  *  Checks the functionality of ACE_Obstack<T>
  *
@@ -11,14 +11,10 @@
  */
 //=============================================================================
 
-
 #include "test_config.h"
 #include "ace/OS_NS_string.h"
 #include "ace/Obstack.h"
 #include "ace/Log_Msg.h"
-
-
-
 
 int run_main (int, ACE_TCHAR *[])
 {

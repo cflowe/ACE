@@ -27,8 +27,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  TkResource_Factory.cpp \
-  TkResource_Loader.cpp
+  TkResource_Loader.cpp \
+  TkResource_Factory.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -271,8 +271,8 @@ endif
 #TAO_TkResource_Export.h
 #
 #source_files:
-#TkResource_Factory.cpp
 #TkResource_Loader.cpp
+#TkResource_Factory.cpp
 #
 #lib_output:
 #../../../lib TAO_TkResource

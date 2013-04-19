@@ -25,9 +25,9 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)ACEXML_Parser.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
+  Entity_Manager.cpp \
   ParserInternals.cpp \
   Parser.cpp \
-  Entity_Manager.cpp \
   ParserContext.cpp
 
 #----------------------------------------------------------------------------
@@ -235,23 +235,23 @@ endif
 #
 #inline_files:
 #ParserContext.inl
-#Entity_Manager.inl
 #Parser.inl
+#Entity_Manager.inl
 #
 #header_files:
 #ParserContext.h
 #ParserInternals.h
-#Entity_Manager.h
 #Parser.h
+#Entity_Manager.h
 #Parser_export.h
 #
 #pkgconfig_files:
 #ACEXML_Parser.pc.in
 #
 #source_files:
+#Entity_Manager.cpp
 #ParserInternals.cpp
 #Parser.cpp
-#Entity_Manager.cpp
 #ParserContext.cpp
 #
 #lib_output:

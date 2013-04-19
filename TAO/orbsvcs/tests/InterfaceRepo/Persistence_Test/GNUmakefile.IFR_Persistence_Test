@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Ptest.cpp \
-  test.cpp
+  test.cpp \
+  Ptest.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

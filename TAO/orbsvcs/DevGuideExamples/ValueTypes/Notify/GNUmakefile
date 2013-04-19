@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,21 +20,21 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Notify_Consumer Notify_Supplier
+all: Notify_Supplier Notify_Consumer
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Notify_Consumer $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Notify_Supplier $(@)
-
-.PHONY: Notify_Consumer
-Notify_Consumer:
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Notify_Consumer all
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Notify_Consumer $(@)
 
 .PHONY: Notify_Supplier
-Notify_Supplier: Notify_Consumer
+Notify_Supplier:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Notify_Supplier all
+
+.PHONY: Notify_Consumer
+Notify_Consumer: Notify_Supplier
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Notify_Consumer all
 
 project_name_list:
 	@echo Notify_Consumer

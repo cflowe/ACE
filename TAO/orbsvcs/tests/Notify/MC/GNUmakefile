@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,31 +20,31 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: MonitorControl_Idl MonitorControl_Monitor MonitorControl_Consumer MonitorControl_Supplier
+all: MonitorControl_Idl MonitorControl_Supplier MonitorControl_Consumer MonitorControl_Monitor
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Monitor $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Consumer $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Supplier $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Consumer $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Monitor $(@)
 
 .PHONY: MonitorControl_Idl
 MonitorControl_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Idl all
 
-.PHONY: MonitorControl_Monitor
-MonitorControl_Monitor: MonitorControl_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Monitor all
+.PHONY: MonitorControl_Supplier
+MonitorControl_Supplier: MonitorControl_Idl
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Supplier all
 
 .PHONY: MonitorControl_Consumer
-MonitorControl_Consumer: MonitorControl_Idl MonitorControl_Monitor
+MonitorControl_Consumer: MonitorControl_Idl MonitorControl_Supplier
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Consumer all
 
-.PHONY: MonitorControl_Supplier
-MonitorControl_Supplier: MonitorControl_Idl MonitorControl_Monitor
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Supplier all
+.PHONY: MonitorControl_Monitor
+MonitorControl_Monitor: MonitorControl_Idl MonitorControl_Supplier
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.MonitorControl_Monitor all
 
 project_name_list:
 	@echo MonitorControl_Consumer

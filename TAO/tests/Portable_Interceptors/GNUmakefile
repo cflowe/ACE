@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: PI_AMI_Idl PI_AMI_Client PI_AMI_Server AdvSlot_Idl AdvSlot_Server AdvSlot_Client AdvSlotDblCpy_Idl AdvSlotDblCpy_Client AdvSlotDblCpy_Server AdvSlotExt_Idl AdvSlotExt_Server AdvSlotExt_Client PI_Benchmark_Idl PI_Benchmark_Client PI_Benchmark_Server Bug_1559_Idl Bug_1559_Client Bug_1559_Server Bug_2088_Client Bug_2133_Idl Bug_2133_Client Bug_2133_Server Bug_2510_Regression_Idl Bug_2510_Regression_Client Bug_2510_Regression_Server Bug_3079_Idl Bug_3079_Server Bug_3079_Client Bug_3080_Idl Bug_3080_Client Bug_3080_Server PI_RTException_Idl PI_RTException_Server PI_RTException_Client PI_Dynamic_Collocated PI_Svc_Context_Manip_Collocated PI_Dynamic_Idl PI_Dynamic_Server PI_Dynamic_Client PI_ForwardRequest_Idl PI_ForwardRequest_Client PI_ForwardRequest_Server PI_IORInterceptor_Idl PI_IORInterceptor_Client PI_IORInterceptor_Server PI_ORB_Shutdown_Idl PI_ORB_Shutdown_Client PI_ORB_Shutdown_Server PI_PICurrent_Idl PI_PICurrent_Server PI_PICurrent_Client PI_PolicyFactory_Server PI_ProcMode_Collocated_Collocated PI_ProcMode_Remote_Idl PI_ProcMode_Remote_RemoteServer PI_ProcMode_Remote_RemoteClient Register_ORBInitializer_Client PI_Redirection_Idl PI_Redirection_Server PI_Redirection_Client Register_ORBInitializer_Server PI_Request_Interceptor_Flow_Idl PI_Request_Interceptor_Flow_Server PI_Request_Interceptor_Flow_Client PI_Svc_Context_Manip_Idl PI_Svc_Context_Manip_Client PI_Svc_Context_Manip_Server PI_Slot_Driver
+all: PI_AMI_Idl PI_AMI_Client PI_AMI_Server AdvSlot_Idl AdvSlot_Client AdvSlot_Server AdvSlotDblCpy_Idl AdvSlotDblCpy_Client AdvSlotDblCpy_Server AdvSlotExt_Idl AdvSlotExt_Server AdvSlotExt_Client PI_Benchmark_Idl PI_Benchmark_Client PI_Benchmark_Server Bug_1559_Idl Bug_1559_Client Bug_1559_Server Bug_2088_Client Bug_2133_Idl Bug_2133_Client Bug_2133_Server Bug_2510_Regression_Idl Bug_2510_Regression_Server Bug_2510_Regression_Client Bug_3079_Idl Bug_3079_Server Bug_3079_Client Bug_3080_Idl Bug_3080_Client Bug_3080_Server PI_RTException_Idl PI_RTException_Client PI_RTException_Server PI_Dynamic_Collocated PI_Svc_Context_Manip_Collocated PI_Dynamic_Idl PI_Dynamic_Server PI_Dynamic_Client PI_ForwardRequest_Idl PI_ForwardRequest_Client PI_ForwardRequest_Server PI_IORInterceptor_Idl PI_IORInterceptor_Client PI_IORInterceptor_Server PI_ORB_Shutdown_Idl PI_ORB_Shutdown_Client PI_ORB_Shutdown_Server PI_PICurrent_Idl PI_PICurrent_Server PI_PICurrent_Client PI_PolicyFactory_Server PI_ProcMode_Collocated_Collocated PI_ProcMode_Remote_Idl PI_ProcMode_Remote_RemoteServer PI_ProcMode_Remote_RemoteClient Register_ORBInitializer_Client PI_Redirection_Idl PI_Redirection_Server PI_Redirection_Client Register_ORBInitializer_Server PI_Request_Interceptor_Flow_Idl PI_Request_Interceptor_Flow_Client PI_Request_Interceptor_Flow_Server PI_Svc_Context_Manip_Idl PI_Svc_Context_Manip_Client PI_Svc_Context_Manip_Server PI_Slot_Driver
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -29,8 +29,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.PI_AMI_Client $(@)
 	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.PI_AMI_Server $(@)
 	$(KEEP_GOING)@cd AdvSlot && $(MAKE) -f GNUmakefile.AdvSlot_Idl $(@)
-	$(KEEP_GOING)@cd AdvSlot && $(MAKE) -f GNUmakefile.AdvSlot_Server $(@)
 	$(KEEP_GOING)@cd AdvSlot && $(MAKE) -f GNUmakefile.AdvSlot_Client $(@)
+	$(KEEP_GOING)@cd AdvSlot && $(MAKE) -f GNUmakefile.AdvSlot_Server $(@)
 	$(KEEP_GOING)@cd AdvSlotDblCpy && $(MAKE) -f GNUmakefile.AdvSlotDblCpy_Idl $(@)
 	$(KEEP_GOING)@cd AdvSlotDblCpy && $(MAKE) -f GNUmakefile.AdvSlotDblCpy_Client $(@)
 	$(KEEP_GOING)@cd AdvSlotDblCpy && $(MAKE) -f GNUmakefile.AdvSlotDblCpy_Server $(@)
@@ -48,8 +48,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Bug_2133 && $(MAKE) -f GNUmakefile.Bug_2133_Client $(@)
 	$(KEEP_GOING)@cd Bug_2133 && $(MAKE) -f GNUmakefile.Bug_2133_Server $(@)
 	$(KEEP_GOING)@cd Bug_2510_Regression && $(MAKE) -f GNUmakefile.Bug_2510_Regression_Idl $(@)
-	$(KEEP_GOING)@cd Bug_2510_Regression && $(MAKE) -f GNUmakefile.Bug_2510_Regression_Client $(@)
 	$(KEEP_GOING)@cd Bug_2510_Regression && $(MAKE) -f GNUmakefile.Bug_2510_Regression_Server $(@)
+	$(KEEP_GOING)@cd Bug_2510_Regression && $(MAKE) -f GNUmakefile.Bug_2510_Regression_Client $(@)
 	$(KEEP_GOING)@cd Bug_3079 && $(MAKE) -f GNUmakefile.Bug_3079_Idl $(@)
 	$(KEEP_GOING)@cd Bug_3079 && $(MAKE) -f GNUmakefile.Bug_3079_Server $(@)
 	$(KEEP_GOING)@cd Bug_3079 && $(MAKE) -f GNUmakefile.Bug_3079_Client $(@)
@@ -57,8 +57,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Bug_3080 && $(MAKE) -f GNUmakefile.Bug_3080_Client $(@)
 	$(KEEP_GOING)@cd Bug_3080 && $(MAKE) -f GNUmakefile.Bug_3080_Server $(@)
 	$(KEEP_GOING)@cd Bug_3582 && $(MAKE) -f GNUmakefile.PI_RTException_Idl $(@)
-	$(KEEP_GOING)@cd Bug_3582 && $(MAKE) -f GNUmakefile.PI_RTException_Server $(@)
 	$(KEEP_GOING)@cd Bug_3582 && $(MAKE) -f GNUmakefile.PI_RTException_Client $(@)
+	$(KEEP_GOING)@cd Bug_3582 && $(MAKE) -f GNUmakefile.PI_RTException_Server $(@)
 	$(KEEP_GOING)@cd Collocated/Dynamic && $(MAKE) -f GNUmakefile.PI_Dynamic_Collocated $(@)
 	$(KEEP_GOING)@cd Collocated/Service_Context_Manipulation && $(MAKE) -f GNUmakefile.PI_Svc_Context_Manip_Collocated $(@)
 	$(KEEP_GOING)@cd Dynamic && $(MAKE) -f GNUmakefile.PI_Dynamic_Idl $(@)
@@ -87,8 +87,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Redirection && $(MAKE) -f GNUmakefile.PI_Redirection_Client $(@)
 	$(KEEP_GOING)@cd Register_Initial_References && $(MAKE) -f GNUmakefile.Register_ORBInitializer_Server $(@)
 	$(KEEP_GOING)@cd Request_Interceptor_Flow && $(MAKE) -f GNUmakefile.PI_Request_Interceptor_Flow_Idl $(@)
-	$(KEEP_GOING)@cd Request_Interceptor_Flow && $(MAKE) -f GNUmakefile.PI_Request_Interceptor_Flow_Server $(@)
 	$(KEEP_GOING)@cd Request_Interceptor_Flow && $(MAKE) -f GNUmakefile.PI_Request_Interceptor_Flow_Client $(@)
+	$(KEEP_GOING)@cd Request_Interceptor_Flow && $(MAKE) -f GNUmakefile.PI_Request_Interceptor_Flow_Server $(@)
 	$(KEEP_GOING)@cd Service_Context_Manipulation && $(MAKE) -f GNUmakefile.PI_Svc_Context_Manip_Idl $(@)
 	$(KEEP_GOING)@cd Service_Context_Manipulation && $(MAKE) -f GNUmakefile.PI_Svc_Context_Manip_Client $(@)
 	$(KEEP_GOING)@cd Service_Context_Manipulation && $(MAKE) -f GNUmakefile.PI_Svc_Context_Manip_Server $(@)
@@ -110,13 +110,13 @@ PI_AMI_Server: PI_AMI_Idl PI_AMI_Client
 AdvSlot_Idl:
 	$(KEEP_GOING)@cd AdvSlot && $(MAKE) -f GNUmakefile.AdvSlot_Idl all
 
-.PHONY: AdvSlot_Server
-AdvSlot_Server: AdvSlot_Idl
-	$(KEEP_GOING)@cd AdvSlot && $(MAKE) -f GNUmakefile.AdvSlot_Server all
-
 .PHONY: AdvSlot_Client
-AdvSlot_Client: AdvSlot_Idl AdvSlot_Server
+AdvSlot_Client: AdvSlot_Idl
 	$(KEEP_GOING)@cd AdvSlot && $(MAKE) -f GNUmakefile.AdvSlot_Client all
+
+.PHONY: AdvSlot_Server
+AdvSlot_Server: AdvSlot_Idl AdvSlot_Client
+	$(KEEP_GOING)@cd AdvSlot && $(MAKE) -f GNUmakefile.AdvSlot_Server all
 
 .PHONY: AdvSlotDblCpy_Idl
 AdvSlotDblCpy_Idl:
@@ -186,13 +186,13 @@ Bug_2133_Server: Bug_2133_Idl Bug_2133_Client
 Bug_2510_Regression_Idl:
 	$(KEEP_GOING)@cd Bug_2510_Regression && $(MAKE) -f GNUmakefile.Bug_2510_Regression_Idl all
 
-.PHONY: Bug_2510_Regression_Client
-Bug_2510_Regression_Client: Bug_2510_Regression_Idl
-	$(KEEP_GOING)@cd Bug_2510_Regression && $(MAKE) -f GNUmakefile.Bug_2510_Regression_Client all
-
 .PHONY: Bug_2510_Regression_Server
-Bug_2510_Regression_Server: Bug_2510_Regression_Idl Bug_2510_Regression_Client
+Bug_2510_Regression_Server: Bug_2510_Regression_Idl
 	$(KEEP_GOING)@cd Bug_2510_Regression && $(MAKE) -f GNUmakefile.Bug_2510_Regression_Server all
+
+.PHONY: Bug_2510_Regression_Client
+Bug_2510_Regression_Client: Bug_2510_Regression_Idl Bug_2510_Regression_Server
+	$(KEEP_GOING)@cd Bug_2510_Regression && $(MAKE) -f GNUmakefile.Bug_2510_Regression_Client all
 
 .PHONY: Bug_3079_Idl
 Bug_3079_Idl:
@@ -222,13 +222,13 @@ Bug_3080_Server: Bug_3080_Idl Bug_3080_Client
 PI_RTException_Idl:
 	$(KEEP_GOING)@cd Bug_3582 && $(MAKE) -f GNUmakefile.PI_RTException_Idl all
 
-.PHONY: PI_RTException_Server
-PI_RTException_Server: PI_RTException_Idl
-	$(KEEP_GOING)@cd Bug_3582 && $(MAKE) -f GNUmakefile.PI_RTException_Server all
-
 .PHONY: PI_RTException_Client
-PI_RTException_Client: PI_RTException_Idl PI_RTException_Server
+PI_RTException_Client: PI_RTException_Idl
 	$(KEEP_GOING)@cd Bug_3582 && $(MAKE) -f GNUmakefile.PI_RTException_Client all
+
+.PHONY: PI_RTException_Server
+PI_RTException_Server: PI_RTException_Idl PI_RTException_Client
+	$(KEEP_GOING)@cd Bug_3582 && $(MAKE) -f GNUmakefile.PI_RTException_Server all
 
 .PHONY: PI_Dynamic_Collocated
 PI_Dynamic_Collocated:
@@ -342,13 +342,13 @@ Register_ORBInitializer_Server:
 PI_Request_Interceptor_Flow_Idl:
 	$(KEEP_GOING)@cd Request_Interceptor_Flow && $(MAKE) -f GNUmakefile.PI_Request_Interceptor_Flow_Idl all
 
-.PHONY: PI_Request_Interceptor_Flow_Server
-PI_Request_Interceptor_Flow_Server: PI_Request_Interceptor_Flow_Idl
-	$(KEEP_GOING)@cd Request_Interceptor_Flow && $(MAKE) -f GNUmakefile.PI_Request_Interceptor_Flow_Server all
-
 .PHONY: PI_Request_Interceptor_Flow_Client
-PI_Request_Interceptor_Flow_Client: PI_Request_Interceptor_Flow_Idl PI_Request_Interceptor_Flow_Server
+PI_Request_Interceptor_Flow_Client: PI_Request_Interceptor_Flow_Idl
 	$(KEEP_GOING)@cd Request_Interceptor_Flow && $(MAKE) -f GNUmakefile.PI_Request_Interceptor_Flow_Client all
+
+.PHONY: PI_Request_Interceptor_Flow_Server
+PI_Request_Interceptor_Flow_Server: PI_Request_Interceptor_Flow_Idl PI_Request_Interceptor_Flow_Client
+	$(KEEP_GOING)@cd Request_Interceptor_Flow && $(MAKE) -f GNUmakefile.PI_Request_Interceptor_Flow_Server all
 
 .PHONY: PI_Svc_Context_Manip_Idl
 PI_Svc_Context_Manip_Idl:

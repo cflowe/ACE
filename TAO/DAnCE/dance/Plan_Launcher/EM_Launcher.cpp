@@ -1,4 +1,4 @@
-// $Id: EM_Launcher.cpp 93623 2011-03-22 18:55:51Z wotte $
+// $Id: EM_Launcher.cpp 96194 2012-10-12 11:19:20Z johnnyw $
 
 #include "EM_Launcher.h"
 
@@ -10,11 +10,8 @@ namespace DAnCE
   {
   }
 
-
-
   EM_Launcher::~EM_Launcher (void)
   {
-
   }
 
   bool
@@ -67,5 +64,4 @@ namespace DAnCE
 
     return false;
   }
-
 }

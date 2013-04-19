@@ -4,7 +4,7 @@
 /**
  *  @file Transport.h
  *
- *  $Id: Transport.h 95629 2012-03-22 11:12:34Z sma $
+ *  $Id: Transport.h 96218 2012-11-05 08:26:31Z johnnyw $
  *
  *  Define the interface for the Transport component in TAO's
  *  pluggable protocol framework.
@@ -544,8 +544,8 @@ public:
    * thread can execute it on the same instance concurrently.
    *
    * @param buffer ORB allocated buffer where the data should be
-   * @@ The ACE_Time_Value *s is just a place holder for now.  It is
-   * not clear this this is the best place to specify this.  The actual
+   * @param timeout The ACE_Time_Value *s is just a place holder for now. It is
+   * not clear this this is the best place to specify this. The actual
    * timeout values will be kept in the Policies.
    */
   virtual ssize_t recv (char *buffer,

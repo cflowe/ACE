@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Secure_BiDir_Idl Secure_BiDir_SSL_Server Secure_BiDir_SSL_Client Big_Request_Idl Big_Request_Security_Client Big_Request_Security_Server Bug_1107_Regression_Idl Bug_1107_Regression_Security_Client Bug_1107_Regression_Security_Server Bug_2908_Regression_Idl Bug_2908_Regression_Client Bug_2908_Regression_Server Callback_Idl Callback_Security_Client Callback_Security_Server Security_Crash_Test_Idl Security_Crash_Test_Client Security_Crash_Test_Server EndpointPolicy_Test InsecureReferences_Test MT_BiDir_SSL_Idl MT_BiDir_SSL_Server MT_BiDir_SSL_Client MT_IIOP_SSL_Idl MT_IIOP_SSL_Security_Client MT_IIOP_SSL_Security_Server MT_SSLIOP_Idl MT_SSLIOP_Security_Server MT_SSLIOP_Security_Client Null_Cipher_Idl Null_Cipher_Security_Client Null_Cipher_Security_Server Secure_Invocation_Idl Secure_Invocation_Security_Client Secure_Invocation_Security_Server mixed_security_idl mixed_security_security_client mixed_security_security_server Ssliop_CSD_Idl Ssliop_CSD_Client Ssliop_CSD_Server Corbaloc_Ssliop_Client
+all: Secure_BiDir_Idl Secure_BiDir_SSL_Server Secure_BiDir_SSL_Client Big_Request_Idl Big_Request_Security_Server Big_Request_Security_Client Bug_1107_Regression_Idl Bug_1107_Regression_Security_Server Bug_1107_Regression_Security_Client Bug_2908_Regression_Idl Bug_2908_Regression_Client Bug_2908_Regression_Server Callback_Idl Callback_Security_Client Callback_Security_Server Security_Crash_Test_Idl Security_Crash_Test_Client Security_Crash_Test_Server EndpointPolicy_Test InsecureReferences_Test MT_BiDir_SSL_Idl MT_BiDir_SSL_Client MT_BiDir_SSL_Server MT_IIOP_SSL_Idl MT_IIOP_SSL_Security_Client MT_IIOP_SSL_Security_Server MT_SSLIOP_Idl MT_SSLIOP_Security_Client MT_SSLIOP_Security_Server Null_Cipher_Idl Null_Cipher_Security_Server Null_Cipher_Security_Client Secure_Invocation_Idl Secure_Invocation_Security_Server Secure_Invocation_Security_Client mixed_security_idl mixed_security_security_server mixed_security_security_client Ssliop_CSD_Idl Ssliop_CSD_Client Ssliop_CSD_Server Corbaloc_Ssliop_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -29,11 +29,11 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd BiDirectional && $(MAKE) -f GNUmakefile.Secure_BiDir_SSL_Server $(@)
 	$(KEEP_GOING)@cd BiDirectional && $(MAKE) -f GNUmakefile.Secure_BiDir_SSL_Client $(@)
 	$(KEEP_GOING)@cd Big_Request && $(MAKE) -f GNUmakefile.Big_Request_Idl $(@)
-	$(KEEP_GOING)@cd Big_Request && $(MAKE) -f GNUmakefile.Big_Request_Security_Client $(@)
 	$(KEEP_GOING)@cd Big_Request && $(MAKE) -f GNUmakefile.Big_Request_Security_Server $(@)
+	$(KEEP_GOING)@cd Big_Request && $(MAKE) -f GNUmakefile.Big_Request_Security_Client $(@)
 	$(KEEP_GOING)@cd Bug_1107_Regression && $(MAKE) -f GNUmakefile.Bug_1107_Regression_Idl $(@)
-	$(KEEP_GOING)@cd Bug_1107_Regression && $(MAKE) -f GNUmakefile.Bug_1107_Regression_Security_Client $(@)
 	$(KEEP_GOING)@cd Bug_1107_Regression && $(MAKE) -f GNUmakefile.Bug_1107_Regression_Security_Server $(@)
+	$(KEEP_GOING)@cd Bug_1107_Regression && $(MAKE) -f GNUmakefile.Bug_1107_Regression_Security_Client $(@)
 	$(KEEP_GOING)@cd Bug_2908_Regression && $(MAKE) -f GNUmakefile.Bug_2908_Regression_Idl $(@)
 	$(KEEP_GOING)@cd Bug_2908_Regression && $(MAKE) -f GNUmakefile.Bug_2908_Regression_Client $(@)
 	$(KEEP_GOING)@cd Bug_2908_Regression && $(MAKE) -f GNUmakefile.Bug_2908_Regression_Server $(@)
@@ -46,23 +46,23 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd EndpointPolicy && $(MAKE) -f GNUmakefile.EndpointPolicy_Test $(@)
 	$(KEEP_GOING)@cd InsecureReferences && $(MAKE) -f GNUmakefile.InsecureReferences_Test $(@)
 	$(KEEP_GOING)@cd MT_BiDir_SSL && $(MAKE) -f GNUmakefile.MT_BiDir_SSL_Idl $(@)
-	$(KEEP_GOING)@cd MT_BiDir_SSL && $(MAKE) -f GNUmakefile.MT_BiDir_SSL_Server $(@)
 	$(KEEP_GOING)@cd MT_BiDir_SSL && $(MAKE) -f GNUmakefile.MT_BiDir_SSL_Client $(@)
+	$(KEEP_GOING)@cd MT_BiDir_SSL && $(MAKE) -f GNUmakefile.MT_BiDir_SSL_Server $(@)
 	$(KEEP_GOING)@cd MT_IIOP_SSL && $(MAKE) -f GNUmakefile.MT_IIOP_SSL_Idl $(@)
 	$(KEEP_GOING)@cd MT_IIOP_SSL && $(MAKE) -f GNUmakefile.MT_IIOP_SSL_Security_Client $(@)
 	$(KEEP_GOING)@cd MT_IIOP_SSL && $(MAKE) -f GNUmakefile.MT_IIOP_SSL_Security_Server $(@)
 	$(KEEP_GOING)@cd MT_SSLIOP && $(MAKE) -f GNUmakefile.MT_SSLIOP_Idl $(@)
-	$(KEEP_GOING)@cd MT_SSLIOP && $(MAKE) -f GNUmakefile.MT_SSLIOP_Security_Server $(@)
 	$(KEEP_GOING)@cd MT_SSLIOP && $(MAKE) -f GNUmakefile.MT_SSLIOP_Security_Client $(@)
+	$(KEEP_GOING)@cd MT_SSLIOP && $(MAKE) -f GNUmakefile.MT_SSLIOP_Security_Server $(@)
 	$(KEEP_GOING)@cd Null_Cipher && $(MAKE) -f GNUmakefile.Null_Cipher_Idl $(@)
-	$(KEEP_GOING)@cd Null_Cipher && $(MAKE) -f GNUmakefile.Null_Cipher_Security_Client $(@)
 	$(KEEP_GOING)@cd Null_Cipher && $(MAKE) -f GNUmakefile.Null_Cipher_Security_Server $(@)
+	$(KEEP_GOING)@cd Null_Cipher && $(MAKE) -f GNUmakefile.Null_Cipher_Security_Client $(@)
 	$(KEEP_GOING)@cd Secure_Invocation && $(MAKE) -f GNUmakefile.Secure_Invocation_Idl $(@)
-	$(KEEP_GOING)@cd Secure_Invocation && $(MAKE) -f GNUmakefile.Secure_Invocation_Security_Client $(@)
 	$(KEEP_GOING)@cd Secure_Invocation && $(MAKE) -f GNUmakefile.Secure_Invocation_Security_Server $(@)
+	$(KEEP_GOING)@cd Secure_Invocation && $(MAKE) -f GNUmakefile.Secure_Invocation_Security_Client $(@)
 	$(KEEP_GOING)@cd mixed_security_test && $(MAKE) -f GNUmakefile.mixed_security_idl $(@)
-	$(KEEP_GOING)@cd mixed_security_test && $(MAKE) -f GNUmakefile.mixed_security_security_client $(@)
 	$(KEEP_GOING)@cd mixed_security_test && $(MAKE) -f GNUmakefile.mixed_security_security_server $(@)
+	$(KEEP_GOING)@cd mixed_security_test && $(MAKE) -f GNUmakefile.mixed_security_security_client $(@)
 	$(KEEP_GOING)@cd ssliop_CSD && $(MAKE) -f GNUmakefile.Ssliop_CSD_Idl $(@)
 	$(KEEP_GOING)@cd ssliop_CSD && $(MAKE) -f GNUmakefile.Ssliop_CSD_Client $(@)
 	$(KEEP_GOING)@cd ssliop_CSD && $(MAKE) -f GNUmakefile.Ssliop_CSD_Server $(@)
@@ -84,25 +84,25 @@ Secure_BiDir_SSL_Client: Secure_BiDir_Idl Secure_BiDir_SSL_Server
 Big_Request_Idl:
 	$(KEEP_GOING)@cd Big_Request && $(MAKE) -f GNUmakefile.Big_Request_Idl all
 
-.PHONY: Big_Request_Security_Client
-Big_Request_Security_Client: Big_Request_Idl
-	$(KEEP_GOING)@cd Big_Request && $(MAKE) -f GNUmakefile.Big_Request_Security_Client all
-
 .PHONY: Big_Request_Security_Server
-Big_Request_Security_Server: Big_Request_Idl Big_Request_Security_Client
+Big_Request_Security_Server: Big_Request_Idl
 	$(KEEP_GOING)@cd Big_Request && $(MAKE) -f GNUmakefile.Big_Request_Security_Server all
+
+.PHONY: Big_Request_Security_Client
+Big_Request_Security_Client: Big_Request_Idl Big_Request_Security_Server
+	$(KEEP_GOING)@cd Big_Request && $(MAKE) -f GNUmakefile.Big_Request_Security_Client all
 
 .PHONY: Bug_1107_Regression_Idl
 Bug_1107_Regression_Idl:
 	$(KEEP_GOING)@cd Bug_1107_Regression && $(MAKE) -f GNUmakefile.Bug_1107_Regression_Idl all
 
-.PHONY: Bug_1107_Regression_Security_Client
-Bug_1107_Regression_Security_Client: Bug_1107_Regression_Idl
-	$(KEEP_GOING)@cd Bug_1107_Regression && $(MAKE) -f GNUmakefile.Bug_1107_Regression_Security_Client all
-
 .PHONY: Bug_1107_Regression_Security_Server
-Bug_1107_Regression_Security_Server: Bug_1107_Regression_Idl Bug_1107_Regression_Security_Client
+Bug_1107_Regression_Security_Server: Bug_1107_Regression_Idl
 	$(KEEP_GOING)@cd Bug_1107_Regression && $(MAKE) -f GNUmakefile.Bug_1107_Regression_Security_Server all
+
+.PHONY: Bug_1107_Regression_Security_Client
+Bug_1107_Regression_Security_Client: Bug_1107_Regression_Idl Bug_1107_Regression_Security_Server
+	$(KEEP_GOING)@cd Bug_1107_Regression && $(MAKE) -f GNUmakefile.Bug_1107_Regression_Security_Client all
 
 .PHONY: Bug_2908_Regression_Idl
 Bug_2908_Regression_Idl:
@@ -152,13 +152,13 @@ InsecureReferences_Test:
 MT_BiDir_SSL_Idl:
 	$(KEEP_GOING)@cd MT_BiDir_SSL && $(MAKE) -f GNUmakefile.MT_BiDir_SSL_Idl all
 
-.PHONY: MT_BiDir_SSL_Server
-MT_BiDir_SSL_Server: MT_BiDir_SSL_Idl
-	$(KEEP_GOING)@cd MT_BiDir_SSL && $(MAKE) -f GNUmakefile.MT_BiDir_SSL_Server all
-
 .PHONY: MT_BiDir_SSL_Client
-MT_BiDir_SSL_Client: MT_BiDir_SSL_Idl MT_BiDir_SSL_Server
+MT_BiDir_SSL_Client: MT_BiDir_SSL_Idl
 	$(KEEP_GOING)@cd MT_BiDir_SSL && $(MAKE) -f GNUmakefile.MT_BiDir_SSL_Client all
+
+.PHONY: MT_BiDir_SSL_Server
+MT_BiDir_SSL_Server: MT_BiDir_SSL_Idl MT_BiDir_SSL_Client
+	$(KEEP_GOING)@cd MT_BiDir_SSL && $(MAKE) -f GNUmakefile.MT_BiDir_SSL_Server all
 
 .PHONY: MT_IIOP_SSL_Idl
 MT_IIOP_SSL_Idl:
@@ -176,49 +176,49 @@ MT_IIOP_SSL_Security_Server: MT_IIOP_SSL_Idl MT_IIOP_SSL_Security_Client
 MT_SSLIOP_Idl:
 	$(KEEP_GOING)@cd MT_SSLIOP && $(MAKE) -f GNUmakefile.MT_SSLIOP_Idl all
 
-.PHONY: MT_SSLIOP_Security_Server
-MT_SSLIOP_Security_Server: MT_SSLIOP_Idl
-	$(KEEP_GOING)@cd MT_SSLIOP && $(MAKE) -f GNUmakefile.MT_SSLIOP_Security_Server all
-
 .PHONY: MT_SSLIOP_Security_Client
-MT_SSLIOP_Security_Client: MT_SSLIOP_Idl MT_SSLIOP_Security_Server
+MT_SSLIOP_Security_Client: MT_SSLIOP_Idl
 	$(KEEP_GOING)@cd MT_SSLIOP && $(MAKE) -f GNUmakefile.MT_SSLIOP_Security_Client all
+
+.PHONY: MT_SSLIOP_Security_Server
+MT_SSLIOP_Security_Server: MT_SSLIOP_Idl MT_SSLIOP_Security_Client
+	$(KEEP_GOING)@cd MT_SSLIOP && $(MAKE) -f GNUmakefile.MT_SSLIOP_Security_Server all
 
 .PHONY: Null_Cipher_Idl
 Null_Cipher_Idl:
 	$(KEEP_GOING)@cd Null_Cipher && $(MAKE) -f GNUmakefile.Null_Cipher_Idl all
 
-.PHONY: Null_Cipher_Security_Client
-Null_Cipher_Security_Client: Null_Cipher_Idl
-	$(KEEP_GOING)@cd Null_Cipher && $(MAKE) -f GNUmakefile.Null_Cipher_Security_Client all
-
 .PHONY: Null_Cipher_Security_Server
-Null_Cipher_Security_Server: Null_Cipher_Idl Null_Cipher_Security_Client
+Null_Cipher_Security_Server: Null_Cipher_Idl
 	$(KEEP_GOING)@cd Null_Cipher && $(MAKE) -f GNUmakefile.Null_Cipher_Security_Server all
+
+.PHONY: Null_Cipher_Security_Client
+Null_Cipher_Security_Client: Null_Cipher_Idl Null_Cipher_Security_Server
+	$(KEEP_GOING)@cd Null_Cipher && $(MAKE) -f GNUmakefile.Null_Cipher_Security_Client all
 
 .PHONY: Secure_Invocation_Idl
 Secure_Invocation_Idl:
 	$(KEEP_GOING)@cd Secure_Invocation && $(MAKE) -f GNUmakefile.Secure_Invocation_Idl all
 
-.PHONY: Secure_Invocation_Security_Client
-Secure_Invocation_Security_Client: Secure_Invocation_Idl
-	$(KEEP_GOING)@cd Secure_Invocation && $(MAKE) -f GNUmakefile.Secure_Invocation_Security_Client all
-
 .PHONY: Secure_Invocation_Security_Server
-Secure_Invocation_Security_Server: Secure_Invocation_Idl Secure_Invocation_Security_Client
+Secure_Invocation_Security_Server: Secure_Invocation_Idl
 	$(KEEP_GOING)@cd Secure_Invocation && $(MAKE) -f GNUmakefile.Secure_Invocation_Security_Server all
+
+.PHONY: Secure_Invocation_Security_Client
+Secure_Invocation_Security_Client: Secure_Invocation_Idl Secure_Invocation_Security_Server
+	$(KEEP_GOING)@cd Secure_Invocation && $(MAKE) -f GNUmakefile.Secure_Invocation_Security_Client all
 
 .PHONY: mixed_security_idl
 mixed_security_idl:
 	$(KEEP_GOING)@cd mixed_security_test && $(MAKE) -f GNUmakefile.mixed_security_idl all
 
-.PHONY: mixed_security_security_client
-mixed_security_security_client: mixed_security_idl
-	$(KEEP_GOING)@cd mixed_security_test && $(MAKE) -f GNUmakefile.mixed_security_security_client all
-
 .PHONY: mixed_security_security_server
-mixed_security_security_server: mixed_security_idl mixed_security_security_client
+mixed_security_security_server: mixed_security_idl
 	$(KEEP_GOING)@cd mixed_security_test && $(MAKE) -f GNUmakefile.mixed_security_security_server all
+
+.PHONY: mixed_security_security_client
+mixed_security_security_client: mixed_security_idl mixed_security_security_server
+	$(KEEP_GOING)@cd mixed_security_test && $(MAKE) -f GNUmakefile.mixed_security_security_client all
 
 .PHONY: Ssliop_CSD_Idl
 Ssliop_CSD_Idl:

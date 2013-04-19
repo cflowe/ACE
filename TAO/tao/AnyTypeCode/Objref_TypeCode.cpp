@@ -1,4 +1,4 @@
-// $Id: Objref_TypeCode.cpp 88803 2010-02-02 11:13:27Z vzykov $
+// $Id: Objref_TypeCode.cpp 96200 2012-10-19 07:57:30Z johnnyw $
 
 #ifndef TAO_OBJREF_TYPECODE_CPP
 #define TAO_OBJREF_TYPECODE_CPP
@@ -82,8 +82,7 @@ TAO::TypeCode::Objref<StringType,
 {
   TAO_TypeCodeFactory_Adapter * const adapter =
     ACE_Dynamic_Service<TAO_TypeCodeFactory_Adapter>::instance (
-        TAO_ORB_Core::typecodefactory_adapter_name ()
-      );
+        TAO_ORB_Core::typecodefactory_adapter_name ());
 
   if (adapter == 0)
     {

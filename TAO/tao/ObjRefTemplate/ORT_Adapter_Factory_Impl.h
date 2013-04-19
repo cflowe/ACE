@@ -4,7 +4,7 @@
 /**
  *  @file    ORT_Adapter_Factory_Impl.h
  *
- *  $Id: ORT_Adapter_Factory_Impl.h 79958 2007-11-09 09:04:45Z johnnyw $
+ *  $Id: ORT_Adapter_Factory_Impl.h 96199 2012-10-17 12:31:48Z johnnyw $
  *
  *  @author  Johnny Willemsen  <jwillemsen@remedy.nl>
  */
@@ -48,7 +48,7 @@ namespace TAO
     /// Destroy an adapter that is created by this factory
     virtual void destroy (TAO::ORT_Adapter * adapter);
 
-    // Used to force the initialization of the code.
+    /// Used to force the initialization of the code.
     static int Initializer (void);
   };
 }

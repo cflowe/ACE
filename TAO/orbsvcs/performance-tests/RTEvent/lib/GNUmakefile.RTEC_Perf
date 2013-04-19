@@ -30,33 +30,33 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 FILES = \
   Federated_TestS.cpp \
   Federated_TestC.cpp \
-  Control.cpp \
+  ORB_Task_Activator.cpp \
+  Client_Group.cpp \
+  RTServer_Setup.cpp \
+  RTClient_Setup.cpp \
   Loopback_Pair.cpp \
+  Supplier.cpp \
   Implicit_Deactivator.cpp \
+  Control.cpp \
+  Send_Task_Stopper.cpp \
+  Client_Options.cpp \
+  Loopback.cpp \
+  RTPOA_Setup.cpp \
+  ORB_Shutdown.cpp \
+  PriorityBand_Setup.cpp \
+  ORB_Task.cpp \
+  EC_Destroyer.cpp \
+  RT_Class.cpp \
+  Peer_Base.cpp \
+  Loopback_Consumer.cpp \
   Client_Pair.cpp \
   ORB_Holder.cpp \
-  RTEC_Initializer.cpp \
-  EC_Destroyer.cpp \
-  Peer_Base.cpp \
-  RTPOA_Setup.cpp \
   SyncScope_Setup.cpp \
-  RTClient_Setup.cpp \
-  Loopback_Supplier.cpp \
-  Send_Task_Stopper.cpp \
-  PriorityBand_Setup.cpp \
-  RTCORBA_Setup.cpp \
-  RT_Class.cpp \
-  ORB_Task_Activator.cpp \
-  Send_Task.cpp \
-  RTServer_Setup.cpp \
-  Loopback.cpp \
-  Supplier.cpp \
   Consumer.cpp \
-  ORB_Task.cpp \
-  Client_Group.cpp \
-  Client_Options.cpp \
-  ORB_Shutdown.cpp \
-  Loopback_Consumer.cpp
+  Send_Task.cpp \
+  RTCORBA_Setup.cpp \
+  Loopback_Supplier.cpp \
+  RTEC_Initializer.cpp
 
 
 #----------------------------------------------------------------------------
@@ -316,7 +316,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = Federated_TestS.cpp Federated_TestC.cpp Control.cpp Loopback_Pair.cpp Implicit_Deactivator.cpp Client_Pair.cpp ORB_Holder.cpp RTEC_Initializer.cpp EC_Destroyer.cpp Peer_Base.cpp RTPOA_Setup.cpp SyncScope_Setup.cpp RTClient_Setup.cpp Loopback_Supplier.cpp Send_Task_Stopper.cpp PriorityBand_Setup.cpp RTCORBA_Setup.cpp RT_Class.cpp ORB_Task_Activator.cpp Send_Task.cpp RTServer_Setup.cpp Loopback.cpp Supplier.cpp Consumer.cpp ORB_Task.cpp Client_Group.cpp Client_Options.cpp ORB_Shutdown.cpp Loopback_Consumer.cpp  
+FORCED_IDL_STUBS = Federated_TestS.cpp Federated_TestC.cpp ORB_Task_Activator.cpp Client_Group.cpp RTServer_Setup.cpp RTClient_Setup.cpp Loopback_Pair.cpp Supplier.cpp Implicit_Deactivator.cpp Control.cpp Send_Task_Stopper.cpp Client_Options.cpp Loopback.cpp RTPOA_Setup.cpp ORB_Shutdown.cpp PriorityBand_Setup.cpp ORB_Task.cpp EC_Destroyer.cpp RT_Class.cpp Peer_Base.cpp Loopback_Consumer.cpp Client_Pair.cpp ORB_Holder.cpp SyncScope_Setup.cpp Consumer.cpp Send_Task.cpp RTCORBA_Setup.cpp Loopback_Supplier.cpp RTEC_Initializer.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:Federated_TestS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:Federated_TestC.cpp=)
 

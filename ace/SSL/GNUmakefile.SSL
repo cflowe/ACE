@@ -25,14 +25,14 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)ACE_SSL.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
-  SSL_SOCK_Acceptor.cpp \
   SSL_SOCK_Stream.cpp \
-  SSL_Context.cpp \
-  SSL_Asynch_Stream.cpp \
   SSL_SOCK.cpp \
+  SSL_SOCK_Acceptor.cpp \
   SSL_Initializer.cpp \
   SSL_Asynch_BIO.cpp \
-  SSL_SOCK_Connector.cpp
+  SSL_SOCK_Connector.cpp \
+  SSL_Context.cpp \
+  SSL_Asynch_Stream.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -271,28 +271,28 @@ endif
 #
 #header_files:
 #SSL_Asynch_BIO.h
-#SSL_Initializer.h
 #SSL_Asynch_Stream.h
+#SSL_Initializer.h
 #SSL_SOCK_Stream.h
 #SSL_SOCK_Acceptor.h
 #SSL_SOCK.h
 #SSL_SOCK_Connector.h
 #SSL_Context.h
-#SSL_Export.h
 #sslconf.h
+#SSL_Export.h
 #
 #pkgconfig_files:
 #ACE_SSL.pc.in
 #
 #source_files:
-#SSL_SOCK_Acceptor.cpp
 #SSL_SOCK_Stream.cpp
-#SSL_Context.cpp
-#SSL_Asynch_Stream.cpp
 #SSL_SOCK.cpp
+#SSL_SOCK_Acceptor.cpp
 #SSL_Initializer.cpp
 #SSL_Asynch_BIO.cpp
 #SSL_SOCK_Connector.cpp
+#SSL_Context.cpp
+#SSL_Asynch_Stream.cpp
 #
 #lib_output:
 #../../lib ACE_SSL

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: OBV_Any_Idl OBV_Any_Client OBV_Any_Server OBV_Forward_Collocated OBV_Factory_Idl OBV_Factory_Server OBV_Factory_Client OBV_Forward_Idl OBV_Forward_Client OBV_Forward_Server Indirection_IDL Indirection_Server Indirection_Client OBV_Simple_IDL OBV_Simple_Client OBV_Simple_Server OBV_TC_Alignment_Idl OBV_TC_Alignment_Client OBV_TC_Alignment_Server OBV_Truncatable_Idl OBV_Truncatable_Client OBV_Truncatable_Server valuebox_idl Valuebox_Client Valuebox_Server
+all: OBV_Any_Idl OBV_Any_Client OBV_Any_Server OBV_Forward_Collocated OBV_Factory_Idl OBV_Factory_Server OBV_Factory_Client OBV_Forward_Idl OBV_Forward_Server OBV_Forward_Client Indirection_IDL Indirection_Server Indirection_Client OBV_Simple_IDL OBV_Simple_Client OBV_Simple_Server OBV_TC_Alignment_Idl OBV_TC_Alignment_Server OBV_TC_Alignment_Client OBV_Truncatable_Idl OBV_Truncatable_Client OBV_Truncatable_Server valuebox_idl Valuebox_Client Valuebox_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -33,8 +33,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Factory && $(MAKE) -f GNUmakefile.OBV_Factory_Server $(@)
 	$(KEEP_GOING)@cd Factory && $(MAKE) -f GNUmakefile.OBV_Factory_Client $(@)
 	$(KEEP_GOING)@cd Forward && $(MAKE) -f GNUmakefile.OBV_Forward_Idl $(@)
-	$(KEEP_GOING)@cd Forward && $(MAKE) -f GNUmakefile.OBV_Forward_Client $(@)
 	$(KEEP_GOING)@cd Forward && $(MAKE) -f GNUmakefile.OBV_Forward_Server $(@)
+	$(KEEP_GOING)@cd Forward && $(MAKE) -f GNUmakefile.OBV_Forward_Client $(@)
 	$(KEEP_GOING)@cd Indirection && $(MAKE) -f GNUmakefile.Indirection_IDL $(@)
 	$(KEEP_GOING)@cd Indirection && $(MAKE) -f GNUmakefile.Indirection_Server $(@)
 	$(KEEP_GOING)@cd Indirection && $(MAKE) -f GNUmakefile.Indirection_Client $(@)
@@ -42,8 +42,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Simple && $(MAKE) -f GNUmakefile.OBV_Simple_Client $(@)
 	$(KEEP_GOING)@cd Simple && $(MAKE) -f GNUmakefile.OBV_Simple_Server $(@)
 	$(KEEP_GOING)@cd TC_Alignment && $(MAKE) -f GNUmakefile.OBV_TC_Alignment_Idl $(@)
-	$(KEEP_GOING)@cd TC_Alignment && $(MAKE) -f GNUmakefile.OBV_TC_Alignment_Client $(@)
 	$(KEEP_GOING)@cd TC_Alignment && $(MAKE) -f GNUmakefile.OBV_TC_Alignment_Server $(@)
+	$(KEEP_GOING)@cd TC_Alignment && $(MAKE) -f GNUmakefile.OBV_TC_Alignment_Client $(@)
 	$(KEEP_GOING)@cd Truncatable && $(MAKE) -f GNUmakefile.OBV_Truncatable_Idl $(@)
 	$(KEEP_GOING)@cd Truncatable && $(MAKE) -f GNUmakefile.OBV_Truncatable_Client $(@)
 	$(KEEP_GOING)@cd Truncatable && $(MAKE) -f GNUmakefile.OBV_Truncatable_Server $(@)
@@ -83,13 +83,13 @@ OBV_Factory_Client: OBV_Factory_Idl OBV_Factory_Server
 OBV_Forward_Idl:
 	$(KEEP_GOING)@cd Forward && $(MAKE) -f GNUmakefile.OBV_Forward_Idl all
 
-.PHONY: OBV_Forward_Client
-OBV_Forward_Client: OBV_Forward_Idl
-	$(KEEP_GOING)@cd Forward && $(MAKE) -f GNUmakefile.OBV_Forward_Client all
-
 .PHONY: OBV_Forward_Server
-OBV_Forward_Server: OBV_Forward_Idl OBV_Forward_Client
+OBV_Forward_Server: OBV_Forward_Idl
 	$(KEEP_GOING)@cd Forward && $(MAKE) -f GNUmakefile.OBV_Forward_Server all
+
+.PHONY: OBV_Forward_Client
+OBV_Forward_Client: OBV_Forward_Idl OBV_Forward_Server
+	$(KEEP_GOING)@cd Forward && $(MAKE) -f GNUmakefile.OBV_Forward_Client all
 
 .PHONY: Indirection_IDL
 Indirection_IDL:
@@ -119,13 +119,13 @@ OBV_Simple_Server: OBV_Simple_IDL OBV_Simple_Client
 OBV_TC_Alignment_Idl:
 	$(KEEP_GOING)@cd TC_Alignment && $(MAKE) -f GNUmakefile.OBV_TC_Alignment_Idl all
 
-.PHONY: OBV_TC_Alignment_Client
-OBV_TC_Alignment_Client: OBV_TC_Alignment_Idl
-	$(KEEP_GOING)@cd TC_Alignment && $(MAKE) -f GNUmakefile.OBV_TC_Alignment_Client all
-
 .PHONY: OBV_TC_Alignment_Server
-OBV_TC_Alignment_Server: OBV_TC_Alignment_Idl OBV_TC_Alignment_Client
+OBV_TC_Alignment_Server: OBV_TC_Alignment_Idl
 	$(KEEP_GOING)@cd TC_Alignment && $(MAKE) -f GNUmakefile.OBV_TC_Alignment_Server all
+
+.PHONY: OBV_TC_Alignment_Client
+OBV_TC_Alignment_Client: OBV_TC_Alignment_Idl OBV_TC_Alignment_Server
+	$(KEEP_GOING)@cd TC_Alignment && $(MAKE) -f GNUmakefile.OBV_TC_Alignment_Client all
 
 .PHONY: OBV_Truncatable_Idl
 OBV_Truncatable_Idl:

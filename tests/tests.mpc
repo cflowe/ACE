@@ -1,5 +1,5 @@
 //  -*- MPC -*-
-// $Id: tests.mpc 96157 2012-09-27 06:33:47Z johnnyw $
+// $Id: tests.mpc 96220 2012-11-06 10:03:41Z mcorino $
 
 project(Test_Output) : acelib, script {
   libout       = .
@@ -983,6 +983,13 @@ project(Message Queue Test) : acetest {
     ifdef AIX_VERS
       LDFLAGS += -bmaxdata:0x20000000
     endif
+  }
+}
+
+project(Monotonic_Manual_Event Test) : acetest {
+  exename = Monotonic_Manual_Event_Test
+  Source_Files {
+    Monotonic_Manual_Event_Test.cpp
   }
 }
 

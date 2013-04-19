@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Inst_Handler_Impl.cpp 95549 2012-02-23 11:59:40Z johnnyw $
+// $Id: Inst_Handler_Impl.cpp 96194 2012-10-12 11:19:20Z johnnyw $
 
 // TAO_IDL - Generated from
 // be/be_codegen.cpp:1560
@@ -153,15 +153,15 @@ namespace DAnCE
               {
                 deps.insert (id);
               }
-          }
-        else
-          {
-            DANCE_ERROR (DANCE_LOG_TERMINAL_ERROR,
-                         (LM_ERROR, DLINFO
-                          ACE_TEXT ("Inst_Handler_Impl::install_instance - ")
-                          ACE_TEXT ("Unable to extract dependency order from string")));
-            throw ::Deployment::StartError (idd.name.in (),
-                                            "Unable to extract dependency order from string");
+            else
+              {
+                DANCE_ERROR (DANCE_LOG_TERMINAL_ERROR,
+                            (LM_ERROR, DLINFO
+                              ACE_TEXT ("Inst_Handler_Impl::install_instance - ")
+                              ACE_TEXT ("Unable to extract dependency order from string")));
+                throw ::Deployment::StartError (idd.name.in (),
+                                                "Unable to extract dependency order from string");
+              }
           }
       }
 

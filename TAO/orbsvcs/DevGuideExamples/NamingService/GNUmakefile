@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-7725/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-7725/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,17 +20,17 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: NamingService_Messenger_Idl NamingService_Messenger_Client NamingService_Messenger_Server Naming_Client_Idl Naming_Client_Client Naming_Client_Server Naming_Context_Ext_Idl Naming_Context_Ext_Server Naming_Context_Ext_Client Naming_Server_Messenger Corbaloc_Messenger_Idl Corbaloc_Messenger_Server Corbaloc_Messenger_Client Corbaname_Messenger_Idl Corbaname_Messenger_Client Corbaname_Messenger_Server
+all: NamingService_Messenger_Idl NamingService_Messenger_Server NamingService_Messenger_Client Naming_Client_Idl Naming_Client_Server Naming_Client_Client Naming_Context_Ext_Idl Naming_Context_Ext_Server Naming_Context_Ext_Client Naming_Server_Messenger Corbaloc_Messenger_Idl Corbaloc_Messenger_Server Corbaloc_Messenger_Client Corbaname_Messenger_Idl Corbaname_Messenger_Server Corbaname_Messenger_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.NamingService_Messenger_Idl $(@)
-	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.NamingService_Messenger_Client $(@)
 	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.NamingService_Messenger_Server $(@)
+	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.NamingService_Messenger_Client $(@)
 	$(KEEP_GOING)@cd Naming_Client && $(MAKE) -f GNUmakefile.Naming_Client_Idl $(@)
-	$(KEEP_GOING)@cd Naming_Client && $(MAKE) -f GNUmakefile.Naming_Client_Client $(@)
 	$(KEEP_GOING)@cd Naming_Client && $(MAKE) -f GNUmakefile.Naming_Client_Server $(@)
+	$(KEEP_GOING)@cd Naming_Client && $(MAKE) -f GNUmakefile.Naming_Client_Client $(@)
 	$(KEEP_GOING)@cd Naming_Context_Ext && $(MAKE) -f GNUmakefile.Naming_Context_Ext_Idl $(@)
 	$(KEEP_GOING)@cd Naming_Context_Ext && $(MAKE) -f GNUmakefile.Naming_Context_Ext_Server $(@)
 	$(KEEP_GOING)@cd Naming_Context_Ext && $(MAKE) -f GNUmakefile.Naming_Context_Ext_Client $(@)
@@ -39,32 +39,32 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd corbaloc_Messenger && $(MAKE) -f GNUmakefile.Corbaloc_Messenger_Server $(@)
 	$(KEEP_GOING)@cd corbaloc_Messenger && $(MAKE) -f GNUmakefile.Corbaloc_Messenger_Client $(@)
 	$(KEEP_GOING)@cd corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Idl $(@)
-	$(KEEP_GOING)@cd corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Client $(@)
 	$(KEEP_GOING)@cd corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Server $(@)
+	$(KEEP_GOING)@cd corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Client $(@)
 
 .PHONY: NamingService_Messenger_Idl
 NamingService_Messenger_Idl:
 	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.NamingService_Messenger_Idl all
 
-.PHONY: NamingService_Messenger_Client
-NamingService_Messenger_Client: NamingService_Messenger_Idl
-	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.NamingService_Messenger_Client all
-
 .PHONY: NamingService_Messenger_Server
-NamingService_Messenger_Server: NamingService_Messenger_Idl NamingService_Messenger_Client
+NamingService_Messenger_Server: NamingService_Messenger_Idl
 	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.NamingService_Messenger_Server all
+
+.PHONY: NamingService_Messenger_Client
+NamingService_Messenger_Client: NamingService_Messenger_Idl NamingService_Messenger_Server
+	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.NamingService_Messenger_Client all
 
 .PHONY: Naming_Client_Idl
 Naming_Client_Idl:
 	$(KEEP_GOING)@cd Naming_Client && $(MAKE) -f GNUmakefile.Naming_Client_Idl all
 
-.PHONY: Naming_Client_Client
-Naming_Client_Client: Naming_Client_Idl
-	$(KEEP_GOING)@cd Naming_Client && $(MAKE) -f GNUmakefile.Naming_Client_Client all
-
 .PHONY: Naming_Client_Server
-Naming_Client_Server: Naming_Client_Idl Naming_Client_Client
+Naming_Client_Server: Naming_Client_Idl
 	$(KEEP_GOING)@cd Naming_Client && $(MAKE) -f GNUmakefile.Naming_Client_Server all
+
+.PHONY: Naming_Client_Client
+Naming_Client_Client: Naming_Client_Idl Naming_Client_Server
+	$(KEEP_GOING)@cd Naming_Client && $(MAKE) -f GNUmakefile.Naming_Client_Client all
 
 .PHONY: Naming_Context_Ext_Idl
 Naming_Context_Ext_Idl:
@@ -98,13 +98,13 @@ Corbaloc_Messenger_Client: Corbaloc_Messenger_Idl Corbaloc_Messenger_Server
 Corbaname_Messenger_Idl:
 	$(KEEP_GOING)@cd corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Idl all
 
-.PHONY: Corbaname_Messenger_Client
-Corbaname_Messenger_Client: Corbaname_Messenger_Idl
-	$(KEEP_GOING)@cd corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Client all
-
 .PHONY: Corbaname_Messenger_Server
-Corbaname_Messenger_Server: Corbaname_Messenger_Idl Corbaname_Messenger_Client
+Corbaname_Messenger_Server: Corbaname_Messenger_Idl
 	$(KEEP_GOING)@cd corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Server all
+
+.PHONY: Corbaname_Messenger_Client
+Corbaname_Messenger_Client: Corbaname_Messenger_Idl Corbaname_Messenger_Server
+	$(KEEP_GOING)@cd corbaname_Messenger && $(MAKE) -f GNUmakefile.Corbaname_Messenger_Client all
 
 project_name_list:
 	@echo NamingService_Messenger_Client

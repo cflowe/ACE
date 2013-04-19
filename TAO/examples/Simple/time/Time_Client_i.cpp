@@ -1,4 +1,4 @@
-//$Id: Time_Client_i.cpp 83322 2008-10-20 09:51:35Z vzykov $
+//$Id: Time_Client_i.cpp 96239 2012-11-09 12:11:06Z johnnyw $
 
 #include "Time_Client_i.h"
 #include "ace/OS_NS_time.h"
@@ -56,9 +56,6 @@ Time_Client_i::run (const char *name,
 
       if (client_.do_shutdown () == 1)
         client_->shutdown ();
-
-      CORBA::ORB_var orb = client_.orb ();
-      orb->destroy ();
     }
   catch (const CORBA::Exception& ex)
     {

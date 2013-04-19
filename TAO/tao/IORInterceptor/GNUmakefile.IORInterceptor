@@ -233,8 +233,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#IORInterceptor.pidl
 #IORInfo.pidl
+#IORInterceptor.pidl
 #
 #build_files:
 #IORInterceptor.mpc

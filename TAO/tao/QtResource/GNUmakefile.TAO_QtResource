@@ -27,8 +27,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  QtResource_Factory.cpp \
-  QtResource_Loader.cpp
+  QtResource_Loader.cpp \
+  QtResource_Factory.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -268,8 +268,8 @@ endif
 #TAO_QtResource_Export.h
 #
 #source_files:
-#QtResource_Factory.cpp
 #QtResource_Loader.cpp
+#QtResource_Factory.cpp
 #
 #lib_output:
 #../../../lib TAO_QtResource

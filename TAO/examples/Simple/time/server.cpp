@@ -1,4 +1,4 @@
-// $Id: server.cpp 94425 2011-08-26 11:09:22Z msmit $
+// $Id: server.cpp 96239 2012-11-09 12:11:06Z johnnyw $
 #include "../Simple_util.h"
 #include "Time_i.h"
 
@@ -14,9 +14,7 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
 
   try
     {
-      if (server.init ("Time",
-                       argc,
-                       argv) == -1)
+      if (server.init ("Time", argc, argv) == -1)
         return 1;
       else
         {
@@ -26,14 +24,14 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
   catch (const CORBA::UserException& userex)
     {
       userex._tao_print_exception ("User Exception in main");
-      return -1;
+      return 1;
     }
   catch (const CORBA::SystemException& sysex)
     {
       sysex._tao_print_exception ("System Exception in main");
-      return -1;
+      return 1;
     }
-  catch (const ::CORBA::Exception &e)
+  catch (const CORBA::Exception &e)
     {
       e._tao_print_exception ("CORBA exception in main");
       return 1;

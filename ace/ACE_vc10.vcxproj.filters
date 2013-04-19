@@ -96,9 +96,6 @@
     <ClCompile Include="Atomic_Op_Sparc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Auto_Event.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Barrier.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -216,7 +213,7 @@
     <ClCompile Include="Encoding_Converter_Factory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Event.cpp">
+    <ClCompile Include="Event_Base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Event_Handler.cpp">
@@ -367,9 +364,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Malloc_Allocator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Manual_Event.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MEM_Acceptor.cpp">
@@ -1205,6 +1199,9 @@
     <ClInclude Include="config-macosx-lion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="config-macosx-mountain-lion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="config-macosx-panther.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1431,6 +1428,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Event_Base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Event_Handler.h">
@@ -3028,6 +3028,9 @@
     <None Include="Event.inl">
       <Filter>Inline Files</Filter>
     </None>
+    <None Include="Event_Base.inl">
+      <Filter>Inline Files</Filter>
+    </None>
     <None Include="Event_Handler.inl">
       <Filter>Inline Files</Filter>
     </None>
@@ -3738,6 +3741,9 @@
     <ClCompile Include="Atomic_Op_T.cpp">
       <Filter>Template Files</Filter>
     </ClCompile>
+    <ClCompile Include="Auto_Event.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
     <ClCompile Include="Auto_Functor.cpp">
       <Filter>Template Files</Filter>
     </ClCompile>
@@ -3784,6 +3790,9 @@
       <Filter>Template Files</Filter>
     </ClCompile>
     <ClCompile Include="Env_Value_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
       <Filter>Template Files</Filter>
     </ClCompile>
     <ClCompile Include="Event_Handler_T.cpp">
@@ -3844,6 +3853,9 @@
       <Filter>Template Files</Filter>
     </ClCompile>
     <ClCompile Include="Managed_Object.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Manual_Event.cpp">
       <Filter>Template Files</Filter>
     </ClCompile>
     <ClCompile Include="Map_Manager.cpp">

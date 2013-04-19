@@ -3,7 +3,7 @@
 /**
  *  @file    Monotonic_Message_Queue_Test.cpp
  *
- *  $Id: Monotonic_Message_Queue_Test.cpp 96071 2012-08-17 11:20:39Z mcorino $
+ *  $Id: Monotonic_Message_Queue_Test.cpp 96247 2012-11-11 14:27:25Z mcorino $
  *
  *    This is a test that verifies the time policy features of the
  *    ACE_Message_Queue template.
@@ -35,8 +35,11 @@
 #include "ace/OS_NS_unistd.h"
 
 #if defined (ACE_WIN32) || \
-    (defined (_POSIX_MONOTONIC_CLOCK) && !defined (ACE_LACKS_MONOTONIC_TIME)) || \
-    defined (ACE_HAS_CLOCK_GETTIME_MONOTONIC)
+    (defined (ACE_HAS_CLOCK_GETTIME) && \
+     !defined (ACE_LACKS_MONOTONIC_TIME) && \
+     !defined (ACE_LACKS_CONDATTR) && \
+     (defined (_POSIX_MONOTONIC_CLOCK) || defined (ACE_HAS_CLOCK_GETTIME_MONOTONIC)) && \
+     defined (_POSIX_CLOCK_SELECTION) && !defined (ACE_LACKS_CONDATTR_SETCLOCK))
 
 # if defined (ACE_WIN32)
 #   include "ace/Date_Time.h"

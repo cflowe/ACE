@@ -4,7 +4,7 @@
 /**
  *  @file   Cache_Entries_T.h
  *
- *  $Id: Cache_Entries_T.h 85436 2009-05-25 21:57:28Z coryan $
+ *  $Id: Cache_Entries_T.h 96218 2012-11-05 08:26:31Z johnnyw $
  *
  *
  *  @author Bala Natarajan  <bala@cs.wustl.edu>
@@ -194,7 +194,7 @@ namespace TAO
     transport_descriptor_type *transport_property_;
 
     /// Do we need to delete transport_property?
-    CORBA::Boolean is_delete_;
+    bool is_delete_;
 
     /**
      * This is a supplementary index. Would be set to zero by

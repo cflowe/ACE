@@ -232,10 +232,10 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#IFR_Basic.pidl
 #IFR_Components.pidl
-#IFR_Base.pidl
+#IFR_Basic.pidl
 #IFR_Extended.pidl
+#IFR_Base.pidl
 #
 #build_files:
 #IFR_Client.mpc

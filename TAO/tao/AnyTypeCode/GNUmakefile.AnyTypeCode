@@ -302,12 +302,12 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
+#Dynamic.pidl
+#Bounds.pidl
+#Dynamic_Parameter.pidl
 #ValueModifier.pidl
 #Visibility.pidl
-#Bounds.pidl
 #AnySeq.pidl
-#Dynamic.pidl
-#Dynamic_Parameter.pidl
 #
 #build_files:
 #AnyTypeCode.mpc
