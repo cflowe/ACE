@@ -298,6 +298,12 @@
     <ClCompile Include="Invocation_Endpoint_Selectors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Invocation_Retry_Params.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Invocation_Retry_State.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="IOPC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -590,6 +596,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ShortSeqC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Storable_Base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Storable_Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Storable_File_Guard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Storable_FlatFileStream.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="String_Alloc.cpp">
@@ -1137,6 +1155,12 @@
     <ClInclude Include="Invocation_Endpoint_Selectors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Invocation_Retry_Params.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Invocation_Retry_State.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Invocation_Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1549,6 +1573,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Special_Basic_Arguments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Storable_Base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Storable_Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Storable_File_Guard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Storable_FlatFileStream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="String_Alloc.h">
@@ -2111,6 +2147,9 @@
       <Filter>Inline Files</Filter>
     </None>
     <None Include="Special_Basic_Argument_T.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="Storable_Base.inl">
       <Filter>Inline Files</Filter>
     </None>
     <None Include="Stub.inl">

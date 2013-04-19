@@ -233,8 +233,8 @@ endif
 #pidl_files:
 #IFR_Components.pidl
 #IFR_Basic.pidl
-#IFR_Extended.pidl
 #IFR_Base.pidl
+#IFR_Extended.pidl
 #
 #build_files:
 #IFR_Client.mpc

@@ -4,7 +4,7 @@
 /**
  *  @file     IIOP_Profile.h
  *
- *  $Id: IIOP_Profile.h 85585 2009-06-09 20:27:17Z mitza $
+ *  $Id: IIOP_Profile.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  IIOP profile specific processing.
  *
@@ -95,7 +95,7 @@ public:
   virtual char object_key_delimiter (void) const;
 
   /// Template methods. Please see Profile.h for documentation.
-  virtual char * to_string (void);
+  virtual char * to_string (void) const;
 
   /// Encode endpoints for RT profiles, using a single TAO_TAG_ENDPOINT
   /// component.

@@ -1,0 +1,5 @@
+// $Id: Config_Loader.mpc 96895 2013-03-08 20:10:26Z stanleyk $
+
+project(*test) : dynamic_tp, avoids_corba_e_compact, avoids_corba_e_micro, threads {
+  exename = test
+}

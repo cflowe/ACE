@@ -1,4 +1,4 @@
-// $Id: DIOP_Profile.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: DIOP_Profile.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "tao/Strategies/DIOP_Profile.h"
 
@@ -363,7 +363,7 @@ TAO_DIOP_Profile::add_endpoint (TAO_DIOP_Endpoint *endp)
 }
 
 char *
-TAO_DIOP_Profile::to_string (void)
+TAO_DIOP_Profile::to_string (void) const
 {
   // corbaloc:diop:1.2@host:port,diop:1.2@host:port,.../key
 

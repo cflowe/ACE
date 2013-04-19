@@ -4,7 +4,7 @@
 /**
  *  @file    CDR.h
  *
- *  $Id: CDR.h 94273 2011-06-27 10:31:04Z mcorino $
+ *  $Id: CDR.h 96785 2013-02-08 03:56:45Z stanleyk $
  *
  *   Common Data Representation (CDR) marshaling streams.
  *
@@ -414,7 +414,7 @@ public:
                 TAO_ORB_Core* orb_core = 0);
 
   /// Destructor
-  ~TAO_InputCDR (void);
+  virtual ~TAO_InputCDR (void);
 
   // = TAO specific methods.
 

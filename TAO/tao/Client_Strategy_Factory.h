@@ -4,7 +4,7 @@
 /**
  *  @file     Client_Strategy_Factory.h
  *
- *  $Id: Client_Strategy_Factory.h 93686 2011-03-31 12:12:12Z johnnyw $
+ *  $Id: Client_Strategy_Factory.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author  Chris Cleeland <cleeland@cs.wustl.edu>
  */
@@ -31,6 +31,11 @@ class ACE_Lock;
 ACE_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace TAO
+{
+  struct Invocation_Retry_Params;
+}
 
 class TAO_Transport_Mux_Strategy;
 class TAO_Wait_Strategy;
@@ -84,6 +89,11 @@ public:
     * Only applicable to RW wait strategy
   */
   virtual bool use_cleanup_options (void) const = 0;
+
+  /// Return the parameters used to optionally retry invocation
+  /// after an exception occurs.
+  virtual const TAO::Invocation_Retry_Params &invocation_retry_params (void) const = 0;
+
 };
 
 TAO_END_VERSIONED_NAMESPACE_DECL

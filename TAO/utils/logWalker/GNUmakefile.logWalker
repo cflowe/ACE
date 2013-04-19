@@ -17,14 +17,15 @@ BIN_UNCHECKED    = tao_logWalker
 LIB_PREFIX      ?= lib
 
 FILES = \
+  Log.cpp \
   logWalker.cpp \
+  HostProcess.cpp \
+  GIOP_Buffer.cpp \
+  Session.cpp \
   PeerObject.cpp \
   Thread.cpp \
-  Session.cpp \
-  Log.cpp \
-  PeerProcess.cpp \
   Invocation.cpp \
-  HostProcess.cpp
+  PeerProcess.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

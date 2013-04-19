@@ -3,7 +3,7 @@
 /**
  *  @file    client.cpp
  *
- *  $Id: client.cpp 93650 2011-03-28 08:44:53Z johnnyw $
+ *  $Id: client.cpp 96718 2013-01-28 18:52:07Z johnnyw $
  *
  *  @author Source code used in TAO has been modified and adapted from thecode provided in the book
  *  @author "Advanced CORBA Programming with C++"by Michi Henning and Steve Vinoski. Copyright1999. Addison-Wesley
@@ -21,8 +21,8 @@ using namespace std;
 // Generic ostream inserter for exceptions. Inserts the exception
 // name, if available, and the repository ID otherwise.
 
-#if 0   // This inserter may or may not be needed for your ORB.
-
+// This inserter may or may not be needed for your ORB.
+#if 0
 static ostream &
 operator<< (ostream &os, const CORBA::Exception &e)
 {
@@ -37,8 +37,9 @@ operator<< (ostream &os, const CORBA::Exception &e)
         os << tc->id ();
     return os;
 }
-
 #endif
+
+#if !defined (GEN_OSTREAM_OPS)
 
 // Show the details for a thermometer or thermostat.
 
@@ -99,8 +100,9 @@ operator<< (std::ostream &os, const CCS::Controller::EChange &ec)
   return os;
 }
 
-// Change the temperature of a thermostat.
+#endif
 
+// Change the temperature of a thermostat.
 static void
 set_temp (CCS::Thermostat_ptr tmstat, CCS::TempType new_temp)
 {

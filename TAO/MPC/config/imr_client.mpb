@@ -1,7 +1,7 @@
 // -*- MPC -*-
-// $Id: imr_client.mpb 82433 2008-07-28 10:18:53Z sma $
+// $Id: imr_client.mpb 96760 2013-02-05 21:11:03Z stanleyk $
 
-project : taolib, portableserver {
+project : taolib, portableserver, iormanip {
   libs    += TAO_ImR_Client
   after   += ImR_Client
 }

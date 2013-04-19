@@ -4,7 +4,7 @@
 /**
  *  @file     SHMIOP_Profile.h
  *
- *  $Id: SHMIOP_Profile.h 76551 2007-01-24 13:42:44Z johnnyw $
+ *  $Id: SHMIOP_Profile.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *   SHMIOP profile specific processing
  *
@@ -76,7 +76,7 @@ public:
 
 
   /// Template methods, please see Profile.h for documentation.
-  virtual char * to_string (void);
+  virtual char * to_string (void) const;
   virtual int encode_endpoints (void);
   virtual TAO_Endpoint *endpoint (void);
   virtual CORBA::ULong endpoint_count (void) const;

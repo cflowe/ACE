@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,24 +20,24 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: CSD_Test_ThreadPool_Idl CSD_Test_ThreadPool_Client CSD_Test_ThreadPool_Server CSD_Test_ThreadPool2_Idl CSD_Test_ThreadPool2_Server CSD_Test_ThreadPool2_Client CSD_Test_ThreadPool3_Idl CSD_Test_ThreadPool3_Server CSD_Test_ThreadPool3_Client CSD_Test_ThreadPool4_Server CSD_Test_ThreadPool5_Idl CSD_Test_ThreadPool5_Server CSD_Test_ThreadPool5_Client CSD_Test_ThreadPool6_Idl CSD_Test_ThreadPool6_Server CSD_Test_ThreadPool6_Client
+all: CSD_Test_ThreadPool_Idl CSD_Test_ThreadPool_Server CSD_Test_ThreadPool_Client CSD_Test_ThreadPool2_Idl CSD_Test_ThreadPool2_Client CSD_Test_ThreadPool2_Server CSD_Test_ThreadPool3_Idl CSD_Test_ThreadPool3_Server CSD_Test_ThreadPool3_Client CSD_Test_ThreadPool4_Server CSD_Test_ThreadPool5_Idl CSD_Test_ThreadPool5_Client CSD_Test_ThreadPool5_Server CSD_Test_ThreadPool6_Idl CSD_Test_ThreadPool6_Server CSD_Test_ThreadPool6_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool_Idl $(@)
-	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool_Client $(@)
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool_Server $(@)
+	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool_Client $(@)
 	$(KEEP_GOING)@cd ThreadPool2 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool2_Idl $(@)
-	$(KEEP_GOING)@cd ThreadPool2 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool2_Server $(@)
 	$(KEEP_GOING)@cd ThreadPool2 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool2_Client $(@)
+	$(KEEP_GOING)@cd ThreadPool2 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool2_Server $(@)
 	$(KEEP_GOING)@cd ThreadPool3 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool3_Idl $(@)
 	$(KEEP_GOING)@cd ThreadPool3 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool3_Server $(@)
 	$(KEEP_GOING)@cd ThreadPool3 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool3_Client $(@)
 	$(KEEP_GOING)@cd ThreadPool4 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool4_Server $(@)
 	$(KEEP_GOING)@cd ThreadPool5 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool5_Idl $(@)
-	$(KEEP_GOING)@cd ThreadPool5 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool5_Server $(@)
 	$(KEEP_GOING)@cd ThreadPool5 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool5_Client $(@)
+	$(KEEP_GOING)@cd ThreadPool5 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool5_Server $(@)
 	$(KEEP_GOING)@cd ThreadPool6 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool6_Idl $(@)
 	$(KEEP_GOING)@cd ThreadPool6 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool6_Server $(@)
 	$(KEEP_GOING)@cd ThreadPool6 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool6_Client $(@)
@@ -46,25 +46,25 @@ $(REMAINING_TARGETS):
 CSD_Test_ThreadPool_Idl:
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool_Idl all
 
-.PHONY: CSD_Test_ThreadPool_Client
-CSD_Test_ThreadPool_Client: CSD_Test_ThreadPool_Idl
-	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool_Client all
-
 .PHONY: CSD_Test_ThreadPool_Server
-CSD_Test_ThreadPool_Server: CSD_Test_ThreadPool_Idl CSD_Test_ThreadPool_Client
+CSD_Test_ThreadPool_Server: CSD_Test_ThreadPool_Idl
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool_Server all
+
+.PHONY: CSD_Test_ThreadPool_Client
+CSD_Test_ThreadPool_Client: CSD_Test_ThreadPool_Idl CSD_Test_ThreadPool_Server
+	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool_Client all
 
 .PHONY: CSD_Test_ThreadPool2_Idl
 CSD_Test_ThreadPool2_Idl:
 	$(KEEP_GOING)@cd ThreadPool2 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool2_Idl all
 
-.PHONY: CSD_Test_ThreadPool2_Server
-CSD_Test_ThreadPool2_Server: CSD_Test_ThreadPool2_Idl
-	$(KEEP_GOING)@cd ThreadPool2 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool2_Server all
-
 .PHONY: CSD_Test_ThreadPool2_Client
-CSD_Test_ThreadPool2_Client: CSD_Test_ThreadPool2_Idl CSD_Test_ThreadPool2_Server
+CSD_Test_ThreadPool2_Client: CSD_Test_ThreadPool2_Idl
 	$(KEEP_GOING)@cd ThreadPool2 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool2_Client all
+
+.PHONY: CSD_Test_ThreadPool2_Server
+CSD_Test_ThreadPool2_Server: CSD_Test_ThreadPool2_Idl CSD_Test_ThreadPool2_Client
+	$(KEEP_GOING)@cd ThreadPool2 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool2_Server all
 
 .PHONY: CSD_Test_ThreadPool3_Idl
 CSD_Test_ThreadPool3_Idl:
@@ -86,13 +86,13 @@ CSD_Test_ThreadPool4_Server:
 CSD_Test_ThreadPool5_Idl:
 	$(KEEP_GOING)@cd ThreadPool5 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool5_Idl all
 
-.PHONY: CSD_Test_ThreadPool5_Server
-CSD_Test_ThreadPool5_Server: CSD_Test_ThreadPool5_Idl
-	$(KEEP_GOING)@cd ThreadPool5 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool5_Server all
-
 .PHONY: CSD_Test_ThreadPool5_Client
-CSD_Test_ThreadPool5_Client: CSD_Test_ThreadPool5_Idl CSD_Test_ThreadPool5_Server
+CSD_Test_ThreadPool5_Client: CSD_Test_ThreadPool5_Idl
 	$(KEEP_GOING)@cd ThreadPool5 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool5_Client all
+
+.PHONY: CSD_Test_ThreadPool5_Server
+CSD_Test_ThreadPool5_Server: CSD_Test_ThreadPool5_Idl CSD_Test_ThreadPool5_Client
+	$(KEEP_GOING)@cd ThreadPool5 && $(MAKE) -f GNUmakefile.CSD_Test_ThreadPool5_Server all
 
 .PHONY: CSD_Test_ThreadPool6_Idl
 CSD_Test_ThreadPool6_Idl:

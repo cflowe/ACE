@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,36 +20,36 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Event_Supplier_IDL Event_Supplier_Event_Con Event_Supplier_Event_Sup Event_Supplier_DualEC_Sup Event_Supplier_Logging_Sup
+all: Event_Supplier_IDL Event_Supplier_Logging_Sup Event_Supplier_DualEC_Sup Event_Supplier_Event_Con Event_Supplier_Event_Sup
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_IDL $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_Logging_Sup $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_DualEC_Sup $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_Event_Con $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_Event_Sup $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_DualEC_Sup $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_Logging_Sup $(@)
 
 .PHONY: Event_Supplier_IDL
 Event_Supplier_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_IDL all
 
+.PHONY: Event_Supplier_Logging_Sup
+Event_Supplier_Logging_Sup: Event_Supplier_IDL
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_Logging_Sup all
+
+.PHONY: Event_Supplier_DualEC_Sup
+Event_Supplier_DualEC_Sup: Event_Supplier_IDL Event_Supplier_Logging_Sup
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_DualEC_Sup all
+
 .PHONY: Event_Supplier_Event_Con
-Event_Supplier_Event_Con: Event_Supplier_IDL
+Event_Supplier_Event_Con: Event_Supplier_IDL Event_Supplier_Logging_Sup
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_Event_Con all
 
 .PHONY: Event_Supplier_Event_Sup
-Event_Supplier_Event_Sup: Event_Supplier_IDL Event_Supplier_Event_Con
+Event_Supplier_Event_Sup: Event_Supplier_IDL Event_Supplier_Logging_Sup
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_Event_Sup all
-
-.PHONY: Event_Supplier_DualEC_Sup
-Event_Supplier_DualEC_Sup: Event_Supplier_IDL Event_Supplier_Event_Con Event_Supplier_Event_Sup
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_DualEC_Sup all
-
-.PHONY: Event_Supplier_Logging_Sup
-Event_Supplier_Logging_Sup: Event_Supplier_IDL Event_Supplier_Event_Con Event_Supplier_Event_Sup
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Event_Supplier_Logging_Sup all
 
 project_name_list:
 	@echo Event_Supplier_DualEC_Sup

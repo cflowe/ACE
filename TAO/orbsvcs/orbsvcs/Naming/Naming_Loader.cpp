@@ -1,4 +1,4 @@
-// $Id: Naming_Loader.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: Naming_Loader.cpp 96834 2013-02-18 18:41:09Z stanleyk $
 
 // ================================================================
 // LIBRARY
@@ -17,19 +17,25 @@
 #include "ace/Dynamic_Service.h"
 #include "ace/Argv_Type_Converter.h"
 
-
-
+#include "orbsvcs/Naming/Naming_Server.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_Naming_Loader::TAO_Naming_Loader (void)
+TAO_Naming_Loader::TAO_Naming_Loader (TAO_Naming_Server *server)
+: naming_server_(server)
 {
   // Constructor
+
+  // If no server was provided, then we will construct one of the
+  // base class type.
+  if (naming_server_ == 0)
+    ACE_NEW (naming_server_, TAO_Naming_Server);
 }
 
 TAO_Naming_Loader::~TAO_Naming_Loader (void)
 {
-  // Destructor
+  // Destroy the naming server that was created
+  delete naming_server_;
 }
 
 int
@@ -63,7 +69,10 @@ int
 TAO_Naming_Loader::fini (void)
 {
   // Remove the Naming Service.
-  return this->naming_server_.fini ();
+  if (this->naming_server_ == 0)
+    return 0;
+  else
+    return this->naming_server_->fini ();
 }
 
 CORBA::Object_ptr
@@ -71,10 +80,20 @@ TAO_Naming_Loader::create_object (CORBA::ORB_ptr orb,
                                   int argc,
                                   ACE_TCHAR *argv[])
 {
-  // Initializes the Naming Service. Returns -1
-  // on an error.
-  if (this->naming_server_.init_with_orb (argc, argv, orb) == -1)
-    return CORBA::Object::_nil ();
+
+  if (this->naming_server_ == 0)
+    {
+      ACE_ERROR ((LM_ERROR,
+                  ACE_TEXT ("TAO_Naming_Loader::create_object - naming_server_ ")
+                  ACE_TEXT ("never set.\n")));
+    }
+  else
+    {
+      // Initializes the Naming Service. Returns -1
+      // on an error.
+      if (this->naming_server_->init_with_orb (argc, argv, orb) == -1)
+        return CORBA::Object::_nil ();
+    }
 
   return CORBA::Object::_nil ();
 }

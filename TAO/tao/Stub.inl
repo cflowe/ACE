@@ -1,8 +1,9 @@
 // -*- C++ -*-
 //
-// $Id: Stub.inl 93604 2011-03-21 18:20:23Z johnnyw $
+// $Id: Stub.inl 96826 2013-02-16 16:47:10Z stanleyk $
 
 #include "tao/ORB_Core.h"
+#include "ace/Reverse_Lock_T.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -56,6 +57,14 @@ TAO_Stub::reset_profiles (void)
   ACE_MT (ACE_GUARD (TAO_SYNCH_MUTEX,
                      guard,
                      this->profile_lock_));
+  if (TAO_debug_level > 5)
+    {
+      ACE_DEBUG ((LM_DEBUG,
+                  ACE_TEXT ("TAO (%P|%t) - Stub::reset_profiles, acquired ")
+                  ACE_TEXT ("profile lock this = 0x%x\n"),
+                  this));
+    }
+
   this->reset_profiles_i ();
 }
 
@@ -137,9 +146,30 @@ TAO_Stub::next_profile_i (void)
               pfile_next = this->base_profiles_.get_next ();
             }
 
-          // We may have been forwarded to / from a collocated situation
-          // Check for this and apply / remove optimisation if required.
-          this->orb_core_->reinitialize_object (this);
+          {
+            typedef ACE_Reverse_Lock<TAO_SYNCH_MUTEX> TAO_REVERSE_LOCK;
+            TAO_REVERSE_LOCK reverse (this->profile_lock_);
+            ACE_MT (ACE_GUARD_RETURN (TAO_REVERSE_LOCK, ace_mon, reverse, 0));
+            if (TAO_debug_level > 5)
+              {
+                ACE_DEBUG ((LM_DEBUG,
+                            ACE_TEXT ("TAO (%P|%t) - Stub::next_profile_i, ")
+                            ACE_TEXT ("released profile lock to reinitialize ")
+                            ACE_TEXT ("this = 0x%x\n"),
+                            this));
+              }
+            // We may have been forwarded to / from a collocated situation
+            // Check for this and apply / remove optimisation if required.
+            this->orb_core_->reinitialize_object (this);
+          }
+          if (TAO_debug_level > 5)
+            {
+              ACE_DEBUG ((LM_DEBUG,
+                          ACE_TEXT ("TAO (%P|%t) - Stub::next_profile_i, ")
+                          ACE_TEXT ("reacquired profile lock on object ")
+                          ACE_TEXT ("this = 0x%x\n"),
+                          this));
+              }
         }
       else
         pfile_next = this->base_profiles_.get_next ();
@@ -160,6 +190,11 @@ TAO_Stub::next_profile (void)
                             guard,
                             this->profile_lock_,
                             0));
+  if (TAO_debug_level > 5)
+    {
+      ACE_DEBUG ((LM_DEBUG,
+                  ACE_TEXT ("TAO (%P|%t) - Stub::next_profile, acquired profile lock this = 0x%x\n"), this));
+    }
   return this->next_profile_i ();
 }
 
@@ -188,6 +223,12 @@ TAO_Stub::base_profiles (const TAO_MProfile &mprofiles)
                             guard,
                             this->profile_lock_,
                             0));
+  if (TAO_debug_level > 5)
+    {
+      ACE_DEBUG ((LM_DEBUG,
+                  ACE_TEXT ("TAO (%P|%t) - Stub::base_profiles, acquired profile lock this = 0x%x\n"), this));
+    }
+
 
   // first reset things so we start from scratch!
 
@@ -208,6 +249,11 @@ TAO_Stub::next_profile_retry (void)
                             guard,
                             this->profile_lock_,
                             0));
+  if (TAO_debug_level > 5)
+    {
+      ACE_DEBUG ((LM_DEBUG,
+                  ACE_TEXT ("TAO (%P|%t) - Stub::next_profile_retry, acquired profile lock this = 0x%x\n"), this));
+    }
 
   if (this->profile_success_ && this->forward_profiles_)
     {
@@ -244,6 +290,12 @@ TAO_Stub::base_profiles (void)
 
 ACE_INLINE const TAO_MProfile *
 TAO_Stub::forward_profiles (void) const
+{
+  return this->forward_profiles_;
+}
+
+ACE_INLINE TAO_MProfile *
+TAO_Stub::forward_profiles (void)
 {
   return this->forward_profiles_;
 }
@@ -360,6 +412,13 @@ TAO_Stub::_decr_refcnt (void)
 {
   if (--this->refcount_ == 0)
     delete this;
+}
+
+ACE_INLINE
+CORBA::Boolean
+TAO_Stub::at_starting_profile (void) const
+{
+  return profile_in_use_ == base_profiles_.get_profile(0);
 }
 
 // ---------------------------------------------------------------

@@ -1,4 +1,4 @@
-// $Id: ZIOP.cpp 96458 2012-12-05 09:43:05Z sma $
+// $Id: ZIOP.cpp 96671 2013-01-16 08:46:36Z sma $
 
 #include "tao/ZIOP/ZIOP_ORBInitializer.h"
 #include "tao/ZIOP/ZIOP_Policy_Validator.h"
@@ -196,7 +196,7 @@ TAO_ZIOP_Loader::decompress (ACE_Data_Block **db, TAO_Queued_Data& qd,
       size_t const wr = qd.msg_block ()->wr_ptr () - qd.msg_block ()->base ();
 
       TAO_InputCDR cdr ((*db),
-                        (*db)->flags (),
+                        qd.msg_block ()->self_flags (),
                         begin + TAO_GIOP_MESSAGE_HEADER_LEN,
                         wr,
                         qd.byte_order (),

@@ -1,12 +1,12 @@
 // -*- C++ -*-
-// $Id: Monitor.cpp 91741 2010-09-13 18:13:11Z johnnyw $
+// $Id: Monitor.cpp 96613 2013-01-04 12:07:06Z johnnyw $
 
 #include "tao/Monitor/Monitor.h"
 #include "tao/Monitor/Monitor_Impl.h"
 
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 #if defined (TAO_HAS_MONITOR_FRAMEWORK) && (TAO_HAS_MONITOR_FRAMEWORK == 1)
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_Monitor_Init::TAO_Monitor_Init (void)
 {

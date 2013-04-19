@@ -2,7 +2,7 @@
 /**
  *  @file    PG_Property_Set.cpp
  *
- *  $Id: PG_Property_Set.cpp 77001 2007-02-12 07:54:49Z johnnyw $
+ *  $Id: PG_Property_Set.cpp 96861 2013-02-25 17:40:02Z mesnier_p $
  *
  *  This file implements classes to help manage the Properties
  *  defined in the Portable Object Group.
@@ -26,24 +26,21 @@ TAO::PG_Property_Set::PG_Property_Set()
 {
 }
 
-TAO::PG_Property_Set::PG_Property_Set (
-  const PortableGroup::Properties & property_set)
+TAO::PG_Property_Set::PG_Property_Set (const PortableGroup::Properties & ps)
   : defaults_ (0)
 {
-  this->decode (property_set);
+  this->decode (ps);
 }
 
-TAO::PG_Property_Set::PG_Property_Set (
-    const PortableGroup::Properties & property_set,
-    PG_Property_Set * defaults)
+TAO::PG_Property_Set::PG_Property_Set (const PortableGroup::Properties & ps,
+                                       const PG_Property_Set_var & defaults)
   : defaults_ (defaults)
 {
-  this->decode (property_set);
+  this->decode (ps);
 }
 
 
-TAO::PG_Property_Set::PG_Property_Set (
-    PG_Property_Set * defaults)
+TAO::PG_Property_Set::PG_Property_Set (const PG_Property_Set_var & defaults)
   : defaults_ (defaults)
 {
 }
@@ -149,24 +146,22 @@ void TAO::PG_Property_Set::set_property (
     CORBA::NO_MEMORY ());
 
   const PortableGroup::Value * replaced_value = 0;
-  if (0 == this->values_.rebind (name, value_copy, replaced_value))
-  {
-    if (0 != replaced_value)
-    {
+  int rebind_result = this->values_.rebind (name, value_copy, replaced_value);
+  if (1 == rebind_result)
+    { // Existing value was replaced
       delete replaced_value;
     }
-  }
-  else
-  {
-    if (TAO_debug_level > 3)
-    {
-      ACE_ERROR ( (LM_ERROR,
-        "%n\n%T: Property_set: rebind failed.\n"
-        ));
+  else if (-1 == rebind_result)
+    { // Value was not rebound.
+      if (TAO_debug_level > 3)
+        {
+          ACE_ERROR ( (LM_ERROR,
+                       "%n\n%T: Property_set: rebind failed.\n"
+                       ));
+        }
+      // @@ should throw something here
+      throw CORBA::NO_MEMORY ();
     }
-    // @@ should throw something here
-    throw CORBA::NO_MEMORY ();
-  }
 }
 
 

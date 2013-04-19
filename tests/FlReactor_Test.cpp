@@ -4,7 +4,7 @@
 /**
  *  @file   FlReactor_Test.cpp
  *
- *  $Id: FlReactor_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: FlReactor_Test.cpp 96688 2013-01-22 12:28:42Z johnnyw $
  *
  * A simple test that ilustrates the integration of the fast-light
  * toolkit (http://fltk.easysw.org/) with ACE, it uses FL to create
@@ -172,7 +172,7 @@ Connection_Handler::open (void*)
 
       this->peer ().get_remote_addr (from);
       const int bufsiz = 128;
-      char buf[bufsiz];
+      ACE_TCHAR buf[bufsiz];
 
       from.addr_to_string (buf, bufsiz, 0);
 
@@ -254,7 +254,7 @@ int run_main (int argc, ACE_TCHAR *argv[])
   acceptor.acceptor ().get_local_addr (address);
 
   const int bufsiz = 128;
-  char buf[bufsiz];
+  ACE_TCHAR buf[bufsiz];
 
   address.addr_to_string (buf, bufsiz, 0);
 

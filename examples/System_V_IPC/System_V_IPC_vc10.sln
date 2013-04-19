@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE -workers 10 -name_modifier "*_vc10"
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE -workers 12 -name_modifier "*_vc10"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Message_Queues_MQ_Client", "SV_Message_Queues\SV_Message_Queues_MQ_Client_vc10.vcxproj", "{3135F526-FECA-1BAD-6606-BBB2EAC4C36E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Message_Queues_MQ_Server", "SV_Message_Queues\SV_Message_Queues_MQ_Server_vc10.vcxproj", "{0A55E5AC-FECA-1BAD-6606-BBB2EAC4C36E}"
@@ -19,8 +19,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Semaphores_1", "SV_Semaphores\SV_Semaphores_1_vc10.vcxproj", "{479FDD0E-FECA-1BAD-BE72-3C5B13526565}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Semaphores_2", "SV_Semaphores\SV_Semaphores_2_vc10.vcxproj", "{47AFDD0E-FECA-1BAD-BE72-3C5B13526565}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Shared_Memory", "SV_Shared_Memory\SV_Shared_Memory_vc10.vcxproj", "{F11BD78C-FECA-1BAD-0000-0000D5A70449}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,14 +76,6 @@ Global
 		{47AFDD0E-FECA-1BAD-BE72-3C5B13526565}.Release|Win32.Build.0 = Release|Win32
 		{47AFDD0E-FECA-1BAD-BE72-3C5B13526565}.Release|x64.ActiveCfg = Release|x64
 		{47AFDD0E-FECA-1BAD-BE72-3C5B13526565}.Release|x64.Build.0 = Release|x64
-		{F11BD78C-FECA-1BAD-0000-0000D5A70449}.Debug|Win32.ActiveCfg = Debug|Win32
-		{F11BD78C-FECA-1BAD-0000-0000D5A70449}.Debug|Win32.Build.0 = Debug|Win32
-		{F11BD78C-FECA-1BAD-0000-0000D5A70449}.Debug|x64.ActiveCfg = Debug|x64
-		{F11BD78C-FECA-1BAD-0000-0000D5A70449}.Debug|x64.Build.0 = Debug|x64
-		{F11BD78C-FECA-1BAD-0000-0000D5A70449}.Release|Win32.ActiveCfg = Release|Win32
-		{F11BD78C-FECA-1BAD-0000-0000D5A70449}.Release|Win32.Build.0 = Release|Win32
-		{F11BD78C-FECA-1BAD-0000-0000D5A70449}.Release|x64.ActiveCfg = Release|x64
-		{F11BD78C-FECA-1BAD-0000-0000D5A70449}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

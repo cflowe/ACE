@@ -441,6 +441,10 @@
     </ClCompile>
     <ClCompile Include="Invocation_Endpoint_Selectors.cpp">
     </ClCompile>
+    <ClCompile Include="Invocation_Retry_Params.cpp">
+    </ClCompile>
+    <ClCompile Include="Invocation_Retry_State.cpp">
+    </ClCompile>
     <ClCompile Include="IOPC.cpp">
     </ClCompile>
     <ClCompile Include="IOR_Parser.cpp">
@@ -636,6 +640,14 @@
     <ClCompile Include="ServicesC.cpp">
     </ClCompile>
     <ClCompile Include="ShortSeqC.cpp">
+    </ClCompile>
+    <ClCompile Include="Storable_Base.cpp">
+    </ClCompile>
+    <ClCompile Include="Storable_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Storable_File_Guard.cpp">
+    </ClCompile>
+    <ClCompile Include="Storable_FlatFileStream.cpp">
     </ClCompile>
     <ClCompile Include="String_Alloc.cpp">
     </ClCompile>
@@ -1031,6 +1043,8 @@
     <ClInclude Include="Invocation_Adapter.h" />
     <ClInclude Include="Invocation_Base.h" />
     <ClInclude Include="Invocation_Endpoint_Selectors.h" />
+    <ClInclude Include="Invocation_Retry_Params.h" />
+    <ClInclude Include="Invocation_Retry_State.h" />
     <ClInclude Include="Invocation_Utils.h" />
     <ClInclude Include="IOPC.h" />
     <ClInclude Include="IOPS.h" />
@@ -1169,6 +1183,10 @@
     <ClInclude Include="ShortSeqS.h" />
     <ClInclude Include="Special_Basic_Argument_T.h" />
     <ClInclude Include="Special_Basic_Arguments.h" />
+    <ClInclude Include="Storable_Base.h" />
+    <ClInclude Include="Storable_Factory.h" />
+    <ClInclude Include="Storable_File_Guard.h" />
+    <ClInclude Include="Storable_FlatFileStream.h" />
     <ClInclude Include="String_Alloc.h" />
     <ClInclude Include="String_Const_Sequence_Element_T.h" />
     <ClInclude Include="String_Manager_T.h" />
@@ -1438,6 +1456,7 @@
     <None Include="Seq_Var_T.inl" />
     <None Include="Service_Context.inl" />
     <None Include="Special_Basic_Argument_T.inl" />
+    <None Include="Storable_Base.inl" />
     <None Include="Stub.inl" />
     <None Include="Synch_Invocation.inl" />
     <None Include="SystemException.inl" />

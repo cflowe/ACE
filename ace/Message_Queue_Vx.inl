@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: Message_Queue_Vx.inl 96534 2012-12-17 20:54:40Z mitza $
+// $Id: Message_Queue_Vx.inl 96860 2013-02-25 16:55:51Z schmidt $
 
 ACE_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -19,8 +19,8 @@ ACE_Message_Queue_Vx::msgq (void)
 #elif defined __RTP__
                                 reinterpret_cast<int> (tail_)
 #else
-                                tail_
-#endif
+                                reinterpret_cast<MSG_Q_ID> (tail_)
+#endif /* __RTP__ */
                                 );
 }
 

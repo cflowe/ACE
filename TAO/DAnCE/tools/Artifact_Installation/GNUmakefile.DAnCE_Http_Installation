@@ -361,8 +361,8 @@ endif
 #Artifact_Installation.mpc
 #
 #inline_files:
-#DAnCE_Artifact_Installation_Handler.inl
 #Artifact_Installation_Impl.inl
+#DAnCE_Artifact_Installation_Handler.inl
 #
 #header_files:
 #Http_Installation_Handler.h

@@ -83,6 +83,7 @@ else
 endif
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 ifeq ($(LIBCHECK), 1)
@@ -95,6 +96,9 @@ else
 endif
 else
   all: avoid_warning
+endif
+else
+  all: require_warning
 endif
 else
   all: require_warning
@@ -151,6 +155,9 @@ requires_disabled_macros += corba_messaging
 endif
 ifneq ($(interceptors),1)
 requires_disabled_macros += interceptors
+endif
+ifneq ($(threads),1)
+requires_disabled_macros += threads
 endif
 ifneq ($(ace_uuid),1)
 requires_disabled_macros += ace_uuid
@@ -216,9 +223,11 @@ endif
 __prebuild__:
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 	@-:
+endif
 endif
 endif
 endif

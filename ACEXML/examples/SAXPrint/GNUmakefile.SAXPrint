@@ -18,8 +18,8 @@ LIB_PREFIX      ?= lib
 
 FILES = \
   SAXPrint_Handler.cpp \
-  main.cpp \
-  Print_Handler.cpp
+  Print_Handler.cpp \
+  main.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

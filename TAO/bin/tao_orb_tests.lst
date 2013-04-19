@@ -1,4 +1,4 @@
-# $Id: tao_orb_tests.lst 95734 2012-05-08 22:06:35Z fields_t $
+# $Id: tao_orb_tests.lst 96885 2013-03-06 09:22:01Z sma $
 #
 # This is the list of run_test.pl's that need to be run by
 # auto_run_tests.pl.
@@ -207,6 +207,9 @@ TAO/tests/Bug_3942_Regression/run_test.pl: !FIXED_BUGS_ONLY
 TAO/tests/Bug_3953_Regression/run_test.pl: !CORBA_E_MICRO
 TAO/tests/Bug_3954_Regression/run_test.pl:
 TAO/tests/Bug_4010_Regression/run_test.pl:
+TAO/tests/Bug_4059_Regression/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO
+TAO/tests/Bug_4082_Regression/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO
+TAO/tests/Bug_4097_Regression/run_test.pl:
 TAO/tests/DIOP/run_test.pl: !ST !NO_DIOP !ACE_FOR_TAO !CORBA_E_MICRO
 TAO/tests/DIOP/run_test_ipv6.pl: IPV6 !ST !NO_DIOP !ACE_FOR_TAO !CORBA_E_MICRO
 TAO/tests/RTCORBA/Activate_Object_Multiple_ORBs/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ST
@@ -453,6 +456,9 @@ TAO/tests/CSD_Strategy_Tests/TP_Test_4/run_test.pl big: !ST !CORBA_E_MICRO !Lynx
 TAO/tests/CSD_Strategy_Tests/TP_Test_Dynamic/run_test.pl: !STATIC !ST !CORBA_E_MICRO !LynxOS
 TAO/tests/CSD_Strategy_Tests/TP_Test_Static/run_test.pl: !ST !CORBA_E_MICRO !LynxOS
 TAO/tests/CSD_Collocation/run_test.pl: !ST !CORBA_E_COMPACT !CORBA_E_MICRO !MINIMUM !LynxOS
+TAO/tests/Dynamic_TP/POA_Loader/Dynamic_TP_POA_Test_Static/run_test.pl: !ST !CORBA_E_MICRO !CORBA_E_COMPACT !LynxOS
+TAO/tests/Dynamic_TP/POA_Loader/Dynamic_TP_POA_Test_Dynamic/run_test.pl: !ST !STATIC !CORBA_E_MICRO !CORBA_E_COMPACT !LynxOS
+TAO/tests/Dynamic_TP/ORB_ThreadPool/run_test.pl: !ST !STATIC !CORBA_E_MICRO !CORBA_E_COMPACT !LynxOS
 TAO/tests/Permanent_Forward/run_test.pl:
 TAO/tests/Parallel_Connect_Strategy/run_test.pl: !QUICK55
 TAO/tests/Parallel_Connect_Strategy/run_test.pl -quick : QUICK55
@@ -464,6 +470,11 @@ TAO/tests/ZIOP/run_test.pl: ZLIB BZIP2
 TAO/tests/ForwardUponObjectNotExist/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !DISABLE_INTERCEPTORS !ACE_FOR_TAO
 TAO/tests/ForwardOnceUponException/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !DISABLE_INTERCEPTORS !ACE_FOR_TAO !ST
 TAO/tests/Bug_3853_Regression/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !DISABLE_INTERCEPTORS !ACE_FOR_TAO
+TAO/tests/Multiple_Retry_Tests/Retry_On_Connection_Failure/run_test.pl:
+TAO/tests/Multiple_Retry_Tests/Retry_On_Connection_Failure/run_test.pl -oneway:
+TAO/tests/Multiple_Retry_Tests/Retry_On_Reply_Failure/run_test.pl:
+# Storable test can't run under Windows because the file locking doesn't work on that platform.
+TAO/tests/Storable/run_test.pl: !Win32
 TAO/DevGuideExamples/BiDirectionalGIOP/run_test.pl: !MINIMUM !CORBA_E_MICRO
 TAO/DevGuideExamples/GettingStarted/run_test.pl:
 TAO/DevGuideExamples/LocalObjects/Messenger/run_test.pl:

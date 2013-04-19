@@ -1,4 +1,4 @@
-// $Id: OS_Test.cpp 93542 2011-03-13 14:05:46Z olli $
+// $Id: OS_Test.cpp 96857 2013-02-25 08:09:41Z johnnyw $
 
 // ============================================================================
 //
@@ -680,6 +680,20 @@ getpwnam_r_test (void)
 #endif
 
   return result;
+}
+
+static int
+compiler_test (void)
+{
+  ACE_DEBUG ((LM_DEBUG, ACE_TEXT ("Testing compiler methods\n")));
+
+  ACE_DEBUG ((LM_DEBUG, ACE_TEXT ("Using compiler %s with major version %d minor version %d beta version %d\n"),
+    ACE::compiler_name(),
+    ACE::compiler_major_version(),
+    ACE::compiler_minor_version (),
+    ACE::compiler_beta_version ()));
+
+  return 0;
 }
 
 static int
@@ -1424,6 +1438,9 @@ run_main (int, ACE_TCHAR *[])
       status = result;
 
   if ((result = ace_ctype_test ()) != 0)
+      status = result;
+
+  if ((result = compiler_test ()) != 0)
       status = result;
 
   ACE_END_TEST;

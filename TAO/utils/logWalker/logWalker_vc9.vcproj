@@ -355,6 +355,9 @@
 			Name="Source Files"
 			Filter="cpp;cxx;cc;c;C">
 			<File
+				RelativePath="GIOP_Buffer.cpp">
+			</File>
+			<File
 				RelativePath="HostProcess.cpp">
 			</File>
 			<File
@@ -382,6 +385,9 @@
 		<Filter
 			Name="Header Files"
 			Filter="h;hpp;hxx;hh">
+			<File
+				RelativePath="GIOP_Buffer.h">
+			</File>
 			<File
 				RelativePath="HostProcess.h">
 			</File>

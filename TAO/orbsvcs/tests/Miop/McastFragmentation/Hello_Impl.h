@@ -1,5 +1,5 @@
 //
-// $Id: Hello_Impl.h 96029 2012-08-10 14:01:17Z sma $
+// $Id: Hello_Impl.h 96705 2013-01-25 13:35:54Z sma $
 //
 
 #ifndef _HELLOS_IMPL_H_
@@ -7,6 +7,9 @@
 
 #include "ace/Hash_Map_Manager_T.h"
 #include "HelloS.h"
+#include "ace/Atomic_Op_T.h"
+
+extern ACE_Atomic_Op< TAO_SYNCH_MUTEX, u_long > Number_of_Problems;
 
 class UIPMC_Object_Impl : public virtual POA_Test::UIPMC_Object
 {

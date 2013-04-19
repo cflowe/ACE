@@ -4,7 +4,7 @@
 /**
  *  @file    ImR_Client.h
  *
- *  $Id: ImR_Client.h 84281 2009-01-30 15:01:17Z wotte $
+ *  $Id: ImR_Client.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author  Johnny Willemsen  <jwillemsen@remedy.nl>
  */
@@ -59,6 +59,11 @@ namespace TAO
       /// ImplRepo helper method, notify the ImplRepo on shutdown
       virtual void imr_notify_shutdown (TAO_Root_POA* poa);
 
+      /// ImplRepo helper method, create an IMR-ified object for a
+      /// key with a given type
+      virtual CORBA::Object_ptr imr_key_to_object(TAO_Root_POA* poa,
+                                                  const TAO::ObjectKey &key,
+                                                  const char *type_id) const;
     private:
       /// Implementation Repository Server Object
       ServerObject_i *server_object_;

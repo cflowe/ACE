@@ -4,7 +4,7 @@
 /**
  *  @file   Naming_Context_Interface.h
  *
- *  $Id: Naming_Context_Interface.h 77001 2007-02-12 07:54:49Z johnnyw $
+ *  $Id: Naming_Context_Interface.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author Marina Spivak <marina@cs.wustl.edu>
  */
@@ -177,6 +177,12 @@ public:
    */
   virtual CORBA::Object_ptr resolve_str (const char * n);
 
+  /**
+   * Mark the implementation stale state for replicated
+   * persistence support.
+   */
+  void stale (bool value);
+
   /// Returns the Default POA of this Servant object
   virtual PortableServer::POA_ptr _default_POA (void);
 
@@ -339,6 +345,18 @@ public:
 
   /// Returns the Default POA of this Servant object
   virtual PortableServer::POA_ptr _default_POA (void) = 0;
+
+  /**
+   * Set the stale flag for replicated persistence support.
+   */
+  virtual void stale (bool value);
+
+  /**
+   * Query if the the implementation is stale for replicated
+   * persistence support.
+   */
+  virtual bool stale (void);
+
 };
 
 TAO_END_VERSIONED_NAMESPACE_DECL

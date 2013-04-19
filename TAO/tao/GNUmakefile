@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: TAO_Core_idl TAO AnyTypeCode_Idl Codeset_Idl Codeset-target AnyTypeCode-target BiDir_GIOP_Idl PI_Idl CodecFactory_Idl CodecFactory-target PI-target BiDir_GIOP-target CSD_Framework_Idl PortableServer_Idl PortableServer-target CSD_Framework-target CSD_ThreadPool-target Compression_Idl Compression-target RLECompressor DiffServPolicy_Idl DiffServPolicy-target Valuetype_Idl Valuetype-target DynamicAny_Idl DynamicAny-target Messaging_Idl Messaging-target DynamicInterface-target TAO_ETCL EndpointPolicy_Core_Idl EndpointPolicy-target TAO_FlResource IFR_Client_Idl IFR_Client-target IFR_Client_skel IORInterceptor_Idl ObjRefTemplate_Idl ObjRefTemplate-target IORInterceptor-target IORManipulation_Idl IORManipulation-target IORTable_Core_Idl IORTable-target ImR_Client_Idl ImR_Client-target Monitor_Idl TAO_Monitor PI_Server_Idl PI_Server-target TAO_QtResource RTCORBA_Core_Idl RTCORBA-target RTPortableServer_Idl RTPortableServer-target RTScheduler_Idl RTScheduler SmartProxies-target Strategies_Core_Idl Strategies-target TAO_TkResource TC_Idl TC TC_IIOP_Idl TC_IIOP TypeCodeFactory_Idl TypeCodeFactory-target TAO_Utils TAO_XtResource ZIOP_Core_Idl ZIOP-target
+all: TAO_Core_idl TAO AnyTypeCode_Idl Codeset_Idl Codeset-target AnyTypeCode-target BiDir_GIOP_Idl PI_Idl CodecFactory_Idl CodecFactory-target PI-target BiDir_GIOP-target CSD_Framework_Idl PortableServer_Idl PortableServer-target CSD_Framework-target CSD_ThreadPool-target Compression_Idl Compression-target RLECompressor DiffServPolicy_Idl DiffServPolicy-target Valuetype_Idl Valuetype-target DynamicAny_Idl DynamicAny-target Messaging_Idl Messaging-target DynamicInterface-target Dynamic_TP-target TAO_ETCL EndpointPolicy_Core_Idl EndpointPolicy-target TAO_FlResource IFR_Client_Idl IFR_Client-target IFR_Client_skel IORInterceptor_Idl ObjRefTemplate_Idl ObjRefTemplate-target IORInterceptor-target IORManipulation_Idl IORManipulation-target IORTable_Core_Idl IORTable-target ImR_Client_Idl ImR_Client-target Monitor_Idl TAO_Monitor PI_Server_Idl PI_Server-target TAO_QtResource RTCORBA_Core_Idl RTCORBA-target RTPortableServer_Idl RTPortableServer-target RTScheduler_Idl RTScheduler SmartProxies-target Strategies_Core_Idl Strategies-target TAO_TkResource TC_Idl TC TC_IIOP_Idl TC_IIOP TypeCodeFactory_Idl TypeCodeFactory-target TAO_Utils TAO_XtResource ZIOP_Core_Idl ZIOP-target
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -54,6 +54,7 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Messaging && $(MAKE) -f GNUmakefile.Messaging_Idl $(@)
 	$(KEEP_GOING)@cd Messaging && $(MAKE) -f GNUmakefile.Messaging $(@)
 	$(KEEP_GOING)@cd DynamicInterface && $(MAKE) -f GNUmakefile.DynamicInterface $(@)
+	$(KEEP_GOING)@cd Dynamic_TP && $(MAKE) -f GNUmakefile.Dynamic_TP $(@)
 	$(KEEP_GOING)@cd ETCL && $(MAKE) -f GNUmakefile.TAO_ETCL $(@)
 	$(KEEP_GOING)@cd EndpointPolicy && $(MAKE) -f GNUmakefile.EndpointPolicy_Core_Idl $(@)
 	$(KEEP_GOING)@cd EndpointPolicy && $(MAKE) -f GNUmakefile.EndpointPolicy $(@)
@@ -213,6 +214,10 @@ Messaging-target: TAO Codeset-target AnyTypeCode-target CodecFactory-target PI-t
 DynamicInterface-target: TAO Codeset-target AnyTypeCode-target CodecFactory-target PI-target PortableServer-target Valuetype-target Messaging-target
 	$(KEEP_GOING)@cd DynamicInterface && $(MAKE) -f GNUmakefile.DynamicInterface all
 
+.PHONY: Dynamic_TP-target
+Dynamic_TP-target: TAO Codeset-target AnyTypeCode-target CodecFactory-target PI-target PortableServer-target CSD_Framework-target CSD_ThreadPool-target
+	$(KEEP_GOING)@cd Dynamic_TP && $(MAKE) -f GNUmakefile.Dynamic_TP all
+
 .PHONY: TAO_ETCL
 TAO_ETCL: TAO Codeset-target AnyTypeCode-target
 	$(KEEP_GOING)@cd ETCL && $(MAKE) -f GNUmakefile.TAO_ETCL all
@@ -278,7 +283,7 @@ ImR_Client_Idl:
 	$(KEEP_GOING)@cd ImR_Client && $(MAKE) -f GNUmakefile.ImR_Client_Idl all
 
 .PHONY: ImR_Client-target
-ImR_Client-target: TAO Codeset-target AnyTypeCode-target PortableServer-target ImR_Client_Idl
+ImR_Client-target: TAO Codeset-target AnyTypeCode-target PortableServer-target IORManipulation-target ImR_Client_Idl
 	$(KEEP_GOING)@cd ImR_Client && $(MAKE) -f GNUmakefile.ImR_Client all
 
 .PHONY: Monitor_Idl
@@ -401,6 +406,7 @@ project_name_list:
 	@echo DynamicAny-target
 	@echo DynamicAny_Idl
 	@echo DynamicInterface-target
+	@echo Dynamic_TP-target
 	@echo TAO_ETCL
 	@echo EndpointPolicy-target
 	@echo EndpointPolicy_Core_Idl

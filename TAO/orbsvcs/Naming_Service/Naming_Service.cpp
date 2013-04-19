@@ -1,7 +1,8 @@
-// $Id: Naming_Service.cpp 93711 2011-04-01 15:37:48Z mesnier_p $
+// $Id: Naming_Service.cpp 96799 2013-02-11 23:01:56Z stanleyk $
 
 #include "Naming_Service.h"
 
+#include "orbsvcs/Naming/Naming_Server.h"
 #include "orbsvcs/Daemon_Utilities.h"
 #include "ace/Get_Opt.h"
 #include "ace/Argv_Type_Converter.h"
@@ -49,6 +50,7 @@ TAO_Naming_Service::init (int argc, ACE_TCHAR* argv[])
 
       if (result == -1)
         return result;
+
     }
   catch (const CORBA::Exception& ex)
     {
@@ -193,5 +195,4 @@ TAO_Naming_Service::fini (void)
 // Destructor.
 TAO_Naming_Service::~TAO_Naming_Service (void)
 {
-  // Destructor
 }

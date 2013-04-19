@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: Naming_Service.mpc 96385 2012-11-27 11:24:30Z johnnyw $
+// $Id: Naming_Service.mpc 96766 2013-02-06 17:13:33Z harrisb $
 
 project : orbsvcsexe, install, naming_serv, imr_client, svc_utils {
   exename  = tao_cosnaming
@@ -26,4 +26,3 @@ project(NT_Naming_Service) : orbsvcsexe, install, naming_serv, svc_utils {
     README
   }
 }
-

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,36 +20,36 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: SCTP_SOCK_SEQPACK_Association_Test SCTP_SOCK_STREAM_Srv SCTP_SOCK_STREAM_Clt SCTP_SOCK_SEQPACK_Clt SCTP_SOCK_SEQPACK_Srv
+all: SCTP_SOCK_SEQPACK_Association_Test SCTP_SOCK_SEQPACK_Clt SCTP_SOCK_SEQPACK_Srv SCTP_SOCK_STREAM_Clt SCTP_SOCK_STREAM_Srv
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Association_Test $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Srv $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Clt $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Clt $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Srv $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Clt $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Srv $(@)
 
 .PHONY: SCTP_SOCK_SEQPACK_Association_Test
 SCTP_SOCK_SEQPACK_Association_Test:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Association_Test all
 
-.PHONY: SCTP_SOCK_STREAM_Srv
-SCTP_SOCK_STREAM_Srv:
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Srv all
-
-.PHONY: SCTP_SOCK_STREAM_Clt
-SCTP_SOCK_STREAM_Clt: SCTP_SOCK_STREAM_Srv
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Clt all
-
 .PHONY: SCTP_SOCK_SEQPACK_Clt
-SCTP_SOCK_SEQPACK_Clt: SCTP_SOCK_STREAM_Srv SCTP_SOCK_STREAM_Clt
+SCTP_SOCK_SEQPACK_Clt:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Clt all
 
 .PHONY: SCTP_SOCK_SEQPACK_Srv
-SCTP_SOCK_SEQPACK_Srv: SCTP_SOCK_STREAM_Srv
+SCTP_SOCK_SEQPACK_Srv: SCTP_SOCK_SEQPACK_Clt
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Srv all
+
+.PHONY: SCTP_SOCK_STREAM_Clt
+SCTP_SOCK_STREAM_Clt: SCTP_SOCK_SEQPACK_Clt
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Clt all
+
+.PHONY: SCTP_SOCK_STREAM_Srv
+SCTP_SOCK_STREAM_Srv: SCTP_SOCK_SEQPACK_Clt
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Srv all
 
 project_name_list:
 	@echo SCTP_SOCK_SEQPACK_Association_Test

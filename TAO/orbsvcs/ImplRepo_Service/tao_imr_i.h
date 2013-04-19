@@ -4,7 +4,7 @@
 /**
  *  @file    tao_imr_i.h
  *
- *  $Id: tao_imr_i.h 83040 2008-10-10 08:55:40Z johnnyw $
+ *  $Id: tao_imr_i.h 96840 2013-02-19 21:48:51Z harrisb $
  *
  *  This class implements the Implementation Repository helper application.
  *
@@ -206,6 +206,9 @@ protected:
 
   /// If true, more server information is displayed.
   int verbose_server_information_;
+
+  /// If true, only show servers that are currently active.
+  int list_only_active_servers_;
 
   /// Prints out the information contained in a ServerInformation structure.
   /// Specialized to only print server information

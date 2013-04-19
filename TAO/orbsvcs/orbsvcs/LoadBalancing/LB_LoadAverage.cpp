@@ -1,4 +1,4 @@
-// $Id: LB_LoadAverage.cpp 93117 2011-01-20 12:11:28Z mcorino $
+// $Id: LB_LoadAverage.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "orbsvcs/LoadBalancing/LB_LoadAverage.h"
 #include "orbsvcs/LoadBalancing/LB_LoadMap.h"
@@ -153,7 +153,7 @@ TAO_LB_LoadAverage::get_loads (CosLoadBalancing::LoadManager_ptr load_manager,
 
   this->push_loads (the_location,
                     loads.in (),
-                    loads[0]);
+                    loads.inout ()[0]);
 
   return loads._retn ();
 }

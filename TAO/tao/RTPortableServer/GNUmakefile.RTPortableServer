@@ -258,8 +258,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#RTPortableServer_include.pidl
 #RTPortableServer.pidl
+#RTPortableServer_include.pidl
 #
 #build_files:
 #RTPortableServer.mpc

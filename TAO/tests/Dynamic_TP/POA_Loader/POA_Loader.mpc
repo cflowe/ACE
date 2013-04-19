@@ -1,0 +1,5 @@
+// $Id: POA_Loader.mpc 96889 2013-03-07 17:06:39Z mesnier_p $
+
+project(*test) : dynamic_tp, avoids_corba_e_compact, avoids_corba_e_micro {
+  exename = test
+}

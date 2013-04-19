@@ -4,7 +4,7 @@
 /**
  *  @file ServantRetentionStrategyNonRetain.h
  *
- *  $Id: ServantRetentionStrategyNonRetain.h 91386 2010-08-18 14:09:50Z mhengstmengel $
+ *  $Id: ServantRetentionStrategyNonRetain.h 96792 2013-02-08 22:36:59Z mesnier_p $
  *
  *  @author  Johnny Willemsen  <jwillemsen@remedy.nl>
  */
@@ -21,6 +21,7 @@
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
 #include "tao/PortableServer/Servant_Location.h"
+#include "ace/Atomic_Op.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -124,6 +125,7 @@ namespace TAO
 
     protected:
       TAO_Root_POA *poa_;
+      ACE_Atomic_Op<TAO_SYNCH_MUTEX,ACE_UINT32> sys_id_count_;
     };
   }
 }

@@ -620,6 +620,12 @@
 				RelativePath="Invocation_Endpoint_Selectors.cpp">
 			</File>
 			<File
+				RelativePath="Invocation_Retry_Params.cpp">
+			</File>
+			<File
+				RelativePath="Invocation_Retry_State.cpp">
+			</File>
+			<File
 				RelativePath="IOPC.cpp">
 			</File>
 			<File
@@ -912,6 +918,18 @@
 			</File>
 			<File
 				RelativePath="ShortSeqC.cpp">
+			</File>
+			<File
+				RelativePath="Storable_Base.cpp">
+			</File>
+			<File
+				RelativePath="Storable_Factory.cpp">
+			</File>
+			<File
+				RelativePath="Storable_File_Guard.cpp">
+			</File>
+			<File
+				RelativePath="Storable_FlatFileStream.cpp">
 			</File>
 			<File
 				RelativePath="String_Alloc.cpp">
@@ -1461,6 +1479,12 @@
 				RelativePath="Invocation_Endpoint_Selectors.h">
 			</File>
 			<File
+				RelativePath="Invocation_Retry_Params.h">
+			</File>
+			<File
+				RelativePath="Invocation_Retry_State.h">
+			</File>
+			<File
 				RelativePath="Invocation_Utils.h">
 			</File>
 			<File
@@ -1873,6 +1897,18 @@
 			</File>
 			<File
 				RelativePath="Special_Basic_Arguments.h">
+			</File>
+			<File
+				RelativePath="Storable_Base.h">
+			</File>
+			<File
+				RelativePath="Storable_Factory.h">
+			</File>
+			<File
+				RelativePath="Storable_File_Guard.h">
+			</File>
+			<File
+				RelativePath="Storable_FlatFileStream.h">
 			</File>
 			<File
 				RelativePath="String_Alloc.h">
@@ -2745,6 +2781,9 @@
 			</File>
 			<File
 				RelativePath="Special_Basic_Argument_T.inl">
+			</File>
+			<File
+				RelativePath="Storable_Base.inl">
 			</File>
 			<File
 				RelativePath="Stub.inl">

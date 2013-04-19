@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: GIOP_Message_Base.cpp 96458 2012-12-05 09:43:05Z sma $
+// $Id: GIOP_Message_Base.cpp 96730 2013-01-30 12:44:34Z sma $
 
 #include "tao/GIOP_Message_Base.h"
 #include "tao/operation_details.h"
@@ -658,24 +658,42 @@ TAO_GIOP_Message_Base::process_request_message (TAO_Transport *transport,
   // we pass it on to the higher layers of the ORB. So we dont to any
   // copies at all here. The same is also done in the higher layers.
 
-  ACE_Data_Block *db = qd->msg_block ()->data_block ();
+  ACE_Data_Block *db = 0;
 
-  // Get the flag in the message's data block
-  ACE_Message_Block::Message_Flags flg = db->flags ();
+  // Get the flag in the message block
+  ACE_Message_Block::Message_Flags flg = qd->msg_block ()->self_flags ();
 
-  if (ACE_BIT_DISABLED (flg, ACE_Message_Block::DONT_DELETE))
+  if (ACE_BIT_ENABLED (flg, ACE_Message_Block::DONT_DELETE))
+    {
+      // Use the same datablock
+      db = qd->msg_block ()->data_block ();
+    }
+  else
     {
       // Use a duplicated datablock as the datablock has come off the
       // heap.
-      db = db->duplicate ();
+      db = qd->msg_block ()->data_block ()->duplicate ();
     }
   db->size (qd->msg_block ()->length ());
 
 #if defined (TAO_HAS_ZIOP) && TAO_HAS_ZIOP ==1
   if (qd->state ().compressed ())
     {
+      ACE_Data_Block *const orig_db = db;
       if (!this->decompress (&db, *qd, rd_pos, wr_pos))
         return -1;
+      if (orig_db != db)
+        {
+          // Since the decompression has replaced our original datablock,
+          // if we were supposed to delete it, do so now.
+          if (ACE_BIT_DISABLED (flg, ACE_Message_Block::DONT_DELETE))
+            static_cast<void> (orig_db->release ());
+          else
+            // and make sure that the new datablock is always deleted by
+            // the upcomming input_cdr going out of scope as we have been
+            // given ownership of it.
+            ACE_CLR_BITS (flg, ACE_Message_Block::DONT_DELETE);
+        }
     }
 #endif
   if (TAO_debug_level > 9)
@@ -768,24 +786,42 @@ TAO_GIOP_Message_Base::process_reply_message (
   size_t wr_pos = qd->msg_block ()->wr_ptr () - qd->msg_block ()->base ();
   rd_pos += TAO_GIOP_MESSAGE_HEADER_LEN;
 
-  ACE_Data_Block *db = qd->msg_block ()->data_block ();
+  ACE_Data_Block *db = 0;
 
-  // Get the flag in the message's data block
-  ACE_Message_Block::Message_Flags flg = db->flags ();
+  // Get the flag in the message block
+  ACE_Message_Block::Message_Flags flg = qd->msg_block ()->self_flags ();
 
-  if (ACE_BIT_DISABLED (flg, ACE_Message_Block::DONT_DELETE))
+  if (ACE_BIT_ENABLED (flg, ACE_Message_Block::DONT_DELETE))
+    {
+      // Use the same datablock
+      db = qd->msg_block ()->data_block ();
+    }
+  else
     {
       // Use a duplicated datablock as the datablock has come off the
       // heap.
-      db = db->duplicate ();
+      db = qd->msg_block ()->data_block ()->duplicate ();
     }
   db->size (qd->msg_block ()->length ());
 
 #if defined (TAO_HAS_ZIOP) && TAO_HAS_ZIOP ==1
    if (qd->state ().compressed ())
     {
+      ACE_Data_Block *const orig_db = db;
       if (!this->decompress (&db, *qd, rd_pos, wr_pos))
         return -1;
+      if (orig_db != db)
+        {
+          // Since the decompression has replaced our original datablock,
+          // if we were supposed to delete it, do so now.
+          if (ACE_BIT_DISABLED (flg, ACE_Message_Block::DONT_DELETE))
+            static_cast<void> (orig_db->release ());
+          else
+            // and make sure that the new datablock is always deleted by
+            // the upcomming input_cdr going out of scope as we have been
+            // given ownership of it.
+            ACE_CLR_BITS (flg, ACE_Message_Block::DONT_DELETE);
+        }
     }
 #endif
   if (TAO_debug_level > 9)
@@ -1697,16 +1733,22 @@ TAO_GIOP_Message_Base::parse_request_id (const TAO_Queued_Data *qd,
   // we pass it on to the higher layers of the ORB. So we dont to any
   // copies at all here. The same is also done in the higher layers.
 
-  ACE_Data_Block *db = qd->msg_block ()->data_block ();
+  ACE_Message_Block::Message_Flags flg = 0;
+  ACE_Data_Block *db = 0;
 
-  // Get the flag in the message's data block
-  ACE_Message_Block::Message_Flags flg = db->flags ();
+  // Get the flag in the message block
+  flg = qd->msg_block ()->self_flags ();
 
-  if (ACE_BIT_DISABLED (flg, ACE_Message_Block::DONT_DELETE))
+  if (ACE_BIT_ENABLED (flg, ACE_Message_Block::DONT_DELETE))
+    {
+      // Use the same datablock
+      db = qd->msg_block ()->data_block ();
+    }
+  else
     {
       // Use a duplicated datablock as the datablock has come off the
       // heap.
-      db = db->duplicate ();
+      db = qd->msg_block ()->data_block ()->duplicate ();
     }
 
   TAO_InputCDR input_cdr (db,

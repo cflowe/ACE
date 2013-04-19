@@ -1,4 +1,4 @@
-// $Id: UIPMC_Endpoint.cpp 96083 2012-08-20 10:20:43Z sma $
+// $Id: UIPMC_Endpoint.cpp 96885 2013-03-06 09:22:01Z sma $
 
 #include "orbsvcs/PortableGroup/UIPMC_Endpoint.h"
 #include "orbsvcs/PortableGroup/UIPMC_Profile.h"
@@ -58,12 +58,13 @@ TAO_UIPMC_Endpoint::TAO_UIPMC_Endpoint (const CORBA::Octet class_d_address[4],
 
 TAO_UIPMC_Endpoint::~TAO_UIPMC_Endpoint (void)
 {
+  delete this->next_;
 }
 
 void
 TAO_UIPMC_Endpoint::object_addr (const ACE_INET_Addr &addr)
 {
-  this->port_ = addr.get_port_number ();
+  this->port_ = addr.get_port_number();
   char tmp[INET6_ADDRSTRLEN];
   addr.get_host_addr (tmp, sizeof tmp);
   this->host_ = CORBA::string_dup (tmp);
@@ -173,7 +174,7 @@ TAO_UIPMC_Endpoint::preferred_interfaces (TAO_ORB_Core *oc)
                                                preferred);
 
   TAO_UIPMC_Endpoint *latest = this;
-  CORBA::ULong count = preferred.size();
+  CORBA::ULong count = static_cast<CORBA::ULong> (preferred.size());
   CORBA::ULong i = 0;
 
   while (i < count)
@@ -209,7 +210,12 @@ TAO_UIPMC_Endpoint::preferred_interfaces (TAO_ORB_Core *oc)
           TAO_Endpoint *tmp_ep =
             latest->duplicate ();
           latest->next_ = dynamic_cast<TAO_UIPMC_Endpoint *> (tmp_ep);
-          if (latest->next_ == 0) return i;
+          if (!latest->next_)
+            {
+              delete tmp_ep;
+              return i;
+            }
+
           latest = latest->next_;
         }
     }
@@ -218,13 +224,15 @@ TAO_UIPMC_Endpoint::preferred_interfaces (TAO_ORB_Core *oc)
       !oc->orb_params ()->enforce_pref_interfaces ())
     {
       TAO_Endpoint *tmp_ep = latest->duplicate ();
-
       latest->next_ =
         dynamic_cast<TAO_UIPMC_Endpoint *> (tmp_ep);
+      if (!latest->next_)
+        {
+          delete tmp_ep;
+          return count;
+        }
 
-      if (latest->next_ == 0) return count;
-
-      latest->next_->preferred_path_.host = (const char *) 0;
+      latest->next_->preferred_path_.host = static_cast<const char *> (0);
       ++count;
     }
 

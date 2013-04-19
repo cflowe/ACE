@@ -111,6 +111,15 @@
     <None Include="FaultTolerance.mpc">
       <Filter>Build Files</Filter>
     </None>
+    <None Include="FT_Naming_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtNaming.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtNamingReplication.mpc">
+      <Filter>Build Files</Filter>
+    </None>
     <None Include="FTORB.mpc">
       <Filter>Build Files</Filter>
     </None>

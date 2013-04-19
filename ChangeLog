@@ -1,3 +1,344 @@
+Thu Mar 14 09:04:46 CET 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ACE version 6.1.8 released.
+
+Thu Mar  7 19:17:15 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * ace/OS_NS_Thread.cpp:
+
+          QNX also only supports system scope for threads.
+
+Fri Mar  1 11:21:33 UTC 2013  Martin Corino  <mcorino@remedy.nl>
+
+        * bin/auto_run_tests.pl:
+          Fix for problems with explicit test root and test folders
+          that are also available in default roots.
+
+
+Thu Feb 28 19:45:03 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tests/Compiler_Features_19_Test.cpp:
+        * tests/run_test.lst:
+        * tests/tests.mpc:
+          Added C++11 test for template alias support
+
+Wed Feb 27 13:54:27 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tests/Wild_Match_Test.cpp:
+          Extended this test to get 100% coverage for ACE::wild_match, resolves
+          Coverity 753117
+
+Tue Feb 26 23:07:17 UTC 2013  Steve Huston  <shuston@riverace.com>
+
+        * include/makeinclude/platform_g++_common.GNU: When turning on
+          no-strict-aliasing, add the option to FLAGS_C_CC instead of
+          CCFLAGS so that both C and C++ compilers get it.
+
+Fri Feb 22 14:29:39 UTC 2013  Douglas C. Schmidt  <schmidt@dre.vanderbilt.edu>
+
+        * ace/Message_Queue_Vx.inl (defined): Added a fix for RTP.  Thanks
+          to Thomas dot Lockhart at jpl dot nasa dot gov for contributing this.
+
+Mon Feb 25 08:09:24 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ace/Sock_Connect.cpp:
+          Don't use MAX_IF as constant, is a system defined constant on
+          some operating systems
+
+        * tests/OS_Test.cpp:
+          Call compiler version methods, should fix some Coverity test
+          coverage issues
+
+Mon Feb 18 01:57:31 UTC 2013  Kevin Stanley  <stanleyk@ociweb.com>
+
+        * ace/SSL/SSL_Context.cpp:
+
+          Removed what appeared to be extraneous characters '3D'
+          from cut and paste.
+
+Sun Feb 17 03:37:42 UTC 2013  Douglas C. Schmidt  <schmidt@dre.vanderbilt.edu>
+
+        * ace/SSL/SSL_Context.h (ACE_SSL_Context): Added a missing comma.
+          Thanks to Johnny for reporting this.
+
+Sat Feb 16 21:53:26 UTC 2013  Kevin Stanley  <stanleyk@ociweb.com>
+
+        * ace/SSL/SSL_Context.h:
+
+          Fixed missing ',' in enumerated type value.
+
+Sat Feb 16 14:42:54 UTC 2013  Douglas C. Schmidt  <schmidt@dre.vanderbilt.edu>
+
+        * examples/C++NPv2/AIO_Client_Logging_Daemon.cpp: Moved the definition of
+
+          ACE_FACTORY_DEFINE (AIO_CLD, AIO_Client_Logging_Daemon)
+
+          to the right place in the #ifdefs.  Thanks to Journeyer J. Joh
+          <oosaprogrammer at gmail dot com> for reporting this.
+
+Sat Feb 16 14:34:30 UTC 2013  Douglas C. Schmidt  <schmidt@dre.vanderbilt.edu>
+
+        * ace/SSL/SSL_Context.cpp (ACE_SSL_Context::set_mode),
+        * ace/SSL/SSL_Context.h (ACE_SSL_Context): Added support for TLS
+          1.1 and 1.2.  Thanks to pkow88776 at onet dot pl for
+          contributing this.
+
+Wed Feb 13 14:29:09 UTC 2013  Adam Mitz  <mitza@ociweb.com>
+
+        * include/makeinclude/platform_vxworks6.7.GNU:
+
+          Removed workaround for RTP shared libraries.  With the current
+          updates to VxWorks 6.7, the workaround is not only not needed,
+          but it creates RTP executables that will not run on the target.
+
+Fri Feb  8 19:03:33 UTC 2013  Phillip LaBanca  <labancap@ociweb.com>
+
+        * ace/Message_Block.cpp:
+
+          Fix Coverity Issue 972919 - Fixed possible dereference
+          of null pointer
+
+Fri Feb  8 13:26:17 UTC 2013  Kevin Stanley  <stanleyk@ociweb.com>
+
+        * ace/CDR_Stream.h:
+
+          Fix Coverity Issue 972947 - Non virtual destructor. Made
+          TAO_InputCDR destructor virtual.
+
+Wed Feb  6 01:55:37 UTC 2013  Kevin Stanley  <stanleyk@ociweb.com>
+
+        * ace/Message_Block.cpp:
+
+          Fixed fuzz error. Return 0 instead of NULL.
+
+Tue Feb  5 21:04:17 UTC 2013  "Kevin Stanley"  <stanleyk@ociweb.com>
+
+    Several new features and bug fixes captured in Bugzilla 4091, 4092, 4093,
+    4094, 4095, and 4096. Also includes Bugzilla 3247. Specific details of the
+    changes described below through the tag at the end bookmarked with:
+    *****  OCI_Reliability_Enhancements Changes
+
+    Tue Feb  5 17:01:48 UTC 2013  "Kevin Stanley"  <stanleyk@ociweb.com>
+
+            * ace/Auto_Event.h:
+            * bin/valgrind.supp:
+            * protocols/ace/INet/inet.mpc:
+            * protocols/examples/INet:
+            * tests/CDR_Test.cpp:
+            * protocols/ace/INet/FTP_Simple_exec.cpp:
+            * protocols/ace/INet/HTTP_Simple_exec.cpp:
+
+              Merged changes from trunk in preparation for merge. The
+              above files had changes.
+
+    Thu Jan 31 22:39:53 UTC 2013  Phillip LaBanca  <labancap@ociweb.com>
+
+            * ace/Message_Block.cpp:
+
+              Fixed problem with allocator in clone and duplicate
+
+            * tests/Message_Block_Large_Copy_Test.cpp:
+
+              Added reference count output
+
+    Thu Jan 31 18:41:26 UTC 2013  Phillip LaBanca  <labancap@ociweb.com>
+
+            * tests/Message_Block_Large_Copy_Test.cpp:
+
+              Corrected test for scoreboard
+
+    Thu Jan 31 14:38:03 UTC 2013  "Kevin Stanley"  <stanleyk@ociweb.com>
+
+            * tests/Message_Block_Large_Copy_Test.cpp:
+
+              Fixed another error in allocation missed the first time.
+
+    Thu Jan 31 14:31:17 UTC 2013  Kevin Stanley  <stanleyk@ociweb.com>
+
+            * tests/Message_Block_Large_Copy_Test.cpp:
+
+              Fixed error in allocation of character array.
+
+    Wed Jan 30 23:54:14 UTC 2013  Phillip LaBanca  <labancap@ociweb.com>
+
+            * ace/Message_Block.cpp:
+
+              Applied bug 3247 duplicate patch that replaced recursion with
+              iteration to support the copying of large message blocks.
+
+            * tests/Message_Block_Large_Copy_Test.cpp:
+            * tests/run_test.lst:
+            * tests/tests.mpc:
+
+              Created test to cover the cloning and duplication of
+              large Message_Blocks.
+
+    Tue Jan 29 15:15:09 UTC 2013  "Kevin Stanley"  <stanleyk@ociweb.com>
+
+            * include/makeinclude/platform_sunos5_g++.GNU:
+
+              Merged trunk into branch.
+
+    Mon Jan 28 16:13:07 UTC 2013  "Kevin Stanley"  <stanleyk@ociweb.com>
+
+            * ace/config-macosx-lion.h:
+            * ace/config-macosx-mountainlion.h:
+            * ace/config-macosx-snowleopard.h:
+            * examples/Shared_Memory/test_MM.cpp:
+            * examples/Shared_Memory/test_SV.cpp:
+            * include/makeinclude/platform_macosx_mountainlion.GNU:
+            * ace/config-macosx-mountain-lion.h:
+            * include/makeinclude/platform_macosx_mountain_lion.GNU:
+
+              Merged trunk into branch. The above files were changed in the
+              trunk.
+
+    Wed Dec 19 17:52:25 UTC 2012  Phil Mesnier  <mesnier_p@ociweb.com>
+
+            * ace/Mem_Map.inl:
+
+              Fix a warning about signed/unsigned mix.
+
+            * include/makeinclude/platform_clang_common.GNU:
+
+              Increase the warning level used by the CLang++ compiler to show all warnings
+
+    Mon Dec 17 14:39:07 UTC 2012  Brian Johnson  <johnsonb@ociweb.com>
+
+            * ACEXML/common/FileCharStream.cpp:
+
+              Fixed to not close the infile_ if it was passed to the
+              FileCharStream.
+
+    Fri Dec 14 17:31:22 UTC 2012  Brian Johnson  <johnsonb@ociweb.com>
+
+            * ACEXML/common/FileCharStream.h:
+            * ACEXML/common/FileCharStream.cpp:
+
+              Added interface to accept an already open FILE stream.
+
+    Mon Oct 15 18:26:57 UTC 2012  Phil Mesnier  <mesnier_p@ociweb.com>
+
+            * OCI_RE_ChangeLog:
+              Created change log for the OCI Reliability Enhancements branch
+
+    *****  OCI_Reliability_Enhancements Changes
+
+Mon Feb  4 08:58:35 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * protocols/ace/INet/inet.mpc:
+        * protocols/ace/INet/FTP_Simple_exec.cpp:
+        * protocols/ace/INet/HTTP_Simple_exec.cpp:
+        * protocols/examples/INet/FTP_Simple_exec.cpp:
+        * protocols/examples/INet/HTTP_Simple_exec.cpp:
+        * protocols/examples/INet/inet.mpc:
+          Moved INet examples out of the ace/INet directory and into
+          a new example directory
+
+Sat Feb  2 19:08:18 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ace/Auto_Event.h:
+          Layout changes
+
+Thu Jan 31 19:21:31 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tests/CDR_Test.cpp:
+          Test CDR_Size::write_boolean_array, according to Coverity
+          this method was not tested
+
+Wed Jan 30 11:58:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * bin/valgrind.supp:
+          Add a supression for a faulty system zlib.
+
+Mon Jan 28 23:33:25 UTC 2013  Adam Mitz  <mitza@ociweb.com>
+
+        * include/makeinclude/platform_sunos5_g++.GNU:
+
+          Define _POSIX_PTHREAD_SEMANTICS is threads=1,
+          making this config similar to SunCC.
+
+Mon Jan 28 07:55:27 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ace/config-macosx-mountainlion.h:
+        * ace/config-macosx-mountain-lion.h:
+        * include/makeinclude/platform_macosx_mountainlion.GNU:
+        * include/makeinclude/platform_macosx_mountain_lion.GNU:
+          Renamed mountain-lion to mountainlion to simplify packaging
+
+Tue Jan 22 12:28:19 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ace/CDR_Size.h:
+          Doxygen changs
+
+        * tests/FlReactor_Test.cpp:
+          Unicode fixes
+
+Mon Jan 21 08:24:11 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * html/Stats/index.shtml:
+          Corrected link
+
+Thu Jan 17 12:25:40 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * debian/debian.control:
+          Fixed depencency on libssl-dev, thanks to Michael Ganz
+          <michael_ganz at t-online dot de> for reporting this
+
+Thu Jan 17 12:23:42 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ace/Sig_Handler.cpp:
+          Layout changes
+
+        * docs/bczar/bczar.html:
+          Updated packages
+
+        * html/Stats/index.shtml:
+          Added another page
+
+Fri Jan  4 21:52:14 UTC 2013  Adam Mitz  <mitza@ociweb.com>
+
+        * include/makeinclude/platform_linux_clang.GNU:
+
+          Added clang command-line option required to build TAO.
+
+Fri Jan  4 12:11:12 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * rpmbuild/ace-tao-init-suse/init.d/tao-cosconcurrency:
+        * rpmbuild/ace-tao-init-suse/init.d/tao-cosevent:
+        * rpmbuild/ace-tao-init-suse/init.d/tao-cosnaming:
+        * rpmbuild/ace-tao-init-suse/init.d/tao-cosnotification:
+        * rpmbuild/ace-tao-init-suse/init.d/tao-costrading:
+        * rpmbuild/ace-tao-init-suse/init.d/tao-rtevent:
+          Add $network to Required-Start line, thanks to John Fletcher
+          <john dot fletcher at rd dot bbc dot co dot uk> for reporting
+          this.
+
+Thu Jan  3 22:53:44 UTC 2013  Steve Huston  <shuston@riverace.com>
+
+        * ace/OS_NS_netdb.cpp (ACE_OS::getmacaddress): On Linux, search for
+          an interface to get the MAC address for; don't assume eth0 is
+          present and usable.
+
+        * tests/Bug_3744_Regression_Test.cpp: Fix ACE_LOG_MSG output.
+
+Wed Jan  2 19:19:58 UTC 2013  Thomas Girard  <thomas.g.girard@free.fr>
+
+        * ace/Service_Config.h: ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE
+          fix when ACE_VERSIONED_SO=2. Because of '.' in the version,
+          addition of prefix ACE_DLL_PREDIX and suffix ACE_DLL_SUFFIX
+          is skipped, preventing ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE
+          from working when ACE+TAO is built with versioned_so=2.
+
+Thu Dec 27 09:18:39 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * NEWS:
+        * bin/diff-builds-and-group-fixed-tests-only.sh:
+        * docs/Download.html:
+        * docs/bczar/bczar.html:
+        * etc/index.html:
+          Updated in preparation of next release
+
 Thu Dec 27 10:00:49 CET 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * ACE version 6.1.7 released.

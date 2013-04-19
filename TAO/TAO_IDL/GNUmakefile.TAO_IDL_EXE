@@ -235,8 +235,8 @@ else
 	  $(DESTDIR)$(INSTALL_PREFIX)
 	@$(MKDIR) $(DESTDIR)$(INSTALL_PREFIX)/share/ace/bin
 	ln -sf $(INSTALL_PREFIX)/bin/tao_idl $(DESTDIR)$(INSTALL_PREFIX)/share/ace/bin
-	@$(MKDIR) $(DESTDIR)$(INSTALL_PREFIX)/share/ace/$(INSTALL_LIB)
-	ln -sf $(INSTALL_PREFIX)/$(INSTALL_LIB)/$(LIB_PREFIX)TAO_IDL_[FB]E.$(SOEXT) $(DESTDIR)$(INSTALL_PREFIX)/share/ace/$(INSTALL_LIB)
+	@$(MKDIR) $(DESTDIR)$(INSTALL_PREFIX)/share/ace/lib
+	ln -sf $(INSTALL_PREFIX)/$(INSTALL_LIB)/$(LIB_PREFIX)TAO_IDL_[FB]E.$(SOEXT) $(DESTDIR)$(INSTALL_PREFIX)/share/ace/lib
 
 endif
 endif
@@ -245,8 +245,8 @@ endif
 #BEGIN MPC-Generated Install Info
 #build_files:
 #tao_idl.mpc
-#tao_idl_be.mpc
 #tao_idl_fe.mpc
+#tao_idl_be.mpc
 #TAO_IDL.mwc
 #TAO_IDL_ACE.mwc
 #

@@ -7,13 +7,15 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE -workers 10 -name_modifier "*_vc10"
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE -workers 12 -name_modifier "*_vc10"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "catior_lib", "catior\catior_lib_vc10.vcxproj", "{DAAEAE90-FECA-1BAD-2F80-8C351C8E0D7C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "catior", "catior\catior_vc10.vcxproj", "{E8CC338B-FECA-1BAD-2F80-8C351C8E0D7C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DAAEAE90-FECA-1BAD-2F80-8C351C8E0D7C} = {DAAEAE90-FECA-1BAD-2F80-8C351C8E0D7C}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nsgroup", "nsgroup\nsgroup_vc10.vcxproj", "{92EAC3ED-FECA-1BAD-4822-E333C4D267C1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nsadd", "nslist\nsadd_vc10.vcxproj", "{62AC507C-FECA-1BAD-AE46-8CF61C4D8CBA}"
 EndProject
@@ -45,6 +47,14 @@ Global
 		{E8CC338B-FECA-1BAD-2F80-8C351C8E0D7C}.Release|Win32.Build.0 = Release|Win32
 		{E8CC338B-FECA-1BAD-2F80-8C351C8E0D7C}.Release|x64.ActiveCfg = Release|x64
 		{E8CC338B-FECA-1BAD-2F80-8C351C8E0D7C}.Release|x64.Build.0 = Release|x64
+		{92EAC3ED-FECA-1BAD-4822-E333C4D267C1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{92EAC3ED-FECA-1BAD-4822-E333C4D267C1}.Debug|Win32.Build.0 = Debug|Win32
+		{92EAC3ED-FECA-1BAD-4822-E333C4D267C1}.Debug|x64.ActiveCfg = Debug|x64
+		{92EAC3ED-FECA-1BAD-4822-E333C4D267C1}.Debug|x64.Build.0 = Debug|x64
+		{92EAC3ED-FECA-1BAD-4822-E333C4D267C1}.Release|Win32.ActiveCfg = Release|Win32
+		{92EAC3ED-FECA-1BAD-4822-E333C4D267C1}.Release|Win32.Build.0 = Release|Win32
+		{92EAC3ED-FECA-1BAD-4822-E333C4D267C1}.Release|x64.ActiveCfg = Release|x64
+		{92EAC3ED-FECA-1BAD-4822-E333C4D267C1}.Release|x64.Build.0 = Release|x64
 		{62AC507C-FECA-1BAD-AE46-8CF61C4D8CBA}.Debug|Win32.ActiveCfg = Debug|Win32
 		{62AC507C-FECA-1BAD-AE46-8CF61C4D8CBA}.Debug|Win32.Build.0 = Debug|Win32
 		{62AC507C-FECA-1BAD-AE46-8CF61C4D8CBA}.Debug|x64.ActiveCfg = Debug|x64

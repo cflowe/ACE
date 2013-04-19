@@ -1,4 +1,4 @@
-// $Id: FT_ClientRequest_Interceptor.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: FT_ClientRequest_Interceptor.cpp 96885 2013-03-06 09:22:01Z sma $
 
 #include "orbsvcs/FaultTolerance/FT_ClientRequest_Interceptor.h"
 #include "orbsvcs/FaultTolerance/FT_Service_Callbacks.h"
@@ -147,7 +147,7 @@ namespace TAO
             throw CORBA::TRANSIENT (
               CORBA::SystemException::_tao_minor_code (
                 TAO_INVOCATION_LOCATION_FORWARD_MINOR_CODE,
-                errno),
+                ETIME),
               CORBA::COMPLETED_NO);
           }
       }

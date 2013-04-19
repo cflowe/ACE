@@ -961,9 +961,9 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
-#CCM_lem_stub.mpc
 #CCM_stub.mpc
 #CCM_svnt.mpc
+#CCM_lem_stub.mpc
 #
 #idl_files:
 #CCM_Base.idl

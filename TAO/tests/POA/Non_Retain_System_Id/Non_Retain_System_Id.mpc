@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Non_Retain_System_Id.mpc 96232 2012-11-07 18:08:55Z johnsonb $
+
+project(POA*): taoserver, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  exename = test
+}

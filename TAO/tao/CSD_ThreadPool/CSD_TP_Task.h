@@ -4,7 +4,7 @@
 /**
  *  @file    CSD_TP_Task.h
  *
- *  $Id: CSD_TP_Task.h 91628 2010-09-07 11:11:12Z johnnyw $
+ *  $Id: CSD_TP_Task.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author  Tim Bradley <bradley_t@ociweb.com>
  */
@@ -89,7 +89,7 @@ namespace TAO
       bool add_request(TP_Request* request);
 
       /// Activate the worker threads
-      virtual int open(void* num_threads_ptr = 0);
+      virtual int open(void* args = 0);
 
       /// The "mainline" executed by each worker thread.
       virtual int svc();

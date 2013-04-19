@@ -4,7 +4,7 @@
 /**
  *  @file     miopconf.h
  *
- *  $Id: miopconf.h 96029 2012-08-10 14:01:17Z sma $
+ *  $Id: miopconf.h 96702 2013-01-24 15:52:45Z sma $
  *
  *  Build configuration file.
  *
@@ -96,6 +96,14 @@ static u_long const TAO_DEFAULT_MIOP_FRAGMENT_SIZE     = MIOP_MAX_DGRAM_SIZE;
 
 #if !defined (TAO_DEFAULT_MIOP_MAX_FRAGMENTS)
 static u_long const TAO_DEFAULT_MIOP_MAX_FRAGMENTS = 0u; // Zero is unlimited
+#endif
+
+#if !defined (TAO_DEFAULT_MIOP_SEND_THROTTLING)
+static bool const TAO_DEFAULT_MIOP_SEND_THROTTLING = true; // Enabled
+#endif
+
+#if !defined (TAO_DEFAULT_MIOP_EAGER_DEQUEUEING)
+static bool const TAO_DEFAULT_MIOP_EAGER_DEQUEUEING = true; // Enabled
 #endif
 
 static CORBA::Octet const miop_magic[4] = {

@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  client.cpp \
-  Latency_Query_Client.cpp
+  Latency_Query_Client.cpp \
+  client.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

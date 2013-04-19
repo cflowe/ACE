@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Pluggable_Idl Pluggable_Server Pluggable_Client
+all: Pluggable_Idl Pluggable_Client Pluggable_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Pluggable_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Pluggable_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Pluggable_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Pluggable_Server $(@)
 
 .PHONY: Pluggable_Idl
 Pluggable_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Pluggable_Idl all
 
-.PHONY: Pluggable_Server
-Pluggable_Server: Pluggable_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Pluggable_Server all
-
 .PHONY: Pluggable_Client
-Pluggable_Client: Pluggable_Idl Pluggable_Server
+Pluggable_Client: Pluggable_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Pluggable_Client all
+
+.PHONY: Pluggable_Server
+Pluggable_Server: Pluggable_Idl Pluggable_Client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Pluggable_Server all
 
 project_name_list:
 	@echo Pluggable_Client

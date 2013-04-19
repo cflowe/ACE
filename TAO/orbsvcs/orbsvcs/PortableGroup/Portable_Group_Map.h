@@ -4,7 +4,7 @@
 /**
  *  @file   Portable_Group_Map.h
  *
- *  $Id: Portable_Group_Map.h 76589 2007-01-25 18:04:11Z elliott_c $
+ *  $Id: Portable_Group_Map.h 96615 2013-01-04 15:30:19Z sma $
  *
  *  @author Frank Hunleth <fhunleth@cs.wustl.edu>
  */
@@ -120,7 +120,7 @@ public:
 
 protected:
   /// Lock used to synchronize access to map_.
-  TAO_SYNCH_MUTEX lock_;
+  TAO_SYNCH_RW_MUTEX lock_;
 
   /// Id map.
   GroupId_Table map_;

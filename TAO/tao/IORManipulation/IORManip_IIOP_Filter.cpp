@@ -1,4 +1,4 @@
-// $Id: IORManip_IIOP_Filter.cpp 94036 2011-05-10 06:15:18Z msmit $
+// $Id: IORManip_IIOP_Filter.cpp 96793 2013-02-11 02:21:22Z mesnier_p $
 
 #include "tao/IORManipulation/IORManip_IIOP_Filter.h"
 
@@ -118,7 +118,7 @@ TAO_IORManip_IIOP_Filter::filter_and_add (TAO_Profile* profile,
                   }
                 else
                   {
-                    ep->host (CORBA::string_dup (endpoints[i].host));
+                    ep->host (endpoints[i].host);
                     ep->port (endpoints[i].port);
                     ep->priority (endpoints[i].priority);
                   }

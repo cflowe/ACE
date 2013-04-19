@@ -1,4 +1,4 @@
-# $Id: ciao_tests.lst 96340 2012-11-23 10:57:39Z msmit $
+# $Id: ciao_tests.lst 96760 2013-02-05 21:11:03Z stanleyk $
 #
 # This is the list of run_test.pl's that need to be run by
 # auto_run_tests.pl.
@@ -39,6 +39,9 @@ TAO/CIAO/tests/Bug_3832_Regression/run_test.pl:
 TAO/CIAO/tests/Bug_3936_Regression/run_test.pl
 TAO/CIAO/tests/Bug_3937_Regression/run_test.pl
 TAO/CIAO/tests/Bug_3944_Regression/run_test.pl
+TAO/CIAO/tests/Bug_4086_Regression/descriptors/run_test.pl:
+TAO/CIAO/tests/Bug_4086_Regression/descriptors/run_test_cdr.pl:
+TAO/CIAO/tests/Bug_4087_Regression/run_test.pl: !NO_IDL3_TO_IDL2
 TAO/CIAO/tests/IDL_Test/Cornucopia/run_test.pl: DOXYGEN
 TAO/CIAO/tests/Cookies/run_test.pl
 TAO/CIAO/tests/TTSCTest/descriptors/run_test.pl:
@@ -129,8 +132,8 @@ TAO/CIAO/connectors/dds4ccm/tests/QueryCondition/Different/descriptors/run_test.
 TAO/CIAO/connectors/dds4ccm/tests/QueryCondition/TwoListeners/descriptors/run_test.pl: DDS4CCM
 TAO/CIAO/connectors/dds4ccm/tests/QueryCondition/TwoQueries/descriptors/run_test.pl: DDS4CCM
 TAO/CIAO/connectors/dds4ccm/tests/QueryCondition/TwoQueriesMany/descriptors/run_test.pl: DDS4CCM
-TAO/CIAO/connectors/dds4ccm/tests/QueryCondition/DDS/descriptors/run_test.pl: DDS4CCM
-TAO/CIAO/connectors/dds4ccm/tests/QueryCondition/DDS_OneByOne/descriptors/run_test.pl: DDS4CCM
+TAO/CIAO/connectors/dds4ccm/tests/QueryCondition/DDS/descriptors/run_test.pl: DDS4CCM_NDDS
+TAO/CIAO/connectors/dds4ccm/tests/QueryCondition/DDS_OneByOne/descriptors/run_test.pl: DDS4CCM_NDDS
 TAO/CIAO/connectors/dds4ccm/tests/TopicName/descriptors/run_test.pl: DDS4CCM
 TAO/CIAO/connectors/dds4ccm/tests/MemLeakDetection/Event_MemLeakDetection_Test/descriptors/run_test.pl: DDS4CCM
 TAO/CIAO/connectors/dds4ccm/tests/MemLeakDetection/State_MemLeakDetection_Test/descriptors/run_test.pl: DDS4CCM

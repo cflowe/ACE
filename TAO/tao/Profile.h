@@ -4,7 +4,7 @@
 /**
  *  @file   Profile.h
  *
- *  $Id: Profile.h 93376 2011-02-14 11:23:38Z johnnyw $
+ *  $Id: Profile.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author Fred Kuhns <fredk@cs.wustl.edu>
  */
@@ -182,7 +182,7 @@ public:
   /// Return a string representation for this profile.  Client must
   /// deallocate memory. Only one endpoint is included into the
   /// string.
-  virtual char* to_string (void) = 0;
+  virtual char* to_string (void) const = 0;
 
   /**
    * Encodes this profile's endpoints into a tagged component.
@@ -430,7 +430,7 @@ public:
   // = The TAO_Profile methods look above
   virtual void parse_string (const char *string);
   virtual char object_key_delimiter (void) const;
-  virtual char* to_string (void);
+  virtual char* to_string (void) const;
   virtual int decode (TAO_InputCDR& cdr);
   virtual int encode (TAO_OutputCDR &stream) const;
   virtual int encode_endpoints (void);

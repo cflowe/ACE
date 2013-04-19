@@ -1,4 +1,4 @@
-// $Id: Sock_Connect.cpp 95628 2012-03-21 22:10:02Z shuston $
+// $Id: Sock_Connect.cpp 96857 2013-02-25 08:09:41Z johnnyw $
 
 #include "ace/Sock_Connect.h"
 #include "ace/INET_Addr.h"
@@ -1312,10 +1312,10 @@ return 0;
   // algorithm
 
   // Probably hard to put this many ifs in a unix box..
-  int const MAX_IF = 50;
+  int const MAX_INTERFACES = 50;
 
   // HACK - set to an unreasonable number
-  int const num_ifs = MAX_IF;
+  int const num_ifs = MAX_INTERFACES;
 
   struct ifconf ifcfg;
   size_t ifreq_size = num_ifs * sizeof (struct ifreq);

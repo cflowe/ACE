@@ -1,4 +1,4 @@
-// $Id: Profile.cpp 95643 2012-03-23 18:19:24Z johnnyw $
+// $Id: Profile.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "tao/Profile.h"
 #include "tao/Messaging_PolicyValueC.h"
@@ -801,7 +801,7 @@ TAO_Unknown_Profile::object_key_delimiter (void) const
 }
 
 char *
-TAO_Unknown_Profile::to_string (void)
+TAO_Unknown_Profile::to_string (void) const
 {
   // @@ THROW something?
   return 0;

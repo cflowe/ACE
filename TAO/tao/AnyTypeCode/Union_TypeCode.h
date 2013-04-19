@@ -4,7 +4,7 @@
 /**
  *  @file    Union_TypeCode.h
  *
- *  $Id: Union_TypeCode.h 96448 2012-12-03 15:28:37Z johnnyw $
+ *  $Id: Union_TypeCode.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  Header file for a @c tk_union CORBA::TypeCode.
  *
@@ -81,6 +81,9 @@ namespace TAO
       virtual void tao_duplicate (void);
       virtual void tao_release (void);
       //@}
+
+      /// Accessor for cases_
+      const CaseArrayType& cases(void) const;
 
     protected:
 

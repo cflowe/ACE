@@ -1,4 +1,4 @@
-// $Id: client.cpp 91825 2010-09-17 09:10:22Z johnnyw $
+// $Id: client.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 #include "testS.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "ace/Get_Opt.h"
@@ -118,10 +118,6 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
     }
 
     CORBA::Object_var object =  orb->resolve_initial_references ("RootPOA");
-    PortableServer::POA_var rootPOA =  PortableServer::POA::_narrow (object.in ());
-
-    PortableServer::POAManager_var poa_manager = rootPOA->the_POAManager ();
-    poa_manager->activate ();
 
     object = orb->string_to_object(ior_input_file);
 
@@ -142,8 +138,6 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
 
     task.wait ();
 
-    // Destroy the POA, waiting until the destruction terminates
-    rootPOA->destroy (1, 1);
     orb->destroy ();
 
     if (task.test_passed ())

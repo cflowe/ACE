@@ -2,7 +2,7 @@
 /**
  *  @file    client.cpp
  *
- *  $Id: client.cpp 93650 2011-03-28 08:44:53Z johnnyw $
+ *  $Id: client.cpp 96718 2013-01-28 18:52:07Z johnnyw $
  *
  *  @author Source code used in TAO has been modified and adapted from the codeprovided in the book
  *  @author "Advanced CORBA Programming with C++" by MichiHenning and Steve Vinoski. Copyright 1999. Addison-Wesley
@@ -130,6 +130,9 @@ operator<<(ostream & os, const CORBA::Exception & e)
 
 // Show the details for a thermometer or thermostat.
 
+// This inserter may or may not be needed for your ORB.
+#if !defined (GEN_OSTREAM_OPS)
+
 static std::ostream &
 operator<<(std::ostream &os, CCS::Thermometer_ptr t)
 {
@@ -188,6 +191,8 @@ operator<<(std::ostream &os, const CCS::Controller::EChange &ec)
     }
     return os;
 }
+
+#endif
 
 //----------------------------------------------------------------
 

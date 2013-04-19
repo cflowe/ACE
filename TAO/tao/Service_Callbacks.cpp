@@ -1,4 +1,4 @@
-// $Id: Service_Callbacks.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: Service_Callbacks.cpp 96885 2013-03-06 09:22:01Z sma $
 
 #include "tao/Service_Callbacks.h"
 #include "tao/ORB_Constants.h"
@@ -57,7 +57,7 @@ TAO_Service_Callbacks::raise_comm_failure (
   throw ::CORBA::COMM_FAILURE (
     CORBA::SystemException::_tao_minor_code (
       TAO_INVOCATION_RECV_REQUEST_MINOR_CODE,
-      -1),
+      0),
     CORBA::COMPLETED_MAYBE);
 }
 
@@ -69,7 +69,7 @@ TAO_Service_Callbacks::raise_transient_failure (
   throw ::CORBA::TRANSIENT (
     CORBA::SystemException::_tao_minor_code (
       TAO_INVOCATION_RECV_REQUEST_MINOR_CODE,
-      -1),
+      0),
     CORBA::COMPLETED_MAYBE);
 }
 

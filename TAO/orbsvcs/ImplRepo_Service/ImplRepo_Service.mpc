@@ -1,4 +1,4 @@
-// $Id: ImplRepo_Service.mpc 96379 2012-11-27 09:54:35Z johnnyw $
+// $Id: ImplRepo_Service.mpc 96760 2013-02-05 21:11:03Z stanleyk $
 
 project(ImR_Activator_IDL) : orbsvcslib, orbsvcs_output, conv_lib, portableserver, imr_client, tao_versioning_idl_defaults {
   sharedname = TAO_ImR_Activator_IDL
@@ -63,7 +63,7 @@ project(ImR_Activator) : orbsvcslib, orbsvcs_output, conv_lib, acexml, avoids_mi
   }
 }
 
-project(ImR_Locator) : orbsvcslib, orbsvcs_output, conv_lib, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, iortable, portableserver, messaging, svc_utils, acexml, imr_client {
+project(ImR_Locator) : orbsvcslib, orbsvcs_output, conv_lib, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, iortable, portableserver, messaging, svc_utils, acexml, imr_client, iormanip {
   sharedname   = TAO_ImR_Locator
   dynamicflags += LOCATOR_BUILD_DLL
   after       += ImR_Locator_IDL ImR_Activator_IDL
@@ -82,6 +82,9 @@ project(ImR_Locator) : orbsvcslib, orbsvcs_output, conv_lib, avoids_minimum_corb
     Iterator.cpp
     Server_Info.cpp
     Locator_Repository.cpp
+    Config_Backing_Store.cpp
+    XML_Backing_Store.cpp
+    Shared_Backing_Store.cpp
   }
   header_files {
     utils.h
@@ -91,7 +94,7 @@ project(ImR_Locator) : orbsvcslib, orbsvcs_output, conv_lib, avoids_minimum_corb
   }
 }
 
-project(ImR_Locator_Service) : orbsvcsexe, install, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, iortable, messaging, acexml ,svc_utils, pi_server, imr_client {
+project(ImR_Locator_Service) : orbsvcsexe, install_bin, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, iortable, messaging, acexml ,svc_utils, pi_server, imr_client, iormanip {
   exename  = tao_imr_locator
   after   += ImR_Locator ImR_Activator_IDL ImR_Locator_IDL
   libs    += TAO_ImR_Locator TAO_ImR_Activator_IDL TAO_ImR_Locator_IDL

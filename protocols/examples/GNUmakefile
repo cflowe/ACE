@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,14 +20,29 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Send_Msg_Receiver Send_Msg_Sender Member
+all: FTP_Simple_exec HTTPS_Simple_exec HTTP_Simple_exec Send_Msg_Receiver Send_Msg_Sender Member
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
+	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.FTP_Simple_exec $(@)
+	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec $(@)
+	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.HTTP_Simple_exec $(@)
 	$(KEEP_GOING)@cd RMCast/Send_Msg && $(MAKE) -f GNUmakefile.Send_Msg_Receiver $(@)
 	$(KEEP_GOING)@cd RMCast/Send_Msg && $(MAKE) -f GNUmakefile.Send_Msg_Sender $(@)
 	$(KEEP_GOING)@cd TMCast/Member && $(MAKE) -f GNUmakefile.Member $(@)
+
+.PHONY: FTP_Simple_exec
+FTP_Simple_exec:
+	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.FTP_Simple_exec all
+
+.PHONY: HTTPS_Simple_exec
+HTTPS_Simple_exec:
+	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec all
+
+.PHONY: HTTP_Simple_exec
+HTTP_Simple_exec: HTTPS_Simple_exec
+	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.HTTP_Simple_exec all
 
 .PHONY: Send_Msg_Receiver
 Send_Msg_Receiver:
@@ -42,6 +57,9 @@ Member:
 	$(KEEP_GOING)@cd TMCast/Member && $(MAKE) -f GNUmakefile.Member all
 
 project_name_list:
+	@echo FTP_Simple_exec
+	@echo HTTPS_Simple_exec
+	@echo HTTP_Simple_exec
 	@echo Send_Msg_Receiver
 	@echo Send_Msg_Sender
 	@echo Member

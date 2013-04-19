@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE -workers 10 -name_modifier "*_vc10"
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE -workers 12 -name_modifier "*_vc10"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POA_Adapter_Activator_Server", "Adapter_Activator\POA_Adapter_Activator_Server_vc10.vcxproj", "{E34B970A-FECA-1BAD-F180-EEA5056B74A6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{FE1B2BD3-FECA-1BAD-77D4-9E7E307CDA53} = {FE1B2BD3-FECA-1BAD-77D4-9E7E307CDA53}
@@ -110,6 +110,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POA_Nested_Non_Servant_Upcalls", "Nested_Non_Servant_Upcalls\POA_Nested_Non_Servant_Upcalls_vc10.vcxproj", "{F3585541-FECA-1BAD-C139-CF125AE2DC7D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POA_NewPOA", "NewPOA\POA_NewPOA_vc10.vcxproj", "{0F48EECB-FECA-1BAD-21F8-C1E119C43B22}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POA_Non_Retain_System_Id", "Non_Retain_System_Id\POA_Non_Retain_System_Id_vc10.vcxproj", "{8E128216-FECA-1BAD-F9E8-2C63351DBFF5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "POA_Non_Servant_Upcalls", "Non_Servant_Upcalls\POA_Non_Servant_Upcalls_vc10.vcxproj", "{4B7969A5-FECA-1BAD-35BB-8D23FE71E1D8}"
 EndProject
@@ -434,6 +436,14 @@ Global
 		{0F48EECB-FECA-1BAD-21F8-C1E119C43B22}.Release|Win32.Build.0 = Release|Win32
 		{0F48EECB-FECA-1BAD-21F8-C1E119C43B22}.Release|x64.ActiveCfg = Release|x64
 		{0F48EECB-FECA-1BAD-21F8-C1E119C43B22}.Release|x64.Build.0 = Release|x64
+		{8E128216-FECA-1BAD-F9E8-2C63351DBFF5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E128216-FECA-1BAD-F9E8-2C63351DBFF5}.Debug|Win32.Build.0 = Debug|Win32
+		{8E128216-FECA-1BAD-F9E8-2C63351DBFF5}.Debug|x64.ActiveCfg = Debug|x64
+		{8E128216-FECA-1BAD-F9E8-2C63351DBFF5}.Debug|x64.Build.0 = Debug|x64
+		{8E128216-FECA-1BAD-F9E8-2C63351DBFF5}.Release|Win32.ActiveCfg = Release|Win32
+		{8E128216-FECA-1BAD-F9E8-2C63351DBFF5}.Release|Win32.Build.0 = Release|Win32
+		{8E128216-FECA-1BAD-F9E8-2C63351DBFF5}.Release|x64.ActiveCfg = Release|x64
+		{8E128216-FECA-1BAD-F9E8-2C63351DBFF5}.Release|x64.Build.0 = Release|x64
 		{4B7969A5-FECA-1BAD-35BB-8D23FE71E1D8}.Debug|Win32.ActiveCfg = Debug|Win32
 		{4B7969A5-FECA-1BAD-35BB-8D23FE71E1D8}.Debug|Win32.Build.0 = Debug|Win32
 		{4B7969A5-FECA-1BAD-35BB-8D23FE71E1D8}.Debug|x64.ActiveCfg = Debug|x64

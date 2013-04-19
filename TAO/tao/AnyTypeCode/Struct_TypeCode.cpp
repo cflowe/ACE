@@ -1,4 +1,4 @@
-// $Id: Struct_TypeCode.cpp 80140 2007-11-30 00:40:17Z jtc $
+// $Id: Struct_TypeCode.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #ifndef TAO_STRUCT_TYPECODE_CPP
 #define TAO_STRUCT_TYPECODE_CPP
@@ -102,6 +102,19 @@ TAO::TypeCode::Struct<StringType,
                       RefCountPolicy>::tao_release (void)
 {
   this->RefCountPolicy::remove_ref ();
+}
+
+template <typename StringType,
+          typename TypeCodeType,
+          class FieldArrayType,
+          class RefCountPolicy>
+const FieldArrayType&
+TAO::TypeCode::Struct<StringType,
+                      TypeCodeType,
+                      FieldArrayType,
+                      RefCountPolicy>::fields (void) const
+{
+  return fields_;
 }
 
 template <typename StringType,

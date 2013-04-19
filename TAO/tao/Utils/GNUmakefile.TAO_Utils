@@ -28,10 +28,10 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
   ORB_Destroyer.cpp \
-  Implicit_Deactivator.cpp \
-  PolicyList_Destroyer.cpp \
   ORB_Manager.cpp \
-  Encodable.cpp
+  PolicyList_Destroyer.cpp \
+  Encodable.cpp \
+  Implicit_Deactivator.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -255,10 +255,10 @@ endif
 #
 #source_files:
 #ORB_Destroyer.cpp
-#Implicit_Deactivator.cpp
-#PolicyList_Destroyer.cpp
 #ORB_Manager.cpp
+#PolicyList_Destroyer.cpp
 #Encodable.cpp
+#Implicit_Deactivator.cpp
 #
 #template_files:
 #RIR_Narrow.cpp

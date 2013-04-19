@@ -3,7 +3,7 @@
 /**
  *  @file    interface_ch.cpp
  *
- *  $Id: interface_ch.cpp 95536 2012-02-20 12:34:23Z johnnyw $
+ *  $Id: interface_ch.cpp 96714 2013-01-28 11:26:16Z johnnyw $
  *
  *  Visitor generating code for Interfaces in the client header
  *
@@ -171,7 +171,7 @@ be_visitor_interface_ch::visit_interface (be_interface *node)
           << "virtual TAO_Policy_Scope _tao_scope (void) const;" << be_nl;
     }
 
-  if (c == 0 && be_global->gen_ostream_operators ())
+  if (be_global->gen_ostream_operators ())
     {
       *os << be_nl
           << "virtual std::ostream &_tao_stream_v (std::ostream &) const;";

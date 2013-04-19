@@ -1,4 +1,4 @@
-// $Id: PeerObject.cpp 85589 2009-06-09 22:42:09Z mesnier_p $
+// $Id: PeerObject.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 
 #include "PeerObject.h"
@@ -41,7 +41,10 @@ PeerObject::num_invocations (void)
 void
 PeerObject::dump_detail (ostream &strm)
 {
-  strm  << this->ident_ << " has "
-       << this->invocations_.size() << " invocations" << endl;
+  size_t s = this->invocations_.size();
+  strm  << "  " << this->name_ << " has "
+        << s << " invocation"
+        << (s > 1 ? "s" : "")
+        << endl;
 
 }

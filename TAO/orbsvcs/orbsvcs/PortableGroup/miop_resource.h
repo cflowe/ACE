@@ -4,7 +4,7 @@
 /**
  *  @file   miop_resource.h
  *
- *  $Id: miop_resource.h 96029 2012-08-10 14:01:17Z sma $
+ *  $Id: miop_resource.h 96702 2013-01-24 15:52:45Z sma $
  *
  *  @author Vladimir Zykov <vz@prismtech.com>
  */
@@ -90,8 +90,13 @@ public:
   u_long receive_buffer_size (void) const;
   //@}
 
-private:
+  /// Get the client-side transmission rate throttling enable flag.
+  bool enable_throttling (void) const;
 
+  /// Get the server-side eager complete message dequeuing enable flag.
+  bool enable_eager_dequeue (void) const;
+
+private:
   enum Fragments_Cleanup_Strategy_Type
     {
       TAO_MIOP_CLEANUP_TIME_BOUND,
@@ -122,6 +127,12 @@ private:
 
   /// Get the desired socket receive buffer's size in bytes.
   u_long receive_buffer_size_;
+
+  /// Get the client-side transmission rate throttling enable flag.
+  bool enable_throttling_;
+
+  /// Get the server-side eager complete message dequeuing enable flag.
+  bool enable_eager_dequeue_;
 };
 
 TAO_END_VERSIONED_NAMESPACE_DECL

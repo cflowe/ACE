@@ -4,7 +4,7 @@
 /**
  *  @file     UIPMC_Mcast_Transport.h
  *
- *  $Id: UIPMC_Mcast_Transport.h 96029 2012-08-10 14:01:17Z sma $
+ *  $Id: UIPMC_Mcast_Transport.h 96702 2013-01-24 15:52:45Z sma $
  *
  *  @author Vladimir Zykov <vz@prismtech.com>
  */
@@ -31,7 +31,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Forward decls.
 class TAO_ORB_Core;
 class TAO_UIPMC_Mcast_Connection_Handler;
-
 namespace TAO_PG
 {
   class UIPMC_Recv_Packet_Cleanup_Guard;
@@ -118,8 +117,9 @@ private:
                      bool &stop_packet,
                      u_long &id_hash) const;
 
-  /// Receive as much UDP packets as possible.
-  bool recv_all (void);
+  /// Return the next complete MIOP packet, possiably dequeueing
+  /// as many as are available first from the socket.
+  TAO_PG::UIPMC_Recv_Packet *recv_all (TAO_Resume_Handle &rh);
 
   /// Cleanup either all packets or expired only depending the
   /// expired_only flag.

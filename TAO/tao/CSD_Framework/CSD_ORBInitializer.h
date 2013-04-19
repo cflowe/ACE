@@ -4,7 +4,7 @@
 /**
  *  @file CSD_ORBInitializer.h
  *
- *  $Id: CSD_ORBInitializer.h 81429 2008-04-24 18:49:54Z johnnyw $
+ *  $Id: CSD_ORBInitializer.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author Johnny Willemsen  <jwillemsen@remedy.nl>
  */
@@ -36,7 +36,7 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-class TAO_CSD_ORBInitializer
+class TAO_CSD_FW_Export TAO_CSD_ORBInitializer
   : public virtual PortableInterceptor::ORBInitializer
   , public virtual ::CORBA::LocalObject
 {

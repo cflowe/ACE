@@ -7,24 +7,24 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE -workers 10 -name_modifier "*_vc10"
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE -workers 12 -name_modifier "*_vc10"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HTBP", "ace\HTBP\HTBP_vc10.vcxproj", "{17EC56A4-FECA-1BAD-D072-8A67F7EE4C1D}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FTP_Simple_exec", "ace\INet\FTP_Simple_exec_vc10.vcxproj", "{AC7EC721-FECA-1BAD-F826-8A65F7EE4449}"
-	ProjectSection(ProjectDependencies) = postProject
-		{92AC56A4-FECA-1BAD-F826-8A65F7EE4449} = {92AC56A4-FECA-1BAD-F826-8A65F7EE4449}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HTTP_Simple_exec", "ace\INet\HTTP_Simple_exec_vc10.vcxproj", "{AC37E721-FECA-1BAD-F826-8A65F7EE4449}"
-	ProjectSection(ProjectDependencies) = postProject
-		{92AC56A4-FECA-1BAD-F826-8A65F7EE4449} = {92AC56A4-FECA-1BAD-F826-8A65F7EE4449}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INet", "ace\INet\INet_vc10.vcxproj", "{92AC56A4-FECA-1BAD-F826-8A65F7EE4449}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RMCast", "ace\RMCast\RMCast_vc10.vcxproj", "{74AC007C-FECA-1BAD-5646-8F0AEFF53BB3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TMCast", "ace\TMCast\TMCast_vc10.vcxproj", "{74AC067C-FECA-1BAD-5646-8F6AEF953BB3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FTP_Simple_exec", "examples\INet\FTP_Simple_exec_vc10.vcxproj", "{AC7EC721-FECA-1BAD-F826-8A6564C116DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{92AC56A4-FECA-1BAD-F826-8A65F7EE4449} = {92AC56A4-FECA-1BAD-F826-8A65F7EE4449}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HTTP_Simple_exec", "examples\INet\HTTP_Simple_exec_vc10.vcxproj", "{AC37E721-FECA-1BAD-F826-8A6564C116DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{92AC56A4-FECA-1BAD-F826-8A65F7EE4449} = {92AC56A4-FECA-1BAD-F826-8A65F7EE4449}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Send_Msg_Receiver", "examples\RMCast\Send_Msg\Send_Msg_Receiver_vc10.vcxproj", "{453BE26D-FECA-1BAD-BA50-D9E259FB2871}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -112,22 +112,6 @@ Global
 		{17EC56A4-FECA-1BAD-D072-8A67F7EE4C1D}.Release|Win32.Build.0 = Release|Win32
 		{17EC56A4-FECA-1BAD-D072-8A67F7EE4C1D}.Release|x64.ActiveCfg = Release|x64
 		{17EC56A4-FECA-1BAD-D072-8A67F7EE4C1D}.Release|x64.Build.0 = Release|x64
-		{AC7EC721-FECA-1BAD-F826-8A65F7EE4449}.Debug|Win32.ActiveCfg = Debug|Win32
-		{AC7EC721-FECA-1BAD-F826-8A65F7EE4449}.Debug|Win32.Build.0 = Debug|Win32
-		{AC7EC721-FECA-1BAD-F826-8A65F7EE4449}.Debug|x64.ActiveCfg = Debug|x64
-		{AC7EC721-FECA-1BAD-F826-8A65F7EE4449}.Debug|x64.Build.0 = Debug|x64
-		{AC7EC721-FECA-1BAD-F826-8A65F7EE4449}.Release|Win32.ActiveCfg = Release|Win32
-		{AC7EC721-FECA-1BAD-F826-8A65F7EE4449}.Release|Win32.Build.0 = Release|Win32
-		{AC7EC721-FECA-1BAD-F826-8A65F7EE4449}.Release|x64.ActiveCfg = Release|x64
-		{AC7EC721-FECA-1BAD-F826-8A65F7EE4449}.Release|x64.Build.0 = Release|x64
-		{AC37E721-FECA-1BAD-F826-8A65F7EE4449}.Debug|Win32.ActiveCfg = Debug|Win32
-		{AC37E721-FECA-1BAD-F826-8A65F7EE4449}.Debug|Win32.Build.0 = Debug|Win32
-		{AC37E721-FECA-1BAD-F826-8A65F7EE4449}.Debug|x64.ActiveCfg = Debug|x64
-		{AC37E721-FECA-1BAD-F826-8A65F7EE4449}.Debug|x64.Build.0 = Debug|x64
-		{AC37E721-FECA-1BAD-F826-8A65F7EE4449}.Release|Win32.ActiveCfg = Release|Win32
-		{AC37E721-FECA-1BAD-F826-8A65F7EE4449}.Release|Win32.Build.0 = Release|Win32
-		{AC37E721-FECA-1BAD-F826-8A65F7EE4449}.Release|x64.ActiveCfg = Release|x64
-		{AC37E721-FECA-1BAD-F826-8A65F7EE4449}.Release|x64.Build.0 = Release|x64
 		{92AC56A4-FECA-1BAD-F826-8A65F7EE4449}.Debug|Win32.ActiveCfg = Debug|Win32
 		{92AC56A4-FECA-1BAD-F826-8A65F7EE4449}.Debug|Win32.Build.0 = Debug|Win32
 		{92AC56A4-FECA-1BAD-F826-8A65F7EE4449}.Debug|x64.ActiveCfg = Debug|x64
@@ -152,6 +136,22 @@ Global
 		{74AC067C-FECA-1BAD-5646-8F6AEF953BB3}.Release|Win32.Build.0 = Release|Win32
 		{74AC067C-FECA-1BAD-5646-8F6AEF953BB3}.Release|x64.ActiveCfg = Release|x64
 		{74AC067C-FECA-1BAD-5646-8F6AEF953BB3}.Release|x64.Build.0 = Release|x64
+		{AC7EC721-FECA-1BAD-F826-8A6564C116DB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AC7EC721-FECA-1BAD-F826-8A6564C116DB}.Debug|Win32.Build.0 = Debug|Win32
+		{AC7EC721-FECA-1BAD-F826-8A6564C116DB}.Debug|x64.ActiveCfg = Debug|x64
+		{AC7EC721-FECA-1BAD-F826-8A6564C116DB}.Debug|x64.Build.0 = Debug|x64
+		{AC7EC721-FECA-1BAD-F826-8A6564C116DB}.Release|Win32.ActiveCfg = Release|Win32
+		{AC7EC721-FECA-1BAD-F826-8A6564C116DB}.Release|Win32.Build.0 = Release|Win32
+		{AC7EC721-FECA-1BAD-F826-8A6564C116DB}.Release|x64.ActiveCfg = Release|x64
+		{AC7EC721-FECA-1BAD-F826-8A6564C116DB}.Release|x64.Build.0 = Release|x64
+		{AC37E721-FECA-1BAD-F826-8A6564C116DB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AC37E721-FECA-1BAD-F826-8A6564C116DB}.Debug|Win32.Build.0 = Debug|Win32
+		{AC37E721-FECA-1BAD-F826-8A6564C116DB}.Debug|x64.ActiveCfg = Debug|x64
+		{AC37E721-FECA-1BAD-F826-8A6564C116DB}.Debug|x64.Build.0 = Debug|x64
+		{AC37E721-FECA-1BAD-F826-8A6564C116DB}.Release|Win32.ActiveCfg = Release|Win32
+		{AC37E721-FECA-1BAD-F826-8A6564C116DB}.Release|Win32.Build.0 = Release|Win32
+		{AC37E721-FECA-1BAD-F826-8A6564C116DB}.Release|x64.ActiveCfg = Release|x64
+		{AC37E721-FECA-1BAD-F826-8A6564C116DB}.Release|x64.Build.0 = Release|x64
 		{453BE26D-FECA-1BAD-BA50-D9E259FB2871}.Debug|Win32.ActiveCfg = Debug|Win32
 		{453BE26D-FECA-1BAD-BA50-D9E259FB2871}.Debug|Win32.Build.0 = Debug|Win32
 		{453BE26D-FECA-1BAD-BA50-D9E259FB2871}.Debug|x64.ActiveCfg = Debug|x64

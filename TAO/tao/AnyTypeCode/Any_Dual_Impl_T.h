@@ -4,7 +4,7 @@
 /**
  *  @file    Any_Dual_Impl_T.h
  *
- *  $Id: Any_Dual_Impl_T.h 76551 2007-01-24 13:42:44Z johnnyw $
+ *  $Id: Any_Dual_Impl_T.h 96746 2013-02-01 15:16:36Z mitza $
  *
  *  @authors  Carlos O'Ryan and Jeff Parsons
  */
@@ -73,6 +73,13 @@ namespace TAO
     void value (const T &);
 
     T * value_;
+
+  private:
+    static CORBA::Boolean replace (TAO_InputCDR &,
+                                   const CORBA::Any &,
+                                   _tao_destructor,
+                                   CORBA::TypeCode_ptr,
+                                   const T *&);
   };
 }
 

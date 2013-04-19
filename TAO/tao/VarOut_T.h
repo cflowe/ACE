@@ -4,7 +4,7 @@
 /**
  *  @file    VarOut_T.h
  *
- *  $Id: VarOut_T.h 90386 2010-06-02 13:52:08Z vzykov $
+ *  $Id: VarOut_T.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author Jeff Parsons
  */
@@ -54,6 +54,7 @@ public:
 
   // TAO extension.
   T * ptr (void) const;
+  operator T *& ();
 
 protected:
   T * ptr_;
@@ -112,9 +113,6 @@ public:
 
   TAO_Var_Var_T & operator= (T *);
   TAO_Var_Var_T & operator= (const TAO_Var_Var_T<T> &);
-
-  // Variable size types only.
-  operator T *& ();
 
   operator const T & () const;
   operator T & ();

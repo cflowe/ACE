@@ -115,6 +115,7 @@ else
 endif
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 ifneq ($(LIBCHECK), 1)
@@ -142,10 +143,16 @@ else
   SHLIB =
   all: require_warning
 endif
+else
+  LIB_CHECKED   =
+  SHLIB =
+  all: require_warning
+endif
 
 ifeq (,$(TAO_ORBSVCS))
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 else
@@ -169,8 +176,14 @@ else
   all: require_warning
 endif
 else
+  LIB_CHECKED   =
+  SHLIB =
+  all: require_warning
+endif
+else
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
   ifeq (CosEvent, $(findstring CosEvent, $(TAO_ORBSVCS)))
@@ -233,6 +246,11 @@ else
   SHLIB =
   all: require_warning
 endif
+else
+  LIB_CHECKED   =
+  SHLIB =
+  all: require_warning
+endif
 endif
 LSRC   = $(FILES)
 
@@ -272,6 +290,9 @@ requires_disabled_macros += corba_messaging
 endif
 ifneq ($(interceptors),1)
 requires_disabled_macros += interceptors
+endif
+ifneq ($(threads),1)
+requires_disabled_macros += threads
 endif
 ifneq ($(ace_uuid),1)
 requires_disabled_macros += ace_uuid
@@ -547,9 +568,11 @@ endif
 __prebuild__:
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 	@-:
+endif
 endif
 endif
 endif
@@ -589,6 +612,7 @@ endif
 ifeq ($(LIBCHECK),1)
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 install:
@@ -615,48 +639,52 @@ endif
 endif
 endif
 endif
+endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
 #PortableGroup.mpc
-#CosConcurrency.mpc
-#FtRtEvent.mpc
-#DsNotifyLogAdmin.mpc
-#CosProperty.mpc
-#RTEvent_Skel.mpc
-#CosNaming_Serv.mpc
-#CosTrading.mpc
-#RTEvent.mpc
-#DsLogAdmin.mpc
-#CosNotification.mpc
 #DsEventLogAdmin.mpc
-#RTKokyuEvent.mpc
-#SSLIOP.mpc
-#RTCORBAEvent.mpc
-#RTSchedEvent.mpc
-#CosNaming_Skel.mpc
-#FTORB.mpc
-#RTEventLogAdmin.mpc
-#HTIOP.mpc
-#CosEvent.mpc
-#CosNaming.mpc
-#RTEvent_Serv.mpc
-#CosLoadBalancing.mpc
-#AV.mpc
-#FaultTolerance.mpc
-#Svc_Utils.mpc
-#Security.mpc
-#CosTime.mpc
-#RT_Notification.mpc
-#CosLifeCycle.mpc
-#RTSched.mpc
 #IFRService.mpc
+#CosNaming.mpc
+#Svc_Utils.mpc
+#SSLIOP.mpc
+#DsLogAdmin.mpc
+#HTIOP.mpc
+#CosLoadBalancing.mpc
+#FTORB.mpc
+#CosConcurrency.mpc
+#CosTrading.mpc
+#RTSchedEvent.mpc
+#RTKokyuEvent.mpc
+#FtRtEvent.mpc
+#AV.mpc
+#CosNaming_Skel.mpc
+#FtNamingReplication.mpc
+#CosNaming_Serv.mpc
+#RTSched.mpc
+#Security.mpc
+#RTEventLogAdmin.mpc
+#FtNaming.mpc
+#RT_Notification.mpc
+#FT_Naming_Serv.mpc
+#CosLifeCycle.mpc
+#CosTime.mpc
+#RTEvent_Serv.mpc
+#RTEvent_Skel.mpc
+#CosNotification.mpc
+#FaultTolerance.mpc
+#RTCORBAEvent.mpc
+#CosEvent.mpc
+#CosProperty.mpc
+#RTEvent.mpc
+#DsNotifyLogAdmin.mpc
 #ec_typed_events.mpb
-#ssliop_params_dup.mpb
 #ec_typed_events_skel.mpb
-#ec_typed_events_idl.mpb
+#ssliop_params_dup.mpb
 #ec_typed_events_serv.mpb
 #cosnaming_serv_persistence.mpb
+#ec_typed_events_idl.mpb
 #orbsvcs.mwc
 #
 #idl_files:

@@ -1,3 +1,132 @@
+Thu Mar 14 09:04:46 CET 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * CIAO version 1.1.8 released.
+
+Tue Mar 12 13:49:26 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_1.cdp:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_1.pl:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_2.cdp:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_2.pl:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_2.xml:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_3.cdp:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_3.pl:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_3.xml:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_4.cdp:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_4.pl:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_4.xml:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_6.cdp:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_6.pl:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_7.cdp:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_7.pl:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_8.cdp:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_8.pl:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_8.xml:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_9.cdp:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_9.pl:
+        * connectors/dds4ccm/examples/Shapes/descriptors/2013_interop_demo/run_9.xml:
+          Various plans for 2013 DDS interop demo
+
+Mon Mar  4 12:55:09 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/examples/Shapes/Base/Shapes_Base.idl:
+        * connectors/dds4ccm/examples/Shapes/Connector/Shapes_Connector.idl:
+        * connectors/dds4ccm/examples/Shapes/Receiver/Shapes_Receiver_exec.h:
+        * connectors/dds4ccm/examples/Shapes/Sender/Shapes_Sender_exec.h:
+        * connectors/dds4ccm/examples/Shapes/descriptors/Plan.cdp:
+          Moved the ShapeType into a nested module and update the cdp
+          to set a fixed typename. Matches the 2013 version of the
+          shapes example
+
+Wed Feb 27 08:17:40 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/idl/dds4ccm_Connector.idl:
+        * connectors/dds4ccm/impl/DDS_Base_Connector_T.h:
+        * connectors/dds4ccm/impl/DDS_Base_Connector_T.cpp:
+        * connectors/dds4ccm/impl/DDS_TopicBase_Connector_T.h:
+        * connectors/dds4ccm/impl/DDS_TopicBase_Connector_T.cpp:
+          Added a type_name attribute to the DDS TopicBase connector.
+          When the user doesn't specifiy this in the cdp we will
+          default to the DDS vendor specific type_name which is
+          not standardized. In case of interoperability problems
+          this type_name could be needed. This addition has been
+          reported to the OMG as issue 18499. Updated a few logging
+          statements to include type_name and don't use CORBA::is_nil
+          for checking whether a String_var has content
+
+Wed Feb 13 22:38:40 UTC 2013  Kevin Stanley  <stanleyk@ociweb.com>
+
+        * CIAO_TAO_OpenDDS.mwc:
+          Added exclude for nsgroup since it is not using the FT_Naming
+          service. Was causing build errors due to missing FT_NamingManager.
+
+Wed Feb  6 23:17:27 UTC 2013  Kevin Stanley  <stanleyk@ociweb.com>
+
+        * CIAO_TAO.mwc:
+          Added exclude for nsgroup since it is not using the FT_Naming
+          service. Was causing build errors due to missing FT_NamingManager.
+
+Mon Feb  4 08:11:50 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * connectors/dds4ccm/impl/DDS_Base_Connector_T.cpp (activate_topic):
+          Fixed logic error, when no listener is passed in we create
+          the default one, but always install a listener. Thanks to
+          Jiang Wei <jiangwei_1976 at yahoo dot com dot cn> for
+          reporting this problem. This fixes bugzilla 4089
+
+Sun Feb  3 18:37:32 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * bin/ciao_tests.lst:
+          Added !NO_IDL3_TO_IDL2 to Bug_4087_Regression, invoking idl3_to_idl2
+          means we need gcc which we don't have on all targets
+
+Thu Jan 31 11:33:37 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * bin/ciao_tests.lst:
+          Fixed path 4087 test
+
+Tue Jan 29 12:20:08 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tools/IDL3_to_IDL2/idl3_to_idl2_visitor.cpp:
+          Fixed bugzilla 4087, thanks to
+          Jiang Wei <jiangwei_1976 at yahoo dot com dot cn> for
+          providing this patch
+
+Tue Jan 29 12:17:09 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * bin/ciao_tests.lst:
+        * tests/Bug_4087_Regression:
+        * tests/Bug_4087_Regression/run_test.pl:
+        * tests/Bug_4087_Regression/test.idl:
+          New unit test for idl3_to_idl2, currently failing. Thanks to
+          Jiang Wei <jiangwei_1976 at yahoo dot com dot cn> for
+          creating this test.
+
+Mon Jan 28 10:11:13 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * bin/ciao_tests.lst:
+        * tests/Bug_4086_Regression/Bug_4086_Regression.mpc:
+        * tests/Bug_4086_Regression/Foo.idl:
+        * tests/Bug_4086_Regression/Foo_exec.h:
+        * tests/Bug_4086_Regression/Foo_exec.cpp:
+        * tests/Bug_4086_Regression/descriptors/DeploymentPlan.cdp:
+        * tests/Bug_4086_Regression/descriptors/run_test.pl:
+        * tests/Bug_4086_Regression/descriptors/run_test_cdr.pl:
+          New test for components with attributes as part of
+          supported interfaces. Thanks to Jiang Wei
+          <jiangwei_1976 at yahoo dot com dot cn> for reporting this and
+          providing the patch and unit test
+
+Mon Jan 21 08:16:41 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * bin/ciao_tests.lst:
+          QueryCondition DDS tests are NDDS only
+
+Thu Dec 27 09:19:07 UTC 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * NEWS:
+          Updated in preparation of next release
+
 Thu Dec 27 10:00:49 CET 2012  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * CIAO version 1.1.7 released.

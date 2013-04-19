@@ -1,0 +1,3 @@
+// $Id: Bug_4082_Regression.mpc 96672 2013-01-16 14:25:29Z mitza $
+project: taoclient, anytypecode {
+}

@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: Transport.inl 85364 2009-05-18 08:13:02Z vzykov $
+// $Id: Transport.inl 96624 2013-01-07 14:00:57Z sma $
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -278,7 +278,18 @@ TAO::Transport::Stats::opened_since (void) const
 {
   return this->opened_since_;
 }
+
 #endif /* TAO_HAS_TRANSPORT_CURRENT == 1 */
 
+ACE_INLINE int
+TAO_Transport::notify_reactor (void)
+{
+  if (!this->ws_->is_registered ())
+    {
+      return 0;
+    }
+
+  return this->notify_reactor_now ();
+}
 
 TAO_END_VERSIONED_NAMESPACE_DECL

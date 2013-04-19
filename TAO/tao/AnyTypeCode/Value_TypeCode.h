@@ -4,7 +4,7 @@
 /**
  *  @file    Value_TypeCode.h
  *
- *  $Id: Value_TypeCode.h 83309 2008-10-17 13:57:39Z johnnyw $
+ *  $Id: Value_TypeCode.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  Header file for a @c tk_value and @c tk_event
  *  @c CORBA::TypeCodes.
@@ -82,6 +82,12 @@ namespace TAO
       virtual void tao_duplicate (void);
       virtual void tao_release (void);
       //@}
+
+      /// Accessor for concrete_base_
+      const TypeCodeType& concrete_base(void) const;
+
+      /// Accessor for fields_
+      const FieldArrayType& fields() const;
 
     protected:
 

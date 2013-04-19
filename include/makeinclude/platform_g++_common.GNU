@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_g++_common.GNU 96548 2012-12-19 14:46:42Z johnnyw $
+# $Id: platform_g++_common.GNU 96866 2013-02-26 23:12:39Z shuston $
 
 ifeq ($(openmp),1)
 FLAGS_C_CC += -fopenmp
@@ -151,7 +151,7 @@ ifeq ($(no-optimize-sibling-calls), 1)
 endif
 
 ifeq ($(no_strict_aliasing), 1)
-  CCFLAGS += -fno-strict-aliasing
+  FLAGS_C_CC += -fno-strict-aliasing
 else
   ifneq ($(no_strict_aliasing), 0)
     # if not explicitly disabled enable suppression of strict-aliasing checks by default
@@ -160,7 +160,7 @@ else
     # lot of pain to attempt to solve code issues and the best way to deal is to suppress
     ifeq ($(GXX_4_OR_BETTER), 1)
       ifneq ($(findstring $(CXX_MAJOR_VERSION).$(CXX_MINOR_VERSION),4.1),$(CXX_MAJOR_VERSION).$(CXX_MINOR_VERSION))
-        CCFLAGS += -fno-strict-aliasing
+        FLAGS_C_CC += -fno-strict-aliasing
       endif
     endif
   endif

@@ -1524,7 +1524,7 @@
 				RelativePath="config-macosx-lion.h">
 			</File>
 			<File
-				RelativePath="config-macosx-mountain-lion.h">
+				RelativePath="config-macosx-mountainlion.h">
 			</File>
 			<File
 				RelativePath="config-macosx-panther.h">

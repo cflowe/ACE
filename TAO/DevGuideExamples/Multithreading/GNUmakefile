@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,11 +20,14 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: GracefulShutdown_Idl Multithreading_GracefulShutdown_Client Multithreading_GracefulShutdown_Server Reactive_Idl Multithreading_Reactive_Server Multithreading_Reactive_Client ThreadPerConnection_Idl Multi_ThreadPerConnection_Server Multi_ThreadPerConnection_Client ThreadPool_Idl Multithreading_ThreadPool_Client Multithreading_ThreadPool_Server
+all: DynamicThreadPool_Idl DynamicThreadPool_Client DynamicThreadPool_Server GracefulShutdown_Idl Multithreading_GracefulShutdown_Client Multithreading_GracefulShutdown_Server Reactive_Idl Multithreading_Reactive_Server Multithreading_Reactive_Client ThreadPerConnection_Idl Multi_ThreadPerConnection_Server Multi_ThreadPerConnection_Client ThreadPool_Idl Multithreading_ThreadPool_Client Multithreading_ThreadPool_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
+	$(KEEP_GOING)@cd DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Idl $(@)
+	$(KEEP_GOING)@cd DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Client $(@)
+	$(KEEP_GOING)@cd DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Server $(@)
 	$(KEEP_GOING)@cd GracefulShutdown && $(MAKE) -f GNUmakefile.GracefulShutdown_Idl $(@)
 	$(KEEP_GOING)@cd GracefulShutdown && $(MAKE) -f GNUmakefile.Multithreading_GracefulShutdown_Client $(@)
 	$(KEEP_GOING)@cd GracefulShutdown && $(MAKE) -f GNUmakefile.Multithreading_GracefulShutdown_Server $(@)
@@ -37,6 +40,18 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.ThreadPool_Idl $(@)
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.Multithreading_ThreadPool_Client $(@)
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.Multithreading_ThreadPool_Server $(@)
+
+.PHONY: DynamicThreadPool_Idl
+DynamicThreadPool_Idl:
+	$(KEEP_GOING)@cd DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Idl all
+
+.PHONY: DynamicThreadPool_Client
+DynamicThreadPool_Client: DynamicThreadPool_Idl
+	$(KEEP_GOING)@cd DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Client all
+
+.PHONY: DynamicThreadPool_Server
+DynamicThreadPool_Server: DynamicThreadPool_Idl DynamicThreadPool_Client
+	$(KEEP_GOING)@cd DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Server all
 
 .PHONY: GracefulShutdown_Idl
 GracefulShutdown_Idl:
@@ -87,6 +102,9 @@ Multithreading_ThreadPool_Server: ThreadPool_Idl Multithreading_ThreadPool_Clien
 	$(KEEP_GOING)@cd ThreadPool && $(MAKE) -f GNUmakefile.Multithreading_ThreadPool_Server all
 
 project_name_list:
+	@echo DynamicThreadPool_Client
+	@echo DynamicThreadPool_Idl
+	@echo DynamicThreadPool_Server
 	@echo GracefulShutdown_Idl
 	@echo Multithreading_GracefulShutdown_Client
 	@echo Multithreading_GracefulShutdown_Server

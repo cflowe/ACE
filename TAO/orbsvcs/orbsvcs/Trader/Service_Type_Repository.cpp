@@ -1,4 +1,4 @@
-// $Id: Service_Type_Repository.cpp 91677 2010-09-08 19:18:49Z johnnyw $
+// $Id: Service_Type_Repository.cpp 96860 2013-02-25 16:55:51Z schmidt $
 
 #include "orbsvcs/Trader/Service_Type_Repository.h"
 #include "ace/Lock_Adapter_T.h"
@@ -177,7 +177,10 @@ list_types (const CosTradingRepos::ServiceTypeRepository::SpecifiedServiceTypes 
 
       if (all
           || num < type_info->type_struct_.incarnation)
-        types[i++] = CORBA::string_dup (type_name);
+        {
+          CORBA::string_free (types[i]);
+          types[i++] = CORBA::string_dup (type_name);
+        }
     }
 
   CosTradingRepos::ServiceTypeRepository::ServiceTypeNameSeq *tmp = 0;

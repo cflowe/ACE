@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: airplane_idl airplane_server airplane_client nestea_idl nestea_server nestea_client Bug_2604_Idl Bug_2604_Server Bug_2604_Client Bug_689_Regression_Idl Bug_689_Regression_Server Bug_689_Regression_Client ImplRepo_NameService ReconnectServer_Idl ReconnectServer_ServerA ReconnectServer_Client ReconnectServer_ServerB scaletest_idl scaletest_client scaletest_server
+all: airplane_idl airplane_server airplane_client nestea_idl nestea_server nestea_client Bug_2604_Idl Bug_2604_Server Bug_2604_Client Bug_689_Regression_Idl Bug_689_Regression_Server Bug_689_Regression_Client ImplRepo_NameService ReconnectServer_Idl ReconnectServer_ServerA ReconnectServer_Client ReconnectServer_ServerB RestartServer_Idl RestartServer_Client RestartServer_Server scaletest_idl scaletest_client scaletest_server scale_clients_idl scale_clients_client scale_clients_server servers_list_idl servers_list_client servers_list_server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -42,9 +42,18 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerA $(@)
 	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_Client $(@)
 	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerB $(@)
+	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Idl $(@)
+	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Client $(@)
+	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Server $(@)
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_idl $(@)
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_client $(@)
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_server $(@)
+	$(KEEP_GOING)@cd scale_clients && $(MAKE) -f GNUmakefile.scale_clients_idl $(@)
+	$(KEEP_GOING)@cd scale_clients && $(MAKE) -f GNUmakefile.scale_clients_client $(@)
+	$(KEEP_GOING)@cd scale_clients && $(MAKE) -f GNUmakefile.scale_clients_server $(@)
+	$(KEEP_GOING)@cd servers_list && $(MAKE) -f GNUmakefile.servers_list_idl $(@)
+	$(KEEP_GOING)@cd servers_list && $(MAKE) -f GNUmakefile.servers_list_client $(@)
+	$(KEEP_GOING)@cd servers_list && $(MAKE) -f GNUmakefile.servers_list_server $(@)
 
 .PHONY: airplane_idl
 airplane_idl:
@@ -114,6 +123,18 @@ ReconnectServer_Client: ReconnectServer_Idl ReconnectServer_ServerA
 ReconnectServer_ServerB: ReconnectServer_Idl ReconnectServer_ServerA
 	$(KEEP_GOING)@cd ReconnectServer && $(MAKE) -f GNUmakefile.ReconnectServer_ServerB all
 
+.PHONY: RestartServer_Idl
+RestartServer_Idl:
+	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Idl all
+
+.PHONY: RestartServer_Client
+RestartServer_Client: RestartServer_Idl
+	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Client all
+
+.PHONY: RestartServer_Server
+RestartServer_Server: RestartServer_Idl RestartServer_Client
+	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Server all
+
 .PHONY: scaletest_idl
 scaletest_idl:
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_idl all
@@ -125,6 +146,30 @@ scaletest_client: scaletest_idl
 .PHONY: scaletest_server
 scaletest_server: scaletest_idl scaletest_client
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_server all
+
+.PHONY: scale_clients_idl
+scale_clients_idl:
+	$(KEEP_GOING)@cd scale_clients && $(MAKE) -f GNUmakefile.scale_clients_idl all
+
+.PHONY: scale_clients_client
+scale_clients_client: scale_clients_idl
+	$(KEEP_GOING)@cd scale_clients && $(MAKE) -f GNUmakefile.scale_clients_client all
+
+.PHONY: scale_clients_server
+scale_clients_server: scale_clients_idl scale_clients_client
+	$(KEEP_GOING)@cd scale_clients && $(MAKE) -f GNUmakefile.scale_clients_server all
+
+.PHONY: servers_list_idl
+servers_list_idl:
+	$(KEEP_GOING)@cd servers_list && $(MAKE) -f GNUmakefile.servers_list_idl all
+
+.PHONY: servers_list_client
+servers_list_client: servers_list_idl
+	$(KEEP_GOING)@cd servers_list && $(MAKE) -f GNUmakefile.servers_list_client all
+
+.PHONY: servers_list_server
+servers_list_server: servers_list_idl servers_list_client
+	$(KEEP_GOING)@cd servers_list && $(MAKE) -f GNUmakefile.servers_list_server all
 
 project_name_list:
 	@echo Bug_2604_Client
@@ -144,6 +189,15 @@ project_name_list:
 	@echo ReconnectServer_Idl
 	@echo ReconnectServer_ServerA
 	@echo ReconnectServer_ServerB
+	@echo RestartServer_Client
+	@echo RestartServer_Idl
+	@echo RestartServer_Server
 	@echo scaletest_client
 	@echo scaletest_idl
 	@echo scaletest_server
+	@echo scale_clients_client
+	@echo scale_clients_idl
+	@echo scale_clients_server
+	@echo servers_list_client
+	@echo servers_list_idl
+	@echo servers_list_server

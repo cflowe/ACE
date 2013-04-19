@@ -4,7 +4,7 @@
 /**
  *  @file     COIOP_Profile.h
  *
- *  $Id: COIOP_Profile.h 76551 2007-01-24 13:42:44Z johnnyw $
+ *  $Id: COIOP_Profile.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *   COIOP profile specific processing
  *
@@ -65,7 +65,7 @@ public:
   ~TAO_COIOP_Profile (void);
 
   /// Template methods. Please tao/Profile.h for documentation.
-  virtual char * to_string (void);
+  virtual char * to_string (void) const;
   virtual int encode_endpoints (void);
   virtual TAO_Endpoint *endpoint (void);
   virtual CORBA::ULong endpoint_count (void) const;

@@ -1,4 +1,4 @@
-// $Id: SHMIOP_Profile.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: SHMIOP_Profile.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "tao/Strategies/SHMIOP_Profile.h"
 
@@ -325,7 +325,7 @@ TAO_SHMIOP_Profile::add_endpoint (TAO_SHMIOP_Endpoint *endp)
 }
 
 char *
-TAO_SHMIOP_Profile::to_string (void)
+TAO_SHMIOP_Profile::to_string (void) const
 {
   CORBA::String_var key;
   TAO::ObjectKey::encode_sequence_to_string (key.inout(),

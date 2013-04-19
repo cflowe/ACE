@@ -1,5 +1,5 @@
 
-# $Id: run_test.lst 96266 2012-11-13 18:17:58Z johnnyw $
+# $Id: run_test.lst 96872 2013-02-28 19:45:45Z johnnyw $
 #
 # This is the list of tests that need to be run by run_test.pl.
 # Each line has its own test, and a test can be followed by a
@@ -92,6 +92,7 @@ Compiler_Features_15_Test
 Compiler_Features_16_Test
 Compiler_Features_17_Test
 Compiler_Features_18_Test
+Compiler_Features_19_Test
 Config_Test: !LynxOS !VxWorks !ACE_FOR_TAO
 Conn_Test: !ACE_FOR_TAO
 DLL_Test: !STATIC Linux
@@ -138,6 +139,7 @@ Map_Test: !ACE_FOR_TAO
 Max_Default_Port_Test: !ST
 Mem_Map_Test: !VxWorks !nsk !ACE_FOR_TAO
 Memcpy_Test: !ACE_FOR_TAO
+Message_Block_Large_Copy_Test
 Message_Block_Test: !ACE_FOR_TAO
 Message_Queue_Notifications_Test
 Message_Queue_Test: !ACE_FOR_TAO

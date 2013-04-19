@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: utils.mwc 65923 2005-05-17 14:19:41Z elliott_c $
+// $Id: utils.mwc 96760 2013-02-05 21:11:03Z stanleyk $
 
 workspace {
   nslist
@@ -10,4 +10,6 @@ workspace {
 
   // must have mfc=1 in $ACE_ROOT/bin/MakeProjectCreator/config/default.features to generate Makefile for wxNamingViewer
   NamingViewer
+
+  nsgroup
 }

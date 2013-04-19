@@ -1,4 +1,4 @@
-// $Id: airplane_client_i.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: airplane_client_i.cpp 96778 2013-02-07 20:19:18Z labancap $
 
 #include "airplane_client_i.h"
 #include "tao/debug.h"
@@ -56,9 +56,10 @@ Airplane_Client_i::parse_args (void)
 
 // Retreives <count> paper airplanes from the server.
 
-void
+int
 Airplane_Client_i::get_planes (size_t count)
 {
+  int rc = 0;
   for (size_t i = 0; i < count; i++)
     {
       try
@@ -66,14 +67,16 @@ Airplane_Client_i::get_planes (size_t count)
           CORBA::String_var response =
             this->server_->get_plane ();
 
-          ACE_DEBUG ((LM_DEBUG, "Plane %d is %s\n", i, response.in ()));
+          ACE_DEBUG ((LM_DEBUG, "Plane %d is %C\n", i, response.in ()));
         }
       catch (const CORBA::Exception& ex)
         {
           ACE_ERROR ((LM_ERROR, "Plane %d exception:\n", i));
           ex._tao_print_exception ("get_planes");
+          rc = 1;
         }
     }
+  return rc;
 }
 
 
@@ -82,9 +85,7 @@ Airplane_Client_i::get_planes (size_t count)
 int
 Airplane_Client_i::run ()
 {
-  this->get_planes (this->loop_count_);
-
-  return 0;
+  return this->get_planes (this->loop_count_);
 }
 
 Airplane_Client_i::~Airplane_Client_i (void)

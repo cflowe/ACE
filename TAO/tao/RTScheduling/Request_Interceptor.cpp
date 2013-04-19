@@ -1,4 +1,4 @@
-//$Id: Request_Interceptor.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+//$Id: Request_Interceptor.cpp 96700 2013-01-23 19:45:09Z mitza $
 
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/TypeCode.h"
@@ -39,7 +39,7 @@ Client_Interceptor::send_request (PortableInterceptor::ClientRequestInfo_ptr ri)
         {
           // Generate GUID.
           RTScheduling::Current::IdType guid;
-          guid.length (sizeof(long));
+          guid.length (sizeof(size_t));
 
           size_t temp = ++TAO_RTScheduler_Current::guid_counter;
           ACE_OS::memcpy (guid.get_buffer (),

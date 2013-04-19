@@ -109,16 +109,10 @@ ifneq ($(wince),1)
 ifneq ($(old_stdstream),1)
 ifneq ($(exclude_inet),1)
 ifneq ($(ace_for_tao),1)
-ifneq ($(corba_e_compact),1)
 ifneq ($(LIBCHECK), 1)
   LIB_CHECKED   =
   SHLIB =
   all: lib_warning
-endif
-else
-  LIB_CHECKED   =
-  SHLIB =
-  all: avoid_warning
 endif
 else
   LIB_CHECKED   =
@@ -145,12 +139,6 @@ ifneq ($(wince),1)
 ifneq ($(old_stdstream),1)
 ifneq ($(exclude_inet),1)
 ifneq ($(ace_for_tao),1)
-ifneq ($(corba_e_compact),1)
-else
-  LIB_CHECKED   =
-  SHLIB =
-  all: avoid_warning
-endif
 else
   LIB_CHECKED   =
   SHLIB =
@@ -215,9 +203,6 @@ endif
 ifeq ($(ace_for_tao),1)
 avoids_enabled_macros += ace_for_tao
 endif
-ifeq ($(corba_e_compact),1)
-avoids_enabled_macros += corba_e_compact
-endif
 avoid_warning:
 	@echo INet will not be built due to the following enabled make macros: $(avoids_enabled_macros)>&2
 
@@ -254,9 +239,7 @@ ifneq ($(wince),1)
 ifneq ($(old_stdstream),1)
 ifneq ($(exclude_inet),1)
 ifneq ($(ace_for_tao),1)
-ifneq ($(corba_e_compact),1)
 	@-:
-endif
 endif
 endif
 endif
@@ -298,7 +281,6 @@ ifneq ($(wince),1)
 ifneq ($(old_stdstream),1)
 ifneq ($(exclude_inet),1)
 ifneq ($(ace_for_tao),1)
-ifneq ($(corba_e_compact),1)
 install:
 ifeq ($(INST_TAGS),)
 	@echo Nothing to install.
@@ -316,7 +298,6 @@ else
 	  $(INST_LOCATIONS) $(if $(ARCH),-d $(ARCH)) $(PRJINST_OPTIONS) \
 	  $(DESTDIR)$(INSTALL_PREFIX)
 	$(ACE_ROOT)/bin/ace_install_pkgconfig.pl ACE_INet.pc.in --destdir "$(DESTDIR)" --prefix $(INSTALL_PREFIX) --libdir $(INSTALL_LIB) --libs "$(LIBS)" --version $(GNUACE_PROJECT_VERSION)
-endif
 endif
 endif
 endif

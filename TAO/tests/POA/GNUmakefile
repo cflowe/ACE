@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: POA_Generic_Servant_Lib POA_Adapter_Activator_Server Bug_1592_Regression_Idl Bug_1592_Regression_Client Bug_1592_Regression_Server POA_Bug_2511_Regression POA_Current POA_DSI_IDL POA_DSI_Server POA_DSI_Client Deactivate_Object_Server POA_Default_Servant POA_Default_Servant_IDL POA_Default_Servant_Server POA_Default_Servant_Client EndpointPolicy_Idl EndpointPolicy_Client EndpointPolicy_Server POA_Etherealization POA_Excessive_Object_Deactivations Alt_Resource POA_Explicit_Activation_Server POA_FindPOA POA_Forwarding_IDL POA_Forwarding_Client POA_Forwarding_Server POA_Generic_Servant_Client POA_Identity POA_Loader_Server POA_MT_Servant_Locator POA_Nested_Non_Servant_Upcalls POA_NewPOA POA_Non_Servant_Upcalls POA_Object_Reactivation On_Demand_Act_D_Coll POA_On_Demand_Activation_Server POA_On_Demand_Loading_Server POA_POAManagerFactory POA_BiDir-target POA_POA_Destruction POA_IDL_Persistent_ID POA_Server_Persistent_ID POA_Client_Persistent_ID POA_Policies Reference_Counted_Servant_Server Reference_Counting_Server RootPOA_Server POA_Single_Threaded_POA POA_TIE_IDL POA_TIE_Client POA_TIE_Server POA_Wait_For_Completion
+all: POA_Generic_Servant_Lib POA_Adapter_Activator_Server Bug_1592_Regression_Idl Bug_1592_Regression_Client Bug_1592_Regression_Server POA_Bug_2511_Regression POA_Current POA_DSI_IDL POA_DSI_Server POA_DSI_Client Deactivate_Object_Server POA_Default_Servant POA_Default_Servant_IDL POA_Default_Servant_Server POA_Default_Servant_Client EndpointPolicy_Idl EndpointPolicy_Client EndpointPolicy_Server POA_Etherealization POA_Excessive_Object_Deactivations Alt_Resource POA_Explicit_Activation_Server POA_FindPOA POA_Forwarding_IDL POA_Forwarding_Client POA_Forwarding_Server POA_Generic_Servant_Client POA_Identity POA_Loader_Server POA_MT_Servant_Locator POA_Nested_Non_Servant_Upcalls POA_NewPOA POA_Non_Retain_System_Id POA_Non_Servant_Upcalls POA_Object_Reactivation On_Demand_Act_D_Coll POA_On_Demand_Activation_Server POA_On_Demand_Loading_Server POA_POAManagerFactory POA_BiDir-target POA_POA_Destruction POA_IDL_Persistent_ID POA_Server_Persistent_ID POA_Client_Persistent_ID POA_Policies Reference_Counted_Servant_Server Reference_Counting_Server RootPOA_Server POA_Single_Threaded_POA POA_TIE_IDL POA_TIE_Client POA_TIE_Server POA_Wait_For_Completion
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -57,6 +57,7 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd MT_Servant_Locator && $(MAKE) -f GNUmakefile.POA_MT_Servant_Locator $(@)
 	$(KEEP_GOING)@cd Nested_Non_Servant_Upcalls && $(MAKE) -f GNUmakefile.POA_Nested_Non_Servant_Upcalls $(@)
 	$(KEEP_GOING)@cd NewPOA && $(MAKE) -f GNUmakefile.POA_NewPOA $(@)
+	$(KEEP_GOING)@cd Non_Retain_System_Id && $(MAKE) -f GNUmakefile.POA_Non_Retain_System_Id $(@)
 	$(KEEP_GOING)@cd Non_Servant_Upcalls && $(MAKE) -f GNUmakefile.POA_Non_Servant_Upcalls $(@)
 	$(KEEP_GOING)@cd Object_Reactivation && $(MAKE) -f GNUmakefile.POA_Object_Reactivation $(@)
 	$(KEEP_GOING)@cd On_Demand_Act_Direct_Coll && $(MAKE) -f GNUmakefile.On_Demand_Act_D_Coll $(@)
@@ -206,6 +207,10 @@ POA_Nested_Non_Servant_Upcalls:
 POA_NewPOA:
 	$(KEEP_GOING)@cd NewPOA && $(MAKE) -f GNUmakefile.POA_NewPOA all
 
+.PHONY: POA_Non_Retain_System_Id
+POA_Non_Retain_System_Id:
+	$(KEEP_GOING)@cd Non_Retain_System_Id && $(MAKE) -f GNUmakefile.POA_Non_Retain_System_Id all
+
 .PHONY: POA_Non_Servant_Upcalls
 POA_Non_Servant_Upcalls:
 	$(KEEP_GOING)@cd Non_Servant_Upcalls && $(MAKE) -f GNUmakefile.POA_Non_Servant_Upcalls all
@@ -319,6 +324,7 @@ project_name_list:
 	@echo POA_MT_Servant_Locator
 	@echo POA_Nested_Non_Servant_Upcalls
 	@echo POA_NewPOA
+	@echo POA_Non_Retain_System_Id
 	@echo POA_Non_Servant_Upcalls
 	@echo POA_Object_Reactivation
 	@echo On_Demand_Act_D_Coll

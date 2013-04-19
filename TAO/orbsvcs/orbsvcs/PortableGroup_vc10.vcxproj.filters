@@ -64,6 +64,9 @@
     <ClCompile Include="PortableGroup\PG_Group_Guard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PortableGroup\PG_Group_List_Store.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="PortableGroup\PG_Location_Equal_To.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -83,6 +86,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PortableGroup\PG_Object_Group_Manipulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortableGroup\PG_Object_Group_Storable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PortableGroup\PG_ObjectGroupManager.cpp">
@@ -222,6 +228,9 @@
     <ClInclude Include="PortableGroup\PG_Group_Guard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PortableGroup\PG_Group_List_Store.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="PortableGroup\PG_Location_Equal_To.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -244,6 +253,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PortableGroup\PG_Object_Group_Manipulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PortableGroup\PG_Object_Group_Storable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PortableGroup\PG_ObjectGroup_Map.h">
@@ -408,6 +420,15 @@
       <Filter>Build Files</Filter>
     </None>
     <None Include="FaultTolerance.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FT_Naming_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtNaming.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtNamingReplication.mpc">
       <Filter>Build Files</Filter>
     </None>
     <None Include="FTORB.mpc">

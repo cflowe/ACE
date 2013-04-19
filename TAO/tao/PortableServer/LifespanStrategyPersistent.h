@@ -4,7 +4,7 @@
 /**
  *  @file LifespanStrategyPersistent.h
  *
- *  $Id: LifespanStrategyPersistent.h 76551 2007-01-24 13:42:44Z johnnyw $
+ *  $Id: LifespanStrategyPersistent.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author  Johnny Willemsen  <jwillemsen@remedy.nl>
  */
@@ -60,6 +60,9 @@ namespace TAO
       virtual ::PortableServer::LifespanPolicyValue type() const;
 
       virtual bool use_imr () const;
+
+      virtual CORBA::Object_ptr imr_key_to_object(const TAO::ObjectKey &key,
+                                                  const char *type_id) const;
 
     private:
       bool use_imr_;

@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Adapter_Activator.cpp \
-  FindPOA.cpp
+  FindPOA.cpp \
+  Adapter_Activator.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

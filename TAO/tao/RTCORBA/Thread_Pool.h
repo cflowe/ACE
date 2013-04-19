@@ -4,7 +4,7 @@
 /**
  *  @file    Thread_Pool.h
  *
- *  $Id: Thread_Pool.h 80216 2007-12-10 08:15:33Z johnnyw $
+ *  $Id: Thread_Pool.h 96836 2013-02-19 02:08:55Z mesnier_p $
  *
  *  @author Irfan Pyarali
  *  @author Johnny Willemsen
@@ -53,7 +53,7 @@ public:
 
   /// Leader/Follower class uses this method to notify the system that
   /// we are out of leaders.
-  void no_leaders_available (void);
+  bool no_leaders_available (void);
 
 private:
 

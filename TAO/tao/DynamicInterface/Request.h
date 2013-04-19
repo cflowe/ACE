@@ -4,7 +4,7 @@
 /**
  *  @file    Request.h
  *
- *  $Id: Request.h 95525 2012-02-07 09:56:46Z johnnyw $
+ *  $Id: Request.h 96714 2013-01-28 11:26:16Z johnnyw $
  *
  *  Header file for CORBA's Dynamic Invocation Interface "Request"
  *  type.
@@ -185,8 +185,8 @@ namespace CORBA
     /// Set the byte order member.
     void _tao_byte_order (int byte_order);
 
-    // Hold on to a user exception in case we are part of a TAO
-    // gateway.
+    /// Hold on to a user exception in case we are part of a TAO
+    /// gateway.
     void raw_user_exception (TAO_InputCDR &cdr);
 
     /// Accessor for the input stream containing the exception.
@@ -270,7 +270,6 @@ namespace CORBA
     /// Stores user exception as a CDR stream when this request is
     /// used in a TAO gateway.
     ACE_CString raw_user_exception_;
-
   };
 } // End CORBA namespace.
 

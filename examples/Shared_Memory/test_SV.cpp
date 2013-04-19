@@ -1,10 +1,8 @@
-// $Id: test_SV.cpp 91671 2010-09-08 18:39:23Z johnnyw $
+// $Id: test_SV.cpp 96711 2013-01-28 07:59:03Z johnnyw $
 
 #include "ace/Shared_Memory_SV.h"
 #include "ace/Log_Msg.h"
 #include "ace/OS_NS_unistd.h"
-
-
 
 #define SHMSZ 27
 #define SHM_KEY (key_t) 5678

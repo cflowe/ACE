@@ -289,6 +289,8 @@
     </ClCompile>
     <ClCompile Include="PortableGroup\PG_Group_Guard.cpp">
     </ClCompile>
+    <ClCompile Include="PortableGroup\PG_Group_List_Store.cpp">
+    </ClCompile>
     <ClCompile Include="PortableGroup\PG_Location_Equal_To.cpp">
     </ClCompile>
     <ClCompile Include="PortableGroup\PG_Location_Hash.cpp">
@@ -302,6 +304,8 @@
     <ClCompile Include="PortableGroup\PG_Object_Group.cpp">
     </ClCompile>
     <ClCompile Include="PortableGroup\PG_Object_Group_Manipulator.cpp">
+    </ClCompile>
+    <ClCompile Include="PortableGroup\PG_Object_Group_Storable.cpp">
     </ClCompile>
     <ClCompile Include="PortableGroup\PG_ObjectGroupManager.cpp">
     </ClCompile>
@@ -380,6 +384,7 @@
     <ClInclude Include="PortableGroup\PG_GenericFactory.h" />
     <ClInclude Include="PortableGroup\PG_Group_Factory.h" />
     <ClInclude Include="PortableGroup\PG_Group_Guard.h" />
+    <ClInclude Include="PortableGroup\PG_Group_List_Store.h" />
     <ClInclude Include="PortableGroup\PG_Location_Equal_To.h" />
     <ClInclude Include="PortableGroup\PG_Location_Hash.h" />
     <ClInclude Include="PortableGroup\PG_Location_Map.h" />
@@ -388,6 +393,7 @@
     <ClInclude Include="PortableGroup\PG_Object_Adapter_Factory.h" />
     <ClInclude Include="PortableGroup\PG_Object_Group.h" />
     <ClInclude Include="PortableGroup\PG_Object_Group_Manipulator.h" />
+    <ClInclude Include="PortableGroup\PG_Object_Group_Storable.h" />
     <ClInclude Include="PortableGroup\PG_ObjectGroup_Map.h" />
     <ClInclude Include="PortableGroup\PG_ObjectGroupManager.h" />
     <ClInclude Include="PortableGroup\PG_Operators.h" />
@@ -544,6 +550,24 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </None>
     <None Include="FaultTolerance.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="FT_Naming_Serv.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="FtNaming.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="FtNamingReplication.mpc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

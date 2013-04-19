@@ -4,7 +4,7 @@
 /**
  *  @file Transport.h
  *
- *  $Id: Transport.h 96218 2012-11-05 08:26:31Z johnnyw $
+ *  $Id: Transport.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  Define the interface for the Transport component in TAO's
  *  pluggable protocol framework.
@@ -648,6 +648,9 @@ public:
   /// Is this transport really connected
   bool is_connected (void) const;
 
+  /// Was a connection seen as closed during a read
+  bool connection_closed_on_read (void) const;
+
   /// Perform all the actions when this transport get opened
   bool post_open (size_t id);
 
@@ -1049,6 +1052,14 @@ private:
    */
   int notify_reactor (void);
 
+protected:
+  /*
+   * Same as notify_reactor above but does NOT first check for a
+   * registered TAO_Wait_Strategy.
+   */
+  int notify_reactor_now (void);
+
+private:
   /// Assume the lock is held
   void send_connection_closed_notifications_i (void);
 
@@ -1174,6 +1185,12 @@ protected:
   /// SYNC_NONE Policy we don't wait until the connection is ready and we
   /// buffer the requests in this transport until the connection is ready
   bool is_connected_;
+
+  /// Track if connection was seen as closed during a read so that
+  /// invocation can optionally be retried using a different profile.
+  /// Note that this could result in violate the "at most once" CORBA
+  /// semantics.
+  bool connection_closed_on_read_;
 
 private:
 

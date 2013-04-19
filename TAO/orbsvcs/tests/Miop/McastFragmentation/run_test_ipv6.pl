@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test_ipv6.pl 96029 2012-08-10 14:01:17Z sma $
+# $Id: run_test_ipv6.pl 96725 2013-01-29 11:01:00Z sma $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -13,15 +13,15 @@ $server_level = '0';
 $client_level = '0';
 
 $orbs = 10;
-$payload = 300000;
-$threads = 10;
-$count = 10;
+$payload = 3000;
+$threads = 5;
+$count = 5;
 
 foreach $i (@ARGV) {
     if ($i eq '-debug') {
-        $server_level = '9';
+        $server_level = '3';
         # Level enough for reporting errors.
-        $client_level = '3';
+        $client_level = '9';
     }
 }
 
@@ -59,7 +59,6 @@ $client3->DeleteFile($iorbase);
 $SV = $server->CreateProcess ("server",
                               "-ORBdebuglevel $server_level " .
                               "-ORBSvcConf $server_svcconf " .
-                              "-ORBRcvSock 500000 " .
                               "-o $server_iorfile -u $uipmc -s $orbs " .
                               "-p $payload -t " .
                               $threads * 1 . " -c $count");

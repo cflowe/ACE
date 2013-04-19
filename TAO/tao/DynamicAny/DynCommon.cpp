@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: DynCommon.cpp 95600 2012-03-07 15:26:40Z sma $
+// $Id: DynCommon.cpp 96848 2013-02-20 22:08:07Z labancap $
 
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
 #include "tao/Valuetype/AbstractBase.h"
@@ -1255,19 +1255,19 @@ TAO_DynCommon::check_type (CORBA::TypeCode_ptr tc)
 bool
 TAO_DynCommon::is_basic_type_seq (CORBA::TypeCode_ptr tc)
 {
-  return (tc == CORBA::_tc_BooleanSeq
-          || tc == CORBA::_tc_OctetSeq
-          || tc == CORBA::_tc_CharSeq
-          || tc == CORBA::_tc_WCharSeq
-          || tc == CORBA::_tc_ShortSeq
-          || tc == CORBA::_tc_UShortSeq
-          || tc == CORBA::_tc_LongSeq
-          || tc == CORBA::_tc_ULongSeq
-          || tc == CORBA::_tc_LongLongSeq
-          || tc == CORBA::_tc_ULongLongSeq
-          || tc == CORBA::_tc_FloatSeq
-          || tc == CORBA::_tc_DoubleSeq
-          || tc == CORBA::_tc_LongDoubleSeq);
+  return (tc->equal (CORBA::_tc_BooleanSeq)
+          || tc->equal (CORBA::_tc_OctetSeq)
+          || tc->equal (CORBA::_tc_CharSeq)
+          || tc->equal (CORBA::_tc_WCharSeq)
+          || tc->equal (CORBA::_tc_ShortSeq)
+          || tc->equal (CORBA::_tc_UShortSeq)
+          || tc->equal (CORBA::_tc_LongSeq)
+          || tc->equal (CORBA::_tc_ULongSeq)
+          || tc->equal (CORBA::_tc_LongLongSeq)
+          || tc->equal (CORBA::_tc_ULongLongSeq)
+          || tc->equal (CORBA::_tc_FloatSeq)
+          || tc->equal (CORBA::_tc_DoubleSeq)
+          || tc->equal (CORBA::_tc_LongDoubleSeq));
 }
 
 CORBA::Boolean

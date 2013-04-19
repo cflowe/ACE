@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: DynAny_i.cpp 95761 2012-05-15 18:23:04Z johnnyw $
+// $Id: DynAny_i.cpp 96848 2013-02-20 22:08:07Z labancap $
 
 #include "tao/AnyTypeCode/TypeCode.h"
 #include "tao/AnyTypeCode/Any_Unknown_IDL_Type.h"
@@ -56,19 +56,19 @@ TAO_DynAny_i::check_typecode (CORBA::TypeCode_ptr tc)
     case CORBA::tk_longdouble:
       break;
     case CORBA::tk_sequence:
-      if (tc == CORBA::_tc_BooleanSeq
-          || tc == CORBA::_tc_OctetSeq
-          || tc == CORBA::_tc_CharSeq
-          || tc == CORBA::_tc_WCharSeq
-          || tc == CORBA::_tc_ShortSeq
-          || tc == CORBA::_tc_UShortSeq
-          || tc == CORBA::_tc_LongSeq
-          || tc == CORBA::_tc_ULongSeq
-          || tc == CORBA::_tc_LongLongSeq
-          || tc == CORBA::_tc_ULongLongSeq
-          || tc == CORBA::_tc_FloatSeq
-          || tc == CORBA::_tc_DoubleSeq
-          || tc == CORBA::_tc_LongDoubleSeq)
+      if (tc->equivalent (CORBA::_tc_BooleanSeq)
+        || tc->equivalent (CORBA::_tc_OctetSeq)
+        || tc->equivalent (CORBA::_tc_CharSeq)
+        || tc->equivalent (CORBA::_tc_WCharSeq)
+        || tc->equivalent (CORBA::_tc_ShortSeq)
+        || tc->equivalent (CORBA::_tc_UShortSeq)
+        || tc->equivalent (CORBA::_tc_LongSeq)
+        || tc->equivalent (CORBA::_tc_ULongSeq)
+        || tc->equivalent (CORBA::_tc_LongLongSeq)
+        || tc->equivalent (CORBA::_tc_ULongLongSeq)
+        || tc->equivalent (CORBA::_tc_FloatSeq)
+        || tc->equivalent (CORBA::_tc_DoubleSeq)
+        || tc->equivalent (CORBA::_tc_LongDoubleSeq))
         {
           // Otherwise fall through.
           break;

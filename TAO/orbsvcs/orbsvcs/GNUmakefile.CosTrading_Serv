@@ -27,21 +27,21 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
+  Trader/Offer_Iterators.cpp \
+  Trader/Constraint_Interpreter.cpp \
   Trader/Offer_Database.cpp \
+  Trader/Trader.cpp \
+  Trader/Constraint_Nodes.cpp \
+  Trader/Service_Type_Repository.cpp \
+  Trader/Constraint_y.cpp \
+  Trader/Constraint_Visitors.cpp \
+  Trader/Trader_Utils.cpp \
   Trader/Trader_Constraint_Visitors.cpp \
   Trader/Interpreter_Utils.cpp \
-  Trader/Constraint_Visitors.cpp \
-  Trader/Service_Type_Repository.cpp \
-  Trader/Constraint_Interpreter.cpp \
-  Trader/Offer_Iterators.cpp \
+  Trader/Interpreter.cpp \
   Trader/Trader_Interfaces.cpp \
-  Trader/Constraint_y.cpp \
-  Trader/Constraint_Nodes.cpp \
-  Trader/Trader.cpp \
-  Trader/Trader_Utils.cpp \
   Trader/Trading_Loader.cpp \
-  Trader/Constraint_l.cpp \
-  Trader/Interpreter.cpp
+  Trader/Constraint_l.cpp
 
 VPATH = .:Trader
 
@@ -312,44 +312,47 @@ endif
 #BEGIN MPC-Generated Install Info
 #build_files:
 #PortableGroup.mpc
-#CosConcurrency.mpc
-#FtRtEvent.mpc
-#DsNotifyLogAdmin.mpc
-#CosProperty.mpc
-#RTEvent_Skel.mpc
-#CosNaming_Serv.mpc
-#CosTrading.mpc
-#RTEvent.mpc
-#DsLogAdmin.mpc
-#CosNotification.mpc
 #DsEventLogAdmin.mpc
-#RTKokyuEvent.mpc
-#SSLIOP.mpc
-#RTCORBAEvent.mpc
-#RTSchedEvent.mpc
-#CosNaming_Skel.mpc
-#FTORB.mpc
-#RTEventLogAdmin.mpc
-#HTIOP.mpc
-#CosEvent.mpc
-#CosNaming.mpc
-#RTEvent_Serv.mpc
-#CosLoadBalancing.mpc
-#AV.mpc
-#FaultTolerance.mpc
-#Svc_Utils.mpc
-#Security.mpc
-#CosTime.mpc
-#RT_Notification.mpc
-#CosLifeCycle.mpc
-#RTSched.mpc
 #IFRService.mpc
+#CosNaming.mpc
+#Svc_Utils.mpc
+#SSLIOP.mpc
+#DsLogAdmin.mpc
+#HTIOP.mpc
+#CosLoadBalancing.mpc
+#FTORB.mpc
+#CosConcurrency.mpc
+#CosTrading.mpc
+#RTSchedEvent.mpc
+#RTKokyuEvent.mpc
+#FtRtEvent.mpc
+#AV.mpc
+#CosNaming_Skel.mpc
+#FtNamingReplication.mpc
+#CosNaming_Serv.mpc
+#RTSched.mpc
+#Security.mpc
+#RTEventLogAdmin.mpc
+#FtNaming.mpc
+#RT_Notification.mpc
+#FT_Naming_Serv.mpc
+#CosLifeCycle.mpc
+#CosTime.mpc
+#RTEvent_Serv.mpc
+#RTEvent_Skel.mpc
+#CosNotification.mpc
+#FaultTolerance.mpc
+#RTCORBAEvent.mpc
+#CosEvent.mpc
+#CosProperty.mpc
+#RTEvent.mpc
+#DsNotifyLogAdmin.mpc
 #ec_typed_events.mpb
-#ssliop_params_dup.mpb
 #ec_typed_events_skel.mpb
-#ec_typed_events_idl.mpb
+#ssliop_params_dup.mpb
 #ec_typed_events_serv.mpb
 #cosnaming_serv_persistence.mpb
+#ec_typed_events_idl.mpb
 #orbsvcs.mwc
 #
 #inline_files:
@@ -365,12 +368,12 @@ endif
 #Trader/Trader_Constraint_Visitors.h
 #Trader/Constraint_Interpreter.h
 #Trader/Offer_Database.h
-#Trader/Interpreter_Utils_T.h
 #Trader/Offer_Iterators_T.h
+#Trader/Interpreter_Utils_T.h
 #Trader/Interpreter.h
 #Trader/Trading_Loader.h
-#Trader/Trader.h
 #Trader/Constraint_Nodes.h
+#Trader/Trader.h
 #Trader/Offer_Iterators.h
 #Trader/Trader_Utils.h
 #Trader/Trader_Interfaces.h
@@ -381,26 +384,26 @@ endif
 #TAO_CosTrading_Serv.pc.in
 #
 #source_files:
+#Trader/Offer_Iterators.cpp
+#Trader/Constraint_Interpreter.cpp
 #Trader/Offer_Database.cpp
+#Trader/Trader.cpp
+#Trader/Constraint_Nodes.cpp
+#Trader/Service_Type_Repository.cpp
+#Trader/Constraint_y.cpp
+#Trader/Constraint_Visitors.cpp
+#Trader/Trader_Utils.cpp
 #Trader/Trader_Constraint_Visitors.cpp
 #Trader/Interpreter_Utils.cpp
-#Trader/Constraint_Visitors.cpp
-#Trader/Service_Type_Repository.cpp
-#Trader/Constraint_Interpreter.cpp
-#Trader/Offer_Iterators.cpp
+#Trader/Interpreter.cpp
 #Trader/Trader_Interfaces.cpp
-#Trader/Constraint_y.cpp
-#Trader/Constraint_Nodes.cpp
-#Trader/Trader.cpp
-#Trader/Trader_Utils.cpp
 #Trader/Trading_Loader.cpp
 #Trader/Constraint_l.cpp
-#Trader/Interpreter.cpp
 #
 #template_files:
+#Trader/Interpreter_Utils_T.cpp
 #Trader/Trader_T.cpp
 #Trader/Offer_Iterators_T.cpp
-#Trader/Interpreter_Utils_T.cpp
 #
 #lib_output:
 #../../../lib TAO_CosTrading_Serv

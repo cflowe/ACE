@@ -1,4 +1,4 @@
-// $Id: LB_LeastLoaded.cpp 92967 2010-12-30 09:04:16Z olli $
+// $Id: LB_LeastLoaded.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "orbsvcs/LoadBalancing/LB_LeastLoaded.h"
 #include "orbsvcs/LoadBalancing/LB_LoadMap.h"
@@ -155,7 +155,7 @@ TAO_LB_LeastLoaded::get_loads (CosLoadBalancing::LoadManager_ptr load_manager,
 
   this->push_loads (the_location,
                     loads.in (),
-                    loads[0]);
+                    loads.inout ()[0]);
 
   return loads._retn ();
 }

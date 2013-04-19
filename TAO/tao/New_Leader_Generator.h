@@ -4,7 +4,7 @@
 /**
  *  @file    New_Leader_Generator.h
  *
- *  $Id: New_Leader_Generator.h 74014 2006-08-14 13:52:22Z johnnyw $
+ *  $Id: New_Leader_Generator.h 96836 2013-02-19 02:08:55Z mesnier_p $
  *
  *  @author Irfan Pyarali
  */
@@ -41,7 +41,7 @@ public:
 
   /// Leader/Follower class uses this method to notify the system that
   /// we are out of leaders.
-  virtual void no_leaders_available (void) = 0;
+  virtual bool no_leaders_available (void) = 0;
 };
 
 TAO_END_VERSIONED_NAMESPACE_DECL

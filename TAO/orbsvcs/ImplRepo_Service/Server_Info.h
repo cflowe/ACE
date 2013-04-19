@@ -2,7 +2,7 @@
 /**
  *  @file    Server_Info.h
  *
- *  $Id: Server_Info.h 85171 2009-04-25 06:33:24Z dai_y $
+ *  $Id: Server_Info.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  This class implements the Server_Info for the Implementation Repository.
  *
@@ -30,6 +30,7 @@ struct Server_Info
 {
   Server_Info (const ACE_CString& serverId,
     const ACE_CString& name,
+    bool jacorbs,
     const ACE_CString& aname,
     const ACE_CString& cmdline,
     const ImplementationRepository::EnvironmentList& env,
@@ -42,13 +43,14 @@ struct Server_Info
     );
 
   /// Convert to the corba type
-  ImplementationRepository::ServerInformation* createImRServerInfo(void);
+  ImplementationRepository::ServerInformation* createImRServerInfo(void) const;
 
   void reset();
 
   /// The name of the server.
   ACE_CString server_id;
   ACE_CString name;
+  bool jacorb_server;
 
   /// The name of the activator in which this server runs
   ACE_CString activator;

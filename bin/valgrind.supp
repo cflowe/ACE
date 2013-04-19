@@ -1,4 +1,4 @@
-# $Id: valgrind.supp 96154 2012-09-24 12:57:05Z johnnyw $
+# $Id: valgrind.supp 96729 2013-01-30 11:57:50Z sma $
 
 {
    <Suppress all the leaks in cc1plus>
@@ -303,4 +303,13 @@
    Memcheck:Value8
    fun:_ZN3ACE10nibble2hexEj
    fun:_ZN5CORBA3ORB16object_to_stringEPNS_6ObjectE
+}
+
+{
+   <zlib Conditional jump or move depends on uninitialised value(s)>
+   Memcheck:Cond
+   obj:/usr/lib/libz.so.1.2.3
+   obj:/usr/lib/libz.so.1.2.3
+   fun:deflate
+   fun:compress2
 }

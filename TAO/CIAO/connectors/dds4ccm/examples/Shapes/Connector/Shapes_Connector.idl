@@ -1,4 +1,4 @@
-// $Id: Shapes_Connector.idl 95809 2012-06-03 17:56:00Z johnnyw $
+// $Id: Shapes_Connector.idl 96882 2013-03-04 12:56:04Z johnnyw $
 
 /**
  * @file Shapes_Connector.idl
@@ -19,7 +19,7 @@
 # include "Base/Shapes_BaseTypeSupport.idl"
 #endif
 
-module ::CCM_DDS::Typed < ::ShapeType, ::ShapeTypeSeq> Shapes;
+module ::CCM_DDS::Typed < ::org::omg::dds::demo::ShapeType, ::org::omg::dds::demo::ShapeTypeSeq> Shapes;
 
 #endif /* SHAPES_CONNECTOR_IDL_ */
 

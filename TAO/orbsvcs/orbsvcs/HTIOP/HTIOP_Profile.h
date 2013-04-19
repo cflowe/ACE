@@ -4,7 +4,7 @@
 /**
  *  @file     HTIOP_Profile.h
  *
- *  $Id: HTIOP_Profile.h 76589 2007-01-25 18:04:11Z elliott_c $
+ *  $Id: HTIOP_Profile.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *   HTIOP profile specific processing
  *
@@ -88,7 +88,7 @@ namespace TAO
        * This is used to create url-style reference.  Only one
        * endpoint is included into the string.
        */
-      virtual char * to_string (void);
+      virtual char * to_string (void) const;
 
       /**
        * Endpoints are transmitted using TAO-proprietory tagged component.

@@ -3,7 +3,7 @@
 /**
  *  @file    FT_ReplicationManager.cpp
  *
- *  $Id: FT_ReplicationManager.cpp 91825 2010-09-17 09:10:22Z johnnyw $
+ *  $Id: FT_ReplicationManager.cpp 96861 2013-02-25 17:40:02Z mesnier_p $
  *
  *  This file is part of Fault Tolerant CORBA.
  *  This file implements the FT_ReplicationManager class as declared in
@@ -858,7 +858,7 @@ TAO::FT_ReplicationManager::create_object (
   ////////////////////////////////
   // find the properties for this
   // type of object group
-  TAO::PG_Property_Set * typeid_properties
+  TAO::PG_Property_Set_var typeid_properties
     = this->properties_support_.find_typeid_properties (
       type_id);
 

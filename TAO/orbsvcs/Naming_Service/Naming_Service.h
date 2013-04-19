@@ -4,7 +4,7 @@
 /**
  *  @file    Naming_Service.h
  *
- *  $Id: Naming_Service.h 93711 2011-04-01 15:37:48Z mesnier_p $
+ *  $Id: Naming_Service.h 96799 2013-02-11 23:01:56Z stanleyk $
  *
  *    This class implements the functionality of a Naming_Service in
  *    a stand-alone process.
@@ -16,6 +16,9 @@
 
 #ifndef TAO_NAMING_SERVICE_H
 #define TAO_NAMING_SERVICE_H
+
+#include /**/ "ace/pre.h"
+#include "tao/ORB.h"
 
 #include "orbsvcs/Naming/Naming_Server.h"
 
@@ -44,10 +47,10 @@ public:
   virtual int fini (void);
 
   /// Run the TAO_Naming_Service.
-  int run (void);
+  virtual int run (void);
 
   /// Shut down the TAO_Naming_Service; you must still call fini().
-  void shutdown (void);
+  virtual void shutdown (void);
 
   /// Destructor.
   virtual ~TAO_Naming_Service (void);
@@ -71,5 +74,7 @@ protected:
   /// Number of threads for running the ORB. Default is 1
   int num_threads_;
 };
+
+#include /**/ "ace/post.h"
 
 #endif /* TAO_NAMING_SERVICE_H */

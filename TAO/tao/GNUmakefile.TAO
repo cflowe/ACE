@@ -114,6 +114,8 @@ FILES = \
   Invocation_Adapter.cpp \
   Invocation_Base.cpp \
   Invocation_Endpoint_Selectors.cpp \
+  Invocation_Retry_State.cpp \
+  Invocation_Retry_Params.cpp \
   IOPC.cpp \
   IOR_Parser.cpp \
   IORInterceptor_Adapter.cpp \
@@ -213,6 +215,10 @@ FILES = \
   ShortSeqC.cpp \
   String_Alloc.cpp \
   StringSeqC.cpp \
+  Storable_Base.cpp \
+  Storable_FlatFileStream.cpp \
+  Storable_Factory.cpp \
+  Storable_File_Guard.cpp \
   Stub.cpp \
   Stub_Factory.cpp \
   Synch_Invocation.cpp \
@@ -563,6 +569,7 @@ endif
 #Seq_Var_T.inl
 #Service_Context.inl
 #Special_Basic_Argument_T.inl
+#Storable_Base.inl
 #Stub.inl
 #Synch_Invocation.inl
 #SystemException.inl
@@ -936,19 +943,25 @@ endif
 #WStringSeqC.h
 #WStringSeqS.h
 #ZIOP_Adapter.h
+#Storable_Base.h
 #ServerRequestInterceptor_Adapter_Factory.h
 #Intrusive_Ref_Count_Object_T.h
 #On_Demand_Fragmentation_Strategy.h
+#Storable_FlatFileStream.h
 #PolicyFactory_Registry_Factory.h
 #Service_Context_Handler_Registry.h
 #ServerRequestInterceptor_Adapter.h
 #GIOP_Fragmentation_Strategy.h
 #LF_Multi_Event.h
+#Invocation_Retry_State.h
+#Storable_File_Guard.h
 #Null_Fragmentation_Strategy.h
 #NVList_Adapter.h
 #ClientRequestInterceptor_Adapter_Factory.h
 #Intrusive_Ref_Count_Handle_T.h
+#Storable_Factory.h
 #Service_Context_Handler.h
+#Invocation_Retry_Params.h
 #Intrusive_Ref_Count_Base_T.h
 #
 #pkgconfig_files:
@@ -1042,6 +1055,8 @@ endif
 #Invocation_Adapter.cpp
 #Invocation_Base.cpp
 #Invocation_Endpoint_Selectors.cpp
+#Invocation_Retry_State.cpp
+#Invocation_Retry_Params.cpp
 #IOPC.cpp
 #IOR_Parser.cpp
 #IORInterceptor_Adapter.cpp
@@ -1141,6 +1156,10 @@ endif
 #ShortSeqC.cpp
 #String_Alloc.cpp
 #StringSeqC.cpp
+#Storable_Base.cpp
+#Storable_FlatFileStream.cpp
+#Storable_Factory.cpp
+#Storable_File_Guard.cpp
 #Stub.cpp
 #Stub_Factory.cpp
 #Synch_Invocation.cpp

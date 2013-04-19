@@ -1,0 +1,31 @@
+// $Id: test.idl 96733 2013-01-31 09:09:57Z johnnyw $
+
+#ifndef FOO_IDL
+#define FOO_IDL
+
+#include <Components.idl>
+
+interface SetPoint
+{
+  void set(in double value);
+};
+
+interface Measurement
+{
+  double get();
+};
+
+porttype MCPort
+{
+  attribute double default_val;
+  uses SetPoint control;
+  uses Measurement meas;
+};
+
+component Foo
+{
+  mirrorport MCPort voltage;
+
+};
+
+#endif

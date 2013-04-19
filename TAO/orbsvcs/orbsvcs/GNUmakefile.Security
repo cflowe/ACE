@@ -38,22 +38,22 @@ Security = \
   SecurityLevel2C.cpp \
   SecurityLevel2S.cpp \
   SecurityLevel3C.cpp \
-  Security/SL3_ContextEstablishmentPolicy.cpp \
   Security/SL3_ObjectCredentialsPolicy.cpp \
-  Security/Security_ORBInitializer.cpp \
-  Security/Security_PolicyFactory.cpp \
-  Security/SL2_EstablishTrustPolicy.cpp \
-  Security/SL3_SecurityCurrent.cpp \
-  Security/SL2_SecurityManager.cpp \
-  Security/SL3_PolicyFactory.cpp \
-  Security/SL2_QOPPolicy.cpp \
-  Security/SL3_SecurityCurrent_Impl.cpp \
-  Security/SL3_CredentialsAcquirerFactory.cpp \
-  Security/CSI_Utils.cpp \
   Security/SL3_CredentialsCurator.cpp \
+  Security/SL2_EstablishTrustPolicy.cpp \
   Security/Security_Current_Impl.cpp \
+  Security/SL3_CredentialsAcquirerFactory.cpp \
+  Security/SL2_SecurityManager.cpp \
+  Security/SL2_QOPPolicy.cpp \
   Security/SL3_SecurityManager.cpp \
-  Security/Security_Current.cpp
+  Security/Security_Current.cpp \
+  Security/SL3_ContextEstablishmentPolicy.cpp \
+  Security/CSI_Utils.cpp \
+  Security/SL3_PolicyFactory.cpp \
+  Security/SL3_SecurityCurrent_Impl.cpp \
+  Security/SL3_SecurityCurrent.cpp \
+  Security/Security_PolicyFactory.cpp \
+  Security/Security_ORBInitializer.cpp
 
 FILES += \
          $(Security)
@@ -541,7 +541,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = CSIC.cpp CSIIOPC.cpp GSSUPC.cpp SecurityC.cpp SecurityS.cpp SecurityLevel1C.cpp SecurityLevel1S.cpp SecurityLevel2C.cpp SecurityLevel2S.cpp SecurityLevel3C.cpp Security/SL3_ContextEstablishmentPolicy.cpp Security/SL3_ObjectCredentialsPolicy.cpp Security/Security_ORBInitializer.cpp Security/Security_PolicyFactory.cpp Security/SL2_EstablishTrustPolicy.cpp Security/SL3_SecurityCurrent.cpp Security/SL2_SecurityManager.cpp Security/SL3_PolicyFactory.cpp Security/SL2_QOPPolicy.cpp Security/SL3_SecurityCurrent_Impl.cpp Security/SL3_CredentialsAcquirerFactory.cpp Security/CSI_Utils.cpp Security/SL3_CredentialsCurator.cpp Security/Security_Current_Impl.cpp Security/SL3_SecurityManager.cpp Security/Security_Current.cpp  
+FORCED_IDL_STUBS = CSIC.cpp CSIIOPC.cpp GSSUPC.cpp SecurityC.cpp SecurityS.cpp SecurityLevel1C.cpp SecurityLevel1S.cpp SecurityLevel2C.cpp SecurityLevel2S.cpp SecurityLevel3C.cpp Security/SL3_ObjectCredentialsPolicy.cpp Security/SL3_CredentialsCurator.cpp Security/SL2_EstablishTrustPolicy.cpp Security/Security_Current_Impl.cpp Security/SL3_CredentialsAcquirerFactory.cpp Security/SL2_SecurityManager.cpp Security/SL2_QOPPolicy.cpp Security/SL3_SecurityManager.cpp Security/Security_Current.cpp Security/SL3_ContextEstablishmentPolicy.cpp Security/CSI_Utils.cpp Security/SL3_PolicyFactory.cpp Security/SL3_SecurityCurrent_Impl.cpp Security/SL3_SecurityCurrent.cpp Security/Security_PolicyFactory.cpp Security/Security_ORBInitializer.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:CSIC.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:CSIIOPC.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:GSSUPC.cpp=)
@@ -620,7 +620,7 @@ else
 	$(INSTALLER) -i -s $(subst $(SPACE),$(COMMA),$(INST_TAGS)) \
 	  $(INST_LOCATIONS) $(if $(ARCH),-d $(ARCH)) $(PRJINST_OPTIONS) \
 	  $(DESTDIR)$(INSTALL_PREFIX)
-	$(ACE_ROOT)/bin/ace_install_pkgconfig.pl TAO_RTEvent_Serv.pc.in TAO_DsLogAdmin_Serv.pc.in TAO_CosNaming_Serv.pc.in TAO_FT_ServerORB.pc.in TAO_DsNotifyLogAdmin_Serv.pc.in TAO_CosEvent_Serv.pc.in TAO_DsEventLogAdmin.pc.in TAO_CosProperty_Skel.pc.in TAO_FTORB_Utils.pc.in TAO_RTEvent_Skel.pc.in TAO_Svc_Utils.pc.in TAO_CosNotification.pc.in TAO_CosNaming.pc.in TAO_RTEventLogAdmin.pc.in TAO_FaultTolerance.pc.in TAO_CosLifeCycle.pc.in TAO_PortableGroup.pc.in TAO_CosNotification_Serv.pc.in TAO_DsLogAdmin.pc.in TAO_RTEventLogAdmin_Serv.pc.in TAO_CosNaming_Skel.pc.in TAO_DsEventLogAdmin_Serv.pc.in TAO_CosEvent.pc.in TAO_CosProperty_Serv.pc.in TAO_DsNotifyLogAdmin_Skel.pc.in TAO_RTEvent.pc.in TAO_DsLogAdmin_Skel.pc.in TAO_FT_ClientORB.pc.in TAO_DsNotifyLogAdmin.pc.in TAO_CosConcurrency.pc.in TAO_CosTime_Skel.pc.in TAO_CosTime.pc.in TAO_RTEventLogAdmin_Skel.pc.in TAO_CosNotification_Skel.pc.in TAO_CosTrading_Skel.pc.in TAO_CosLoadBalancing.pc.in TAO_CosTrading_Serv.pc.in TAO_CosConcurrency_Serv.pc.in TAO_CosTrading.pc.in TAO_CosEvent_Skel.pc.in TAO_CosProperty.pc.in TAO_CosTime_Serv.pc.in TAO_CosLifeCycle_Skel.pc.in TAO_DsEventLogAdmin_Skel.pc.in TAO_CosConcurrency_Skel.pc.in --destdir "$(DESTDIR)" --prefix $(INSTALL_PREFIX) --libdir $(INSTALL_LIB) --libs "$(LIBS)" --version $(GNUACE_PROJECT_VERSION)
+	$(ACE_ROOT)/bin/ace_install_pkgconfig.pl TAO_CosEvent.pc.in TAO_FTORB_Utils.pc.in TAO_CosTrading_Skel.pc.in TAO_DsLogAdmin_Serv.pc.in TAO_FT_ServerORB.pc.in TAO_PortableGroup.pc.in TAO_CosNaming_Serv.pc.in TAO_Svc_Utils.pc.in TAO_CosNotification_Serv.pc.in TAO_DsNotifyLogAdmin_Serv.pc.in TAO_DsLogAdmin_Skel.pc.in TAO_CosNotification.pc.in TAO_RTEvent.pc.in TAO_DsLogAdmin.pc.in TAO_CosTime.pc.in TAO_FT_ClientORB.pc.in TAO_CosEvent_Skel.pc.in TAO_CosConcurrency_Serv.pc.in TAO_CosNaming.pc.in TAO_RTEventLogAdmin_Serv.pc.in TAO_RTEvent_Serv.pc.in TAO_CosConcurrency.pc.in TAO_CosProperty_Skel.pc.in TAO_CosConcurrency_Skel.pc.in TAO_CosProperty.pc.in TAO_RTEventLogAdmin.pc.in TAO_RTEventLogAdmin_Skel.pc.in TAO_CosEvent_Serv.pc.in TAO_DsNotifyLogAdmin_Skel.pc.in TAO_DsEventLogAdmin_Skel.pc.in TAO_DsEventLogAdmin_Serv.pc.in TAO_CosNaming_Skel.pc.in TAO_CosLifeCycle.pc.in TAO_DsNotifyLogAdmin.pc.in TAO_CosProperty_Serv.pc.in TAO_CosLifeCycle_Skel.pc.in TAO_CosNotification_Skel.pc.in TAO_CosTrading_Serv.pc.in TAO_CosLoadBalancing.pc.in TAO_DsEventLogAdmin.pc.in TAO_FaultTolerance.pc.in TAO_RTEvent_Skel.pc.in TAO_CosTime_Serv.pc.in TAO_CosTrading.pc.in TAO_CosTime_Skel.pc.in --destdir "$(DESTDIR)" --prefix $(INSTALL_PREFIX) --libdir $(INSTALL_LIB) --libs "$(LIBS)" --version $(GNUACE_PROJECT_VERSION)
 endif
 endif
 endif
@@ -630,44 +630,47 @@ endif
 #BEGIN MPC-Generated Install Info
 #build_files:
 #PortableGroup.mpc
-#CosConcurrency.mpc
-#FtRtEvent.mpc
-#DsNotifyLogAdmin.mpc
-#CosProperty.mpc
-#RTEvent_Skel.mpc
-#CosNaming_Serv.mpc
-#CosTrading.mpc
-#RTEvent.mpc
-#DsLogAdmin.mpc
-#CosNotification.mpc
 #DsEventLogAdmin.mpc
-#RTKokyuEvent.mpc
-#SSLIOP.mpc
-#RTCORBAEvent.mpc
-#RTSchedEvent.mpc
-#CosNaming_Skel.mpc
-#FTORB.mpc
-#RTEventLogAdmin.mpc
-#HTIOP.mpc
-#CosEvent.mpc
-#CosNaming.mpc
-#RTEvent_Serv.mpc
-#CosLoadBalancing.mpc
-#AV.mpc
-#FaultTolerance.mpc
-#Svc_Utils.mpc
-#Security.mpc
-#CosTime.mpc
-#RT_Notification.mpc
-#CosLifeCycle.mpc
-#RTSched.mpc
 #IFRService.mpc
+#CosNaming.mpc
+#Svc_Utils.mpc
+#SSLIOP.mpc
+#DsLogAdmin.mpc
+#HTIOP.mpc
+#CosLoadBalancing.mpc
+#FTORB.mpc
+#CosConcurrency.mpc
+#CosTrading.mpc
+#RTSchedEvent.mpc
+#RTKokyuEvent.mpc
+#FtRtEvent.mpc
+#AV.mpc
+#CosNaming_Skel.mpc
+#FtNamingReplication.mpc
+#CosNaming_Serv.mpc
+#RTSched.mpc
+#Security.mpc
+#RTEventLogAdmin.mpc
+#FtNaming.mpc
+#RT_Notification.mpc
+#FT_Naming_Serv.mpc
+#CosLifeCycle.mpc
+#CosTime.mpc
+#RTEvent_Serv.mpc
+#RTEvent_Skel.mpc
+#CosNotification.mpc
+#FaultTolerance.mpc
+#RTCORBAEvent.mpc
+#CosEvent.mpc
+#CosProperty.mpc
+#RTEvent.mpc
+#DsNotifyLogAdmin.mpc
 #ec_typed_events.mpb
-#ssliop_params_dup.mpb
 #ec_typed_events_skel.mpb
-#ec_typed_events_idl.mpb
+#ssliop_params_dup.mpb
 #ec_typed_events_serv.mpb
 #cosnaming_serv_persistence.mpb
+#ec_typed_events_idl.mpb
 #orbsvcs.mwc
 #
 #idl_files:
@@ -712,11 +715,11 @@ endif
 #Security/Security_ORBInitializer.h
 #Security/SL3_SecurityCurrent_Impl.h
 #Security/SL3_PolicyFactory.h
-#Security/SL3_SecurityManager.h
-#Security/Security_Current_Impl.h
 #Security/Security_PolicyFactory.h
-#Security/SL3_CredentialsAcquirerFactory.h
+#Security/Security_Current_Impl.h
+#Security/SL3_SecurityManager.h
 #Security/SL3_SecurityCurrent.h
+#Security/SL3_CredentialsAcquirerFactory.h
 #Security/Security_Current.h
 #GSSUPC.h
 #SecurityLevel1C.h
@@ -725,51 +728,51 @@ endif
 #Security/security_export.h
 #
 #pkgconfig_files:
-#TAO_RTEvent_Serv.pc.in
-#TAO_DsLogAdmin_Serv.pc.in
-#TAO_CosNaming_Serv.pc.in
-#TAO_FT_ServerORB.pc.in
-#TAO_DsNotifyLogAdmin_Serv.pc.in
-#TAO_CosEvent_Serv.pc.in
-#TAO_DsEventLogAdmin.pc.in
-#TAO_CosProperty_Skel.pc.in
-#TAO_FTORB_Utils.pc.in
-#TAO_RTEvent_Skel.pc.in
-#TAO_Svc_Utils.pc.in
-#TAO_CosNotification.pc.in
-#TAO_CosNaming.pc.in
-#TAO_RTEventLogAdmin.pc.in
-#TAO_FaultTolerance.pc.in
-#TAO_CosLifeCycle.pc.in
-#TAO_PortableGroup.pc.in
-#TAO_CosNotification_Serv.pc.in
-#TAO_DsLogAdmin.pc.in
-#TAO_RTEventLogAdmin_Serv.pc.in
-#TAO_CosNaming_Skel.pc.in
-#TAO_DsEventLogAdmin_Serv.pc.in
 #TAO_CosEvent.pc.in
-#TAO_CosProperty_Serv.pc.in
-#TAO_DsNotifyLogAdmin_Skel.pc.in
-#TAO_RTEvent.pc.in
-#TAO_DsLogAdmin_Skel.pc.in
-#TAO_FT_ClientORB.pc.in
-#TAO_DsNotifyLogAdmin.pc.in
-#TAO_CosConcurrency.pc.in
-#TAO_CosTime_Skel.pc.in
-#TAO_CosTime.pc.in
-#TAO_RTEventLogAdmin_Skel.pc.in
-#TAO_CosNotification_Skel.pc.in
+#TAO_FTORB_Utils.pc.in
 #TAO_CosTrading_Skel.pc.in
-#TAO_CosLoadBalancing.pc.in
-#TAO_CosTrading_Serv.pc.in
-#TAO_CosConcurrency_Serv.pc.in
-#TAO_CosTrading.pc.in
+#TAO_DsLogAdmin_Serv.pc.in
+#TAO_FT_ServerORB.pc.in
+#TAO_PortableGroup.pc.in
+#TAO_CosNaming_Serv.pc.in
+#TAO_Svc_Utils.pc.in
+#TAO_CosNotification_Serv.pc.in
+#TAO_DsNotifyLogAdmin_Serv.pc.in
+#TAO_DsLogAdmin_Skel.pc.in
+#TAO_CosNotification.pc.in
+#TAO_RTEvent.pc.in
+#TAO_DsLogAdmin.pc.in
+#TAO_CosTime.pc.in
+#TAO_FT_ClientORB.pc.in
 #TAO_CosEvent_Skel.pc.in
-#TAO_CosProperty.pc.in
-#TAO_CosTime_Serv.pc.in
-#TAO_CosLifeCycle_Skel.pc.in
-#TAO_DsEventLogAdmin_Skel.pc.in
+#TAO_CosConcurrency_Serv.pc.in
+#TAO_CosNaming.pc.in
+#TAO_RTEventLogAdmin_Serv.pc.in
+#TAO_RTEvent_Serv.pc.in
+#TAO_CosConcurrency.pc.in
+#TAO_CosProperty_Skel.pc.in
 #TAO_CosConcurrency_Skel.pc.in
+#TAO_CosProperty.pc.in
+#TAO_RTEventLogAdmin.pc.in
+#TAO_RTEventLogAdmin_Skel.pc.in
+#TAO_CosEvent_Serv.pc.in
+#TAO_DsNotifyLogAdmin_Skel.pc.in
+#TAO_DsEventLogAdmin_Skel.pc.in
+#TAO_DsEventLogAdmin_Serv.pc.in
+#TAO_CosNaming_Skel.pc.in
+#TAO_CosLifeCycle.pc.in
+#TAO_DsNotifyLogAdmin.pc.in
+#TAO_CosProperty_Serv.pc.in
+#TAO_CosLifeCycle_Skel.pc.in
+#TAO_CosNotification_Skel.pc.in
+#TAO_CosTrading_Serv.pc.in
+#TAO_CosLoadBalancing.pc.in
+#TAO_DsEventLogAdmin.pc.in
+#TAO_FaultTolerance.pc.in
+#TAO_RTEvent_Skel.pc.in
+#TAO_CosTime_Serv.pc.in
+#TAO_CosTrading.pc.in
+#TAO_CosTime_Skel.pc.in
 #
 #source_files:
 #CSIC.cpp
@@ -782,22 +785,22 @@ endif
 #SecurityLevel2C.cpp
 #SecurityLevel2S.cpp
 #SecurityLevel3C.cpp
-#Security/SL3_ContextEstablishmentPolicy.cpp
 #Security/SL3_ObjectCredentialsPolicy.cpp
-#Security/Security_ORBInitializer.cpp
-#Security/Security_PolicyFactory.cpp
-#Security/SL2_EstablishTrustPolicy.cpp
-#Security/SL3_SecurityCurrent.cpp
-#Security/SL2_SecurityManager.cpp
-#Security/SL3_PolicyFactory.cpp
-#Security/SL2_QOPPolicy.cpp
-#Security/SL3_SecurityCurrent_Impl.cpp
-#Security/SL3_CredentialsAcquirerFactory.cpp
-#Security/CSI_Utils.cpp
 #Security/SL3_CredentialsCurator.cpp
+#Security/SL2_EstablishTrustPolicy.cpp
 #Security/Security_Current_Impl.cpp
+#Security/SL3_CredentialsAcquirerFactory.cpp
+#Security/SL2_SecurityManager.cpp
+#Security/SL2_QOPPolicy.cpp
 #Security/SL3_SecurityManager.cpp
 #Security/Security_Current.cpp
+#Security/SL3_ContextEstablishmentPolicy.cpp
+#Security/CSI_Utils.cpp
+#Security/SL3_PolicyFactory.cpp
+#Security/SL3_SecurityCurrent_Impl.cpp
+#Security/SL3_SecurityCurrent.cpp
+#Security/Security_PolicyFactory.cpp
+#Security/Security_ORBInitializer.cpp
 #
 #lib_output:
 #../../../lib TAO_Security

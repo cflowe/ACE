@@ -1,4 +1,4 @@
-# $Id: platform_linux_clang.GNU 96054 2012-08-15 11:42:53Z johnnyw $
+# $Id: platform_linux_clang.GNU 96621 2013-01-04 21:52:51Z mitza $
 
 # This file should allow ACE to be built on Linux, using the clang compiler.
 
@@ -53,6 +53,8 @@ ifeq ($(shared_libs), 1)
   endif
 endif
 
+# Compiling TAO requires relaxing strict 2-phase name lookup rules:
+CCFLAGS += -fdelayed-template-parsing
 
 # Added line below to support "Executable Shared Object" files (as
 # needed by the service configurator).

@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: auto_run_tests.pl 95894 2012-06-18 13:21:57Z johnnyw $
+# $Id: auto_run_tests.pl 96875 2013-03-01 11:23:27Z mcorino $
 # -*- perl -*-
 # This file is for running the run_test.pl scripts listed in
 # auto_run_tests.lst.
@@ -193,13 +193,19 @@ foreach my $test_lst (@file_list) {
         }
 
         $status = undef;
-        foreach my $path ($ACE_ROOT."/$directory",
-                          $TAO_ROOT."/$directory",
-                          $CIAO_ROOT."/$directory",
-                          $DANCE_ROOT."/$directory",
-                          $DDS_ROOT."/$directory",
-                          $startdir."/$directory",
-                          $startdir."/$orig_dir") {
+        my @dirlist = ($ACE_ROOT."/$directory",
+                       $TAO_ROOT."/$directory",
+                       $CIAO_ROOT."/$directory",
+                       $DANCE_ROOT."/$directory",
+                       $DDS_ROOT."/$directory");
+        # when $opt_r is set make sure to *first* check the explicitly
+        # specified directory and only when nothing found there check
+        # the default dirs
+	if ($opt_r) {
+	  unshift (@dirlist, $startdir."/$directory");
+	  unshift (@dirlist, $startdir."/$orig_dir");
+	}
+        foreach my $path (@dirlist) {
           if (-d $path && ($status = chdir ($path))) {
             last;
           }

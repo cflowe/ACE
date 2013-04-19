@@ -1,4 +1,4 @@
-// $Id: UIPMC_Profile.cpp 96044 2012-08-13 14:56:45Z sma $
+// $Id: UIPMC_Profile.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "orbsvcs/PortableGroup/UIPMC_Profile.h"
 #include "orbsvcs/PortableGroup/miopconf.h"
@@ -547,7 +547,7 @@ TAO_UIPMC_Profile::endpoint_count (void) const
 }
 
 char *
-TAO_UIPMC_Profile::to_string (void)
+TAO_UIPMC_Profile::to_string (void) const
 {
   // corbaloc:miop:1.0@1.0-group_id-1-1/host:port
 

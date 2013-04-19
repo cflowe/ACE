@@ -3,7 +3,7 @@
 /**
  *  @file    SSL_Context.h
  *
- *  $Id: SSL_Context.h 96231 2012-11-07 13:52:17Z johnnyw $
+ *  $Id: SSL_Context.h 96828 2013-02-16 21:54:39Z stanleyk $
  *
  *  @author Carlos O'Ryan <coryan@ece.uci.edu>
  *  @author Ossama Othman <ossama@dre.vanderbilt.edu>
@@ -117,7 +117,13 @@ public:
     SSLv23,
     TLSv1_client,
     TLSv1_server,
-    TLSv1
+    TLSv1,
+    TLSv1_1_client,
+    TLSv1_1_server,
+    TLSv1_1,
+    TLSv1_2_client,
+    TLSv1_2_server,
+    TLSv1_2
   };
 
   /// Constructor

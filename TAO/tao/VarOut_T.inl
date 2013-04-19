@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: VarOut_T.inl 87688 2009-11-21 05:00:59Z sowayaa $
+// $Id: VarOut_T.inl 96760 2013-02-05 21:11:03Z stanleyk $
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -62,6 +62,14 @@ TAO_Var_Base_T<T>::ptr (void) const
 {
   return this->ptr_;
 }
+
+template<typename T>
+ACE_INLINE
+TAO_Var_Base_T<T>::operator T *& ()
+{
+  return this->ptr_;
+}
+
 // *************************************************************
 
 template<typename T>
@@ -177,14 +185,6 @@ TAO_Var_Var_T<T>::operator= (T * p)
   delete this->ptr_;
   this->ptr_ = p;
   return *this;
-}
-
-// Variable-size types only.
-template<typename T>
-ACE_INLINE
-TAO_Var_Var_T<T>::operator T *& ()
-{
-  return this->ptr_;
 }
 
 template<typename T>

@@ -232,8 +232,8 @@ endif
 #BEGIN MPC-Generated Install Info
 #pidl_files:
 #IIOPEndpointValue.pidl
-#EndpointPolicy.pidl
 #EndpointPolicyType.pidl
+#EndpointPolicy.pidl
 #
 #build_files:
 #EndpointPolicy.mpc

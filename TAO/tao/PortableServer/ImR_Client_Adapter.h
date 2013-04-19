@@ -4,7 +4,7 @@
 /**
  *  @file    ImR_Client_Adapter.h
  *
- *  $Id: ImR_Client_Adapter.h 76995 2007-02-11 12:51:42Z johnnyw $
+ *  $Id: ImR_Client_Adapter.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author  Johnny Willemsen  <jwillemsen@remedy.nl>
  */
@@ -29,8 +29,16 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 class TAO_Root_POA;
 
+namespace CORBA
+{
+  class Object;
+  typedef Object* Object_ptr;
+}
+
 namespace TAO
 {
+  class ObjectKey;
+
   namespace Portable_Server
   {
     /**
@@ -53,6 +61,13 @@ namespace TAO
 
       /// ImplRepo helper method, notify the ImplRepo on shutdown
       virtual void imr_notify_shutdown (TAO_Root_POA* poa ) = 0;
+
+      /// ImplRepo helper method, create an IMR-ified object for a
+      /// key with a given type
+      virtual CORBA::Object_ptr imr_key_to_object(
+        TAO_Root_POA* poa,
+        const TAO::ObjectKey &key,
+        const char *type_id) const = 0;
     };
   }
 }

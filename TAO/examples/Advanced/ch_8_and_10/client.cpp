@@ -2,7 +2,7 @@
 /**
  *  @file    client.cpp
  *
- *  $Id: client.cpp 93650 2011-03-28 08:44:53Z johnnyw $
+ *  $Id: client.cpp 96718 2013-01-28 18:52:07Z johnnyw $
  *
  *  @author Source code used in TAO has been modified and adapted from the codeprovided in the book
  *  @author "Advanced CORBA Programming with C++" by MichiHenning and Steve Vinoski. Copyright 1999. Addison-Wesley
@@ -16,6 +16,9 @@
 #include    <iostream>
 
 using namespace std;
+
+// This inserter may or may not be needed for your ORB.
+#if !defined (GEN_OSTREAM_OPS)
 
 // Show the details for a thermometer or thermostat.
 static std::ostream &
@@ -82,8 +85,7 @@ operator<<(std::ostream & os, const CCS::Controller::EChange & ec)
 
 // Generic ostream inserter for exceptions. Inserts the exception
 // name, if available, and the repository ID otherwise.
-
- #if 0   // This inserter may or may not be needed for your ORB.
+#if 0
 
 static std::ostream &
 operator<<(std::ostream & os, const CORBA::Exception & e)
@@ -99,8 +101,9 @@ operator<<(std::ostream & os, const CORBA::Exception & e)
         os << tc->id();
     return os;
 }
+#endif
 
- #endif
+#endif
 
 //----------------------------------------------------------------
 

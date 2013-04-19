@@ -18,6 +18,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GIOP_Buffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="HostProcess.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -44,6 +47,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GIOP_Buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="HostProcess.h">
       <Filter>Header Files</Filter>
     </ClInclude>

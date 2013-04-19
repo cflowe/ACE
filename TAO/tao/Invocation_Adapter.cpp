@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Invocation_Adapter.cpp 94802 2011-10-20 09:46:10Z mcorino $
+// $Id: Invocation_Adapter.cpp 96885 2013-03-06 09:22:01Z sma $
 
 #include "tao/Invocation_Adapter.h"
 #include "tao/Profile_Transport_Resolver.h"
@@ -15,6 +15,7 @@
 #include "tao/TAOC.h"
 #include "tao/SystemException.h"
 #include "tao/Collocation_Resolver.h"
+#include "tao/Invocation_Retry_State.h"
 #include "ace/Service_Config.h"
 
 #if !defined (__ACE_INLINE__)
@@ -69,6 +70,8 @@ namespace TAO
         max_wait_time= &tmp_wait_time;
       }
 
+    TAO::Invocation_Retry_State retry_state (*stub);
+
     while (status == TAO_INVOKE_START || status == TAO_INVOKE_RESTART)
       {
         // Default we go to remote
@@ -95,7 +98,8 @@ namespace TAO
               this->invoke_remote_i (stub,
                                      details,
                                      effective_target,
-                                     max_wait_time);
+                                     max_wait_time,
+                                     &retry_state);
           }
         else
           {
@@ -228,7 +232,8 @@ namespace TAO
   Invocation_Adapter::invoke_remote_i (TAO_Stub *stub,
                                        TAO_Operation_Details &details,
                                        CORBA::Object_var &effective_target,
-                                       ACE_Time_Value *&max_wait_time)
+                                       ACE_Time_Value *&max_wait_time,
+                                       Invocation_Retry_State *retry_state)
   {
     (void) this->set_response_flags (stub, details);
 
@@ -270,7 +275,8 @@ namespace TAO
             return this->invoke_twoway (details,
                                         effective_target,
                                         resolver,
-                                        max_wait_time);
+                                        max_wait_time,
+                                        retry_state);
 
           }
       }
@@ -281,7 +287,8 @@ namespace TAO
   Invocation_Adapter::invoke_twoway (TAO_Operation_Details &details,
                                      CORBA::Object_var &effective_target,
                                      Profile_Transport_Resolver &r,
-                                     ACE_Time_Value *&max_wait_time)
+                                     ACE_Time_Value *&max_wait_time,
+                                     Invocation_Retry_State *retry_state)
   {
     // Simple sanity check
     if (this->mode_ != TAO_SYNCHRONOUS_INVOCATION ||
@@ -294,7 +301,10 @@ namespace TAO
           CORBA::COMPLETED_NO);
       }
 
-    TAO::Synch_Twoway_Invocation synch (this->target_,  r, details);
+    TAO::Synch_Twoway_Invocation synch (this->target_,  r, details,
+                                        true);
+
+    synch.set_retry_state (retry_state);
 
     Invocation_Status const status = synch.remote_twoway (max_wait_time);
 
@@ -366,14 +376,14 @@ namespace TAO
       throw ::CORBA::TRANSIENT (
         CORBA::SystemException::_tao_minor_code (
           TAO_INVOCATION_LOCATION_FORWARD_MINOR_CODE,
-          errno),
+          0),
         CORBA::COMPLETED_NO);
 
     if (stubobj == 0)
       throw ::CORBA::INTERNAL (
         CORBA::SystemException::_tao_minor_code (
           TAO_INVOCATION_LOCATION_FORWARD_MINOR_CODE,
-          errno),
+          EINVAL),
         CORBA::COMPLETED_NO);
 
     // Reset the profile in the stubs
@@ -383,7 +393,7 @@ namespace TAO
       throw ::CORBA::TRANSIENT (
         CORBA::SystemException::_tao_minor_code (
           TAO_INVOCATION_LOCATION_FORWARD_MINOR_CODE,
-          errno),
+          0),
         CORBA::COMPLETED_NO);
   }
 

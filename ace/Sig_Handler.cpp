@@ -1,4 +1,4 @@
-// $Id: Sig_Handler.cpp 96181 2012-10-08 13:30:13Z shuston $
+// $Id: Sig_Handler.cpp 96674 2013-01-17 12:23:46Z johnnyw $
 
 #include "ace/Sig_Handler.h"
 #include "ace/Sig_Adapter.h"
@@ -215,8 +215,10 @@ ACE_Sig_Handler::remove_handler_i (int signum,
 
   // Allow the event handler to close down if necessary.
   if (eh)
-    eh->handle_close (ACE_INVALID_HANDLE,
-                      ACE_Event_Handler::SIGNAL_MASK);
+    {
+      eh->handle_close (ACE_INVALID_HANDLE,
+                        ACE_Event_Handler::SIGNAL_MASK);
+    }
 
   // Register either the new disposition or restore the default.
   return new_disp->register_action (signum, old_disp);

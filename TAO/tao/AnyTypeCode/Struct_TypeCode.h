@@ -4,7 +4,7 @@
 /**
  *  @file    Struct_TypeCode.h
  *
- *  $Id: Struct_TypeCode.h 78246 2007-05-02 13:33:04Z johnnyw $
+ *  $Id: Struct_TypeCode.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  Header file for a @c tk_struct and @c tk_except
  *  @c CORBA::TypeCodes.
@@ -77,6 +77,9 @@ namespace TAO
       virtual void tao_duplicate (void);
       virtual void tao_release (void);
       //@}
+
+      /// Accessor for fields_
+      const FieldArrayType& fields() const;
 
     protected:
 

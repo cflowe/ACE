@@ -1,7 +1,7 @@
 /**
  * @author Marcel Smit (msmit@remedy.nl)
  *
- * $Id: DDS_TopicBase_Connector_T.h 95809 2012-06-03 17:56:00Z johnnyw $
+ * $Id: DDS_TopicBase_Connector_T.h 96867 2013-02-27 08:21:02Z johnnyw $
  *
  * Wrapper facade for NDDS.
  */
@@ -23,8 +23,10 @@ public:
   virtual ::DDS::StringSeq *key_fields (void);
 
   virtual void topic_name (const char * topic_name);
-
   virtual char *topic_name (void);
+
+  virtual void type_name (const char * type_name);
+  virtual char *type_name (void);
 
   virtual void key_fields (const ::DDS::StringSeq & key_fields);
 
@@ -46,6 +48,7 @@ protected:
   bool stop_dds (const char * topic_name);
 
   CORBA::String_var topic_name_;
+  CORBA::String_var type_name_;
   DDS::StringSeq key_fields_;
 
   ::DDS::Topic_var topic_;

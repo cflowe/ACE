@@ -1,4 +1,4 @@
-// $Id: Value_TypeCode.cpp 76995 2007-02-11 12:51:42Z johnnyw $
+// $Id: Value_TypeCode.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #ifndef TAO_VALUE_TYPECODE_CPP
 #define TAO_VALUE_TYPECODE_CPP
@@ -106,6 +106,32 @@ TAO::TypeCode::Value<StringType,
                      RefCountPolicy>::tao_release (void)
 {
   this->RefCountPolicy::remove_ref ();
+}
+
+template <typename StringType,
+          typename TypeCodeType,
+          class FieldArrayType,
+          class RefCountPolicy>
+const TypeCodeType&
+TAO::TypeCode::Value<StringType,
+                     TypeCodeType,
+                     FieldArrayType,
+                     RefCountPolicy>::concrete_base (void) const
+{
+  return concrete_base_;
+}
+
+template <typename StringType,
+          typename TypeCodeType,
+          class FieldArrayType,
+          class RefCountPolicy>
+const FieldArrayType&
+TAO::TypeCode::Value<StringType,
+                     TypeCodeType,
+                     FieldArrayType,
+                     RefCountPolicy>::fields (void) const
+{
+  return fields_;
 }
 
 template <typename StringType,

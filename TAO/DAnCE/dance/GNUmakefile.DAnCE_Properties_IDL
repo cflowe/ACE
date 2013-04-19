@@ -225,8 +225,8 @@ endif
 #DAnCE_Properties.idl
 #
 #build_files:
-#DAnCE_Properties.mpc
 #DAnCE_Core.mpc
+#DAnCE_Properties.mpc
 #
 #installdata_files:
 #../docs .

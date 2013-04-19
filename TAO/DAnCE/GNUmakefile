@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: ACE ACE_Compression ACE_RLECompression ACE_ETCL ACE_ETCL_Parser ACE_FlReactor Monitor_Control ACE_Qt4Reactor_moc ACE_Qt4Reactor SSL ACE_TkReactor ACE_XtReactor JAWS JAWS_server gperf INet FTP_Simple_exec INet_SSL HTTPS_Simple_exec HTTP_Simple_exec TAO_IDL_FE TAO_IDL_BE TAO_IDL_EXE IORTable_Core_Idl Codeset_Idl TAO_Core_idl TAO Codeset IORTable PortableServer_Idl AnyTypeCode_Idl AnyTypeCode PortableServer Svc_Utils Messaging_Idl Valuetype_Idl Valuetype PI_Idl CodecFactory_Idl CodecFactory PI Messaging CosNaming_IDL CosNaming CosNaming_Skel CosNaming_Serv NT_Naming_Service ImR_Client_Idl ImR_Client Naming_Service BiDir_GIOP_Idl BiDir_GIOP CSD_Framework_Idl CSD_Framework CSD_ThreadPool Compression_Idl Compression RLECompressor DiffServPolicy_Idl DiffServPolicy DynamicAny_Idl DynamicAny DynamicInterface TAO_ETCL EndpointPolicy_Core_Idl EndpointPolicy TAO_FlResource IFR_Client_Idl IFR_Client IFR_Client_skel IORInterceptor_Idl ObjRefTemplate_Idl ObjRefTemplate IORInterceptor IORManipulation_Idl IORManipulation Monitor_Idl TAO_Monitor PI_Server_Idl PI_Server TAO_QtResource RTCORBA_Core_Idl RTCORBA RTPortableServer_Idl RTPortableServer RTScheduler_Idl RTScheduler SmartProxies Strategies_Core_Idl Strategies TAO_TkResource TC_Idl TC TC_IIOP_Idl TC_IIOP TypeCodeFactory_Idl TypeCodeFactory TAO_Utils TAO_XtResource ZIOP_Core_Idl ZIOP catior_lib catior logWalker monitor_client nsadd nsdel nslist Deployment_ApplicationManager_IDL DAnCE_Properties_IDL Deployment_IDL DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_DAM_IDL Deployment_DAM_stub Deployment_DAM_skel Deployment_DomainApplication_IDL Deployment_DomainApplication_stub Deployment_DomainApplication_skel Deployment_ExecutionManager_IDL Deployment_ExecutionManager_stub Deployment_ExecutionManager_skel Deployment_NAM_IDL Deployment_NAM_stub Deployment_NAM_skel Deployment_NodeApplication_IDL Deployment_NodeApplication_stub Deployment_NodeApplication_skel Deployment_NodeManager_IDL Deployment_TargetManager_IDL Deployment_TargetManager_stub Deployment_NodeManager_stub Deployment_NodeManager_skel Deployment_RepositoryManager_IDL Deployment_RepositoryManager_stub Deployment_RepositoryManager_skel Deployment_TargetManager_skel DomainApplication DAnCE_IDL DAnCE_stub DAnCE_skel DAnCE_LM_Config_Plugins DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_LocalityManager_Impl DAnCE_LocalityManager_Exec DAnCE_Error_Interceptors DAnCE_NodeApplication DAnCE_NodeApplicationManager DAnCE_Artifact_Installation_IDL DAnCE_Artifact_Installation DAnCE_Http_Installation DAnCE_File_Installation DAnCE_Installation_Repository_Manager Node_Manager_Exec DAnCE_PL_Daemon_idl DAnCE_PL_Daemon_stub DAnCE_RepositoryManagerDaemon_IDL CircularDependency DAnCE_LocalityManager_ExplicitExec NameServiceTest_Idl NameServiceTestClient NameServiceTest_NameServiceTestServer NAM_NA NodeManager_NodeApplicationManager DAnCE_Domain_Validator_Base DAnCE_System_Health DAnCE_System_Health_stub DAnCE_SHS_Daemon_idl DAnCE_SHS_Daemon_stub DAnCE_SHS_Daemon DAnCE_SHS_CORBA_Transport DAnCE_SHS_Interceptors
+all: ACE ACE_Compression ACE_RLECompression ACE_ETCL ACE_ETCL_Parser ACE_FlReactor Monitor_Control ACE_Qt4Reactor_moc ACE_Qt4Reactor SSL ACE_TkReactor ACE_XtReactor JAWS JAWS_server gperf INet INet_SSL TAO_IDL_FE TAO_IDL_BE TAO_IDL_EXE IORTable_Core_Idl Codeset_Idl TAO_Core_idl TAO Codeset IORTable PortableServer_Idl AnyTypeCode_Idl AnyTypeCode PortableServer Svc_Utils Messaging_Idl Valuetype_Idl Valuetype PI_Idl CodecFactory_Idl CodecFactory PI Messaging CosNaming_IDL CosNaming CosNaming_Skel CosNaming_Serv NT_Naming_Service ImR_Client_Idl IORManipulation_Idl IORManipulation ImR_Client Naming_Service BiDir_GIOP_Idl BiDir_GIOP CSD_Framework_Idl CSD_Framework CSD_ThreadPool Compression_Idl Compression RLECompressor DiffServPolicy_Idl DiffServPolicy DynamicAny_Idl DynamicAny DynamicInterface Dynamic_TP TAO_ETCL EndpointPolicy_Core_Idl EndpointPolicy TAO_FlResource IFR_Client_Idl IFR_Client IFR_Client_skel IORInterceptor_Idl ObjRefTemplate_Idl ObjRefTemplate IORInterceptor Monitor_Idl TAO_Monitor PI_Server_Idl PI_Server TAO_QtResource RTCORBA_Core_Idl RTCORBA RTPortableServer_Idl RTPortableServer RTScheduler_Idl RTScheduler SmartProxies Strategies_Core_Idl Strategies TAO_TkResource TC_Idl TC TC_IIOP_Idl TC_IIOP TypeCodeFactory_Idl TypeCodeFactory TAO_Utils TAO_XtResource ZIOP_Core_Idl ZIOP catior_lib catior logWalker monitor_client nsgroup nsadd nsdel nslist Deployment_ApplicationManager_IDL DAnCE_Properties_IDL Deployment_IDL DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_DAM_IDL Deployment_DAM_stub Deployment_DAM_skel Deployment_DomainApplication_IDL Deployment_DomainApplication_stub Deployment_DomainApplication_skel Deployment_ExecutionManager_IDL Deployment_ExecutionManager_stub Deployment_ExecutionManager_skel Deployment_NAM_IDL Deployment_NAM_stub Deployment_NAM_skel Deployment_NodeApplication_IDL Deployment_NodeApplication_stub Deployment_NodeApplication_skel Deployment_NodeManager_IDL Deployment_TargetManager_IDL Deployment_TargetManager_stub Deployment_NodeManager_stub Deployment_NodeManager_skel Deployment_RepositoryManager_IDL Deployment_RepositoryManager_stub Deployment_RepositoryManager_skel Deployment_TargetManager_skel DomainApplication DAnCE_IDL DAnCE_stub DAnCE_skel DAnCE_LM_Config_Plugins DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_LocalityManager_Impl DAnCE_LocalityManager_Exec DAnCE_Error_Interceptors DAnCE_NodeApplication DAnCE_NodeApplicationManager DAnCE_Artifact_Installation_IDL DAnCE_Artifact_Installation DAnCE_Http_Installation DAnCE_File_Installation DAnCE_Installation_Repository_Manager Node_Manager_Exec DAnCE_PL_Daemon_idl DAnCE_PL_Daemon_stub DAnCE_RepositoryManagerDaemon_IDL CircularDependency DAnCE_LocalityManager_ExplicitExec NameServiceTest_Idl NameServiceTestClient NameServiceTest_NameServiceTestServer NAM_NA NodeManager_NodeApplicationManager DAnCE_Domain_Validator_Base DAnCE_System_Health DAnCE_System_Health_stub DAnCE_SHS_Daemon_idl DAnCE_SHS_Daemon_stub DAnCE_SHS_Daemon DAnCE_SHS_CORBA_Transport DAnCE_SHS_Interceptors
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -41,10 +41,7 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ../../apps/JAWS/server && $(MAKE) -f GNUmakefile.JAWS_server $(@)
 	$(KEEP_GOING)@cd ../../apps/gperf/src && $(MAKE) -f GNUmakefile.gperf $(@)
 	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.INet $(@)
-	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.FTP_Simple_exec $(@)
 	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.INet_SSL $(@)
-	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec $(@)
-	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.HTTP_Simple_exec $(@)
 	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_FE $(@)
 	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_BE $(@)
 	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_EXE $(@)
@@ -73,6 +70,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.CosNaming_Serv $(@)
 	$(KEEP_GOING)@cd ../orbsvcs/Naming_Service && $(MAKE) -f GNUmakefile.NT_Naming_Service $(@)
 	$(KEEP_GOING)@cd ../tao/ImR_Client && $(MAKE) -f GNUmakefile.ImR_Client_Idl $(@)
+	$(KEEP_GOING)@cd ../tao/IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation_Idl $(@)
+	$(KEEP_GOING)@cd ../tao/IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation $(@)
 	$(KEEP_GOING)@cd ../tao/ImR_Client && $(MAKE) -f GNUmakefile.ImR_Client $(@)
 	$(KEEP_GOING)@cd ../orbsvcs/Naming_Service && $(MAKE) -f GNUmakefile.Naming_Service $(@)
 	$(KEEP_GOING)@cd ../tao/BiDir_GIOP && $(MAKE) -f GNUmakefile.BiDir_GIOP_Idl $(@)
@@ -88,6 +87,7 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ../tao/DynamicAny && $(MAKE) -f GNUmakefile.DynamicAny_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/DynamicAny && $(MAKE) -f GNUmakefile.DynamicAny $(@)
 	$(KEEP_GOING)@cd ../tao/DynamicInterface && $(MAKE) -f GNUmakefile.DynamicInterface $(@)
+	$(KEEP_GOING)@cd ../tao/Dynamic_TP && $(MAKE) -f GNUmakefile.Dynamic_TP $(@)
 	$(KEEP_GOING)@cd ../tao/ETCL && $(MAKE) -f GNUmakefile.TAO_ETCL $(@)
 	$(KEEP_GOING)@cd ../tao/EndpointPolicy && $(MAKE) -f GNUmakefile.EndpointPolicy_Core_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/EndpointPolicy && $(MAKE) -f GNUmakefile.EndpointPolicy $(@)
@@ -99,8 +99,6 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ../tao/ObjRefTemplate && $(MAKE) -f GNUmakefile.ObjRefTemplate_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/ObjRefTemplate && $(MAKE) -f GNUmakefile.ObjRefTemplate $(@)
 	$(KEEP_GOING)@cd ../tao/IORInterceptor && $(MAKE) -f GNUmakefile.IORInterceptor $(@)
-	$(KEEP_GOING)@cd ../tao/IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation_Idl $(@)
-	$(KEEP_GOING)@cd ../tao/IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation $(@)
 	$(KEEP_GOING)@cd ../tao/Monitor && $(MAKE) -f GNUmakefile.Monitor_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/Monitor && $(MAKE) -f GNUmakefile.TAO_Monitor $(@)
 	$(KEEP_GOING)@cd ../tao/PI_Server && $(MAKE) -f GNUmakefile.PI_Server_Idl $(@)
@@ -130,6 +128,7 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ../utils/catior && $(MAKE) -f GNUmakefile.catior $(@)
 	$(KEEP_GOING)@cd ../utils/logWalker && $(MAKE) -f GNUmakefile.logWalker $(@)
 	$(KEEP_GOING)@cd ../utils/monitor && $(MAKE) -f GNUmakefile.monitor_client $(@)
+	$(KEEP_GOING)@cd ../utils/nsgroup && $(MAKE) -f GNUmakefile.nsgroup $(@)
 	$(KEEP_GOING)@cd ../utils/nslist && $(MAKE) -f GNUmakefile.nsadd $(@)
 	$(KEEP_GOING)@cd ../utils/nslist && $(MAKE) -f GNUmakefile.nsdel $(@)
 	$(KEEP_GOING)@cd ../utils/nslist && $(MAKE) -f GNUmakefile.nslist $(@)
@@ -267,21 +266,9 @@ gperf: ACE
 INet: ACE
 	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.INet all
 
-.PHONY: FTP_Simple_exec
-FTP_Simple_exec: ACE INet
-	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.FTP_Simple_exec all
-
 .PHONY: INet_SSL
 INet_SSL: ACE SSL INet
 	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.INet_SSL all
-
-.PHONY: HTTPS_Simple_exec
-HTTPS_Simple_exec: ACE SSL INet INet_SSL
-	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec all
-
-.PHONY: HTTP_Simple_exec
-HTTP_Simple_exec: ACE INet
-	$(KEEP_GOING)@cd ../../protocols/ace/INet && $(MAKE) -f GNUmakefile.HTTP_Simple_exec all
 
 .PHONY: TAO_IDL_FE
 TAO_IDL_FE: ACE
@@ -395,12 +382,20 @@ NT_Naming_Service: ACE TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServ
 ImR_Client_Idl: TAO_IDL_EXE
 	$(KEEP_GOING)@cd ../tao/ImR_Client && $(MAKE) -f GNUmakefile.ImR_Client_Idl all
 
+.PHONY: IORManipulation_Idl
+IORManipulation_Idl: TAO_IDL_EXE
+	$(KEEP_GOING)@cd ../tao/IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation_Idl all
+
+.PHONY: IORManipulation
+IORManipulation: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode IORManipulation_Idl
+	$(KEEP_GOING)@cd ../tao/IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation all
+
 .PHONY: ImR_Client
-ImR_Client: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer ImR_Client_Idl
+ImR_Client: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer ImR_Client_Idl IORManipulation
 	$(KEEP_GOING)@cd ../tao/ImR_Client && $(MAKE) -f GNUmakefile.ImR_Client all
 
 .PHONY: Naming_Service
-Naming_Service: ACE TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming CosNaming_Skel CosNaming_Serv ImR_Client
+Naming_Service: ACE TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming CosNaming_Skel CosNaming_Serv IORManipulation ImR_Client
 	$(KEEP_GOING)@cd ../orbsvcs/Naming_Service && $(MAKE) -f GNUmakefile.Naming_Service all
 
 .PHONY: BiDir_GIOP_Idl
@@ -455,6 +450,10 @@ DynamicAny: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode Valuetype DynamicAny_Idl
 DynamicInterface: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging
 	$(KEEP_GOING)@cd ../tao/DynamicInterface && $(MAKE) -f GNUmakefile.DynamicInterface all
 
+.PHONY: Dynamic_TP
+Dynamic_TP: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer CodecFactory PI CSD_Framework CSD_ThreadPool
+	$(KEEP_GOING)@cd ../tao/Dynamic_TP && $(MAKE) -f GNUmakefile.Dynamic_TP all
+
 .PHONY: TAO_ETCL
 TAO_ETCL: ACE ACE_ETCL TAO_IDL_EXE TAO Codeset AnyTypeCode
 	$(KEEP_GOING)@cd ../tao/ETCL && $(MAKE) -f GNUmakefile.TAO_ETCL all
@@ -498,14 +497,6 @@ ObjRefTemplate: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype
 .PHONY: IORInterceptor
 IORInterceptor: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI IORInterceptor_Idl ObjRefTemplate
 	$(KEEP_GOING)@cd ../tao/IORInterceptor && $(MAKE) -f GNUmakefile.IORInterceptor all
-
-.PHONY: IORManipulation_Idl
-IORManipulation_Idl: TAO_IDL_EXE
-	$(KEEP_GOING)@cd ../tao/IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation_Idl all
-
-.PHONY: IORManipulation
-IORManipulation: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode IORManipulation_Idl
-	$(KEEP_GOING)@cd ../tao/IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation all
 
 .PHONY: Monitor_Idl
 Monitor_Idl: TAO_IDL_EXE
@@ -622,6 +613,10 @@ logWalker: ACE
 .PHONY: monitor_client
 monitor_client: ACE ACE_ETCL ACE_ETCL_Parser Monitor_Control TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer CodecFactory PI TAO_ETCL TAO_Monitor Strategies
 	$(KEEP_GOING)@cd ../utils/monitor && $(MAKE) -f GNUmakefile.monitor_client all
+
+.PHONY: nsgroup
+nsgroup: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming IORManipulation
+	$(KEEP_GOING)@cd ../utils/nsgroup && $(MAKE) -f GNUmakefile.nsgroup all
 
 .PHONY: nsadd
 nsadd: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode CosNaming
@@ -927,9 +922,6 @@ project_name_list:
 	@echo JAWS
 	@echo JAWS_server
 	@echo gperf
-	@echo FTP_Simple_exec
-	@echo HTTPS_Simple_exec
-	@echo HTTP_Simple_exec
 	@echo INet
 	@echo INet_SSL
 	@echo TAO_IDL_BE
@@ -961,6 +953,7 @@ project_name_list:
 	@echo DynamicAny
 	@echo DynamicAny_Idl
 	@echo DynamicInterface
+	@echo Dynamic_TP
 	@echo TAO_ETCL
 	@echo EndpointPolicy
 	@echo EndpointPolicy_Core_Idl
@@ -1017,6 +1010,7 @@ project_name_list:
 	@echo catior_lib
 	@echo logWalker
 	@echo monitor_client
+	@echo nsgroup
 	@echo nsadd
 	@echo nsdel
 	@echo nslist

@@ -1,4 +1,4 @@
-// $Id: COIOP_Profile.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: COIOP_Profile.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "tao/Strategies/COIOP_Profile.h"
 
@@ -203,7 +203,7 @@ TAO_COIOP_Profile::add_endpoint (TAO_COIOP_Endpoint *endp)
 }
 
 char *
-TAO_COIOP_Profile::to_string (void)
+TAO_COIOP_Profile::to_string (void) const
 {
   CORBA::String_var key;
   TAO::ObjectKey::encode_sequence_to_string (key.inout(),

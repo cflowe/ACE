@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_sunos5_g++.GNU 93405 2011-02-17 19:30:42Z olli $
+# $Id: platform_sunos5_g++.GNU 96723 2013-01-28 23:34:44Z mitza $
 
 # SunOS 5.x (Solaris 2.x) with g++
 
@@ -29,7 +29,7 @@ CC              = gcc
 CXX             = g++
 
 ifeq ($(threads),1)
-  CPPFLAGS      += -D_REENTRANT
+  CPPFLAGS      += -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS
 endif
 
 DLD             = $(CXX)

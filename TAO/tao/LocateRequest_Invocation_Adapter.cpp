@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LocateRequest_Invocation_Adapter.cpp 91492 2010-08-26 13:40:18Z johnnyw $
+// $Id: LocateRequest_Invocation_Adapter.cpp 96885 2013-03-06 09:22:01Z sma $
 
 #include "tao/LocateRequest_Invocation_Adapter.h"
 #include "tao/Profile_Transport_Resolver.h"
@@ -145,14 +145,14 @@ namespace TAO
       throw ::CORBA::TRANSIENT (
         CORBA::SystemException::_tao_minor_code (
           TAO_INVOCATION_LOCATION_FORWARD_MINOR_CODE,
-          errno),
+          0),
         CORBA::COMPLETED_NO);
 
     if (stubobj == 0)
       throw ::CORBA::INTERNAL (
         CORBA::SystemException::_tao_minor_code (
           TAO_INVOCATION_LOCATION_FORWARD_MINOR_CODE,
-          errno),
+          EINVAL),
         CORBA::COMPLETED_NO);
 
     // Reset the profile in the stubs
@@ -162,7 +162,7 @@ namespace TAO
       throw ::CORBA::TRANSIENT (
         CORBA::SystemException::_tao_minor_code (
           TAO_INVOCATION_LOCATION_FORWARD_MINOR_CODE,
-          errno),
+          0),
         CORBA::COMPLETED_NO);
 
     return;

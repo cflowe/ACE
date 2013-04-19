@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1F27843-FECA-1BAD-4AB2-5ECD0000505F}</UniqueIdentifier>
+      <Extensions>cpp;cxx;cc;c;C</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{06319535-FECA-1BAD-4AB2-5ECD0000505F}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hh</Extensions>
+    </Filter>
+    <Filter Include="Build Files">
+      <UniqueIdentifier>{A1909F1C-FECA-1BAD-4AB2-5ECD0000505F}</UniqueIdentifier>
+      <Extensions>mpc;mpb;mwc</Extensions>
+    </Filter>
+    <Filter Include="Pkgconfig Files">
+      <UniqueIdentifier>{8441A3A3-FECA-1BAD-4AB2-5ECD0000505F}</UniqueIdentifier>
+      <Extensions>pcin</Extensions>
+    </Filter>
+    <Filter Include="Idl Files">
+      <UniqueIdentifier>{2990FA4C-FECA-1BAD-4AB2-5ECD0000505F}</UniqueIdentifier>
+      <Extensions>idl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-4AB2-5ECD0000505F}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{5635C877-FECA-1BAD-4AB2-5ECD0000505F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FT_NamingReplicationC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FT_NamingReplicationS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FT_NamingReplicationC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FT_NamingReplicationS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AV.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosConcurrency.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLifeCycle.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosLoadBalancing.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="cosnaming_serv_persistence.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNaming_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosNotification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosProperty.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTime.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="CosTrading.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="DsNotifyLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_idl.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_serv.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ec_typed_events_skel.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FaultTolerance.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FT_Naming_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtNaming.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtNamingReplication.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FTORB.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="FtRtEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="HTIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="IFRService.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="orbsvcs.mwc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="PortableGroup.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RT_Notification.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTCORBAEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Serv.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEvent_Skel.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTEventLogAdmin.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTKokyuEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSched.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="RTSchedEvent.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Security.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="SSLIOP.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="ssliop_params_dup.mpb">
+      <Filter>Build Files</Filter>
+    </None>
+    <None Include="Svc_Utils.mpc">
+      <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TAO_CosConcurrency.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosConcurrency_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosConcurrency_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosEvent.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosEvent_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosEvent_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosLifeCycle.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosLifeCycle_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosLoadBalancing.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNaming.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNaming_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNaming_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNotification.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNotification_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosNotification_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosProperty.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosProperty_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosProperty_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTime.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTime_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTime_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTrading.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTrading_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_CosTrading_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsEventLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsEventLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsEventLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsNotifyLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsNotifyLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_DsNotifyLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FaultTolerance.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FT_ClientORB.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FT_ServerORB.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_FTORB_Utils.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_PortableGroup.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEvent.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEvent_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEvent_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEventLogAdmin.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEventLogAdmin_Serv.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_RTEventLogAdmin_Skel.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+    <None Include="TAO_Svc_Utils.pc.in">
+      <Filter>Pkgconfig Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="FT_NamingReplication.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FT_NamingReplicationC.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Channel_Clients_T.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,17 +20,17 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Single_Threaded_AMH_Sequence_Idl Single_Threaded_AMH_Sequence_Client Single_Threaded_AMH_Sequence_Server ami_sequence_idl ami_sequence_client ami_sequence_server DII_Sequence_Idl DII_Sequence_Server DII_Sequence_Client DSI_Idl DSI_Sequence_Client DSI_Sequence_Server Deferred_Sequence_Idl Deferred_Sequence_Server Deferred_Sequence_Client Sequence_Ops_Time_Idl Sequence_Ops_Time_Test Single_Threaded_Sequence_Idl Single_Threaded_Sequence_Client Single_Threaded_Sequence_Server Thread_Per_Conn_Sequence_Idl Thread_Per_Conn_Sequence_Server Thread_Per_Conn_Sequence_Client Thread_Pool_Sequence_Idl Thread_Pool_Sequence_Server Thread_Pool_Sequence_Client
+all: Single_Threaded_AMH_Sequence_Idl Single_Threaded_AMH_Sequence_Server Single_Threaded_AMH_Sequence_Client ami_sequence_idl ami_sequence_server ami_sequence_client DII_Sequence_Idl DII_Sequence_Server DII_Sequence_Client DSI_Idl DSI_Sequence_Client DSI_Sequence_Server Deferred_Sequence_Idl Deferred_Sequence_Client Deferred_Sequence_Server Sequence_Ops_Time_Idl Sequence_Ops_Time_Test Single_Threaded_Sequence_Idl Single_Threaded_Sequence_Server Single_Threaded_Sequence_Client Thread_Per_Conn_Sequence_Idl Thread_Per_Conn_Sequence_Client Thread_Per_Conn_Sequence_Server Thread_Pool_Sequence_Idl Thread_Pool_Sequence_Server Thread_Pool_Sequence_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd AMH_Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_AMH_Sequence_Idl $(@)
-	$(KEEP_GOING)@cd AMH_Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_AMH_Sequence_Client $(@)
 	$(KEEP_GOING)@cd AMH_Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_AMH_Sequence_Server $(@)
+	$(KEEP_GOING)@cd AMH_Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_AMH_Sequence_Client $(@)
 	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.ami_sequence_idl $(@)
-	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.ami_sequence_client $(@)
 	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.ami_sequence_server $(@)
+	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.ami_sequence_client $(@)
 	$(KEEP_GOING)@cd DII && $(MAKE) -f GNUmakefile.DII_Sequence_Idl $(@)
 	$(KEEP_GOING)@cd DII && $(MAKE) -f GNUmakefile.DII_Sequence_Server $(@)
 	$(KEEP_GOING)@cd DII && $(MAKE) -f GNUmakefile.DII_Sequence_Client $(@)
@@ -38,16 +38,16 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.DSI_Sequence_Client $(@)
 	$(KEEP_GOING)@cd DSI && $(MAKE) -f GNUmakefile.DSI_Sequence_Server $(@)
 	$(KEEP_GOING)@cd Deferred && $(MAKE) -f GNUmakefile.Deferred_Sequence_Idl $(@)
-	$(KEEP_GOING)@cd Deferred && $(MAKE) -f GNUmakefile.Deferred_Sequence_Server $(@)
 	$(KEEP_GOING)@cd Deferred && $(MAKE) -f GNUmakefile.Deferred_Sequence_Client $(@)
+	$(KEEP_GOING)@cd Deferred && $(MAKE) -f GNUmakefile.Deferred_Sequence_Server $(@)
 	$(KEEP_GOING)@cd Sequence_Operations_Time && $(MAKE) -f GNUmakefile.Sequence_Ops_Time_Idl $(@)
 	$(KEEP_GOING)@cd Sequence_Operations_Time && $(MAKE) -f GNUmakefile.Sequence_Ops_Time_Test $(@)
 	$(KEEP_GOING)@cd Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Idl $(@)
-	$(KEEP_GOING)@cd Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Client $(@)
 	$(KEEP_GOING)@cd Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Server $(@)
+	$(KEEP_GOING)@cd Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Client $(@)
 	$(KEEP_GOING)@cd Thread_Per_Connection && $(MAKE) -f GNUmakefile.Thread_Per_Conn_Sequence_Idl $(@)
-	$(KEEP_GOING)@cd Thread_Per_Connection && $(MAKE) -f GNUmakefile.Thread_Per_Conn_Sequence_Server $(@)
 	$(KEEP_GOING)@cd Thread_Per_Connection && $(MAKE) -f GNUmakefile.Thread_Per_Conn_Sequence_Client $(@)
+	$(KEEP_GOING)@cd Thread_Per_Connection && $(MAKE) -f GNUmakefile.Thread_Per_Conn_Sequence_Server $(@)
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_Sequence_Idl $(@)
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_Sequence_Server $(@)
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_Sequence_Client $(@)
@@ -56,25 +56,25 @@ $(REMAINING_TARGETS):
 Single_Threaded_AMH_Sequence_Idl:
 	$(KEEP_GOING)@cd AMH_Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_AMH_Sequence_Idl all
 
-.PHONY: Single_Threaded_AMH_Sequence_Client
-Single_Threaded_AMH_Sequence_Client: Single_Threaded_AMH_Sequence_Idl
-	$(KEEP_GOING)@cd AMH_Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_AMH_Sequence_Client all
-
 .PHONY: Single_Threaded_AMH_Sequence_Server
-Single_Threaded_AMH_Sequence_Server: Single_Threaded_AMH_Sequence_Idl Single_Threaded_AMH_Sequence_Client
+Single_Threaded_AMH_Sequence_Server: Single_Threaded_AMH_Sequence_Idl
 	$(KEEP_GOING)@cd AMH_Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_AMH_Sequence_Server all
+
+.PHONY: Single_Threaded_AMH_Sequence_Client
+Single_Threaded_AMH_Sequence_Client: Single_Threaded_AMH_Sequence_Idl Single_Threaded_AMH_Sequence_Server
+	$(KEEP_GOING)@cd AMH_Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_AMH_Sequence_Client all
 
 .PHONY: ami_sequence_idl
 ami_sequence_idl:
 	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.ami_sequence_idl all
 
-.PHONY: ami_sequence_client
-ami_sequence_client: ami_sequence_idl
-	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.ami_sequence_client all
-
 .PHONY: ami_sequence_server
-ami_sequence_server: ami_sequence_idl ami_sequence_client
+ami_sequence_server: ami_sequence_idl
 	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.ami_sequence_server all
+
+.PHONY: ami_sequence_client
+ami_sequence_client: ami_sequence_idl ami_sequence_server
+	$(KEEP_GOING)@cd AMI && $(MAKE) -f GNUmakefile.ami_sequence_client all
 
 .PHONY: DII_Sequence_Idl
 DII_Sequence_Idl:
@@ -104,13 +104,13 @@ DSI_Sequence_Server: DSI_Idl DSI_Sequence_Client
 Deferred_Sequence_Idl:
 	$(KEEP_GOING)@cd Deferred && $(MAKE) -f GNUmakefile.Deferred_Sequence_Idl all
 
-.PHONY: Deferred_Sequence_Server
-Deferred_Sequence_Server: Deferred_Sequence_Idl
-	$(KEEP_GOING)@cd Deferred && $(MAKE) -f GNUmakefile.Deferred_Sequence_Server all
-
 .PHONY: Deferred_Sequence_Client
-Deferred_Sequence_Client: Deferred_Sequence_Idl Deferred_Sequence_Server
+Deferred_Sequence_Client: Deferred_Sequence_Idl
 	$(KEEP_GOING)@cd Deferred && $(MAKE) -f GNUmakefile.Deferred_Sequence_Client all
+
+.PHONY: Deferred_Sequence_Server
+Deferred_Sequence_Server: Deferred_Sequence_Idl Deferred_Sequence_Client
+	$(KEEP_GOING)@cd Deferred && $(MAKE) -f GNUmakefile.Deferred_Sequence_Server all
 
 .PHONY: Sequence_Ops_Time_Idl
 Sequence_Ops_Time_Idl:
@@ -124,25 +124,25 @@ Sequence_Ops_Time_Test: Sequence_Ops_Time_Idl
 Single_Threaded_Sequence_Idl:
 	$(KEEP_GOING)@cd Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Idl all
 
-.PHONY: Single_Threaded_Sequence_Client
-Single_Threaded_Sequence_Client: Single_Threaded_Sequence_Idl
-	$(KEEP_GOING)@cd Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Client all
-
 .PHONY: Single_Threaded_Sequence_Server
-Single_Threaded_Sequence_Server: Single_Threaded_Sequence_Idl Single_Threaded_Sequence_Client
+Single_Threaded_Sequence_Server: Single_Threaded_Sequence_Idl
 	$(KEEP_GOING)@cd Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Server all
+
+.PHONY: Single_Threaded_Sequence_Client
+Single_Threaded_Sequence_Client: Single_Threaded_Sequence_Idl Single_Threaded_Sequence_Server
+	$(KEEP_GOING)@cd Single_Threaded && $(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Client all
 
 .PHONY: Thread_Per_Conn_Sequence_Idl
 Thread_Per_Conn_Sequence_Idl:
 	$(KEEP_GOING)@cd Thread_Per_Connection && $(MAKE) -f GNUmakefile.Thread_Per_Conn_Sequence_Idl all
 
-.PHONY: Thread_Per_Conn_Sequence_Server
-Thread_Per_Conn_Sequence_Server: Thread_Per_Conn_Sequence_Idl
-	$(KEEP_GOING)@cd Thread_Per_Connection && $(MAKE) -f GNUmakefile.Thread_Per_Conn_Sequence_Server all
-
 .PHONY: Thread_Per_Conn_Sequence_Client
-Thread_Per_Conn_Sequence_Client: Thread_Per_Conn_Sequence_Idl Thread_Per_Conn_Sequence_Server
+Thread_Per_Conn_Sequence_Client: Thread_Per_Conn_Sequence_Idl
 	$(KEEP_GOING)@cd Thread_Per_Connection && $(MAKE) -f GNUmakefile.Thread_Per_Conn_Sequence_Client all
+
+.PHONY: Thread_Per_Conn_Sequence_Server
+Thread_Per_Conn_Sequence_Server: Thread_Per_Conn_Sequence_Idl Thread_Per_Conn_Sequence_Client
+	$(KEEP_GOING)@cd Thread_Per_Connection && $(MAKE) -f GNUmakefile.Thread_Per_Conn_Sequence_Server all
 
 .PHONY: Thread_Pool_Sequence_Idl
 Thread_Pool_Sequence_Idl:

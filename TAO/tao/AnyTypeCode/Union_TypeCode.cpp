@@ -1,4 +1,4 @@
-// $Id: Union_TypeCode.cpp 78457 2007-05-23 12:42:05Z johnnyw $
+// $Id: Union_TypeCode.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #ifndef TAO_UNION_TYPECODE_CPP
 #define TAO_UNION_TYPECODE_CPP
@@ -98,6 +98,19 @@ TAO::TypeCode::Union<StringType,
                      RefCountPolicy>::tao_release (void)
 {
   this->RefCountPolicy::remove_ref ();
+}
+
+template <typename StringType,
+          typename TypeCodeType,
+          class CaseArrayType,
+          class RefCountPolicy>
+const CaseArrayType &
+TAO::TypeCode::Union<StringType,
+                     TypeCodeType,
+                     CaseArrayType,
+                     RefCountPolicy>::cases (void) const
+{
+  return cases_;
 }
 
 template <typename StringType,

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: CosNaming_IDL CosNaming CosProperty_IDL CosProperty CosProperty_Skel CosProperty_Serv AV CosConcurrency_IDL CosConcurrency CosConcurrency_Skel CosConcurrency_Serv CosEvent_IDL CosEvent Svc_Utils CosEvent_Skel CosEvent_Serv CosLifeCycle_IDL CosLifeCycle CosLifeCycle_Skel PortableGroup CosLoadBalancing CosNaming_Skel CosNaming_Serv CosNotification_IDL CosNotification CosNotification_MC CosNotification_Skel CosNotification_Serv CosNotification_MC_Ext CosNotification_Persist CosTime_IDL CosTime CosTime_Skel CosTime_Serv CosTrading_IDL CosTrading CosTrading_Skel CosTrading_Serv DsLogAdmin_IDL DsLogAdmin DsEventLogAdmin_IDL DsEventLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv DsEventLogAdmin_Skel DsEventLogAdmin_Serv DsNotifyLogAdmin_IDL DsNotifyLogAdmin DsNotifyLogAdmin_Skel DsNotifyLogAdmin_Serv FTORB_Utils FTRT_ClientORB RTEvent RTEvent_Skel RTEvent_Serv FtRtEvent FTRT_EventChannel FT_ClientORB FT_ServerORB FaultTolerance HTIOP IFRService RTCORBAEvent RTEventLogAdmin_IDL RTEventLogAdmin RTSched RTEventLogAdmin_Skel RTEventLogAdmin_Serv RTKokyuEvent RTSchedEvent RT_Notification Security SSLIOP
+all: CosNaming_IDL CosNaming CosProperty_IDL CosProperty CosProperty_Skel CosProperty_Serv AV CosConcurrency_IDL CosConcurrency CosConcurrency_Skel CosConcurrency_Serv CosEvent_IDL CosEvent Svc_Utils CosEvent_Skel CosEvent_Serv CosLifeCycle_IDL CosLifeCycle CosLifeCycle_Skel PortableGroup CosLoadBalancing CosNaming_Skel CosNaming_Serv CosNotification_IDL CosNotification CosNotification_MC CosNotification_Skel CosNotification_Serv CosNotification_MC_Ext CosNotification_Persist CosTime_IDL CosTime CosTime_Skel CosTime_Serv CosTrading_IDL CosTrading CosTrading_Skel CosTrading_Serv DsLogAdmin_IDL DsLogAdmin DsEventLogAdmin_IDL DsEventLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv DsEventLogAdmin_Skel DsEventLogAdmin_Serv DsNotifyLogAdmin_IDL DsNotifyLogAdmin DsNotifyLogAdmin_Skel DsNotifyLogAdmin_Serv FTORB_Utils FTRT_ClientORB RTEvent RTEvent_Skel RTEvent_Serv FtRtEvent FTRT_EventChannel FT_ClientORB FtNaming FtNamingReplication FT_Naming_Serv FT_ServerORB FaultTolerance HTIOP IFRService RTCORBAEvent RTEventLogAdmin_IDL RTEventLogAdmin RTSched RTEventLogAdmin_Skel RTEventLogAdmin_Serv RTKokyuEvent RTSchedEvent RT_Notification Security SSLIOP
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -83,6 +83,9 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FtRtEvent $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FTRT_EventChannel $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FT_ClientORB $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FtNaming $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FtNamingReplication $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FT_Naming_Serv $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FT_ServerORB $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FaultTolerance $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.HTIOP $(@)
@@ -331,6 +334,18 @@ FTRT_EventChannel: CosNaming Svc_Utils PortableGroup FTORB_Utils RTEvent RTEvent
 FT_ClientORB: CosNaming PortableGroup FTORB_Utils
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FT_ClientORB all
 
+.PHONY: FtNaming
+FtNaming: CosNaming Svc_Utils PortableGroup CosNaming_Skel CosNaming_Serv
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FtNaming all
+
+.PHONY: FtNamingReplication
+FtNamingReplication: CosNaming Svc_Utils PortableGroup CosNaming_Skel CosNaming_Serv FtNaming
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FtNamingReplication all
+
+.PHONY: FT_Naming_Serv
+FT_Naming_Serv: CosNaming Svc_Utils PortableGroup CosLoadBalancing CosNaming_Skel CosNaming_Serv FtNaming FtNamingReplication
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FT_Naming_Serv all
+
 .PHONY: FT_ServerORB
 FT_ServerORB: CosNaming PortableGroup FTORB_Utils
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FT_ServerORB all
@@ -444,8 +459,11 @@ project_name_list:
 	@echo FTRT_ClientORB
 	@echo FTRT_EventChannel
 	@echo FT_ClientORB
+	@echo FT_Naming_Serv
 	@echo FT_ServerORB
 	@echo FaultTolerance
+	@echo FtNaming
+	@echo FtNamingReplication
 	@echo FtRtEvent
 	@echo HTIOP
 	@echo IFRService

@@ -1,4 +1,4 @@
-// $Id: SSL_Context.cpp 96231 2012-11-07 13:52:17Z johnnyw $
+// $Id: SSL_Context.cpp 96831 2013-02-18 01:59:32Z stanleyk $
 #include "SSL_Context.h"
 
 #include "sslconf.h"
@@ -274,6 +274,28 @@ ACE_SSL_Context::set_mode (int mode)
     case ACE_SSL_Context::TLSv1:
       method = ::TLSv1_method ();
       break;
+#ifdef TLS1_1_VERSION
+    case ACE_SSL_Context::TLSv1_1_client:
+      method = ::TLSv1_1_client_method ();
+      break;
+    case ACE_SSL_Context::TLSv1_1_server:
+      method = ::TLSv1_1_server_method ();
+      break;
+    case ACE_SSL_Context::TLSv1_1:
+      method = ::TLSv1_1_method ();
+      break;
+#endif
+#ifdef TLS1_2_VERSION
+    case ACE_SSL_Context::TLSv1_2_client:
+      method = ::TLSv1_2_client_method ();
+      break;
+    case ACE_SSL_Context::TLSv1_2_server:
+      method = ::TLSv1_2_server_method ();
+      break;
+    case ACE_SSL_Context::TLSv1_2:
+      method = ::TLSv1_2_method ();
+      break;
+#endif
     default:
       method = ::SSLv3_method ();
       break;

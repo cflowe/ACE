@@ -93,6 +93,7 @@ else
 endif
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 ifneq ($(LIBCHECK), 1)
@@ -120,10 +121,16 @@ else
   SHLIB =
   all: require_warning
 endif
+else
+  LIB_CHECKED   =
+  SHLIB =
+  all: require_warning
+endif
 
 ifeq (,$(TAO_ORBSVCS))
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 else
@@ -147,8 +154,14 @@ else
   all: require_warning
 endif
 else
+  LIB_CHECKED   =
+  SHLIB =
+  all: require_warning
+endif
+else
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
   ifeq (Naming, $(findstring Naming, $(TAO_ORBSVCS)))
@@ -211,6 +224,11 @@ else
   SHLIB =
   all: require_warning
 endif
+else
+  LIB_CHECKED   =
+  SHLIB =
+  all: require_warning
+endif
 endif
 LSRC   = $(FILES)
 
@@ -250,6 +268,9 @@ requires_disabled_macros += corba_messaging
 endif
 ifneq ($(interceptors),1)
 requires_disabled_macros += interceptors
+endif
+ifneq ($(threads),1)
+requires_disabled_macros += threads
 endif
 ifneq ($(ace_uuid),1)
 requires_disabled_macros += ace_uuid
@@ -300,9 +321,11 @@ endif
 __prebuild__:
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 	@-:
+endif
 endif
 endif
 endif
@@ -342,6 +365,7 @@ endif
 ifeq ($(LIBCHECK),1)
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
+ifeq ($(threads),1)
 ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 install:
@@ -360,6 +384,7 @@ else
 	$(INSTALLER) -i -s $(subst $(SPACE),$(COMMA),$(INST_TAGS)) \
 	  $(INST_LOCATIONS) $(if $(ARCH),-d $(ARCH)) $(PRJINST_OPTIONS) \
 	  $(DESTDIR)$(INSTALL_PREFIX)
+endif
 endif
 endif
 endif

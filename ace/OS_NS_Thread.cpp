@@ -1,4 +1,4 @@
-// $Id: OS_NS_Thread.cpp 96226 2012-11-06 14:54:10Z shuston $
+// $Id: OS_NS_Thread.cpp 96890 2013-03-07 19:18:37Z mesnier_p $
 
 #include "ace/OS_NS_Thread.h"
 
@@ -4127,7 +4127,7 @@ ACE_OS::thr_create (ACE_THR_FUNC func,
       if (ACE_BIT_ENABLED (flags, THR_SCOPE_SYSTEM)
           || ACE_BIT_ENABLED (flags, THR_SCOPE_PROCESS))
         {
-#     if defined (ACE_CONFIG_LINUX_H) || defined (HPUX) || defined (ACE_VXWORKS)
+#     if defined (ACE_CONFIG_LINUX_H) || defined (HPUX) || defined (ACE_VXWORKS) || defined (__QNX__)
           // LinuxThreads do not have support for PTHREAD_SCOPE_PROCESS.
           // Neither does HPUX (up to HP-UX 11.00, as far as I know).
           // Also VxWorks only delivers scope system

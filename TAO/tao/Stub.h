@@ -4,7 +4,7 @@
 /**
  *  @file    Stub.h
  *
- *  $Id: Stub.h 93525 2011-03-10 13:15:16Z johnnyw $
+ *  $Id: Stub.h 96783 2013-02-07 23:05:45Z mesnier_p $
  *
  *  @author  Portions Copyright 1994-1995 by Sun Microsystems Inc.
  *  @author  Portions Copyright 1997-2002 by Washington University
@@ -144,6 +144,9 @@ public:
   /// Obtain a pointer to the forwarded profile set
   const TAO_MProfile *forward_profiles (void) const;
 
+  /// Obtain a pointer to the forwarded profile set
+  TAO_MProfile *forward_profiles (void);
+
   /// True if permanent location forward occured, in this case the lock must be set and the
 
   // Manage forward and base profiles.
@@ -164,6 +167,11 @@ public:
    * reset.
    */
   void reset_profiles (void);
+
+  /// Returns true if the profile in use is
+  /// the same as the profile in use after
+  /// reset_profiles() is called.
+  CORBA::Boolean at_starting_profile (void) const;
 
   /// Returns true if a forward profile has successfully been used.
   /// profile_success_ && forward_profiles_
@@ -406,6 +414,7 @@ protected:
   /// True if forwarding request upon some specific exceptions
   /// (e.g. OBJECT_NOT_EXIST) already happened.
   ACE_Atomic_Op<TAO_SYNCH_MUTEX, bool> forwarded_on_exception_;
+
 };
 
 // Define a TAO_Stub auto_ptr class.

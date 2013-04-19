@@ -86,8 +86,8 @@ else
 endif
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
-ifeq ($(ace_uuid),1)
 ifeq ($(threads),1)
+ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 ifneq ($(ace_for_tao),1)
 ifeq ($(LIBCHECK), 1)
@@ -163,11 +163,11 @@ endif
 ifneq ($(interceptors),1)
 requires_disabled_macros += interceptors
 endif
-ifneq ($(ace_uuid),1)
-requires_disabled_macros += ace_uuid
-endif
 ifneq ($(threads),1)
 requires_disabled_macros += threads
+endif
+ifneq ($(ace_uuid),1)
+requires_disabled_macros += ace_uuid
 endif
 require_warning:
 	@echo RolyPoly_Server will not be built due to the following disabled make macros: $(requires_disabled_macros)>&2
@@ -233,8 +233,8 @@ endif
 __prebuild__:
 ifeq ($(corba_messaging),1)
 ifeq ($(interceptors),1)
-ifeq ($(ace_uuid),1)
 ifeq ($(threads),1)
+ifeq ($(ace_uuid),1)
 ifneq ($(ace_for_tao),1)
 ifneq ($(ace_for_tao),1)
 	@-:

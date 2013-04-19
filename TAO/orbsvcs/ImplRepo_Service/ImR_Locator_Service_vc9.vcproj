@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IORTabled.lib TAO_Valuetyped.lib TAO_PortableServerd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Messagingd.lib ACEXMLd.lib ACEXML_Parserd.lib TAO_Svc_Utilsd.lib TAO_PI_Serverd.lib TAO_ImR_Clientd.lib TAO_ImR_Locator_IDLd.lib TAO_ImR_Activator_IDLd.lib TAO_ImR_Locatord.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IORTabled.lib TAO_Valuetyped.lib TAO_PortableServerd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Messagingd.lib ACEXMLd.lib ACEXML_Parserd.lib TAO_Svc_Utilsd.lib TAO_PI_Serverd.lib TAO_IORManipd.lib TAO_ImR_Clientd.lib TAO_ImR_Locator_IDLd.lib TAO_ImR_Activator_IDLd.lib TAO_ImR_Locatord.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_imr_locator.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -155,7 +155,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IORTable.lib TAO_Valuetype.lib TAO_PortableServer.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Messaging.lib ACEXML.lib ACEXML_Parser.lib TAO_Svc_Utils.lib TAO_PI_Server.lib TAO_ImR_Client.lib TAO_ImR_Locator_IDL.lib TAO_ImR_Activator_IDL.lib TAO_ImR_Locator.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IORTable.lib TAO_Valuetype.lib TAO_PortableServer.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Messaging.lib ACEXML.lib ACEXML_Parser.lib TAO_Svc_Utils.lib TAO_PI_Server.lib TAO_IORManip.lib TAO_ImR_Client.lib TAO_ImR_Locator_IDL.lib TAO_ImR_Activator_IDL.lib TAO_ImR_Locator.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_imr_locator.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -240,7 +240,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IORTabled.lib TAO_Valuetyped.lib TAO_PortableServerd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Messagingd.lib ACEXMLd.lib ACEXML_Parserd.lib TAO_Svc_Utilsd.lib TAO_PI_Serverd.lib TAO_ImR_Clientd.lib TAO_ImR_Locator_IDLd.lib TAO_ImR_Activator_IDLd.lib TAO_ImR_Locatord.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IORTabled.lib TAO_Valuetyped.lib TAO_PortableServerd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Messagingd.lib ACEXMLd.lib ACEXML_Parserd.lib TAO_Svc_Utilsd.lib TAO_PI_Serverd.lib TAO_IORManipd.lib TAO_ImR_Clientd.lib TAO_ImR_Locator_IDLd.lib TAO_ImR_Activator_IDLd.lib TAO_ImR_Locatord.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_imr_locator.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -320,7 +320,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IORTable.lib TAO_Valuetype.lib TAO_PortableServer.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Messaging.lib ACEXML.lib ACEXML_Parser.lib TAO_Svc_Utils.lib TAO_PI_Server.lib TAO_ImR_Client.lib TAO_ImR_Locator_IDL.lib TAO_ImR_Activator_IDL.lib TAO_ImR_Locator.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IORTable.lib TAO_Valuetype.lib TAO_PortableServer.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Messaging.lib ACEXML.lib ACEXML_Parser.lib TAO_Svc_Utils.lib TAO_PI_Server.lib TAO_IORManip.lib TAO_ImR_Client.lib TAO_ImR_Locator_IDL.lib TAO_ImR_Activator_IDL.lib TAO_ImR_Locator.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_imr_locator.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

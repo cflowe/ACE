@@ -4,7 +4,7 @@
 /**
  *  @file   CDR_Stream.h
  *
- *  $Id: CDR_Stream.h 95896 2012-06-18 20:42:07Z hillj $
+ *  $Id: CDR_Stream.h 96786 2013-02-08 13:41:41Z stanleyk $
  *
  * ACE Common Data Representation (CDR) marshaling and demarshaling
  * classes.
@@ -737,7 +737,7 @@ public:
   ACE_InputCDR (Transfer_Contents rhs);
 
   /// Destructor
-  ~ACE_InputCDR (void);
+  virtual ~ACE_InputCDR (void);
 
   /// Disambiguate overloading when extracting octets, chars,
   /// booleans, and bounded strings

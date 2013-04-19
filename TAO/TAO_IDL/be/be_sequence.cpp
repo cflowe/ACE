@@ -3,7 +3,7 @@
 /**
  *  @file    be_sequence.cpp
  *
- *  $Id: be_sequence.cpp 95346 2011-12-15 20:48:33Z parsons $
+ *  $Id: be_sequence.cpp 96717 2013-01-28 18:16:09Z johnnyw $
  *
  *  Extension of class AST_Sequence that provides additional means for C++
  *  mapping.
@@ -391,9 +391,18 @@ be_sequence::gen_ostream_operator (TAO_OutStream *os,
       << "const " << this->name () << " &_tao_sequence" << be_uidt_nl
       << ")" << be_uidt_nl
       << "{" << be_idt_nl
-      << "strm << \"" << this->name () << "[\";" << be_nl_2
-      << "for (CORBA::ULong i = 0; i < _tao_sequence.length (); ++i)"
-      << be_idt_nl
+      << "strm << \"" << this->name () << "[\";" << be_nl_2;
+
+  if (be_global->alt_mapping ())
+    {
+      *os << "for (CORBA::ULong i = 0; i < _tao_sequence.size (); ++i)";
+    }
+  else
+    {
+      *os << "for (CORBA::ULong i = 0; i < _tao_sequence.length (); ++i)";
+    }
+
+  *os << be_idt_nl
       << "{" << be_idt_nl
       << "if (i != 0)" << be_idt_nl
       << "{" << be_idt_nl

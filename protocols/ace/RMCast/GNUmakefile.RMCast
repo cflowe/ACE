@@ -27,14 +27,14 @@ SHLIB            = $(SHLIB_UNCHECKED)
 FILES = \
   Stack.cpp \
   Flow.cpp \
-  Link.cpp \
-  Socket.cpp \
   Reassemble.cpp \
-  Fragment.cpp \
-  Simulator.cpp \
-  Protocol.cpp \
+  Socket.cpp \
+  Link.cpp \
+  Acknowledge.cpp \
   Retransmit.cpp \
-  Acknowledge.cpp
+  Simulator.cpp \
+  Fragment.cpp \
+  Protocol.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -271,8 +271,8 @@ endif
 #Simulator.h
 #Flow.h
 #Stack.h
-#Fragment.h
 #Protocol.h
+#Fragment.h
 #Socket.h
 #Link.h
 #RMCast_Export.h
@@ -285,14 +285,14 @@ endif
 #source_files:
 #Stack.cpp
 #Flow.cpp
-#Link.cpp
-#Socket.cpp
 #Reassemble.cpp
-#Fragment.cpp
-#Simulator.cpp
-#Protocol.cpp
-#Retransmit.cpp
+#Socket.cpp
+#Link.cpp
 #Acknowledge.cpp
+#Retransmit.cpp
+#Simulator.cpp
+#Fragment.cpp
+#Protocol.cpp
 #
 #lib_output:
 #../../../lib ACE_RMCast

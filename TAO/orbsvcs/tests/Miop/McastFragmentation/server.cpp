@@ -1,5 +1,5 @@
 //
-// $Id: server.cpp 96029 2012-08-10 14:01:17Z sma $
+// $Id: server.cpp 96705 2013-01-25 13:35:54Z sma $
 //
 
 #include "ace/Task.h"
@@ -193,6 +193,14 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
     {
       ex._tao_print_exception ("Exception caught in server main ():");
       return -1;
+    }
+
+  if (Number_of_Problems.value ())
+    {
+      ACE_DEBUG ((LM_DEBUG,
+                  ACE_TEXT ("\nServer finished with *Possiably* %u PROBLEMS.\n"),
+                  Number_of_Problems.value ()));
+      return 1;
     }
 
   ACE_DEBUG ((LM_DEBUG,

@@ -27,20 +27,20 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Context.cpp \
-  AMH_DSI_Response_Handler.cpp \
-  Dynamic_Implementation.cpp \
-  ExceptionList.cpp \
-  DII_Reply_Dispatcher.cpp \
-  DII_Invocation_Adapter.cpp \
-  DII_Invocation.cpp \
-  Unknown_User_Exception.cpp \
-  DII_Arguments_Converter_Impl.cpp \
   DII_Arguments.cpp \
   Server_Request.cpp \
-  DII_Reply_Handler.cpp \
+  DII_Invocation_Adapter.cpp \
+  DII_Invocation.cpp \
+  Context.cpp \
+  ExceptionList.cpp \
+  Dynamic_Implementation.cpp \
+  Request.cpp \
+  DII_Arguments_Converter_Impl.cpp \
+  DII_Reply_Dispatcher.cpp \
   Dynamic_Adapter_Impl.cpp \
-  Request.cpp
+  Unknown_User_Exception.cpp \
+  DII_Reply_Handler.cpp \
+  AMH_DSI_Response_Handler.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -270,8 +270,8 @@ endif
 #DII_Arguments.inl
 #Context.inl
 #ExceptionList.inl
-#Request.inl
 #DII_Reply_Handler.inl
+#Request.inl
 #AMH_DSI_Response_Handler.inl
 #
 #resource_files:
@@ -287,32 +287,32 @@ endif
 #DII_Invocation_Adapter.h
 #Unknown_User_Exception.h
 #DII_Arguments_Converter_Impl.h
-#Request.h
 #DII_Reply_Handler.h
 #DII_Reply_Dispatcher.h
+#Request.h
 #AMH_DSI_Response_Handler.h
 #Dynamic_Adapter_Impl.h
-#DII_CORBA_methods.h
 #dynamicinterface_export.h
+#DII_CORBA_methods.h
 #
 #pkgconfig_files:
 #TAO_DynamicInterface.pc.in
 #
 #source_files:
-#Context.cpp
-#AMH_DSI_Response_Handler.cpp
-#Dynamic_Implementation.cpp
-#ExceptionList.cpp
-#DII_Reply_Dispatcher.cpp
-#DII_Invocation_Adapter.cpp
-#DII_Invocation.cpp
-#Unknown_User_Exception.cpp
-#DII_Arguments_Converter_Impl.cpp
 #DII_Arguments.cpp
 #Server_Request.cpp
-#DII_Reply_Handler.cpp
-#Dynamic_Adapter_Impl.cpp
+#DII_Invocation_Adapter.cpp
+#DII_Invocation.cpp
+#Context.cpp
+#ExceptionList.cpp
+#Dynamic_Implementation.cpp
 #Request.cpp
+#DII_Arguments_Converter_Impl.cpp
+#DII_Reply_Dispatcher.cpp
+#Dynamic_Adapter_Impl.cpp
+#Unknown_User_Exception.cpp
+#DII_Reply_Handler.cpp
+#AMH_DSI_Response_Handler.cpp
 #
 #lib_output:
 #../../../lib TAO_DynamicInterface

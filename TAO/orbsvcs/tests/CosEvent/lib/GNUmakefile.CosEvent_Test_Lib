@@ -27,8 +27,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Counting_Supplier.cpp \
-  Counting_Consumer.cpp
+  Counting_Consumer.cpp \
+  Counting_Supplier.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

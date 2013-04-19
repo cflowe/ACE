@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_clang_common.GNU 96053 2012-08-15 11:30:15Z johnnyw $
+# $Id: platform_clang_common.GNU 96760 2013-02-05 21:11:03Z stanleyk $
 #
 # Common file help turn on/off explicit template instantiation
 
@@ -117,3 +117,4 @@ else
   CPPFLAGS += -DACE_HAS_CUSTOM_EXPORT_MACROS=0
 endif # shared_libs
 
+FLAGS_C_CC += -W -Wall

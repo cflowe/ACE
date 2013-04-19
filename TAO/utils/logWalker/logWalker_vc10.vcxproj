@@ -267,6 +267,8 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GIOP_Buffer.cpp">
+    </ClCompile>
     <ClCompile Include="HostProcess.cpp">
     </ClCompile>
     <ClCompile Include="Invocation.cpp">
@@ -285,6 +287,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GIOP_Buffer.h" />
     <ClInclude Include="HostProcess.h" />
     <ClInclude Include="Invocation.h" />
     <ClInclude Include="Log.h" />

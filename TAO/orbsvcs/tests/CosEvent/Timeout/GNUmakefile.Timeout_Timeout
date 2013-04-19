@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  TestEventConsumer_i.cpp \
-  TimeoutTestMain.cpp
+  TimeoutTestMain.cpp \
+  TestEventConsumer_i.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

@@ -1,0 +1,36 @@
+// -*- MPC -*-
+// $Id: Bug_4059_Regression.mpc 96783 2013-02-07 23:05:45Z mesnier_p $
+
+project(*idl): taoidldefaults {
+  IDL_Files {
+    Test.idl
+  }
+  custom_only = 1
+}
+
+project(*client) : taoserver, rtcorba, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  exename = client
+  after += *idl
+  source_files {
+    client.cpp
+  }
+  source_files {
+    TestC.cpp
+  }
+  IDL_Files {
+  }
+}
+
+project(*server) : iortable, rt_server, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+  after += *idl
+  source_files {
+    server.cpp
+    Hello.cpp
+  }
+  source_files {
+    TestC.cpp
+    TestS.cpp
+  }
+  IDL_Files {
+  }
+}

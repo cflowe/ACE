@@ -1,4 +1,4 @@
-// $Id: HTIOP_Connector.cpp 91739 2010-09-13 15:00:16Z johnnyw $
+// $Id: HTIOP_Connector.cpp 96793 2013-02-11 02:21:22Z mesnier_p $
 
 #include "orbsvcs/HTIOP/HTIOP_Connector.h"
 #include "orbsvcs/HTIOP/HTIOP_Profile.h"
@@ -141,7 +141,6 @@ TAO::HTIOP::Connector::make_connection (TAO::Profile_Transport_Resolver *,
 
 
   ACE::HTBP::Session_Id_t session_id;
-  ACE_INET_Addr *proxy = 0;
   ACE_TString proxy_host;
   unsigned proxy_port;
 
@@ -161,10 +160,6 @@ TAO::HTIOP::Connector::make_connection (TAO::Profile_Transport_Resolver *,
 
   if (proxy_port == 0)
     return 0;
-
-  ACE_NEW_RETURN (proxy,
-                  ACE_INET_Addr(static_cast<u_short> (proxy_port),proxy_host.c_str()),
-                  0);
 
   session_id.peer_ = htiop_endpoint->object_addr ();
   session_id.id_ = ACE::HTBP::Session::next_session_id();
@@ -201,6 +196,10 @@ TAO::HTIOP::Connector::make_connection (TAO::Profile_Transport_Resolver *,
   ACE::HTBP::Session *session = 0;
   if (ACE::HTBP::Session::find_session (session_id, session) == -1)
     {
+      ACE_INET_Addr *proxy = 0;
+      ACE_NEW_RETURN (proxy,
+                      ACE_INET_Addr(static_cast<u_short> (proxy_port),proxy_host.c_str()),
+                      0);
       ACE_NEW_RETURN (session, ACE::HTBP::Session (session_id,proxy, 1), 0);
       if (ACE::HTBP::Session::add_session (session) == -1)
         ACE_ERROR_RETURN ((LM_ERROR,

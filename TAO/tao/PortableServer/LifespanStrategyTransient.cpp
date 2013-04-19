@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LifespanStrategyTransient.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: LifespanStrategyTransient.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "tao/PortableServer/LifespanStrategyTransient.h"
 #include "ace/OS_NS_sys_time.h"
@@ -102,6 +102,13 @@ namespace TAO
     LifespanStrategyTransient::use_imr () const
     {
       return false;
+    }
+
+    CORBA::Object_ptr
+    LifespanStrategyTransient::imr_key_to_object (const TAO::ObjectKey &,
+                                                  const char *) const
+    {
+      return CORBA::Object::_nil();
     }
 
     ::PortableServer::LifespanPolicyValue

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: bank_IDL bank_server bank_client chat_IDL chat_client chat_server echo_IDL echo_server echo_client grid_IDL grid_client grid_server Simple_Time_Date_Lib Simple_Time_Date_Client Simple_Time_Date_Server time_IDL time_client time_server
+all: bank_IDL bank_server bank_client chat_IDL chat_server chat_client echo_IDL echo_client echo_server grid_IDL grid_server grid_client Simple_Time_Date_Lib Simple_Time_Date_Client Simple_Time_Date_Server time_IDL time_client time_server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -29,14 +29,14 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd bank && $(MAKE) -f GNUmakefile.bank_server $(@)
 	$(KEEP_GOING)@cd bank && $(MAKE) -f GNUmakefile.bank_client $(@)
 	$(KEEP_GOING)@cd chat && $(MAKE) -f GNUmakefile.chat_IDL $(@)
-	$(KEEP_GOING)@cd chat && $(MAKE) -f GNUmakefile.chat_client $(@)
 	$(KEEP_GOING)@cd chat && $(MAKE) -f GNUmakefile.chat_server $(@)
+	$(KEEP_GOING)@cd chat && $(MAKE) -f GNUmakefile.chat_client $(@)
 	$(KEEP_GOING)@cd echo && $(MAKE) -f GNUmakefile.echo_IDL $(@)
-	$(KEEP_GOING)@cd echo && $(MAKE) -f GNUmakefile.echo_server $(@)
 	$(KEEP_GOING)@cd echo && $(MAKE) -f GNUmakefile.echo_client $(@)
+	$(KEEP_GOING)@cd echo && $(MAKE) -f GNUmakefile.echo_server $(@)
 	$(KEEP_GOING)@cd grid && $(MAKE) -f GNUmakefile.grid_IDL $(@)
-	$(KEEP_GOING)@cd grid && $(MAKE) -f GNUmakefile.grid_client $(@)
 	$(KEEP_GOING)@cd grid && $(MAKE) -f GNUmakefile.grid_server $(@)
+	$(KEEP_GOING)@cd grid && $(MAKE) -f GNUmakefile.grid_client $(@)
 	$(KEEP_GOING)@cd time-date && $(MAKE) -f GNUmakefile.Simple_Time_Date_Lib $(@)
 	$(KEEP_GOING)@cd time-date && $(MAKE) -f GNUmakefile.Simple_Time_Date_Client $(@)
 	$(KEEP_GOING)@cd time-date && $(MAKE) -f GNUmakefile.Simple_Time_Date_Server $(@)
@@ -60,37 +60,37 @@ bank_client: bank_IDL bank_server
 chat_IDL:
 	$(KEEP_GOING)@cd chat && $(MAKE) -f GNUmakefile.chat_IDL all
 
-.PHONY: chat_client
-chat_client: chat_IDL
-	$(KEEP_GOING)@cd chat && $(MAKE) -f GNUmakefile.chat_client all
-
 .PHONY: chat_server
-chat_server: chat_IDL chat_client
+chat_server: chat_IDL
 	$(KEEP_GOING)@cd chat && $(MAKE) -f GNUmakefile.chat_server all
+
+.PHONY: chat_client
+chat_client: chat_IDL chat_server
+	$(KEEP_GOING)@cd chat && $(MAKE) -f GNUmakefile.chat_client all
 
 .PHONY: echo_IDL
 echo_IDL:
 	$(KEEP_GOING)@cd echo && $(MAKE) -f GNUmakefile.echo_IDL all
 
-.PHONY: echo_server
-echo_server: echo_IDL
-	$(KEEP_GOING)@cd echo && $(MAKE) -f GNUmakefile.echo_server all
-
 .PHONY: echo_client
-echo_client: echo_IDL echo_server
+echo_client: echo_IDL
 	$(KEEP_GOING)@cd echo && $(MAKE) -f GNUmakefile.echo_client all
+
+.PHONY: echo_server
+echo_server: echo_IDL echo_client
+	$(KEEP_GOING)@cd echo && $(MAKE) -f GNUmakefile.echo_server all
 
 .PHONY: grid_IDL
 grid_IDL:
 	$(KEEP_GOING)@cd grid && $(MAKE) -f GNUmakefile.grid_IDL all
 
-.PHONY: grid_client
-grid_client: grid_IDL
-	$(KEEP_GOING)@cd grid && $(MAKE) -f GNUmakefile.grid_client all
-
 .PHONY: grid_server
-grid_server: grid_IDL grid_client
+grid_server: grid_IDL
 	$(KEEP_GOING)@cd grid && $(MAKE) -f GNUmakefile.grid_server all
+
+.PHONY: grid_client
+grid_client: grid_IDL grid_server
+	$(KEEP_GOING)@cd grid && $(MAKE) -f GNUmakefile.grid_client all
 
 .PHONY: Simple_Time_Date_Lib
 Simple_Time_Date_Lib:

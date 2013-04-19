@@ -1,4 +1,4 @@
-// $Id: UIPMC_Transport.cpp 96037 2012-08-13 09:04:21Z sma $
+// $Id: UIPMC_Transport.cpp 96885 2013-03-06 09:22:01Z sma $
 
 #include "orbsvcs/PortableGroup/UIPMC_Transport.h"
 #include "orbsvcs/PortableGroup/miopconf.h"
@@ -330,10 +330,11 @@ TAO_UIPMC_Transport::send (
            this_fragment_size-= static_cast<u_long> (already_sent))
         {
           // Make sure we don't send our fragments too quickly
-          this->throttle_send_rate (
-            factory->max_fragment_rate (),
-            max_fragment_size,
-            this_fragment_size);
+          if (factory->enable_throttling ())
+            this->throttle_send_rate (
+              factory->max_fragment_rate (),
+              max_fragment_size,
+              this_fragment_size);
 
           // Haven't sent some of the data yet, we need to adjust the fragments iov's
           // to skip the data we have actually manage to send so far.
@@ -365,7 +366,7 @@ TAO_UIPMC_Transport::send (
             {
               ACE_DEBUG ((LM_ERROR,
                           ACE_TEXT ("TAO (%P|%t) - UIPMC_Transport[%d]::send, ")
-                          ACE_TEXT ("error sending data '%m'\n"),
+                          ACE_TEXT ("error sending data (Errno: '%m')\n"),
                           this->id ()));
               return -1;
             }
@@ -382,7 +383,8 @@ TAO_UIPMC_Transport::send (
             }
 
           // Keep a note of the number of bytes we have just buffered
-          this->total_bytes_outstanding_+= static_cast<u_long> (already_sent);
+          if (factory->enable_throttling ())
+            this->total_bytes_outstanding_+= static_cast<u_long> (already_sent);
         } // Keep sending the rest of the fragment
 
       // Increment the number of bytes of payload transferred.
@@ -485,7 +487,7 @@ TAO_UIPMC_Transport::send_message (
         ACE_DEBUG ((LM_ERROR,
                     ACE_TEXT ("TAO: (%P|%t) - UIPMC_Transport[%d]::")
                     ACE_TEXT ("send_message, closing transport %d after ")
-                    ACE_TEXT ("fault '%m'\n"),
+                    ACE_TEXT ("fault (Errno: '%m')\n"),
                     this->id ()));
       return -1;
     }

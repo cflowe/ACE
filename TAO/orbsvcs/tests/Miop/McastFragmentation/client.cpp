@@ -1,5 +1,5 @@
 //
-// $Id: client.cpp 96029 2012-08-10 14:01:17Z sma $
+// $Id: client.cpp 96725 2013-01-29 11:01:00Z sma $
 //
 
 #include "ace/Task.h"
@@ -162,7 +162,14 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
                           -1);
 
       if (do_shutdown)
-        hello->shutdown ();
+        {
+          ACE_DEBUG ((LM_DEBUG,
+                      ACE_TEXT ("\nClient sending server shutdown message....\n")));
+          ACE_OS::sleep (7);
+          ACE_DEBUG ((LM_DEBUG,
+                      ACE_TEXT ("Shutting down NOW\n")));
+          hello->shutdown ();
+        }
       else
         {
           Test::UIPMC_Object_var uipmc_obj = hello->get_object ();
@@ -185,10 +192,10 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
   catch (const CORBA::Exception& ex)
     {
       ex._tao_print_exception ("Exception caught in client main ():");
-      return -1;
+      return 1;
     }
 
   ACE_DEBUG ((LM_DEBUG,
-              ACE_TEXT ("\nClient finished successfully\n")));
+              ACE_TEXT ("\nClient finished successfully.\n")));
   return 0;
 }

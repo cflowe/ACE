@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test_ffp.pl 91897 2010-09-22 08:49:24Z msmit $
+# $Id: run_test_ffp.pl 96799 2013-02-11 23:01:56Z stanleyk $
 # -*- perl -*-
 
 # This is a Perl script that runs additional Naming Service tests.
@@ -37,6 +37,7 @@ $persistent_ior_file = "pns.ior";
 
 my $test_iorfile = $test->LocalFile ($iorfile);
 my $test_persistent_ior_file = $test->LocalFile ($persistent_ior_file);
+my $prog = "../../Naming_Service/tao_cosnaming";
 
 $test->DeleteFile($iorfile);
 $test->DeleteFile($persistent_ior_file);
@@ -44,7 +45,7 @@ $test->DeleteFile($persistent_ior_file);
 sub name_server
 {
     my $args = "-ORBNameServicePort $ns_multicast_port -o $test_iorfile -m 1 @_";
-    my $prog = "../../Naming_Service/tao_cosnaming";
+
 
     $SV = $test->CreateProcess ("$prog", "$args");
 
@@ -95,14 +96,50 @@ $hostname = $test->HostName ();
              "Flat File Persistent Test (Part 2): \n",
              "Flat File Persistent Test (Part 3): \n");
 
-$test_number = 0;
 
-$test->DeleteFile($test_persistent_ior_file);
+sub run_test
+{
+    $prog = "@_";
 
-if ( ! -d "NameService" ) {
-    mkdir (NameService, 0777);
-}
-else {
+    $test_number = 0;
+
+    $test->DeleteFile($test_persistent_ior_file);
+
+    if ( ! -d "NameService" ) {
+        mkdir (NameService, 0777);
+    }
+    else {
+        chdir "NameService";
+        opendir(THISDIR, ".");
+        @allfiles = grep(!/^\.\.?$/, readdir(THISDIR));
+        closedir(THISDIR);
+        foreach $tmp (@allfiles){
+            $test->DeleteFile ($tmp);
+        }
+        chdir "..";
+    }
+
+    # Run server and client for each of the tests.  Client uses ior in a
+    # file to bootstrap to the server.
+    foreach $o (@opts) {
+        name_server ($server_opts[$test_number]);
+
+        print STDERR "\n          ".$comments[$test_number];
+
+        client ($o);
+
+        $SV->Kill ();
+
+        ## For some reason, only on Windows XP, we need to
+        ## wait before starting another tao_cosnaming when
+        ## the mmap persistence option is used
+        if ($^O eq "MSWin32") {
+          sleep(1);
+        }
+
+        $test_number++;
+    }
+
     chdir "NameService";
     opendir(THISDIR, ".");
     @allfiles = grep(!/^\.\.?$/, readdir(THISDIR));
@@ -111,40 +148,19 @@ else {
         $test->DeleteFile ($tmp);
     }
     chdir "..";
+    rmdir "NameService";
+
+    $test->DeleteFile($persistent_ior_file);
+    $test->DeleteFile($iorfile);
 }
 
-# Run server and client for each of the tests.  Client uses ior in a
-# file to bootstrap to the server.
-foreach $o (@opts) {
-    name_server ($server_opts[$test_number]);
+@server_exes = ("../../Naming_Service/tao_cosnaming",
+                "../../FT_Naming_Service/tao_ft_naming");
 
-    print STDERR "\n          ".$comments[$test_number];
-
-    client ($o);
-
-    $SV->Kill ();
-
-    ## For some reason, only on Windows XP, we need to
-    ## wait before starting another tao_cosnaming when
-    ## the mmap persistence option is used
-    if ($^O eq "MSWin32") {
-      sleep(1);
-    }
-
-    $test_number++;
+foreach $e (@server_exes) {
+    print STDERR "Testing Naming Service Executable: $e\n";
+    run_test($e);
+    print STDERR "======================================\n";
 }
-
-chdir "NameService";
-opendir(THISDIR, ".");
-@allfiles = grep(!/^\.\.?$/, readdir(THISDIR));
-closedir(THISDIR);
-foreach $tmp (@allfiles){
-    $test->DeleteFile ($tmp);
-}
-chdir "..";
-rmdir "NameService";
-
-$test->DeleteFile($persistent_ior_file);
-$test->DeleteFile($iorfile);
 
 exit $status;

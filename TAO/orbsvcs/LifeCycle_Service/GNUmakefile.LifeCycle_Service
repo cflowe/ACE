@@ -19,9 +19,9 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
+  LifeCycle_Service_i.cpp \
   Criteria_Evaluator.cpp \
   Factory_Trader.cpp \
-  LifeCycle_Service_i.cpp \
   LifeCycle_Service.cpp
 
 #----------------------------------------------------------------------------
@@ -241,9 +241,9 @@ endif
 #LifeCycle_Service.h
 #
 #source_files:
+#LifeCycle_Service_i.cpp
 #Criteria_Evaluator.cpp
 #Factory_Trader.cpp
-#LifeCycle_Service_i.cpp
 #LifeCycle_Service.cpp
 #
 #exe_output:

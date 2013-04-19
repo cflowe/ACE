@@ -1,4 +1,4 @@
-// $Id: tao_imr_i.cpp 94989 2011-11-08 19:13:08Z johnnyw $
+// $Id: tao_imr_i.cpp 96840 2013-02-19 21:48:51Z harrisb $
 
 #include "tao_imr_i.h"
 
@@ -241,6 +241,7 @@ TAO_IMR_Op::display_server_information (const ImplementationRepository::ServerIn
 
 TAO_IMR_Op_List::TAO_IMR_Op_List (void)
 : verbose_server_information_ (0)
+, list_only_active_servers_ (0)
 {
   // Nothing
 }
@@ -402,6 +403,7 @@ TAO_IMR_Op_List::print_usage (void)
     "  where [command-arguments] can be\n"
     "    -v            Verbose: Displays more info for each server when\n"
     "                  displaying more than one server\n"
+    "    -a            List only servers that are determined to be active\n"
     "    -h            Displays this\n"));
 }
 
@@ -417,7 +419,7 @@ TAO_IMR_Op_List::parse (int argc, ACE_TCHAR **argv)
   }
 
   // Skip both the program name and the "list" command
-  ACE_Get_Opt get_opts (argc, argv, ACE_TEXT("vh"), server_flag);
+  ACE_Get_Opt get_opts (argc, argv, ACE_TEXT("vah"), server_flag);
 
   int c;
 
@@ -427,6 +429,9 @@ TAO_IMR_Op_List::parse (int argc, ACE_TCHAR **argv)
       {
       case 'v': // verbose server display
         this->verbose_server_information_ = 1;
+        break;
+      case 'a':
+        this->list_only_active_servers_ = 1;
         break;
       case 'h':  // display help
         this->print_usage ();
@@ -737,6 +742,7 @@ TAO_IMR_Op_Autostart::run (void)
   try
     {
       this->imr_->list (0,
+        false,
         server_list,
         server_iter);
 
@@ -817,9 +823,18 @@ TAO_IMR_Op_IOR::run (void)
       ACE_CString ior (imr_str.in ());
 
       // Add the key
-      ior += this->server_name_;
+      const char jacorb[] = "JACORB:";
+      const char *posjacorb = ACE_OS::strstr (server_name_.c_str (), jacorb);
+      if (posjacorb)
+      {
+        ior += posjacorb + sizeof(jacorb) - 1;
+      }
+      else
+      {
+        ior += this->server_name_;
+      }
 
-      ACE_DEBUG ((LM_DEBUG, "%s\n", ior.c_str ()));
+      ACE_DEBUG ((LM_DEBUG, ACE_TEXT ("%s\n"), ior.c_str ()));
 
       if (this->filename_.length () > 0)
       {
@@ -828,7 +843,7 @@ TAO_IMR_Op_IOR::run (void)
         if (file == 0)
         {
           ACE_ERROR_RETURN ((LM_ERROR,
-            "Error: Unable to open %s for writing: %p\n",
+            ACE_TEXT ("Error: Unable to open %s for writing: %p\n"),
             this->filename_.c_str ()),
             -1);
         }
@@ -861,6 +876,7 @@ TAO_IMR_Op_List::run (void)
       if (this->server_name_.length () == 0)
         {
           this->imr_->list (0,
+            this->list_only_active_servers_,
             server_list.out(),
             server_iter.out());
 
@@ -1074,6 +1090,10 @@ TAO_IMR_Op_Register::run (void)
 void
 TAO_IMR_Op_List::display_server_information (const ImplementationRepository::ServerInformation &info)
 {
+  if (this->list_only_active_servers_ &&
+      info.activeStatus != ImplementationRepository::ACTIVE_YES)
+    return;
+
   if (this->verbose_server_information_)
     TAO_IMR_Op::display_server_information (info);
   else

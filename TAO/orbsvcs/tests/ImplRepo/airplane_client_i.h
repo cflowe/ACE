@@ -4,7 +4,7 @@
 /**
  *  @file    airplane_client_i.h
  *
- *  $Id: airplane_client_i.h 82981 2008-10-08 14:49:02Z johnnyw $
+ *  $Id: airplane_client_i.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  This class implements a simple CORBA client which returns a random
  *  paper airplane from the paper airplane server.
@@ -46,7 +46,7 @@ private:
   int parse_args (void);
 
   /// Ask the Paper Airplane Server for <count> planes.
-  void get_planes (size_t count);
+  int get_planes (size_t count);
 
   /// # of arguments on the command line.
   int argc_;

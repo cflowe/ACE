@@ -2,7 +2,7 @@
                       "http://www.w3.org/TR/html4/loose.dtd">
 <HTML>
   <HEAD>
-    <!-- $Id: index.shtml 95450 2012-01-18 19:53:43Z johnnyw $ -->
+    <!-- $Id: index.shtml 96684 2013-01-21 08:24:07Z johnnyw $ -->
     <TITLE>ACE+TAO+CIAO+DAnCE Metrics</TITLE>
     <LINK href="Stats.css" rel="stylesheet" type="text/css">
   </HEAD>
@@ -65,6 +65,9 @@ In addition to the statistics described above, a number of other ACE/TAO/CIAO/DA
 </li>
 <li>
   <a href="regular/index.html">Footprint Regular CORBA</a>
+</li>
+<li>
+  <a href="versioned/index.html">Footprint versioned namespaces CORBA</a>
 </li>
 <li>
   <a href="performance.shtml">Performance metrics Regular CORBA</a>

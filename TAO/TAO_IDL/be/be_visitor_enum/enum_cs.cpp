@@ -3,7 +3,7 @@
 /**
  *  @file    enum_cs.cpp
  *
- *  $Id: enum_cs.cpp 95536 2012-02-20 12:34:23Z johnnyw $
+ *  $Id: enum_cs.cpp 96756 2013-02-05 16:24:31Z parsons $
  *
  *  Visitor generating code for Enums in the client stubs
  *
@@ -36,7 +36,7 @@ be_visitor_enum_cs::visit_enum (be_enum *node)
   if (node->cli_stub_gen ()
       || node->imported ())
     {
-                  return 0;
+      return 0;
     }
 
   if (be_global->tc_support ())

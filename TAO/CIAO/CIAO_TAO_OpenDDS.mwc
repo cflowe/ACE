@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: CIAO_TAO_OpenDDS.mwc 96115 2012-08-29 07:37:18Z johnnyw $
+// $Id: CIAO_TAO_OpenDDS.mwc 96817 2013-02-13 22:39:57Z stanleyk $
 
 workspace {
   $(ACE_ROOT)/ace
@@ -25,4 +25,8 @@ workspace {
   performance-tests
   tutorials
   $(DDS_ROOT)/DDS_TAOv2.mwc
+  exclude {
+    $(TAO_ROOT)/utils/nsgroup
+  }
+
 }

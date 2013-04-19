@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: CIAO_TAO.mwc 96115 2012-08-29 07:37:18Z johnnyw $
+// $Id: CIAO_TAO.mwc 96775 2013-02-06 23:25:49Z stanleyk $
 
 workspace {
   $(ACE_ROOT)/ace
@@ -24,4 +24,8 @@ workspace {
   examples
   performance-tests
   tutorials
+  exclude {
+    $(TAO_ROOT)/utils/nsgroup
+  }
+
 }

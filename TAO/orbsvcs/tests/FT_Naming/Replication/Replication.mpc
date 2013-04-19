@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: Replication.mpc 96612 2013-01-03 23:03:49Z stanleyk $
+
+project(*Client) : ftnaming {
+  exename  = client
+}
+

@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: DDS_Base_Connector_T.cpp 95955 2012-07-23 17:39:12Z johnnyw $
+// $Id: DDS_Base_Connector_T.cpp 96867 2013-02-27 08:21:02Z johnnyw $
 
 #include "ace/Env_Value_T.h"
 #include "tao/ORB_Core.h"
@@ -198,7 +198,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_domain (
                 this->domain_id_));
 
 #if (CIAO_DDS4CCM_NDDS==1)
-  if (!::CORBA::is_nil (this->qos_profile_.in ()))
+  if (this->qos_profile_.in () != 0)
     {
       this->participant_factory_->set_default_participant_qos_with_profile (
                                       this->qos_profile_.in ());
@@ -255,7 +255,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_domain (
           throw ::CCM_DDS::InternalError (retcode, 0);
         }
 
-      if (!::CORBA::is_nil (this->qos_profile_.in ()) && this->qos_xml_)
+      if (this->qos_profile_.in () != 0 && this->qos_xml_)
         {
           DDS::ReturnCode_t const retcode_dp_qos =
             this->qos_xml_->get_participant_qos (
@@ -316,7 +316,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_domain (
           std::string rtps_transport_name = str_domain_id;
           config_name.append ("#");
           rtps_transport_name.append ("#");
-          if (!::CORBA::is_nil (this->qos_profile_.in ()))
+          if (this->qos_profile_.in () != 0)
             {
               config_name.append (this->qos_profile_.in ());
               rtps_transport_name.append (this->qos_profile_.in ());
@@ -467,7 +467,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_topic (
   ::DDS::DomainParticipant_ptr participant,
   ::DDS::Topic_ptr & topic,
   const char * topic_name,
-  const char * typesupport_name)
+  const char * type_name)
 {
   DDS4CCM_TRACE ("DDS_Base_Connector_T::init_topic");
 
@@ -498,11 +498,11 @@ DDS_Base_Connector_T<CCM_TYPE>::init_topic (
       return;
     }
 #if (CIAO_DDS4CCM_NDDS==1)
-  if (!::CORBA::is_nil (this->qos_profile_.in ()))
+  if (this->qos_profile_.in () != 0)
     {
       // Create a new topic
       topic = participant->create_topic_with_profile (topic_name,
-                                          typesupport_name,
+                                          type_name,
                                           this->qos_profile_.in (),
                                           ::DDS::TopicListener::_nil (),
                                           0);
@@ -523,7 +523,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_topic (
         throw ::CCM_DDS::InternalError (retcode, 0);
       }
 
-      if (!::CORBA::is_nil (this->qos_profile_.in ()) && this->qos_xml_)
+      if (this->qos_profile_.in () != 0 && this->qos_xml_)
         {
           DDS::ReturnCode_t const retcode_tp_qos =
             this->qos_xml_->get_topic_qos (
@@ -555,7 +555,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_topic (
 
       // Create a new topic
       topic = participant->create_topic (topic_name,
-                            typesupport_name,
+                            type_name,
                             tqos,
                             ::DDS::TopicListener::_nil (),
                             0);
@@ -567,9 +567,9 @@ DDS_Base_Connector_T<CCM_TYPE>::init_topic (
                     "DDS_Base_Connector_T::init_topic - "
                     "Created new topic "
                     DDS_ENTITY_FORMAT_SPECIFIER
-                    " name <%C> for profile <%C>\n",
+                    " name <%C> type <%C> for profile <%C>\n",
                     DDS_ENTITY_LOG (topic),
-                    topic_name, this->qos_profile_.in ()));
+                    topic_name, type_name, this->qos_profile_.in ()));
     }
   else
     {
@@ -592,7 +592,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_publisher (
   if (::CORBA::is_nil (publisher))
     {
 #if (CIAO_DDS4CCM_NDDS==1)
-      if (!::CORBA::is_nil (this->qos_profile_.in ()))
+      if (this->qos_profile_.in () != 0)
         {
           publisher = participant->create_publisher_with_profile (
                                               this->qos_profile_.in (),
@@ -615,7 +615,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_publisher (
               throw ::CCM_DDS::InternalError (retcode, 0);
             }
 
-          if (!::CORBA::is_nil (this->qos_profile_.in ()) && this->qos_xml_)
+          if (this->qos_profile_.in () != 0 && this->qos_xml_)
             {
               DDS::ReturnCode_t const retcode_pub_qos =
                 this->qos_xml_->get_publisher_qos (
@@ -681,7 +681,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_subscriber (
   if (::CORBA::is_nil (subscriber))
     {
 #if (CIAO_DDS4CCM_NDDS==1)
-      if (!::CORBA::is_nil (this->qos_profile_.in ()))
+      if (this->qos_profile_.in () != 0)
         {
           subscriber = participant->create_subscriber_with_profile (
                                               this->qos_profile_.in (),
@@ -704,7 +704,7 @@ DDS_Base_Connector_T<CCM_TYPE>::init_subscriber (
               throw ::CCM_DDS::InternalError (retcode, 0);
             }
 
-          if (!::CORBA::is_nil (this->qos_profile_.in ()) && this->qos_xml_)
+          if (this->qos_profile_.in () != 0 && this->qos_xml_)
             {
               DDS::ReturnCode_t const retcode_sub_qos =
                 this->qos_xml_->get_subscriber_qos (
@@ -779,6 +779,8 @@ DDS_Base_Connector_T<CCM_TYPE>::activate_topic (
 
   if (mask != 0)
     {
+      // If no listener has been passed in we create the default
+      // topic listener
       if (::CORBA::is_nil (listener))
         {
           ACE_NEW_THROW_EX (listener,
@@ -786,18 +788,17 @@ DDS_Base_Connector_T<CCM_TYPE>::activate_topic (
                               error_listener.in (),
                               reactor),
                             ::CORBA::NO_MEMORY ());
+        }
 
-          DDS::ReturnCode_t const retcode = topic->set_listener (listener,
-                                                                   mask);
+      DDS::ReturnCode_t const retcode = topic->set_listener (listener, mask);
 
-          if (retcode != ::DDS::RETCODE_OK)
-            {
-              DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
-                            "DDS_Base_Connector_T::activate_topic - "
-                            "Error while setting the listener on the topic - <%C>\n",
-                            ::CIAO::DDS4CCM::translate_retcode (retcode)));
-              throw ::CORBA::INTERNAL ();
-            }
+      if (retcode != ::DDS::RETCODE_OK)
+        {
+          DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                        "DDS_Base_Connector_T::activate_topic - "
+                        "Error while setting the listener on the topic - <%C>\n",
+                        ::CIAO::DDS4CCM::translate_retcode (retcode)));
+          throw ::CORBA::INTERNAL ();
         }
     }
 }
@@ -982,7 +983,7 @@ void DDS_Base_Connector_T<CCM_TYPE>::remove_topic (
 
   DDS4CCM_DEBUG (DDS4CCM_LOG_LEVEL_ACTION_STARTING, (LM_TRACE, DDS4CCM_INFO
                 "DDS_Base_Connector_T::remove_topic - "
-                "Going to delete topic <%C>"
+                "Going to delete topic <%C> "
                 DDS_ENTITY_FORMAT_SPECIFIER
                 "from participant"
                 DDS_ENTITY_FORMAT_SPECIFIER
@@ -995,7 +996,7 @@ void DDS_Base_Connector_T<CCM_TYPE>::remove_topic (
 
   DDS4CCM_DEBUG (DDS4CCM_LOG_LEVEL_ACTION, (LM_TRACE, DDS4CCM_INFO
                 "DDS_Base_Connector_T::remove_topic - "
-                "Deleted topic <%C>"
+                "Deleted topic <%C> "
                 DDS_ENTITY_FORMAT_SPECIFIER
                 "from "
                 DDS_ENTITY_FORMAT_SPECIFIER

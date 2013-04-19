@@ -1,5 +1,5 @@
 // This may look like C, but it's really -*- C++ -*-
-// $Id: SCIOP_Profile.cpp 96015 2012-08-08 15:31:24Z sma $
+// $Id: SCIOP_Profile.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "tao/Strategies/SCIOP_Profile.h"
 
@@ -310,7 +310,7 @@ TAO_SCIOP_Profile::add_endpoint (TAO_SCIOP_Endpoint *endp)
 }
 
 char *
-TAO_SCIOP_Profile::to_string (void)
+TAO_SCIOP_Profile::to_string (void) const
 {
   CORBA::String_var key;
   TAO::ObjectKey::encode_sequence_to_string (key.inout(),

@@ -1,5 +1,5 @@
 // This may look like C, but it's really -*- C++ -*-
-// $Id: HTIOP_Profile.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: HTIOP_Profile.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "orbsvcs/HTIOP/HTIOP_Profile.h"
 #include "orbsvcs/HTIOP/htiop_endpointsC.h"
@@ -279,7 +279,7 @@ TAO::HTIOP::Profile::add_endpoint (TAO::HTIOP::Endpoint *endp)
 }
 
 char *
-TAO::HTIOP::Profile::to_string (void)
+TAO::HTIOP::Profile::to_string (void) const
 {
   CORBA::String_var key;
   TAO::ObjectKey::encode_sequence_to_string (key.inout(),

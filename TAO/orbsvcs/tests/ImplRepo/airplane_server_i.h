@@ -4,7 +4,7 @@
 /**
  *  @file    airplane_server_i.h
  *
- *  $Id: airplane_server_i.h 82864 2008-09-29 07:44:18Z johnnyw $
+ *  $Id: airplane_server_i.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  Server that sets up the ORB and handles the registration and execution
  *  of the Paper Airplane Server.
@@ -70,6 +70,9 @@ private:
 
   /// File where the IOR of the server object is stored.
   FILE *ior_output_file_;
+
+  /// the server name
+  ACE_CString server_name_;
 };
 
 #endif /* AIRPLANE_SERVER_I_H */

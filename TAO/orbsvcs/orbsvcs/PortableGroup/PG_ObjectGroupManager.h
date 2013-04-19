@@ -4,7 +4,7 @@
 /**
  * @file PG_ObjectGroupManager.h
  *
- * $Id: PG_ObjectGroupManager.h 91742 2010-09-13 18:23:17Z johnnyw $
+ * $Id: PG_ObjectGroupManager.h 96797 2013-02-11 17:48:59Z stanleyk $
  *
  * @author Ossama Othman <ossama@uci.edu>
  */
@@ -241,6 +241,14 @@ protected:
     PortableGroup::ObjectGroup_ptr object_group,
     TAO_PG_ObjectGroup_Map_Entry * group_entry,
     CORBA::Object_ptr member);
+
+  /// Remove references to the object group from location map. There may be
+  /// multiple of them.
+  int remove_group_from_location_map (TAO_PG_ObjectGroup_Map_Entry * group_entry);
+
+  /// Remove the entry from the group array and return the new size.
+  size_t remove_entry_from_groups (int to_be_removed,
+                                   TAO_PG_ObjectGroup_Array * groups);
 
 private:
 

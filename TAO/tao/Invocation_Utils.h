@@ -4,7 +4,7 @@
 /**
  *  @file    Invocation_Utils.h
  *
- *  $Id: Invocation_Utils.h 91741 2010-09-13 18:13:11Z johnnyw $
+ *  $Id: Invocation_Utils.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *
  *  @author Balachandran Natarajan <bala@dre.vanderbilt.edu>
@@ -71,7 +71,7 @@ namespace TAO
     TAO_DII_ASYNCH_INVOCATION
   };
 
-  enum Forward_Once_Exception
+  enum Forward_On_Exception
     {
       FOE_NON              = 0x0,
       FOE_OBJECT_NOT_EXIST = 0x1,

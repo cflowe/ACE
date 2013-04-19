@@ -4,7 +4,7 @@
 /**
  *  @file    CSD_TP_Queue.h
  *
- *  $Id: CSD_TP_Queue.h 71473 2006-03-10 07:19:20Z jtc $
+ *  $Id: CSD_TP_Queue.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author  Tim Bradley <bradley_t@ociweb.com>
  */
@@ -22,6 +22,7 @@
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
 #include "tao/Versioned_Namespace.h"
+#include "tao/orbconf.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -76,7 +77,6 @@ namespace TAO
       /// and have the ability to stop visiting at any time (ie, before
       /// visiting every request).
       void accept_visitor(TP_Queue_Visitor& visitor);
-
 
     private:
 

@@ -2,7 +2,7 @@
 /**
  *  @file    interface_cs.cpp
  *
- *  $Id: interface_cs.cpp 95536 2012-02-20 12:34:23Z johnnyw $
+ *  $Id: interface_cs.cpp 96714 2013-01-28 11:26:16Z johnnyw $
  *
  *  Visitor generating code for Interfaces in the client stubs file.
  *
@@ -139,7 +139,7 @@ be_visitor_interface_cs::visit_interface (be_interface *node)
           << "}" << be_nl;
     }
 
-  if (c == 0 && be_global->gen_ostream_operators ())
+  if (be_global->gen_ostream_operators ())
     {
       *os << be_nl_2
           << "std::ostream &" << be_nl

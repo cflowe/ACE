@@ -4,7 +4,7 @@
 /**
  * @file PG_Object_Group_Manipulator.h
  *
- * $Id: PG_Object_Group_Manipulator.h 76589 2007-01-25 18:04:11Z elliott_c $
+ * $Id: PG_Object_Group_Manipulator.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  * @author Dale Wilson <wilson_d@ociweb.com>
  */
@@ -62,6 +62,16 @@ namespace TAO
       const char * type_id,
       const char * domain_id,
       PortableGroup::ObjectGroupId & group_id);
+
+    /**
+     * Create an empty object group using a specific ID.
+     * Note that this should not also be used with create_object_group ()
+     * as the next object group ID to use will not necessarily be unique.
+     */
+    PortableGroup::ObjectGroup_ptr create_object_group_using_id (
+      const char * type_id,
+      const char * domain_id,
+      const PortableGroup::ObjectGroupId & group_id);
 
     PortableGroup::ObjectGroup_ptr remove_profiles (
       PortableGroup::ObjectGroup_ptr group,

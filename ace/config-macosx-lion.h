@@ -1,7 +1,6 @@
-// $Id: config-macosx-lion.h 94764 2011-10-15 01:02:57Z sowayaa $
+// $Id: config-macosx-lion.h 96711 2013-01-28 07:59:03Z johnnyw $
 #ifndef ACE_CONFIG_MACOSX_LION_H
 #define ACE_CONFIG_MACOSX_LION_H
-
 
 #include "ace/config-macosx-leopard.h"
 

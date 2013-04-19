@@ -22,10 +22,10 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 FILES = \
   MessengerS.cpp \
   MessengerC.cpp \
-  Messenger_i.cpp \
+  MessengerTask.cpp \
   NamingTask.cpp \
   NamingMessenger.cpp \
-  MessengerTask.cpp
+  Messenger_i.cpp
 
 
 #----------------------------------------------------------------------------
@@ -216,7 +216,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = MessengerS.cpp MessengerC.cpp Messenger_i.cpp NamingTask.cpp NamingMessenger.cpp MessengerTask.cpp  
+FORCED_IDL_STUBS = MessengerS.cpp MessengerC.cpp MessengerTask.cpp NamingTask.cpp NamingMessenger.cpp Messenger_i.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:MessengerS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:MessengerC.cpp=)
 

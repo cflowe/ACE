@@ -3,7 +3,7 @@
 /**
  *  @file    client.cpp
  *
- *  $Id: client.cpp 94279 2011-06-29 12:45:18Z johnnyw $
+ *  $Id: client.cpp 96724 2013-01-29 07:55:36Z johnnyw $
  *
  *  @author Source code used in TAO has been modified and adapted from the code provided in the book
  *  @author "Advanced CORBA Programming with C++" by MichiHenning and Steve Vinoski. Copyright 1999. Addison-Wesley
@@ -22,7 +22,10 @@ using namespace std;
 // Generic ostream inserter for exceptions. Inserts the exception
 // name, if available, and the repository ID otherwise.
 
-#if 0   // This inserter is not needed for TAO.
+// This inserter may or may not be needed for your ORB.
+#if !defined (GEN_OSTREAM_OPS)
+
+#if 0
 
 static ostream &
 operator<<(ostream & os, const CORBA::Exception & e)
@@ -103,6 +106,8 @@ operator<<(std::ostream &os, const CCS::Controller::EChange &ec)
     }
     return os;
 }
+
+#endif
 
 //----------------------------------------------------------------
 

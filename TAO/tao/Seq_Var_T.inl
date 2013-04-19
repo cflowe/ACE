@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: Seq_Var_T.inl 74154 2006-08-21 18:40:48Z johnnyw $
+// $Id: Seq_Var_T.inl 96816 2013-02-13 19:29:43Z stanleyk $
 
 #include "ace/OS_Memory.h"
 
@@ -194,7 +194,7 @@ TAO_VarSeq_Var_T<T>::operator= (T * p)
   return *this;
 }
 
-// Variable-size types only.
+// Variable-size types only
 template<typename T>
 ACE_INLINE
 TAO_VarSeq_Var_T<T>::operator T *& ()

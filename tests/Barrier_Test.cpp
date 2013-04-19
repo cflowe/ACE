@@ -3,11 +3,10 @@
 /**
  *  @file    Barrier_Test.cpp
  *
- *  $Id: Barrier_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Barrier_Test.cpp 96825 2013-02-16 16:14:23Z schmidt $
  *
  *   This program illustrates how the ACE barrier synchronization
  *   mechanisms work.
- *
  *
  *  @author Prashant Jain <pjain@cs.wustl.edu> and Doug Schmidt <schmidt@cs.wustl.edu>
  */

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Single_Threaded_Sequence_Idl Single_Threaded_Sequence_Client Single_Threaded_Sequence_Server
+all: Single_Threaded_Sequence_Idl Single_Threaded_Sequence_Server Single_Threaded_Sequence_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Client $(@)
 
 .PHONY: Single_Threaded_Sequence_Idl
 Single_Threaded_Sequence_Idl:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Idl all
 
-.PHONY: Single_Threaded_Sequence_Client
-Single_Threaded_Sequence_Client: Single_Threaded_Sequence_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Client all
-
 .PHONY: Single_Threaded_Sequence_Server
-Single_Threaded_Sequence_Server: Single_Threaded_Sequence_Idl Single_Threaded_Sequence_Client
+Single_Threaded_Sequence_Server: Single_Threaded_Sequence_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Server all
+
+.PHONY: Single_Threaded_Sequence_Client
+Single_Threaded_Sequence_Client: Single_Threaded_Sequence_Idl Single_Threaded_Sequence_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Single_Threaded_Sequence_Client all
 
 project_name_list:
 	@echo Single_Threaded_Sequence_Client

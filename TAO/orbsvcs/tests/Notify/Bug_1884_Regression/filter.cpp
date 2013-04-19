@@ -1,4 +1,4 @@
-// $Id: filter.cpp 91816 2010-09-17 08:35:56Z johnnyw $
+// $Id: filter.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "orbsvcs/CosNotifyChannelAdminC.h"
 #include "orbsvcs/CosNotifyChannelAdminS.h"
@@ -68,12 +68,12 @@ get_event_channel(CORBA::ORB_ptr orb)
   else {
     try
     {
-      ec = factory->get_event_channel(channelIdSeq[0]);
+      ec = factory->get_event_channel(channelIdSeq.in()[0]);
     }
     catch (CosNotifyChannelAdmin::ChannelNotFound&)
     {
       std::cerr << "ChannelNotFound: "
-        << channelIdSeq[0] << std::endl;
+        << channelIdSeq.in()[0] << std::endl;
       exit(1);
     }
 

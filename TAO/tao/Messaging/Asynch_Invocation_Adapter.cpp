@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Asynch_Invocation_Adapter.cpp 94802 2011-10-20 09:46:10Z mcorino $
+// $Id: Asynch_Invocation_Adapter.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/Asynch_Reply_Dispatcher.h"
@@ -152,8 +152,11 @@ namespace TAO
     TAO_Operation_Details &op,
     CORBA::Object_var &effective_target,
     Profile_Transport_Resolver &r,
-    ACE_Time_Value *&max_wait_time)
+    ACE_Time_Value *&max_wait_time,
+    Invocation_Retry_State *retry_state)
   {
+    ACE_UNUSED_ARG (retry_state);
+
     // Simple sanity check
     if (this->mode_ != TAO_ASYNCHRONOUS_CALLBACK_INVOCATION
         || this->type_ != TAO_TWOWAY_INVOCATION)

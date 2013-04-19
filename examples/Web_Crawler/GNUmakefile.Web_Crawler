@@ -17,18 +17,18 @@ BIN_UNCHECKED    = main
 LIB_PREFIX      ?= lib
 
 FILES = \
-  Iterators.cpp \
-  Mem_Map_Stream.cpp \
-  Command_Processor.cpp \
-  main.cpp \
-  HTTP_URL.cpp \
-  URL_Status.cpp \
-  URL_Visitor_Factory.cpp \
   Options.cpp \
-  URL_Visitor.cpp \
-  URL_Addr.cpp \
+  URL_Visitor_Factory.cpp \
+  Mem_Map_Stream.cpp \
   URL.cpp \
-  Web_Crawler.cpp
+  URL_Addr.cpp \
+  HTTP_URL.cpp \
+  Web_Crawler.cpp \
+  main.cpp \
+  URL_Visitor.cpp \
+  URL_Status.cpp \
+  Command_Processor.cpp \
+  Iterators.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

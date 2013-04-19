@@ -1,0 +1,11 @@
+// $Id: test_object.idl 96513 2012-12-14 23:02:01Z labancap $
+
+interface Test_Object
+{
+  // = TITLE
+  //   This is a simple interface that tests the Naming Service.
+
+  attribute short id;
+  // This provides an easy way to differentiate objects if each
+  // objects is served by a separate servant.
+};

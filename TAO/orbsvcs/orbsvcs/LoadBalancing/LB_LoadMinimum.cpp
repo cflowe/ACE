@@ -1,4 +1,4 @@
-// $Id: LB_LoadMinimum.cpp 93117 2011-01-20 12:11:28Z mcorino $
+// $Id: LB_LoadMinimum.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "orbsvcs/LoadBalancing/LB_LoadMinimum.h"
 #include "ace/OS_NS_sys_time.h"
@@ -154,7 +154,7 @@ TAO_LB_LoadMinimum::get_loads (CosLoadBalancing::LoadManager_ptr load_manager,
 
   this->push_loads (the_location,
                     loads.in (),
-                    loads[0]);
+                    loads.inout ()[0]);
 
   return loads._retn ();
 }

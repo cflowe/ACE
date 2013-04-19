@@ -4,7 +4,7 @@
 /**
  *  @file     UIPMC_Profile.h
  *
- *  $Id: UIPMC_Profile.h 96029 2012-08-10 14:01:17Z sma $
+ *  $Id: UIPMC_Profile.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  UIPMC profile specific processing
  *
@@ -82,7 +82,7 @@ public:
   /// a useable decode_endpoints
   virtual int decode (TAO_InputCDR &cdr);
   virtual void parse_string (const char *string);
-  virtual char * to_string (void);
+  virtual char * to_string (void) const;
   virtual int encode_endpoints (void);
   virtual void encodeAddressInfo (TAO_OutputCDR &stream) const;
   virtual TAO_Endpoint *endpoint (void);

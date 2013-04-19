@@ -1,4 +1,4 @@
-// $Id: Bug_3744_Regression_Test.cpp 91626 2010-09-07 10:59:20Z johnnyw $
+// $Id: Bug_3744_Regression_Test.cpp 96611 2013-01-03 22:58:50Z shuston $
 
 #include "test_config.h"
 #include "ace/OS_NS_string.h"
@@ -35,8 +35,8 @@ getmacaddress_test (void)
   else
     {
       ACE_ERROR ((LM_ERROR,
-                  ACE_TEXT ("ACE_OS::getmacaddress() returned %d, should be 0\n"),
-                  retval));
+                  ACE_TEXT ("ACE_OS::getmacaddress() returned %d, should be 0. %p\n"),
+                  retval, ACE_TEXT ("error:")));
     }
   return retval;
 #endif /* ACE_LACKS_NETWORKING */

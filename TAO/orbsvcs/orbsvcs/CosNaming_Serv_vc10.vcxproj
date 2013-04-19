@@ -269,8 +269,6 @@
   <ItemGroup>
     <ClCompile Include="Naming\Entries.cpp">
     </ClCompile>
-    <ClCompile Include="Naming\Flat_File_Persistence.cpp">
-    </ClCompile>
     <ClCompile Include="Naming\Hash_Naming_Context.cpp">
     </ClCompile>
     <ClCompile Include="Naming\Naming_Context_Interface.cpp">
@@ -285,18 +283,23 @@
     </ClCompile>
     <ClCompile Include="Naming\Persistent_Naming_Context.cpp">
     </ClCompile>
+    <ClCompile Include="Naming\Persistent_Naming_Context_Factory.cpp">
+    </ClCompile>
     <ClCompile Include="Naming\Storable.cpp">
     </ClCompile>
     <ClCompile Include="Naming\Storable_Naming_Context.cpp">
     </ClCompile>
     <ClCompile Include="Naming\Storable_Naming_Context_Activator.cpp">
     </ClCompile>
+    <ClCompile Include="Naming\Storable_Naming_Context_Factory.cpp">
+    </ClCompile>
+    <ClCompile Include="Naming\Storable_Naming_Context_ReaderWriter.cpp">
+    </ClCompile>
     <ClCompile Include="Naming\Transient_Naming_Context.cpp">
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Naming\Entries.h" />
-    <ClInclude Include="Naming\Flat_File_Persistence.h" />
     <ClInclude Include="Naming\Hash_Naming_Context.h" />
     <ClInclude Include="Naming\Naming_Context_Interface.h" />
     <ClInclude Include="Naming\Naming_Loader.h" />
@@ -306,9 +309,12 @@
     <ClInclude Include="Naming\Persistent_Context_Index.h" />
     <ClInclude Include="Naming\Persistent_Entries.h" />
     <ClInclude Include="Naming\Persistent_Naming_Context.h" />
+    <ClInclude Include="Naming\Persistent_Naming_Context_Factory.h" />
     <ClInclude Include="Naming\Storable.h" />
     <ClInclude Include="Naming\Storable_Naming_Context.h" />
     <ClInclude Include="Naming\Storable_Naming_Context_Activator.h" />
+    <ClInclude Include="Naming\Storable_Naming_Context_Factory.h" />
+    <ClInclude Include="Naming\Storable_Naming_Context_ReaderWriter.h" />
     <ClInclude Include="Naming\Transient_Naming_Context.h" />
   </ItemGroup>
   <ItemGroup>
@@ -433,6 +439,24 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </None>
     <None Include="FaultTolerance.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="FT_Naming_Serv.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="FtNaming.mpc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="FtNamingReplication.mpc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

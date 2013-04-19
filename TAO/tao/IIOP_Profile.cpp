@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: IIOP_Profile.cpp 96015 2012-08-08 15:31:24Z sma $
+// $Id: IIOP_Profile.cpp 96760 2013-02-05 21:11:03Z stanleyk $
 
 #include "tao/IIOP_Profile.h"
 
@@ -474,7 +474,7 @@ TAO_IIOP_Profile::add_generic_endpoint (TAO_Endpoint *endp)
 }
 
 char *
-TAO_IIOP_Profile::to_string (void)
+TAO_IIOP_Profile::to_string (void) const
 {
   // corbaloc:iiop:1.2@host:port,iiop:1.2@host:port,.../key
 

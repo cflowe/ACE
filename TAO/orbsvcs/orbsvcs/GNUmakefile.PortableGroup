@@ -34,48 +34,50 @@ FILES = \
   PortableGroup_Simple_DSC.cpp \
   PortableGroupS.cpp \
   PortableGroupC.cpp \
+  PortableGroup/PG_Null_Property_Validator.cpp \
+  PortableGroup/PG_Properties_Encoder.cpp \
+  PortableGroup/miop_resource.cpp \
+  PortableGroup/PG_Utils.cpp \
   PortableGroup/GOA.cpp \
-  PortableGroup/PG_MemberInfo.cpp \
-  PortableGroup/PG_ObjectGroupManager.cpp \
-  PortableGroup/PG_Location_Hash.cpp \
-  PortableGroup/PG_Location_Equal_To.cpp \
   PortableGroup/Portable_Group_Map.cpp \
   PortableGroup/PortableGroup_ORBInitializer.cpp \
-  PortableGroup/UIPMC_Profile.cpp \
-  PortableGroup/PG_Null_Property_Validator.cpp \
-  PortableGroup/UIPMC_Connection_Handler.cpp \
-  PortableGroup/PortableGroup_Request_Dispatcher.cpp \
-  PortableGroup/PG_Properties_Support.cpp \
-  PortableGroup/UIPMC_Mcast_Connection_Handler.cpp \
-  PortableGroup/UIPMC_Acceptor.cpp \
-  PortableGroup/Fragments_Cleanup_Strategy.cpp \
-  PortableGroup/UIPMC_Wait_Never.cpp \
-  PortableGroup/PG_GenericFactory.cpp \
-  PortableGroup/PG_PropertyManager.cpp \
-  PortableGroup/PG_Object_Group_Manipulator.cpp \
-  PortableGroup/PG_Property_Set.cpp \
-  PortableGroup/PG_Default_Property_Validator.cpp \
-  PortableGroup/PG_Object_Group.cpp \
-  PortableGroup/PG_Group_Factory.cpp \
-  PortableGroup/UIPMC_Mcast_Transport.cpp \
-  PortableGroup/PG_Utils.cpp \
-  PortableGroup/PG_Operators.cpp \
-  PortableGroup/miop_resource.cpp \
-  PortableGroup/PG_Object_Adapter_Factory.cpp \
-  PortableGroup/UIPMC_Connector.cpp \
-  PortableGroup/UIPMC_Transport.cpp \
-  PortableGroup/UIPMC_Message_Block_Data_Iterator.cpp \
-  PortableGroup/PG_Property_Utils.cpp \
-  PortableGroup/PortableGroup_Loader.cpp \
-  PortableGroup/PG_Servant_Dispatcher.cpp \
+  PortableGroup/PG_MemberInfo.cpp \
+  PortableGroup/PortableGroup_Acceptor_Registry.cpp \
+  PortableGroup/PG_Location_Hash.cpp \
   PortableGroup/UIPMC_Transport_Recv_Packet.cpp \
   PortableGroup/MIOP.cpp \
+  PortableGroup/PG_ObjectGroupManager.cpp \
+  PortableGroup/PG_Location_Equal_To.cpp \
+  PortableGroup/PG_PropertyManager.cpp \
+  PortableGroup/PG_Object_Adapter_Factory.cpp \
+  PortableGroup/PG_Properties_Support.cpp \
+  PortableGroup/PG_Operators.cpp \
+  PortableGroup/PG_GenericFactory.cpp \
+  PortableGroup/UIPMC_Connector.cpp \
+  PortableGroup/PG_Property_Utils.cpp \
+  PortableGroup/Fragments_Cleanup_Strategy.cpp \
+  PortableGroup/PortableGroup_Request_Dispatcher.cpp \
+  PortableGroup/UIPMC_Message_Block_Data_Iterator.cpp \
+  PortableGroup/UIPMC_Mcast_Connection_Handler.cpp \
+  PortableGroup/UIPMC_Mcast_Transport.cpp \
   PortableGroup/UIPMC_Factory.cpp \
-  PortableGroup/PG_FactoryRegistry.cpp \
+  PortableGroup/UIPMC_Acceptor.cpp \
   PortableGroup/PG_Group_Guard.cpp \
-  PortableGroup/PG_Properties_Encoder.cpp \
+  PortableGroup/PG_Group_List_Store.cpp \
+  PortableGroup/PG_Default_Property_Validator.cpp \
+  PortableGroup/PG_FactoryRegistry.cpp \
+  PortableGroup/PG_Object_Group_Manipulator.cpp \
+  PortableGroup/UIPMC_Connection_Handler.cpp \
+  PortableGroup/UIPMC_Transport.cpp \
+  PortableGroup/PortableGroup_Loader.cpp \
+  PortableGroup/UIPMC_Wait_Never.cpp \
+  PortableGroup/PG_Group_Factory.cpp \
   PortableGroup/UIPMC_Endpoint.cpp \
-  PortableGroup/PortableGroup_Acceptor_Registry.cpp
+  PortableGroup/PG_Object_Group_Storable.cpp \
+  PortableGroup/PG_Object_Group.cpp \
+  PortableGroup/UIPMC_Profile.cpp \
+  PortableGroup/PG_Property_Set.cpp \
+  PortableGroup/PG_Servant_Dispatcher.cpp
 
 
 VPATH = .:PortableGroup
@@ -380,7 +382,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = miopS.cpp miopC.cpp PortableGroup_Simple_DSS.cpp PortableGroup_Simple_DSC.cpp PortableGroupS.cpp PortableGroupC.cpp PortableGroup/GOA.cpp PortableGroup/PG_MemberInfo.cpp PortableGroup/PG_ObjectGroupManager.cpp PortableGroup/PG_Location_Hash.cpp PortableGroup/PG_Location_Equal_To.cpp PortableGroup/Portable_Group_Map.cpp PortableGroup/PortableGroup_ORBInitializer.cpp PortableGroup/UIPMC_Profile.cpp PortableGroup/PG_Null_Property_Validator.cpp PortableGroup/UIPMC_Connection_Handler.cpp PortableGroup/PortableGroup_Request_Dispatcher.cpp PortableGroup/PG_Properties_Support.cpp PortableGroup/UIPMC_Mcast_Connection_Handler.cpp PortableGroup/UIPMC_Acceptor.cpp PortableGroup/Fragments_Cleanup_Strategy.cpp PortableGroup/UIPMC_Wait_Never.cpp PortableGroup/PG_GenericFactory.cpp PortableGroup/PG_PropertyManager.cpp PortableGroup/PG_Object_Group_Manipulator.cpp PortableGroup/PG_Property_Set.cpp PortableGroup/PG_Default_Property_Validator.cpp PortableGroup/PG_Object_Group.cpp PortableGroup/PG_Group_Factory.cpp PortableGroup/UIPMC_Mcast_Transport.cpp PortableGroup/PG_Utils.cpp PortableGroup/PG_Operators.cpp PortableGroup/miop_resource.cpp PortableGroup/PG_Object_Adapter_Factory.cpp PortableGroup/UIPMC_Connector.cpp PortableGroup/UIPMC_Transport.cpp PortableGroup/UIPMC_Message_Block_Data_Iterator.cpp PortableGroup/PG_Property_Utils.cpp PortableGroup/PortableGroup_Loader.cpp PortableGroup/PG_Servant_Dispatcher.cpp PortableGroup/UIPMC_Transport_Recv_Packet.cpp PortableGroup/MIOP.cpp PortableGroup/UIPMC_Factory.cpp PortableGroup/PG_FactoryRegistry.cpp PortableGroup/PG_Group_Guard.cpp PortableGroup/PG_Properties_Encoder.cpp PortableGroup/UIPMC_Endpoint.cpp PortableGroup/PortableGroup_Acceptor_Registry.cpp  
+FORCED_IDL_STUBS = miopS.cpp miopC.cpp PortableGroup_Simple_DSS.cpp PortableGroup_Simple_DSC.cpp PortableGroupS.cpp PortableGroupC.cpp PortableGroup/PG_Null_Property_Validator.cpp PortableGroup/PG_Properties_Encoder.cpp PortableGroup/miop_resource.cpp PortableGroup/PG_Utils.cpp PortableGroup/GOA.cpp PortableGroup/Portable_Group_Map.cpp PortableGroup/PortableGroup_ORBInitializer.cpp PortableGroup/PG_MemberInfo.cpp PortableGroup/PortableGroup_Acceptor_Registry.cpp PortableGroup/PG_Location_Hash.cpp PortableGroup/UIPMC_Transport_Recv_Packet.cpp PortableGroup/MIOP.cpp PortableGroup/PG_ObjectGroupManager.cpp PortableGroup/PG_Location_Equal_To.cpp PortableGroup/PG_PropertyManager.cpp PortableGroup/PG_Object_Adapter_Factory.cpp PortableGroup/PG_Properties_Support.cpp PortableGroup/PG_Operators.cpp PortableGroup/PG_GenericFactory.cpp PortableGroup/UIPMC_Connector.cpp PortableGroup/PG_Property_Utils.cpp PortableGroup/Fragments_Cleanup_Strategy.cpp PortableGroup/PortableGroup_Request_Dispatcher.cpp PortableGroup/UIPMC_Message_Block_Data_Iterator.cpp PortableGroup/UIPMC_Mcast_Connection_Handler.cpp PortableGroup/UIPMC_Mcast_Transport.cpp PortableGroup/UIPMC_Factory.cpp PortableGroup/UIPMC_Acceptor.cpp PortableGroup/PG_Group_Guard.cpp PortableGroup/PG_Group_List_Store.cpp PortableGroup/PG_Default_Property_Validator.cpp PortableGroup/PG_FactoryRegistry.cpp PortableGroup/PG_Object_Group_Manipulator.cpp PortableGroup/UIPMC_Connection_Handler.cpp PortableGroup/UIPMC_Transport.cpp PortableGroup/PortableGroup_Loader.cpp PortableGroup/UIPMC_Wait_Never.cpp PortableGroup/PG_Group_Factory.cpp PortableGroup/UIPMC_Endpoint.cpp PortableGroup/PG_Object_Group_Storable.cpp PortableGroup/PG_Object_Group.cpp PortableGroup/UIPMC_Profile.cpp PortableGroup/PG_Property_Set.cpp PortableGroup/PG_Servant_Dispatcher.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:miopS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:miopC.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:PortableGroup_Simple_DSS.cpp=)
@@ -461,44 +463,47 @@ endif
 #BEGIN MPC-Generated Install Info
 #build_files:
 #PortableGroup.mpc
-#CosConcurrency.mpc
-#FtRtEvent.mpc
-#DsNotifyLogAdmin.mpc
-#CosProperty.mpc
-#RTEvent_Skel.mpc
-#CosNaming_Serv.mpc
-#CosTrading.mpc
-#RTEvent.mpc
-#DsLogAdmin.mpc
-#CosNotification.mpc
 #DsEventLogAdmin.mpc
-#RTKokyuEvent.mpc
-#SSLIOP.mpc
-#RTCORBAEvent.mpc
-#RTSchedEvent.mpc
-#CosNaming_Skel.mpc
-#FTORB.mpc
-#RTEventLogAdmin.mpc
-#HTIOP.mpc
-#CosEvent.mpc
-#CosNaming.mpc
-#RTEvent_Serv.mpc
-#CosLoadBalancing.mpc
-#AV.mpc
-#FaultTolerance.mpc
-#Svc_Utils.mpc
-#Security.mpc
-#CosTime.mpc
-#RT_Notification.mpc
-#CosLifeCycle.mpc
-#RTSched.mpc
 #IFRService.mpc
+#CosNaming.mpc
+#Svc_Utils.mpc
+#SSLIOP.mpc
+#DsLogAdmin.mpc
+#HTIOP.mpc
+#CosLoadBalancing.mpc
+#FTORB.mpc
+#CosConcurrency.mpc
+#CosTrading.mpc
+#RTSchedEvent.mpc
+#RTKokyuEvent.mpc
+#FtRtEvent.mpc
+#AV.mpc
+#CosNaming_Skel.mpc
+#FtNamingReplication.mpc
+#CosNaming_Serv.mpc
+#RTSched.mpc
+#Security.mpc
+#RTEventLogAdmin.mpc
+#FtNaming.mpc
+#RT_Notification.mpc
+#FT_Naming_Serv.mpc
+#CosLifeCycle.mpc
+#CosTime.mpc
+#RTEvent_Serv.mpc
+#RTEvent_Skel.mpc
+#CosNotification.mpc
+#FaultTolerance.mpc
+#RTCORBAEvent.mpc
+#CosEvent.mpc
+#CosProperty.mpc
+#RTEvent.mpc
+#DsNotifyLogAdmin.mpc
 #ec_typed_events.mpb
-#ssliop_params_dup.mpb
 #ec_typed_events_skel.mpb
-#ec_typed_events_idl.mpb
+#ssliop_params_dup.mpb
 #ec_typed_events_serv.mpb
 #cosnaming_serv_persistence.mpb
+#ec_typed_events_idl.mpb
 #orbsvcs.mwc
 #
 #idl_files:
@@ -527,56 +532,58 @@ endif
 #PortableGroupC.h
 #PortableGroup_Simple_DSS.h
 #PortableGroup_Simple_DSC.h
-#PortableGroup/PG_Property_Set.h
-#PortableGroup/PG_MemberInfo.h
-#PortableGroup/GOA.h
-#PortableGroup/PortableGroup_Loader.h
-#PortableGroup/PG_Location_Map.h
-#PortableGroup/PG_FactoryRegistry.h
-#PortableGroup/PG_Default_Property_Validator.h
-#PortableGroup/PG_Location_Equal_To.h
-#PortableGroup/PG_Properties_Support.h
-#PortableGroup/UIPMC_Connector.h
-#PortableGroup/PG_Property_Utils.h
-#PortableGroup/UIPMC_Factory.h
-#PortableGroup/portablegroup_export.h
-#PortableGroup/miopconf.h
-#PortableGroup/PG_Null_Property_Validator.h
-#PortableGroup/PortableGroup_Acceptor_Registry.h
-#PortableGroup/UIPMC_Message_Block_Data_Iterator.h
-#PortableGroup/PG_Location_Hash.h
-#PortableGroup/Fragments_Cleanup_Strategy.h
-#PortableGroup/PG_Factory_Set.h
-#PortableGroup/PG_conf.h
 #PortableGroup/PortableGroup_ORBInitializer.h
-#PortableGroup/PG_ObjectGroup_Map.h
-#PortableGroup/PG_Operators.h
-#PortableGroup/PortableGroup_Request_Dispatcher.h
-#PortableGroup/UIPMC_Endpoint.h
-#PortableGroup/PG_Servant_Dispatcher.h
-#PortableGroup/PG_Object_Adapter_Factory.h
-#PortableGroup/miop_resource.h
-#PortableGroup/UIPMC_Transport_Recv_Packet.h
-#PortableGroup/PG_Group_Guard.h
-#PortableGroup/UIPMC_Mcast_Connection_Handler.h
-#PortableGroup/PG_ObjectGroupManager.h
-#PortableGroup/PG_PropertyManager.h
-#PortableGroup/PG_Object_Group.h
-#PortableGroup/UIPMC_Transport.h
-#PortableGroup/UIPMC_Connection_Handler.h
-#PortableGroup/UIPMC_Profile.h
-#PortableGroup/UIPMC_Mcast_Transport.h
-#PortableGroup/PG_Utils.h
-#PortableGroup/PG_Properties_Encoder.h
+#PortableGroup/PG_Default_Property_Validator.h
 #PortableGroup/PG_Group_Factory.h
-#PortableGroup/UIPMC_Wait_Never.h
-#PortableGroup/Portable_Group_Map.h
-#PortableGroup/PG_Factory_Map.h
-#PortableGroup/PG_GenericFactory.h
-#PortableGroup/UIPMC_Acceptor.h
+#PortableGroup/PG_Properties_Encoder.h
+#PortableGroup/UIPMC_Endpoint.h
+#PortableGroup/PG_Properties_Support.h
+#PortableGroup/PG_ObjectGroup_Map.h
+#PortableGroup/PG_Location_Equal_To.h
+#PortableGroup/PG_Property_Set.h
+#PortableGroup/PG_conf.h
+#PortableGroup/PG_Utils.h
+#PortableGroup/PG_ObjectGroupManager.h
+#PortableGroup/PortableGroup_Request_Dispatcher.h
+#PortableGroup/GOA.h
 #PortableGroup/MIOP.h
-#PortableGroup/PG_Object_Group_Manipulator.h
+#PortableGroup/PG_Object_Group_Storable.h
+#PortableGroup/Fragments_Cleanup_Strategy.h
+#PortableGroup/UIPMC_Mcast_Connection_Handler.h
+#PortableGroup/Portable_Group_Map.h
+#PortableGroup/PG_Null_Property_Validator.h
+#PortableGroup/PG_MemberInfo.h
+#PortableGroup/UIPMC_Acceptor.h
+#PortableGroup/UIPMC_Wait_Never.h
+#PortableGroup/PG_Group_Guard.h
+#PortableGroup/PG_Object_Group.h
+#PortableGroup/UIPMC_Transport_Recv_Packet.h
+#PortableGroup/PG_Location_Map.h
+#PortableGroup/PG_Property_Utils.h
+#PortableGroup/PG_Group_List_Store.h
+#PortableGroup/UIPMC_Connector.h
+#PortableGroup/portablegroup_export.h
+#PortableGroup/PG_Operators.h
+#PortableGroup/miop_resource.h
+#PortableGroup/PG_Factory_Set.h
+#PortableGroup/PG_Object_Adapter_Factory.h
+#PortableGroup/miopconf.h
+#PortableGroup/UIPMC_Connection_Handler.h
+#PortableGroup/UIPMC_Factory.h
+#PortableGroup/UIPMC_Transport.h
 #PortableGroup/PG_Property_Set_Find.h
+#PortableGroup/PG_Object_Group_Manipulator.h
+#PortableGroup/PG_PropertyManager.h
+#PortableGroup/PG_Location_Hash.h
+#PortableGroup/UIPMC_Mcast_Transport.h
+#PortableGroup/PG_FactoryRegistry.h
+#PortableGroup/PG_Servant_Dispatcher.h
+#PortableGroup/PortableGroup_Acceptor_Registry.h
+#PortableGroup/PortableGroup_Loader.h
+#PortableGroup/PG_Factory_Map.h
+#PortableGroup/UIPMC_Profile.h
+#PortableGroup/UIPMC_Message_Block_Data_Iterator.h
+#PortableGroup/PG_GenericFactory.h
 #
 #pkgconfig_files:
 #TAO_PortableGroup.pc.in
@@ -588,48 +595,50 @@ endif
 #PortableGroup_Simple_DSC.cpp
 #PortableGroupS.cpp
 #PortableGroupC.cpp
+#PortableGroup/PG_Null_Property_Validator.cpp
+#PortableGroup/PG_Properties_Encoder.cpp
+#PortableGroup/miop_resource.cpp
+#PortableGroup/PG_Utils.cpp
 #PortableGroup/GOA.cpp
-#PortableGroup/PG_MemberInfo.cpp
-#PortableGroup/PG_ObjectGroupManager.cpp
-#PortableGroup/PG_Location_Hash.cpp
-#PortableGroup/PG_Location_Equal_To.cpp
 #PortableGroup/Portable_Group_Map.cpp
 #PortableGroup/PortableGroup_ORBInitializer.cpp
-#PortableGroup/UIPMC_Profile.cpp
-#PortableGroup/PG_Null_Property_Validator.cpp
-#PortableGroup/UIPMC_Connection_Handler.cpp
-#PortableGroup/PortableGroup_Request_Dispatcher.cpp
-#PortableGroup/PG_Properties_Support.cpp
-#PortableGroup/UIPMC_Mcast_Connection_Handler.cpp
-#PortableGroup/UIPMC_Acceptor.cpp
-#PortableGroup/Fragments_Cleanup_Strategy.cpp
-#PortableGroup/UIPMC_Wait_Never.cpp
-#PortableGroup/PG_GenericFactory.cpp
-#PortableGroup/PG_PropertyManager.cpp
-#PortableGroup/PG_Object_Group_Manipulator.cpp
-#PortableGroup/PG_Property_Set.cpp
-#PortableGroup/PG_Default_Property_Validator.cpp
-#PortableGroup/PG_Object_Group.cpp
-#PortableGroup/PG_Group_Factory.cpp
-#PortableGroup/UIPMC_Mcast_Transport.cpp
-#PortableGroup/PG_Utils.cpp
-#PortableGroup/PG_Operators.cpp
-#PortableGroup/miop_resource.cpp
-#PortableGroup/PG_Object_Adapter_Factory.cpp
-#PortableGroup/UIPMC_Connector.cpp
-#PortableGroup/UIPMC_Transport.cpp
-#PortableGroup/UIPMC_Message_Block_Data_Iterator.cpp
-#PortableGroup/PG_Property_Utils.cpp
-#PortableGroup/PortableGroup_Loader.cpp
-#PortableGroup/PG_Servant_Dispatcher.cpp
+#PortableGroup/PG_MemberInfo.cpp
+#PortableGroup/PortableGroup_Acceptor_Registry.cpp
+#PortableGroup/PG_Location_Hash.cpp
 #PortableGroup/UIPMC_Transport_Recv_Packet.cpp
 #PortableGroup/MIOP.cpp
+#PortableGroup/PG_ObjectGroupManager.cpp
+#PortableGroup/PG_Location_Equal_To.cpp
+#PortableGroup/PG_PropertyManager.cpp
+#PortableGroup/PG_Object_Adapter_Factory.cpp
+#PortableGroup/PG_Properties_Support.cpp
+#PortableGroup/PG_Operators.cpp
+#PortableGroup/PG_GenericFactory.cpp
+#PortableGroup/UIPMC_Connector.cpp
+#PortableGroup/PG_Property_Utils.cpp
+#PortableGroup/Fragments_Cleanup_Strategy.cpp
+#PortableGroup/PortableGroup_Request_Dispatcher.cpp
+#PortableGroup/UIPMC_Message_Block_Data_Iterator.cpp
+#PortableGroup/UIPMC_Mcast_Connection_Handler.cpp
+#PortableGroup/UIPMC_Mcast_Transport.cpp
 #PortableGroup/UIPMC_Factory.cpp
-#PortableGroup/PG_FactoryRegistry.cpp
+#PortableGroup/UIPMC_Acceptor.cpp
 #PortableGroup/PG_Group_Guard.cpp
-#PortableGroup/PG_Properties_Encoder.cpp
+#PortableGroup/PG_Group_List_Store.cpp
+#PortableGroup/PG_Default_Property_Validator.cpp
+#PortableGroup/PG_FactoryRegistry.cpp
+#PortableGroup/PG_Object_Group_Manipulator.cpp
+#PortableGroup/UIPMC_Connection_Handler.cpp
+#PortableGroup/UIPMC_Transport.cpp
+#PortableGroup/PortableGroup_Loader.cpp
+#PortableGroup/UIPMC_Wait_Never.cpp
+#PortableGroup/PG_Group_Factory.cpp
 #PortableGroup/UIPMC_Endpoint.cpp
-#PortableGroup/PortableGroup_Acceptor_Registry.cpp
+#PortableGroup/PG_Object_Group_Storable.cpp
+#PortableGroup/PG_Object_Group.cpp
+#PortableGroup/UIPMC_Profile.cpp
+#PortableGroup/PG_Property_Set.cpp
+#PortableGroup/PG_Servant_Dispatcher.cpp
 #
 #lib_output:
 #../../../lib TAO_PortableGroup

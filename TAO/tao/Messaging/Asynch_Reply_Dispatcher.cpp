@@ -1,4 +1,4 @@
-// $Id: Asynch_Reply_Dispatcher.cpp 95010 2011-11-11 10:46:02Z mcorino $
+// $Id: Asynch_Reply_Dispatcher.cpp 96885 2013-03-06 09:22:01Z sma $
 
 #include "tao/Messaging/Asynch_Reply_Dispatcher.h"
 #include "tao/Pluggable_Messaging_Utils.h"
@@ -230,7 +230,7 @@ TAO_Asynch_Reply_Dispatcher::reply_timed_out (void)
           CORBA::TIMEOUT timeout_failure (
             CORBA::SystemException::_tao_minor_code (
                 TAO_TIMEOUT_RECV_MINOR_CODE,
-                errno),
+                ETIME),
              CORBA::COMPLETED_MAYBE);
 
           TAO_OutputCDR out_cdr;

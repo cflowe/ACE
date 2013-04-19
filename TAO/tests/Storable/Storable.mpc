@@ -1,0 +1,6 @@
+// -*- MPC -*-
+// $Id: Storable.mpc 96528 2012-12-17 14:43:05Z harrisb $
+
+project : taoclient {
+  exename = test
+}

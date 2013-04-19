@@ -4,7 +4,7 @@
 /**
  *  @file   Persistent_Naming_Context.h
  *
- *  $Id: Persistent_Naming_Context.h 76589 2007-01-25 18:04:11Z elliott_c $
+ *  $Id: Persistent_Naming_Context.h 96760 2013-02-05 21:11:03Z stanleyk $
  *
  *  @author Marina Spivak <marina@cs.wustl.edu>
  */
@@ -169,12 +169,6 @@ public:
 
   // = Initialization and termination methods.
 
-  /// Constructor.  MUST be followed up by <init> to allocate the
-  /// underlying data structure from persistent storage!
-  TAO_Persistent_Naming_Context (PortableServer::POA_ptr poa,
-                                 const char *poa_id,
-                                 TAO_Persistent_Context_Index *context_index);
-
   /// Allocate the underlying data structure from persistent storage.
   /// Returns 0 on success and -1 on failure.
   int init (size_t hash_table_size = ACE_DEFAULT_MAP_SIZE);
@@ -182,13 +176,15 @@ public:
   /**
    * Constructor that takes in preallocated data structure and takes
    * ownership of it.  This constructor is for 'recreating' servants
-   * from persistent state.
+   * from persistent state. If no map is provided, it MUST be followed
+   * up by <init> to allocate the underlying data structure from
+   * persistent storage!
    */
   TAO_Persistent_Naming_Context (PortableServer::POA_ptr poa,
                                  const char *poa_id,
                                  TAO_Persistent_Context_Index *context_index,
-                                 HASH_MAP * map,
-                                 ACE_UINT32 *counter);
+                                 HASH_MAP * map = 0,
+                                 ACE_UINT32 *counter = 0);
 
   /// Destructor.
   virtual ~TAO_Persistent_Naming_Context (void);

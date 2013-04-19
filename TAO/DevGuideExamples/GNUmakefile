@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-816/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-816/ACE_wrappers/TAO/DAnCE
+# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: AMH_Idl AMH_Server AMH_Client AMH_AMI_Idl AMH_AMI_Client AMH_AMI_Inner_Server AMH_AMI_Middle_Server BiDirectionalGIOP_Idl BiDirectionalGIOP_Client BiDirectionalGIOP_Server GettingStarted_Idl GettingStarted_Client GettingStarted_Server LocalObject_Messenger_Idl LocalObject_Messenger_Server ServantLocator_Idl ServantLocator_Client ServantLocator_Server AMIcallback_Server AMIcallback_Client RelativeRoundtripTimeout_Idl RelativeRoundtripTimeout_Client RelativeRoundtripTimeout_Server GracefulShutdown_Idl Multithreading_GracefulShutdown_Client Multithreading_GracefulShutdown_Server Reactive_Idl Multithreading_Reactive_Server Multithreading_Reactive_Client ThreadPerConnection_Idl Multi_ThreadPerConnection_Server Multi_ThreadPerConnection_Client ThreadPool_Idl Multithreading_ThreadPool_Client Multithreading_ThreadPool_Server Auth_Idl Auth_Client Auth_Server IOR_Idl IOR_Client IOR_Server PICurrent_Idl PICurrent_Client PICurrent_Server SimpleCode_Idl SimpleCode_Server SimpleCode_Client RTCORBA_Idl RTCORBA_Client RTCORBA_Server SmartProxies_Logger SmartProxies_Server SmartProxies_Client Bank_Dev_Bank_Idl Bank__Dev_Client Bank__Dev_Server ValueTypes_DevGuideIDL ValueTypes_DevGuideMsgClient ValueTypes_DevGuideMsgServer
+all: AMH_Idl AMH_Server AMH_Client AMH_AMI_Idl AMH_AMI_Client AMH_AMI_Inner_Server AMH_AMI_Middle_Server BiDirectionalGIOP_Idl BiDirectionalGIOP_Client BiDirectionalGIOP_Server GettingStarted_Idl GettingStarted_Client GettingStarted_Server LocalObject_Messenger_Idl LocalObject_Messenger_Server ServantLocator_Idl ServantLocator_Client ServantLocator_Server AMIcallback_Server AMIcallback_Client RelativeRoundtripTimeout_Idl RelativeRoundtripTimeout_Client RelativeRoundtripTimeout_Server DynamicThreadPool_Idl DynamicThreadPool_Client DynamicThreadPool_Server GracefulShutdown_Idl Multithreading_GracefulShutdown_Client Multithreading_GracefulShutdown_Server Reactive_Idl Multithreading_Reactive_Server Multithreading_Reactive_Client ThreadPerConnection_Idl Multi_ThreadPerConnection_Server Multi_ThreadPerConnection_Client ThreadPool_Idl Multithreading_ThreadPool_Client Multithreading_ThreadPool_Server Auth_Idl Auth_Client Auth_Server IOR_Idl IOR_Client IOR_Server PICurrent_Idl PICurrent_Client PICurrent_Server SimpleCode_Idl SimpleCode_Server SimpleCode_Client RTCORBA_Idl RTCORBA_Client RTCORBA_Server SmartProxies_Logger SmartProxies_Server SmartProxies_Client Bank_Dev_Bank_Idl Bank__Dev_Client Bank__Dev_Server ValueTypes_DevGuideIDL ValueTypes_DevGuideMsgClient ValueTypes_DevGuideMsgServer
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -48,6 +48,9 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Messaging/RelativeRoundtripTimeout && $(MAKE) -f GNUmakefile.RelativeRoundtripTimeout_Idl $(@)
 	$(KEEP_GOING)@cd Messaging/RelativeRoundtripTimeout && $(MAKE) -f GNUmakefile.RelativeRoundtripTimeout_Client $(@)
 	$(KEEP_GOING)@cd Messaging/RelativeRoundtripTimeout && $(MAKE) -f GNUmakefile.RelativeRoundtripTimeout_Server $(@)
+	$(KEEP_GOING)@cd Multithreading/DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Idl $(@)
+	$(KEEP_GOING)@cd Multithreading/DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Client $(@)
+	$(KEEP_GOING)@cd Multithreading/DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Server $(@)
 	$(KEEP_GOING)@cd Multithreading/GracefulShutdown && $(MAKE) -f GNUmakefile.GracefulShutdown_Idl $(@)
 	$(KEEP_GOING)@cd Multithreading/GracefulShutdown && $(MAKE) -f GNUmakefile.Multithreading_GracefulShutdown_Client $(@)
 	$(KEEP_GOING)@cd Multithreading/GracefulShutdown && $(MAKE) -f GNUmakefile.Multithreading_GracefulShutdown_Server $(@)
@@ -176,6 +179,18 @@ RelativeRoundtripTimeout_Client: RelativeRoundtripTimeout_Idl
 .PHONY: RelativeRoundtripTimeout_Server
 RelativeRoundtripTimeout_Server: RelativeRoundtripTimeout_Idl RelativeRoundtripTimeout_Client
 	$(KEEP_GOING)@cd Messaging/RelativeRoundtripTimeout && $(MAKE) -f GNUmakefile.RelativeRoundtripTimeout_Server all
+
+.PHONY: DynamicThreadPool_Idl
+DynamicThreadPool_Idl:
+	$(KEEP_GOING)@cd Multithreading/DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Idl all
+
+.PHONY: DynamicThreadPool_Client
+DynamicThreadPool_Client: DynamicThreadPool_Idl
+	$(KEEP_GOING)@cd Multithreading/DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Client all
+
+.PHONY: DynamicThreadPool_Server
+DynamicThreadPool_Server: DynamicThreadPool_Idl DynamicThreadPool_Client
+	$(KEEP_GOING)@cd Multithreading/DynamicThreadPool && $(MAKE) -f GNUmakefile.DynamicThreadPool_Server all
 
 .PHONY: GracefulShutdown_Idl
 GracefulShutdown_Idl:
@@ -345,6 +360,9 @@ project_name_list:
 	@echo RelativeRoundtripTimeout_Client
 	@echo RelativeRoundtripTimeout_Idl
 	@echo RelativeRoundtripTimeout_Server
+	@echo DynamicThreadPool_Client
+	@echo DynamicThreadPool_Idl
+	@echo DynamicThreadPool_Server
 	@echo GracefulShutdown_Idl
 	@echo Multithreading_GracefulShutdown_Client
 	@echo Multithreading_GracefulShutdown_Server

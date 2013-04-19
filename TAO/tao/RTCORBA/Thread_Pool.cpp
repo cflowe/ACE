@@ -1,4 +1,4 @@
-// $Id: Thread_Pool.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: Thread_Pool.cpp 96836 2013-02-19 02:08:55Z mesnier_p $
 
 #include "tao/RTCORBA/Thread_Pool.h"
 
@@ -28,11 +28,11 @@ TAO_RT_New_Leader_Generator::TAO_RT_New_Leader_Generator (
 {
 }
 
-void
+bool
 TAO_RT_New_Leader_Generator::no_leaders_available (void)
 {
   // Request a new dynamic thread from the Thread Lane
-  this->lane_.new_dynamic_thread ();
+  return this->lane_.new_dynamic_thread ();
 }
 
 TAO_Thread_Pool_Threads::TAO_Thread_Pool_Threads (TAO_Thread_Lane &lane)

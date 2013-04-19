@@ -62,6 +62,9 @@
     <None Include="run_test_ffp.pl">
       <Filter>Test Files</Filter>
     </None>
+    <None Include="run_test_ft.pl">
+      <Filter>Test Files</Filter>
+    </None>
     <None Include="run_test_ipv6.pl">
       <Filter>Test Files</Filter>
     </None>

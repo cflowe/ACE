@@ -27,6 +27,9 @@
     <ClCompile Include="AsyncStartupWaiter_i.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Config_Backing_Store.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Forwarder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,6 +57,12 @@
     <ClCompile Include="Server_Info.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Shared_Backing_Store.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XML_Backing_Store.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Activator_Info.h">
@@ -63,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AsyncStartupWaiter_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Config_Backing_Store.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Forwarder.h">
@@ -95,7 +107,13 @@
     <ClInclude Include="Server_Info.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Shared_Backing_Store.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XML_Backing_Store.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

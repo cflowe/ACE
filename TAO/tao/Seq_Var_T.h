@@ -4,7 +4,7 @@
 /**
  *  @file    Seq_Var_T.h
  *
- *  $Id: Seq_Var_T.h 90386 2010-06-02 13:52:08Z vzykov $
+ *  $Id: Seq_Var_T.h 96816 2013-02-13 19:29:43Z stanleyk $
  *
  *  @author Jeff Parsons
  */
@@ -61,8 +61,9 @@ public:
   _out_type     out (void);
   _retn_type    _retn (void);
 
-   /// TAO extension.
-   _retn_type    ptr (void) const;
+  /// TAO extension.
+  _retn_type    ptr (void) const;
+
 protected:
   T * ptr_;
 };

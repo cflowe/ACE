@@ -27,13 +27,15 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 Naming = \
-  Naming/Flat_File_Persistence.cpp \
   Naming/Persistent_Context_Index.cpp \
   Naming/Persistent_Entries.cpp \
   Naming/Persistent_Naming_Context.cpp \
   Naming/Storable.cpp \
   Naming/Storable_Naming_Context.cpp \
   Naming/Storable_Naming_Context_Activator.cpp \
+  Naming/Storable_Naming_Context_ReaderWriter.cpp \
+  Naming/Persistent_Naming_Context_Factory.cpp \
+  Naming/Storable_Naming_Context_Factory.cpp \
   Naming/Entries.cpp \
   Naming/Hash_Naming_Context.cpp \
   Naming/Naming_Context_Interface.cpp \
@@ -268,44 +270,47 @@ endif
 #BEGIN MPC-Generated Install Info
 #build_files:
 #PortableGroup.mpc
-#CosConcurrency.mpc
-#FtRtEvent.mpc
-#DsNotifyLogAdmin.mpc
-#CosProperty.mpc
-#RTEvent_Skel.mpc
-#CosNaming_Serv.mpc
-#CosTrading.mpc
-#RTEvent.mpc
-#DsLogAdmin.mpc
-#CosNotification.mpc
 #DsEventLogAdmin.mpc
-#RTKokyuEvent.mpc
-#SSLIOP.mpc
-#RTCORBAEvent.mpc
-#RTSchedEvent.mpc
-#CosNaming_Skel.mpc
-#FTORB.mpc
-#RTEventLogAdmin.mpc
-#HTIOP.mpc
-#CosEvent.mpc
-#CosNaming.mpc
-#RTEvent_Serv.mpc
-#CosLoadBalancing.mpc
-#AV.mpc
-#FaultTolerance.mpc
-#Svc_Utils.mpc
-#Security.mpc
-#CosTime.mpc
-#RT_Notification.mpc
-#CosLifeCycle.mpc
-#RTSched.mpc
 #IFRService.mpc
+#CosNaming.mpc
+#Svc_Utils.mpc
+#SSLIOP.mpc
+#DsLogAdmin.mpc
+#HTIOP.mpc
+#CosLoadBalancing.mpc
+#FTORB.mpc
+#CosConcurrency.mpc
+#CosTrading.mpc
+#RTSchedEvent.mpc
+#RTKokyuEvent.mpc
+#FtRtEvent.mpc
+#AV.mpc
+#CosNaming_Skel.mpc
+#FtNamingReplication.mpc
+#CosNaming_Serv.mpc
+#RTSched.mpc
+#Security.mpc
+#RTEventLogAdmin.mpc
+#FtNaming.mpc
+#RT_Notification.mpc
+#FT_Naming_Serv.mpc
+#CosLifeCycle.mpc
+#CosTime.mpc
+#RTEvent_Serv.mpc
+#RTEvent_Skel.mpc
+#CosNotification.mpc
+#FaultTolerance.mpc
+#RTCORBAEvent.mpc
+#CosEvent.mpc
+#CosProperty.mpc
+#RTEvent.mpc
+#DsNotifyLogAdmin.mpc
 #ec_typed_events.mpb
-#ssliop_params_dup.mpb
 #ec_typed_events_skel.mpb
-#ec_typed_events_idl.mpb
+#ssliop_params_dup.mpb
 #ec_typed_events_serv.mpb
 #cosnaming_serv_persistence.mpb
+#ec_typed_events_idl.mpb
 #orbsvcs.mwc
 #
 #inline_files:
@@ -315,7 +320,8 @@ endif
 #CosNaming_Serv.rc
 #
 #header_files:
-#Naming/Flat_File_Persistence.h
+#Naming/Persistent_Naming_Context_Factory.h
+#Naming/Storable_Naming_Context_ReaderWriter.h
 #Naming/Storable.h
 #Naming/Storable_Naming_Context_Activator.h
 #Naming/Persistent_Context_Index.h
@@ -324,6 +330,7 @@ endif
 #Naming/Storable_Naming_Context.h
 #Naming/Transient_Naming_Context.h
 #Naming/Naming_Server.h
+#Naming/Storable_Naming_Context_Factory.h
 #Naming/Persistent_Naming_Context.h
 #Naming/Naming_Context_Interface.h
 #Naming/Persistent_Entries.h
@@ -337,13 +344,15 @@ endif
 #TAO_CosNaming_Serv.pc.in
 #
 #source_files:
-#Naming/Flat_File_Persistence.cpp
 #Naming/Persistent_Context_Index.cpp
 #Naming/Persistent_Entries.cpp
 #Naming/Persistent_Naming_Context.cpp
 #Naming/Storable.cpp
 #Naming/Storable_Naming_Context.cpp
 #Naming/Storable_Naming_Context_Activator.cpp
+#Naming/Storable_Naming_Context_ReaderWriter.cpp
+#Naming/Persistent_Naming_Context_Factory.cpp
+#Naming/Storable_Naming_Context_Factory.cpp
 #Naming/Entries.cpp
 #Naming/Hash_Naming_Context.cpp
 #Naming/Naming_Context_Interface.cpp
