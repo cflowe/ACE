@@ -22,9 +22,9 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 FILES = \
   DiamondS.cpp \
   DiamondC.cpp \
-  Collocation.cpp \
   Collocation_Tester.cpp \
-  Diamond_i.cpp
+  Diamond_i.cpp \
+  Collocation.cpp
 
 
 #----------------------------------------------------------------------------
@@ -215,7 +215,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = DiamondS.cpp DiamondC.cpp Collocation.cpp Collocation_Tester.cpp Diamond_i.cpp  
+FORCED_IDL_STUBS = DiamondS.cpp DiamondC.cpp Collocation_Tester.cpp Diamond_i.cpp Collocation.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:DiamondS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:DiamondC.cpp=)
 

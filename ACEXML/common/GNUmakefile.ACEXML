@@ -26,36 +26,36 @@ SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
   XML_Codecs.cpp \
-  ContentHandler.cpp \
-  XMLFilterImpl.cpp \
-  StreamFactory.cpp \
-  StrCharStream.cpp \
-  NamespaceSupport.cpp \
-  HttpCharStream.cpp \
-  InputSource.cpp \
   Exception.cpp \
-  URL_Addr.cpp \
-  Element_Def_Builder.cpp \
-  Mem_Map_Stream.cpp \
-  DTD_Manager.cpp \
-  DTDHandler.cpp \
-  ZipCharStream.cpp \
-  FileCharStream.cpp \
   SAXExceptions.cpp \
-  Validator.cpp \
-  XML_Util.cpp \
-  ErrorHandler.cpp \
   XMLReader.cpp \
-  Attributes.cpp \
-  LocatorImpl.cpp \
-  Encoding.cpp \
-  Transcode.cpp \
+  Element_Def_Builder.cpp \
+  StrCharStream.cpp \
   Locator.cpp \
-  AttributesImpl.cpp \
-  CharStream.cpp \
+  XMLFilterImpl.cpp \
+  InputSource.cpp \
+  DTD_Manager.cpp \
   Attributes_Def_Builder.cpp \
+  Transcode.cpp \
+  Mem_Map_Stream.cpp \
+  XML_Util.cpp \
+  AttributesImpl.cpp \
+  FileCharStream.cpp \
+  Encoding.cpp \
+  CharStream.cpp \
+  URL_Addr.cpp \
   DefaultHandler.cpp \
-  EntityResolver.cpp
+  HttpCharStream.cpp \
+  ErrorHandler.cpp \
+  DTDHandler.cpp \
+  Validator.cpp \
+  NamespaceSupport.cpp \
+  ContentHandler.cpp \
+  LocatorImpl.cpp \
+  Attributes.cpp \
+  StreamFactory.cpp \
+  EntityResolver.cpp \
+  ZipCharStream.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -282,11 +282,11 @@ endif
 #XML_Types.h
 #XML_Util.h
 #DefaultHandler.h
-#Mem_Map_Stream.h
 #URL_Addr.h
-#AttributesImpl.h
-#Encoding.h
+#Mem_Map_Stream.h
 #NamespaceSupport.h
+#Encoding.h
+#AttributesImpl.h
 #StreamFactory.h
 #XMLFilterImpl.h
 #Transcode.h
@@ -300,9 +300,9 @@ endif
 #InputSource.h
 #FileCharStream.h
 #StrCharStream.h
+#ZipCharStream.h
 #Exception.h
 #DTD_Manager.h
-#ZipCharStream.h
 #CharStream.h
 #
 #pkgconfig_files:
@@ -310,36 +310,36 @@ endif
 #
 #source_files:
 #XML_Codecs.cpp
-#ContentHandler.cpp
-#XMLFilterImpl.cpp
-#StreamFactory.cpp
-#StrCharStream.cpp
-#NamespaceSupport.cpp
-#HttpCharStream.cpp
-#InputSource.cpp
 #Exception.cpp
-#URL_Addr.cpp
-#Element_Def_Builder.cpp
-#Mem_Map_Stream.cpp
-#DTD_Manager.cpp
-#DTDHandler.cpp
-#ZipCharStream.cpp
-#FileCharStream.cpp
 #SAXExceptions.cpp
-#Validator.cpp
-#XML_Util.cpp
-#ErrorHandler.cpp
 #XMLReader.cpp
-#Attributes.cpp
-#LocatorImpl.cpp
-#Encoding.cpp
-#Transcode.cpp
+#Element_Def_Builder.cpp
+#StrCharStream.cpp
 #Locator.cpp
-#AttributesImpl.cpp
-#CharStream.cpp
+#XMLFilterImpl.cpp
+#InputSource.cpp
+#DTD_Manager.cpp
 #Attributes_Def_Builder.cpp
+#Transcode.cpp
+#Mem_Map_Stream.cpp
+#XML_Util.cpp
+#AttributesImpl.cpp
+#FileCharStream.cpp
+#Encoding.cpp
+#CharStream.cpp
+#URL_Addr.cpp
 #DefaultHandler.cpp
+#HttpCharStream.cpp
+#ErrorHandler.cpp
+#DTDHandler.cpp
+#Validator.cpp
+#NamespaceSupport.cpp
+#ContentHandler.cpp
+#LocatorImpl.cpp
+#Attributes.cpp
+#StreamFactory.cpp
 #EntityResolver.cpp
+#ZipCharStream.cpp
 #
 #lib_output:
 #../../lib ACEXML

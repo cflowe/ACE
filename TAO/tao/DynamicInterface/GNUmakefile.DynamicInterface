@@ -27,20 +27,20 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  DII_Reply_Dispatcher.cpp \
-  Request.cpp \
-  Dynamic_Implementation.cpp \
-  Unknown_User_Exception.cpp \
-  Context.cpp \
-  DII_Invocation_Adapter.cpp \
-  ExceptionList.cpp \
   DII_Invocation.cpp \
-  DII_Reply_Handler.cpp \
-  Dynamic_Adapter_Impl.cpp \
-  DII_Arguments_Converter_Impl.cpp \
+  DII_Arguments.cpp \
+  Request.cpp \
+  DII_Reply_Dispatcher.cpp \
   Server_Request.cpp \
+  DII_Invocation_Adapter.cpp \
+  Unknown_User_Exception.cpp \
+  DII_Arguments_Converter_Impl.cpp \
+  Dynamic_Adapter_Impl.cpp \
+  Context.cpp \
   AMH_DSI_Response_Handler.cpp \
-  DII_Arguments.cpp
+  DII_Reply_Handler.cpp \
+  Dynamic_Implementation.cpp \
+  ExceptionList.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -266,12 +266,12 @@ endif
 #DynamicInterface.mpc
 #
 #inline_files:
-#DII_Arguments.inl
 #Server_Request.inl
+#DII_Arguments.inl
 #Context.inl
 #ExceptionList.inl
-#Request.inl
 #DII_Reply_Handler.inl
+#Request.inl
 #AMH_DSI_Response_Handler.inl
 #
 #resource_files:
@@ -279,17 +279,17 @@ endif
 #
 #header_files:
 #DII_Invocation.h
-#DII_Arguments.h
 #Server_Request.h
+#DII_Arguments.h
 #Context.h
 #ExceptionList.h
 #Dynamic_Implementation.h
 #DII_Invocation_Adapter.h
 #Unknown_User_Exception.h
 #DII_Arguments_Converter_Impl.h
-#DII_Reply_Dispatcher.h
-#Request.h
 #DII_Reply_Handler.h
+#Request.h
+#DII_Reply_Dispatcher.h
 #AMH_DSI_Response_Handler.h
 #Dynamic_Adapter_Impl.h
 #dynamicinterface_export.h
@@ -299,20 +299,20 @@ endif
 #TAO_DynamicInterface.pc.in
 #
 #source_files:
-#DII_Reply_Dispatcher.cpp
-#Request.cpp
-#Dynamic_Implementation.cpp
-#Unknown_User_Exception.cpp
-#Context.cpp
-#DII_Invocation_Adapter.cpp
-#ExceptionList.cpp
 #DII_Invocation.cpp
-#DII_Reply_Handler.cpp
-#Dynamic_Adapter_Impl.cpp
-#DII_Arguments_Converter_Impl.cpp
-#Server_Request.cpp
-#AMH_DSI_Response_Handler.cpp
 #DII_Arguments.cpp
+#Request.cpp
+#DII_Reply_Dispatcher.cpp
+#Server_Request.cpp
+#DII_Invocation_Adapter.cpp
+#Unknown_User_Exception.cpp
+#DII_Arguments_Converter_Impl.cpp
+#Dynamic_Adapter_Impl.cpp
+#Context.cpp
+#AMH_DSI_Response_Handler.cpp
+#DII_Reply_Handler.cpp
+#Dynamic_Implementation.cpp
+#ExceptionList.cpp
 #
 #lib_output:
 #../../../lib TAO_DynamicInterface

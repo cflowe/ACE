@@ -1,4 +1,4 @@
-// $Id: Session_Container.cpp 95904 2012-06-20 08:20:48Z johnnyw $
+// $Id: Session_Container.cpp 96172 2012-10-03 06:20:53Z johnnyw $
 
 #include "Session_Container.h"
 
@@ -306,7 +306,7 @@ namespace CIAO
                      "Component servant factory failed.\n"));
 
         throw CIAO::Installation_Failure (name,
-                                          "Componet servant factory failed");
+                                          "Component servant factory failed");
       }
 
     PortableServer::ServantBase_var safe (component_servant);

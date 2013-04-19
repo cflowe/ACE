@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: mail_test_stats.sh 95418 2012-01-05 11:51:50Z johnnyw $
+# $Id: mail_test_stats.sh 96136 2012-09-10 00:17:27Z johnnyw $
 
 if test -z $1; then CURRENTDATE=`date -u +%Y_%m_%d`; else CURRENTDATE=$1; fi
 if test -z $2; then PREFIX=`date -u +%Y%m%d%a`; else PREFIX=$2; fi
@@ -7,7 +7,7 @@ if test -z $3; then MAILTO="devo-group@list.isis.vanderbilt.edu"; else MAILTO=$3
 
 cd $ACE_ROOT/bin
 
-./diff-builds-and-group-fixed-tests-only.sh 2011_12_27 $CURRENTDATE $PREFIX
+./diff-builds-and-group-fixed-tests-only.sh $CURRENTDATE $PREFIX
 ./cleanbuilds.sh $CURRENTDATE
 
 MAIL="mail -S smtp=mail.remedy.nl"

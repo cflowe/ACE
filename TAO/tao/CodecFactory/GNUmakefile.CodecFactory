@@ -232,8 +232,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#IOP_Codec.pidl
 #IOP_Codec_include.pidl
+#IOP_Codec.pidl
 #
 #build_files:
 #CodecFactory.mpc

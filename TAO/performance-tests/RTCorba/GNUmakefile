@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: RTCORBA_Common ORB_Per_Priority_Client ORB_Per_Priority_Server Single_Endpoint_Client Single_Endpoint_Server Reliable_Oneways_Idl_RT Reliable_Oneways_Server_RT Reliable_Oneways_Client_RT Thread_Pool_RTCorba_Idl Thread_Pool_RTCorba_Client Thread_Pool_RTCorba_Server
+all: RTCORBA_Common ORB_Per_Priority_Client ORB_Per_Priority_Server Single_Endpoint_Client Single_Endpoint_Server Reliable_Oneways_Idl_RT Reliable_Oneways_Client_RT Reliable_Oneways_Server_RT Thread_Pool_RTCorba_Idl Thread_Pool_RTCorba_Server Thread_Pool_RTCorba_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -31,11 +31,11 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Multiple_Endpoints/Single_Endpoint && $(MAKE) -f GNUmakefile.Single_Endpoint_Client $(@)
 	$(KEEP_GOING)@cd Multiple_Endpoints/Single_Endpoint && $(MAKE) -f GNUmakefile.Single_Endpoint_Server $(@)
 	$(KEEP_GOING)@cd Oneways/Reliable && $(MAKE) -f GNUmakefile.Reliable_Oneways_Idl_RT $(@)
-	$(KEEP_GOING)@cd Oneways/Reliable && $(MAKE) -f GNUmakefile.Reliable_Oneways_Server_RT $(@)
 	$(KEEP_GOING)@cd Oneways/Reliable && $(MAKE) -f GNUmakefile.Reliable_Oneways_Client_RT $(@)
+	$(KEEP_GOING)@cd Oneways/Reliable && $(MAKE) -f GNUmakefile.Reliable_Oneways_Server_RT $(@)
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_RTCorba_Idl $(@)
-	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_RTCorba_Client $(@)
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_RTCorba_Server $(@)
+	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_RTCorba_Client $(@)
 
 .PHONY: RTCORBA_Common
 RTCORBA_Common:
@@ -61,25 +61,25 @@ Single_Endpoint_Server: RTCORBA_Common
 Reliable_Oneways_Idl_RT:
 	$(KEEP_GOING)@cd Oneways/Reliable && $(MAKE) -f GNUmakefile.Reliable_Oneways_Idl_RT all
 
-.PHONY: Reliable_Oneways_Server_RT
-Reliable_Oneways_Server_RT: Reliable_Oneways_Idl_RT
-	$(KEEP_GOING)@cd Oneways/Reliable && $(MAKE) -f GNUmakefile.Reliable_Oneways_Server_RT all
-
 .PHONY: Reliable_Oneways_Client_RT
-Reliable_Oneways_Client_RT: Reliable_Oneways_Idl_RT Reliable_Oneways_Server_RT
+Reliable_Oneways_Client_RT: Reliable_Oneways_Idl_RT
 	$(KEEP_GOING)@cd Oneways/Reliable && $(MAKE) -f GNUmakefile.Reliable_Oneways_Client_RT all
+
+.PHONY: Reliable_Oneways_Server_RT
+Reliable_Oneways_Server_RT: Reliable_Oneways_Idl_RT Reliable_Oneways_Client_RT
+	$(KEEP_GOING)@cd Oneways/Reliable && $(MAKE) -f GNUmakefile.Reliable_Oneways_Server_RT all
 
 .PHONY: Thread_Pool_RTCorba_Idl
 Thread_Pool_RTCorba_Idl:
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_RTCorba_Idl all
 
-.PHONY: Thread_Pool_RTCorba_Client
-Thread_Pool_RTCorba_Client: Thread_Pool_RTCorba_Idl
-	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_RTCorba_Client all
-
 .PHONY: Thread_Pool_RTCorba_Server
-Thread_Pool_RTCorba_Server: Thread_Pool_RTCorba_Idl Thread_Pool_RTCorba_Client
+Thread_Pool_RTCorba_Server: Thread_Pool_RTCorba_Idl
 	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_RTCorba_Server all
+
+.PHONY: Thread_Pool_RTCorba_Client
+Thread_Pool_RTCorba_Client: Thread_Pool_RTCorba_Idl Thread_Pool_RTCorba_Server
+	$(KEEP_GOING)@cd Thread_Pool && $(MAKE) -f GNUmakefile.Thread_Pool_RTCorba_Client all
 
 project_name_list:
 	@echo RTCORBA_Common

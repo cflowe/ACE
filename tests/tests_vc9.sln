@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE -workers 8 -name_modifier "*_vc9"
+# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE -workers 10 -name_modifier "*_vc9"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACE_Test", "ACE_Test_vc9.vcproj", "{1B2029EA-FECA-1BAD-2431-8A1100722433}"
 	ProjectSection(ProjectDependencies) = postProject
 		{9F542D22-FECA-1BAD-2431-8A1100722433} = {9F542D22-FECA-1BAD-2431-8A1100722433}
@@ -381,6 +381,26 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Compiler_Features_13_Test",
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Compiler_Features_14_Test", "Compiler_Features_14_Test_vc9.vcproj", "{D341E92B-FECA-1BAD-2431-8A1100722433}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9F542D22-FECA-1BAD-2431-8A1100722433} = {9F542D22-FECA-1BAD-2431-8A1100722433}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Compiler_Features_15_Test", "Compiler_Features_15_Test_vc9.vcproj", "{D341E92A-FECA-1BAD-2431-8A1100722433}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9F542D22-FECA-1BAD-2431-8A1100722433} = {9F542D22-FECA-1BAD-2431-8A1100722433}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Compiler_Features_16_Test", "Compiler_Features_16_Test_vc9.vcproj", "{D341E929-FECA-1BAD-2431-8A1100722433}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9F542D22-FECA-1BAD-2431-8A1100722433} = {9F542D22-FECA-1BAD-2431-8A1100722433}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Compiler_Features_17_Test", "Compiler_Features_17_Test_vc9.vcproj", "{D341E928-FECA-1BAD-2431-8A1100722433}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9F542D22-FECA-1BAD-2431-8A1100722433} = {9F542D22-FECA-1BAD-2431-8A1100722433}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Compiler_Features_18_Test", "Compiler_Features_18_Test_vc9.vcproj", "{D341E927-FECA-1BAD-2431-8A1100722433}"
 	ProjectSection(ProjectDependencies) = postProject
 		{9F542D22-FECA-1BAD-2431-8A1100722433} = {9F542D22-FECA-1BAD-2431-8A1100722433}
 	EndProjectSection
@@ -1818,6 +1838,38 @@ Global
 		{D341E92B-FECA-1BAD-2431-8A1100722433}.Release|Win32.Build.0 = Release|Win32
 		{D341E92B-FECA-1BAD-2431-8A1100722433}.Release|x64.ActiveCfg = Release|x64
 		{D341E92B-FECA-1BAD-2431-8A1100722433}.Release|x64.Build.0 = Release|x64
+		{D341E92A-FECA-1BAD-2431-8A1100722433}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D341E92A-FECA-1BAD-2431-8A1100722433}.Debug|Win32.Build.0 = Debug|Win32
+		{D341E92A-FECA-1BAD-2431-8A1100722433}.Debug|x64.ActiveCfg = Debug|x64
+		{D341E92A-FECA-1BAD-2431-8A1100722433}.Debug|x64.Build.0 = Debug|x64
+		{D341E92A-FECA-1BAD-2431-8A1100722433}.Release|Win32.ActiveCfg = Release|Win32
+		{D341E92A-FECA-1BAD-2431-8A1100722433}.Release|Win32.Build.0 = Release|Win32
+		{D341E92A-FECA-1BAD-2431-8A1100722433}.Release|x64.ActiveCfg = Release|x64
+		{D341E92A-FECA-1BAD-2431-8A1100722433}.Release|x64.Build.0 = Release|x64
+		{D341E929-FECA-1BAD-2431-8A1100722433}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D341E929-FECA-1BAD-2431-8A1100722433}.Debug|Win32.Build.0 = Debug|Win32
+		{D341E929-FECA-1BAD-2431-8A1100722433}.Debug|x64.ActiveCfg = Debug|x64
+		{D341E929-FECA-1BAD-2431-8A1100722433}.Debug|x64.Build.0 = Debug|x64
+		{D341E929-FECA-1BAD-2431-8A1100722433}.Release|Win32.ActiveCfg = Release|Win32
+		{D341E929-FECA-1BAD-2431-8A1100722433}.Release|Win32.Build.0 = Release|Win32
+		{D341E929-FECA-1BAD-2431-8A1100722433}.Release|x64.ActiveCfg = Release|x64
+		{D341E929-FECA-1BAD-2431-8A1100722433}.Release|x64.Build.0 = Release|x64
+		{D341E928-FECA-1BAD-2431-8A1100722433}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D341E928-FECA-1BAD-2431-8A1100722433}.Debug|Win32.Build.0 = Debug|Win32
+		{D341E928-FECA-1BAD-2431-8A1100722433}.Debug|x64.ActiveCfg = Debug|x64
+		{D341E928-FECA-1BAD-2431-8A1100722433}.Debug|x64.Build.0 = Debug|x64
+		{D341E928-FECA-1BAD-2431-8A1100722433}.Release|Win32.ActiveCfg = Release|Win32
+		{D341E928-FECA-1BAD-2431-8A1100722433}.Release|Win32.Build.0 = Release|Win32
+		{D341E928-FECA-1BAD-2431-8A1100722433}.Release|x64.ActiveCfg = Release|x64
+		{D341E928-FECA-1BAD-2431-8A1100722433}.Release|x64.Build.0 = Release|x64
+		{D341E927-FECA-1BAD-2431-8A1100722433}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D341E927-FECA-1BAD-2431-8A1100722433}.Debug|Win32.Build.0 = Debug|Win32
+		{D341E927-FECA-1BAD-2431-8A1100722433}.Debug|x64.ActiveCfg = Debug|x64
+		{D341E927-FECA-1BAD-2431-8A1100722433}.Debug|x64.Build.0 = Debug|x64
+		{D341E927-FECA-1BAD-2431-8A1100722433}.Release|Win32.ActiveCfg = Release|Win32
+		{D341E927-FECA-1BAD-2431-8A1100722433}.Release|Win32.Build.0 = Release|Win32
+		{D341E927-FECA-1BAD-2431-8A1100722433}.Release|x64.ActiveCfg = Release|x64
+		{D341E927-FECA-1BAD-2431-8A1100722433}.Release|x64.Build.0 = Release|x64
 		{1F79EC68-FECA-1BAD-2431-8A1100722433}.Debug|Win32.ActiveCfg = Debug|Win32
 		{1F79EC68-FECA-1BAD-2431-8A1100722433}.Debug|Win32.Build.0 = Debug|Win32
 		{1F79EC68-FECA-1BAD-2431-8A1100722433}.Debug|x64.ActiveCfg = Debug|x64

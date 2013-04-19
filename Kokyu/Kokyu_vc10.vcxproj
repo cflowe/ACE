@@ -318,7 +318,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Default_Dispatcher_Impl.h" />
-    <ClInclude Include="Dispatch_Deferrer.h" />
     <ClInclude Include="Dispatcher_Impl.h" />
     <ClInclude Include="Dispatcher_Task.h" />
     <ClInclude Include="DSRT_CV_Dispatcher_Impl_T.h" />

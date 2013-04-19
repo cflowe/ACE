@@ -1,5 +1,5 @@
 //  -*- MPC -*-
-// $Id: tests.mpc 96061 2012-08-16 09:36:07Z mcorino $
+// $Id: tests.mpc 96157 2012-09-27 06:33:47Z johnnyw $
 
 project(Test_Output) : acelib, script {
   libout       = .
@@ -640,6 +640,34 @@ project(Compiler_Features_14_Test) : acetest {
   exename = Compiler_Features_14_Test
   Source_Files {
     Compiler_Features_14_Test.cpp
+  }
+}
+
+project(Compiler_Features_15_Test) : acetest {
+  exename = Compiler_Features_15_Test
+  Source_Files {
+    Compiler_Features_15_Test.cpp
+  }
+}
+
+project(Compiler_Features_16_Test) : acetest {
+  exename = Compiler_Features_16_Test
+  Source_Files {
+    Compiler_Features_16_Test.cpp
+  }
+}
+
+project(Compiler_Features_17_Test) : acetest {
+  exename = Compiler_Features_17_Test
+  Source_Files {
+    Compiler_Features_17_Test.cpp
+  }
+}
+
+project(Compiler_Features_18_Test) : acetest {
+  exename = Compiler_Features_18_Test
+  Source_Files {
+    Compiler_Features_18_Test.cpp
   }
 }
 

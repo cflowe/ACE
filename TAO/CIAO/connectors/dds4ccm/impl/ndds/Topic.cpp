@@ -1,4 +1,4 @@
-// $Id: Topic.cpp 94402 2011-08-14 10:35:56Z johnnyw $
+// $Id: Topic.cpp 96172 2012-10-03 06:20:53Z johnnyw $
 
 #include "dds4ccm/impl/ndds/Topic.h"
 #include "dds4ccm/impl/ndds/StatusCondition.h"
@@ -189,7 +189,6 @@ namespace CIAO
     {
       this->rti_entity_ = topic;
     }
-
 
     DDSTopic *
     DDS_Topic_i::rti_entity (void)

@@ -1,4 +1,4 @@
-// $Id: Cookies.h 92162 2010-10-05 13:55:14Z johnnyw $
+// $Id: Cookies.h 96150 2012-09-20 07:09:11Z johnnyw $
 
 /**
  * @file Cookies.h
@@ -20,7 +20,6 @@
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
 #include "ccm/CCM_CookieC.h"
-#include "ace/Active_Map_Manager.h"
 
 namespace CIAO
 {

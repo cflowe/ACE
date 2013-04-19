@@ -30,40 +30,40 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 FILES = \
   Activation_ManagerS.cpp \
   Activation_ManagerC.cpp \
+  StructuredEvent.cpp \
+  StructuredPushConsumer.cpp \
+  Periodic_Supplier_Command.cpp \
+  Priority_Mapping.cpp \
+  Periodic_Consumer.cpp \
+  Direct_Supplier.cpp \
+  Application_Command.cpp \
+  ConsumerAdmin_Command.cpp \
+  Periodic_Supplier.cpp \
+  Direct_Consumer.cpp \
+  Factories_Define.cpp \
+  Periodic_Consumer_Command.cpp \
+  Activation_Manager.cpp \
+  Options_Parser.cpp \
+  StructuredPushSupplier.cpp \
+  Filter_Command.cpp \
+  Driver.cpp \
+  Peer.cpp \
+  Command_Builder.cpp \
+  Name.cpp \
+  EventChannel_Command.cpp \
+  common.cpp \
+  SupplierAdmin_Command.cpp \
+  Task_Stats.cpp \
+  Command_Factory.cpp \
   Task_Callback.cpp \
   SequencePushSupplier.cpp \
-  SupplierAdmin_Command.cpp \
-  Command_Builder.cpp \
-  Application_Command.cpp \
-  EventChannel_Command.cpp \
-  StructuredPushConsumer.cpp \
-  Periodic_Consumer_Command.cpp \
-  Options_Parser.cpp \
-  Relay_Consumer.cpp \
-  Direct_Supplier.cpp \
-  Command_Factory.cpp \
-  Task_Stats.cpp \
-  Direct_Consumer.cpp \
-  StructuredPushSupplier.cpp \
-  StructuredEvent.cpp \
-  Priority_Mapping.cpp \
   PushSupplier.cpp \
-  Factories_Define.cpp \
   LookupManager.cpp \
-  Activation_Manager.cpp \
-  Filter_Command.cpp \
-  Command.cpp \
-  ConsumerAdmin_Command.cpp \
   PushConsumer.cpp \
-  Peer.cpp \
-  SequencePushConsumer.cpp \
-  Periodic_Supplier_Command.cpp \
-  Driver.cpp \
   Notify_Test_Client.cpp \
-  Periodic_Supplier.cpp \
-  Periodic_Consumer.cpp \
-  common.cpp \
-  Name.cpp
+  Command.cpp \
+  SequencePushConsumer.cpp \
+  Relay_Consumer.cpp
 
 
 #----------------------------------------------------------------------------
@@ -284,7 +284,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = Activation_ManagerS.cpp Activation_ManagerC.cpp Task_Callback.cpp SequencePushSupplier.cpp SupplierAdmin_Command.cpp Command_Builder.cpp Application_Command.cpp EventChannel_Command.cpp StructuredPushConsumer.cpp Periodic_Consumer_Command.cpp Options_Parser.cpp Relay_Consumer.cpp Direct_Supplier.cpp Command_Factory.cpp Task_Stats.cpp Direct_Consumer.cpp StructuredPushSupplier.cpp StructuredEvent.cpp Priority_Mapping.cpp PushSupplier.cpp Factories_Define.cpp LookupManager.cpp Activation_Manager.cpp Filter_Command.cpp Command.cpp ConsumerAdmin_Command.cpp PushConsumer.cpp Peer.cpp SequencePushConsumer.cpp Periodic_Supplier_Command.cpp Driver.cpp Notify_Test_Client.cpp Periodic_Supplier.cpp Periodic_Consumer.cpp common.cpp Name.cpp  
+FORCED_IDL_STUBS = Activation_ManagerS.cpp Activation_ManagerC.cpp StructuredEvent.cpp StructuredPushConsumer.cpp Periodic_Supplier_Command.cpp Priority_Mapping.cpp Periodic_Consumer.cpp Direct_Supplier.cpp Application_Command.cpp ConsumerAdmin_Command.cpp Periodic_Supplier.cpp Direct_Consumer.cpp Factories_Define.cpp Periodic_Consumer_Command.cpp Activation_Manager.cpp Options_Parser.cpp StructuredPushSupplier.cpp Filter_Command.cpp Driver.cpp Peer.cpp Command_Builder.cpp Name.cpp EventChannel_Command.cpp common.cpp SupplierAdmin_Command.cpp Task_Stats.cpp Command_Factory.cpp Task_Callback.cpp SequencePushSupplier.cpp PushSupplier.cpp LookupManager.cpp PushConsumer.cpp Notify_Test_Client.cpp Command.cpp SequencePushConsumer.cpp Relay_Consumer.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:Activation_ManagerS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:Activation_ManagerC.cpp=)
 

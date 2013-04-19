@@ -25,16 +25,16 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)ACE_RMCast.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
-  Retransmit.cpp \
-  Stack.cpp \
-  Simulator.cpp \
   Flow.cpp \
-  Reassemble.cpp \
-  Protocol.cpp \
-  Acknowledge.cpp \
   Fragment.cpp \
+  Simulator.cpp \
   Socket.cpp \
-  Link.cpp
+  Link.cpp \
+  Retransmit.cpp \
+  Reassemble.cpp \
+  Acknowledge.cpp \
+  Stack.cpp \
+  Protocol.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -271,28 +271,28 @@ endif
 #Simulator.h
 #Flow.h
 #Stack.h
-#Protocol.h
 #Fragment.h
+#Protocol.h
 #Socket.h
 #Link.h
 #RMCast_Export.h
-#Bits.h
 #Parameters.h
+#Bits.h
 #
 #pkgconfig_files:
 #ACE_RMCast.pc.in
 #
 #source_files:
-#Retransmit.cpp
-#Stack.cpp
-#Simulator.cpp
 #Flow.cpp
-#Reassemble.cpp
-#Protocol.cpp
-#Acknowledge.cpp
 #Fragment.cpp
+#Simulator.cpp
 #Socket.cpp
 #Link.cpp
+#Retransmit.cpp
+#Reassemble.cpp
+#Acknowledge.cpp
+#Stack.cpp
+#Protocol.cpp
 #
 #lib_output:
 #../../../lib ACE_RMCast

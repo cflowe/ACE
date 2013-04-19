@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Interceptor_Handler_Impl.h 91982 2010-09-23 20:43:54Z wotte $
+// $Id: Interceptor_Handler_Impl.h 96156 2012-09-25 18:36:48Z johnnyw $
 
 /**
  * @file Interceptor_Handler_Impl.h
@@ -11,7 +11,7 @@
 #ifndef DANCE_INTERCEPTOR_HANDLER_H
 #define DANCE_INTERCEPTOR_HANDLER_H
 
-#include "dance/DAnCE_LocalityManagerS.h"
+#include "dance/DAnCE_LocalityManagerC.h"
 #include "dance/DAnCE_Utility.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)

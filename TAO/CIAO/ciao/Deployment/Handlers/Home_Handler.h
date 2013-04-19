@@ -1,6 +1,6 @@
 
 // -*- C++ -*-
-// $Id: Home_Handler.h 94930 2011-11-02 08:35:59Z mcorino $
+// $Id: Home_Handler.h 96155 2012-09-25 18:01:20Z johnnyw $
 
 /**
  * @file Home_Handler.h
@@ -12,7 +12,7 @@
 #ifndef CIAO_HOME_HANDLER_H
 #define CIAO_HOME_HANDLER_H
 
-#include "dance/DAnCE_LocalityManagerS.h"
+#include "dance/DAnCE_LocalityManagerC.h"
 #include "dance/DAnCE_Utility.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)

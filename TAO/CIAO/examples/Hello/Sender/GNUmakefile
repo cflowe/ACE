@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,52 +20,46 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Hello_Base_Sender_idl_gen Hello_Base_Sender_stub Hello_Base_Sender_lem_gen Hello_Base_Sender_lem_stub Hello_Base_Sender_exec Hello_Base_Sender_svnt Hello_Base_starter
+all: Hello_Ex_Base_Hello_Sender_idl_gen Hello_Ex_Base_Hello_Sender_stub Hello_Ex_Base_Hello_Sender_lem_gen Hello_Ex_Base_Hello_Sender_lem_stub Hello_Ex_Base_Hello_Sender_exec Hello_Ex_Base_Hello_Sender_svnt
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_idl_gen $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_stub $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_gen $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_stub $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_exec $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_svnt $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_starter $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_idl_gen $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_stub $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_lem_gen $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_lem_stub $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_exec $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_svnt $(@)
 
-.PHONY: Hello_Base_Sender_idl_gen
-Hello_Base_Sender_idl_gen:
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_idl_gen all
+.PHONY: Hello_Ex_Base_Hello_Sender_idl_gen
+Hello_Ex_Base_Hello_Sender_idl_gen:
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_idl_gen all
 
-.PHONY: Hello_Base_Sender_stub
-Hello_Base_Sender_stub: Hello_Base_Sender_idl_gen
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_stub all
+.PHONY: Hello_Ex_Base_Hello_Sender_stub
+Hello_Ex_Base_Hello_Sender_stub: Hello_Ex_Base_Hello_Sender_idl_gen
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_stub all
 
-.PHONY: Hello_Base_Sender_lem_gen
-Hello_Base_Sender_lem_gen: Hello_Base_Sender_idl_gen
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_gen all
+.PHONY: Hello_Ex_Base_Hello_Sender_lem_gen
+Hello_Ex_Base_Hello_Sender_lem_gen: Hello_Ex_Base_Hello_Sender_idl_gen
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_lem_gen all
 
-.PHONY: Hello_Base_Sender_lem_stub
-Hello_Base_Sender_lem_stub: Hello_Base_Sender_stub Hello_Base_Sender_lem_gen
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_stub all
+.PHONY: Hello_Ex_Base_Hello_Sender_lem_stub
+Hello_Ex_Base_Hello_Sender_lem_stub: Hello_Ex_Base_Hello_Sender_lem_gen
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_lem_stub all
 
-.PHONY: Hello_Base_Sender_exec
-Hello_Base_Sender_exec: Hello_Base_Sender_stub Hello_Base_Sender_lem_stub
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_exec all
+.PHONY: Hello_Ex_Base_Hello_Sender_exec
+Hello_Ex_Base_Hello_Sender_exec: Hello_Ex_Base_Hello_Sender_stub Hello_Ex_Base_Hello_Sender_lem_stub
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_exec all
 
-.PHONY: Hello_Base_Sender_svnt
-Hello_Base_Sender_svnt: Hello_Base_Sender_lem_stub
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_Sender_svnt all
-
-.PHONY: Hello_Base_starter
-Hello_Base_starter: Hello_Base_Sender_stub
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Base_starter all
+.PHONY: Hello_Ex_Base_Hello_Sender_svnt
+Hello_Ex_Base_Hello_Sender_svnt: Hello_Ex_Base_Hello_Sender_stub Hello_Ex_Base_Hello_Sender_lem_stub
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_svnt all
 
 project_name_list:
-	@echo Hello_Base_Sender_exec
-	@echo Hello_Base_Sender_idl_gen
-	@echo Hello_Base_Sender_lem_gen
-	@echo Hello_Base_Sender_lem_stub
-	@echo Hello_Base_Sender_stub
-	@echo Hello_Base_Sender_svnt
-	@echo Hello_Base_starter
+	@echo Hello_Ex_Base_Hello_Sender_exec
+	@echo Hello_Ex_Base_Hello_Sender_idl_gen
+	@echo Hello_Ex_Base_Hello_Sender_lem_gen
+	@echo Hello_Ex_Base_Hello_Sender_lem_stub
+	@echo Hello_Ex_Base_Hello_Sender_stub
+	@echo Hello_Ex_Base_Hello_Sender_svnt

@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Notify_Logging_Service.cpp \
-  Notify_Logging_Server.cpp
+  Notify_Logging_Server.cpp \
+  Notify_Logging_Service.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -257,8 +257,8 @@ endif
 #Notify_Logging_Service.h
 #
 #source_files:
-#Notify_Logging_Service.cpp
 #Notify_Logging_Server.cpp
+#Notify_Logging_Service.cpp
 #
 #exe_output:
 # tao_tls_notify

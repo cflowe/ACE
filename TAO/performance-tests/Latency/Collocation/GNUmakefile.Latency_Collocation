@@ -22,10 +22,10 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 FILES = \
   TestS.cpp \
   TestC.cpp \
+  Collocated_Test.cpp \
   Roundtrip.cpp \
   Server_Task.cpp \
-  Client_Task.cpp \
-  Collocated_Test.cpp
+  Client_Task.cpp
 
 
 #----------------------------------------------------------------------------
@@ -216,7 +216,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = TestS.cpp TestC.cpp Roundtrip.cpp Server_Task.cpp Client_Task.cpp Collocated_Test.cpp  
+FORCED_IDL_STUBS = TestS.cpp TestC.cpp Collocated_Test.cpp Roundtrip.cpp Server_Task.cpp Client_Task.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:TestS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:TestC.cpp=)
 

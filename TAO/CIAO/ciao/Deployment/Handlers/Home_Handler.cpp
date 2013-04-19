@@ -1,4 +1,4 @@
-// $Id: Home_Handler.cpp 95550 2012-02-23 12:30:15Z johnnyw $
+// $Id: Home_Handler.cpp 96180 2012-10-08 08:03:38Z johnnyw $
 
 #include "Home_Handler.h"
 #include "ciao/Logger/Log_Macros.h"
@@ -172,14 +172,13 @@ namespace CIAO
         cont_id = tmp;
         CIAO_DEBUG (9, (LM_TRACE, CLINFO
                         "Home_Handler_i::install_instance - "
-                        "Found executor entrypoint: <%C>\n", exec_entry.in ()));
+                        "Found container: <%C>\n", cont_id.in ()));
       }
     else
       {
         CIAO_ERROR (4, (LM_INFO, CLINFO
                         "Home_Handler_i::install_instance - "
-                        "No container provided, using default container for instance <%C>\n",
-                        idd.name.in  ()));
+                        "No container provided, using default container\n"));
         cont_id = "";
       }
 

@@ -1,4 +1,4 @@
-# $Id: platform_linux_icc.GNU 95695 2012-04-12 11:26:10Z johnnyw $
+# $Id: platform_linux_icc.GNU 96176 2012-10-04 10:25:11Z johnnyw $
 
 # This file should allow ACE to be built on Linux, using the Intel compiler.
 
@@ -59,6 +59,14 @@ endif
 
 ifeq ($(c++0x),1)
   CCFLAGS += -std=c++0x
+  # This is needed due to the use of the deprecated auto_ptr class
+  CCFLAGS += -Wno-deprecated
+endif
+
+ifeq ($(c++11),1)
+  CCFLAGS += -std=c++11
+  # This is needed due to the use of the deprecated auto_ptr class
+  CCFLAGS += -Wno-deprecated
 endif
 
 CFLAGS  += -w1
@@ -84,6 +92,10 @@ OCFLAGS += -O3
 # If these options are not passed we can get overflows
 # when testing min/max
 CPPFLAGS += -fp-model double
+
+ifeq ($(coverage),1)
+  FLAGS_C_CC += -prof-gen
+endif
 
 ifeq ($(optimize),0)
   # Disable all optimizing in code

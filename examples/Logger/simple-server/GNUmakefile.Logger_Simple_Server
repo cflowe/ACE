@@ -17,9 +17,9 @@ BIN_UNCHECKED    = server_loggerd
 LIB_PREFIX      ?= lib
 
 FILES = \
-  Logging_Handler.cpp \
+  server_loggerd.cpp \
   Logging_Acceptor.cpp \
-  server_loggerd.cpp
+  Logging_Handler.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

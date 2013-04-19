@@ -27,8 +27,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  FlResource_Factory.cpp \
-  FlResource_Loader.cpp
+  FlResource_Loader.cpp \
+  FlResource_Factory.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -311,8 +311,8 @@ endif
 #TAO_FlResource_Export.h
 #
 #source_files:
-#FlResource_Factory.cpp
 #FlResource_Loader.cpp
+#FlResource_Factory.cpp
 #
 #lib_output:
 #../../../lib TAO_FlResource

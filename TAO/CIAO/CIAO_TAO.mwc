@@ -1,12 +1,12 @@
 // -*- MPC -*-
-// $Id: CIAO_TAO.mwc 95323 2011-12-14 12:37:01Z msmit $
+// $Id: CIAO_TAO.mwc 96115 2012-08-29 07:37:18Z johnnyw $
 
 workspace {
   $(ACE_ROOT)/ace
   $(ACE_ROOT)/apps/gperf/src
   $(ACE_ROOT)/apps/JAWS/server
   $(ACE_ROOT)/protocols/ace/INet
-  $(ACE_ROOT)/contrib
+  $(ACE_ROOT)/contrib/minizip
   $(TAO_ROOT)/tao
   $(TAO_ROOT)/TAO_IDL
   $(TAO_ROOT)/utils

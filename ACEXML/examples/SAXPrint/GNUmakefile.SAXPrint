@@ -17,9 +17,9 @@ BIN_UNCHECKED    = SAXPrint
 LIB_PREFIX      ?= lib
 
 FILES = \
+  main.cpp \
   Print_Handler.cpp \
-  SAXPrint_Handler.cpp \
-  main.cpp
+  SAXPrint_Handler.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

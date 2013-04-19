@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,25 +20,25 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: C++NPv1_Reactive_Logging_Server_Ex C++NPv1_Iterative_Logging_Server C++NPv1_Logging_Client C++NPv1_PPC_Logging_Server C++NPv1_RTTPC_Logging_Server C++NPv1_Reactive_Logging_Server C++NPv1_TPC_Logging_Server
+all: C++NPv1_TPC_Logging_Server C++NPv1_Iterative_Logging_Server C++NPv1_Logging_Client C++NPv1_PPC_Logging_Server C++NPv1_RTTPC_Logging_Server C++NPv1_Reactive_Logging_Server C++NPv1_Reactive_Logging_Server_Ex
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Reactive_Logging_Server_Ex $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_TPC_Logging_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Iterative_Logging_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Logging_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_PPC_Logging_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_RTTPC_Logging_Server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Reactive_Logging_Server $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_TPC_Logging_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Reactive_Logging_Server_Ex $(@)
 
-.PHONY: C++NPv1_Reactive_Logging_Server_Ex
-C++NPv1_Reactive_Logging_Server_Ex:
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Reactive_Logging_Server_Ex all
+.PHONY: C++NPv1_TPC_Logging_Server
+C++NPv1_TPC_Logging_Server:
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_TPC_Logging_Server all
 
 .PHONY: C++NPv1_Iterative_Logging_Server
-C++NPv1_Iterative_Logging_Server: C++NPv1_Reactive_Logging_Server_Ex
+C++NPv1_Iterative_Logging_Server: C++NPv1_TPC_Logging_Server
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Iterative_Logging_Server all
 
 .PHONY: C++NPv1_Logging_Client
@@ -46,20 +46,20 @@ C++NPv1_Logging_Client:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Logging_Client all
 
 .PHONY: C++NPv1_PPC_Logging_Server
-C++NPv1_PPC_Logging_Server: C++NPv1_Reactive_Logging_Server_Ex
+C++NPv1_PPC_Logging_Server: C++NPv1_TPC_Logging_Server
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_PPC_Logging_Server all
 
 .PHONY: C++NPv1_RTTPC_Logging_Server
-C++NPv1_RTTPC_Logging_Server: C++NPv1_Reactive_Logging_Server_Ex
+C++NPv1_RTTPC_Logging_Server: C++NPv1_TPC_Logging_Server
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_RTTPC_Logging_Server all
 
 .PHONY: C++NPv1_Reactive_Logging_Server
-C++NPv1_Reactive_Logging_Server: C++NPv1_Reactive_Logging_Server_Ex
+C++NPv1_Reactive_Logging_Server: C++NPv1_TPC_Logging_Server
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Reactive_Logging_Server all
 
-.PHONY: C++NPv1_TPC_Logging_Server
-C++NPv1_TPC_Logging_Server: C++NPv1_Reactive_Logging_Server_Ex
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_TPC_Logging_Server all
+.PHONY: C++NPv1_Reactive_Logging_Server_Ex
+C++NPv1_Reactive_Logging_Server_Ex: C++NPv1_TPC_Logging_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.C++NPv1_Reactive_Logging_Server_Ex all
 
 project_name_list:
 	@echo C++NPv1_Iterative_Logging_Server

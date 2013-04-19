@@ -228,7 +228,6 @@ endif
 #
 #header_files:
 #Default_Dispatcher_Impl.h
-#Dispatch_Deferrer.h
 #Dispatcher_Impl.h
 #Dispatcher_Task.h
 #DSRT_CV_Dispatcher_Impl_T.h

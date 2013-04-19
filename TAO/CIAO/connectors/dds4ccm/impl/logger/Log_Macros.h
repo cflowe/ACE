@@ -1,4 +1,4 @@
-// $Id: Log_Macros.h 94802 2011-10-20 09:46:10Z mcorino $
+// $Id: Log_Macros.h 96152 2012-09-21 07:53:03Z johnnyw $
 /**
  * @file Log_Macros.h
  * @author William R. Otte <wotte@dre.vanderbilt.edu>
@@ -67,6 +67,7 @@ extern DDS4CCM_Logger_Export unsigned int DDS4CCM_debug_level;
 # define DDS4CCM_DEBUG(L, X) do {} while (0)
 # define DDS4CCM_PRINT_INTERNAL_EXCEPTION(L, E, X) do {} while (0)
 # define DDS4CCM_PRINT_CORBA_EXCEPTION(L, E, X) do {} while (0)
+# define DDS4CCM_PRINT_DEBUG_CORBA_EXCEPTION(L, E, X) do {} while (0)
 # define DDS4CCM_ERROR_RETURN(L, X, Y) return (Y)
 # define DDS4CCM_ERROR_BREAK(L, X) { break; }
 #else
@@ -117,6 +118,18 @@ extern DDS4CCM_Logger_Export unsigned int DDS4CCM_debug_level;
         ACE_CString msg (X);\
         msg += " - Caught CORBA exception.\n";\
         DDS4CCM_ERROR (L, (LM_ERROR, msg.c_str ()));\
+        E._tao_print_exception (X);\
+      } \
+  } while (0)
+# endif
+# if !defined (DDS4CCM_PRINT_DEBUG_CORBA_EXCEPTION)
+#  define DDS4CCM_PRINT_DEBUG_CORBA_EXCEPTION(L, E, X) \
+  do { \
+    if (DDS4CCM_debug_level >= L) \
+      { \
+        ACE_CString msg (X);\
+        msg += " - Caught CORBA exception.\n";\
+        DDS4CCM_DEBUG (L, (LM_DEBUG, msg.c_str ()));\
         E._tao_print_exception (X);\
       } \
   } while (0)

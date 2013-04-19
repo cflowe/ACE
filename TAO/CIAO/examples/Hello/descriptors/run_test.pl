@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 92458 2010-11-01 12:02:50Z mhengstmengel $
+# $Id: run_test.pl 96161 2012-09-27 09:30:10Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{'ACE_ROOT'}/bin";
@@ -17,15 +17,10 @@ $em_running = 0;
 $ns_running = 0;
 
 $nr_daemon = 2;
-@ports = ( 60001, 60002 );
-@iorbases = ( "NodeApp1.ior", "NodeApp2.ior" );
+@ports = ( 60000, 60001 );
+@iorbases = ( "Sender.ior", "Receiver.ior");
 @iorfiles = 0;
-@nodenames = ( "SenderNode", "ReceiverNode" );
-
-$status = 0;
-$cdp_file = "DeploymentPlan.cdp";
-
-$controller_exec = "$CIAO_ROOT/examples/Hello/Sender/starter";
+@nodenames = ( "Sender", "Receiver" );
 
 # ior files other than daemon
 $ior_nsbase = "ns.ior";
@@ -44,6 +39,9 @@ $NS = 0;
 $tg_naming = 0;
 $tg_exe_man = 0;
 $tg_executor = 0;
+
+$status = 0;
+$cdp_file = "Plan.cdp";
 
 sub create_targets {
     #   naming service
@@ -83,7 +81,7 @@ sub delete_ior_files {
     }
 }
 
-sub kill_node_daemons {
+sub kill_node_daemon {
     for ($i = 0; $i < $nr_daemon; ++$i) {
         $DEAMONS[$i]->Kill (); $DEAMONS[$i]->TimedWait (1);
     }
@@ -91,17 +89,15 @@ sub kill_node_daemons {
 
 sub kill_open_processes {
     if ($daemons_running == 1) {
-        kill_node_daemons ();
+        kill_node_daemon ();
     }
 
     if ($em_running == 1) {
-        $EM->Kill ();
-        $EM->TimedWait (1);
+        $EM->Kill (); $EM->TimedWait (1);
     }
 
     if ($ns_running == 1) {
-        $NS->Kill ();
-        $NS->TimedWait (1);
+        $NS->Kill (); $NS->TimedWait (1);
     }
     # in case shutdown did not perform as expected
     $tg_executor->KillAll ('dance_locality_manager');
@@ -140,93 +136,121 @@ sub run_node_daemons {
 create_targets ();
 init_ior_files ();
 
-# Invoke naming service
-
-$NS = $tg_naming->CreateProcess ("$TAO_ROOT/orbsvcs/Naming_Service/tao_cosnaming", "-m 0 -ORBEndpoint iiop://localhost:60003 -o $ior_nsfile");
-
-print STDERR "Starting Naming Service with -m 0 -ORBEndpoint iiop://localhost:60003 -o ns.ior\n";
-
-$ns_status = $NS->Spawn ();
-
-if ($ns_status != 0) {
-    print STDERR "ERROR: Unable to execute the naming service\n";
-    kill_open_processes ();
-    exit 1;
+if ($#ARGV == -1) {
+    opendir(DIR, ".");
+    @files = grep(/\.cdp$/,readdir(DIR));
+    closedir(DIR);
+}
+else {
+    @files = @ARGV;
 }
 
-if ($tg_naming->WaitForFileTimed ($ior_nsbase,
-                                  $tg_naming->ProcessStartWaitInterval ()) == -1) {
-    print STDERR "ERROR: cannot find naming service IOR file\n";
-    $NS->Kill (); $NS->TimedWait (1);
-    exit 1;
+foreach $file (@files) {
+    print "=============================\nStarting test for deployment $file\n================================\n";
+
+	# Invoke naming service
+
+	$NS = $tg_naming->CreateProcess ("$TAO_ROOT/orbsvcs/Naming_Service/tao_cosnaming", " -ORBEndpoint iiop://localhost:60003 -o $ior_nsfile");
+
+	print STDERR "Starting Naming Service with  -ORBEndpoint iiop://localhost:60003 -o ns.ior\n";
+
+	$ns_status = $NS->Spawn ();
+
+	if ($ns_status != 0) {
+	    print STDERR "ERROR: Unable to execute the naming service\n";
+	    kill_open_processes ();
+	    exit 1;
+	}
+
+	if ($tg_naming->WaitForFileTimed ($ior_nsbase,
+	                                  $tg_naming->ProcessStartWaitInterval ()) == -1) {
+	    print STDERR "ERROR: cannot find naming service IOR file\n";
+	    $NS->Kill (); $NS->TimedWait (1);
+	    exit 1;
+	}
+
+	$ns_running = 1;
+	# Set up NamingService environment
+	$ENV{"NameServiceIOR"} = "corbaloc:iiop:localhost:60003/NameService";
+
+	# Invoke node daemon.
+	print "Invoking node daemon\n";
+	$status = run_node_daemons ();
+
+	if ($status != 0) {
+	    print STDERR "ERROR: Unable to execute the node daemon\n";
+	    kill_open_processes ();
+	    exit 1;
+	}
+
+	$daemons_running = 1;
+
+	# Invoke execution manager.
+	print "Invoking execution manager (dance_execution_manager.exe) with -e$ior_emfile\n";
+	$EM = $tg_exe_man->CreateProcess ("$DANCE_ROOT/bin/dance_execution_manager",
+	                                    "-e$ior_emfile --domain-nc corbaloc:rir:/NameService");
+	$em_status = $EM->Spawn ();
+
+	if ($em_status != 0) {
+	    print STDERR "ERROR: dance_execution_manager returned $em_status";
+	    exit 1;
+	}
+
+	if ($tg_exe_man->WaitForFileTimed ($ior_embase,
+	                                $tg_exe_man->ProcessStartWaitInterval ()) == -1) {
+	    print STDERR
+	      "ERROR: The ior file of execution manager could not be found\n";
+	    kill_open_processes ();
+	    exit 1;
+	}
+
+	$em_running = 1;
+
+	# Invoke executor - start the application -.
+	print "Invoking executor - launch the application -\n";
+
+	print "Start dance_plan_launcher.exe with -x $file -k file://$ior_emfile\n";
+	$E = $tg_executor->CreateProcess ("$DANCE_ROOT/bin/dance_plan_launcher",
+	                                  "-x $file -k file://$ior_emfile");
+
+	$pl_status = $E->SpawnWaitKill (2 * $tg_executor->ProcessStartWaitInterval ());
+
+	if ($pl_status != 0) {
+	    print STDERR "ERROR: dance_plan_launcher returned $pl_status\n";
+	    kill_open_processes ();
+	    exit 1;
+	}
+
+	for ($i = 0; $i < $nr_daemon; ++$i) {
+	    if ($tg_daemons[$i]->WaitForFileTimed ($iorbases[$i],
+	                            $tg_daemons[$i]->ProcessStopWaitInterval ()) == -1) {
+	        print STDERR "ERROR: The ior file of daemon $i could not be found\n";
+	        kill_open_processes ();
+	        exit 1;
+	    }
+	}
+
+	print "Sleeping 90 seconds to allow task to complete\n";
+	sleep (90);
+
+	# Invoke executor - stop the application -.
+	print "Invoking executor - stop the application -\n";
+	print "by running dance_plan_launcher.exe with -k file://$ior_emfile -x $file\n";
+
+	$E = $tg_executor->CreateProcess ("$DANCE_ROOT/bin/dance_plan_launcher",
+	                                  "-k file://$ior_emfile -x $file -s");
+	$pl_status = $E->SpawnWaitKill ($tg_executor->ProcessStartWaitInterval ());
+
+	if ($pl_status != 0) {
+	    print STDERR "ERROR: dance_plan_launcher returned $pl_status\n";
+	    kill_open_processes ();
+	    exit 1;
+	}
+	    delete_ior_files ();
+	    kill_open_processes ();
+	    # Sleep for a couple seconds to make sure everything has a chance to shut down.
+	    sleep 5;
 }
-
-$ns_running = 1;
-# Set up NamingService environment
-$ENV{"NameServiceIOR"} = "corbaloc:iiop:localhost:60003/NameService";
-
-# Invoke node daemon.
-print "Invoking node daemon\n";
-$status = run_node_daemons ();
-
-if ($status != 0) {
-    print STDERR "ERROR: Unable to execute the node daemons\n";
-    kill_open_processes ();
-    exit 1;
-}
-
-$daemons_running = 1;
-
-# Invoke execution manager.
-print "Invoking execution manager (dance_execution_manager.exe) with -e$ior_emfile\n";
-$EM = $tg_exe_man->CreateProcess ("$DANCE_ROOT/bin/dance_execution_manager",
-                                    "-e$ior_emfile --domain-nc corbaloc:rir:/NameService");
-$EM->Spawn ();
-
-if ($tg_exe_man->WaitForFileTimed ($ior_embase,
-                                $tg_exe_man->ProcessStartWaitInterval ()) == -1) {
-    print STDERR
-      "ERROR: The ior file of execution manager could not be found\n";
-    kill_open_processes ();
-    exit 1;
-}
-
-$em_running = 1;
-
-# Invoke executor - start the application -.
-print "Invoking executor - launch the application -\n";
-
-print "Start dance_plan_launcher.exe with -x $cdp_file -k file://$ior_emfile -l\n";
-$E = $tg_executor->CreateProcess ("$DANCE_ROOT/bin/dance_plan_launcher",
-                                  "-x $cdp_file -k file://$ior_emfile -l");
-$E->SpawnWaitKill (2*$tg_executor->ProcessStartWaitInterval ());
-
-for ($i = 0; $i < $nr_daemon; ++$i) {
-    if ($tg_daemons[$i]->WaitForFileTimed ($iorbases[$i],
-                            $tg_daemons[$i]->ProcessStopWaitInterval ()) == -1) {
-        print STDERR "ERROR: The ior file of daemon $i could not be found\n";
-        kill_open_processes ();
-        exit 1;
-    }
-}
-
-print "Invoking the controller ($controller_exec -k file://Sender.ior)\n";
-$CTRL = $tg_executor->CreateProcess ("$controller_exec", "-k file://Sender.ior");
-$result = $CTRL->SpawnWaitKill ($tg_executor->ProcessStartWaitInterval ());
-
-if ($result != 0) {
-    print STDERR "ERROR: The controller returned $result\n";
-    $status = 1;
-}
-
-# Invoke executor - stop the application -.
-print "Invoking executor - stop the application -\n";
-print "by running dance_plan_launcher.exe with -k file://$ior_emfile -x $cdp_file -s\n";
-
-$E = $tg_executor->CreateProcess ("$DANCE_ROOT/bin/dance_plan_launcher",
-                                  "-k file://$ior_emfile -x $cdp_file -s");
-$E->SpawnWaitKill ($tg_executor->ProcessStopWaitInterval ());
-
 print "Executor returned.\n";
 print "Shutting down rest of the processes.\n";
 

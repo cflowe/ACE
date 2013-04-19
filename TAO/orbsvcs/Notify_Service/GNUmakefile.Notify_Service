@@ -254,8 +254,8 @@ endif
 #svc.conf.xml
 #
 #header_files:
-#NT_Notify_Service.h
 #Notify_Service.h
+#NT_Notify_Service.h
 #Notify_Service_Export.h
 #
 #source_files:

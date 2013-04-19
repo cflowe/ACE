@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Trading_Service.cpp \
-  Trading_Server.cpp
+  Trading_Server.cpp \
+  Trading_Service.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -239,8 +239,8 @@ endif
 #Trading_Service.h
 #
 #source_files:
-#Trading_Service.cpp
 #Trading_Server.cpp
+#Trading_Service.cpp
 #
 #exe_output:
 # tao_costrading

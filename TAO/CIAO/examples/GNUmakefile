@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: BasicSP_idl_gen BasicSP_lem_gen BasicSP_stub BasicSP_exec BMClosedED_idl_gen BMClosedED_lem_gen BMClosedED_stub BMClosedED_exec BasicSP_svnt BMClosedED_svnt BMDevice_idl_gen BMDevice_lem_gen BMDevice_stub BMDevice_exec BMDevice_svnt BMDisplay_idl_gen BMDisplay_lem_gen BMDisplay_stub BMDisplay_exec BMDisplay_svnt EC_idl_gen EC_stub EC_client EC_controller EC_lem_gen EC_exec EC_svnt Messenge_idl_gen Messenger_idl_gen Messenger_messenger_idl_gen Messenger_lem_gen Messenger_stub Administrator_Client_IDL3 Messenger_Administrator_idl_gen Messenger_Administrator_stub Messenger_Administrator_lem_gen Messenger_Administrator_exec Messenger_exec Messenger_svnt Messenger_Administrator_svnt Messenger_Receiver_idl_gen Messenger_Receiver_stub Messenger_Receiver_lem_gen Messenger_Receiver_exec Messenger_Receiver_svnt Display_Base_idl_gen Display_Base_lem_gen Display_Base_stub Display_Base_skel Display_GPS_idl_gen Display_GPS_stub Display_GPS_lem_gen Display_GPS_exec Display_GPS_svnt Display_NavDisplay_idl_gen Display_NavDisplay_stub Display_NavDisplay_lem_gen Display_NavDisplay_exec Display_NavDisplay_svnt Display_NavDisplayGUI_exec_moc Display_NavDisplayGUI_exec Display_NavDisplayGUI_svnt Display_RateGen_idl_gen Display_RateGen_stub Display_RateGen_lem_gen Display_RateGen_exec Display_RateGen_svnt Display_controller Hello_Base_idl_gen Hello_Base_lem_gen Hello_Base_stub Hello_Base_lem_stub Hello_Base_skel Hello_Base_Receiver_idl_gen Hello_Base_Receiver_stub Hello_Base_Receiver_lem_gen Hello_Base_Receiver_lem_stub Hello_Base_Receiver_exec Hello_Base_Receiver_svnt Hello_Base_Sender_idl_gen Hello_Base_Sender_stub Hello_Base_Sender_lem_gen Hello_Base_Sender_lem_stub Hello_Base_Sender_exec Hello_Base_Sender_svnt Hello_Base_starter Null_Interface_idl_gen Null_Interface_lem_gen Null_Interface_stub Null_Component_idl_gen Null_Component_stub Null_Component_lem_gen Null_Component_exec Null_Interface_skel Null_Component_svnt
+all: BasicSP_idl_gen BasicSP_lem_gen BasicSP_stub BasicSP_exec BMClosedED_idl_gen BMClosedED_lem_gen BMClosedED_stub BMClosedED_exec BasicSP_svnt BMClosedED_svnt BMDevice_idl_gen BMDevice_lem_gen BMDevice_stub BMDevice_exec BMDevice_svnt BMDisplay_idl_gen BMDisplay_lem_gen BMDisplay_stub BMDisplay_exec BMDisplay_svnt EC_idl_gen EC_stub EC_client EC_controller EC_lem_gen EC_exec EC_svnt Messenge_idl_gen Messenger_idl_gen Messenger_messenger_idl_gen Messenger_lem_gen Messenger_stub Administrator_Client_IDL3 Messenger_Administrator_idl_gen Messenger_Administrator_stub Messenger_Administrator_lem_gen Messenger_Administrator_exec Messenger_exec Messenger_svnt Messenger_Administrator_svnt Messenger_Receiver_idl_gen Messenger_Receiver_stub Messenger_Receiver_lem_gen Messenger_Receiver_exec Messenger_Receiver_svnt Display_Base_idl_gen Display_Base_lem_gen Display_Base_stub Display_Base_skel Display_GPS_idl_gen Display_GPS_stub Display_GPS_lem_gen Display_GPS_exec Display_GPS_svnt Display_NavDisplay_idl_gen Display_NavDisplay_stub Display_NavDisplay_lem_gen Display_NavDisplay_exec Display_NavDisplay_svnt Display_NavDisplayGUI_exec_moc Display_NavDisplayGUI_exec Display_NavDisplayGUI_svnt Display_RateGen_idl_gen Display_RateGen_stub Display_RateGen_lem_gen Display_RateGen_exec Display_RateGen_svnt Display_controller Hello_Example_idl_gen Hello_Example_lem_gen Hello_Example_stub Hello_Example_skel Hello_Example_lem_stub Hello_Ex_Base_Hello_Receiver_idl_gen Hello_Ex_Base_Hello_Receiver_stub Hello_Ex_Base_Hello_Receiver_lem_gen Hello_Ex_Base_Hello_Receiver_l_stub Hello_Ex_Base_Hello_Receiver_exec Hello_Ex_Base_Hello_Receiver_svnt Hello_Ex_Base_Hello_Sender_idl_gen Hello_Ex_Base_Hello_Sender_stub Hello_Ex_Base_Hello_Sender_lem_gen Hello_Ex_Base_Hello_Sender_lem_stub Hello_Ex_Base_Hello_Sender_exec Hello_Ex_Base_Hello_Sender_svnt Hello_Base_idl_gen Hello_Base_lem_gen Hello_Base_stub Hello_Base_lem_stub Hello_Base_skel Hello_Base_Receiver_idl_gen Hello_Base_Receiver_stub Hello_Base_Receiver_lem_gen Hello_Base_Receiver_lem_stub Hello_Base_Receiver_exec Hello_Base_Receiver_svnt Hello_Base_Sender_idl_gen Hello_Base_Sender_stub Hello_Base_Sender_lem_gen Hello_Base_Sender_lem_stub Hello_Base_Sender_exec Hello_Base_Sender_svnt Hello_Base_starter Null_Interface_idl_gen Null_Interface_lem_gen Null_Interface_stub Null_Component_idl_gen Null_Component_stub Null_Component_lem_gen Null_Component_exec Null_Interface_skel Null_Component_svnt
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -93,24 +93,41 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Display/RateGen && $(MAKE) -f GNUmakefile.Display_RateGen_exec $(@)
 	$(KEEP_GOING)@cd Display/RateGen && $(MAKE) -f GNUmakefile.Display_RateGen_svnt $(@)
 	$(KEEP_GOING)@cd Display/RateGen && $(MAKE) -f GNUmakefile.Display_controller $(@)
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_idl_gen $(@)
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_lem_gen $(@)
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_stub $(@)
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_lem_stub $(@)
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_skel $(@)
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_idl_gen $(@)
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_stub $(@)
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_lem_gen $(@)
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_lem_stub $(@)
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_exec $(@)
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_svnt $(@)
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_idl_gen $(@)
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_stub $(@)
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_gen $(@)
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_stub $(@)
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_exec $(@)
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_svnt $(@)
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_starter $(@)
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_idl_gen $(@)
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_lem_gen $(@)
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_stub $(@)
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_skel $(@)
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_lem_stub $(@)
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_idl_gen $(@)
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_stub $(@)
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_lem_gen $(@)
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_l_stub $(@)
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_exec $(@)
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_svnt $(@)
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_idl_gen $(@)
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_stub $(@)
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_lem_gen $(@)
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_lem_stub $(@)
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_exec $(@)
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_svnt $(@)
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_idl_gen $(@)
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_lem_gen $(@)
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_stub $(@)
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_lem_stub $(@)
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_skel $(@)
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_idl_gen $(@)
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_stub $(@)
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_lem_gen $(@)
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_lem_stub $(@)
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_exec $(@)
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_svnt $(@)
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_idl_gen $(@)
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_stub $(@)
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_gen $(@)
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_stub $(@)
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_exec $(@)
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_svnt $(@)
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_starter $(@)
 	$(KEEP_GOING)@cd Null_Component && $(MAKE) -f GNUmakefile.Null_Interface_idl_gen $(@)
 	$(KEEP_GOING)@cd Null_Component && $(MAKE) -f GNUmakefile.Null_Interface_lem_gen $(@)
 	$(KEEP_GOING)@cd Null_Component && $(MAKE) -f GNUmakefile.Null_Interface_stub $(@)
@@ -393,77 +410,145 @@ Display_RateGen_svnt: Display_Base_skel Display_RateGen_exec
 Display_controller: Display_RateGen_stub
 	$(KEEP_GOING)@cd Display/RateGen && $(MAKE) -f GNUmakefile.Display_controller all
 
+.PHONY: Hello_Example_idl_gen
+Hello_Example_idl_gen:
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_idl_gen all
+
+.PHONY: Hello_Example_lem_gen
+Hello_Example_lem_gen: Hello_Example_idl_gen
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_lem_gen all
+
+.PHONY: Hello_Example_stub
+Hello_Example_stub: Hello_Example_lem_gen
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_stub all
+
+.PHONY: Hello_Example_skel
+Hello_Example_skel: Hello_Example_stub
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_skel all
+
+.PHONY: Hello_Example_lem_stub
+Hello_Example_lem_stub: Hello_Example_lem_gen Hello_Example_stub Hello_Example_skel
+	$(KEEP_GOING)@cd Hello/Base && $(MAKE) -f GNUmakefile.Hello_Example_lem_stub all
+
+.PHONY: Hello_Ex_Base_Hello_Receiver_idl_gen
+Hello_Ex_Base_Hello_Receiver_idl_gen: Hello_Example_idl_gen
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_idl_gen all
+
+.PHONY: Hello_Ex_Base_Hello_Receiver_stub
+Hello_Ex_Base_Hello_Receiver_stub: Hello_Example_stub Hello_Ex_Base_Hello_Receiver_idl_gen
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_stub all
+
+.PHONY: Hello_Ex_Base_Hello_Receiver_lem_gen
+Hello_Ex_Base_Hello_Receiver_lem_gen: Hello_Ex_Base_Hello_Receiver_idl_gen
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_lem_gen all
+
+.PHONY: Hello_Ex_Base_Hello_Receiver_l_stub
+Hello_Ex_Base_Hello_Receiver_l_stub: Hello_Example_stub Hello_Ex_Base_Hello_Receiver_stub Hello_Ex_Base_Hello_Receiver_lem_gen
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_l_stub all
+
+.PHONY: Hello_Ex_Base_Hello_Receiver_exec
+Hello_Ex_Base_Hello_Receiver_exec: Hello_Example_stub Hello_Example_lem_stub Hello_Ex_Base_Hello_Receiver_stub Hello_Ex_Base_Hello_Receiver_l_stub
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_exec all
+
+.PHONY: Hello_Ex_Base_Hello_Receiver_svnt
+Hello_Ex_Base_Hello_Receiver_svnt: Hello_Example_stub Hello_Example_skel Hello_Example_lem_stub Hello_Ex_Base_Hello_Receiver_l_stub
+	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Receiver_svnt all
+
+.PHONY: Hello_Ex_Base_Hello_Sender_idl_gen
+Hello_Ex_Base_Hello_Sender_idl_gen: Hello_Example_idl_gen
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_idl_gen all
+
+.PHONY: Hello_Ex_Base_Hello_Sender_stub
+Hello_Ex_Base_Hello_Sender_stub: Hello_Example_stub Hello_Ex_Base_Hello_Sender_idl_gen
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_stub all
+
+.PHONY: Hello_Ex_Base_Hello_Sender_lem_gen
+Hello_Ex_Base_Hello_Sender_lem_gen: Hello_Ex_Base_Hello_Sender_idl_gen
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_lem_gen all
+
+.PHONY: Hello_Ex_Base_Hello_Sender_lem_stub
+Hello_Ex_Base_Hello_Sender_lem_stub: Hello_Example_stub Hello_Ex_Base_Hello_Sender_lem_gen
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_lem_stub all
+
+.PHONY: Hello_Ex_Base_Hello_Sender_exec
+Hello_Ex_Base_Hello_Sender_exec: Hello_Example_lem_stub Hello_Ex_Base_Hello_Sender_stub Hello_Ex_Base_Hello_Sender_lem_stub
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_exec all
+
+.PHONY: Hello_Ex_Base_Hello_Sender_svnt
+Hello_Ex_Base_Hello_Sender_svnt: Hello_Example_skel Hello_Ex_Base_Hello_Sender_stub Hello_Ex_Base_Hello_Sender_lem_stub
+	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Ex_Base_Hello_Sender_svnt all
+
 .PHONY: Hello_Base_idl_gen
 Hello_Base_idl_gen:
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_idl_gen all
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_idl_gen all
 
 .PHONY: Hello_Base_lem_gen
 Hello_Base_lem_gen: Hello_Base_idl_gen
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_lem_gen all
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_lem_gen all
 
 .PHONY: Hello_Base_stub
 Hello_Base_stub: Hello_Base_idl_gen
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_stub all
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_stub all
 
 .PHONY: Hello_Base_lem_stub
 Hello_Base_lem_stub: Hello_Base_lem_gen Hello_Base_stub
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_lem_stub all
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_lem_stub all
 
 .PHONY: Hello_Base_skel
 Hello_Base_skel: Hello_Base_stub Hello_Base_lem_stub
-	$(KEEP_GOING)@cd Hello/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_skel all
+	$(KEEP_GOING)@cd Hello_Event/Hello_Base && $(MAKE) -f GNUmakefile.Hello_Base_skel all
 
 .PHONY: Hello_Base_Receiver_idl_gen
 Hello_Base_Receiver_idl_gen:
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_idl_gen all
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_idl_gen all
 
 .PHONY: Hello_Base_Receiver_stub
 Hello_Base_Receiver_stub: Hello_Base_stub Hello_Base_lem_stub Hello_Base_Receiver_idl_gen
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_stub all
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_stub all
 
 .PHONY: Hello_Base_Receiver_lem_gen
 Hello_Base_Receiver_lem_gen: Hello_Base_Receiver_idl_gen
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_lem_gen all
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_lem_gen all
 
 .PHONY: Hello_Base_Receiver_lem_stub
 Hello_Base_Receiver_lem_stub: Hello_Base_stub Hello_Base_lem_stub Hello_Base_Receiver_stub Hello_Base_Receiver_lem_gen
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_lem_stub all
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_lem_stub all
 
 .PHONY: Hello_Base_Receiver_exec
 Hello_Base_Receiver_exec: Hello_Base_lem_stub Hello_Base_Receiver_stub Hello_Base_Receiver_lem_stub
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_exec all
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_exec all
 
 .PHONY: Hello_Base_Receiver_svnt
 Hello_Base_Receiver_svnt: Hello_Base_lem_stub Hello_Base_skel Hello_Base_Receiver_lem_stub
-	$(KEEP_GOING)@cd Hello/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_svnt all
+	$(KEEP_GOING)@cd Hello_Event/Receiver && $(MAKE) -f GNUmakefile.Hello_Base_Receiver_svnt all
 
 .PHONY: Hello_Base_Sender_idl_gen
 Hello_Base_Sender_idl_gen:
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_idl_gen all
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_idl_gen all
 
 .PHONY: Hello_Base_Sender_stub
 Hello_Base_Sender_stub: Hello_Base_stub Hello_Base_lem_stub Hello_Base_Sender_idl_gen
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_stub all
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_stub all
 
 .PHONY: Hello_Base_Sender_lem_gen
 Hello_Base_Sender_lem_gen: Hello_Base_Sender_idl_gen
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_gen all
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_gen all
 
 .PHONY: Hello_Base_Sender_lem_stub
 Hello_Base_Sender_lem_stub: Hello_Base_stub Hello_Base_lem_stub Hello_Base_Sender_stub Hello_Base_Sender_lem_gen
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_stub all
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_lem_stub all
 
 .PHONY: Hello_Base_Sender_exec
 Hello_Base_Sender_exec: Hello_Base_lem_stub Hello_Base_Sender_stub Hello_Base_Sender_lem_stub
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_exec all
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_exec all
 
 .PHONY: Hello_Base_Sender_svnt
 Hello_Base_Sender_svnt: Hello_Base_lem_stub Hello_Base_skel Hello_Base_Sender_lem_stub
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_svnt all
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_Sender_svnt all
 
 .PHONY: Hello_Base_starter
 Hello_Base_starter: Hello_Base_Sender_stub
-	$(KEEP_GOING)@cd Hello/Sender && $(MAKE) -f GNUmakefile.Hello_Base_starter all
+	$(KEEP_GOING)@cd Hello_Event/Sender && $(MAKE) -f GNUmakefile.Hello_Base_starter all
 
 .PHONY: Null_Interface_idl_gen
 Null_Interface_idl_gen:
@@ -570,6 +655,23 @@ project_name_list:
 	@echo Display_RateGen_stub
 	@echo Display_RateGen_svnt
 	@echo Display_controller
+	@echo Hello_Example_idl_gen
+	@echo Hello_Example_lem_gen
+	@echo Hello_Example_lem_stub
+	@echo Hello_Example_skel
+	@echo Hello_Example_stub
+	@echo Hello_Ex_Base_Hello_Receiver_exec
+	@echo Hello_Ex_Base_Hello_Receiver_idl_gen
+	@echo Hello_Ex_Base_Hello_Receiver_l_stub
+	@echo Hello_Ex_Base_Hello_Receiver_lem_gen
+	@echo Hello_Ex_Base_Hello_Receiver_stub
+	@echo Hello_Ex_Base_Hello_Receiver_svnt
+	@echo Hello_Ex_Base_Hello_Sender_exec
+	@echo Hello_Ex_Base_Hello_Sender_idl_gen
+	@echo Hello_Ex_Base_Hello_Sender_lem_gen
+	@echo Hello_Ex_Base_Hello_Sender_lem_stub
+	@echo Hello_Ex_Base_Hello_Sender_stub
+	@echo Hello_Ex_Base_Hello_Sender_svnt
 	@echo Hello_Base_idl_gen
 	@echo Hello_Base_lem_gen
 	@echo Hello_Base_lem_stub

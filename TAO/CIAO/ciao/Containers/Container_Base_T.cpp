@@ -1,4 +1,4 @@
-// $Id: Container_Base_T.cpp 95914 2012-06-21 17:36:24Z johnnyw $
+// $Id: Container_Base_T.cpp 96169 2012-10-02 08:27:41Z johnnyw $
 
 #ifndef CIAO_CONTAINERBASE_IMPL_T_C
 #define CIAO_CONTAINERBASE_IMPL_T_C
@@ -156,8 +156,8 @@ namespace CIAO
                 (LM_DEBUG,
                   CLINFO
                   "Container_i::prepare_installation <%C> - "
-                  "Loading %C [%C] from shared libraries\n",
-                  entity, entity, name));
+                  "Loading [%C] from shared libraries\n",
+                  entity, name));
 
     CIAO_DEBUG (6,
                 (LM_DEBUG,
@@ -1216,9 +1216,6 @@ namespace CIAO
 
     PortableServer::ObjectId_var oid =
       PortableServer::string_to_ObjectId (obj_id);
-
-    CORBA::String_var str =
-      PortableServer::ObjectId_to_string (oid.in ());
 
     CORBA::Object_var objref =
       poa_safe->create_reference_with_id (oid.in (), repo_id);

@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  RTEvent_Logging_Service.cpp \
-  RTEvent_Logging_Server.cpp
+  RTEvent_Logging_Server.cpp \
+  RTEvent_Logging_Service.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -267,8 +267,8 @@ endif
 #RTEvent_Logging_Service.h
 #
 #source_files:
-#RTEvent_Logging_Service.cpp
 #RTEvent_Logging_Server.cpp
+#RTEvent_Logging_Service.cpp
 #
 #exe_output:
 # tao_tls_rtevent

@@ -253,9 +253,9 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#Monitor.pidl
 #Monitor_Types.pidl
 #Monitor_include.pidl
+#Monitor.pidl
 #
 #build_files:
 #Monitor.mpc

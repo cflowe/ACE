@@ -19,10 +19,10 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
+  Supplier.cpp \
   Consumer.cpp \
   AddrServer.cpp \
-  MCast.cpp \
-  Supplier.cpp
+  MCast.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,28 +20,40 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: TAO_IDL_FE TAO_IDL_BE TAO_IDL_EXE
+all: ACE gperf TAO_IDL_FE TAO_IDL_BE TAO_IDL_EXE
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.TAO_IDL_FE $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.TAO_IDL_BE $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.TAO_IDL_EXE $(@)
+	$(KEEP_GOING)@cd ../../ace && $(MAKE) -f GNUmakefile.ACE $(@)
+	$(KEEP_GOING)@cd ../../apps/gperf/src && $(MAKE) -f GNUmakefile.gperf $(@)
+	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_FE $(@)
+	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_BE $(@)
+	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_EXE $(@)
+
+.PHONY: ACE
+ACE:
+	$(KEEP_GOING)@cd ../../ace && $(MAKE) -f GNUmakefile.ACE all
+
+.PHONY: gperf
+gperf: ACE
+	$(KEEP_GOING)@cd ../../apps/gperf/src && $(MAKE) -f GNUmakefile.gperf all
 
 .PHONY: TAO_IDL_FE
-TAO_IDL_FE:
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.TAO_IDL_FE all
+TAO_IDL_FE: ACE
+	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_FE all
 
 .PHONY: TAO_IDL_BE
-TAO_IDL_BE: TAO_IDL_FE
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.TAO_IDL_BE all
+TAO_IDL_BE: ACE TAO_IDL_FE
+	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_BE all
 
 .PHONY: TAO_IDL_EXE
-TAO_IDL_EXE: TAO_IDL_FE TAO_IDL_BE
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.TAO_IDL_EXE all
+TAO_IDL_EXE: ACE gperf TAO_IDL_FE TAO_IDL_BE
+	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_EXE all
 
 project_name_list:
+	@echo ACE
+	@echo gperf
 	@echo TAO_IDL_BE
 	@echo TAO_IDL_EXE
 	@echo TAO_IDL_FE

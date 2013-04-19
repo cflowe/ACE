@@ -1,4 +1,4 @@
-// $Id: Component_Handler.cpp 96012 2012-08-07 12:38:33Z johnnyw $
+// $Id: Component_Handler.cpp 96180 2012-10-08 08:03:38Z johnnyw $
 
 #include "Component_Handler.h"
 #include "ciao/Logger/Log_Macros.h"
@@ -170,14 +170,13 @@ namespace CIAO
           cont_id = tmp;
           CIAO_DEBUG (9, (LM_TRACE, CLINFO
                           "Component_Handler_i::install_instance - "
-                          "Found executor entrypoint: <%C>\n", exec_entry.in ()));
+                          "Found container: <%C>\n", cont_id.in ()));
         }
       else
         {
-          CIAO_ERROR (4, (LM_INFO, CLINFO
+          CIAO_DEBUG (4, (LM_INFO, CLINFO
                           "Component_Handler_i::install_instance - "
-                          "No container provided, using default container for instance <%C>\n",
-                          idd.name.in  ()));
+                          "No container provided, using default container\n"));
           cont_id = "";
         }
 

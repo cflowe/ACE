@@ -2,7 +2,7 @@
  * @author Marcel Smit (msmit@remedy.nl)
  * @author Johnny Willemsen (jwillemsen@remedy.nl)
  *
- * $Id: StringSeq.h 95809 2012-06-03 17:56:00Z johnnyw $
+ * $Id: StringSeq.h 96171 2012-10-02 17:52:42Z johnnyw $
  *
  */
 
@@ -30,6 +30,7 @@ operator<<= (::DDS_StringSeq & dds_string_seq, const ::DDS::StringSeq & string_s
       {
         parameterlist[i] = string_seq[i].in ();
       }
+    dds_string_seq.maximum(string_seq.length ());
     dds_string_seq.length (string_seq.length ());
     dds_string_seq.from_array (parameterlist, string_seq.length ());
     delete [] parameterlist;

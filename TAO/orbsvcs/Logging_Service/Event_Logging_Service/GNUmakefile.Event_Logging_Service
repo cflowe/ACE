@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Event_Logging_Server.cpp \
-  Event_Logging_Service.cpp
+  Event_Logging_Service.cpp \
+  Event_Logging_Server.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -254,8 +254,8 @@ endif
 #Event_Logging_Service.h
 #
 #source_files:
-#Event_Logging_Server.cpp
 #Event_Logging_Service.cpp
+#Event_Logging_Server.cpp
 #
 #exe_output:
 # tao_tls_event

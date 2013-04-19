@@ -36,9 +36,9 @@ FtRtEvent = \
   FTRT_GroupManagerS.cpp \
   FtRtecEventChannelAdminC.cpp \
   FtRtecEventChannelAdminS.cpp \
-  FtRtEvent/Utils/Safe_InputCDR.cpp \
-  FtRtEvent/Utils/Log.cpp \
   FtRtEvent/Utils/FTEC_Gateway.cpp \
+  FtRtEvent/Utils/Log.cpp \
+  FtRtEvent/Utils/Safe_InputCDR.cpp \
   FtRtEvent/Utils/UUID.cpp
 
 FILES += \
@@ -416,7 +416,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = FTRTC.cpp FTRTS.cpp FtRtecEventCommC.cpp FtRtecEventCommS.cpp FTRT_GroupManagerC.cpp FTRT_GroupManagerS.cpp FtRtecEventChannelAdminC.cpp FtRtecEventChannelAdminS.cpp FtRtEvent/Utils/Safe_InputCDR.cpp FtRtEvent/Utils/Log.cpp FtRtEvent/Utils/FTEC_Gateway.cpp FtRtEvent/Utils/UUID.cpp  
+FORCED_IDL_STUBS = FTRTC.cpp FTRTS.cpp FtRtecEventCommC.cpp FtRtecEventCommS.cpp FTRT_GroupManagerC.cpp FTRT_GroupManagerS.cpp FtRtecEventChannelAdminC.cpp FtRtecEventChannelAdminS.cpp FtRtEvent/Utils/FTEC_Gateway.cpp FtRtEvent/Utils/Log.cpp FtRtEvent/Utils/Safe_InputCDR.cpp FtRtEvent/Utils/UUID.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:FTRTS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:FTRTC.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:FtRtecEventCommS.cpp=)
@@ -493,7 +493,7 @@ else
 	$(INSTALLER) -i -s $(subst $(SPACE),$(COMMA),$(INST_TAGS)) \
 	  $(INST_LOCATIONS) $(if $(ARCH),-d $(ARCH)) $(PRJINST_OPTIONS) \
 	  $(DESTDIR)$(INSTALL_PREFIX)
-	$(ACE_ROOT)/bin/ace_install_pkgconfig.pl TAO_CosEvent.pc.in TAO_RTEventLogAdmin_Skel.pc.in TAO_DsNotifyLogAdmin_Skel.pc.in TAO_CosProperty_Serv.pc.in TAO_RTEventLogAdmin.pc.in TAO_CosNaming_Serv.pc.in TAO_CosNotification_Skel.pc.in TAO_CosTrading_Serv.pc.in TAO_CosLifeCycle.pc.in TAO_RTEvent_Skel.pc.in TAO_CosTrading_Skel.pc.in TAO_CosConcurrency.pc.in TAO_CosTrading.pc.in TAO_CosNotification_Serv.pc.in TAO_CosEvent_Skel.pc.in TAO_CosProperty.pc.in TAO_CosLoadBalancing.pc.in TAO_CosNaming.pc.in TAO_FaultTolerance.pc.in TAO_CosTime_Serv.pc.in TAO_CosNaming_Skel.pc.in TAO_DsLogAdmin_Serv.pc.in TAO_FT_ClientORB.pc.in TAO_DsEventLogAdmin.pc.in TAO_DsNotifyLogAdmin_Serv.pc.in TAO_RTEvent.pc.in TAO_CosTime_Skel.pc.in TAO_CosEvent_Serv.pc.in TAO_Svc_Utils.pc.in TAO_CosTime.pc.in TAO_DsEventLogAdmin_Skel.pc.in TAO_RTEvent_Serv.pc.in TAO_FT_ServerORB.pc.in TAO_CosLifeCycle_Skel.pc.in TAO_DsNotifyLogAdmin.pc.in TAO_CosNotification.pc.in TAO_CosProperty_Skel.pc.in TAO_CosConcurrency_Skel.pc.in TAO_DsLogAdmin_Skel.pc.in TAO_DsEventLogAdmin_Serv.pc.in TAO_RTEventLogAdmin_Serv.pc.in TAO_PortableGroup.pc.in TAO_FTORB_Utils.pc.in TAO_DsLogAdmin.pc.in TAO_CosConcurrency_Serv.pc.in --destdir "$(DESTDIR)" --prefix $(INSTALL_PREFIX) --libdir $(INSTALL_LIB) --libs "$(LIBS)" --version $(GNUACE_PROJECT_VERSION)
+	$(ACE_ROOT)/bin/ace_install_pkgconfig.pl TAO_FaultTolerance.pc.in TAO_CosProperty.pc.in TAO_Svc_Utils.pc.in TAO_FT_ServerORB.pc.in TAO_DsEventLogAdmin_Serv.pc.in TAO_CosEvent_Serv.pc.in TAO_CosTrading.pc.in TAO_CosConcurrency.pc.in TAO_CosTime_Serv.pc.in TAO_RTEventLogAdmin.pc.in TAO_CosProperty_Skel.pc.in TAO_CosProperty_Serv.pc.in TAO_CosTime.pc.in TAO_RTEventLogAdmin_Skel.pc.in TAO_CosConcurrency_Skel.pc.in TAO_RTEventLogAdmin_Serv.pc.in TAO_CosNotification_Serv.pc.in TAO_CosConcurrency_Serv.pc.in TAO_CosNaming_Skel.pc.in TAO_CosLifeCycle.pc.in TAO_CosTrading_Skel.pc.in TAO_RTEvent.pc.in TAO_DsEventLogAdmin_Skel.pc.in TAO_CosNaming.pc.in TAO_CosTrading_Serv.pc.in TAO_CosNotification.pc.in TAO_DsLogAdmin.pc.in TAO_DsLogAdmin_Skel.pc.in TAO_CosLifeCycle_Skel.pc.in TAO_DsNotifyLogAdmin_Serv.pc.in TAO_RTEvent_Skel.pc.in TAO_CosNaming_Serv.pc.in TAO_CosLoadBalancing.pc.in TAO_CosNotification_Skel.pc.in TAO_DsEventLogAdmin.pc.in TAO_PortableGroup.pc.in TAO_DsNotifyLogAdmin.pc.in TAO_RTEvent_Serv.pc.in TAO_FTORB_Utils.pc.in TAO_DsNotifyLogAdmin_Skel.pc.in TAO_CosEvent_Skel.pc.in TAO_DsLogAdmin_Serv.pc.in TAO_CosTime_Skel.pc.in TAO_FT_ClientORB.pc.in TAO_CosEvent.pc.in --destdir "$(DESTDIR)" --prefix $(INSTALL_PREFIX) --libdir $(INSTALL_LIB) --libs "$(LIBS)" --version $(GNUACE_PROJECT_VERSION)
 endif
 endif
 endif
@@ -502,45 +502,45 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
-#RTSchedEvent.mpc
-#SSLIOP.mpc
-#PortableGroup.mpc
-#CosNaming_Skel.mpc
-#RTEvent.mpc
 #CosConcurrency.mpc
-#CosLoadBalancing.mpc
-#DsEventLogAdmin.mpc
-#DsLogAdmin.mpc
-#FTORB.mpc
-#RTSched.mpc
-#RTEvent_Skel.mpc
-#AV.mpc
-#CosLifeCycle.mpc
 #IFRService.mpc
 #CosTime.mpc
-#CosTrading.mpc
-#CosProperty.mpc
-#CosEvent.mpc
-#CosNaming.mpc
+#CosNotification.mpc
+#HTIOP.mpc
 #RTEventLogAdmin.mpc
-#RTEvent_Serv.mpc
+#CosEvent.mpc
+#RTCORBAEvent.mpc
+#DsNotifyLogAdmin.mpc
+#DsEventLogAdmin.mpc
+#FTORB.mpc
+#RTEvent.mpc
+#DsLogAdmin.mpc
+#RT_Notification.mpc
+#SSLIOP.mpc
+#CosProperty.mpc
+#CosLifeCycle.mpc
+#RTSched.mpc
+#FtRtEvent.mpc
+#CosNaming_Serv.mpc
+#CosNaming.mpc
+#CosNaming_Skel.mpc
+#CosTrading.mpc
+#CosLoadBalancing.mpc
+#AV.mpc
+#RTSchedEvent.mpc
+#RTKokyuEvent.mpc
 #FaultTolerance.mpc
 #Svc_Utils.mpc
-#HTIOP.mpc
-#CosNotification.mpc
-#RTCORBAEvent.mpc
-#RT_Notification.mpc
+#PortableGroup.mpc
+#RTEvent_Skel.mpc
+#RTEvent_Serv.mpc
 #Security.mpc
-#DsNotifyLogAdmin.mpc
-#RTKokyuEvent.mpc
-#CosNaming_Serv.mpc
-#FtRtEvent.mpc
+#ec_typed_events_skel.mpb
 #ssliop_params_dup.mpb
-#ec_typed_events.mpb
 #cosnaming_serv_persistence.mpb
 #ec_typed_events_serv.mpb
-#ec_typed_events_skel.mpb
 #ec_typed_events_idl.mpb
+#ec_typed_events.mpb
 #orbsvcs.mwc
 #
 #idl_files:
@@ -571,60 +571,60 @@ endif
 #
 #header_files:
 #FtRtEvent/Utils/Log.h
-#FtRtEvent/Utils/ftrtevent_export.h
-#FtRtEvent/Utils/activate_with_id.h
-#FtRtEvent/Utils/FTEC_Gateway.h
-#FtRtEvent/Utils/UUID.h
-#FtRtEvent/Utils/ScopeGuard.h
 #FtRtEvent/Utils/Safe_InputCDR.h
 #FtRtEvent/Utils/resolve_init.h
+#FtRtEvent/Utils/UUID.h
+#FtRtEvent/Utils/activate_with_id.h
+#FtRtEvent/Utils/ScopeGuard.h
+#FtRtEvent/Utils/FTEC_Gateway.h
+#FtRtEvent/Utils/ftrtevent_export.h
 #
 #pkgconfig_files:
-#TAO_CosEvent.pc.in
-#TAO_RTEventLogAdmin_Skel.pc.in
-#TAO_DsNotifyLogAdmin_Skel.pc.in
-#TAO_CosProperty_Serv.pc.in
-#TAO_RTEventLogAdmin.pc.in
-#TAO_CosNaming_Serv.pc.in
-#TAO_CosNotification_Skel.pc.in
-#TAO_CosTrading_Serv.pc.in
-#TAO_CosLifeCycle.pc.in
-#TAO_RTEvent_Skel.pc.in
-#TAO_CosTrading_Skel.pc.in
-#TAO_CosConcurrency.pc.in
-#TAO_CosTrading.pc.in
-#TAO_CosNotification_Serv.pc.in
-#TAO_CosEvent_Skel.pc.in
-#TAO_CosProperty.pc.in
-#TAO_CosLoadBalancing.pc.in
-#TAO_CosNaming.pc.in
 #TAO_FaultTolerance.pc.in
-#TAO_CosTime_Serv.pc.in
-#TAO_CosNaming_Skel.pc.in
-#TAO_DsLogAdmin_Serv.pc.in
-#TAO_FT_ClientORB.pc.in
-#TAO_DsEventLogAdmin.pc.in
-#TAO_DsNotifyLogAdmin_Serv.pc.in
-#TAO_RTEvent.pc.in
-#TAO_CosTime_Skel.pc.in
-#TAO_CosEvent_Serv.pc.in
+#TAO_CosProperty.pc.in
 #TAO_Svc_Utils.pc.in
-#TAO_CosTime.pc.in
-#TAO_DsEventLogAdmin_Skel.pc.in
-#TAO_RTEvent_Serv.pc.in
 #TAO_FT_ServerORB.pc.in
-#TAO_CosLifeCycle_Skel.pc.in
-#TAO_DsNotifyLogAdmin.pc.in
-#TAO_CosNotification.pc.in
-#TAO_CosProperty_Skel.pc.in
-#TAO_CosConcurrency_Skel.pc.in
-#TAO_DsLogAdmin_Skel.pc.in
 #TAO_DsEventLogAdmin_Serv.pc.in
+#TAO_CosEvent_Serv.pc.in
+#TAO_CosTrading.pc.in
+#TAO_CosConcurrency.pc.in
+#TAO_CosTime_Serv.pc.in
+#TAO_RTEventLogAdmin.pc.in
+#TAO_CosProperty_Skel.pc.in
+#TAO_CosProperty_Serv.pc.in
+#TAO_CosTime.pc.in
+#TAO_RTEventLogAdmin_Skel.pc.in
+#TAO_CosConcurrency_Skel.pc.in
 #TAO_RTEventLogAdmin_Serv.pc.in
-#TAO_PortableGroup.pc.in
-#TAO_FTORB_Utils.pc.in
-#TAO_DsLogAdmin.pc.in
+#TAO_CosNotification_Serv.pc.in
 #TAO_CosConcurrency_Serv.pc.in
+#TAO_CosNaming_Skel.pc.in
+#TAO_CosLifeCycle.pc.in
+#TAO_CosTrading_Skel.pc.in
+#TAO_RTEvent.pc.in
+#TAO_DsEventLogAdmin_Skel.pc.in
+#TAO_CosNaming.pc.in
+#TAO_CosTrading_Serv.pc.in
+#TAO_CosNotification.pc.in
+#TAO_DsLogAdmin.pc.in
+#TAO_DsLogAdmin_Skel.pc.in
+#TAO_CosLifeCycle_Skel.pc.in
+#TAO_DsNotifyLogAdmin_Serv.pc.in
+#TAO_RTEvent_Skel.pc.in
+#TAO_CosNaming_Serv.pc.in
+#TAO_CosLoadBalancing.pc.in
+#TAO_CosNotification_Skel.pc.in
+#TAO_DsEventLogAdmin.pc.in
+#TAO_PortableGroup.pc.in
+#TAO_DsNotifyLogAdmin.pc.in
+#TAO_RTEvent_Serv.pc.in
+#TAO_FTORB_Utils.pc.in
+#TAO_DsNotifyLogAdmin_Skel.pc.in
+#TAO_CosEvent_Skel.pc.in
+#TAO_DsLogAdmin_Serv.pc.in
+#TAO_CosTime_Skel.pc.in
+#TAO_FT_ClientORB.pc.in
+#TAO_CosEvent.pc.in
 #
 #source_files:
 #FTRTC.cpp
@@ -635,9 +635,9 @@ endif
 #FTRT_GroupManagerS.cpp
 #FtRtecEventChannelAdminC.cpp
 #FtRtecEventChannelAdminS.cpp
-#FtRtEvent/Utils/Safe_InputCDR.cpp
-#FtRtEvent/Utils/Log.cpp
 #FtRtEvent/Utils/FTEC_Gateway.cpp
+#FtRtEvent/Utils/Log.cpp
+#FtRtEvent/Utils/Safe_InputCDR.cpp
 #FtRtEvent/Utils/UUID.cpp
 #
 #lib_output:

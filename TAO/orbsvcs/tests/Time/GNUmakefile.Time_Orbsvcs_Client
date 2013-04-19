@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  client.cpp \
-  Client_i.cpp
+  Client_i.cpp \
+  client.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

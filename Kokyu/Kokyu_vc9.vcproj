@@ -381,9 +381,6 @@
 				RelativePath="Default_Dispatcher_Impl.h">
 			</File>
 			<File
-				RelativePath="Dispatch_Deferrer.h">
-			</File>
-			<File
 				RelativePath="Dispatcher_Impl.h">
 			</File>
 			<File

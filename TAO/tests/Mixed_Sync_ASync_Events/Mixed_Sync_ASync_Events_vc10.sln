@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE -workers 8 -name_modifier "*_vc10"
+# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE -workers 10 -name_modifier "*_vc10"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MixedSyncASyncEvents_Exe", "MixedSyncASyncEvents_Exe_vc10.vcxproj", "{03736F4B-FECA-1BAD-F39D-19BF7527680E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DFE36F4B-FECA-1BAD-F39D-19BF7527680E} = {DFE36F4B-FECA-1BAD-F39D-19BF7527680E}

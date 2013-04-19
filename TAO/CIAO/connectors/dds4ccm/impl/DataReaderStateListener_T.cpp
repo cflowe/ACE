@@ -1,4 +1,4 @@
-// $Id: DataReaderStateListener_T.cpp 95880 2012-06-13 17:43:40Z johnnyw $
+// $Id: DataReaderStateListener_T.cpp 96167 2012-10-01 18:27:37Z johnnyw $
 
 #include "dds4ccm/impl/Utils.h"
 
@@ -245,6 +245,13 @@ namespace CIAO
               // No exception here since this the DDS vendor doesn't expect this.
               // It will likely causes a crash in their implementation
             }
+        }
+      catch (const ::CORBA::BAD_INV_ORDER& ex)
+        {
+          DDS4CCM_PRINT_DEBUG_CORBA_EXCEPTION (
+                                  DDS4CCM_LOG_LEVEL_ACTION,
+                                  ex,
+                                  "DataReaderStateListener_T::on_data_available_i");
         }
       catch (const ::CORBA::Exception& ex)
         {

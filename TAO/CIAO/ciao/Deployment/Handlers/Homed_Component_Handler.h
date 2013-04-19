@@ -1,6 +1,6 @@
 
 // -*- C++ -*-
-// $Id: Homed_Component_Handler.h 91981 2010-09-23 20:41:33Z wotte $
+// $Id: Homed_Component_Handler.h 96155 2012-09-25 18:01:20Z johnnyw $
 
 /**
  * @file Homed_Component_Handler.h
@@ -12,7 +12,7 @@
 #ifndef CIAO_HOMED_COMPONENT_HANDLER_H
 #define CIAO_HOMED_COMPONENT_HANDLER_H
 
-#include "dance/DAnCE_LocalityManagerS.h"
+#include "dance/DAnCE_LocalityManagerC.h"
 #include "dance/DAnCE_Utility.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)

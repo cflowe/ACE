@@ -49,9 +49,6 @@
     <ClInclude Include="Default_Dispatcher_Impl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dispatch_Deferrer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Dispatcher_Impl.h">
       <Filter>Header Files</Filter>
     </ClInclude>

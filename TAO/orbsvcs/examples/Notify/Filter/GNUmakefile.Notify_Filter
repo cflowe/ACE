@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Filter.cpp \
-  main.cpp
+  main.cpp \
+  Filter.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

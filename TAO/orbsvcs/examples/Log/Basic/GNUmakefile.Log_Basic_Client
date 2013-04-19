@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  TLS_Client.cpp \
-  main.cpp
+  main.cpp \
+  TLS_Client.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

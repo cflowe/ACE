@@ -19,10 +19,10 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Factory_Trader.cpp \
   LifeCycle_Service.cpp \
   Criteria_Evaluator.cpp \
-  LifeCycle_Service_i.cpp
+  LifeCycle_Service_i.cpp \
+  Factory_Trader.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -241,10 +241,10 @@ endif
 #LifeCycle_Service.h
 #
 #source_files:
-#Factory_Trader.cpp
 #LifeCycle_Service.cpp
 #Criteria_Evaluator.cpp
 #LifeCycle_Service_i.cpp
+#Factory_Trader.cpp
 #
 #exe_output:
 # tao_coslifecycle

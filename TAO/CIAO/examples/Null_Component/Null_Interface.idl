@@ -3,7 +3,7 @@
  *
  * @author Abdul Sowayan <sowayan@gmail.com>
  *
- * $Id: Null_Interface.idl 88942 2010-02-10 21:18:17Z sowayaa $
+ * $Id: Null_Interface.idl 96159 2012-09-27 09:01:58Z johnnyw $
  */
 
 #ifndef NULL_INTERFACE_IDL
@@ -13,8 +13,6 @@
 
 /**
  * @interface Null_Interface
- *
- * @brief
  */
 interface Null_Interface
 {

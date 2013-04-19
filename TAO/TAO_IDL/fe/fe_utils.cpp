@@ -1,4 +1,4 @@
-// $Id: fe_utils.cpp 95721 2012-05-02 17:06:08Z parsons $
+// $Id: fe_utils.cpp 96122 2012-09-04 16:03:08Z parsons $
 
 #include "fe_utils.h"
 #include "fe_private.h"
@@ -838,8 +838,6 @@ FE_Utils::can_be_redefined (AST_Decl *prev_decl,
   UTL_Scope *curr_scope = curr_decl->defined_in ();
   AST_Structure *s = 0;
   AST_StructureFwd *s_fwd = 0;
-  AST_Interface *i = 0;
-  AST_InterfaceFwd *i_fwd = 0;
   AST_Template_Module *ptm = 0;
   AST_Template_Module *ctm = 0;
 
@@ -881,17 +879,17 @@ FE_Utils::can_be_redefined (AST_Decl *prev_decl,
       s = AST_Structure::narrow_from_decl (prev_decl);
       s_fwd = (s == 0 ? 0 : s->fwd_decl ());
       return (!s_eq || s_fwd != 0);
+    /// Only 2 or more full definitions in the same scope are illegal,
+    /// and that is caught elsewhere.
     case AST_Decl::NT_interface:
     case AST_Decl::NT_component:
     case AST_Decl::NT_eventtype:
     case AST_Decl::NT_valuetype:
-    case AST_Decl::NT_connector:
-      i = AST_Interface::narrow_from_decl (prev_decl);
-      i_fwd = (i == 0 ? 0 : i->fwd_decl ());
-      return (!s_eq || i_fwd != 0);
-    /// For factories, exceptions, constants and types, even a
+      return true;
+    /// For connectors, factories, exceptions, constants and types, even a
     /// redef in a derived interface type is ok. Checking for
     /// unequal scopes covers boxed valuetypes as well.
+    case AST_Decl::NT_connector:
     case AST_Decl::NT_valuebox:
     case AST_Decl::NT_except:
     case AST_Decl::NT_typedef:
@@ -900,9 +898,9 @@ FE_Utils::can_be_redefined (AST_Decl *prev_decl,
     case AST_Decl::NT_type:
     case AST_Decl::NT_enum:
     case AST_Decl::NT_enum_val:
-    {
-      return !s_eq;
-    }
+      {
+        return !s_eq;
+      }
     /// What's left are the case from the previous switch statement.
     /// Same rule applies - no overrides or redefs, ever.
     default:

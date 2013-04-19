@@ -25,17 +25,17 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)ACE_HTBP.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
-  HTBP_Channel.cpp \
-  HTBP_Filter.cpp \
-  HTBP_Inside_Squid_Filter.cpp \
-  HTBP_Stream.cpp \
-  HTBP_Addr.cpp \
-  HTBP_Outside_Squid_Filter.cpp \
   HTBP_Notifier.cpp \
   HTBP_ID_Requestor.cpp \
-  HTBP_Filter_Factory.cpp \
   HTBP_Session.cpp \
-  HTBP_Environment.cpp
+  HTBP_Filter_Factory.cpp \
+  HTBP_Environment.cpp \
+  HTBP_Stream.cpp \
+  HTBP_Channel.cpp \
+  HTBP_Outside_Squid_Filter.cpp \
+  HTBP_Inside_Squid_Filter.cpp \
+  HTBP_Filter.cpp \
+  HTBP_Addr.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -244,8 +244,8 @@ endif
 #HTBP.mpc
 #
 #inline_files:
-#HTBP_Session.inl
 #HTBP_Outside_Squid_Filter.inl
+#HTBP_Session.inl
 #HTBP_Filter.inl
 #HTBP_Channel.inl
 #HTBP_Inside_Squid_Filter.inl
@@ -253,33 +253,33 @@ endif
 #header_files:
 #HTBP_Filter_Factory.h
 #HTBP_ID_Requestor.h
-#HTBP_Session.h
 #HTBP_Outside_Squid_Filter.h
 #HTBP_Stream.h
-#HTBP_Notifier.h
+#HTBP_Session.h
 #HTBP_Filter.h
-#HTBP_Environment.h
+#HTBP_Notifier.h
 #HTBP_Addr.h
+#HTBP_Environment.h
 #HTBP_Channel.h
 #HTBP_Inside_Squid_Filter.h
-#HTBP_Export.h
 #HTBP_Macros.h
+#HTBP_Export.h
 #
 #pkgconfig_files:
 #ACE_HTBP.pc.in
 #
 #source_files:
-#HTBP_Channel.cpp
-#HTBP_Filter.cpp
-#HTBP_Inside_Squid_Filter.cpp
-#HTBP_Stream.cpp
-#HTBP_Addr.cpp
-#HTBP_Outside_Squid_Filter.cpp
 #HTBP_Notifier.cpp
 #HTBP_ID_Requestor.cpp
-#HTBP_Filter_Factory.cpp
 #HTBP_Session.cpp
+#HTBP_Filter_Factory.cpp
 #HTBP_Environment.cpp
+#HTBP_Stream.cpp
+#HTBP_Channel.cpp
+#HTBP_Outside_Squid_Filter.cpp
+#HTBP_Inside_Squid_Filter.cpp
+#HTBP_Filter.cpp
+#HTBP_Addr.cpp
 #
 #lib_output:
 #../../../lib ACE_HTBP

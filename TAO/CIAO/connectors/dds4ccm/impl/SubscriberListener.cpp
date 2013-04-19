@@ -1,4 +1,4 @@
-// $Id: SubscriberListener.cpp 95794 2012-05-30 10:48:37Z msmit $
+// $Id: SubscriberListener.cpp 96167 2012-10-01 18:27:37Z johnnyw $
 
 #include "dds4ccm/impl/SubscriberListener.h"
 #include "dds4ccm/impl/logger/Log_Macros.h"
@@ -70,6 +70,13 @@ namespace CIAO
                   this->error_listener_->on_requested_incompatible_qos (reader, status);
                 }
             }
+          catch (const ::CORBA::BAD_INV_ORDER& ex)
+            {
+              DDS4CCM_PRINT_DEBUG_CORBA_EXCEPTION (
+                                      DDS4CCM_LOG_LEVEL_ACTION,
+                                      ex,
+                                      "SubscriberListener::on_requested_incompatible_qos");
+            }
           catch (const ::CORBA::Exception& ex)
             {
               DDS4CCM_PRINT_CORBA_EXCEPTION (
@@ -121,6 +128,13 @@ namespace CIAO
                 {
                   this->error_listener_->on_unexpected_status (entity, status_kind);
                 }
+            }
+          catch (const ::CORBA::BAD_INV_ORDER& ex)
+            {
+              DDS4CCM_PRINT_DEBUG_CORBA_EXCEPTION (
+                                      DDS4CCM_LOG_LEVEL_ACTION,
+                                      ex,
+                                      "SubscriberListener::on_unexpected_status");
             }
           catch (const ::CORBA::Exception& ex)
             {
@@ -204,6 +218,13 @@ namespace CIAO
                 {
                   this->error_listener_->on_sample_rejected (reader, status);
                 }
+            }
+          catch (const ::CORBA::BAD_INV_ORDER& ex)
+            {
+              DDS4CCM_PRINT_DEBUG_CORBA_EXCEPTION (
+                                      DDS4CCM_LOG_LEVEL_ACTION,
+                                      ex,
+                                      "SubscriberListener::on_sample_rejected");
             }
           catch (const ::CORBA::Exception& ex)
             {

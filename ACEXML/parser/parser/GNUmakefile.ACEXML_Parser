@@ -25,10 +25,10 @@ SHLIB_UNCHECKED  = $(LIB_PREFIX)ACEXML_Parser.$(SOEXT)
 SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
-  Parser.cpp \
   ParserInternals.cpp \
-  ParserContext.cpp \
-  Entity_Manager.cpp
+  Parser.cpp \
+  Entity_Manager.cpp \
+  ParserContext.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -249,10 +249,10 @@ endif
 #ACEXML_Parser.pc.in
 #
 #source_files:
-#Parser.cpp
 #ParserInternals.cpp
-#ParserContext.cpp
+#Parser.cpp
 #Entity_Manager.cpp
+#ParserContext.cpp
 #
 #lib_output:
 #../../../lib ACEXML_Parser

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 8 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE
+# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 10 -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: SV_Message_Queues_MQ_Client SV_Message_Queues_MQ_Server SV_Message_Queues_TMQ_Client SV_Message_Queues_TMQ_Server SV_Semaphores_1 SV_Semaphores_2 SV_Shared_Memory-target
+all: SV_Message_Queues_MQ_Client SV_Message_Queues_MQ_Server SV_Message_Queues_TMQ_Client SV_Message_Queues_TMQ_Server SV_Semaphores_1 SV_Semaphores_2
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -31,7 +31,6 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd SV_Message_Queues && $(MAKE) -f GNUmakefile.SV_Message_Queues_TMQ_Server $(@)
 	$(KEEP_GOING)@cd SV_Semaphores && $(MAKE) -f GNUmakefile.SV_Semaphores_1 $(@)
 	$(KEEP_GOING)@cd SV_Semaphores && $(MAKE) -f GNUmakefile.SV_Semaphores_2 $(@)
-	$(KEEP_GOING)@cd SV_Shared_Memory && $(MAKE) -f GNUmakefile.SV_Shared_Memory $(@)
 
 .PHONY: SV_Message_Queues_MQ_Client
 SV_Message_Queues_MQ_Client:
@@ -57,10 +56,6 @@ SV_Semaphores_1:
 SV_Semaphores_2:
 	$(KEEP_GOING)@cd SV_Semaphores && $(MAKE) -f GNUmakefile.SV_Semaphores_2 all
 
-.PHONY: SV_Shared_Memory-target
-SV_Shared_Memory-target:
-	$(KEEP_GOING)@cd SV_Shared_Memory && $(MAKE) -f GNUmakefile.SV_Shared_Memory all
-
 project_name_list:
 	@echo SV_Message_Queues_MQ_Client
 	@echo SV_Message_Queues_MQ_Server
@@ -68,4 +63,3 @@ project_name_list:
 	@echo SV_Message_Queues_TMQ_Server
 	@echo SV_Semaphores_1
 	@echo SV_Semaphores_2
-	@echo SV_Shared_Memory-target

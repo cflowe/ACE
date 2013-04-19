@@ -1,4 +1,4 @@
-# $Id: valgrind.supp 96084 2012-08-20 18:07:57Z johnnyw $
+# $Id: valgrind.supp 96154 2012-09-24 12:57:05Z johnnyw $
 
 {
    <Suppress all the leaks in cc1plus>
@@ -51,7 +51,7 @@
 {
    <cleanup load>
    Memcheck:Leak
-   fun:*
+   ...
    fun:*ACE_Log_Msg*close*
 }
 

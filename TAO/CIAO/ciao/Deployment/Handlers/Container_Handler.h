@@ -1,6 +1,6 @@
 
 // -*- C++ -*-
-// $Id: Container_Handler.h 92763 2010-12-01 10:27:48Z johnnyw $
+// $Id: Container_Handler.h 96155 2012-09-25 18:01:20Z johnnyw $
 
 /**
  * @file Container_Handler.h
@@ -14,7 +14,7 @@
 
 #include "tao/ORB.h"
 #include "tao/PortableServer/POAC.h"
-#include "dance/DAnCE_LocalityManagerS.h"
+#include "dance/DAnCE_LocalityManagerC.h"
 #include "dance/DAnCE_Utility.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)

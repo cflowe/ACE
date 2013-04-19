@@ -3,7 +3,7 @@
 /**
  *  @file    including.idl
  *
- *  $Id: including.idl 95729 2012-05-03 12:01:09Z parsons $
+ *  $Id: including.idl 96121 2012-08-30 19:28:49Z parsons $
  *
  *  This file contains examples of IDL code that has
  *  caused problems in the past for the TAO IDL
@@ -14,7 +14,6 @@
  *  @author Jeff Parsons <parsons@cs.wustl.edu> and TAO users.
  */
 //=============================================================================
-
 
 #ifndef IDL_TEST_INCLUDING_IDL
 #define IDL_TEST_INCLUDING_IDL
@@ -114,6 +113,13 @@ module RootModule
       };
     };
   };
+};
+
+interface AAA;
+
+interface B
+{
+  typedef AAA::my_long_type my_b_long;
 };
 
 #endif /* IDL_TEST_INCLUDING_IDL */

@@ -1,17 +1,17 @@
-$Id: README 94586 2011-10-05 13:37:38Z johnnyw $
+$Id: README 96173 2012-10-03 08:25:43Z johnnyw $
 
 The following TAO applications test and illustate various Object
 By Value (OBV or valuetypes) functionality and their usage scenarios.
 
-        . Any
+. Any
 
-                The example tests and shows insertion/extraction/passing
-		of valuetypes inside CORBA Any type.
+  The example tests and shows insertion/extraction/passing
+  of valuetypes inside CORBA Any type.
 
-	. Factory
+. Factory
 
-	        The example tests OBV factory construct.
+  The example tests OBV factory construct.
 
-        . Forward
+. Forward
 
-                The example tests forward declared valuetypes.
+  The example tests forward declared valuetypes.

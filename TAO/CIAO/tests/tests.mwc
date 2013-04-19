@@ -1,9 +1,0 @@
-// -*- MPC -*-
-// $Id: tests.mwc 68096 2005-09-02 20:04:50Z wotte $
-
-workspace {
-        exclude {
-                RTCCM
-        }
-
-}

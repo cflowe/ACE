@@ -7,34 +7,34 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /tmp/DOC_ROOT/stage-3715/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-3715/ACE_wrappers/TAO/DAnCE -workers 8 -name_modifier "*_vc9"
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Base_Receiver_exec", "Hello_Base_Receiver_exec_vc9.vcproj", "{C200D78D-FECA-1BAD-E025-C930CF8C9102}"
+# /tmp/DOC_ROOT/stage-2947/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers -relative TAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO -relative CIAO_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/tmp/DOC_ROOT/stage-2947/ACE_wrappers/TAO/DAnCE -workers 10 -name_modifier "*_vc9"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Ex_Base_Hello_Receiver_exec", "Hello_Ex_Base_Hello_Receiver_exec_vc9.vcproj", "{C87E01D8-FECA-1BAD-4A8A-CDD3CF8C9102}"
 	ProjectSection(ProjectDependencies) = postProject
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102} = {F6207F45-FECA-1BAD-E025-C930CF8C9102}
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102} = {D4D0C78D-FECA-1BAD-E025-C930CF8C9102}
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102} = {A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102} = {DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Base_Receiver_idl_gen", "Hello_Base_Receiver_idl_gen_vc9.vcproj", "{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Ex_Base_Hello_Receiver_idl_gen", "Hello_Ex_Base_Hello_Receiver_idl_gen_vc9.vcproj", "{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Base_Receiver_lem_gen", "Hello_Base_Receiver_lem_gen_vc9.vcproj", "{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Ex_Base_Hello_Receiver_l_stub", "Hello_Ex_Base_Hello_Receiver_l_stub_vc9.vcproj", "{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}"
 	ProjectSection(ProjectDependencies) = postProject
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102} = {5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}
+		{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102} = {A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102} = {DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Base_Receiver_lem_stub", "Hello_Base_Receiver_lem_stub_vc9.vcproj", "{F6207F45-FECA-1BAD-E025-C930CF8C9102}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Ex_Base_Hello_Receiver_lem_gen", "Hello_Ex_Base_Hello_Receiver_lem_gen_vc9.vcproj", "{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}"
 	ProjectSection(ProjectDependencies) = postProject
-		{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102} = {4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102} = {D4D0C78D-FECA-1BAD-E025-C930CF8C9102}
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102} = {B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Base_Receiver_stub", "Hello_Base_Receiver_stub_vc9.vcproj", "{D4D0C78D-FECA-1BAD-E025-C930CF8C9102}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Ex_Base_Hello_Receiver_stub", "Hello_Ex_Base_Hello_Receiver_stub_vc9.vcproj", "{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}"
 	ProjectSection(ProjectDependencies) = postProject
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102} = {5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102} = {B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Base_Receiver_svnt", "Hello_Base_Receiver_svnt_vc9.vcproj", "{D4EAA78D-FECA-1BAD-E025-C930CF8C9102}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello_Ex_Base_Hello_Receiver_svnt", "Hello_Ex_Base_Hello_Receiver_svnt_vc9.vcproj", "{DE9471D8-FECA-1BAD-4A8A-CDD3CF8C9102}"
 	ProjectSection(ProjectDependencies) = postProject
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102} = {F6207F45-FECA-1BAD-E025-C930CF8C9102}
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102} = {A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}
 	EndProjectSection
 EndProject
 Global
@@ -45,54 +45,54 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C200D78D-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
-		{C200D78D-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
-		{C200D78D-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
-		{C200D78D-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.Build.0 = Debug|x64
-		{C200D78D-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
-		{C200D78D-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.Build.0 = Release|Win32
-		{C200D78D-FECA-1BAD-E025-C930CF8C9102}.Release|x64.ActiveCfg = Release|x64
-		{C200D78D-FECA-1BAD-E025-C930CF8C9102}.Release|x64.Build.0 = Release|x64
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.Build.0 = Debug|x64
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.Build.0 = Release|Win32
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}.Release|x64.ActiveCfg = Release|x64
-		{5CA6BBF6-FECA-1BAD-E025-C930CF8C9102}.Release|x64.Build.0 = Release|x64
-		{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
-		{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
-		{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
-		{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.Build.0 = Debug|x64
-		{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
-		{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.Build.0 = Release|Win32
-		{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}.Release|x64.ActiveCfg = Release|x64
-		{4CA6BBA7-FECA-1BAD-E025-C930CF8C9102}.Release|x64.Build.0 = Release|x64
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.Build.0 = Debug|x64
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.Build.0 = Release|Win32
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102}.Release|x64.ActiveCfg = Release|x64
-		{F6207F45-FECA-1BAD-E025-C930CF8C9102}.Release|x64.Build.0 = Release|x64
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.Build.0 = Debug|x64
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.Build.0 = Release|Win32
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102}.Release|x64.ActiveCfg = Release|x64
-		{D4D0C78D-FECA-1BAD-E025-C930CF8C9102}.Release|x64.Build.0 = Release|x64
-		{D4EAA78D-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
-		{D4EAA78D-FECA-1BAD-E025-C930CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
-		{D4EAA78D-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
-		{D4EAA78D-FECA-1BAD-E025-C930CF8C9102}.Debug|x64.Build.0 = Debug|x64
-		{D4EAA78D-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
-		{D4EAA78D-FECA-1BAD-E025-C930CF8C9102}.Release|Win32.Build.0 = Release|Win32
-		{D4EAA78D-FECA-1BAD-E025-C930CF8C9102}.Release|x64.ActiveCfg = Release|x64
-		{D4EAA78D-FECA-1BAD-E025-C930CF8C9102}.Release|x64.Build.0 = Release|x64
+		{C87E01D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C87E01D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
+		{C87E01D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
+		{C87E01D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.Build.0 = Debug|x64
+		{C87E01D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
+		{C87E01D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.Build.0 = Release|Win32
+		{C87E01D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.ActiveCfg = Release|x64
+		{C87E01D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.Build.0 = Release|x64
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.Build.0 = Debug|x64
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.Build.0 = Release|Win32
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.ActiveCfg = Release|x64
+		{B1C3EB51-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.Build.0 = Release|x64
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.Build.0 = Debug|x64
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.Build.0 = Release|Win32
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.ActiveCfg = Release|x64
+		{A42A4EE0-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.Build.0 = Release|x64
+		{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
+		{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
+		{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.Build.0 = Debug|x64
+		{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
+		{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.Build.0 = Release|Win32
+		{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.ActiveCfg = Release|x64
+		{A1C3EB00-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.Build.0 = Release|x64
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.Build.0 = Debug|x64
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.Build.0 = Release|Win32
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.ActiveCfg = Release|x64
+		{DEAE11D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.Build.0 = Release|x64
+		{DE9471D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DE9471D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|Win32.Build.0 = Debug|Win32
+		{DE9471D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.ActiveCfg = Debug|x64
+		{DE9471D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Debug|x64.Build.0 = Debug|x64
+		{DE9471D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.ActiveCfg = Release|Win32
+		{DE9471D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|Win32.Build.0 = Release|Win32
+		{DE9471D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.ActiveCfg = Release|x64
+		{DE9471D8-FECA-1BAD-4A8A-CDD3CF8C9102}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

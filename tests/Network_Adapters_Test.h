@@ -4,7 +4,7 @@
 /**
  *  @file    Network_Adapters_Test.h
  *
- *  $Id: Network_Adapters_Test.h 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Network_Adapters_Test.h 96184 2012-10-10 22:50:29Z shuston $
  *
  *  Definitions for Network_Adapters_Test.cpp.
  *
@@ -214,6 +214,8 @@ private:
 
   // Table to place here pointers to all tasks in the process.
   ACE_Event_Handler * handlers_to_stop_[HANDLERS_TO_STOP_TABLE_SIZE];
+
+  ACE_Sig_Set registered_signals_;
 };
 
 

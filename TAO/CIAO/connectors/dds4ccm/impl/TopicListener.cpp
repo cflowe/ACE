@@ -1,4 +1,4 @@
-// $Id: TopicListener.cpp 93117 2011-01-20 12:11:28Z mcorino $
+// $Id: TopicListener.cpp 96167 2012-10-01 18:27:37Z johnnyw $
 
 #include "dds4ccm/impl/TopicListener.h"
 #include "dds4ccm/impl/Utils.h"
@@ -61,19 +61,26 @@ namespace CIAO
                   this->error_listener_->on_inconsistent_topic (the_topic, status);
                 }
           }
+          catch (const ::CORBA::BAD_INV_ORDER& ex)
+            {
+              DDS4CCM_PRINT_DEBUG_CORBA_EXCEPTION (
+                                      DDS4CCM_LOG_LEVEL_ACTION,
+                                      ex,
+                                      "TopicListener::on_inconsistent_topic");
+            }
           catch (const ::CORBA::Exception& ex)
-          {
-              DDS4CCM_PRINT_CORBA_EXCEPTION (
-                  DDS4CCM_LOG_LEVEL_ERROR,
-                  ex,
-                  "TopicListener::on_inconsistent_topic");
-          }
+            {
+                DDS4CCM_PRINT_CORBA_EXCEPTION (
+                    DDS4CCM_LOG_LEVEL_ERROR,
+                    ex,
+                    "TopicListener::on_inconsistent_topic");
+            }
           catch (...)
-          {
-              DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
-                  "TopicListener::on_inconsistent_topic - "
-                  "Unexpected exception caught\n"));
-          }
+            {
+                DDS4CCM_ERROR (DDS4CCM_LOG_LEVEL_ERROR, (LM_ERROR, DDS4CCM_INFO
+                    "TopicListener::on_inconsistent_topic - "
+                    "Unexpected exception caught\n"));
+            }
         }
       else
         {

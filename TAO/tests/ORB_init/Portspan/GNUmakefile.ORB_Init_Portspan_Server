@@ -22,8 +22,8 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 FILES = \
   simpleS.cpp \
   simpleC.cpp \
-  simpleI.cpp \
-  server.cpp
+  server.cpp \
+  simpleI.cpp
 
 
 #----------------------------------------------------------------------------
@@ -204,7 +204,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = simpleS.cpp simpleC.cpp simpleI.cpp server.cpp  
+FORCED_IDL_STUBS = simpleS.cpp simpleC.cpp server.cpp simpleI.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:simpleS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:simpleC.cpp=)
 

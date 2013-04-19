@@ -1,12 +1,12 @@
 // -*- MPC -*-
-// $Id: CIAO_TAO_DAnCE.mwc 95811 2012-06-03 19:03:43Z johnnyw $
+// $Id: CIAO_TAO_DAnCE.mwc 96115 2012-08-29 07:37:18Z johnnyw $
 
 workspace {
   $(ACE_ROOT)/ace
   $(ACE_ROOT)/apps/gperf/src
   $(ACE_ROOT)/apps/JAWS/server
   $(ACE_ROOT)/protocols/ace/INet
-  $(ACE_ROOT)/contrib
+  $(ACE_ROOT)/contrib/minizip
   $(TAO_ROOT)/TAO_IDL
   $(TAO_ROOT)/tao
   $(TAO_ROOT)/orbsvcs/orbsvcs/CosNaming.mpc
