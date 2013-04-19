@@ -1,7 +1,7 @@
 # -*- Makefile -*-
 
 #----------------------------------------------------------------------------
-#  $Id: wrapper_macros.GNU 95440 2012-01-17 05:19:09Z jonesc $
+#  $Id: wrapper_macros.GNU 96328 2012-11-22 09:22:08Z johnnyw $
 #----------------------------------------------------------------------------
 #
 #  ACE supports the following flags.  They can be enabled either on
@@ -78,7 +78,10 @@
 #                   If versioned_so is 1 (enabled), the SOVERSION make
 #                   variable can also be set to specify the version info
 #                   to append to the name - it should have a leading '.' -
-#                   else it defaults to .ACE_MAJOR.ACE_MINOR.ACE_BETA.
+#                   else it defaults to .ACE_MAJOR.ACE_MINOR.ACE_BETA. If 2,
+#                   the version will be appended to the name but *before* the
+#                   $(SOEXT) - it should have a lead '-' - else it defaults to
+#                   -ACE_MAJOR.ACE_MINOR.ACE_BETA.
 #  wfmo             Build with wfmo support (Win32 only)
 #  winregistry      Build with windows registry support (Win32 only)
 #  winnt            Build WinNT-specific projects (Win32 only)

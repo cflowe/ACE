@@ -1,4 +1,4 @@
-// $Id: UIPMC_Mcast_Transport.cpp 96081 2012-08-20 09:27:58Z sma $
+// $Id: UIPMC_Mcast_Transport.cpp 96458 2012-12-05 09:43:05Z sma $
 
 #include "orbsvcs/PortableGroup/UIPMC_Mcast_Transport.h"
 #include "orbsvcs/PortableGroup/miopconf.h"
@@ -418,12 +418,12 @@ TAO_UIPMC_Mcast_Transport::handle_input (
       ACE_Auto_Ptr<TAO_PG::UIPMC_Recv_Packet> owner (complete);
 
       // Create a data block.
-      ACE_Data_Block db (complete->data_length (),
+      ACE_Data_Block db (complete->data_length () + ACE_CDR::MAX_ALIGNMENT,
                          ACE_Message_Block::MB_DATA,
                          0,
                          this->orb_core_->input_cdr_buffer_allocator (),
                          this->orb_core_->locking_strategy (),
-                         ACE_Message_Block::DONT_DELETE,
+                         0,
                          this->orb_core_->input_cdr_dblock_allocator ());
 
       // Create a message block

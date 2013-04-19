@@ -472,7 +472,7 @@
 			Name="Documentation"
 			Filter="">
 			<File
-				RelativePath="README.txt">
+				RelativePath="README">
 				<FileConfiguration
 					Name="Debug|Win32"
 					ExcludedFromBuild="TRUE">

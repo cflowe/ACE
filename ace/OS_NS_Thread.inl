@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: OS_NS_Thread.inl 96237 2012-11-09 08:29:26Z mcorino $
+// $Id: OS_NS_Thread.inl 96519 2012-12-17 10:00:00Z johnnyw $
 
 #include "ace/OS_NS_macros.h"
 // for timespec_t, perhaps move it to os_time.h
@@ -3645,7 +3645,9 @@ ACE_OS::thread_mutex_trylock (ACE_thread_mutex_t *m)
 #   if defined (ACE_HAS_WIN32_TRYLOCK)
   BOOL result = ::TryEnterCriticalSection (m);
   if (result == TRUE)
-    return 0;
+    {
+      return 0;
+    }
   else
     {
       errno = EBUSY;
@@ -3842,5 +3844,16 @@ ACE_Thread_ID::operator!= (const ACE_Thread_ID &rhs) const
 {
   return !(*this == rhs);
 }
+
+#if !defined (ACE_WIN32)
+
+ACE_INLINE
+ACE_event_t::ACE_event_t (void) :
+  name_ (0),
+  eventdata_ (0)
+{
+}
+
+#endif /* !ACE_WIN32 */
 
 ACE_END_VERSIONED_NAMESPACE_DECL

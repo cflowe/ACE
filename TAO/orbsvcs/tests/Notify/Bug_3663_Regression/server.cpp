@@ -1,4 +1,4 @@
-// $Id: server.cpp 95323 2011-12-14 12:37:01Z msmit $
+// $Id: server.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "ace/Service_Config.h"
 #include "orbsvcs/Notify_Service/Notify_Service.h"
@@ -9,18 +9,20 @@
 
 char const * const scpc_orbId = "testDllOrb";
 
-ACE_TCHAR const * const scpc_loadOrb = ACE_DYNAMIC_SERVICE_DIRECTIVE(
+ACE_TCHAR const * const scpc_loadOrb = ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
   "testDllOrb",
   "bug3663",
+  TAO_VERSION,
   "_make_DllORB",
   "testDllOrb -ORBDebugLevel 0 -ORBId testDllOrb -ORBDottedDecimalAddresses 1"
 );
 
 ACE_TCHAR const * const scpc_unloadOrb = ACE_REMOVE_SERVICE_DIRECTIVE("testDllOrb");
 
-ACE_TCHAR const * const scpc_loadNotifyService = ACE_DYNAMIC_SERVICE_DIRECTIVE(
+ACE_TCHAR const * const scpc_loadNotifyService = ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
   "testNotifyService",
   "TAO_Notify_Service",
+  TAO_VERSION,
   "_make_TAO_Notify_Service_Driver_INCORRECT",
   "-NoNameSvc -RunThreads 0"
 );

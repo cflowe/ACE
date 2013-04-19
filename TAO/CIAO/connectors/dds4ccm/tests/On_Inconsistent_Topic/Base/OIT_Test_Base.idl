@@ -1,4 +1,4 @@
-// $Id: OIT_Test_Base.idl 95809 2012-06-03 17:56:00Z johnnyw $
+// $Id: OIT_Test_Base.idl 96498 2012-12-13 08:42:14Z johnnyw $
 
 /**
  * @file OIT_Test_Base.idl
@@ -30,7 +30,7 @@ typedef sequence<OIT_Receiver_Topic> OIT_Receiver_TopicSeq;
 struct OIT_Sender_Topic {
   string symbol; //@key
   long x;
-  long y;
+  short y;
   long z;
 };
 

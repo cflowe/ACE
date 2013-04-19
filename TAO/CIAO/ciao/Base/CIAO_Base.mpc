@@ -1,4 +1,4 @@
-// $Id: CIAO_Base.mpc 94802 2011-10-20 09:46:10Z mcorino $
+// $Id: CIAO_Base.mpc 96578 2012-12-22 15:22:48Z johnnyw $
 
 project(CIAO_Base_IDL) : install, ciaoidldefaults, anytypecode {
   idlflags     += -Wb,stub_export_macro=CIAO_BASE_STUB_Export \
@@ -63,7 +63,7 @@ project(*_install) : install, install_data {
   }
   verbatim(gnuace, postinstall) {
 "	cp ../../rules.ciao.GNU $(INSTALL_PREFIX)/share/ciao"
-"	perl -i -pe's!\\$$[{(]CIAO_ROOT[})]!$(INSTALL_PREFIX)/include!g;' -e'if (/ifndef TAO_IDL3_TO_IDL2\\b/) {print qq!TAO_IDL3_TO_IDL2=$(INSTALL_PREFIX)/share/ciao/bin/tao_idl3_to_idl2\\nTAO_IDL3_TO_IDL2_DEP=\\$$(TAO_IDL3_TO_IDL2)\\$$(EXEEXT)\\n!}' -e'if (/ifndef TAO_IDL3_TO_XMI\\b/) {print qq!TAO_IDL3_TO_XMI=$(INSTALL_PREFIX)/share/ciao/bin/tao_idl3_to_xmi\\nTAO_IDL3_TO_XMI_DEP=\\$$(TAO_IDL3_TO_XMI)\\$$(EXEEXT)\\n!}' $(INSTALL_PREFIX)/share/ciao/rules.ciao.GNU"
+"	perl -i -pe's!\\$$[{(]CIAO_ROOT[})]!$(INSTALL_PREFIX)/include!g;' -e'if (/ifndef TAO_IDL3_TO_IDL2\\b/) {print qq!TAO_IDL3_TO_IDL2=$(INSTALL_PREFIX)/share/ace/bin/tao_idl3_to_idl2\\nTAO_IDL3_TO_IDL2_DEP=\\$$(TAO_IDL3_TO_IDL2)\\$$(EXEEXT)\\n!}' -e'if (/ifndef TAO_IDL3_TO_XMI\\b/) {print qq!TAO_IDL3_TO_XMI=$(INSTALL_PREFIX)/share/ace/bin/tao_idl3_to_xmi\\nTAO_IDL3_TO_XMI_DEP=\\$$(TAO_IDL3_TO_XMI)\\$$(EXEEXT)\\n!}' $(INSTALL_PREFIX)/share/ciao/rules.ciao.GNU"
 "	echo export CIAO_ROOT=$(INSTALL_PREFIX)/share/ciao> $(INSTALL_PREFIX)/share/ciao/ciao-devel.sh"
   }
 }

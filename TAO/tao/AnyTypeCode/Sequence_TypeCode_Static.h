@@ -4,7 +4,7 @@
 /**
  *  @file    Sequence_TypeCode_Static.h
  *
- *  $Id: Sequence_TypeCode_Static.h 76551 2007-01-24 13:42:44Z johnnyw $
+ *  $Id: Sequence_TypeCode_Static.h 96448 2012-12-03 15:28:37Z johnnyw $
  *
  *  Header file for static @c tk_sequence and @c tk_array
  *  @c CORBA::TypeCodes.
@@ -82,15 +82,11 @@ namespace TAO
        * @see @c CORBA::TypeCode
        */
       //@{
-      virtual CORBA::Boolean equal_i (CORBA::TypeCode_ptr tc
-                                      ) const;
-      virtual CORBA::Boolean equivalent_i (CORBA::TypeCode_ptr tc
-                                           ) const;
-      virtual CORBA::TypeCode_ptr get_compact_typecode_i (
-        void) const;
+      virtual CORBA::Boolean equal_i (CORBA::TypeCode_ptr tc) const;
+      virtual CORBA::Boolean equivalent_i (CORBA::TypeCode_ptr tc) const;
+      virtual CORBA::TypeCode_ptr get_compact_typecode_i (void) const;
       virtual CORBA::ULong length_i (void) const;
-      virtual CORBA::TypeCode_ptr content_type_i (
-        void) const;
+      virtual CORBA::TypeCode_ptr content_type_i (        void) const;
 
     private:
 

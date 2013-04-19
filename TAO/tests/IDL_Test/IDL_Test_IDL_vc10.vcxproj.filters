@@ -135,6 +135,9 @@
     <CustomBuild Include="params.idl">
       <Filter>Idl Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="PEMNaming.idl">
+      <Filter>Idl Files</Filter>
+    </CustomBuild>
     <CustomBuild Include="pragma.idl">
       <Filter>Idl Files</Filter>
     </CustomBuild>

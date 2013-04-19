@@ -1,4 +1,4 @@
-// $Id: Any_Impl_T.cpp 90386 2010-06-02 13:52:08Z vzykov $
+// $Id: Any_Impl_T.cpp 96398 2012-11-28 07:33:51Z johnnyw $
 
 #ifndef TAO_ANY_IMPL_T_CPP
 #define TAO_ANY_IMPL_T_CPP
@@ -65,7 +65,7 @@ TAO::Any_Impl_T<T>::extract (const CORBA::Any & any,
       CORBA::TypeCode_ptr any_tc = any._tao_get_typecode ();
       CORBA::Boolean const _tao_equiv = any_tc->equivalent (tc);
 
-      if (_tao_equiv == 0)
+      if (_tao_equiv == false)
         {
           return false;
         }

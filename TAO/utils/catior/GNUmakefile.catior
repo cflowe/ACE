@@ -221,7 +221,7 @@ CUSTOM_INST_TAGS = $(sort  )
 INST_TAGS = exe_output
 INST_LOCATIONS = -o exe_output=bin
 
-DATA_INST_TAGS = 
+DATA_INST_TAGS = installdata_files
 INST_LOCATIONS += $(if $(DATA_INST_TAGS),-x installdata_files -b installdata_files=share$(INST_DIR))
 INST_TAGS := $(INST_TAGS)$(if $(DATA_INST_TAGS), $(DATA_INST_TAGS))
 
@@ -257,6 +257,9 @@ endif
 #BEGIN MPC-Generated Install Info
 #build_files:
 #catior.mpc
+#
+#installdata_files:
+#README.catior tao-utils
 #
 #source_files:
 #catior.cpp

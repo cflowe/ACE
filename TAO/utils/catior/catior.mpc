@@ -1,4 +1,4 @@
-// $Id: catior.mpc 86673 2009-09-09 12:45:11Z elliott_c $
+// $Id: catior.mpc 96382 2012-11-27 10:27:14Z johnnyw $
 
 project(*lib): tao_output, rtcorba, install, messaging, ziop {
   // This library used to be called TAO_Catior.  But due to the 'vxtest'
@@ -23,5 +23,10 @@ project: namingexe, rtcorba, install, messaging, ziop {
   }
 
   Header_Files {
+  }
+
+  InstallData_Files {
+    gendir = tao-utils
+    README.catior
   }
 }

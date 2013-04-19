@@ -1,6 +1,10 @@
 // -*- MPC -*-
-// $Id: Concurrency_Service.mpc 91923 2010-09-22 11:55:24Z msmit $
+// $Id: Concurrency_Service.mpc 96351 2012-11-23 15:28:00Z johnnyw $
 
 project : orbsvcsexe, install, concurrency_serv, naming, utils, svc_utils {
   exename  = tao_cosconcurrency
+  InstallData_Files {
+    gendir = .
+    README
+  }
 }

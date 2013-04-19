@@ -2,7 +2,7 @@
  * @file Utils.h
  * @author William R. Otte <wotte@dre.vanderbilt.edu>
  *
- * $Id: Utils.h 95840 2012-06-07 19:12:50Z johnnyw $
+ * $Id: Utils.h 96544 2012-12-19 08:31:22Z johnnyw $
  *
  * Misc utility classes for DDS4CCM.
  */
@@ -88,6 +88,14 @@ namespace CIAO
           DDS4CCM_RETCODE (DDS::REJECTED_BY_INSTANCES_LIMIT);
           DDS4CCM_RETCODE (DDS::REJECTED_BY_SAMPLES_LIMIT);
           DDS4CCM_RETCODE (DDS::REJECTED_BY_SAMPLES_PER_INSTANCE_LIMIT);
+#if (CIAO_DDS4CCM_NDDS==1)
+          DDS4CCM_RETCODE (DDS::REJECTED_BY_REMOTE_WRITERS_LIMIT);
+          DDS4CCM_RETCODE (DDS::REJECTED_BY_REMOTE_WRITERS_PER_INSTANCE_LIMIT);
+          DDS4CCM_RETCODE (DDS::REJECTED_BY_SAMPLES_PER_REMOTE_WRITER_LIMIT);
+          DDS4CCM_RETCODE (DDS::REJECTED_BY_VIRTUAL_WRITERS_LIMIT); /* RTI DDS 5.0.0 Extension */
+          DDS4CCM_RETCODE (DDS::REJECTED_BY_REMOTE_WRITERS_PER_SAMPLE_LIMIT); /* RTI DDS 5.0.0 Extension */
+          DDS4CCM_RETCODE (DDS::REJECTED_BY_REMOTE_WRITER_SAMPLES_PER_VIRTUAL_QUEUE_LIMIT); /* RTI DDS 5.0.0 Extension */
+#endif
         }
       return "***Unknown enum value, update CIAO::DDS4CCM::translate_rejectedstatuskind()";
 #undef DDS4CCM_RETCODE

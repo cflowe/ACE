@@ -1,4 +1,4 @@
-// $Id: policies.mpc 96171 2012-10-02 17:52:42Z johnnyw $
+// $Id: policies.mpc 96498 2012-12-13 08:42:14Z johnnyw $
 
 project(DDS_Policies_Test) : taoexe, typecode, dds4ccm_base {
   includes += $(CIAO_ROOT)
@@ -34,6 +34,7 @@ project(DDS_Policies_Test) : taoexe, typecode, dds4ccm_base {
     user_data_qos_test.cpp
     rd_lifecycle_qos_test.cpp
     tbf_qos_test.cpp
+    typeconsistencyenforcement_qos_test.cpp
     ownership_strength_qos_test.cpp
     wr_lifecycle_qos_test.cpp
     duration.cpp

@@ -206,6 +206,9 @@
     <ClCompile Include="keywordsS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="loader_constC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="moduleA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -261,6 +264,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="paramsS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PEMNamingC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PEMNamingS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pragmaA.cpp">

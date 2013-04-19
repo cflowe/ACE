@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 88338 2009-12-24 14:22:03Z johnnyw $
+# $Id: run_test.pl 96572 2012-12-21 09:23:06Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -23,7 +23,12 @@ my $CL = $target2->CreateProcess ("client", " -h $host -p $port");
 $target1->DeleteFile ($synchbase);
 $target2->DeleteFile ($synchbase);
 
-$SV->Spawn ();
+$server_status = $SV->Spawn ();
+
+if ($server_status != 0) {
+    print STDERR "ERROR: server returned $server_status\n";
+    exit 1;
+}
 
 if ($target1->WaitForFileTimed ($synchbase,
                                 $target1->ProcessStartWaitInterval()) == -1) {

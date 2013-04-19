@@ -1,4 +1,4 @@
-// $Id: Test.cpp 83901 2008-11-28 11:29:31Z johnnyw $
+// $Id: Test.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "tao/Codeset_Descriptor_Base.h"
 #include "tao/Codeset_Manager_Factory_Base.h"
@@ -152,8 +152,9 @@ testORBInitializer_Registry (int , ACE_TCHAR *[])
   if (oir == 0)
     {
       one->process_directive (
-        ACE_DYNAMIC_SERVICE_DIRECTIVE("ORBInitializer_Registry",
+        ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE("ORBInitializer_Registry",
                                       "TAO_PI",
+                                      TAO_VERSION,
                                       "_make_ORBInitializer_Registry",
                                       ""));
       oir =
@@ -251,8 +252,9 @@ testORBInitializer_Registry (int , ACE_TCHAR *[])
               " (although ORBInitializer_Registry already did it) ...\n"));
 
   one->process_directive
-    (ACE_DYNAMIC_SERVICE_DIRECTIVE("PolicyFactory_Loader",
+    (ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE("PolicyFactory_Loader",
                                    "TAO_PI",
+                                   TAO_VERSION,
                                    "_make_TAO_PolicyFactory_Loader",
                                    ""));
 
@@ -291,8 +293,9 @@ testServiceDependency (int , ACE_TCHAR *[])
     ACE_Intrusive_Auto_Ptr<ACE_Service_Gestalt_Test> one (new ACE_Service_Gestalt_Test (10));
 
     int result = one->process_directive
-      (ACE_DYNAMIC_SERVICE_DIRECTIVE("TAO_Codeset",
+      (ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE("TAO_Codeset",
                                      "TAO_Codeset",
+                                     TAO_VERSION,
                                      "_make_TAO_Codeset_Manager_Factory",
                                      ""));
     if (result != 0)

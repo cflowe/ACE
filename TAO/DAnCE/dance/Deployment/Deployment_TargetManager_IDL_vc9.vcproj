@@ -133,7 +133,7 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_TargetManager.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk -Ssi &quot;Deployment_TargetManager.idl&quot;"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk &quot;Deployment_TargetManager.idl&quot;"
 						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
 						Outputs="Deployment_TargetManager_skel_export.h;Deployment_TargetManager_stub_export.h;Deployment_TargetManagerC.cpp;Deployment_TargetManagerC.h;Deployment_TargetManagerC.inl;Deployment_TargetManagerS.cpp;Deployment_TargetManagerS.h"/>
 				</FileConfiguration>
@@ -143,7 +143,7 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_TargetManager.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk -Ssi &quot;Deployment_TargetManager.idl&quot;"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk &quot;Deployment_TargetManager.idl&quot;"
 						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
 						Outputs="Deployment_TargetManager_skel_export.h;Deployment_TargetManager_stub_export.h;Deployment_TargetManagerC.cpp;Deployment_TargetManagerC.h;Deployment_TargetManagerC.inl;Deployment_TargetManagerS.cpp;Deployment_TargetManagerS.h"/>
 				</FileConfiguration>
@@ -153,7 +153,7 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_TargetManager.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk -Ssi &quot;Deployment_TargetManager.idl&quot;"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk &quot;Deployment_TargetManager.idl&quot;"
 						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\lib\TAO_IDL_FEd.dll"
 						Outputs="Deployment_TargetManager_skel_export.h;Deployment_TargetManager_stub_export.h;Deployment_TargetManagerC.cpp;Deployment_TargetManagerC.h;Deployment_TargetManagerC.inl;Deployment_TargetManagerS.cpp;Deployment_TargetManagerS.h"/>
 				</FileConfiguration>
@@ -163,7 +163,7 @@
 					<Tool
 						Name="VCCustomBuildTool"
 						Description="Invoking ..\..\..\..\bin\tao_idl on Deployment_TargetManager.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk -Ssi &quot;Deployment_TargetManager.idl&quot;"
+						CommandLine="PATH=%PATH%;..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\.. -I..\.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk &quot;Deployment_TargetManager.idl&quot;"
 						AdditionalDependencies="..\..\..\..\bin\tao_idl.exe;..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\lib\TAO_IDL_FE.dll"
 						Outputs="Deployment_TargetManager_skel_export.h;Deployment_TargetManager_stub_export.h;Deployment_TargetManagerC.cpp;Deployment_TargetManagerC.h;Deployment_TargetManagerC.inl;Deployment_TargetManagerS.cpp;Deployment_TargetManagerS.h"/>
 				</FileConfiguration>

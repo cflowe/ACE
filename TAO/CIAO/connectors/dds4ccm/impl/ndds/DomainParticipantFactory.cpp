@@ -1,4 +1,4 @@
-// $Id: DomainParticipantFactory.cpp 95899 2012-06-19 13:47:45Z johnnyw $
+// $Id: DomainParticipantFactory.cpp 96484 2012-12-09 19:36:30Z johnnyw $
 
 #include "dds4ccm/impl/ndds/DomainParticipantFactory.h"
 #include "dds4ccm/impl/ndds/DomainParticipant.h"
@@ -182,7 +182,10 @@ namespace CIAO
         dynamic_cast < DDS_DomainParticipant_i *>
         (retval.in ());
 
-      typed_dp->set_rti_entity (dds_dp);
+      if (typed_dp)
+        {
+          typed_dp->set_rti_entity (dds_dp);
+        }
 
       return retval._retn ();
     }

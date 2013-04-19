@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Any.cpp 95677 2012-04-03 16:59:01Z parsons $
+// $Id: Any.cpp 96398 2012-11-28 07:33:51Z johnnyw $
 
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl.h"
@@ -464,8 +464,7 @@ operator<<= (CORBA::Any &any, CORBA::TypeCode_ptr * tc)
       any,
       CORBA::TypeCode::_tao_any_destructor,
       CORBA::_tc_TypeCode,
-      *tc
-    );
+      *tc);
 }
 
 // Insertion of CORBA object - copying.
@@ -744,8 +743,7 @@ operator>>= (const CORBA::Any &any, CORBA::TypeCode_ptr &tc)
       any,
       CORBA::TypeCode::_tao_any_destructor,
       CORBA::_tc_TypeCode,
-      tc
-    );
+      tc);
 }
 
 CORBA::Boolean

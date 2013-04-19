@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Any_Basic_Impl.cpp 95761 2012-05-15 18:23:04Z johnnyw $
+// $Id: Any_Basic_Impl.cpp 96398 2012-11-28 07:33:51Z johnnyw $
 
 #include "tao/AnyTypeCode/Any_Basic_Impl.h"
 #include "tao/AnyTypeCode/Any_Unknown_IDL_Type.h"
@@ -92,8 +92,7 @@ namespace TAO
     try
       {
         CORBA::TypeCode_ptr any_tc = any._tao_get_typecode ();
-        CORBA::Boolean const _tao_equiv =
-          any_tc->equivalent (tc);
+        CORBA::Boolean const _tao_equiv = any_tc->equivalent (tc);
 
         if (!_tao_equiv)
           {

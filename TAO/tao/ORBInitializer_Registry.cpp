@@ -1,4 +1,4 @@
-// $Id: ORBInitializer_Registry.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: ORBInitializer_Registry.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "tao/ORBInitializer_Registry.h"
 #include "tao/ORBInitializer_Registry_Adapter.h"
@@ -47,8 +47,9 @@ namespace PortableInterceptor
     if (orbinitializer_registry_ == 0)
       {
         ACE_Service_Config::process_directive (
-          ACE_DYNAMIC_SERVICE_DIRECTIVE("ORBInitializer_Registry",
+          ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE("ORBInitializer_Registry",
                                         "TAO_PI",
+                                        TAO_VERSION,
                                         "_make_ORBInitializer_Registry",
                                         ""));
         orbinitializer_registry_ =

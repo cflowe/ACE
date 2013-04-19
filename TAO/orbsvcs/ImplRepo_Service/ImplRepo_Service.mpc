@@ -1,4 +1,4 @@
-// $Id: ImplRepo_Service.mpc 94802 2011-10-20 09:46:10Z mcorino $
+// $Id: ImplRepo_Service.mpc 96379 2012-11-27 09:54:35Z johnnyw $
 
 project(ImR_Activator_IDL) : orbsvcslib, orbsvcs_output, conv_lib, portableserver, imr_client, tao_versioning_idl_defaults {
   sharedname = TAO_ImR_Activator_IDL
@@ -91,7 +91,7 @@ project(ImR_Locator) : orbsvcslib, orbsvcs_output, conv_lib, avoids_minimum_corb
   }
 }
 
-project(ImR_Locator_Service) : orbsvcsexe, install_bin, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, iortable, messaging, acexml ,svc_utils, pi_server, imr_client {
+project(ImR_Locator_Service) : orbsvcsexe, install, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, iortable, messaging, acexml ,svc_utils, pi_server, imr_client {
   exename  = tao_imr_locator
   after   += ImR_Locator ImR_Activator_IDL ImR_Locator_IDL
   libs    += TAO_ImR_Locator TAO_ImR_Activator_IDL TAO_ImR_Locator_IDL
@@ -117,7 +117,7 @@ project(ImR_Locator_Service) : orbsvcsexe, install_bin, avoids_minimum_corba, av
 }
 
 
-project(ImR_Activator_Service) : orbsvcsexe, install_bin, acexml, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, messaging, svc_utils, imr_client {
+project(ImR_Activator_Service) : orbsvcsexe, install, acexml, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, messaging, svc_utils, imr_client {
   exename  = tao_imr_activator
   after   += ImR_Activator ImR_Activator_IDL ImR_Locator_IDL
   libs    += TAO_ImR_Activator TAO_ImR_Activator_IDL TAO_ImR_Locator_IDL
@@ -130,13 +130,17 @@ project(ImR_Activator_Service) : orbsvcsexe, install_bin, acexml, avoids_minimum
 }
 
 
-project(tao_imr) : orbsvcsexe, install_bin, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, portableserver, imr_client {
+project(tao_imr) : orbsvcsexe, install, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, portableserver, imr_client {
+  install         = $(ACE_ROOT)/bin
   exename  = tao_imr
-  install  = $(ACE_ROOT)/bin
   Source_Files {
     tao_imr.cpp
     tao_imr_i.cpp
   }
   idl_files {
+  }
+  InstallData_Files {
+    gendir = tao-imr
+    README
   }
 }

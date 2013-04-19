@@ -1,11 +1,11 @@
 // -*- MPC -*-
-// $Id: lzo1.mpb 1976 2011-01-03 15:57:25Z johnnyw $
+// $Id: lzo1.mpb 2121 2012-11-20 18:27:52Z johnnyw $
 
 feature(lzo1) {
   // If the include files for lzo1 are not relative to the root (for
   // example, /usr/include/lzo), set the LZO1_INCDIR environment variable.
   expand(LZO1_INCDIR) {
-    LZO1_INCDIR
+    $LZO1_INCDIR
     $(LZO1_ROOT)/include
   }
   includes += $(LZO1_INCDIR)

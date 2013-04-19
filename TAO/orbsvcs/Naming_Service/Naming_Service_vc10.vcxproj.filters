@@ -13,6 +13,9 @@
       <UniqueIdentifier>{A1909F1C-FECA-1BAD-B0D5-2BC16726E1D6}</UniqueIdentifier>
       <Extensions>mpc;mpb;mwc</Extensions>
     </Filter>
+    <Filter Include="Installdata Files">
+      <UniqueIdentifier>{B0B7506A-FECA-1BAD-B0D5-2BC16726E1D6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Documentation">
       <UniqueIdentifier>{B14BBA74-FECA-1BAD-B0D5-2BC16726E1D6}</UniqueIdentifier>
     </Filter>
@@ -33,6 +36,11 @@
   <ItemGroup>
     <None Include="Naming_Service.mpc">
       <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README">
+      <Filter>Installdata Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

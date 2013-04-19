@@ -36,7 +36,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="README.txt">
+    <CustomBuild Include="README">
       <Filter>Documentation</Filter>
     </CustomBuild>
   </ItemGroup>

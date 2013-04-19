@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_rtems.x_g++.GNU 93405 2011-02-17 19:30:42Z olli $
+# $Id: platform_rtems.x_g++.GNU 96548 2012-12-19 14:46:42Z johnnyw $
 
 # RTEMS 4.6.6 and later with GNU g++.
 
@@ -15,7 +15,7 @@ rwho = 0
 
 ifneq (,$(HOST_ROOT))
   TAO_IDL = $(HOST_ROOT)/bin/tao_idl
-  TAO_IDL3_TO_IDL2 = $(HOST_ROOT)/TAO/CIAO/bin/tao_idl3_to_idl2
+  TAO_IDL3_TO_IDL2 = $(HOST_ROOT)/bin/tao_idl3_to_idl2
   TAO_IDL_DEP = $(TAO_IDL)
   TAO_IDL3_TO_IDL2_DEP = $(TAO_IDL3_TO_IDL2)
 endif

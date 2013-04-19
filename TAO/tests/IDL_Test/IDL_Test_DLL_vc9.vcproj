@@ -548,6 +548,9 @@
 				RelativePath="keywordsS.cpp">
 			</File>
 			<File
+				RelativePath="loader_constC.cpp">
+			</File>
+			<File
 				RelativePath="moduleA.cpp">
 			</File>
 			<File
@@ -603,6 +606,12 @@
 			</File>
 			<File
 				RelativePath="paramsS.cpp">
+			</File>
+			<File
+				RelativePath="PEMNamingC.cpp">
+			</File>
+			<File
+				RelativePath="PEMNamingS.cpp">
 			</File>
 			<File
 				RelativePath="pragmaA.cpp">

@@ -393,6 +393,8 @@
     </ClCompile>
     <ClCompile Include="keywordsS.cpp">
     </ClCompile>
+    <ClCompile Include="loader_constC.cpp">
+    </ClCompile>
     <ClCompile Include="moduleA.cpp">
     </ClCompile>
     <ClCompile Include="moduleC.cpp">
@@ -430,6 +432,10 @@
     <ClCompile Include="paramsC.cpp">
     </ClCompile>
     <ClCompile Include="paramsS.cpp">
+    </ClCompile>
+    <ClCompile Include="PEMNamingC.cpp">
+    </ClCompile>
+    <ClCompile Include="PEMNamingS.cpp">
     </ClCompile>
     <ClCompile Include="pragmaA.cpp">
     </ClCompile>

@@ -1,6 +1,10 @@
 // -*- MPC -*-
-// $Id: CosEvent_Service.mpc 91904 2010-09-22 09:14:05Z msmit $
+// $Id: CosEvent_Service.mpc 96351 2012-11-23 15:28:00Z johnnyw $
 
 project : orbsvcsexe, install, naming, event_serv, svc_utils, iortable, messaging_optional, portableserver {
   exename  = tao_cosevent
+  InstallData_Files {
+    gendir = .
+    README
+  }
 }

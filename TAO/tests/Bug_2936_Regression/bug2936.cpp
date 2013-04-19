@@ -1,4 +1,4 @@
-// $Id: bug2936.cpp 94112 2011-05-27 14:36:57Z msmit $
+// $Id: bug2936.cpp 96398 2012-11-28 07:33:51Z johnnyw $
 
 #include "ace/Service_Config.h"
 #include "ace/Log_Msg.h"

@@ -1,4 +1,4 @@
-// $Id: PolicyList_Destroyer.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: PolicyList_Destroyer.cpp 96303 2012-11-20 19:33:16Z johnnyw $
 
 #include "tao/Utils/PolicyList_Destroyer.h"
 
@@ -10,24 +10,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO::Utils::PolicyList_Destroyer::~PolicyList_Destroyer() throw ()
 {
-
   for (CORBA::ULong i = 0; i != length(); ++i)
     {
       CORBA::Policy_ptr policy = (*this)[i];
-      if (CORBA::is_nil (policy))
+      if (!CORBA::is_nil (policy))
         {
-          continue;
+          try
+            {
+              policy->destroy ();
+              (*this)[i] = CORBA::Policy::_nil();
+            }
+          catch (...)
+            {
+            }
         }
-
-      try
-        {
-          policy->destroy ();
-        }
-      catch (...)
-        {
-        }
-
-      (*this)[i] = CORBA::Policy::_nil();
     }
 }
 

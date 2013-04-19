@@ -1,4 +1,4 @@
-// $Id: server.cpp 95766 2012-05-16 10:49:34Z johnnyw $
+// $Id: server.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "ace/Service_Config.h"
 #include "orbsvcs/Notify_Service/Notify_Service.h"
@@ -13,18 +13,20 @@
 
 char const * const scpc_orbId = "testDllOrb";
 
-ACE_TCHAR const * const scpc_loadOrb = ACE_DYNAMIC_SERVICE_DIRECTIVE(
+ACE_TCHAR const * const scpc_loadOrb = ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
   "testDllOrb",
   "bug3688",
+  TAO_VERSION,
   "_make_DllORB",
   "testDllOrb -ORBDebugLevel 0 -ORBId testDllOrb -ORBDottedDecimalAddresses 1 -ORBInitRef NameService=file://naming.ior"
 );
 
 ACE_TCHAR const * const scpc_unloadOrb = ACE_REMOVE_SERVICE_DIRECTIVE("testDllOrb");
 
-ACE_TCHAR const * const scpc_loadNameService = ACE_DYNAMIC_SERVICE_DIRECTIVE(
+ACE_TCHAR const * const scpc_loadNameService = ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
   "testNamingService",
   "TAO_CosNaming_Serv",
+  TAO_VERSION,
   "_make_TAO_Naming_Loader",
   "testNameService testNameService -ORBId testDllOrb -m 0 -o naming.ior"
 );
@@ -32,9 +34,10 @@ ACE_TCHAR const * const scpc_loadNameService = ACE_DYNAMIC_SERVICE_DIRECTIVE(
 ACE_TCHAR const * const scpc_unloadNameService = ACE_REMOVE_SERVICE_DIRECTIVE("testNamingService");
 
 
-ACE_TCHAR const * const scpc_loadNotifyService = ACE_DYNAMIC_SERVICE_DIRECTIVE(
+ACE_TCHAR const * const scpc_loadNotifyService = ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
   "testNotifyService",
   "TAO_Notify_Service",
+  TAO_VERSION,
   "_make_TAO_Notify_Service_Driver",
   "-Channel -ChannelName Channel1 -ChannelName Channel2 -RunThreads 1 -ORBInitRef NameService=file://naming.ior -IORoutput notify.ior"
 );

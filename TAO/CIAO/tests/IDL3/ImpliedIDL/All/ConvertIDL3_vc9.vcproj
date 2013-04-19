@@ -439,9 +439,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="convert_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -449,9 +449,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="convert_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -459,9 +459,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="convert_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -469,9 +469,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="convert_IDL2.idl"/>
 				</FileConfiguration>
 			</File>
@@ -482,9 +482,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on include.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on include.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="include_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -492,9 +492,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on include.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on include.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="include_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -502,9 +502,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on include.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on include.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="include_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -512,9 +512,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on include.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on include.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="include_IDL2.idl"/>
 				</FileConfiguration>
 			</File>
@@ -525,9 +525,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="keyword_clash_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -535,9 +535,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="keyword_clash_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -545,9 +545,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="keyword_clash_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -555,9 +555,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="keyword_clash_IDL2.idl"/>
 				</FileConfiguration>
 			</File>
@@ -568,9 +568,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="pass_through_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -578,9 +578,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="pass_through_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -588,9 +588,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="pass_through_IDL2.idl"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -598,9 +598,9 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl"
-						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;"
-						AdditionalDependencies="..\..\..\..\bin\tao_idl3_to_idl2.exe"
+						Description="Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl"
+						CommandLine="PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;"
+						AdditionalDependencies="..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe"
 						Outputs="pass_through_IDL2.idl"/>
 				</FileConfiguration>
 			</File>

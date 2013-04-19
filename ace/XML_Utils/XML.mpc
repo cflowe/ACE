@@ -1,4 +1,4 @@
-// $Id: XML.mpc 95830 2012-06-06 10:27:57Z johnnyw $
+// $Id: XML.mpc 96302 2012-11-20 19:11:28Z johnnyw $
 
 project (ACE_XML_Utils) : install, acelib, xerces, ace_output {
   sharedname   += ACE_XML_Utils
@@ -36,5 +36,9 @@ project (ACE_XML_Utils) : install, acelib, xerces, ace_output {
     XercesString.cpp
     XML_Schema_Resolver.cpp
     XML_Typedefs.cpp
+  }
+
+  Pkgconfig_Files {
+    ACE_XML_Utils.pc.in
   }
 }

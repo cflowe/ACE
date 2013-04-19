@@ -1,4 +1,4 @@
-// $Id: NodeApplication_Impl.cpp 95745 2012-05-13 12:51:04Z johnnyw $
+// $Id: NodeApplication_Impl.cpp 96538 2012-12-18 10:17:56Z johnnyw $
 #include "NodeApplication_Impl.h"
 
 #include "ace/OS_Memory.h"
@@ -333,8 +333,7 @@ NodeApplication_Impl::finishLaunch (const ::Deployment::Connections & providedRe
 
       try
         {
-          i->second->finishLaunch (providedReference,
-                                   start);
+          i->second->finishLaunch (providedReference, start);
         }
       catch (CORBA::Exception &ex)
         {

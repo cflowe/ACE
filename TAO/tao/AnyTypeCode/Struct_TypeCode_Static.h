@@ -4,7 +4,7 @@
 /**
  *  @file    Struct_TypeCode_Static.h
  *
- *  $Id: Struct_TypeCode_Static.h 76551 2007-01-24 13:42:44Z johnnyw $
+ *  $Id: Struct_TypeCode_Static.h 96448 2012-12-03 15:28:37Z johnnyw $
  *
  *  Header file for static @c tk_struct and @c tk_except
  *  @c CORBA::TypeCodes.
@@ -95,19 +95,14 @@ namespace TAO
        * @see @c CORBA::TypeCode
        */
       //@{
-      virtual CORBA::Boolean equal_i (CORBA::TypeCode_ptr tc
-                                      ) const;
-      virtual CORBA::Boolean equivalent_i (CORBA::TypeCode_ptr tc
-                                           ) const;
-      virtual CORBA::TypeCode_ptr get_compact_typecode_i (
-        void) const;
+      virtual CORBA::Boolean equal_i (CORBA::TypeCode_ptr tc) const;
+      virtual CORBA::Boolean equivalent_i (CORBA::TypeCode_ptr tc) const;
+      virtual CORBA::TypeCode_ptr get_compact_typecode_i (void) const;
       virtual char const * id_i (void) const;
       virtual char const * name_i (void) const;
       virtual CORBA::ULong member_count_i (void) const;
-      virtual char const * member_name_i (CORBA::ULong index
-                                          ) const;
-      virtual CORBA::TypeCode_ptr member_type_i (CORBA::ULong index
-                                                 ) const;
+      virtual char const * member_name_i (CORBA::ULong index) const;
+      virtual CORBA::TypeCode_ptr member_type_i (CORBA::ULong index) const;
       //@}
 
     private:

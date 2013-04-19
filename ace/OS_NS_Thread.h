@@ -4,7 +4,7 @@
 /**
  *  @file   OS_NS_Thread.h
  *
- *  $Id: OS_NS_Thread.h 96220 2012-11-06 10:03:41Z mcorino $
+ *  $Id: OS_NS_Thread.h 96255 2012-11-12 10:47:27Z johnnyw $
  *
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  *  @author Jesper S. M|ller<stophph@diku.dk>
@@ -1883,6 +1883,11 @@ class ACE_Export ACE_event_t
   friend int ACE_OS::event_signal(ACE_event_t*);
   friend int ACE_OS::event_pulse(ACE_event_t*);
   friend int ACE_OS::event_reset(ACE_event_t*);
+
+public:
+  /// Constructor initializing all pointer fields to null
+  ACE_event_t (void);
+
 protected:
 
   /// Event name if process shared.

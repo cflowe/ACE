@@ -3,7 +3,7 @@
 /**
  *  @file    be_util.cpp
  *
- *  $Id: be_util.cpp 96034 2012-08-12 19:06:55Z johnnyw $
+ *  $Id: be_util.cpp 96300 2012-11-20 13:39:45Z sma $
  *
  *  Static helper methods used by multiple visitors.
  *
@@ -792,11 +792,6 @@ be_util::usage (void)
       LM_DEBUG,
       ACE_TEXT (" -oN\tWhen -Gex option is used, executor files shouldn't be overwritten ")
       ACE_TEXT ("if they are already in the output directory.\n")
-    ));
-  ACE_DEBUG ((
-      LM_DEBUG,
-      ACE_TEXT (" -si\t\t\tServer's inline file name ending.")
-      ACE_TEXT (" Default is S.inl\n")
     ));
   ACE_DEBUG ((
       LM_DEBUG,

@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: IDL3_TO_XMI.mpc 95872 2012-06-12 17:27:38Z johnnyw $
+// $Id: IDL3_TO_XMI.mpc 96579 2012-12-23 11:44:36Z johnnyw $
 
 project(CIAO_IDL3_TO_XMI_BE) : acelib, install_lib, ciao_output, ace_xml_utils, tao_idl_fe {
   sharedname   = CIAO_IDL3_TO_XMI_BE
@@ -34,7 +34,7 @@ project(CIAO_IDL3_TO_XMI_EXE) : aceexe, install, ciao_output, ace_xml_utils, tao
   exename         = tao_idl3_to_xmi
   libs           += CIAO_IDL3_TO_XMI_BE
   includes       += $(TAO_ROOT) .
-  exeout          = $(CIAO_ROOT)/bin
+  exeout          = $(ACE_ROOT)/bin
 
   // Adding a strict ordering dependency with TAO_IDL_EXE. It appears on some systems, there
   // can be a race between these two projects for tao_idl.cpp, causing some errors.
@@ -64,7 +64,7 @@ project(CIAO_IDL3_TO_XMI_EXE) : aceexe, install, ciao_output, ace_xml_utils, tao
   }
 
   verbatim(gnuace, postinstall) {
-"	@$(MKDIR) $(INSTALL_PREFIX)/share/ciao/bin"
-"	ln -sf $(INSTALL_PREFIX)/bin/tao_idl3_to_xmi $(INSTALL_PREFIX)/share/ciao/bin"
+"	@$(MKDIR) $(INSTALL_PREFIX)/share/ace/bin"
+"	ln -sf $(INSTALL_PREFIX)/bin/tao_idl3_to_xmi $(INSTALL_PREFIX)/share/ace/bin"
   }
 }

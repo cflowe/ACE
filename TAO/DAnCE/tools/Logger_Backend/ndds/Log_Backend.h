@@ -1,4 +1,4 @@
-// $Id: Log_Backend.h 95977 2012-07-26 16:31:57Z johnnyw $
+// $Id: Log_Backend.h 96558 2012-12-20 07:39:52Z johnnyw $
 
 /**
  * @file Log_Backend.h
@@ -10,13 +10,13 @@
 #ifndef DAnCE_LOG_BACKEND_H
 #define DAnCE_LOG_BACKEND_H
 
-#include <string>
-#include <ndds/ndds_cpp.h>
-
 #include "ace/Log_Msg_Backend.h"
 #include "ace/Service_Object.h"
 
 #include "DAnCE_NDDS_Log_Export.h"
+
+#include <string>
+#include <ndds/ndds_cpp.h>
 
 #include "Log_RecordSupport.h"
 #include "Log_RecordPlugin.h"

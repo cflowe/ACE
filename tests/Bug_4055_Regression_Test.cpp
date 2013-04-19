@@ -2,7 +2,7 @@
 /**
  *  @file    Bug_4055_Regression_Test.cpp
  *
- *  $Id: Bug_4055_Regression_Test.cpp 96070 2012-08-17 09:07:16Z mcorino $
+ *  $Id: Bug_4055_Regression_Test.cpp 96255 2012-11-12 10:47:27Z johnnyw $
  *
  *  @author Johnny Willemsen  (jwillemsen@remedy.nl)
  */
@@ -299,11 +299,15 @@ bool test_timer (ACE_Condition_Thread_Mutex& condition_, ACE_Time_Value& waittim
       sys_time.wMinute = ACE_Utils::truncate_cast <WORD> (curdt.minute ());
       sys_time.wSecond = ACE_Utils::truncate_cast <WORD> (curdt.second ());
       sys_time.wMilliseconds = ACE_Utils::truncate_cast <WORD> (curdt.microsec () / 1000);
-      ::SetLocalTime (&sys_time);
+      if (!::SetLocalTime (&sys_time))
 # else
       curts = curtime;
-      ACE_OS::clock_settime (CLOCK_REALTIME, &curts);
+      if (ACE_OS::clock_settime (CLOCK_REALTIME, &curts) != 0)
 # endif
+        {
+          ACE_DEBUG((LM_INFO,
+                      "(%P|%t) Unable to reset OS time. Insufficient privileges or not supported.\n"));
+        }
     }
 
   ACE_DEBUG((LM_INFO,

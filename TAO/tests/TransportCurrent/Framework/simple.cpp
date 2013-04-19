@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: simple.cpp 91493 2010-08-26 13:48:03Z johnnyw $
+// $Id: simple.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "tao/ORB.h"
 #include "tao/Object.h"
@@ -55,8 +55,9 @@ testCurrentLoader (int, char *[])
 
 #if !defined (TAO_AS_STATIC_LIBS)
           int ret = ACE_Service_Config::process_directive
-            (ACE_DYNAMIC_SERVICE_DIRECTIVE("TAO_Transport_Current_Loader",
+            (ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE("TAO_Transport_Current_Loader",
                                            "TAO_Transport_Current",
+                                           TAO_VERSION
                                            "_make_TAO_Transport_Current_Loader",
                                            ""));
           ACE_ASSERT (ret == 0);

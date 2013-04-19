@@ -4,7 +4,7 @@
 /**
  *  @file    Objref_TypeCode.h
  *
- *  $Id: Objref_TypeCode.h 76551 2007-01-24 13:42:44Z johnnyw $
+ *  $Id: Objref_TypeCode.h 96398 2012-11-28 07:33:51Z johnnyw $
  *
  *  Header file for
  *    @c tk_abstract_interface,
@@ -87,12 +87,9 @@ namespace TAO
        * @see @c CORBA::TypeCode
        */
       //@{
-      virtual CORBA::Boolean equal_i (CORBA::TypeCode_ptr tc
-                                      ) const;
-      virtual CORBA::Boolean equivalent_i (CORBA::TypeCode_ptr tc
-                                           ) const;
-      virtual CORBA::TypeCode_ptr get_compact_typecode_i (
-        void) const;
+      virtual CORBA::Boolean equal_i (CORBA::TypeCode_ptr tc) const;
+      virtual CORBA::Boolean equivalent_i (CORBA::TypeCode_ptr tc) const;
+      virtual CORBA::TypeCode_ptr get_compact_typecode_i (void) const;
       virtual char const * id_i (void) const;
       virtual char const * name_i (void) const;
 

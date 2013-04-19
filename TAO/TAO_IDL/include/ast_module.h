@@ -1,5 +1,5 @@
 // This may look like C, but it's really -*- C++ -*-
-// $Id: ast_module.h 92738 2010-11-26 17:51:14Z parsons $
+// $Id: ast_module.h 96358 2012-11-23 19:26:43Z parsons $
 /*
 
 COPYRIGHT
@@ -230,6 +230,12 @@ public:
 
   virtual
   AST_PortType *fe_add_porttype (AST_PortType *pt);
+
+  // Reset the last_in_same_parent_scope_ member to ourself
+  // (called by AST_Root::destroy on the CORBA module containing
+  // the basic types, since it isn't destroyed between processing
+  // multiple IDL files.
+  void reset_last_in_same_parent_scope (void);
 
 private: // Data
   bool pd_has_nested_valuetype_;

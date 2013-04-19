@@ -48,8 +48,8 @@ ACE_SHLIBS = -lCIAO_Container_Base_stub -lCCM_svnt -lTAO_PortableServer -lCCM_se
 TAO_IDL = ../../../../../../bin/tao_idl
 TAO_IDL_DEP = ../../../../../../bin/tao_idl$(EXEEXT)
 TAO_IDLFLAGS = -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I../../../../..$(if $(ARCH), -g $(call ADD_QUOTE,$(call ADD_ARCH,$(ACE_ROOT)/bin/ace_gperf)))
-TAO_IDL3_TO_IDL2 = ../../../../bin/tao_idl3_to_idl2
-TAO_IDL3_TO_IDL2_DEP = ../../../../bin/tao_idl3_to_idl2$(EXEEXT)
+TAO_IDL3_TO_IDL2 = ../../../../../../bin/tao_idl3_to_idl2
+TAO_IDL3_TO_IDL2_DEP = ../../../../../../bin/tao_idl3_to_idl2$(EXEEXT)
 
 PRJ_TYPE = library
 

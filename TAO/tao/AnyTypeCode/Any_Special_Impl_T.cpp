@@ -1,4 +1,4 @@
-// $Id: Any_Special_Impl_T.cpp 77409 2007-02-26 23:48:49Z ossama $
+// $Id: Any_Special_Impl_T.cpp 96398 2012-11-28 07:33:51Z johnnyw $
 
 #ifndef TAO_ANY_SPECIAL_IMPL_T_CPP
 #define TAO_ANY_SPECIAL_IMPL_T_CPP
@@ -85,8 +85,7 @@ TAO::Any_Special_Impl_T<T, from_T, to_T>::extract (const CORBA::Any & any,
     {
       CORBA::TypeCode_ptr any_type = any._tao_get_typecode ();
       CORBA::TypeCode_var unaliased_any_type =
-        TAO::unaliased_typecode (any_type
-                                );
+        TAO::unaliased_typecode (any_type);
 
       CORBA::TCKind const any_kind =
         unaliased_any_type->kind ();
@@ -133,8 +132,7 @@ TAO::Any_Special_Impl_T<T, from_T, to_T>::extract (const CORBA::Any & any,
                       false);
 
       auto_ptr<TAO::Any_Special_Impl_T<T, from_T, to_T> > replacement_safety (
-          replacement
-        );
+          replacement);
 
       // We know this will work since the unencoded case is covered above.
       TAO::Unknown_IDL_Type * const unk =

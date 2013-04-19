@@ -1,9 +1,8 @@
-// $Id: Condition.cpp 93117 2011-01-20 12:11:28Z mcorino $
+// $Id: Condition.cpp 96533 2012-12-17 18:51:39Z johnnyw $
 
 #include "Condition.h"
-
-#include "ndds/ndds_cpp.h"
 #include "dds4ccm/impl/logger/Log_Macros.h"
+#include "ndds/ndds_cpp.h"
 
 namespace CIAO
 {

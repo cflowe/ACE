@@ -12,6 +12,9 @@
     <Filter Include="Test Files">
       <UniqueIdentifier>{4190FD01-FECA-1BAD-AE46-8CF61C4D8CBA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Installdata Files">
+      <UniqueIdentifier>{B0B7506A-FECA-1BAD-AE46-8CF61C4D8CBA}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="nslist.cpp">
@@ -26,6 +29,11 @@
   <ItemGroup>
     <None Include="run_test.pl">
       <Filter>Test Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.nslist">
+      <Filter>Installdata Files</Filter>
     </None>
   </ItemGroup>
 </Project>

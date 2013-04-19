@@ -1,11 +1,11 @@
 // -*- MPC -*-
-// $Id: taoidl3toxmidefaults.mpb 95486 2012-01-23 20:22:44Z johnnyw $
+// $Id: taoidl3toxmidefaults.mpb 96557 2012-12-20 07:14:02Z johnnyw $
 
 project : xerces {
   // Set the idl3_to_xmi compiler and flags as template values
   specific {
-    tao_idl3_to_xmi       = <%quote%>$(CIAO_ROOT)/bin/tao_idl3_to_xmi<%quote%>
-    tao_idl3_to_xmi_dep   = <%quote%>$(CIAO_ROOT)/bin/tao_idl3_to_xmi<%quote%>
+    tao_idl3_to_xmi       = <%quote%>$(ACE_ROOT)/bin/tao_idl3_to_xmi<%quote%>
+    tao_idl3_to_xmi_dep   = <%quote%>$(ACE_ROOT)/bin/tao_idl3_to_xmi<%quote%>
   }
 
   Define_Custom(IDL3TOXMI) {

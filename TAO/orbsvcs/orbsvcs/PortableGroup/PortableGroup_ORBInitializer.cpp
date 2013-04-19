@@ -1,4 +1,4 @@
-// $Id: PortableGroup_ORBInitializer.cpp 91677 2010-09-08 19:18:49Z johnnyw $
+// $Id: PortableGroup_ORBInitializer.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "orbsvcs/PortableGroup/PortableGroup_ORBInitializer.h"
 #include "orbsvcs/PortableGroup/PortableGroup_Request_Dispatcher.h"
@@ -9,8 +9,8 @@
 #include "tao/debug.h"
 
 static const char pg_poa_factory_name[] = "TAO_GOA";
-static const ACE_TCHAR pg_poa_factory_directive[] = ACE_DYNAMIC_SERVICE_DIRECTIVE(
-  "TAO_GOA", "TAO_PortableGroup", "_make_TAO_PG_Object_Adapter_Factory", "");
+static const ACE_TCHAR pg_poa_factory_directive[] = ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
+  "TAO_GOA", "TAO_PortableGroup", TAO_VERSION , "_make_TAO_PG_Object_Adapter_Factory", "");
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

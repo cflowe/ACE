@@ -1,4 +1,4 @@
-// $Id: ast_module.cpp 92834 2010-12-08 15:22:04Z parsons $
+// $Id: ast_module.cpp 96395 2012-11-27 21:51:51Z parsons $
 
 /*
 
@@ -637,3 +637,10 @@ AST_Module::fe_add_porttype (AST_PortType *t)
     AST_PortType::narrow_from_decl (
       this->fe_add_decl (t));
 }
+
+void
+AST_Module::reset_last_in_same_parent_scope (void)
+{
+  this->last_in_same_parent_scope_ = this;
+}
+

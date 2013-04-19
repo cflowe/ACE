@@ -1,11 +1,15 @@
 // -*- MPC -*-
-// $Id: Naming_Service.mpc 91901 2010-09-22 08:54:20Z msmit $
+// $Id: Naming_Service.mpc 96385 2012-11-27 11:24:30Z johnnyw $
 
 project : orbsvcsexe, install, naming_serv, imr_client, svc_utils {
   exename  = tao_cosnaming
   Source_Files {
     Naming_Server.cpp
     Naming_Service.cpp
+  }
+  InstallData_Files {
+    gendir = tao-naming
+    README
   }
 }
 
@@ -16,6 +20,10 @@ project(NT_Naming_Service) : orbsvcsexe, install, naming_serv, svc_utils {
     Naming_Service.cpp
     NT_Naming_Server.cpp
     NT_Naming_Service.cpp
+  }
+  InstallData_Files {
+    gendir = tao-naming
+    README
   }
 }
 

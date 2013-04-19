@@ -145,7 +145,7 @@ else
 .NOTPARALLEL:
 endif
 Deployment_TargetManagerC.inl Deployment_TargetManagerS.h Deployment_TargetManagerC.h Deployment_TargetManager_stub_export.h Deployment_TargetManagerS.cpp Deployment_TargetManagerC.cpp Deployment_TargetManager_skel_export.h: Deployment_TargetManager.idl $(subst $(SPACE),\$(SPACE),$(call ADD_ARCH,$(TAO_IDL_DEP)))
-	$(if $(findstring ",$(TAO_IDL)),$(TAO_IDL),$(call ADD_QUOTE,$(call ADD_ARCH,$(TAO_IDL)))) $(TAO_IDLFLAGS) -I../.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk -Ssi Deployment_TargetManager.idl
+	$(if $(findstring ",$(TAO_IDL)),$(TAO_IDL),$(call ADD_QUOTE,$(call ADD_ARCH,$(TAO_IDL)))) $(TAO_IDLFLAGS) -I../.. -Wb,stub_export_macro=DEPLOYMENT_TARGETMANAGER_STUB_Export -Wb,stub_export_include=Deployment_TargetManager_stub_export.h -Wb,skel_export_macro=DEPLOYMENT_TARGETMANAGER_SKEL_Export -Wb,skel_export_include=Deployment_TargetManager_skel_export.h -Gxhst -Gxhsk Deployment_TargetManager.idl
 
 
 ifneq ($(static_libs_only),1)

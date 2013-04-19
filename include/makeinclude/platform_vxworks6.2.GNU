@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_vxworks6.2.GNU 93393 2011-02-15 20:42:17Z olli $
+# $Id: platform_vxworks6.2.GNU 96548 2012-12-19 14:46:42Z johnnyw $
 # VxWorks 6.2
 
 #### Notes:
@@ -68,7 +68,7 @@ ifneq (,$(HOST_ROOT))
 TAO_IDLFLAGS += -g $(HOST_ROOT)/bin/ace_gperf
 ifeq ("$(WIND_HOST_TYPE)","x86-win32")
   TAO_IDL = $(HOST_ROOT)/bin/tao_idl.exe
-  TAO_IDL3_TO_IDL2 = $(HOST_ROOT)/TAO/CIAO/bin/tao_idl3_to_idl2.exe
+  TAO_IDL3_TO_IDL2 = $(HOST_ROOT)/bin/tao_idl3_to_idl2.exe
 else
   TAO_IDL = $(HOST_ROOT)/bin/tao_idl
   TAO_IDL3_TO_IDL2 = $(HOST_ROOT)/bin/tao_idl3_to_idl2

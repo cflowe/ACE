@@ -1,7 +1,11 @@
 // -*- MPC -*-
-// $Id: Trading_Service.mpc 91912 2010-09-22 09:54:29Z msmit $
+// $Id: Trading_Service.mpc 96386 2012-11-27 11:53:06Z johnnyw $
 
 project : orbsvcsexe, utils, install, naming, trading_serv {
   exename  = tao_costrading
+  InstallData_Files {
+    gendir = tao-trading
+    README
+  }
 }
 

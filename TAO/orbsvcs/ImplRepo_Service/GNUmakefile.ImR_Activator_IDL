@@ -275,7 +275,7 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #documentation_files:
-#README.txt
+#README
 #
 #build_files:
 #ImplRepo_Service.mpc

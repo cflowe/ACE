@@ -9,6 +9,9 @@
       <UniqueIdentifier>{A1909F1C-FECA-1BAD-2F80-8C351C8E0D7C}</UniqueIdentifier>
       <Extensions>mpc;mpb;mwc</Extensions>
     </Filter>
+    <Filter Include="Installdata Files">
+      <UniqueIdentifier>{B0B7506A-FECA-1BAD-2F80-8C351C8E0D7C}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="catior.cpp">
@@ -18,6 +21,11 @@
   <ItemGroup>
     <None Include="catior.mpc">
       <Filter>Build Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.catior">
+      <Filter>Installdata Files</Filter>
     </None>
   </ItemGroup>
 </Project>

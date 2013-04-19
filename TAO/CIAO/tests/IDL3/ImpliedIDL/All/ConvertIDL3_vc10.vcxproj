@@ -304,58 +304,58 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="convert.idl">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">convert_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">convert_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">convert_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;convert.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on convert.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">convert_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="keyword_clash.idl">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">keyword_clash_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">keyword_clash_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">keyword_clash_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;keyword_clash.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on keyword_clash.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">keyword_clash_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="pass_through.idl">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pass_through_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pass_through_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pass_through_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;pass_through.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on pass_through.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pass_through_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -460,22 +460,22 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="include.idl">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\.. -I..\..\..\../ccm -Sm &quot;include.idl&quot; &amp;&amp; ..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl and ..\..\..\..\bin\tao_idl3_to_idl2 on include.idl</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\.. -I..\..\..\../ccm -Sm &quot;include.idl&quot; &amp;&amp; ..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl and ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on include.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">include_IDL2.idl;includeC.h;includeC.inl;includeS.h</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\bin\tao_idl3_to_idl2.exe;..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\.. -I..\..\..\../ccm -Sm &quot;include.idl&quot; &amp;&amp; ..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl and ..\..\..\..\bin\tao_idl3_to_idl2 on include.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe;..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\.. -I..\..\..\../ccm -Sm &quot;include.idl&quot; &amp;&amp; ..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\..\..\bin\tao_idl and ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on include.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">include_IDL2.idl;includeC.h;includeC.inl;includeS.h</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\bin\tao_idl3_to_idl2.exe;..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\.. -I..\..\..\../ccm -Sm &quot;include.idl&quot; &amp;&amp; ..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl and ..\..\..\..\bin\tao_idl3_to_idl2 on include.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe;..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\.. -I..\..\..\../ccm -Sm &quot;include.idl&quot; &amp;&amp; ..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl and ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on include.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">include_IDL2.idl;includeC.h;includeC.inl;includeS.h</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\bin\tao_idl3_to_idl2.exe;..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\.. -I..\..\..\../ccm -Sm &quot;include.idl&quot; &amp;&amp; ..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl and ..\..\..\..\bin\tao_idl3_to_idl2 on include.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe;..\..\..\..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\..\lib;..\..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\..\..\..\.. -DCCM_LW -Gcl -I..\..\..\.. -I..\..\..\../ccm -Sm &quot;include.idl&quot; &amp;&amp; ..\..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\..\.. -I..\..\..\../ccm -I..\..\..\..\.. -I..\..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;include.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\..\..\bin\tao_idl and ..\..\..\..\..\..\bin\tao_idl3_to_idl2 on include.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">include_IDL2.idl;includeC.h;includeC.inl;includeS.h</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\bin\tao_idl3_to_idl2.exe;..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\..\bin\tao_idl.exe;..\..\..\..\..\..\bin\tao_idl3_to_idl2.exe;..\..\..\..\..\..\lib\TAO_IDL_BE.dll;..\..\..\..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

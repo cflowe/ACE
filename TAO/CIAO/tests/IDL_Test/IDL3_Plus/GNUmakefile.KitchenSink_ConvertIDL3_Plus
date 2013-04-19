@@ -20,8 +20,8 @@ FILES = \
 #----------------------------------------------------------------------------
 #       Include macros and targets
 #----------------------------------------------------------------------------
-TAO_IDL3_TO_IDL2 = ../../../bin/tao_idl3_to_idl2
-TAO_IDL3_TO_IDL2_DEP = ../../../bin/tao_idl3_to_idl2$(EXEEXT)
+TAO_IDL3_TO_IDL2 = ../../../../../bin/tao_idl3_to_idl2
+TAO_IDL3_TO_IDL2_DEP = ../../../../../bin/tao_idl3_to_idl2$(EXEEXT)
 
 PRJ_TYPE = library
 

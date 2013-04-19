@@ -17,6 +17,9 @@
       <UniqueIdentifier>{84D0937A-FECA-1BAD-204B-2BCE67297148}</UniqueIdentifier>
       <Extensions>conf;confxml</Extensions>
     </Filter>
+    <Filter Include="Installdata Files">
+      <UniqueIdentifier>{B0B7506A-FECA-1BAD-204B-2BCE67297148}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Documentation">
       <UniqueIdentifier>{B14BBA74-FECA-1BAD-204B-2BCE67297148}</UniqueIdentifier>
     </Filter>
@@ -48,6 +51,11 @@
     </None>
     <None Include="svc.conf.xml">
       <Filter>Svc Conf Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README">
+      <Filter>Installdata Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

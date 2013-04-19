@@ -34,7 +34,7 @@ LDLIBS = -lTAO_IDL3_TO_IDL2_BE -lTAO_IDL_FE -lACE
 PRJ_TYPE = rtp
 
 COLLAPSE_SLASHES = $(if $(findstring //,$(1)),$(call COLLAPSE_SLASHES,$(subst //,/,$(1))),$(1))
-INSBIN ?= $(call COLLAPSE_SLASHES,../../bin)
+INSBIN ?= $(call COLLAPSE_SLASHES,../../../../bin)
 ifeq ($(INSBIN),.)
   ifeq ($(CURDIR),)
     ifeq ($(PWD),)
@@ -228,8 +228,8 @@ else
 	$(INSTALLER) -i -s $(subst $(SPACE),$(COMMA),$(INST_TAGS)) \
 	  $(INST_LOCATIONS) $(if $(ARCH),-d $(ARCH)) $(PRJINST_OPTIONS) \
 	  $(DESTDIR)$(INSTALL_PREFIX)
-	@$(MKDIR) $(INSTALL_PREFIX)/share/ciao/bin
-	ln -sf $(INSTALL_PREFIX)/bin/tao_idl3_to_idl2 $(INSTALL_PREFIX)/share/ciao/bin
+	@$(MKDIR) $(INSTALL_PREFIX)/share/ace/bin
+	ln -sf $(INSTALL_PREFIX)/bin/tao_idl3_to_idl2 $(INSTALL_PREFIX)/share/ace/bin
 
 endif
 endif
@@ -251,7 +251,7 @@ endif
 #../../../TAO_IDL/tao_idl.cpp
 #
 #exe_output:
-#../../bin tao_idl3_to_idl2
+#../../../../bin tao_idl3_to_idl2
 
 #END MPC-Generated Install Info
 

@@ -2,7 +2,7 @@
 /**
  *  @file    nsadd.cpp
  *
- *  $Id: nsadd.cpp 94517 2011-09-21 15:52:56Z johnnyw $
+ *  $Id: nsadd.cpp 96430 2012-11-30 12:30:14Z johnnyw $
  *
  *  Naming Service add utility
  *
@@ -411,7 +411,6 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
     {
       ACE_DEBUG ((LM_DEBUG, "\nError:\n"));
       ex._tao_print_exception ("Exception in nsadd");
-      orb->destroy ();
       ++err;
     }
 

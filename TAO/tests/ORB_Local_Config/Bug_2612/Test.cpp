@@ -2,7 +2,7 @@
  * @author Iliyan jeliazkov <iliyan@ociweb.com>
  * @author Lothar Werzinger <lothar@tradescape.biz>
  *
- * $Id: Test.cpp 91790 2010-09-16 09:24:02Z johnnyw $
+ * $Id: Test.cpp 96334 2012-11-23 08:11:07Z johnnyw $
  */
 
 #include "ace/Service_Config.h"
@@ -12,8 +12,9 @@
 ACE_TCHAR const * const scpc_loadOrb = // NOTE due to the way ACE_DYNAMIC_SERVICE_DIRECTIVE() macro is defined,
   // each parameter CANNOT be split into multiple quoted strings "line1" "nextline" with the expectation that
   // they will be join together. Hence the long parameter 4.
-  ACE_DYNAMIC_SERVICE_DIRECTIVE ("testDllOrb",
+  ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE ("testDllOrb",
                                  "DllOrb",
+                                 TAO_VERSION,
                                  "_make_DllOrb",
 "DllOrb -t 1 -ORBGestalt Local -ORBDebugLevel 3 -ORBId testORB -ORBInitRef NameService=file:///tmp/test-ns.ior -ORBDottedDecimalAddresses 1"
                                  );

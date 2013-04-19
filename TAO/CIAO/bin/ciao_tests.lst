@@ -1,4 +1,4 @@
-# $Id: ciao_tests.lst 96161 2012-09-27 09:30:10Z johnnyw $
+# $Id: ciao_tests.lst 96340 2012-11-23 10:57:39Z msmit $
 #
 # This is the list of run_test.pl's that need to be run by
 # auto_run_tests.pl.
@@ -27,6 +27,7 @@ TAO/CIAO/tests/Bug_3834_Regression/descriptors/run_test.pl:
 TAO/CIAO/tests/Bug_3834_Regression/descriptors/run_test_without_ns.pl:
 TAO/CIAO/tests/IDL3/Events/Any/run_test.pl: !CCM_NOEVENT
 TAO/CIAO/tests/Bug_3769_Regression/descriptors/run_test.pl:
+TAO/CIAO/tests/Bug_3769_Regression/descriptors/run_test_cdr.pl:
 TAO/CIAO/tests/Thread/descriptors/run_test.pl: !CCM_NOEVENT
 TAO/CIAO/tests/Thread/descriptors/run_test_cdd.pl: !CCM_NOEVENT
 TAO/CIAO/tests/CIF/descriptors/run_test.pl: ATIC

@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: CSD_ORBInitializer.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: CSD_ORBInitializer.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "tao/CSD_Framework/CSD_ORBInitializer.h"
 #include "tao/Exception.h"
@@ -8,9 +8,10 @@
 #include "tao/debug.h"
 
 static const ACE_TCHAR csd_poa_factory_directive[] =
-  ACE_DYNAMIC_SERVICE_DIRECTIVE(
+  ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
     "TAO_CSD_Object_Adapter_Factory",
     "TAO_CSD_Framework",
+    TAO_VERSION,
     "_make_TAO_CSD_Object_Adapter_Factory",
     "");
 

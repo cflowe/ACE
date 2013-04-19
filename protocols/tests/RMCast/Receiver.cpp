@@ -1,6 +1,6 @@
 // file      : Receiver.cpp
 // author    : Boris Kolpackov <boris@kolpackov.net>
-// cvs-id    : $Id: Receiver.cpp 80826 2008-03-04 14:51:23Z wotte $
+// cvs-id    : $Id: Receiver.cpp 96518 2012-12-17 09:33:03Z johnnyw $
 
 #include "ace/Vector_T.h"
 #include "ace/Log_Msg.h"
@@ -101,7 +101,7 @@ ACE_TMAIN (int argc, ACE_TCHAR* argv[])
 
         if (ACE_OS::memcmp (expected_msg.payload,
                             msg.payload,
-                            payload_size) != 0)
+                            payload_size * sizeof(short)) != 0)
         {
           damaged[msg.sn] = 1;
         }

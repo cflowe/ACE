@@ -1,9 +1,9 @@
-// $Id: QueryCondition.cpp 92508 2010-11-08 19:29:07Z johnnyw $
+// $Id: QueryCondition.cpp 96533 2012-12-17 18:51:39Z johnnyw $
 
-#include "ndds/ndds_cpp.h"
 #include "dds4ccm/impl/ndds/QueryCondition.h"
 #include "dds4ccm/impl/ndds/convertors/StringSeq.h"
 #include "dds4ccm/impl/logger/Log_Macros.h"
+#include "ndds/ndds_cpp.h"
 
 namespace CIAO
 {

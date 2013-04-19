@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 92524 2010-11-10 10:58:06Z vzykov $
+# $Id: run_test.pl 96547 2012-12-19 14:45:55Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -20,7 +20,7 @@ my $target_dtd = $target->LocalFile ($dtd);
 my $target_xmi = $target->LocalFile ($xmi);
 $target->DeleteFile($xmi);
 
-$I2X = $target->CreateProcess ("$ENV{'CIAO_ROOT'}/bin/tao_idl3_to_xmi",
+$I2X = $target->CreateProcess ("$ENV{'ACE_ROOT'}/bin/tao_idl3_to_xmi",
                                "-f -xd $target_dtd -of $target_xmi $target_idl");
 
 $target_status = $I2X->SpawnWaitKill ($target->ProcessStartWaitInterval());

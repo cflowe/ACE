@@ -1,4 +1,4 @@
-// $Id: RT_ORBInitializer.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: RT_ORBInitializer.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "tao/RTCORBA/RT_ORBInitializer.h"
 
@@ -36,9 +36,10 @@
 
 static const char rt_poa_factory_name[] = "TAO_RT_Object_Adapter_Factory";
 static const ACE_TCHAR rt_poa_factory_directive[] =
-  ACE_DYNAMIC_SERVICE_DIRECTIVE(
+  ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
     "TAO_RT_Object_Adapter_Factory",
     "TAO_RTPortableServer",
+    TAO_VERSION,
     "_make_TAO_RT_Object_Adapter_Factory",
     "");
 

@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: Notify_Service.mpc 91878 2010-09-21 10:27:42Z msmit $
+// $Id: Notify_Service.mpc 96385 2012-11-27 11:24:30Z johnnyw $
 
 project(TAO_Notify_Service) : orbsvcslib, orbsvcs_output, install, valuetype, orbsvcsexe, install, notification_serv, naming, iortable, messaging_optional, svc_utils, notify_monitor_control {
   sharedname   = TAO_Notify_Service
@@ -21,6 +21,10 @@ project(Notify_Service) : orbsvcsexe, install, tao_notify_service, notify_monito
   Source_Files {
     Notify_Server.cpp
   }
+  InstallData_Files {
+    gendir = tao-notify
+    README
+  }
 }
 
 project(NT_Notify_Service) : orbsvcsexe, install, tao_notify_service, notify_monitor_control {
@@ -33,5 +37,9 @@ project(NT_Notify_Service) : orbsvcsexe, install, tao_notify_service, notify_mon
   }
   Header_Files {
     NT_Notify_Service.h
+  }
+  InstallData_Files {
+    gendir = tao-notify
+    README
   }
 }

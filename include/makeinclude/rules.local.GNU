@@ -1,6 +1,6 @@
 # -*- Makefile -*-
 #----------------------------------------------------------------------------
-#       $Id: rules.local.GNU 95606 2012-03-12 20:23:01Z mitza $
+#       $Id: rules.local.GNU 96368 2012-11-25 20:09:11Z johnnyw $
 #
 #       Local targets
 #       GNU version
@@ -312,13 +312,23 @@ else #not vxworks_ntbuild
 	fi
     else #firstword of LN_S is not cp, so we're using real symlinks
       ifneq ($(SOVERSION),)
-	@if test $(ARCH_SOURCE_DIR) != $(@D) ; then \
+       ifneq ($(versioned_so),2)
+	    @if test $(ARCH_SOURCE_DIR) != $(@D) ; then \
 		if test ! -s $@ ; then \
 			$(RM) $(@:%.$(SOEXT)$(SOVERSION)=%.$(SOEXT)); \
 			echo $(LN_S) $(ARCH_SOURCE_DIR)/$(@F) $(@:%.$(SOEXT)$(SOVERSION)=%.$(SOEXT)); \
 			$(LN_S) $(ARCH_SOURCE_DIR)/$(@F) $(@:%.$(SOEXT)$(SOVERSION)=%.$(SOEXT)); \
 		fi ; \
-	fi
+	    fi
+       else
+	    @if test $(ARCH_SOURCE_DIR) != $(@D) ; then \
+		if test ! -s $@ ; then \
+			$(RM) $(@:%$(SOVERSION).$(SOEXT)=%.$(SOEXT)); \
+			echo $(LN_S) $(ARCH_SOURCE_DIR)/$(@F) $(@:%$(SOVERSION).$(SOEXT)=%.$(SOEXT)); \
+			$(LN_S) $(ARCH_SOURCE_DIR)/$(@F) $(@:%$(SOVERSION).$(SOEXT)=%.$(SOEXT)); \
+		fi ; \
+	    fi
+        endif #versioned_so
       endif #SOVERSION
 	@if test $(ARCH_SOURCE_DIR) != $(@D) ; then \
 		if test ! -s $@ ; then \
@@ -351,6 +361,10 @@ ifneq ($(SHLIB_UNCHECKED),)
 	-$(RM) $(SHLIB_UNCHECKED)
 ifeq ($(versioned_so),1)
 	-$(RM) $(SHLIB_UNCHECKED)$(SOVERSION)
+else 
+	ifeq ($(versioned_so),2)
+		-$(RM) $(SHLIB_UNCHECKED:.$(SOEXT)=$(SOVERSION).$(SOEXT))
+	endif
 endif
 endif
 

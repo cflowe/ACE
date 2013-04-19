@@ -284,7 +284,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="README.txt">
+    <CustomBuild Include="README">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>

@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LifespanStrategyPersistent.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: LifespanStrategyPersistent.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "tao/PortableServer/LifespanStrategyPersistent.h"
 #include "tao/PortableServer/Root_POA.h"
@@ -78,8 +78,8 @@ namespace TAO
           if (adapter == 0)
             {
               ACE_Service_Config::process_directive (
-                ACE_DYNAMIC_SERVICE_DIRECTIVE(
-                  "ImR_Client_Adapter", "TAO_ImR_Client",
+                ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
+                  "ImR_Client_Adapter", "TAO_ImR_Client", TAO_VERSION,
                   "_make_ImR_Client_Adapter_Impl", ""));
 
               adapter =

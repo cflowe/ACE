@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: TAO_Internal.cpp 95799 2012-05-31 07:59:28Z johnnyw $
+// $Id: TAO_Internal.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "tao/TAO_Internal.h"
 #include "tao/TAO_Singleton.h"
@@ -607,9 +607,10 @@ namespace
               ACE_REMOVE_SERVICE_DIRECTIVE ("TAO_Codeset"));
 
             ACE_Service_Config::process_directive (
-              ACE_DYNAMIC_SERVICE_DIRECTIVE (
+              ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE (
                 "TAO_Codeset",
                 "TAO_Codeset",
+                TAO_VERSION,
                 "_make_TAO_Codeset_Manager_Factory",
                 ""));
 

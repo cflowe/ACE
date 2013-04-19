@@ -1,4 +1,4 @@
-// $Id: ORBInitInfo.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: ORBInitInfo.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "tao/PI/ORBInitInfo.h"
 #include "tao/ORB_Core.h"
@@ -116,8 +116,9 @@ TAO_ORBInitInfo::codec_factory (void)
       if (loader == 0)
         {
           ACE_Service_Config::process_directive (
-            ACE_DYNAMIC_SERVICE_DIRECTIVE("CodecFactory",
+            ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE("CodecFactory",
                                           "TAO_CodecFactory",
+                                          TAO_VERSION,
                                           "_make_TAO_CodecFactory_Loader",
                                           ""));
           loader =

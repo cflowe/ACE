@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Codeset_Manager_i.cpp 91492 2010-08-26 13:40:18Z johnnyw $
+// $Id: Codeset_Manager_i.cpp 96334 2012-11-23 08:11:07Z johnnyw $
 
 #include "tao/TAO_Server_Request.h"
 #include "tao/operation_details.h"
@@ -352,8 +352,9 @@ TAO_Codeset_Manager_i::open(TAO_ORB_Core& core)
     instance ("UTF8_Latin1_Factory");
   if (fact == 0)
     ACE_Service_Config::process_directive
-      (ACE_DYNAMIC_SERVICE_DIRECTIVE ("UTF8_Latin1_Factory",
+      (ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE ("UTF8_Latin1_Factory",
                                       "TAO_Codeset",
+                                      TAO_VERSION,
                                       "_make_TAO_UTF8_Latin1_Factory",
                                       ""));
   else
@@ -369,8 +370,9 @@ TAO_Codeset_Manager_i::open(TAO_ORB_Core& core)
     instance ("UTF16_BOM_Factory");
   if (fact == 0)
     ACE_Service_Config::process_directive
-      (ACE_DYNAMIC_SERVICE_DIRECTIVE ("UTF16_BOM_Factory",
+      (ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE ("UTF16_BOM_Factory",
                                       "TAO_Codeset",
+                                      TAO_VERSION,
                                       "_make_TAO_UTF16_BOM_Factory",
                                       ""));
   else

@@ -90,6 +90,7 @@ FILES = \
   keywordsA.cpp \
   keywordsC.cpp \
   keywordsS.cpp \
+  loader_constC.cpp \
   moduleA.cpp \
   moduleC.cpp \
   moduleS.cpp \
@@ -109,6 +110,8 @@ FILES = \
   old_unionS.cpp \
   paramsC.cpp \
   paramsS.cpp \
+  PEMNamingC.cpp \
+  PEMNamingS.cpp \
   pragmaA.cpp \
   pragmaC.cpp \
   pragmaS.cpp \

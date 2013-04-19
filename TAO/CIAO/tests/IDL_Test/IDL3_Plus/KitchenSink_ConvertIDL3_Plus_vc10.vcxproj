@@ -254,22 +254,22 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="KitchenSink.idl">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl3_to_idl2 -I..\..\.. -I..\..\../ccm -I..\..\..\.. -I..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;KitchenSink.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl3_to_idl2 on KitchenSink.idl</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\.. -I..\..\../ccm -I..\..\..\.. -I..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;KitchenSink.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\..\..\bin\tao_idl3_to_idl2 on KitchenSink.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">KitchenSink_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl3_to_idl2 -I..\..\.. -I..\..\../ccm -I..\..\..\.. -I..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;KitchenSink.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl3_to_idl2 on KitchenSink.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\.. -I..\..\../ccm -I..\..\..\.. -I..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;KitchenSink.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\..\..\bin\tao_idl3_to_idl2 on KitchenSink.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">KitchenSink_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl3_to_idl2 -I..\..\.. -I..\..\../ccm -I..\..\..\.. -I..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;KitchenSink.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl3_to_idl2 on KitchenSink.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\.. -I..\..\../ccm -I..\..\..\.. -I..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;KitchenSink.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\..\..\bin\tao_idl3_to_idl2 on KitchenSink.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">KitchenSink_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl3_to_idl2 -I..\..\.. -I..\..\../ccm -I..\..\..\.. -I..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;KitchenSink.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl3_to_idl2 on KitchenSink.idl</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\..\..\lib&#x0D;&#x0A;..\..\..\..\..\bin\tao_idl3_to_idl2 -I..\..\.. -I..\..\../ccm -I..\..\..\.. -I..\..\..\../orbsvcs $(TAO_IDL3_TO_IDL2_FLAGS) -DCCM_LW &quot;KitchenSink.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\..\..\bin\tao_idl3_to_idl2 on KitchenSink.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">KitchenSink_IDL2.idl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\..\bin\tao_idl3_to_idl2.exe</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

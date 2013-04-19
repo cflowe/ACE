@@ -2,7 +2,7 @@
  * @author William R. Otte <wotte@dre.vanderbilt.edu>
  * @author Johnny Willemsen (jwillemsen@remedy.nl)
  *
- * $Id: DomainParticipantListener.h 95809 2012-06-03 17:56:00Z johnnyw $
+ * $Id: DomainParticipantListener.h 96533 2012-12-17 18:51:39Z johnnyw $
  *
  * Wrapper facade for NDDS.
  */
@@ -12,7 +12,7 @@
 
 #include "dds4ccm/idl/ndds/ndds_dcpsC.h"
 #include "dds4ccm/impl/ndds/dds4ccm_ndds_export.h"
-# include "ndds/ndds_cpp.h"
+#include "ndds/ndds_cpp.h"
 
 namespace CIAO
 {

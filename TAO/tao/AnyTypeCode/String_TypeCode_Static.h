@@ -4,7 +4,7 @@
 /**
  *  @file    String_TypeCode_Static.h
  *
- *  $Id: String_TypeCode_Static.h 76551 2007-01-24 13:42:44Z johnnyw $
+ *  $Id: String_TypeCode_Static.h 96448 2012-12-03 15:28:37Z johnnyw $
  *
  *  Header file for static @c CORBA::tk_string or @c CORBA::tk_wstring
  *  @c CORBA::TypeCodes.
@@ -79,12 +79,9 @@ namespace TAO
        * @see @c CORBA::TypeCode
        */
       //@{
-      virtual CORBA::Boolean equal_i (CORBA::TypeCode_ptr tc
-                                      ) const;
-      virtual CORBA::Boolean equivalent_i (CORBA::TypeCode_ptr tc
-                                           ) const;
-      virtual CORBA::TypeCode_ptr get_compact_typecode_i (
-        void) const;
+      virtual CORBA::Boolean equal_i (CORBA::TypeCode_ptr tc) const;
+      virtual CORBA::Boolean equivalent_i (CORBA::TypeCode_ptr tc) const;
+      virtual CORBA::TypeCode_ptr get_compact_typecode_i (void) const;
       virtual CORBA::ULong length_i (void) const;
 
     private:
