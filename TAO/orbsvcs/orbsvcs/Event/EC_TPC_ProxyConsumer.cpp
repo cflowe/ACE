@@ -1,5 +1,6 @@
-// $Id: EC_TPC_ProxyConsumer.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: EC_TPC_ProxyConsumer.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Event/EC_TPC_ProxyConsumer.h"
 
 
@@ -32,7 +33,7 @@ TAO_EC_TPC_ProxyPushConsumer::~TAO_EC_TPC_ProxyPushConsumer (void)
   // to fact that "remove" code out of just the
   // disconnect_push_consumer.
   if (TAO_EC_TPC_debug_level > 0)
-    ACE_DEBUG ((LM_DEBUG, "RTEC (%P|%t): inside ~TAO_EC_TPC_ProxyPushConsumer (%x)\n", this));
+    ORBSVCS_DEBUG ((LM_DEBUG, "RTEC (%P|%t): inside ~TAO_EC_TPC_ProxyPushConsumer (%x)\n", this));
 }
 
 void

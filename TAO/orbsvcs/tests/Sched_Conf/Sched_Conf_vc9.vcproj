@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_RTSchedd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib TAO_RTSchedd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\Sched_Conf.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -155,7 +155,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_RTSched.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib TAO_RTSched.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\Sched_Conf.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -240,7 +240,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_RTSchedd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib TAO_RTSchedd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\Sched_Conf.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -320,7 +320,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_RTSched.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib TAO_RTSched.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\Sched_Conf.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

@@ -1,5 +1,6 @@
-// $Id: Identification_Service.cpp 91738 2010-09-13 14:46:31Z johnnyw $
+// $Id: Identification_Service.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/FtRtEvent/EventChannel/Identification_Service.h"
 #include "../Utils/UUID.h"
 #include "ace/OS_NS_strings.h"
@@ -41,7 +42,7 @@ namespace FTRTEC {
         else if (argv[0][0] != '$') {
           TAO_FtRt::UUID uuid(argv[0]);
           if (!uuid.is_valid())
-            ACE_ERROR_RETURN((LM_ERROR, "Invalid Object_ID\n"), -1);
+            ORBSVCS_ERROR_RETURN((LM_ERROR, "Invalid Object_ID\n"), -1);
           object_id_.length(16);
           uuid.to_binary(&object_id_[0]);
         }

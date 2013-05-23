@@ -1,8 +1,13 @@
-//$Id: CIAO_DAnCE.mwc 95323 2011-12-14 12:37:01Z msmit $
+//$Id: CIAO_DAnCE.mwc 97027 2013-04-15 18:18:59Z mitza $
 
 workspace {
   ccm
   ciao
+  tools
+  connectors/ami4ccm/ami4ccm
+  connectors/dds4ccm/idl
+  connectors/dds4ccm/impl
+
   $(DANCE_ROOT)
   exclude {
     $(DANCE_ROOT)/tests

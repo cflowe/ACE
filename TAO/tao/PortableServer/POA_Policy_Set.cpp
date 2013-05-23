@@ -1,4 +1,4 @@
-// $Id: POA_Policy_Set.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: POA_Policy_Set.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/POA_Policy_Set.h"
 #include "tao/PortableServer/POA_Cached_Policies.h"
@@ -78,7 +78,7 @@ TAO_POA_Policy_Set::validate_policies (TAO_Policy_Validator &validator,
           // it.
           throw PortableServer::POA::InvalidPolicy ();
 #else
-          ACE_ERROR ((LM_ERROR, "Invalid policy\n"));
+          TAOLIB_ERROR ((LM_ERROR, "Invalid policy\n"));
 #endif
         }
     }

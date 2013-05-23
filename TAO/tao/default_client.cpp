@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: default_client.cpp 96760 2013-02-05 21:11:03Z stanleyk $
+// $Id: default_client.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/default_client.h"
 #include "tao/Wait_On_Read.h"
@@ -310,14 +310,14 @@ TAO_Default_Client_Strategy_Factory::parse_args (int argc, ACE_TCHAR* argv[])
         {
           // Can we assume there is an argument after the option?
           // curarg++;
-          ACE_ERROR ((LM_ERROR,
+          TAOLIB_ERROR ((LM_ERROR,
                       "Client_Strategy_Factory - "
                       "unknown option <%s>\n",
                       argv[curarg]));
         }
       else
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
                       "Client_Strategy_Factory - "
                       "ignoring option <%s>\n",
                       argv[curarg]));
@@ -485,7 +485,7 @@ TAO_Default_Client_Strategy_Factory::report_option_value_error (
                                  const ACE_TCHAR* option_name,
                                  const ACE_TCHAR* option_value)
 {
-  ACE_DEBUG((LM_DEBUG,
+  TAOLIB_DEBUG((LM_DEBUG,
              ACE_TEXT ("Client_Strategy_Factory - unknown argument")
              ACE_TEXT (" <%s> for <%s>\n"),
              option_value, option_name));

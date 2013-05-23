@@ -1,5 +1,6 @@
-// $Id: Notify_Server.cpp 85185 2009-04-28 08:53:12Z johnnyw $
+// $Id: Notify_Server.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "Notify_Service.h"
 #include "orbsvcs/orbsvcs/Notify/Properties.h"
 
@@ -33,7 +34,7 @@ void
 Notify_Service_Shutdown_Functor::operator() (int which_signal)
 {
   if (TAO_debug_level > 0)
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
                 "shutting down on signal %d\n", which_signal));
   (void) this->svc_.fini ();
 }
@@ -51,7 +52,7 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
   try
     {
       if (notify_service.init (argc, argv) == -1)
-        ACE_ERROR_RETURN ((LM_ERROR,
+        ORBSVCS_ERROR_RETURN ((LM_ERROR,
                            ACE_TEXT("Failed to initialize the Notification Service.\n")),
                           1);
 

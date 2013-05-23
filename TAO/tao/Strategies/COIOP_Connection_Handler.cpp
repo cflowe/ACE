@@ -1,4 +1,4 @@
-// $Id: COIOP_Connection_Handler.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: COIOP_Connection_Handler.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Strategies/COIOP_Connection_Handler.h"
 
@@ -56,7 +56,7 @@ TAO_COIOP_Connection_Handler::~TAO_COIOP_Connection_Handler (void)
 
   if (result == -1 && TAO_debug_level)
     {
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   ACE_TEXT("TAO (%P|%t) - COIOP_Connection_Handler::")
                   ACE_TEXT("~COIOP_Connection_Handler, ")
                   ACE_TEXT("release_os_resources() failed %m\n")));

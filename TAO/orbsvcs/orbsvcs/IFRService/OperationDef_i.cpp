@@ -1,5 +1,7 @@
-// $Id: OperationDef_i.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: OperationDef_i.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/IFRService/OperationDef_i.h"
 #include "orbsvcs/IFRService/Repository_i.h"
 #include "orbsvcs/IFRService/IDLType_i.h"
@@ -226,7 +228,7 @@ TAO_OperationDef_i::params_i (void)
       // We have an undefined interface
       if (impl == 0)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          ORBSVCS_DEBUG ((LM_DEBUG,
                       ACE_TEXT ("Encountered undefined parameter type "
                                 "for variable: %s\n"),
                       name.c_str ()));

@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Profile_Transport_Resolver.cpp 95332 2011-12-15 11:09:41Z mcorino $
+// $Id: Profile_Transport_Resolver.cpp 96988 2013-04-11 17:06:12Z mcorino $
 
 #include "tao/Profile_Transport_Resolver.h"
 #include "tao/Profile.h"
@@ -196,13 +196,6 @@ namespace TAO
         this->stub_->orb_core ()->call_sync_scope_hook (this->stub_,
                                                         has_synchronization,
                                                         sync_scope);
-
-        // If this stub has synchronization that's not "none", we need to
-        // have the transport schedule output at the appropriate time.
-        if (has_synchronization && sync_scope != Messaging::SYNC_NONE)
-          {
-            this->transport_->set_flush_in_post_open ();
-          }
       }
 
     return true;

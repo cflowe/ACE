@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Resume_Handle.cpp 93899 2011-04-14 11:56:04Z johnnyw $
+// $Id: Resume_Handle.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Resume_Handle.h"
 #include "tao/ORB_Core.h"
@@ -53,7 +53,7 @@ TAO_Resume_Handle::handle_input_return_value_hook (int& return_value)
 
     if (TAO_debug_level > 6)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   "TAO (%P|%t) - Resume_Handle::handle_input_return_value_hook, "
                   "overriding return value of 1 with retval = %d\n",
                   return_value));
@@ -69,7 +69,7 @@ TAO_Resume_Handle::handle_input_return_value_hook (int& return_value)
 
     if (TAO_debug_level > 6)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   "TAO (%P|%t) - Resume_Handle::handle_input_return_value_hook, "
                   "handle_input returning -1, so handle is not resumed.\n"));
     }

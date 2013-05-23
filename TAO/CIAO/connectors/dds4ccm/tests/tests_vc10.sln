@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE -workers 12 -name_modifier "*_vc10"
+# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE -workers 14 -name_modifier "*_vc10"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DDS_CSL_DeadlineTest_Base_stub", "CSLDeadline\Base\DDS_CSL_DeadlineTest_Base_stub_vc10.vcxproj", "{A40BF668-FECA-1BAD-C7E7-99143D062A24}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DDS_CSL_QoSTest_Base_stub", "CSLQoS\Base\DDS_CSL_QoSTest_Base_stub_vc10.vcxproj", "{A6F10F2E-FECA-1BAD-3C31-C9E28FAEFA03}"
@@ -51,6 +51,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GCS_Test_Base_stub", "GetComponent\State\Base\GCS_Test_Base_stub_vc10.vcxproj", "{7BECA449-FECA-1BAD-20F5-AE3B414D8004}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DDS_Getter_Test_Base_stub", "Getter\Base\DDS_Getter_Test_Base_stub_vc10.vcxproj", "{0EACCF5B-FECA-1BAD-61F1-BC4AD7BEFD59}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Home_Hello_Base_stub", "HomeDerived\Base\Home_Hello_Base_stub_vc10.vcxproj", "{1381E589-FECA-1BAD-42B4-20C848253F40}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeT_Base_stub", "HomeTest\Base\HomeT_Base_stub_vc10.vcxproj", "{388EEFDD-FECA-1BAD-42BE-3A7891DFF2A2}"
 EndProject
@@ -372,6 +374,14 @@ Global
 		{0EACCF5B-FECA-1BAD-61F1-BC4AD7BEFD59}.Release|Win32.Build.0 = Release|Win32
 		{0EACCF5B-FECA-1BAD-61F1-BC4AD7BEFD59}.Release|x64.ActiveCfg = Release|x64
 		{0EACCF5B-FECA-1BAD-61F1-BC4AD7BEFD59}.Release|x64.Build.0 = Release|x64
+		{1381E589-FECA-1BAD-42B4-20C848253F40}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1381E589-FECA-1BAD-42B4-20C848253F40}.Debug|Win32.Build.0 = Debug|Win32
+		{1381E589-FECA-1BAD-42B4-20C848253F40}.Debug|x64.ActiveCfg = Debug|x64
+		{1381E589-FECA-1BAD-42B4-20C848253F40}.Debug|x64.Build.0 = Debug|x64
+		{1381E589-FECA-1BAD-42B4-20C848253F40}.Release|Win32.ActiveCfg = Release|Win32
+		{1381E589-FECA-1BAD-42B4-20C848253F40}.Release|Win32.Build.0 = Release|Win32
+		{1381E589-FECA-1BAD-42B4-20C848253F40}.Release|x64.ActiveCfg = Release|x64
+		{1381E589-FECA-1BAD-42B4-20C848253F40}.Release|x64.Build.0 = Release|x64
 		{388EEFDD-FECA-1BAD-42BE-3A7891DFF2A2}.Debug|Win32.ActiveCfg = Debug|Win32
 		{388EEFDD-FECA-1BAD-42BE-3A7891DFF2A2}.Debug|Win32.Build.0 = Debug|Win32
 		{388EEFDD-FECA-1BAD-42BE-3A7891DFF2A2}.Debug|x64.ActiveCfg = Debug|x64

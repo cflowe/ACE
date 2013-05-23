@@ -1,4 +1,4 @@
-// $Id: EC_Default_ProxySupplier.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: EC_Default_ProxySupplier.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/Event/EC_Default_ProxySupplier.h"
 #include "orbsvcs/Event/EC_Event_Channel_Base.h"
@@ -78,7 +78,7 @@ TAO_EC_Default_ProxyPushSupplier::connect_push_consumer (
         CORBA::PolicyList_var unused;
         int status = push_consumer->_validate_connection (unused);
 #if TAO_EC_ENABLE_DEBUG_MESSAGES
-        ACE_DEBUG ((LM_DEBUG, "Validated connection to PushConsumer on connect. Status[%d]\n", status));
+        ORBSVCS_DEBUG ((LM_DEBUG, "Validated connection to PushConsumer on connect. Status[%d]\n", status));
 #else
         ACE_UNUSED_ARG(status);
 #endif /* TAO_EC_ENABLED_DEBUG_MESSAGES */
@@ -90,7 +90,7 @@ TAO_EC_Default_ProxyPushSupplier::connect_push_consumer (
       this->qos_ = qos;
 
 #if TAO_EC_ENABLE_DEBUG_MESSAGES
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
                 "Building filters for consumer <%x>.\n",
                 this));
 #endif /* TAO_EC_ENABLED_DEBUG_MESSAGES */

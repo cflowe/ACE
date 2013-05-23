@@ -1,5 +1,6 @@
-// $Id: UIPMC_Factory.cpp 96029 2012-08-10 14:01:17Z sma $
+// $Id: UIPMC_Factory.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/PortableGroup/UIPMC_Factory.h"
 #include "orbsvcs/PortableGroup/UIPMC_Acceptor.h"
 #include "orbsvcs/PortableGroup/UIPMC_Connector.h"
@@ -72,7 +73,7 @@ TAO_UIPMC_Protocol_Factory::init (int argc,
         }
       else
         {
-          ACE_DEBUG ((LM_DEBUG,
+          ORBSVCS_DEBUG ((LM_DEBUG,
                       ACE_TEXT ("TAO_UIPMC_Protocol_Factory::init - ")
                       ACE_TEXT ("ignoring unknown option <%s>\n"),
                       argv[curarg]));

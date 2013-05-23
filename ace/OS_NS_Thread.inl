@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: OS_NS_Thread.inl 96519 2012-12-17 10:00:00Z johnnyw $
+// $Id: OS_NS_Thread.inl 97102 2013-05-08 19:04:52Z schmidt $
 
 #include "ace/OS_NS_macros.h"
 // for timespec_t, perhaps move it to os_time.h
@@ -3077,6 +3077,38 @@ ACE_OS::thr_min_stack (void)
 #else
   ACE_NOTSUP_RETURN (0);
 #endif /* ACE_HAS_THREADS */
+}
+
+ACE_INLINE ssize_t
+ACE_OS::thr_id (char buffer[], size_t buffer_length)
+{
+#if defined (ACE_WIN32)
+#if defined (ACE_HAS_SNPRINTF)
+  return ACE_OS::snprintf (buffer,
+                           buffer_length,
+                           "%u",
+                           static_cast <unsigned> (ACE_OS::thr_self ()));
+#else
+  ACE_UNUSED_ARG (buffer_length);
+  return ACE_OS::sprintf (buffer,
+                          "%u",
+                          static_cast <unsigned> (ACE_OS::thr_self ()));
+#endif /* ACE_HAS_SNPRINTF */
+#else
+  ACE_hthread_t t_id;
+  ACE_OS::thr_self (t_id);
+#if defined (ACE_HAS_SNPRINTF)
+  return ACE_OS::snprintf (buffer,
+                           buffer_length,
+                           "%lu",
+                           (unsigned long) t_id);
+#else
+  ACE_UNUSED_ARG (buffer_length);
+  return ACE_OS::sprintf (buffer,
+                          "%lu",
+                          (unsigned long) t_id);
+#endif /* ACE_HAS_SNPRINTF */
+#endif /* WIN32 */
 }
 
 ACE_INLINE ACE_thread_t

@@ -3,7 +3,7 @@
 /**
  *  @file    Codeset_Translator_Factory_T.cpp
  *
- *  $Id: Codeset_Translator_Factory_T.cpp 80140 2007-11-30 00:40:17Z jtc $
+ *  $Id: Codeset_Translator_Factory_T.cpp 96992 2013-04-11 18:07:48Z huangh $
  *
  *  The template for creating a particular instance of a codeset translator
  *
@@ -41,7 +41,7 @@ TAO_Codeset_Translator_Factory_T<NCS_TO_TCS>::init (int argc, ACE_TCHAR* argv[])
   this->TAO_Codeset_Translator_Factory::init (argc,argv);
   ACE_NEW_RETURN (translator_,NCS_TO_TCS,-1);
   if( TAO_debug_level > 0 )
-    ACE_DEBUG((LM_DEBUG, "TAO_Codeset_Translator_Factory_T<NCS_TO_TCS>::init() entered\n"));
+    TAOLIB_DEBUG((LM_DEBUG, "TAO_Codeset_Translator_Factory_T<NCS_TO_TCS>::init() entered\n"));
   return 0;
 }
 

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 14 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: TAO_Core_idl TAO AnyTypeCode_Idl Codeset_Idl Codeset-target AnyTypeCode-target BiDir_GIOP_Idl PI_Idl CodecFactory_Idl CodecFactory-target PI-target BiDir_GIOP-target CSD_Framework_Idl PortableServer_Idl PortableServer-target CSD_Framework-target CSD_ThreadPool-target Compression_Idl Compression-target RLECompressor DiffServPolicy_Idl DiffServPolicy-target Valuetype_Idl Valuetype-target DynamicAny_Idl DynamicAny-target Messaging_Idl Messaging-target DynamicInterface-target Dynamic_TP-target TAO_ETCL EndpointPolicy_Core_Idl EndpointPolicy-target TAO_FlResource IFR_Client_Idl IFR_Client-target IFR_Client_skel IORInterceptor_Idl ObjRefTemplate_Idl ObjRefTemplate-target IORInterceptor-target IORManipulation_Idl IORManipulation-target IORTable_Core_Idl IORTable-target ImR_Client_Idl ImR_Client-target Monitor_Idl TAO_Monitor PI_Server_Idl PI_Server-target TAO_QtResource RTCORBA_Core_Idl RTCORBA-target RTPortableServer_Idl RTPortableServer-target RTScheduler_Idl RTScheduler SmartProxies-target Strategies_Core_Idl Strategies-target TAO_TkResource TC_Idl TC TC_IIOP_Idl TC_IIOP TypeCodeFactory_Idl TypeCodeFactory-target TAO_Utils TAO_XtResource ZIOP_Core_Idl ZIOP-target
+all: TAO_Core_idl TAO AnyTypeCode_Idl Codeset_Idl Codeset-target AnyTypeCode-target BiDir_GIOP_Idl PI_Idl CodecFactory_Idl CodecFactory-target PI-target BiDir_GIOP-target CSD_Framework_Idl PortableServer_Idl PortableServer-target CSD_Framework-target CSD_ThreadPool-target Compression_Idl Compression-target RLECompressor DiffServPolicy_Idl DiffServPolicy-target Valuetype_Idl Valuetype-target DynamicAny_Idl DynamicAny-target Messaging_Idl Messaging-target DynamicInterface-target Dynamic_TP-target TAO_ETCL EndpointPolicy_Core_Idl EndpointPolicy-target TAO_FlResource IFR_Client_Idl IFR_Client-target IFR_Client_skel IORInterceptor_Idl ObjRefTemplate_Idl ObjRefTemplate-target IORInterceptor-target IORManipulation_Idl IORManipulation-target Async_IORTable_Core_Idl IORTable_Core_Idl IORTable-target Async_IORTable ImR_Client_Idl ImR_Client-target Monitor_Idl TAO_Monitor PI_Server_Idl PI_Server-target TAO_QtResource RTCORBA_Core_Idl RTCORBA-target RTPortableServer_Idl RTPortableServer-target RTScheduler_Idl RTScheduler SmartProxies-target Strategies_Core_Idl Strategies-target TAO_TkResource TC_Idl TC TC_IIOP_Idl TC_IIOP TypeCodeFactory_Idl TypeCodeFactory-target TAO_Utils TAO_XtResource ZIOP_Core_Idl ZIOP-target
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -68,8 +68,10 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd IORInterceptor && $(MAKE) -f GNUmakefile.IORInterceptor $(@)
 	$(KEEP_GOING)@cd IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation_Idl $(@)
 	$(KEEP_GOING)@cd IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation $(@)
+	$(KEEP_GOING)@cd IORTable && $(MAKE) -f GNUmakefile.Async_IORTable_Core_Idl $(@)
 	$(KEEP_GOING)@cd IORTable && $(MAKE) -f GNUmakefile.IORTable_Core_Idl $(@)
 	$(KEEP_GOING)@cd IORTable && $(MAKE) -f GNUmakefile.IORTable $(@)
+	$(KEEP_GOING)@cd IORTable && $(MAKE) -f GNUmakefile.Async_IORTable $(@)
 	$(KEEP_GOING)@cd ImR_Client && $(MAKE) -f GNUmakefile.ImR_Client_Idl $(@)
 	$(KEEP_GOING)@cd ImR_Client && $(MAKE) -f GNUmakefile.ImR_Client $(@)
 	$(KEEP_GOING)@cd Monitor && $(MAKE) -f GNUmakefile.Monitor_Idl $(@)
@@ -270,13 +272,21 @@ IORManipulation_Idl:
 IORManipulation-target: TAO Codeset-target AnyTypeCode-target IORManipulation_Idl
 	$(KEEP_GOING)@cd IORManipulation && $(MAKE) -f GNUmakefile.IORManipulation all
 
+.PHONY: Async_IORTable_Core_Idl
+Async_IORTable_Core_Idl:
+	$(KEEP_GOING)@cd IORTable && $(MAKE) -f GNUmakefile.Async_IORTable_Core_Idl all
+
 .PHONY: IORTable_Core_Idl
 IORTable_Core_Idl:
 	$(KEEP_GOING)@cd IORTable && $(MAKE) -f GNUmakefile.IORTable_Core_Idl all
 
 .PHONY: IORTable-target
-IORTable-target: TAO Codeset-target IORTable_Core_Idl
+IORTable-target: TAO Codeset-target AnyTypeCode-target PortableServer-target IORTable_Core_Idl
 	$(KEEP_GOING)@cd IORTable && $(MAKE) -f GNUmakefile.IORTable all
+
+.PHONY: Async_IORTable
+Async_IORTable: TAO Codeset-target AnyTypeCode-target CodecFactory-target PI-target PortableServer-target Valuetype-target Messaging-target DynamicInterface-target Async_IORTable_Core_Idl IORTable-target
+	$(KEEP_GOING)@cd IORTable && $(MAKE) -f GNUmakefile.Async_IORTable all
 
 .PHONY: ImR_Client_Idl
 ImR_Client_Idl:
@@ -420,6 +430,8 @@ project_name_list:
 	@echo IORInterceptor_Idl
 	@echo IORManipulation-target
 	@echo IORManipulation_Idl
+	@echo Async_IORTable
+	@echo Async_IORTable_Core_Idl
 	@echo IORTable-target
 	@echo IORTable_Core_Idl
 	@echo ImR_Client-target

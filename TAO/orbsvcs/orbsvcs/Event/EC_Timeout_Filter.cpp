@@ -1,4 +1,4 @@
-// $Id: EC_Timeout_Filter.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: EC_Timeout_Filter.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/Event/EC_Timeout_Filter.h"
 #include "orbsvcs/Event/EC_Timeout_Generator.h"
@@ -51,7 +51,7 @@ TAO_EC_Timeout_Filter::TAO_EC_Timeout_Filter (
                             ACE_Time_Value::zero);
     }
 
-  //  ACE_DEBUG ((LM_DEBUG,
+  //  ORBSVCS_DEBUG ((LM_DEBUG,
   //              "EC_Timeout_Filter - interval = %d:%d, ID = %d\n",
   //              tv_interval.sec (), tv_interval.usec (),
   //              this->id_));

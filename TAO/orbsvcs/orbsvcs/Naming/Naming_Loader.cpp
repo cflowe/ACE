@@ -1,4 +1,4 @@
-// $Id: Naming_Loader.cpp 96834 2013-02-18 18:41:09Z stanleyk $
+// $Id: Naming_Loader.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 // ================================================================
 // LIBRARY
@@ -13,6 +13,7 @@
 //   Carlos O'Ryan <coryan@uci.edu>
 // ================================================================
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Naming/Naming_Loader.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Argv_Type_Converter.h"
@@ -83,7 +84,7 @@ TAO_Naming_Loader::create_object (CORBA::ORB_ptr orb,
 
   if (this->naming_server_ == 0)
     {
-      ACE_ERROR ((LM_ERROR,
+      ORBSVCS_ERROR ((LM_ERROR,
                   ACE_TEXT ("TAO_Naming_Loader::create_object - naming_server_ ")
                   ACE_TEXT ("never set.\n")));
     }

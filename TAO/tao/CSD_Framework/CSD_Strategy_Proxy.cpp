@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: CSD_Strategy_Proxy.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: CSD_Strategy_Proxy.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/CSD_Framework/CSD_Strategy_Proxy.h"
 #include "tao/TAO_Server_Request.h"
@@ -18,7 +18,7 @@ TAO::CSD::Strategy_Proxy::custom_strategy
   if (this->strategy_impl_)
     {
       if (TAO_debug_level > 0)
-        ACE_ERROR((LM_ERROR,
+        TAOLIB_ERROR((LM_ERROR,
                    ACE_TEXT("(%P|%t) Error - TAO::CSD::Strategy_Proxy ")
                    ACE_TEXT("object already has a custom strategy.\n")));
 
@@ -28,7 +28,7 @@ TAO::CSD::Strategy_Proxy::custom_strategy
   if (CORBA::is_nil(strategy))
     {
       if (TAO_debug_level > 0)
-        ACE_ERROR((LM_ERROR,
+        TAOLIB_ERROR((LM_ERROR,
                    ACE_TEXT("(%P|%t) Error - TAO::CSD::Strategy_Proxy ")
                    ACE_TEXT("supplied with a NIL custom strategy.\n")));
 

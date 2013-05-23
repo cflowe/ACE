@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: CosNaming.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+// $Id: CosNaming.mpc 97014 2013-04-12 22:47:02Z mitza $
 
 project(CosNaming_IDL) : orbsvcslib, orbsvcs_output, install, tao_versioning_idl_defaults {
   custom_only =	1
@@ -10,7 +10,7 @@ project(CosNaming_IDL) : orbsvcslib, orbsvcs_output, install, tao_versioning_idl
   }
 }
 
-project(CosNaming) : orbsvcslib, orbsvcs_output, install {
+project(CosNaming) : orbsvcslib, orbsvcs_output, install, svc_utils {
   sharedname   = TAO_CosNaming
   dynamicflags += TAO_NAMING_BUILD_DLL
   tagchecks   += Naming

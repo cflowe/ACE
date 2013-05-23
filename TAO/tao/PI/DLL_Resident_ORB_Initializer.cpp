@@ -3,7 +3,7 @@
 /**
  *  @file DLL_Resident_ORB_Initializer.cpp
  *
- *  $Id: DLL_Resident_ORB_Initializer.cpp 92462 2010-11-01 14:17:59Z johnnyw $
+ *  $Id: DLL_Resident_ORB_Initializer.cpp 96992 2013-04-11 18:07:48Z huangh $
  *
  *  @author Dale Wilson <wilsond@ociweb.com>
  */
@@ -21,7 +21,7 @@ PortableInterceptor::DLL_Resident_ORB_Initializer::DLL_Resident_ORB_Initializer 
 {
   if (TAO_debug_level > 8)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
         ACE_TEXT ("TAO (%P|%t) - Construct DLL_Resident_ORB_Initializer for @%@\n"),
         initializer_.operator->()
         ));
@@ -32,7 +32,7 @@ PortableInterceptor::DLL_Resident_ORB_Initializer::~DLL_Resident_ORB_Initializer
 {
   if (TAO_debug_level > 8)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
         ACE_TEXT ("TAO (%P|%t) - Destruct DLL_Resident_ORB_Initializer for @%@\n"),
         initializer_.operator->()
         ));

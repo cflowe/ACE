@@ -1,4 +1,4 @@
-// $Id: EC_Default_ProxyConsumer.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: EC_Default_ProxyConsumer.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/Event/EC_Default_ProxyConsumer.h"
 #include "orbsvcs/Event/EC_Event_Channel_Base.h"
@@ -68,7 +68,7 @@ TAO_EC_Default_ProxyPushConsumer::connect_push_supplier (
     this->qos_ = qos;
 
 #if TAO_EC_ENABLE_DEBUG_MESSAGES
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
                  "Building filter for supplier <%x>.\n",
                 this));
 #endif /* TAO_EC_ENABLED_DEBUG_MESSAGES */

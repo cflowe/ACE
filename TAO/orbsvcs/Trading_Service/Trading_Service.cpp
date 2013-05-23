@@ -1,5 +1,6 @@
-// $Id: Trading_Service.cpp 91731 2010-09-13 09:33:32Z johnnyw $
+// $Id: Trading_Service.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "ace/Arg_Shifter.h"
 #include "Trading_Service.h"
 
@@ -8,14 +9,14 @@ Trading_Shutdown::Trading_Shutdown (Trading_Service& trader)
 {
   if (this->shutdown_.register_handler (SIGINT,
                                         this) == -1)
-    ACE_ERROR ((LM_ERROR,
+    ORBSVCS_ERROR ((LM_ERROR,
                 ACE_TEXT("%p\n"),
                 ACE_TEXT("register_handler")));
 
 #ifndef ACE_HAS_WINCE
   if (this->shutdown_.register_handler (SIGTERM,
                                         this) == -1)
-    ACE_ERROR ((LM_ERROR,
+    ORBSVCS_ERROR ((LM_ERROR,
                 ACE_TEXT("%p\n"),
                 ACE_TEXT("register_handler")));
 #endif  // ACE_HAS_WINCE

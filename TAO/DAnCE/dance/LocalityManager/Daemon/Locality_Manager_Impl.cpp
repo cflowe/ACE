@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Locality_Manager_Impl.cpp 96027 2012-08-10 11:25:58Z johnnyw $
+// $Id: Locality_Manager_Impl.cpp 97113 2013-05-10 09:00:31Z johnnyw $
 
 #include "Locality_Manager_Impl.h"
 #include "dance/Logger/Log_Macros.h"
@@ -684,8 +684,6 @@ namespace DAnCE
   LocalityManager_i::disconnect_connections (void)
   {
     DANCE_TRACE ("LocalityManager_i::disconnect_connections");
-
-    typedef std::map < std::string, CORBA::ULong > ConnMap;
 
     Deployment_Completion completion (this->scheduler_);
 

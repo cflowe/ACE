@@ -51,7 +51,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\..,..\.."
+				AdditionalIncludeDirectories="..\..\..,..\..,..\..\orbsvcs"
 				PreprocessorDefinitions="_DEBUG;WIN32;_CONSOLE;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MPC_LIB_MODIFIER=\&quot;d\&quot;"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="3"
@@ -69,14 +69,14 @@
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE"
 				Culture="1033"
-				AdditionalIncludeDirectories="..\..\..,..\.."
+				AdditionalIncludeDirectories="..\..\..,..\..,..\..\orbsvcs"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_service.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -133,7 +133,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
-				AdditionalIncludeDirectories="..\..\..,..\.."
+				AdditionalIncludeDirectories="..\..\..,..\..,..\..\orbsvcs"
 				PreprocessorDefinitions="NDEBUG;WIN32;_CONSOLE;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE"
 				RuntimeLibrary="2"
 				RuntimeTypeInfo="true"
@@ -148,14 +148,14 @@
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE"
 				Culture="1033"
-				AdditionalIncludeDirectories="..\..\..,..\.."
+				AdditionalIncludeDirectories="..\..\..,..\..,..\..\orbsvcs"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_service.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -214,7 +214,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\..,..\.."
+				AdditionalIncludeDirectories="..\..\..,..\..,..\..\orbsvcs"
 				PreprocessorDefinitions="_DEBUG;WIN32;_CONSOLE;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MPC_LIB_MODIFIER=\&quot;d\&quot;"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="3"
@@ -232,7 +232,7 @@
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64"
 				Culture="1033"
-				AdditionalIncludeDirectories="..\..\..,..\.."
+				AdditionalIncludeDirectories="..\..\..,..\..,..\..\orbsvcs"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -240,7 +240,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_service.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -297,7 +297,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
-				AdditionalIncludeDirectories="..\..\..,..\.."
+				AdditionalIncludeDirectories="..\..\..,..\..,..\..\orbsvcs"
 				PreprocessorDefinitions="NDEBUG;WIN32;_CONSOLE;_CRT_NONSTDC_NO_WARNINGS;_AMD64_;_WIN64;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE"
 				RuntimeLibrary="2"
 				RuntimeTypeInfo="true"
@@ -312,7 +312,7 @@
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64"
 				Culture="1033"
-				AdditionalIncludeDirectories="..\..\..,..\.."
+				AdditionalIncludeDirectories="..\..\..,..\..,..\..\orbsvcs"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -320,7 +320,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_service.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

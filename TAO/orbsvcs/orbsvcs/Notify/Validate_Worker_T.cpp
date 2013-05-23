@@ -1,11 +1,11 @@
-/* -*- C++ -*- $Id: Validate_Worker_T.cpp 91816 2010-09-17 08:35:56Z johnnyw $ */
+/* -*- C++ -*- $Id: Validate_Worker_T.cpp 97014 2013-04-12 22:47:02Z mitza $ */
 
 #ifndef NOTIFY_VALIDATE_WORKER_CPP
 #define NOTIFY_VALIDATE_WORKER_CPP
 
 #include "Validate_Worker_T.h"
 #include "tao/debug.h"
-#include "ace/Log_Msg.h"
+#include "orbsvcs/Log_Macros.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 #pragma once
@@ -28,7 +28,7 @@ namespace TAO_Notify
     {
       if (TAO_debug_level > 0)
       {
-        ACE_DEBUG ((LM_DEBUG,
+        ORBSVCS_DEBUG ((LM_DEBUG,
           ACE_TEXT("(%P|%t)Validate_Worker<TOPOOBJ>::work: obj is nil\n")));
       }
     }

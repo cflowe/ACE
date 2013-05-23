@@ -1,7 +1,8 @@
 // -*- C++ -*-
 //
-// $Id: CEC_TypedProxyPushConsumer.cpp 94802 2011-10-20 09:46:10Z mcorino $
+// $Id: CEC_TypedProxyPushConsumer.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/CosEvent/CEC_TypedProxyPushConsumer.h"
 #include "orbsvcs/CosEvent/CEC_TypedEventChannel.h"
 #include "orbsvcs/CosEvent/CEC_TypedConsumerAdmin.h"
@@ -37,7 +38,7 @@ TAO_CEC_TypedProxyPushConsumer::TAO_CEC_TypedProxyPushConsumer
   // DSI initialization
   if (TAO_debug_level >= 10)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      ORBSVCS_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("***** Initializing the DSI for the new TypedProxyPushConsumer *****\n")));
     }
 

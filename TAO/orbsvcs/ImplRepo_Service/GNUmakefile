@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 14 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,11 +20,12 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: ImR_Activator_IDL ImR_Locator_IDL ImR_Activator ImR_Activator_Service ImR_Locator ImR_Locator_Service tao_imr
+all: Async_ImR_Client_IDL ImR_Activator_IDL ImR_Locator_IDL ImR_Activator ImR_Activator_Service ImR_Locator ImR_Locator_Service tao_imr
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Async_ImR_Client_IDL $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Activator_IDL $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Locator_IDL $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Activator $(@)
@@ -33,8 +34,12 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Locator_Service $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.tao_imr $(@)
 
+.PHONY: Async_ImR_Client_IDL
+Async_ImR_Client_IDL:
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Async_ImR_Client_IDL all
+
 .PHONY: ImR_Activator_IDL
-ImR_Activator_IDL:
+ImR_Activator_IDL: Async_ImR_Client_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Activator_IDL all
 
 .PHONY: ImR_Locator_IDL
@@ -42,19 +47,19 @@ ImR_Locator_IDL: ImR_Activator_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Locator_IDL all
 
 .PHONY: ImR_Activator
-ImR_Activator: ImR_Activator_IDL ImR_Locator_IDL
+ImR_Activator: ImR_Locator_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Activator all
 
 .PHONY: ImR_Activator_Service
-ImR_Activator_Service: ImR_Activator_IDL ImR_Locator_IDL ImR_Activator
+ImR_Activator_Service: ImR_Activator
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Activator_Service all
 
 .PHONY: ImR_Locator
-ImR_Locator: ImR_Activator_IDL ImR_Locator_IDL
+ImR_Locator: ImR_Locator_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Locator all
 
 .PHONY: ImR_Locator_Service
-ImR_Locator_Service: ImR_Activator_IDL ImR_Locator_IDL ImR_Locator
+ImR_Locator_Service: ImR_Locator
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.ImR_Locator_Service all
 
 .PHONY: tao_imr
@@ -62,6 +67,7 @@ tao_imr:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.tao_imr all
 
 project_name_list:
+	@echo Async_ImR_Client_IDL
 	@echo ImR_Activator
 	@echo ImR_Activator_IDL
 	@echo ImR_Activator_Service

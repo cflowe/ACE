@@ -26,12 +26,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AsyncStartupWaiterC.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AsyncStartupWaiterS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ImR_LocatorC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -40,12 +34,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AsyncStartupWaiterC.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AsyncStartupWaiterS.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ImR_LocatorC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -62,17 +50,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="AsyncStartupWaiter.idl">
-      <Filter>Idl Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="ImR_Locator.idl">
       <Filter>Idl Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="AsyncStartupWaiterC.inl">
-      <Filter>Inline Files</Filter>
-    </None>
     <None Include="ImR_LocatorC.inl">
       <Filter>Inline Files</Filter>
     </None>

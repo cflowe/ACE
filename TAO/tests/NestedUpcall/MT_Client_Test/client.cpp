@@ -3,7 +3,7 @@
 /**
  *  @file    client.cpp
  *
- *  $Id: client.cpp 93650 2011-03-28 08:44:53Z johnnyw $
+ *  $Id: client.cpp 96944 2013-03-30 09:43:50Z mcorino $
  *
  *  Start one server thread calling a distant MT Object serveral times,
  *  also starting serveral client threads which call the MT Object too.
@@ -23,6 +23,7 @@
 #include "ace/OS_NS_unistd.h"
 #include "ace/OS_NS_fcntl.h"
 #include "ace/Malloc_Base.h"
+#include "ace/Truncate.h"
 
 MT_Client_Task::MT_Client_Task (int argc, ACE_TCHAR **argv,
                                 int client_number)
@@ -196,7 +197,7 @@ MT_Client::init (int argc, ACE_TCHAR **argv,
   try
     {
       char buf[64];
-      ACE_OS::sprintf (buf, "thread_%lx", reinterpret_cast<long> (this));
+      ACE_OS::sprintf (buf, "thread_%lx", ACE_Utils::truncate_cast<long> ((intptr_t)this));
 
       this->orb_var_ =
         CORBA::ORB_init (this->argc_,

@@ -1,9 +1,9 @@
 // -*- MPC -*-
 //
-// $Id: LoadBalancer.mpc 91911 2010-09-22 09:51:57Z msmit $
+// $Id: LoadBalancer.mpc 97014 2013-04-12 22:47:02Z mitza $
 
 
-project(LoadManager): namingexe, portableserver, install, iortable, iormanip, loadbalancing {
+project(LoadManager): namingexe, portableserver, install, iortable, iormanip, loadbalancing, svc_utils {
   exename  = tao_loadmanager
   requires += ami interceptors
   Source_Files {
@@ -12,7 +12,7 @@ project(LoadManager): namingexe, portableserver, install, iortable, iormanip, lo
   }
 }
 
-project(LoadMonitor): namingexe, portableserver, install, loadbalancing {
+project(LoadMonitor): namingexe, portableserver, install, loadbalancing, svc_utils {
   requires += ami interceptors
   exename  = tao_loadmonitor
   Source_Files {

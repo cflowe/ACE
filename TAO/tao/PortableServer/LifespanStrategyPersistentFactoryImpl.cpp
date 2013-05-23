@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LifespanStrategyPersistentFactoryImpl.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: LifespanStrategyPersistentFactoryImpl.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/LifespanStrategyPersistentFactoryImpl.h"
 #include "ace/Dynamic_Service.h"
@@ -26,7 +26,7 @@ namespace TAO
         }
         case ::PortableServer::TRANSIENT :
         {
-          ACE_ERROR ((LM_ERROR, "Incorrect type in LifespanStrategyPersistentFactoryImpl"));
+          TAOLIB_ERROR ((LM_ERROR, "Incorrect type in LifespanStrategyPersistentFactoryImpl"));
           break;
         }
       }

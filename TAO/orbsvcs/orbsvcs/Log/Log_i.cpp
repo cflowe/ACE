@@ -1,5 +1,7 @@
-// $Id: Log_i.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: Log_i.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Log/Log_i.h"
 #include "orbsvcs/Log/LogMgr_i.h"
 #include "orbsvcs/Time_Utilities.h"
@@ -1120,7 +1122,7 @@ TAO_Log_i::check_capacity_alarm_threshold (void)
           else
             {
               if (TAO_debug_level > 0)
-                ACE_DEBUG ((LM_DEBUG,
+                ORBSVCS_DEBUG ((LM_DEBUG,
                             "threshold of %d breached\n",
                             this->thresholds_[this->current_threshold_]));
             }

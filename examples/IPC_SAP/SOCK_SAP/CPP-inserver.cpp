@@ -1,4 +1,4 @@
-// $Id: CPP-inserver.cpp 91671 2010-09-08 18:39:23Z johnnyw $
+// $Id: CPP-inserver.cpp 96943 2013-03-30 09:42:31Z mcorino $
 
 // This example tests the features of the <ACE_SOCK_Acceptor>,
 // <ACE_SOCK_Stream>, and <ACE_Svc_Handler> classes.  If the platform
@@ -12,7 +12,7 @@
 #include "ace/Basic_Types.h"
 #include "ace/OS_NS_sys_select.h"
 #include "ace/OS_main.h"
-
+#include "ace/Truncate.h"
 
 
 // Are we running verbosely?
@@ -328,7 +328,7 @@ run_event_loop (u_short port)
       ACE_Time_Value timeout (ACE_DEFAULT_TIMEOUT);
       ACE_Handle_Set temp = handle_set;
 
-      int result = ACE_OS::select (int (oneway_acceptor.get_handle ()) + 1,
+      int result = ACE_OS::select (ACE_Utils::truncate_cast<int> ((intptr_t)oneway_acceptor.get_handle ()) + 1,
                                    (fd_set *) temp,
                                    0,
                                    0,

@@ -1,4 +1,4 @@
-// $Id: DII_Reply_Handler.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: DII_Reply_Handler.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "Request.h"
 #include "ExceptionList.h"
@@ -56,7 +56,7 @@ TAO_DII_Reply_Handler::handle_location_forward (TAO_InputCDR &incoming,
 {
   if (TAO_debug_level > 3)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT("TAO (%P|%t) Base DII_Reply_Handler::")
                   ACE_TEXT("handle_location_forward called, ")
                   ACE_TEXT("reply_status = %d\n"),

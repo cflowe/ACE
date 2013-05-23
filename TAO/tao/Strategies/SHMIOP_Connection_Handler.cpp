@@ -1,4 +1,4 @@
-// $Id: SHMIOP_Connection_Handler.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: SHMIOP_Connection_Handler.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Strategies/SHMIOP_Connection_Handler.h"
 
@@ -56,7 +56,7 @@ TAO_SHMIOP_Connection_Handler::~TAO_SHMIOP_Connection_Handler (void)
 
   if (result == -1 && TAO_debug_level)
     {
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   ACE_TEXT("TAO (%P|%t) - SHMIOP_Connection_Handler::")
                   ACE_TEXT("~SHMIOP_Connection_Handler, ")
                   ACE_TEXT("release_os_resources() failed %m\n")));
@@ -143,7 +143,7 @@ TAO_SHMIOP_Connection_Handler::open (void*)
 
   if (TAO_debug_level > 0)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("TAO (%P|%t) - SHMIOP connection from client")
                   ACE_TEXT ("<%s> on %d\n"),
                   local_as_string, this->peer ().get_handle ()));

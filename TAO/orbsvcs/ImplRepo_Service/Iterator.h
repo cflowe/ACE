@@ -3,7 +3,7 @@
 /**
  *  @file   Iterator.h
  *
- *  $Id: Iterator.h 77020 2007-02-12 13:56:49Z johnnyw $
+ *  $Id: Iterator.h 97053 2013-04-18 22:37:56Z mesnier_p $
  *
  *  @brief  This file declares ImR's iterator.
  *
@@ -16,7 +16,7 @@
 
 #include "Locator_Repository.h"
 #include "tao/PortableServer/PortableServer.h"
-#include "tao/ImR_Client/ImplRepoS.h"
+#include "ImplRepoS.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once

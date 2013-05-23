@@ -1,4 +1,4 @@
-// $Id: OS_NS_Thread.cpp 96890 2013-03-07 19:18:37Z mesnier_p $
+// $Id: OS_NS_Thread.cpp 97097 2013-05-08 13:53:29Z schmidt $
 
 #include "ace/OS_NS_Thread.h"
 
@@ -14,7 +14,7 @@
 #include "ace/Object_Manager_Base.h"
 #include "ace/OS_NS_errno.h"
 #include "ace/OS_NS_ctype.h"
-#include "ace/Log_Msg.h" // for ACE_ASSERT
+#include "ace/Log_Category.h" // for ACE_ASSERT
 // This is necessary to work around nasty problems with MVS C++.
 #include "ace/Auto_Ptr.h"
 #include "ace/Thread_Mutex.h"
@@ -54,12 +54,11 @@ ACE_Thread_ID::to_string (char *thr_string) const
   ACE_OS::sprintf (thr_string, "%u",
                    static_cast <unsigned> (this->thread_id_));
 #else
-  // Yes, this is an ugly C-style cast, but the
-  // correct C++ cast is different depending on
-  // whether the t_id is an integral type or a pointer
-  // type. FreeBSD uses a pointer type, but doesn't
-  // have a _np function to get an integral type like
-  // other OSes, so use the bigger hammer.
+  // Yes, this is an ugly C-style cast, but the correct C++ cast is
+  // different depending on whether the t_id is an integral type or a
+  // pointer type. FreeBSD uses a pointer type, but doesn't have a _np
+  // function to get an integral type like other OSes, so use the
+  // bigger hammer.
   ACE_OS::sprintf (thr_string, "%lu",
                    (unsigned long) thread_handle_);
 #endif /* ACE_WIN32 */
@@ -400,10 +399,10 @@ ACE_TSS_Info::dump (void)
   //  ACE_OS_TRACE ("ACE_TSS_Info::dump");
 
 #   if 0
-  ACE_DEBUG ((LM_DEBUG, ACE_BEGIN_DUMP, this));
-  ACE_DEBUG ((LM_DEBUG, ACE_TEXT ("key_ = %u\n"), this->key_));
-  ACE_DEBUG ((LM_DEBUG, ACE_TEXT ("destructor_ = %u\n"), this->destructor_));
-  ACE_DEBUG ((LM_DEBUG, ACE_END_DUMP));
+  ACELIB_DEBUG ((LM_DEBUG, ACE_BEGIN_DUMP, this));
+  ACELIB_DEBUG ((LM_DEBUG, ACE_TEXT ("key_ = %u\n"), this->key_));
+  ACELIB_DEBUG ((LM_DEBUG, ACE_TEXT ("destructor_ = %u\n"), this->destructor_));
+  ACELIB_DEBUG ((LM_DEBUG, ACE_END_DUMP));
 #   endif /* 0 */
 # endif /* ACE_HAS_DUMP */
 }

@@ -146,6 +146,7 @@ FILES = \
   Lib_Find.cpp \
   Local_Memory_Pool.cpp \
   Lock.cpp \
+  Log_Category.cpp \
   Log_Msg.cpp \
   Log_Msg_Backend.cpp \
   Log_Msg_Callback.cpp \
@@ -757,8 +758,8 @@ endif
 #Message_Block.inl
 #Service_Gestalt.inl
 #Malloc_Allocator.inl
-#Cleanup.inl
 #Local_Tokens.inl
+#Cleanup.inl
 #Stream.inl
 #FIFO_Send_Msg.inl
 #Task.inl
@@ -829,6 +830,7 @@ endif
 #ATM_Addr.inl
 #Functor_String.inl
 #OS_NS_sys_msg.inl
+#Log_Category.inl
 #High_Res_Timer.inl
 #Mutex.inl
 #OS_NS_wchar.inl
@@ -980,6 +982,7 @@ endif
 #config-win32-dmc.h
 #config-win32-interix.h
 #config-win32-mingw.h
+#config-win32-mingw64.h
 #config-win32-msvc-10.h
 #config-win32-msvc-7.h
 #config-win32-msvc-8.h
@@ -1346,8 +1349,8 @@ endif
 #Monitor_Control_Action.h
 #Service_Gestalt.h
 #Malloc_Allocator.h
-#Cleanup.h
 #Local_Tokens.h
+#Cleanup.h
 #OS_NS_sys_utsname.h
 #Stream.h
 #FIFO_Send_Msg.h
@@ -1436,6 +1439,7 @@ endif
 #ATM_Addr.h
 #Functor_String.h
 #OS_NS_sys_msg.h
+#Log_Category.h
 #High_Res_Timer.h
 #Local_Name_Space_T.h
 #Mutex.h
@@ -1586,6 +1590,7 @@ endif
 #Lib_Find.cpp
 #Local_Memory_Pool.cpp
 #Lock.cpp
+#Log_Category.cpp
 #Log_Msg.cpp
 #Log_Msg_Backend.cpp
 #Log_Msg_Callback.cpp

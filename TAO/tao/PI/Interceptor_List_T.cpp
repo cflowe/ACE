@@ -1,4 +1,4 @@
-// $Id: Interceptor_List_T.cpp 92124 2010-10-01 13:02:41Z johnnyw $
+// $Id: Interceptor_List_T.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PI/PI_includeC.h"
 #include "tao/ORB_Constants.h"
@@ -219,7 +219,7 @@ namespace TAO
         // Exceptions should not be propagated beyond this call.
         if (TAO_debug_level > 3)
           {
-            ACE_DEBUG ((LM_DEBUG,
+            TAOLIB_DEBUG ((LM_DEBUG,
                         ACE_TEXT ("TAO (%P|%t) - Exception in ")
                         ACE_TEXT ("Interceptor_List")
                         ACE_TEXT ("::destroy_interceptors ()\n")));

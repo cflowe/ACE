@@ -1,15 +1,13 @@
 // -*- IDL -*-
 
 /**
- *  @file   ImplRepo.pidl
- *
- * $Id: ImplRepo.pidl 96840 2013-02-19 21:48:51Z harrisb $
+ * $Id: ImplRepo.idl 97063 2013-04-22 14:55:00Z mitza $
  */
 
 #ifndef TAO_IMRCLIENT_IMPLREPO_PIDL
 #define TAO_IMRCLIENT_IMPLREPO_PIDL
 
-#include "tao/ImR_Client/ServerObject.pidl"
+#include "ServerObject.idl"
 
 module ImplementationRepository
 {

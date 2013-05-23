@@ -1,4 +1,4 @@
-// $Id: EC_Per_Supplier_Filter.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: EC_Per_Supplier_Filter.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/Event/EC_Per_Supplier_Filter.h"
 #include "orbsvcs/Event/EC_Event_Channel_Base.h"
@@ -82,7 +82,7 @@ TAO_EC_Per_Supplier_Filter::connected (TAO_EC_ProxyPushSupplier* supplier)
         pub.publications[j].event;
 
 #if TAO_EC_ENABLE_DEBUG_MESSAGES
-      ACE_DEBUG ((LM_DEBUG, "Connecting consumer <%x> to <%x>, "
+      ORBSVCS_DEBUG ((LM_DEBUG, "Connecting consumer <%x> to <%x>, "
                   "trying event <%d:%d>  ",
                   supplier, this,
                   event.header.source, event.header.type));
@@ -90,13 +90,13 @@ TAO_EC_Per_Supplier_Filter::connected (TAO_EC_ProxyPushSupplier* supplier)
       if (supplier->can_match (event.header))
         {
 #if TAO_EC_ENABLE_DEBUG_MESSAGES
-          ACE_DEBUG ((LM_DEBUG, "  matched\n"));
+          ORBSVCS_DEBUG ((LM_DEBUG, "  matched\n"));
 #endif /* TAO_EC_ENABLED_DEBUG_MESSAGES */
           this->collection_->connected (supplier);
           return;
         }
 #if TAO_EC_ENABLE_DEBUG_MESSAGES
-      ACE_DEBUG ((LM_DEBUG, "  not matched\n"));
+      ORBSVCS_DEBUG ((LM_DEBUG, "  not matched\n"));
 #endif /* TAO_EC_ENABLED_DEBUG_MESSAGES */
     }
 }
@@ -117,12 +117,12 @@ TAO_EC_Per_Supplier_Filter::reconnected (TAO_EC_ProxyPushSupplier* supplier)
       const RtecEventComm::Event& event =
         pub.publications[j].event;
 
-      //      ACE_DEBUG ((LM_DEBUG, "Trying %d:%d in %x\n",
+      //      ORBSVCS_DEBUG ((LM_DEBUG, "Trying %d:%d in %x\n",
       //                  event.header.source, event.header.type,
       //                  this));
       if (supplier->can_match (event.header))
         {
-          //          ACE_DEBUG ((LM_DEBUG, "  matched %x\n", supplier));
+          //          ORBSVCS_DEBUG ((LM_DEBUG, "  matched %x\n", supplier));
           this->collection_->connected (supplier);
           return;
         }

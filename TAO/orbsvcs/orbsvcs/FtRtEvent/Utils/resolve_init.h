@@ -3,7 +3,7 @@
 /**
  *  @file   resolve_init.h
  *
- *  $Id: resolve_init.h 90386 2010-06-02 13:52:08Z vzykov $
+ *  $Id: resolve_init.h 97014 2013-04-12 22:47:02Z mitza $
  *
  *  @author Huang-Ming Huang <hh1@cse.wustl.edu>
  */
@@ -11,6 +11,11 @@
 #ifndef RESOVLE_INIT_H
 #define RESOVLE_INIT_H
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "tao/Versioned_Namespace.h"
 
 #include "tao/ORB.h"
@@ -35,13 +40,13 @@ resolve_init (CORBA::ORB_ptr orb,
 
     catch (const CORBA::Exception&)
     {
-      ACE_ERROR((
+      ORBSVCS_ERROR((
                   LM_ERROR,
                   " (%P|%t) Unable to initialize %s.\n",
               id
             ));
       if (!CORBA::is_nil(obj.in()))
-        ACE_ERROR((
+        ORBSVCS_ERROR((
                     LM_ERROR,
                     "    due to narrowing problem\n"
               ));

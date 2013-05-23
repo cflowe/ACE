@@ -4,7 +4,7 @@
 /**
 *  @file Locator_Repository.h
 *
-*  $Id: Locator_Repository.h 96819 2013-02-14 16:28:09Z harrisb $
+*  $Id: Locator_Repository.h 97036 2013-04-16 19:56:43Z mesnier_p $
 *
 *  This class implements the Repository for the Implementation Repository.
 *
@@ -32,6 +32,8 @@
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
+
+class ImR_Locator_i;
 
 /**
 * @class Locator_Repository
@@ -62,7 +64,8 @@ public:
 
   int unregister_if_address_reused (const ACE_CString& server_id,
                                     const ACE_CString& name,
-                                    const char* partial_ior);
+                                    const char* partial_ior,
+                                    ImR_Locator_i* imr_locator);
 
   /// Add a new server to the Repository
   int add_server (const ACE_CString& server_id,
@@ -146,6 +149,9 @@ protected:
   /// report the ImR Locator's IOR
   virtual int report_ior(PortableServer::POA_ptr imr_poa);
 
+  /// recover the ImR Locator's IOR from the persisted file
+  virtual int recover_ior(void);
+
   int setup_multicast (ACE_Reactor* reactor, const char* imr_ior);
   void teardown_multicast();
 
@@ -196,7 +202,6 @@ private:
   virtual int persistent_remove(const ACE_CString& name, bool activator);
 };
 
-
 /**
 * @class UpdateableServerInfo
 *
@@ -215,17 +220,19 @@ public:
   /// constructor
   /// @param repo the repo to report updates to
   /// @param si an already retrieved Server_Info_Ptr
-  UpdateableServerInfo(Locator_Repository* repo, const Server_Info_Ptr& si);
+  UpdateableServerInfo(Locator_Repository* repo,
+                       const Server_Info_Ptr& si,
+                       bool reset_start_count = false);
 
   /// constructor (no repo updates will be performed)
   /// @param si a Server_Info to create a non-stored Server_Info_Ptr from
   UpdateableServerInfo(const Server_Info& si);
 
   /// destructor (updates repo if needed)
-  ~UpdateableServerInfo();
+  ~UpdateableServerInfo(void);
 
   /// explicitly update repo if needed
-  void update_repo();
+  void update_repo(void);
 
   /// const Server_Info access
   const Server_Info* operator->() const;
@@ -235,13 +242,14 @@ public:
 
   /// retrieve smart pointer to non-const Server_Info
   /// and indicate repo update required
-  const Server_Info_Ptr& edit();
+  const Server_Info_Ptr& edit(void);
 
   /// force indication of update needed
-  void needs_update();
+  void needs_update(void);
 
   /// indicate it Server_Info_Ptr is null
-  bool null() const;
+  bool null(void) const;
+
 private:
   UpdateableServerInfo(const UpdateableServerInfo& );
   const UpdateableServerInfo& operator=(const UpdateableServerInfo& );

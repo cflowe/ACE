@@ -4,7 +4,7 @@
 /**
  *  @file    Map_Test.h
  *
- *  $Id: Map_Test.h 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Map_Test.h 96943 2013-03-30 09:42:31Z mcorino $
  *
  * This file has the class definitions needed for template generation in
  * Map_Test.cpp.  They have to be in a separate file so AIX xlC can
@@ -53,7 +53,7 @@ public:
       size_t original_size = key.size ();
 
       // Size of this counter key.
-      size_t counter_key_size = sizeof this->counter_;
+      const size_t counter_key_size = sizeof this->counter_;
 
       // Resize to accommodate both the original data and the new key.
       key.size (counter_key_size + original_size);
@@ -61,7 +61,7 @@ public:
       // Add new key data.
       ACE_OS::memcpy (&key[original_size],
                       &++this->counter_,
-                      sizeof this->counter_);
+                      counter_key_size);
 
       // Success.
       return 0;

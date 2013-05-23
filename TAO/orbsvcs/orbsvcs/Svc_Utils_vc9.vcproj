@@ -365,6 +365,9 @@
 				RelativePath="IOR_Multicast.cpp">
 			</File>
 			<File
+				RelativePath="Log_Macros.cpp">
+			</File>
+			<File
 				RelativePath="RtecBaseC.cpp">
 			</File>
 			<File
@@ -391,6 +394,9 @@
 			</File>
 			<File
 				RelativePath="IOR_Multicast.h">
+			</File>
+			<File
+				RelativePath="Log_Macros.h">
 			</File>
 			<File
 				RelativePath="RtecBaseC.h">

@@ -213,6 +213,7 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
+#Async_IORTable.mpc
 #IORTable.mpc
 #
 #idl_files:

@@ -1,5 +1,6 @@
-// $Id: SSLIOP_ORBInitializer.cpp 91677 2010-09-08 19:18:49Z johnnyw $
+// $Id: SSLIOP_ORBInitializer.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/SSLIOP/SSLIOP_ORBInitializer.h"
 #include "orbsvcs/SSLIOP/SSLIOP_Current.h"
 #include "orbsvcs/SSLIOP/SSLIOP_Invocation_Interceptor.h"
@@ -171,7 +172,7 @@ TAO::SSLIOP::ORBInitializer::get_tss_slot_id (
 
   if (security_current == 0)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      ORBSVCS_DEBUG ((LM_DEBUG,
                   "Unable to obtain TSS slot ID from "
                   "\"SecurityCurrent\" object.\n"));
 

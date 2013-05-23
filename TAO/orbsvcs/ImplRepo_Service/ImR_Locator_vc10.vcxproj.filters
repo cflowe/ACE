@@ -24,7 +24,7 @@
     <ClCompile Include="Adapter_Activator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AsyncStartupWaiter_i.cpp">
+    <ClCompile Include="AsyncAccessManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Config_Backing_Store.cpp">
@@ -36,10 +36,16 @@
     <ClCompile Include="ImR_Locator_i.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ImR_ResponseHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="INS_Locator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Iterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LiveCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Locator_Loader.cpp">
@@ -71,7 +77,7 @@
     <ClInclude Include="Adapter_Activator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AsyncStartupWaiter_i.h">
+    <ClInclude Include="AsyncAccessManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Config_Backing_Store.h">
@@ -83,10 +89,16 @@
     <ClInclude Include="ImR_Locator_i.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ImR_ResponseHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="INS_Locator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Iterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LiveCheck.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="locator_export.h">

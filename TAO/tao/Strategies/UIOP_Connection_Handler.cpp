@@ -1,4 +1,4 @@
-// $Id: UIOP_Connection_Handler.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: UIOP_Connection_Handler.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Strategies/UIOP_Connection_Handler.h"
 
@@ -54,7 +54,7 @@ TAO_UIOP_Connection_Handler::~TAO_UIOP_Connection_Handler (void)
 
   if (result == -1 && TAO_debug_level)
     {
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   ACE_TEXT("TAO (%P|%t) - UIOP_Connection_Handler::")
                   ACE_TEXT("~UIOP_Connection_Handler, ")
                   ACE_TEXT("release_os_resources() failed %m\n")));
@@ -121,7 +121,7 @@ TAO_UIOP_Connection_Handler::open (void*)
     return -1;
 
   if (TAO_debug_level > 0)
-    ACE_DEBUG ((LM_DEBUG,
+    TAOLIB_DEBUG ((LM_DEBUG,
                 ACE_TEXT ("TAO (%P|%t) UIOP connection to server ")
                 ACE_TEXT ("<%C> on %d\n"),
                 addr.get_path_name (), this->peer ().get_handle ()));

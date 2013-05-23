@@ -212,11 +212,11 @@ endif
 endif
 
 #BEGIN MPC-Generated Install Info
-#idl_files:
-#RepositoryManagerDaemon.idl
-#
 #build_files:
 #RepositoryManager.mpc
+#
+#idl_files:
+#RepositoryManagerDaemon.idl
 #
 
 #END MPC-Generated Install Info

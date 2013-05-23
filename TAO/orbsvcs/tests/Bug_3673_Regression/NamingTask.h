@@ -1,4 +1,4 @@
-// $Id: NamingTask.h 95323 2011-12-14 12:37:01Z msmit $
+// $Id: NamingTask.h 96986 2013-04-11 16:39:42Z mesnier_p $
 
 #ifndef NAMINGTASK_H
 #define NAMINGTASK_H

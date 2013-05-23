@@ -122,7 +122,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CosNamingd.lib;TAO_IORTabled.lib;TAO_DsLogAdmind.lib;TAO_PortableServerd.lib;TAO_DsLogAdmin_Skeld.lib;TAO_Valuetyped.lib;TAO_DynamicAnyd.lib;ACE_ETCLd.lib;TAO_ETCLd.lib;ACE_ETCL_Parserd.lib;TAO_Svc_Utilsd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Utilsd.lib;TAO_DsLogAdmin_Servd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_PortableServerd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;TAO_IORTabled.lib;TAO_DsLogAdmind.lib;TAO_DsLogAdmin_Skeld.lib;TAO_Valuetyped.lib;TAO_DynamicAnyd.lib;ACE_ETCLd.lib;TAO_ETCLd.lib;ACE_ETCL_Parserd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Utilsd.lib;TAO_DsLogAdmin_Servd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)tao_tls_basic.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -160,7 +160,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CosNaming.lib;TAO_IORTable.lib;TAO_DsLogAdmin.lib;TAO_PortableServer.lib;TAO_DsLogAdmin_Skel.lib;TAO_Valuetype.lib;TAO_DynamicAny.lib;ACE_ETCL.lib;TAO_ETCL.lib;ACE_ETCL_Parser.lib;TAO_Svc_Utils.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Utils.lib;TAO_DsLogAdmin_Serv.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_PortableServer.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;TAO_IORTable.lib;TAO_DsLogAdmin.lib;TAO_DsLogAdmin_Skel.lib;TAO_Valuetype.lib;TAO_DynamicAny.lib;ACE_ETCL.lib;TAO_ETCL.lib;ACE_ETCL_Parser.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Utils.lib;TAO_DsLogAdmin_Serv.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)tao_tls_basic.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -200,7 +200,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CosNamingd.lib;TAO_IORTabled.lib;TAO_DsLogAdmind.lib;TAO_PortableServerd.lib;TAO_DsLogAdmin_Skeld.lib;TAO_Valuetyped.lib;TAO_DynamicAnyd.lib;ACE_ETCLd.lib;TAO_ETCLd.lib;ACE_ETCL_Parserd.lib;TAO_Svc_Utilsd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Utilsd.lib;TAO_DsLogAdmin_Servd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_PortableServerd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;TAO_IORTabled.lib;TAO_DsLogAdmind.lib;TAO_DsLogAdmin_Skeld.lib;TAO_Valuetyped.lib;TAO_DynamicAnyd.lib;ACE_ETCLd.lib;TAO_ETCLd.lib;ACE_ETCL_Parserd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Utilsd.lib;TAO_DsLogAdmin_Servd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)tao_tls_basic.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 <!--
@@ -245,7 +245,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CosNaming.lib;TAO_IORTable.lib;TAO_DsLogAdmin.lib;TAO_PortableServer.lib;TAO_DsLogAdmin_Skel.lib;TAO_Valuetype.lib;TAO_DynamicAny.lib;ACE_ETCL.lib;TAO_ETCL.lib;ACE_ETCL_Parser.lib;TAO_Svc_Utils.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Utils.lib;TAO_DsLogAdmin_Serv.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_PortableServer.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;TAO_IORTable.lib;TAO_DsLogAdmin.lib;TAO_DsLogAdmin_Skel.lib;TAO_Valuetype.lib;TAO_DynamicAny.lib;ACE_ETCL.lib;TAO_ETCL.lib;ACE_ETCL_Parser.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Utils.lib;TAO_DsLogAdmin_Serv.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)tao_tls_basic.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>

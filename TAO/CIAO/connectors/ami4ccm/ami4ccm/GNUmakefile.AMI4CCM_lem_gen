@@ -213,11 +213,11 @@ endif
 endif
 
 #BEGIN MPC-Generated Install Info
-#idl_files:
-#ami4ccmE.idl
-#
 #build_files:
 #ami4ccm.mpc
+#
+#idl_files:
+#ami4ccmE.idl
 #
 
 #END MPC-Generated Install Info

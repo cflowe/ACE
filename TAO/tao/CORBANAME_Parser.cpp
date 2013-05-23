@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: CORBANAME_Parser.cpp 94802 2011-10-20 09:46:10Z mcorino $
+// $Id: CORBANAME_Parser.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/CORBANAME_Parser.h"
 
@@ -102,7 +102,7 @@ TAO_CORBANAME_Parser::parse_string (const char *ior, CORBA::ORB_ptr orb)
 
       // Check if the Object reference is nil.
       if (CORBA::is_nil (name_context.in ()))
-        ACE_ERROR_RETURN ((LM_ERROR,
+        TAOLIB_ERROR_RETURN ((LM_ERROR,
                            "Cannot resolve Naming Service: CORBANAME_Parser\n"),
                           0);
 
@@ -111,7 +111,7 @@ TAO_CORBANAME_Parser::parse_string (const char *ior, CORBA::ORB_ptr orb)
 
       if (!is_a)
         {
-          ACE_ERROR_RETURN ((LM_ERROR,
+          TAOLIB_ERROR_RETURN ((LM_ERROR,
                              "Cannot narrow Naming Service: "
                              "CORBANAME_Parser\n"),
                             0);

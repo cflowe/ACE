@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: ORB_Core.inl 91153 2010-07-21 10:04:02Z vzykov $
+// $Id: ORB_Core.inl 97039 2013-04-17 14:24:16Z mesnier_p $
 
 #include "tao/ORB_Core_TSS_Resources.h"
 #include "tao/ORB_Table.h"
@@ -518,6 +518,18 @@ TAO_ORB_Core::resolve_ior_table (void)
       this->resolve_ior_table_i ();
     }
   return CORBA::Object::_duplicate (this->ior_table_);
+}
+
+ACE_INLINE CORBA::Object_ptr
+TAO_ORB_Core::resolve_async_ior_table (void)
+{
+  ACE_GUARD_RETURN (TAO_SYNCH_MUTEX, mon, this->lock_,
+                    CORBA::Object::_nil ());
+  if (CORBA::is_nil (this->async_ior_table_))
+    {
+      this->resolve_async_ior_table_i ();
+    }
+  return CORBA::Object::_duplicate (this->async_ior_table_);
 }
 
 ACE_INLINE CORBA::Object_ptr

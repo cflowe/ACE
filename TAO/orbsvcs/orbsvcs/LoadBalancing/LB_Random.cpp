@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LB_Random.cpp 93554 2011-03-16 06:29:09Z olli $
+// $Id: LB_Random.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/LoadBalancing/LB_Random.h"
 
@@ -126,7 +126,7 @@ TAO_LB_Random::_tao_next_member (
 
   ACE_ASSERT (i < len);
 
-//   ACE_DEBUG ((LM_DEBUG,
+//   ORBSVCS_DEBUG ((LM_DEBUG,
 //               "** Len = %u\t"
 //               "Location # %u\t"
 //               "Loc Name = \"%s\"\n",

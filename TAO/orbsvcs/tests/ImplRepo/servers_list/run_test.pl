@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 96844 2013-02-20 16:25:09Z harrisb $
+# $Id: run_test.pl 96986 2013-04-11 16:39:42Z mesnier_p $
 # -*- perl -*-
 
 ###############################################################################
@@ -305,8 +305,7 @@ sub servers_list_test
 
     my $result = 0;
     my $start_time = time();
-
-    $IMR->Arguments ("-d 0 -v 1000 -o $imr_imriorfile -orbendpoint iiop://:$port");
+    $IMR->Arguments ("-d $debug_level -v 1000 -o $imr_imriorfile -orbendpoint iiop://:$port");
 
     ##### Start ImplRepo #####
     $IMR_status = $IMR->Spawn ();

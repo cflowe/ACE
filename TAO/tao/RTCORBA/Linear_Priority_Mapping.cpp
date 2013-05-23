@@ -1,4 +1,4 @@
-// $Id: Linear_Priority_Mapping.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: Linear_Priority_Mapping.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/orbconf.h"
 
@@ -142,7 +142,7 @@ TAO_Linear_Priority_Mapping::to_CORBA (RTCORBA::NativePriority native_priority,
           && (native_priority < this->max_
               || native_priority > this->min_)))
     {
-        ACE_DEBUG ((LM_DEBUG,
+        TAOLIB_DEBUG ((LM_DEBUG,
                     "TAO (%P|%t) - Linear_Priority_Mapping::to_CORBA: "
                     " priority %d out of range [%d,%d]\n",
                     native_priority, this->min_, this->max_));

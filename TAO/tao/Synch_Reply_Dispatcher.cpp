@@ -1,4 +1,4 @@
-// $Id: Synch_Reply_Dispatcher.cpp 95623 2012-03-20 11:46:15Z sma $
+// $Id: Synch_Reply_Dispatcher.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Synch_Reply_Dispatcher.h"
 #include "tao/ORB_Core.h"
@@ -92,7 +92,7 @@ TAO_Synch_Reply_Dispatcher::dispatch_reply (
       {
         if (TAO_debug_level > 2)
           {
-            ACE_ERROR ((LM_ERROR,
+            TAOLIB_ERROR ((LM_ERROR,
                         "TAO (%P|%t) - Synch_Reply_Dispatcher::dispatch_reply "
                         "clone_from failed\n"));
           }

@@ -1,5 +1,6 @@
-// $Id: Routing_Slip_Persistence_Manager.cpp 91816 2010-09-17 08:35:56Z johnnyw $
+// $Id: Routing_Slip_Persistence_Manager.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/Routing_Slip_Persistence_Manager.h"
 #include "orbsvcs/Notify/Standard_Event_Persistence.h"
 #include "orbsvcs/Notify/Persistent_File_Allocator.h"
@@ -155,7 +156,7 @@ Routing_Slip_Persistence_Manager::load(
       }
       else
       {
-        ACE_ERROR((LM_ERROR,
+        ORBSVCS_ERROR((LM_ERROR,
           ACE_TEXT(
             "(%P|%t) Reloaded Persistent Event is missing event.\n")
           ));
@@ -451,7 +452,7 @@ Routing_Slip_Persistence_Manager::store_i(const ACE_Message_Block& event,
     }
     else
     {
-      ACE_ERROR((LM_ERROR,
+      ORBSVCS_ERROR((LM_ERROR,
         ACE_TEXT(
           "(%P|%t) No Event is being stored with this routing slip.\n")
         ));

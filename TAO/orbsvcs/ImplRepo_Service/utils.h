@@ -1,8 +1,8 @@
-//$Id: utils.h 73590 2006-07-17 18:09:12Z ossama $
+//$Id: utils.h 97053 2013-04-18 22:37:56Z mesnier_p $
 #ifndef TAO_IMR_UTILS_H
 #define TAO_IMR_UTILS_H
 
-#include "tao/ImR_Client/ImplRepoC.h"
+#include "ImplRepoC.h"
 
 #include "ace/SString.h"
 

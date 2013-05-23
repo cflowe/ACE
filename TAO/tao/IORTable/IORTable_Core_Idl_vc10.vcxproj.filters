@@ -11,6 +11,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Async_IORTable.mpc">
+      <Filter>Build Files</Filter>
+    </None>
     <None Include="IORTable.mpc">
       <Filter>Build Files</Filter>
     </None>

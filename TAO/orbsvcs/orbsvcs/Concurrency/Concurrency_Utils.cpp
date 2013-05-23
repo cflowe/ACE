@@ -2,13 +2,14 @@
 /**
  *  @file    Concurrency_Utils.cpp
  *
- *  $Id: Concurrency_Utils.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+ *  $Id: Concurrency_Utils.cpp 97014 2013-04-12 22:47:02Z mitza $
  *
  *  @author Torben Worm <tworm@cs.wustl.edu>
  */
 //=============================================================================
 
 
+#include "orbsvcs/Log_Macros.h"
 #include "ace/streams.h"
 #include "orbsvcs/CosConcurrencyControlC.h"
 #include "tao/debug.h"
@@ -59,7 +60,7 @@ TAO_Concurrency_Server::init (CORBA::ORB_ptr orb,
       CORBA::String_var str =
         orb->object_to_string (obj.in ());
 
-      ACE_DEBUG ((LM_DEBUG,
+      ORBSVCS_DEBUG ((LM_DEBUG,
                   "listening as object <%s>\n",
                   str.in ()));
     }

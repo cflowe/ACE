@@ -1,7 +1,7 @@
 /**
  * @author Marcel Smit (msmit@remedy.nl)
  *
- * $Id: CCM_DataReader.h 95989 2012-07-31 12:40:59Z johnnyw $
+ * $Id: CCM_DataReader.h 97051 2013-04-18 18:37:49Z johnnyw $
  *
  * Wrapper facade for DDS.
  */
@@ -106,8 +106,7 @@ namespace CIAO
 
       void set_dds_entity (::DDS::DataReader_ptr dr);
 
-      ::DDS::DataReader_ptr
-      get_dds_entity (void);
+      ::DDS::DataReader_ptr get_dds_entity (void);
 
     private:
       ::DDS::DataReader_var dds_entity_;

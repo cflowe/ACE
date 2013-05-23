@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: UTF16_BOM_Translator.cpp 91741 2010-09-13 18:13:11Z johnnyw $
+// $Id: UTF16_BOM_Translator.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 // ============================================================================
 //    Manages the transformation between native and transmitted UTF-16. It is
@@ -34,7 +34,7 @@ TAO_UTF16_BOM_Translator::TAO_UTF16_BOM_Translator (bool forceBE)
   : forceBE_(forceBE)
 {
   if (TAO_debug_level > 1)
-    ACE_DEBUG((LM_DEBUG,
+    TAOLIB_DEBUG((LM_DEBUG,
                ACE_TEXT ("TAO (%P|%t) - UTF16_BOM_Translator: ")
                ACE_TEXT("forceBE %d\n"), this->forceBE_ ? 1:0 ));
 }

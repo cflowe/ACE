@@ -1,4 +1,4 @@
-// $Id: ZIOP_ORBInitializer.cpp 95789 2012-05-24 14:32:45Z sma $
+// $Id: ZIOP_ORBInitializer.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/ZIOP/ZIOP_ORBInitializer.h"
 
@@ -27,7 +27,7 @@ TAO_ZIOP_ORBInitializer::pre_init (PortableInterceptor::ORBInitInfo_ptr info)
   if (CORBA::is_nil (tao_info.in ()))
     {
       if (TAO_debug_level > 0)
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     "ZIOP (%P|%t) TAO_ZIOP_ORBInitializer::pre_init:\n"
                     "ZIOP (%P|%t)    Unable to narrow "
                     "\"PortableInterceptor::ORBInitInfo_ptr\" to\n"

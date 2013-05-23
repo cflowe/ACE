@@ -3,7 +3,7 @@
 /**
  *  @file   TAO_Service.cpp
  *
- *  $Id: TAO_Service.cpp 93650 2011-03-28 08:44:53Z johnnyw $
+ *  $Id: TAO_Service.cpp 97014 2013-04-12 22:47:02Z mitza $
  *
  * This directory contains an example that illustrates how the ACE
  * Service Configurator can dynamically configure an ORB and its
@@ -15,10 +15,11 @@
 //=============================================================================
 
 
+#include "orbsvcs/Log_Macros.h"
 #include "tao/ORB_Constants.h"
 #include "tao/ORB.h"
 #include "ace/Service_Config.h"
-#include "ace/Log_Msg.h"
+#include "orbsvcs/Log_Macros.h"
 #include "ace/Signal.h"
 #include "ace/Time_Value.h"
 #include "ace/Argv_Type_Converter.h"
@@ -44,7 +45,7 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
 
           orb->perform_work (tv);
 
-          ACE_DEBUG ((LM_DEBUG,
+          ORBSVCS_DEBUG ((LM_DEBUG,
                       "Reconfig flag = %d\n",
                       ACE_Service_Config::reconfig_occurred ()));
 

@@ -1,6 +1,10 @@
 // -*- C++ -*-
 //
-// $Id: Log.inl 82954 2008-10-07 08:02:58Z johnnyw $
+// $Id: Log.inl 97014 2013-04-12 22:47:02Z mitza $
+
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -22,7 +26,7 @@ namespace TAO_FTRTEC {
   void Log::hexdump(unsigned int level, const char* buf, size_t len, const ACE_TCHAR* msg)
   {
     if (Log::log_level_ >= level)
-      ACE_HEX_DUMP((LM_DEBUG, buf, len, msg));
+      ORBSVCS_HEX_DUMP((LM_DEBUG, buf, len, msg));
   }
 #else // NDEBUG
   ACE_INLINE

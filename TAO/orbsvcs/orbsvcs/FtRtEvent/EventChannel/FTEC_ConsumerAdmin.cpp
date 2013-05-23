@@ -1,5 +1,6 @@
-// $Id: FTEC_ConsumerAdmin.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: FTEC_ConsumerAdmin.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Event/EC_ProxyConsumer.h"
 #include "orbsvcs/Event/EC_Event_Channel_Base.h"
 #include "orbsvcs/FtRtEvent/EventChannel/FTEC_ConsumerAdmin.h"
@@ -25,7 +26,7 @@ TAO_FTEC_ConsumerAdmin::~TAO_FTEC_ConsumerAdmin (void)
 RtecEventChannelAdmin::ProxyPushSupplier_ptr
 TAO_FTEC_ConsumerAdmin::obtain_push_supplier (void)
 {
-  ACE_DEBUG((LM_DEBUG,"obtain_push_supplier\n" ));
+  ORBSVCS_DEBUG((LM_DEBUG,"obtain_push_supplier\n" ));
   return obtain_proxy();
 }
 

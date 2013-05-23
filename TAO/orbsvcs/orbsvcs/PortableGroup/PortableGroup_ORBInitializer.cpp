@@ -1,5 +1,6 @@
-// $Id: PortableGroup_ORBInitializer.cpp 96334 2012-11-23 08:11:07Z johnnyw $
+// $Id: PortableGroup_ORBInitializer.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/PortableGroup/PortableGroup_ORBInitializer.h"
 #include "orbsvcs/PortableGroup/PortableGroup_Request_Dispatcher.h"
 
@@ -25,7 +26,7 @@ TAO_PortableGroup_ORBInitializer::pre_init (
   if (CORBA::is_nil (tao_info.in ()))
     {
       if (TAO_debug_level > 0)
-        ACE_ERROR ((LM_ERROR,
+        ORBSVCS_ERROR ((LM_ERROR,
                     "(%P|%t) PortableGroup_ORBInitializer::pre_init:\n"
                     "(%P|%t)    Unable to narrow "
                     "\"PortableInterceptor::ORBInitInfo_ptr\" to\n"

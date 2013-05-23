@@ -99,6 +99,29 @@
 			Name="Build Files"
 			Filter="mpc;mpb;mwc">
 			<File
+				RelativePath="Async_IORTable.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
 				RelativePath="IORTable.mpc">
 				<FileConfiguration
 					Name="Debug|Win32"

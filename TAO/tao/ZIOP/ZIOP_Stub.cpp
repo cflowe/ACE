@@ -1,4 +1,4 @@
-// $Id: ZIOP_Stub.cpp 95860 2012-06-11 12:45:05Z sma $
+// $Id: ZIOP_Stub.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/ZIOP/ZIOP_Stub.h"
 
@@ -186,7 +186,7 @@ TAO_ZIOP_Stub::effective_compression_id_list_policy (void)
     {
       if (6 < TAO_debug_level)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
             ACE_TEXT ("ZIOP (%P|%t) ")
             ACE_TEXT ("TAO_ZIOP_Stub::effective_compression_id_list_policy, ")
             ACE_TEXT ("no clientCompressorIdLevelListPolicy (did not compress).\n")));
@@ -216,7 +216,7 @@ TAO_ZIOP_Stub::effective_compression_id_list_policy (void)
         {
           if (6 < TAO_debug_level)
             {
-              ACE_DEBUG ((LM_DEBUG,
+              TAOLIB_DEBUG ((LM_DEBUG,
                 ACE_TEXT ("ZIOP (%P|%t) ")
                 ACE_TEXT ("TAO_ZIOP_Stub::effective_compression_id_list_policy, ")
                 ACE_TEXT ("no serverCompressorIdLevelListPolicy (but allow_ziop_no_server_policies in force).\n")));
@@ -225,7 +225,7 @@ TAO_ZIOP_Stub::effective_compression_id_list_policy (void)
         }
       else if (6 < TAO_debug_level)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
             ACE_TEXT ("ZIOP (%P|%t) ")
             ACE_TEXT ("TAO_ZIOP_Stub::effective_compression_id_list_policy, ")
             ACE_TEXT ("no serverCompressorIdLevelListPolicy (did not compress).\n")));
@@ -259,7 +259,7 @@ TAO_ZIOP_Stub::effective_compression_id_list_policy (void)
                   // This shouldn't happen, it's basically an internal error.
                   if (6 < TAO_debug_level)
                     {
-                      ACE_DEBUG ((LM_DEBUG,
+                      TAOLIB_DEBUG ((LM_DEBUG,
                         ACE_TEXT ("ZIOP (%P|%t) ")
                         ACE_TEXT ("TAO_ZIOP_Stub::effective_compression_id_list_policy, ")
                         ACE_TEXT ("could not copy clientCompressorIdLevelListPolicy (did not compress).\n")));
@@ -284,7 +284,7 @@ TAO_ZIOP_Stub::effective_compression_id_list_policy (void)
                                                            serverEntry->compression_level);
               if (6 < TAO_debug_level)
                 {
-                  ACE_DEBUG ((LM_DEBUG,
+                  TAOLIB_DEBUG ((LM_DEBUG,
                               ACE_TEXT ("ZIOP (%P|%t) ")
                               ACE_TEXT ("TAO_ZIOP_Stub::effective_compression_id_list_policy, ")
                               ACE_TEXT ("found (Client %d: %C@%d == Server %d: %C@%d) using @%d.\n"),
@@ -302,7 +302,7 @@ TAO_ZIOP_Stub::effective_compression_id_list_policy (void)
 
           if (7 < TAO_debug_level)
             {
-              ACE_DEBUG ((LM_DEBUG,
+              TAOLIB_DEBUG ((LM_DEBUG,
                           ACE_TEXT ("ZIOP (%P|%t) ")
                           ACE_TEXT ("TAO_ZIOP_Stub::effective_compression_id_list_policy, ")
                           ACE_TEXT ("checking (Client %d: %C@%d != Server %d: %C@%d).\n"),
@@ -318,7 +318,7 @@ TAO_ZIOP_Stub::effective_compression_id_list_policy (void)
 
   if (6 < TAO_debug_level)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT("ZIOP (%P|%t) ")
                   ACE_TEXT ("TAO_ZIOP_Stub::effective_compression_id_list_policy, ")
                   ACE_TEXT("no matching CompressorIdLevelListPolicy (did not compress).\n")));

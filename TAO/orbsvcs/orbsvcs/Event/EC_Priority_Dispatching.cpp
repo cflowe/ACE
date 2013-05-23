@@ -1,5 +1,6 @@
-// $Id: EC_Priority_Dispatching.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: EC_Priority_Dispatching.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Event/EC_Priority_Dispatching.h"
 #include "orbsvcs/Event/EC_Dispatching_Task.h"
 #include "orbsvcs/Event/EC_Event_Channel_Base.h"
@@ -77,7 +78,7 @@ TAO_EC_Priority_Dispatching::activate (void)
           priority = ACE_Sched_Params::priority_min (ACE_SCHED_OTHER,
                                                      ACE_SCOPE_THREAD);
           if (this->tasks_[i]->activate (flags, 1, 1, priority) == -1)
-            ACE_ERROR ((LM_ERROR,
+            ORBSVCS_ERROR ((LM_ERROR,
                         "EC (%P|%t) cannot activate queue %d", i));
         }
     }

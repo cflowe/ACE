@@ -1,5 +1,5 @@
 /*
-** $Id: AIO_Client_Logging_Daemon.cpp 96825 2013-02-16 16:14:23Z schmidt $
+** $Id: AIO_Client_Logging_Daemon.cpp 97115 2013-05-10 20:40:59Z shuston $
 **
 ** Copyright 2002 Addison Wesley. All Rights Reserved.
 */
@@ -198,7 +198,7 @@ void AIO_CLD_Acceptor::close (void) {
   ACE_Unbounded_Set_Iterator<AIO_Input_Handler *>
     iter (clients_.begin ());
   AIO_Input_Handler **ih;
-  while (iter.next (ih))
+  for (; iter.next (ih); ++iter)
     delete *ih;
 }
 

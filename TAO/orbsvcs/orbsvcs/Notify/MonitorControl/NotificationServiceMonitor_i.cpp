@@ -1,5 +1,7 @@
-// $Id: NotificationServiceMonitor_i.cpp 87254 2009-10-29 02:14:18Z dai_y $
+// $Id: NotificationServiceMonitor_i.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/orbsvcs/Notify/MonitorControl/NotificationServiceMonitor_i.h"
 
 #include "tao/Monitor/Monitor_Impl.h"
@@ -262,7 +264,7 @@ NotificationServiceMonitor_i::get_invalid_names (
         {
           if (TAO_debug_level > 7)
             {
-              ACE_DEBUG((LM_INFO,
+              ORBSVCS_DEBUG((LM_INFO,
                 ACE_TEXT("(%P|%t) TAO_NotificationServiceMonitor: Client requested invalid statistic name: %s"),
                   names[i].in ()));
             }

@@ -1,0 +1,8 @@
+// $Id: Test.idl 96934 2013-03-27 13:14:37Z harrisb $
+
+interface Test
+{
+  // Return the number of the server
+  short get_server_num ();
+};
+

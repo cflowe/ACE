@@ -3,7 +3,7 @@
 /**
  *  @file    ami_test_i.cpp
  *
- *  $Id: ami_test_i.cpp 95323 2011-12-14 12:37:01Z msmit $
+ *  $Id: ami_test_i.cpp 96986 2013-04-11 16:39:42Z mesnier_p $
  *
  *  Implementation of the AMI Test interface.
  *

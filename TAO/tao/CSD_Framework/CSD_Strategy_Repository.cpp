@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: CSD_Strategy_Repository.cpp 95643 2012-03-23 18:19:24Z johnnyw $
+// $Id: CSD_Strategy_Repository.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/CSD_Framework/CSD_Strategy_Repository.h"
 #include "tao/debug.h"
@@ -60,7 +60,7 @@ TAO_CSD_Strategy_Repository::add_strategy (const ACE_CString& name,
 
   if (TAO_debug_level > 3)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT("Strategy_Repository::add_strategy for %C\n"),
                   name.c_str ()));
     }

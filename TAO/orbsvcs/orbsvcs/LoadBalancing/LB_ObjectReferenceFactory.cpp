@@ -1,5 +1,6 @@
-// $Id: LB_ObjectReferenceFactory.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: LB_ObjectReferenceFactory.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/LoadBalancing/LB_ObjectReferenceFactory.h"
 #include "tao/debug.h"
 #include "ace/SString.h"
@@ -197,7 +198,7 @@ TAO_LB_ObjectReferenceFactory::find_object_group (
       if (this->table_.bind (repository_id, group) != 0)
         {
           if (TAO_debug_level > 0)
-            ACE_ERROR ((LM_ERROR,
+            ORBSVCS_ERROR ((LM_ERROR,
                         "TAO_LB_ObjectReferenceFactory::"
                         "find_object_group - "
                         "Couldn't bind object group reference.\n"));

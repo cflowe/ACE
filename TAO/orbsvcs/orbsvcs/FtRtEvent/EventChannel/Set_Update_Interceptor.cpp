@@ -1,5 +1,6 @@
-// $Id: Set_Update_Interceptor.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: Set_Update_Interceptor.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/IOPA.h"
 #include "orbsvcs/FtRtEvent/EventChannel/Set_Update_Interceptor.h"
@@ -94,7 +95,7 @@ TAO_Set_Update_Interceptor::send_request (
       FTRT::SequenceNumber sequence_number =
         Request_Context_Repository().get_sequence_number(ri);
 
-      ACE_DEBUG((LM_DEBUG, "send_request : sequence_number = %d\n", sequence_number));
+      ORBSVCS_DEBUG((LM_DEBUG, "send_request : sequence_number = %d\n", sequence_number));
       if (sequence_number != 0) {
         if (!(cdr << ACE_OutputCDR::from_boolean (TAO_ENCAP_BYTE_ORDER)))
           throw CORBA::MARSHAL ();

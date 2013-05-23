@@ -1,5 +1,6 @@
-// $Id: ECG_Reactive_ConsumerEC_Control.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: ECG_Reactive_ConsumerEC_Control.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Event/EC_Gateway_IIOP.h"
 #include "orbsvcs/Event/ECG_Reactive_ConsumerEC_Control.h"
 #include "tao/Messaging/Messaging.h"
@@ -170,7 +171,7 @@ TAO_ECG_Reactive_ConsumerEC_Control::event_channel_not_exist (
 {
   try
     {
-      ACE_DEBUG ((LM_DEBUG,
+      ORBSVCS_DEBUG ((LM_DEBUG,
                   "EC_Reactive_ConsumerControl(%P|%t) - "
                   "channel %x does not exists\n"));
       gateway->cleanup_consumer_ec ();

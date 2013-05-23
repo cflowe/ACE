@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: ServantRetentionStrategyRetainFactoryImpl.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: ServantRetentionStrategyRetainFactoryImpl.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/ServantRetentionStrategyRetainFactoryImpl.h"
 #include "tao/PortableServer/ServantRetentionStrategy.h"
@@ -28,7 +28,7 @@ namespace TAO
         }
         case ::PortableServer::NON_RETAIN :
         {
-          ACE_ERROR ((LM_ERROR, "Incorrect type in ServantRetentionStrategyNonRetainFactoryImpl"));
+          TAOLIB_ERROR ((LM_ERROR, "Incorrect type in ServantRetentionStrategyNonRetainFactoryImpl"));
           break;
         }
       }

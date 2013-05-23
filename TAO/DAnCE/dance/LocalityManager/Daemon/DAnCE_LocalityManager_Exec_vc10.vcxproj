@@ -122,7 +122,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Loggerd.lib;DAnCE_Deployment_stubd.lib;DAnCE_Deployment_skeld.lib;DAnCE_ApplicationManager_stubd.lib;DAnCE_ApplicationManager_skeld.lib;DAnCE_stubd.lib;DAnCE_skeld.lib;DAnCE_Deployment_Schedulerd.lib;TAO_CosNamingd.lib;DAnCE_Split_Plan_Impld.lib;DAnCE_Locality_Handlerd.lib;DAnCE_LocalityManager_Impld.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Loggerd.lib;DAnCE_Deployment_stubd.lib;DAnCE_Deployment_skeld.lib;DAnCE_ApplicationManager_stubd.lib;DAnCE_ApplicationManager_skeld.lib;DAnCE_stubd.lib;DAnCE_skeld.lib;DAnCE_Deployment_Schedulerd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;DAnCE_Split_Plan_Impld.lib;DAnCE_Locality_Handlerd.lib;DAnCE_LocalityManager_Impld.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)dance_locality_manager.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -160,7 +160,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Logger.lib;DAnCE_Deployment_stub.lib;DAnCE_Deployment_skel.lib;DAnCE_ApplicationManager_stub.lib;DAnCE_ApplicationManager_skel.lib;DAnCE_stub.lib;DAnCE_skel.lib;DAnCE_Deployment_Scheduler.lib;TAO_CosNaming.lib;DAnCE_Split_Plan_Impl.lib;DAnCE_Locality_Handler.lib;DAnCE_LocalityManager_Impl.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Logger.lib;DAnCE_Deployment_stub.lib;DAnCE_Deployment_skel.lib;DAnCE_ApplicationManager_stub.lib;DAnCE_ApplicationManager_skel.lib;DAnCE_stub.lib;DAnCE_skel.lib;DAnCE_Deployment_Scheduler.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;DAnCE_Split_Plan_Impl.lib;DAnCE_Locality_Handler.lib;DAnCE_LocalityManager_Impl.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)dance_locality_manager.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -200,7 +200,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Loggerd.lib;DAnCE_Deployment_stubd.lib;DAnCE_Deployment_skeld.lib;DAnCE_ApplicationManager_stubd.lib;DAnCE_ApplicationManager_skeld.lib;DAnCE_stubd.lib;DAnCE_skeld.lib;DAnCE_Deployment_Schedulerd.lib;TAO_CosNamingd.lib;DAnCE_Split_Plan_Impld.lib;DAnCE_Locality_Handlerd.lib;DAnCE_LocalityManager_Impld.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Loggerd.lib;DAnCE_Deployment_stubd.lib;DAnCE_Deployment_skeld.lib;DAnCE_ApplicationManager_stubd.lib;DAnCE_ApplicationManager_skeld.lib;DAnCE_stubd.lib;DAnCE_skeld.lib;DAnCE_Deployment_Schedulerd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;DAnCE_Split_Plan_Impld.lib;DAnCE_Locality_Handlerd.lib;DAnCE_LocalityManager_Impld.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)dance_locality_manager.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 <!--
@@ -245,7 +245,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Logger.lib;DAnCE_Deployment_stub.lib;DAnCE_Deployment_skel.lib;DAnCE_ApplicationManager_stub.lib;DAnCE_ApplicationManager_skel.lib;DAnCE_stub.lib;DAnCE_skel.lib;DAnCE_Deployment_Scheduler.lib;TAO_CosNaming.lib;DAnCE_Split_Plan_Impl.lib;DAnCE_Locality_Handler.lib;DAnCE_LocalityManager_Impl.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Logger.lib;DAnCE_Deployment_stub.lib;DAnCE_Deployment_skel.lib;DAnCE_ApplicationManager_stub.lib;DAnCE_ApplicationManager_skel.lib;DAnCE_stub.lib;DAnCE_skel.lib;DAnCE_Deployment_Scheduler.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;DAnCE_Split_Plan_Impl.lib;DAnCE_Locality_Handler.lib;DAnCE_LocalityManager_Impl.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)dance_locality_manager.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>

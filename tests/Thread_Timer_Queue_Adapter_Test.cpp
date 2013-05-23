@@ -1,4 +1,4 @@
-// $Id: Thread_Timer_Queue_Adapter_Test.cpp 94310 2011-07-09 19:10:06Z schmidt $
+// $Id: Thread_Timer_Queue_Adapter_Test.cpp 96943 2013-03-30 09:42:31Z mcorino $
 
 /**
  *  @file    Thread_Timer_Queue_Adapter_Test.cpp
@@ -13,6 +13,7 @@
 
 #include "ace/Timer_Wheel.h"
 #include "ace/Timer_Queue_Adapters.h"
+#include "ace/Truncate.h"
 #include "test_config.h"
 
 #if defined (ACE_HAS_THREADS)
@@ -143,7 +144,7 @@ class CTestEventHandler : public ICustomEventHandler
         /// @param p_vParameter
         virtual int operator() (void* p_vParameter)
         {
-            long iParameter = (long) p_vParameter;
+            long iParameter = ACE_Utils::truncate_cast<long> ((intptr_t)p_vParameter);
 
             ACE_DEBUG((LM_DEBUG,
                        ACE_TEXT("%I(%t) Incrementing test event handler call count by %d.\n"),

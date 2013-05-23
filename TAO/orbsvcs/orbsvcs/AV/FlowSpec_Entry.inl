@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: FlowSpec_Entry.inl 81401 2008-04-23 18:12:56Z elliott_c $
+// $Id: FlowSpec_Entry.inl 97014 2013-04-12 22:47:02Z mitza $
 
 #include "ace/OS_NS_strings.h"
 
@@ -293,7 +293,7 @@ TAO_FlowSpec_Entry::handler (TAO_AV_Flow_Handler *handler)
 //         int result  = event_handler->reactor ()->remove_handler (event_handler,
 //                                                                  ACE_Event_Handler::READ_MASK);
 //         if (result < 0)
-//           ACE_ERROR ((LM_ERROR,"TAO_FlowSpec_Entry::handler\n"));
+//           ORBSVCS_ERROR ((LM_ERROR,"TAO_FlowSpec_Entry::handler\n"));
 //         break;
 //       }
 //     }

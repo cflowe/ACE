@@ -1,13 +1,14 @@
 /**
  * @file IOR_Table_Impl.cpp
  *
- * $Id: IOR_Table_Impl.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+ * $Id: IOR_Table_Impl.cpp 97024 2013-04-15 16:55:16Z mesnier_p $
  *
  * @author Carlos O'Ryan <coryan@uci.edu>
  *
  */
 
 #include "tao/IORTable/IOR_Table_Impl.h"
+#include "tao/PortableServer/ForwardRequestC.h"
 #include "ace/Guard_T.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

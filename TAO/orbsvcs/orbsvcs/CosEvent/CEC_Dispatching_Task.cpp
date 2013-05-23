@@ -1,5 +1,6 @@
-// $Id: CEC_Dispatching_Task.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: CEC_Dispatching_Task.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/CosEvent/CEC_Dispatching_Task.h"
 
 #include "tao/ORB_Constants.h"
@@ -33,7 +34,7 @@ TAO_CEC_Dispatching_Task::svc (void)
                 }
               else
                 {
-                  ACE_ERROR ((LM_ERROR,
+                  ORBSVCS_ERROR ((LM_ERROR,
                               "EC (%P|%t) getq error in Dispatching Queue\n"));
                 }
             }

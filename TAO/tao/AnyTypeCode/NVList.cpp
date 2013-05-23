@@ -1,4 +1,4 @@
-// $Id: NVList.cpp 95546 2012-02-23 08:01:58Z johnnyw $
+// $Id: NVList.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 
 // Implementation of Named Value List and NamedValue classes
@@ -328,7 +328,7 @@ CORBA::NVList::_tao_encode (TAO_OutputCDR &cdr, int flag)
                   arg = "(nil)";
                 }
 
-              ACE_DEBUG ((LM_DEBUG,
+              TAOLIB_DEBUG ((LM_DEBUG,
                           ACE_TEXT ("NVList::_tao_encode - parameter <%C>\n"),
                           arg));
             }
@@ -370,7 +370,7 @@ CORBA::NVList::_tao_decode (TAO_InputCDR &incoming, int flag)
 {
   if (TAO_debug_level > 3)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("TAO (%P|%t) : NVList::_tao_decode\n")));
     }
 
@@ -395,7 +395,7 @@ CORBA::NVList::_tao_decode (TAO_InputCDR &incoming, int flag)
 
       if (TAO_debug_level > 3)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
                       ACE_TEXT ("TAO (%P|%t) : NVList::_tao_decode - %C\n"),
                       nv->name ()? nv->name () : "(no name given)" ));
         }

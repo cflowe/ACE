@@ -1,5 +1,6 @@
-// $Id: be_init.cpp 83172 2008-10-13 07:53:08Z johnnyw $
+// $Id: be_init.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "global_extern.h"
 #include "be_extern.h"
 #include "../../tao/Version.h"
@@ -89,7 +90,7 @@ BE_ifr_orb_init (int &ac, ACE_TCHAR *av[])
 TAO_IFR_BE_Export void
 BE_version (void)
 {
-  ACE_DEBUG ((LM_DEBUG,
+  ORBSVCS_DEBUG ((LM_DEBUG,
               "%s %s\n",
               ACE_TEXT ("TAO_IFR_BE, version"),
               ACE_TEXT (TAO_VERSION)));

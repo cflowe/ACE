@@ -121,7 +121,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_IORTabled.lib;TAO_PortableServerd.lib;TAO_Valuetyped.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_Svc_Utilsd.lib;ACEXMLd.lib;ACEXML_Parserd.lib;TAO_IORManipd.lib;TAO_ImR_Clientd.lib;TAO_ImR_Activator_IDLd.lib;TAO_ImR_Locator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_IORTabled.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_DynamicInterfaced.lib;TAO_Async_IORTabled.lib;TAO_Svc_Utilsd.lib;ACEXMLd.lib;ACEXML_Parserd.lib;TAO_IORManipd.lib;TAO_Async_ImR_Client_IDLd.lib;TAO_ImR_Activator_IDLd.lib;TAO_ImR_Locator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Locatord.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\lib\TAO_ImR_Locatord.lib</ImportLibrary>
@@ -159,7 +159,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_IORTable.lib;TAO_PortableServer.lib;TAO_Valuetype.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_Svc_Utils.lib;ACEXML.lib;ACEXML_Parser.lib;TAO_IORManip.lib;TAO_ImR_Client.lib;TAO_ImR_Activator_IDL.lib;TAO_ImR_Locator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_IORTable.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_DynamicInterface.lib;TAO_Async_IORTable.lib;TAO_Svc_Utils.lib;ACEXML.lib;ACEXML_Parser.lib;TAO_IORManip.lib;TAO_Async_ImR_Client_IDL.lib;TAO_ImR_Activator_IDL.lib;TAO_ImR_Locator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Locator.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -199,7 +199,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_IORTabled.lib;TAO_PortableServerd.lib;TAO_Valuetyped.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_Svc_Utilsd.lib;ACEXMLd.lib;ACEXML_Parserd.lib;TAO_IORManipd.lib;TAO_ImR_Clientd.lib;TAO_ImR_Activator_IDLd.lib;TAO_ImR_Locator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_IORTabled.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_DynamicInterfaced.lib;TAO_Async_IORTabled.lib;TAO_Svc_Utilsd.lib;ACEXMLd.lib;ACEXML_Parserd.lib;TAO_IORManipd.lib;TAO_Async_ImR_Client_IDLd.lib;TAO_ImR_Activator_IDLd.lib;TAO_ImR_Locator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Locatord.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\lib\TAO_ImR_Locatord.lib</ImportLibrary>
@@ -244,7 +244,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_IORTable.lib;TAO_PortableServer.lib;TAO_Valuetype.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_Svc_Utils.lib;ACEXML.lib;ACEXML_Parser.lib;TAO_IORManip.lib;TAO_ImR_Client.lib;TAO_ImR_Activator_IDL.lib;TAO_ImR_Locator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_IORTable.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_DynamicInterface.lib;TAO_Async_IORTable.lib;TAO_Svc_Utils.lib;ACEXML.lib;ACEXML_Parser.lib;TAO_IORManip.lib;TAO_Async_ImR_Client_IDL.lib;TAO_ImR_Activator_IDL.lib;TAO_ImR_Locator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Locator.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -271,7 +271,7 @@
     </ClCompile>
     <ClCompile Include="Adapter_Activator.cpp">
     </ClCompile>
-    <ClCompile Include="AsyncStartupWaiter_i.cpp">
+    <ClCompile Include="AsyncAccessManager.cpp">
     </ClCompile>
     <ClCompile Include="Config_Backing_Store.cpp">
     </ClCompile>
@@ -279,9 +279,13 @@
     </ClCompile>
     <ClCompile Include="ImR_Locator_i.cpp">
     </ClCompile>
+    <ClCompile Include="ImR_ResponseHandler.cpp">
+    </ClCompile>
     <ClCompile Include="INS_Locator.cpp">
     </ClCompile>
     <ClCompile Include="Iterator.cpp">
+    </ClCompile>
+    <ClCompile Include="LiveCheck.cpp">
     </ClCompile>
     <ClCompile Include="Locator_Loader.cpp">
     </ClCompile>
@@ -301,12 +305,14 @@
   <ItemGroup>
     <ClInclude Include="Activator_Info.h" />
     <ClInclude Include="Adapter_Activator.h" />
-    <ClInclude Include="AsyncStartupWaiter_i.h" />
+    <ClInclude Include="AsyncAccessManager.h" />
     <ClInclude Include="Config_Backing_Store.h" />
     <ClInclude Include="Forwarder.h" />
     <ClInclude Include="ImR_Locator_i.h" />
+    <ClInclude Include="ImR_ResponseHandler.h" />
     <ClInclude Include="INS_Locator.h" />
     <ClInclude Include="Iterator.h" />
+    <ClInclude Include="LiveCheck.h" />
     <ClInclude Include="locator_export.h" />
     <ClInclude Include="Locator_Loader.h" />
     <ClInclude Include="Locator_Options.h" />

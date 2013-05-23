@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: CosProperty.mpc 95128 2011-11-27 21:22:15Z johnnyw $
+// $Id: CosProperty.mpc 97014 2013-04-12 22:47:02Z mitza $
 
 project(CosProperty_IDL) : orbsvcslib, orbsvcs_output, install, tao_versioning_idl_defaults {
   custom_only = 1
@@ -72,7 +72,7 @@ project(CosProperty_Skel) : orbsvcslib, orbsvcs_output, install, property, porta
   }
 }
 
-project(CosProperty_Serv) : orbsvcslib, orbsvcs_output, install, property_skel {
+project(CosProperty_Serv) : orbsvcslib, orbsvcs_output, install, property_skel, svc_utils {
   sharedname   = TAO_CosProperty_Serv
   dynamicflags += TAO_PROPERTY_SERV_BUILD_DLL
   tagchecks   += Property

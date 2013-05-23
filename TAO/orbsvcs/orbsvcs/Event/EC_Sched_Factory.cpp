@@ -1,5 +1,6 @@
-// $Id: EC_Sched_Factory.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: EC_Sched_Factory.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Event/EC_Sched_Factory.h"
 #include "orbsvcs/Event/EC_Priority_Dispatching.h"
 #include "orbsvcs/Event/EC_Priority_Scheduling.h"
@@ -53,7 +54,7 @@ TAO_EC_Sched_Factory::init (int argc, ACE_TCHAR* argv[])
                 }
               else
                 {
-                  ACE_ERROR ((LM_ERROR,
+                  ORBSVCS_ERROR ((LM_ERROR,
                               ACE_TEXT("EC_Sched_Factory - ")
                               ACE_TEXT("unsupported dispatching <%s>\n"),
                               opt));
@@ -87,7 +88,7 @@ TAO_EC_Sched_Factory::init (int argc, ACE_TCHAR* argv[])
                 }
               else
                 {
-                  ACE_ERROR ((LM_ERROR,
+                  ORBSVCS_ERROR ((LM_ERROR,
                               ACE_TEXT("EC_Sched_Factory - ")
                               ACE_TEXT("unsupported filtering <%s>\n"),
                               opt));
@@ -115,7 +116,7 @@ TAO_EC_Sched_Factory::init (int argc, ACE_TCHAR* argv[])
 #endif /* 0 */
               else
                 {
-                  ACE_ERROR ((LM_ERROR,
+                  ORBSVCS_ERROR ((LM_ERROR,
                               ACE_TEXT("EC_Sched_Factory - ")
                               ACE_TEXT("unsupported timeout <%s>\n"),
                               opt));
@@ -145,7 +146,7 @@ TAO_EC_Sched_Factory::init (int argc, ACE_TCHAR* argv[])
                 }
               else
                 {
-                  ACE_ERROR ((LM_ERROR,
+                  ORBSVCS_ERROR ((LM_ERROR,
                               ACE_TEXT("EC_Sched_Factory - ")
                               ACE_TEXT("unsupported scheduling <%s>\n"),
                               opt));

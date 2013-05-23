@@ -2,7 +2,7 @@
 /**
  *  @file    Server_Info.h
  *
- *  $Id: Server_Info.h 96760 2013-02-05 21:11:03Z stanleyk $
+ *  $Id: Server_Info.h 97053 2013-04-18 22:37:56Z mesnier_p $
  *
  *  This class implements the Server_Info for the Implementation Repository.
  *
@@ -15,7 +15,7 @@
 
 #include "ace/Bound_Ptr.h"
 
-#include "tao/ImR_Client/ImplRepoC.h"
+#include "ImplRepoC.h"
 
 #include "ace/SString.h"
 

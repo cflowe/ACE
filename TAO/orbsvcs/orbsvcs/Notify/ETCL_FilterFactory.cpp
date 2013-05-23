@@ -1,5 +1,6 @@
-// $Id: ETCL_FilterFactory.cpp 95607 2012-03-12 20:49:02Z fields_t $
+// $Id: ETCL_FilterFactory.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/ETCL_FilterFactory.h"
 #include "orbsvcs/Notify/ETCL_Filter.h"
 #include "orbsvcs/Notify/Properties.h"
@@ -223,7 +224,7 @@ TAO_Notify_ETCL_FilterFactory::load_child (const ACE_CString &type,
     {
       TAO_Notify_Object::ID const id = ACE_OS::atoi (value);
       if (DEBUG_LEVEL)
-        ACE_DEBUG ((LM_DEBUG,
+        ORBSVCS_DEBUG ((LM_DEBUG,
                     ACE_TEXT ("(%P|%t) reload filter %d\n"),
                     static_cast<int> (id)
                     ));

@@ -1,5 +1,6 @@
-// $Id: Time_Service_Clerk.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: Time_Service_Clerk.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "Clerk_i.h"
 #include "ace/OS_main.h"
 
@@ -12,7 +13,7 @@ ACE_TMAIN (int argc, ACE_TCHAR* argv[])
 {
   Clerk_i clerk;
 
-  ACE_DEBUG ((LM_DEBUG,
+  ORBSVCS_DEBUG ((LM_DEBUG,
               "[SERVER] Process/Thread Id : (%P/%t) Time Service clerk\n"));
 
   try

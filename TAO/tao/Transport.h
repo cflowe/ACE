@@ -4,7 +4,7 @@
 /**
  *  @file Transport.h
  *
- *  $Id: Transport.h 96760 2013-02-05 21:11:03Z stanleyk $
+ *  $Id: Transport.h 97037 2013-04-17 07:08:07Z mcorino $
  *
  *  Define the interface for the Transport component in TAO's
  *  pluggable protocol framework.
@@ -666,9 +666,6 @@ public:
   /// Accessor for synchronizing Transport OutputCDR access
   TAO_SYNCH_MUTEX &output_cdr_lock (void);
 
-  /// Set the flush in post open flag
-  void set_flush_in_post_open (void);
-
   /// Can the transport be purged?
   bool can_be_purged (void);
 
@@ -978,7 +975,7 @@ private:
   void cleanup_queue_i ();
 
   /// Check if the buffering constraints have been reached
-  int check_buffering_constraints_i (TAO_Stub *stub, bool &must_flush);
+  bool check_buffering_constraints_i (TAO_Stub *stub, bool &must_flush);
 
   /// Send a synchronous message, i.e. block until the message is on
   /// the wire

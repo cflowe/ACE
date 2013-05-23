@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 96847 2013-02-20 19:20:46Z harrisb $
+# $Id: run_test.pl 96986 2013-04-11 16:39:42Z mesnier_p $
 # -*- perl -*-
 
 ###############################################################################
@@ -21,6 +21,7 @@ my $server_init_delay = 1;
 my $server_reply_delay = 0;
 my $rt_timeout_msecs = 0;
 my $max_rt_tries = 1;
+my $asynch_loc = "";
 
 if ($#ARGV >= 0) {
     for (my $i = 0; $i <= $#ARGV; $i++) {
@@ -59,6 +60,9 @@ if ($#ARGV >= 0) {
 	elsif ($ARGV[$i] eq "-no_imr") {
 	    $no_imr = 1;
 	}
+        elsif ($ARGV[$i] eq "-asynch") {
+            $asynch_loc = "--use_dsi";
+        }
 	else {
 	    usage();
 	    exit 1;
@@ -125,7 +129,7 @@ sub scale_clients_test
     my $result = 0;
     my $start_time = time();
 
-    $IMR->Arguments ("-d 1 -o $imr_imriorfile -orbendpoint iiop://:$port ");
+    $IMR->Arguments ("-d 1 -o $imr_imriorfile -orbendpoint iiop://:$port $asynch_loc ");
 #		     "-ORBDebugLevel 10 -ORBVerboseLogging");
 
     if ($no_imr) {

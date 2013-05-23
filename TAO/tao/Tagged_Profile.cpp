@@ -1,4 +1,4 @@
-// $Id: Tagged_Profile.cpp 95525 2012-02-07 09:56:46Z johnnyw $
+// $Id: Tagged_Profile.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Tagged_Profile.h"
 #include "tao/ORB_Core.h"
@@ -37,7 +37,7 @@ TAO_Tagged_Profile::extract_object_key (IOP::TaggedProfile &profile)
     {
       if (TAO_debug_level)
         {
-          ACE_ERROR ((LM_ERROR,
+          TAOLIB_ERROR ((LM_ERROR,
                       ACE_TEXT ("(%P|%t)TAO_Tagged_Profile\n")));
         }
 

@@ -17,10 +17,6 @@
       <UniqueIdentifier>{8441A3A3-FECA-1BAD-F76E-F139A37D2D69}</UniqueIdentifier>
       <Extensions>pcin</Extensions>
     </Filter>
-    <Filter Include="Pidl Files">
-      <UniqueIdentifier>{2990FD4C-FECA-1BAD-F76E-F139A37D2D69}</UniqueIdentifier>
-      <Extensions>pidl</Extensions>
-    </Filter>
     <Filter Include="Inline Files">
       <UniqueIdentifier>{763028EF-FECA-1BAD-F76E-F139A37D2D69}</UniqueIdentifier>
       <Extensions>i;ipp;inl</Extensions>
@@ -90,14 +86,6 @@
   <ItemGroup>
     <None Include="TAO_ImR_Client.pc.in">
       <Filter>Pkgconfig Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ImplRepo.pidl">
-      <Filter>Pidl Files</Filter>
-    </None>
-    <None Include="ServerObject.pidl">
-      <Filter>Pidl Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

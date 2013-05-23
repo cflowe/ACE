@@ -3,7 +3,7 @@
 /**
  *  @file    exception_cs.cpp
  *
- *  $Id: exception_cs.cpp 95536 2012-02-20 12:34:23Z johnnyw $
+ *  $Id: exception_cs.cpp 97061 2013-04-19 19:17:50Z mitza $
  *
  *  Visitor generating code for Exception in the stubs file
  *
@@ -289,7 +289,9 @@ int be_visitor_exception_cs::visit_exception (be_exception *node)
           << "\"AnyTypeCode_Adapter\");" << be_uidt_nl
           << "if (adapter == 0)" << be_idt_nl
           << "{" << be_idt_nl
-          << "ACE_ERROR_RETURN ((LM_ERROR," << be_idt_nl
+          // FUZZ: disable check_for_ace_log_categories
+          << "TAOLIB_ERROR_RETURN ((LM_ERROR," << be_idt_nl
+          // FUZZ: enable check_for_ace_log_categories
           << "ACE_TEXT (\"TAO \")," << be_nl
           << "ACE_TEXT (\"Unable to find the \")" << be_nl
           << "ACE_TEXT (\"AnyTypeCode Adapter instance\")), 0);" << be_uidt << be_uidt_nl

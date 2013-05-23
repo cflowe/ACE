@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Valuetyped.lib TAO_PortableServerd.lib TAO_Messagingd.lib DAnCE_Loggerd.lib DAnCE_Deployment_stubd.lib DAnCE_Deployment_skeld.lib DAnCE_ApplicationManager_stubd.lib DAnCE_ApplicationManager_skeld.lib DAnCE_NodeApplicationManager_stubd.lib DAnCE_NodeApplicationManager_skeld.lib TAO_DynamicInterfaced.lib DAnCE_NodeApplication_stubd.lib DAnCE_NodeApplication_skeld.lib TAO_IORTabled.lib DAnCE_stubd.lib DAnCE_skeld.lib DAnCE_Split_Plan_Impld.lib DAnCE_Deployment_Schedulerd.lib DAnCE_Locality_Handlerd.lib DAnCE_NodeApplicationd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Valuetyped.lib TAO_Messagingd.lib DAnCE_Loggerd.lib DAnCE_Deployment_stubd.lib DAnCE_Deployment_skeld.lib DAnCE_ApplicationManager_stubd.lib DAnCE_ApplicationManager_skeld.lib DAnCE_NodeApplicationManager_stubd.lib DAnCE_NodeApplicationManager_skeld.lib TAO_DynamicInterfaced.lib DAnCE_NodeApplication_stubd.lib DAnCE_NodeApplication_skeld.lib TAO_IORTabled.lib DAnCE_stubd.lib DAnCE_skeld.lib DAnCE_Split_Plan_Impld.lib DAnCE_Deployment_Schedulerd.lib DAnCE_Locality_Handlerd.lib DAnCE_NodeApplicationd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\DAnCE_NodeApplicationManagerd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -156,7 +156,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Valuetype.lib TAO_PortableServer.lib TAO_Messaging.lib DAnCE_Logger.lib DAnCE_Deployment_stub.lib DAnCE_Deployment_skel.lib DAnCE_ApplicationManager_stub.lib DAnCE_ApplicationManager_skel.lib DAnCE_NodeApplicationManager_stub.lib DAnCE_NodeApplicationManager_skel.lib TAO_DynamicInterface.lib DAnCE_NodeApplication_stub.lib DAnCE_NodeApplication_skel.lib TAO_IORTable.lib DAnCE_stub.lib DAnCE_skel.lib DAnCE_Split_Plan_Impl.lib DAnCE_Deployment_Scheduler.lib DAnCE_Locality_Handler.lib DAnCE_NodeApplication.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Valuetype.lib TAO_Messaging.lib DAnCE_Logger.lib DAnCE_Deployment_stub.lib DAnCE_Deployment_skel.lib DAnCE_ApplicationManager_stub.lib DAnCE_ApplicationManager_skel.lib DAnCE_NodeApplicationManager_stub.lib DAnCE_NodeApplicationManager_skel.lib TAO_DynamicInterface.lib DAnCE_NodeApplication_stub.lib DAnCE_NodeApplication_skel.lib TAO_IORTable.lib DAnCE_stub.lib DAnCE_skel.lib DAnCE_Split_Plan_Impl.lib DAnCE_Deployment_Scheduler.lib DAnCE_Locality_Handler.lib DAnCE_NodeApplication.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\DAnCE_NodeApplicationManager.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -242,7 +242,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Valuetyped.lib TAO_PortableServerd.lib TAO_Messagingd.lib DAnCE_Loggerd.lib DAnCE_Deployment_stubd.lib DAnCE_Deployment_skeld.lib DAnCE_ApplicationManager_stubd.lib DAnCE_ApplicationManager_skeld.lib DAnCE_NodeApplicationManager_stubd.lib DAnCE_NodeApplicationManager_skeld.lib TAO_DynamicInterfaced.lib DAnCE_NodeApplication_stubd.lib DAnCE_NodeApplication_skeld.lib TAO_IORTabled.lib DAnCE_stubd.lib DAnCE_skeld.lib DAnCE_Split_Plan_Impld.lib DAnCE_Deployment_Schedulerd.lib DAnCE_Locality_Handlerd.lib DAnCE_NodeApplicationd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Valuetyped.lib TAO_Messagingd.lib DAnCE_Loggerd.lib DAnCE_Deployment_stubd.lib DAnCE_Deployment_skeld.lib DAnCE_ApplicationManager_stubd.lib DAnCE_ApplicationManager_skeld.lib DAnCE_NodeApplicationManager_stubd.lib DAnCE_NodeApplicationManager_skeld.lib TAO_DynamicInterfaced.lib DAnCE_NodeApplication_stubd.lib DAnCE_NodeApplication_skeld.lib TAO_IORTabled.lib DAnCE_stubd.lib DAnCE_skeld.lib DAnCE_Split_Plan_Impld.lib DAnCE_Deployment_Schedulerd.lib DAnCE_Locality_Handlerd.lib DAnCE_NodeApplicationd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\DAnCE_NodeApplicationManagerd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -323,7 +323,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Valuetype.lib TAO_PortableServer.lib TAO_Messaging.lib DAnCE_Logger.lib DAnCE_Deployment_stub.lib DAnCE_Deployment_skel.lib DAnCE_ApplicationManager_stub.lib DAnCE_ApplicationManager_skel.lib DAnCE_NodeApplicationManager_stub.lib DAnCE_NodeApplicationManager_skel.lib TAO_DynamicInterface.lib DAnCE_NodeApplication_stub.lib DAnCE_NodeApplication_skel.lib TAO_IORTable.lib DAnCE_stub.lib DAnCE_skel.lib DAnCE_Split_Plan_Impl.lib DAnCE_Deployment_Scheduler.lib DAnCE_Locality_Handler.lib DAnCE_NodeApplication.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Valuetype.lib TAO_Messaging.lib DAnCE_Logger.lib DAnCE_Deployment_stub.lib DAnCE_Deployment_skel.lib DAnCE_ApplicationManager_stub.lib DAnCE_ApplicationManager_skel.lib DAnCE_NodeApplicationManager_stub.lib DAnCE_NodeApplicationManager_skel.lib TAO_DynamicInterface.lib DAnCE_NodeApplication_stub.lib DAnCE_NodeApplication_skel.lib TAO_IORTable.lib DAnCE_stub.lib DAnCE_skel.lib DAnCE_Split_Plan_Impl.lib DAnCE_Deployment_Scheduler.lib DAnCE_Locality_Handler.lib DAnCE_NodeApplication.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\DAnCE_NodeApplicationManager.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

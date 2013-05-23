@@ -4,7 +4,7 @@
 /**
  *  @file    Adapter.h
  *
- *  $Id: Adapter.h 91262 2010-08-03 14:02:36Z parsons $
+ *  $Id: Adapter.h 96986 2013-04-11 16:39:42Z mesnier_p $
  *
  *  @author Carlos O'Ryan (coryan@uci.edu)
  */
@@ -86,7 +86,12 @@ public:
 
     /// Forward the request to another object reference, this decouples
     /// the ORB from the PortableServer::ForwardRequest exception
-    DS_FORWARD
+    DS_FORWARD,
+
+    /// The request will be forwarded, but using an async call to locate
+    /// the target. Some other entity will actually complete the forward
+    /// or fail.
+    DS_DEFERRED_FORWARD
   };
 
   /// Return the name, i.e. the object id used to resolve it in the

@@ -3,7 +3,7 @@
 /**
  *  @file    Collection_Test.cpp
  *
- *  $Id: Collection_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Collection_Test.cpp 97097 2013-05-08 13:53:29Z schmidt $
  *
  *   This is a simple test of the ACE collection classes and its
  *   iterators.
@@ -13,10 +13,7 @@
  */
 //=============================================================================
 
-
 #include "test_config.h"
-
-
 
 #include "ace/Containers.h"
 #include "Collection_Test.h"

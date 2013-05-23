@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: CSD_Default_Servant_Dispatcher.cpp 93359 2011-02-11 11:33:12Z mcorino $
+// $Id: CSD_Default_Servant_Dispatcher.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/CSD_Framework/CSD_Default_Servant_Dispatcher.h"
 #include "tao/CSD_Framework/CSD_POA.h"
@@ -43,7 +43,7 @@ TAO_CSD_Default_Servant_Dispatcher::create_Root_POA (const ACE_CString &name,
   if (repo == 0)
     {
       if (TAO_debug_level > 0)
-        ACE_DEBUG ((LM_DEBUG,
+        TAOLIB_DEBUG ((LM_DEBUG,
                     ACE_TEXT("(%P|%t) CSD_Default_Servant_Dispatcher::")
                     ACE_TEXT("create_POA could not find ")
                     ACE_TEXT("TAO_CSD_Strategy_Repository\n")));

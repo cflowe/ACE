@@ -1,4 +1,4 @@
-// $Id: ServantRetentionStrategyNonRetainFactoryImpl.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: ServantRetentionStrategyNonRetainFactoryImpl.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/orbconf.h"
 
@@ -31,7 +31,7 @@ namespace TAO
         }
         case ::PortableServer::RETAIN :
         {
-          ACE_ERROR ((LM_ERROR, "Incorrect type in ServantRetentionStrategyNonRetainFactoryImpl"));
+          TAOLIB_ERROR ((LM_ERROR, "Incorrect type in ServantRetentionStrategyNonRetainFactoryImpl"));
           break;
         }
       }

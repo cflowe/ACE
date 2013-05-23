@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosConcurrencyd.lib TAO_PortableServerd.lib TAO_CosConcurrency_Skeld.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosConcurrencyd.lib TAO_PortableServerd.lib TAO_CosConcurrency_Skeld.lib TAO_Svc_Utilsd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_CosConcurrency_Servd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -156,7 +156,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosConcurrency.lib TAO_PortableServer.lib TAO_CosConcurrency_Skel.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosConcurrency.lib TAO_PortableServer.lib TAO_CosConcurrency_Skel.lib TAO_Svc_Utils.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_CosConcurrency_Serv.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -242,7 +242,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosConcurrencyd.lib TAO_PortableServerd.lib TAO_CosConcurrency_Skeld.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosConcurrencyd.lib TAO_PortableServerd.lib TAO_CosConcurrency_Skeld.lib TAO_Svc_Utilsd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_CosConcurrency_Servd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -323,7 +323,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosConcurrency.lib TAO_PortableServer.lib TAO_CosConcurrency_Skel.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosConcurrency.lib TAO_PortableServer.lib TAO_CosConcurrency_Skel.lib TAO_Svc_Utils.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_CosConcurrency_Serv.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

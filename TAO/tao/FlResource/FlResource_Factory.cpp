@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: FlResource_Factory.cpp 91492 2010-08-26 13:40:18Z johnnyw $
+// $Id: FlResource_Factory.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/FlResource/FlResource_Factory.h"
 #include "tao/debug.h"
@@ -25,7 +25,7 @@ namespace TAO
                       0);
 
       if (TAO_debug_level > 0)
-        ACE_DEBUG ((LM_DEBUG,
+        TAOLIB_DEBUG ((LM_DEBUG,
                     "TAO (%P|%t) - ACE_FlReactor created\n"));
     }
 

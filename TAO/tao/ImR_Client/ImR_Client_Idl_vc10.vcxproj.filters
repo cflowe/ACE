@@ -16,10 +16,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="ImplRepo.pidl">
+    <CustomBuild Include="ImplRepo.idl">
       <Filter>Idl Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="ServerObject.pidl">
+    <CustomBuild Include="ServerObject.idl">
       <Filter>Idl Files</Filter>
     </CustomBuild>
   </ItemGroup>

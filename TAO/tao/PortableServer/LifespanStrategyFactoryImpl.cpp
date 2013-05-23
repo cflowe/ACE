@@ -1,4 +1,4 @@
-// $Id: LifespanStrategyFactoryImpl.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: LifespanStrategyFactoryImpl.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/LifespanStrategyFactoryImpl.h"
 #include "tao/PortableServer/LifespanStrategy.h"
@@ -37,7 +37,7 @@ namespace TAO
       if (strategy_factory != 0)
         strategy = strategy_factory->create (value);
       else
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     ACE_TEXT ("(%P|%t) ERROR, Unable to get %s\n"),
                     strategy_name));
 

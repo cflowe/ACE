@@ -1,4 +1,4 @@
-//$Id: IORTable.mpc 94868 2011-10-22 11:47:32Z johnnyw $
+//$Id: IORTable.mpc 97069 2013-04-23 14:50:05Z mesnier_p $
 project(*core_idl) : tao_versioning_idl_defaults, install {
   custom_only = 1
   IDL_Files {
@@ -17,21 +17,33 @@ project(*core_idl) : tao_versioning_idl_defaults, install {
   }
 }
 
-project(IORTable) : taolib, tao_output, install, taoidldefaults {
+project(IORTable) : taolib, portableserver, tao_output, install, taoidldefaults {
   after       += *core_idl
   sharedname   = TAO_IORTable
   dynamicflags += TAO_IORTable_BUILD_DLL
 
   Source_Files {
-    *.cpp
+    IORTable.cpp
+    IOR_Table_Impl.cpp
+    Table_Adapter.cpp
     IORTableC.cpp
   }
 
   Header_Files {
-    *.h
+    IORTable.h
+    IOR_Table_Impl.h
+    Table_Adapter.h
     iortable_export.h
     IORTableC.h
     IORTableS.h
+  }
+
+  Resource_Files {
+    TAO_IORTable.rc
+  }
+
+  Pkgconfig_Files {
+    TAO_IORTable.pc.in
   }
 
   specific {

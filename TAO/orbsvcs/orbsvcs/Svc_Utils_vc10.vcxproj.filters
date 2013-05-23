@@ -37,6 +37,9 @@
     <ClCompile Include="IOR_Multicast.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Log_Macros.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="RtecBaseC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -61,6 +64,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IOR_Multicast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log_Macros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RtecBaseC.h">

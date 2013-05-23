@@ -1,4 +1,4 @@
-// $Id: System_Time.cpp 91286 2010-08-05 09:04:31Z johnnyw $
+// $Id: System_Time.cpp 96985 2013-04-11 15:50:32Z huangh $
 
 #include "ace/System_Time.h"
 #include "ace/MMAP_Memory_Pool.h"
@@ -31,7 +31,7 @@ ACE_System_Time::ACE_System_Time (const ACE_TCHAR *poolname)
                                       MAXPATHLEN - 17) == -1)
         // -17 for ace-malloc-XXXXXX
         {
-          ACE_ERROR ((LM_ERROR,
+          ACELIB_ERROR ((LM_ERROR,
                       ACE_TEXT ("Temporary path too long, ")
                       ACE_TEXT ("defaulting to current directory\n")));
           this->poolname_[0] = 0;

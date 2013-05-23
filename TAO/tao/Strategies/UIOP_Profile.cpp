@@ -1,4 +1,4 @@
-// $Id: UIOP_Profile.cpp 96760 2013-02-05 21:11:03Z stanleyk $
+// $Id: UIOP_Profile.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Strategies/UIOP_Profile.h"
 
@@ -286,7 +286,7 @@ TAO_UIOP_Profile::decode_profile (TAO_InputCDR& cdr)
   // Get rendezvous_point
   if (cdr.read_string (rendezvous) == 0)
     {
-      ACE_DEBUG ((LM_DEBUG, "error decoding UIOP rendezvous_point"));
+      TAOLIB_DEBUG ((LM_DEBUG, "error decoding UIOP rendezvous_point"));
       return -1;
     }
 
@@ -300,7 +300,7 @@ TAO_UIOP_Profile::decode_profile (TAO_InputCDR& cdr)
       // exception.
       if (TAO_debug_level > 0)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
                       ACE_TEXT ("TAO (%P|%t) UIOP_Profile::decode - ")
                       ACE_TEXT ("ACE_UNIX_Addr::set() failed\n")));
         }
@@ -330,7 +330,7 @@ TAO_UIOP_Profile::create_profile_body (TAO_OutputCDR &encap) const
     encap << this->ref_object_key_->object_key ();
   else
     {
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   "(%P|%t) TAO - UIOP_Profile::create_profile_body "
                   "no object key marshalled\n"));
     }
@@ -432,7 +432,7 @@ TAO_UIOP_Profile::decode_endpoints (void)
               // exception.
               if (TAO_debug_level > 0)
                 {
-                  ACE_DEBUG ((LM_DEBUG,
+                  TAOLIB_DEBUG ((LM_DEBUG,
                               ACE_TEXT ("TAO (%P|%t) UIOP_Profile::decode_endpoints - ")
                               ACE_TEXT ("ACE_UNIX_Addr::set() failed\n")));
                 }

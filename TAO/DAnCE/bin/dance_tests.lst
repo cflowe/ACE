@@ -1,4 +1,4 @@
-# $Id: dance_tests.lst 94147 2011-06-03 12:08:20Z johnnyw $
+# $Id: dance_tests.lst 96989 2013-04-11 17:31:35Z johnnyw $
 #
 # This is the list of run_test.pl's that need to be run by
 # auto_run_tests.pl.

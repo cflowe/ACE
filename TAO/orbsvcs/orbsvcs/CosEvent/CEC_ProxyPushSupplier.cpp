@@ -1,9 +1,10 @@
-// $Id: CEC_ProxyPushSupplier.cpp 95553 2012-02-23 18:14:49Z johnnyw $
+// $Id: CEC_ProxyPushSupplier.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 // Force CORBA::release(CORBA::Request...) prototype to be parsed
 // before TAO_Pseudo_{Var,Out}_T templates.  All required
 // non-dependent names must be parsed prior to the template in
 // question when using compilers like g++ 3.4.x.
+#include "orbsvcs/Log_Macros.h"
 #include "tao/DynamicInterface/DII_CORBA_methods.h"
 
 #include "orbsvcs/CosEvent/CEC_ProxyPushSupplier.h"
@@ -337,7 +338,7 @@ TAO_CEC_ProxyPushSupplier::connect_push_consumer (
       {
         if (TAO_debug_level >= 10)
           {
-            ACE_DEBUG ((LM_DEBUG,
+            ORBSVCS_DEBUG ((LM_DEBUG,
                         ACE_TEXT ("***** connect_push_consumer, ")
                         ACE_TEXT ("Event channel is typed *****\n")));
           }
@@ -400,7 +401,7 @@ TAO_CEC_ProxyPushSupplier::connect_push_consumer (
 
         if (TAO_debug_level >= 10)
           {
-            ACE_DEBUG ((LM_DEBUG,
+            ORBSVCS_DEBUG ((LM_DEBUG,
                         ACE_TEXT ("***** connect_push_consumer, ")
                         ACE_TEXT ("Event channel is un-typed *****\n")));
           }

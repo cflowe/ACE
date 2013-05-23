@@ -1,4 +1,4 @@
-//$Id: XtResource_Factory.cpp 95526 2012-02-07 11:05:46Z johnnyw $
+//$Id: XtResource_Factory.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/XtResource/XtResource_Factory.h"
 #include "tao/debug.h"
@@ -21,7 +21,7 @@ namespace TAO
     // synchronized by external locks
     if (this->context_ == 0)
     {
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   ACE_TEXT("TAO (%P|%t) - XtAppContext is undefined.")
                   ACE_TEXT(" Cannot create ACE_XtReactor\n")));
       return 0;
@@ -34,7 +34,7 @@ namespace TAO
                       0);
 
       if (TAO_debug_level > 0)
-        ACE_DEBUG ((LM_DEBUG,
+        TAOLIB_DEBUG ((LM_DEBUG,
                     "TAO (%P|%t) - ACE_XtReactor created\n"));
     }
 

@@ -1,5 +1,6 @@
-// $Id: Notify_Constraint_Interpreter.cpp 91524 2010-08-27 14:33:58Z johnnyw $
+// $Id: Notify_Constraint_Interpreter.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/Notify_Constraint_Interpreter.h"
 #include "orbsvcs/Notify/Notify_Constraint_Visitors.h"
 #include "orbsvcs/Notify/EventType.h"
@@ -102,7 +103,7 @@ TAO_Notify_Constraint_Interpreter::build_tree (
 
   if (TAO_debug_level > 0)
     {
-      ACE_DEBUG ((LM_DEBUG, ACE_TEXT ("(%P|%t) Constraint: %C\n"),
+      ORBSVCS_DEBUG ((LM_DEBUG, ACE_TEXT ("(%P|%t) Constraint: %C\n"),
         exp_str.c_str ()));
     }
   this->build_tree (exp_str.c_str ());

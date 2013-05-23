@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Asynch_Timeout_Handler.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: Asynch_Timeout_Handler.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Messaging/Asynch_Timeout_Handler.h"
 
@@ -49,7 +49,7 @@ TAO_Asynch_Timeout_Handler::handle_timeout (const ACE_Time_Value &,
     {
       if (TAO_debug_level >= 4)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
                       ACE_TEXT ("TAO_Messaging (%P|%t) - Asynch_Timeout_Handler")
                       ACE_TEXT ("::handle_timeout, request %d timed out\n"),
                                 this->request_id_));
@@ -59,7 +59,7 @@ TAO_Asynch_Timeout_Handler::handle_timeout (const ACE_Time_Value &,
     {
       if (TAO_debug_level >= 1)
         {
-          ACE_ERROR ((LM_ERROR,
+          TAOLIB_ERROR ((LM_ERROR,
                       ACE_TEXT ("TAO_Messaging (%P|%t) - Asynch_Timeout_Handler")
                       ACE_TEXT ("::handle_timeout, unable to dispatch timed out request %d\n"),
                                 this->request_id_));

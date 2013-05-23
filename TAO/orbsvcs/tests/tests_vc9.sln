@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE -workers 12 -name_modifier "*_vc9"
+# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE -workers 14 -name_modifier "*_vc9"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVS_Asynch_Three_Stage_Dist", "AVStreams\Asynch_Three_Stage\AVS_Asynch_Three_Stage_Dist_vc9.vcproj", "{C75A821A-FECA-1BAD-EE87-46D999991C60}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVS_Asynch_Three_Stage_Recv", "AVStreams\Asynch_Three_Stage\AVS_Asynch_Three_Stage_Recv_vc9.vcproj", "{D18AA21A-FECA-1BAD-EE87-46D999991C60}"
@@ -801,6 +801,18 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scale_clients_server", "ImplRepo\scale_clients\scale_clients_server_vc9.vcproj", "{46689A8A-FECA-1BAD-6E91-1FB9E211A1C3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D9AB4A73-FECA-1BAD-6E91-1FB9E211A1C3} = {D9AB4A73-FECA-1BAD-6E91-1FB9E211A1C3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "servers_interact_on_startup_client", "ImplRepo\servers_interact_on_startup\servers_interact_on_startup_client_vc9.vcproj", "{129D65AD-FECA-1BAD-A00E-2867F2736BC3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3} = {2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "servers_interact_on_startup_idl", "ImplRepo\servers_interact_on_startup\servers_interact_on_startup_idl_vc9.vcproj", "{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "servers_interact_on_startup_server", "ImplRepo\servers_interact_on_startup\servers_interact_on_startup_server_vc9.vcproj", "{98A605BD-FECA-1BAD-A00E-2867F2736BC3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3} = {2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "servers_list_client", "ImplRepo\servers_list\servers_list_client_vc9.vcproj", "{78C17D2A-FECA-1BAD-FC16-AF0D221240E1}"
@@ -3335,6 +3347,30 @@ Global
 		{46689A8A-FECA-1BAD-6E91-1FB9E211A1C3}.Release|Win32.Build.0 = Release|Win32
 		{46689A8A-FECA-1BAD-6E91-1FB9E211A1C3}.Release|x64.ActiveCfg = Release|x64
 		{46689A8A-FECA-1BAD-6E91-1FB9E211A1C3}.Release|x64.Build.0 = Release|x64
+		{129D65AD-FECA-1BAD-A00E-2867F2736BC3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{129D65AD-FECA-1BAD-A00E-2867F2736BC3}.Debug|Win32.Build.0 = Debug|Win32
+		{129D65AD-FECA-1BAD-A00E-2867F2736BC3}.Debug|x64.ActiveCfg = Debug|x64
+		{129D65AD-FECA-1BAD-A00E-2867F2736BC3}.Debug|x64.Build.0 = Debug|x64
+		{129D65AD-FECA-1BAD-A00E-2867F2736BC3}.Release|Win32.ActiveCfg = Release|Win32
+		{129D65AD-FECA-1BAD-A00E-2867F2736BC3}.Release|Win32.Build.0 = Release|Win32
+		{129D65AD-FECA-1BAD-A00E-2867F2736BC3}.Release|x64.ActiveCfg = Release|x64
+		{129D65AD-FECA-1BAD-A00E-2867F2736BC3}.Release|x64.Build.0 = Release|x64
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}.Debug|Win32.Build.0 = Debug|Win32
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}.Debug|x64.ActiveCfg = Debug|x64
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}.Debug|x64.Build.0 = Debug|x64
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}.Release|Win32.ActiveCfg = Release|Win32
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}.Release|Win32.Build.0 = Release|Win32
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}.Release|x64.ActiveCfg = Release|x64
+		{2AD6A69A-FECA-1BAD-A00E-2867F2736BC3}.Release|x64.Build.0 = Release|x64
+		{98A605BD-FECA-1BAD-A00E-2867F2736BC3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{98A605BD-FECA-1BAD-A00E-2867F2736BC3}.Debug|Win32.Build.0 = Debug|Win32
+		{98A605BD-FECA-1BAD-A00E-2867F2736BC3}.Debug|x64.ActiveCfg = Debug|x64
+		{98A605BD-FECA-1BAD-A00E-2867F2736BC3}.Debug|x64.Build.0 = Debug|x64
+		{98A605BD-FECA-1BAD-A00E-2867F2736BC3}.Release|Win32.ActiveCfg = Release|Win32
+		{98A605BD-FECA-1BAD-A00E-2867F2736BC3}.Release|Win32.Build.0 = Release|Win32
+		{98A605BD-FECA-1BAD-A00E-2867F2736BC3}.Release|x64.ActiveCfg = Release|x64
+		{98A605BD-FECA-1BAD-A00E-2867F2736BC3}.Release|x64.Build.0 = Release|x64
 		{78C17D2A-FECA-1BAD-FC16-AF0D221240E1}.Debug|Win32.ActiveCfg = Debug|Win32
 		{78C17D2A-FECA-1BAD-FC16-AF0D221240E1}.Debug|Win32.Build.0 = Debug|Win32
 		{78C17D2A-FECA-1BAD-FC16-AF0D221240E1}.Debug|x64.ActiveCfg = Debug|x64

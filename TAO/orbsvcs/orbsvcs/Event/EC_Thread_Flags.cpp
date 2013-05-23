@@ -1,11 +1,11 @@
-// $Id: EC_Thread_Flags.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: EC_Thread_Flags.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/Event/EC_Thread_Flags.h"
 
 #include "ace/OS_NS_Thread.h"
 #include "ace/OS_NS_string.h"
 #include "ace/OS_NS_strings.h"
-#include "ace/Log_Msg.h"
+#include "orbsvcs/Log_Macros.h"
 #include "ace/Sched_Params.h"
 
 
@@ -111,7 +111,7 @@ TAO_EC_Thread_Flags::parse_symbols (const char* syms)
             {
               // Ideally this would call some sort of on-error function...
               // but, it doesn't.
-              ACE_ERROR ((LM_ERROR,
+              ORBSVCS_ERROR ((LM_ERROR,
                           "RTEC (%P|%t) unable to parse %C as a thread flag - skipping\n",
                           tok));
             }

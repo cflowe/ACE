@@ -1,4 +1,4 @@
-// $Id: EC_Timeout_Generator.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: EC_Timeout_Generator.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/Event/EC_Timeout_Generator.h"
 #include "orbsvcs/Event/EC_Timeout_Filter.h"
@@ -20,7 +20,7 @@ int
 TAO_EC_Timeout_Adapter::handle_timeout (const ACE_Time_Value & /* tv */,
                                         const void *vp)
 {
-  //  ACE_DEBUG ((LM_DEBUG,
+  //  ORBSVCS_DEBUG ((LM_DEBUG,
   //              "TAO_EC_Timeout_Adapter::handle_timeout -"
   //              " expire at %d:%d\n",
   //              tv.sec (), tv.usec ()));

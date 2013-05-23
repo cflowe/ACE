@@ -1,4 +1,4 @@
-// $Id: Gateway.cpp 91670 2010-09-08 18:02:26Z johnnyw $
+// $Id: Gateway.cpp 96943 2013-03-30 09:42:31Z mcorino $
 
 #define ACE_BUILD_SVC_DLL
 
@@ -7,6 +7,7 @@
 #include "ace/OS_NS_unistd.h"
 #include "ace/Service_Config.h"
 #include "ace/Signal.h"
+#include "ace/Truncate.h"
 #include "Config_Files.h"
 #include "Event_Channel.h"
 #include "Gateway.h"
@@ -71,7 +72,7 @@ Gateway::handle_input (ACE_HANDLE h)
   ACE_OS::read (h, buf, sizeof (buf));
 
   // Shut us down.
-  return this->handle_signal ((int) h);
+  return this->handle_signal (ACE_Utils::truncate_cast<int> ((intptr_t)h));
 }
 
 int

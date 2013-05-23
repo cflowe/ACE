@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_mingw32.GNU 95660 2012-03-26 22:16:54Z johnnyw $
+# $Id: platform_mingw32.GNU 96943 2013-03-30 09:42:31Z mcorino $
 #
 # This file should allow to build ACE for mingw32 with mingw tools.
 #
@@ -33,3 +33,13 @@ ifeq ($(winsock2),1)
 endif
 
 LIBS += -lwsock32 -lnetapi32
+
+ifeq ($(GXX_4_OR_BETTER),1)
+  ifeq ($(CXX_MAJOR_VERSION),4)
+    ifeq ($(findstring $(CXX_MINOR_VERSION),7 8 9),$(CXX_MINOR_VERSION))
+      CPPFLAGS += -Wno-unknown-pragmas
+    endif
+  else
+    CPPFLAGS += -Wno-unknown-pragmas
+  endif
+endif

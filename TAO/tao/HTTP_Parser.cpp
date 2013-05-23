@@ -1,4 +1,4 @@
-// $Id: HTTP_Parser.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: HTTP_Parser.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/HTTP_Parser.h"
 
@@ -89,7 +89,7 @@ TAO_HTTP_Parser::parse_string (const char *nior,
 
   if (TAO_debug_level > 4)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("TAO (%P|%t) - HTTP_Parser::parse_string, getting IOR from <%s> <%s> <%d>\n"),
                   hostname, filename, port));
     }

@@ -1,5 +1,6 @@
-// $Id: CosEC_ProxyPushConsumer.cpp 91816 2010-09-17 08:35:56Z johnnyw $
+// $Id: CosEC_ProxyPushConsumer.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/Any/CosEC_ProxyPushConsumer.h"
 #include "tao/debug.h"
 #include "orbsvcs/Notify/AdminProperties.h"
@@ -80,7 +81,7 @@ TAO_Notify_CosEC_ProxyPushConsumer::validate ()
   {
     if (TAO_debug_level > 0)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      ORBSVCS_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("(%P|%t) TAO_Notify_CosEC_ProxyPushConsumer::validate(%d)")
                   ACE_TEXT ("disconnecting \n"), this->id ()));
     }

@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: MProfile.cpp 93359 2011-02-11 11:33:12Z mcorino $
+// $Id: MProfile.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/MProfile.h"
 #include "tao/Profile.h"
@@ -184,7 +184,7 @@ TAO_MProfile::add_profile (TAO_Profile *pfile)
   pfiles_[last_++] = pfile;
 
   if (pfile && pfile->_incr_refcnt () == 0)
-    ACE_ERROR_RETURN ((LM_ERROR,
+    TAOLIB_ERROR_RETURN ((LM_ERROR,
                        ACE_TEXT ("(%P|%t) Unable to increment reference ")
                        ACE_TEXT ("count in add_profile!\n")),
                       -1);

@@ -1,4 +1,4 @@
-// $Id: ORBInitializer_Registry_Impl.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: ORBInitializer_Registry_Impl.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PI/ORBInitializer_Registry_Impl.h"
 #include "tao/PI/ORBInitInfo.h"
@@ -82,7 +82,7 @@ TAO::ORBInitializer_Registry::fini (void)
       --i;
       if (TAO_debug_level > 8)
         {
-          ACE_DEBUG((LM_DEBUG, ACE_TEXT("TAO (%P|%t) - ORBInitializer_Registry::fini clearing %d @%@\n"),
+          TAOLIB_DEBUG((LM_DEBUG, ACE_TEXT("TAO (%P|%t) - ORBInitializer_Registry::fini clearing %d @%@\n"),
             i, this->initializers_[i].operator->()
             ));
         }
@@ -111,7 +111,7 @@ TAO::ORBInitializer_Registry::register_orb_initializer (
       // Add the given ORBInitializer to the sequence.
       if (TAO_debug_level > 8)
         {
-          ACE_DEBUG((LM_DEBUG, ACE_TEXT("TAO (%P|%t) - ORBInitializer_Registry::register_orb_initializer %d @%@\n"),
+          TAOLIB_DEBUG((LM_DEBUG, ACE_TEXT("TAO (%P|%t) - ORBInitializer_Registry::register_orb_initializer %d @%@\n"),
             cur_len, init
             ));
         }

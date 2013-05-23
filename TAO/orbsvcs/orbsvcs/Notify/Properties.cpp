@@ -1,5 +1,6 @@
-// $Id: Properties.cpp 91524 2010-08-27 14:33:58Z johnnyw $
+// $Id: Properties.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/Properties.h"
 #include "orbsvcs/NotifyExtC.h"
 #include "tao/debug.h"
@@ -32,7 +33,7 @@ TAO_Notify_Properties::TAO_Notify_Properties (void)
   this->ec_qos_[0].value <<= tp_params;
 
   if (TAO_debug_level > 1)
-    ACE_DEBUG ((LM_DEBUG, "in TAO_Properties ctos %x\n", this));
+    ORBSVCS_DEBUG ((LM_DEBUG, "in TAO_Properties ctos %x\n", this));
 }
 
 TAO_Notify_Properties::~TAO_Notify_Properties ()

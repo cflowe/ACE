@@ -1,5 +1,6 @@
-// $Id: FT_IOGR_Property.cpp 91692 2010-09-09 12:20:05Z johnnyw $
+// $Id: FT_IOGR_Property.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/FaultTolerance/FT_IOGR_Property.h"
 
 #include "tao/MProfile.h"
@@ -240,7 +241,7 @@ TAO_FT_IOGR_Property::encode_properties (
   if (this->ft_group_tagged_component_ == 0)
     {
       if (TAO_debug_level > 2)
-        ACE_ERROR_RETURN ((LM_ERROR,
+        ORBSVCS_ERROR_RETURN ((LM_ERROR,
                            "TAO-FT (%P|%t) - The group tagged component ",
                            "is null\n"),
                           0);

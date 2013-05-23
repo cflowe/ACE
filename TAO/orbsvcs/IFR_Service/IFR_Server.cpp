@@ -1,6 +1,7 @@
 /* -*- C++ -*- */
-// $Id: IFR_Server.cpp 91675 2010-09-08 19:09:19Z johnnyw $
+// $Id: IFR_Server.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "IFR_Service.h"
 #include "tao/Environment.h"
 #include "orbsvcs/Shutdown_Utilities.h"
@@ -24,7 +25,7 @@ void
 IFR_Service_Shutdown_Functor::operator() (int which_signal)
 {
   if (TAO_debug_level > 0)
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
                 "shutting down on signal %d\n", which_signal));
   (void) this->ifr_.shutdown ();
 }

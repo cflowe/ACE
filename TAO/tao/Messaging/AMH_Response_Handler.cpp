@@ -1,4 +1,4 @@
-// $Id: AMH_Response_Handler.cpp 95629 2012-03-22 11:12:34Z sma $
+// $Id: AMH_Response_Handler.cpp 97033 2013-04-16 14:53:24Z mesnier_p $
 
 #include "tao/Messaging/AMH_Response_Handler.h"
 #include "tao/TAO_Server_Request.h"
@@ -12,6 +12,7 @@
 #include "tao/debug.h"
 #include "tao/Buffer_Allocator_T.h"
 #include "tao/SystemException.h"
+#include "tao/PortableServer/ForwardRequestC.h"
 
 #include "ace/Copy_Disabled.h"
 
@@ -156,7 +157,7 @@ TAO_AMH_Response_Handler::_tao_rh_send_reply (void)
         {
           // No exception but some kind of error, yet a response
           // is required.
-          ACE_ERROR ((
+          TAOLIB_ERROR ((
                       LM_ERROR,
                       ACE_TEXT ("TAO: (%P|%t) %p: cannot send NO_EXCEPTION reply\n"),
                       ACE_TEXT ("TAO_AMH_Response_Handler::_tao_rh_send_reply")
@@ -194,22 +195,38 @@ TAO_AMH_Response_Handler::_tao_rh_send_exception (const CORBA::Exception &ex)
   // @@ It appears as if there should be a more efficient way to do
   //    this: the caller already knows this because it is part of the
   //    ExceptionHolder information.
-  if (CORBA::SystemException::_downcast (&ex))
+
+#if !defined (CORBA_E_COMPACT) && !defined (CORBA_E_MICRO) && (TAO_HAS_MINIMUM_POA == 0)
+  const PortableServer::ForwardRequest *fr =
+    PortableServer::ForwardRequest::_downcast (&ex);
+  if (fr != 0)
     {
-      reply_params.reply_status (GIOP::SYSTEM_EXCEPTION);
+      reply_params.reply_status (GIOP::LOCATION_FORWARD);
+      if (this->mesg_base_->generate_reply_header (this->_tao_out,
+                                                   reply_params) == -1)
+        {
+          throw ::CORBA::INTERNAL ();
+        }
+      this->_tao_out << fr->forward_reference;
     }
   else
+#endif
     {
-      reply_params.reply_status (GIOP::USER_EXCEPTION);
+      if (CORBA::SystemException::_downcast (&ex))
+        {
+          reply_params.reply_status (GIOP::SYSTEM_EXCEPTION);
+        }
+      else
+        {
+          reply_params.reply_status (GIOP::USER_EXCEPTION);
+        }
+      if (this->mesg_base_->generate_exception_reply (this->_tao_out,
+                                                      reply_params,
+                                                      ex) == -1)
+        {
+          throw ::CORBA::INTERNAL ();
+        }
     }
-
-  if (this->mesg_base_->generate_exception_reply (this->_tao_out,
-                                                  reply_params,
-                                                  ex) == -1)
-    {
-      throw ::CORBA::INTERNAL ();
-    }
-
   // Send the Exception
   if (this->transport_->send_message (this->_tao_out,
                                       0,
@@ -217,7 +234,7 @@ TAO_AMH_Response_Handler::_tao_rh_send_exception (const CORBA::Exception &ex)
                                       TAO_Message_Semantics (TAO_Message_Semantics::TAO_REPLY)) == -1)
     {
       if (TAO_debug_level > 0)
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     ACE_TEXT ("TAO: (%P|%t|%N|%l):  ")
                     ACE_TEXT ("TAO_AMH_Response_Handler:")
                     ACE_TEXT (" could not send exception reply\n")));
@@ -271,7 +288,7 @@ TAO_AMH_Response_Handler::_tao_rh_send_location_forward (CORBA::Object_ptr fwd,
   if (!(this->_tao_out << fwd))
     {
       if (TAO_debug_level > 0)
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     ACE_TEXT ("TAO (%P|%t) ERROR: Unable to marshal ")
                     ACE_TEXT ("forward reference.\n")));
       return;
@@ -284,7 +301,7 @@ TAO_AMH_Response_Handler::_tao_rh_send_location_forward (CORBA::Object_ptr fwd,
                                       TAO_Message_Semantics (TAO_Message_Semantics::TAO_REPLY)) == -1)
     {
       if (TAO_debug_level > 0)
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     ACE_TEXT ("TAO: (%P|%t|%N|%l):  ")
                     ACE_TEXT ("TAO_AMH_Response_Handler: could not send ")
                     ACE_TEXT ("location forward reply\n")));

@@ -1,5 +1,5 @@
 // This may look like C, but it's really -*- C++ -*-
-// $Id: DIOP_Endpoint.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: DIOP_Endpoint.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Strategies/DIOP_Endpoint.h"
 
@@ -102,7 +102,7 @@ TAO_DIOP_Endpoint::set (const ACE_INET_Addr &addr,
     {
       if (use_dotted_decimal_addresses == 0 && TAO_debug_level > 5)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
                       ACE_TEXT ("TAO (%P|%t) - DIOP_Endpoint::set, ")
                       ACE_TEXT ("%p\n"),
                       ACE_TEXT ("cannot determine hostname")));
@@ -112,7 +112,7 @@ TAO_DIOP_Endpoint::set (const ACE_INET_Addr &addr,
       if (tmp == 0)
         {
           if (TAO_debug_level > 0)
-            ACE_DEBUG ((LM_DEBUG,
+            TAOLIB_DEBUG ((LM_DEBUG,
                         ACE_TEXT ("TAO (%P|%t) - ")
                         ACE_TEXT ("DIOP_Endpoint::set, ")
                         ACE_TEXT ("%p\n"),

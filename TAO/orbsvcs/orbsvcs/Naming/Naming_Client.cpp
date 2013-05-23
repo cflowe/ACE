@@ -1,8 +1,8 @@
-// $Id: Naming_Client.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: Naming_Client.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/Naming/Naming_Client.h"
 #include "orbsvcs/CosNamingC.h"
-#include "ace/Log_Msg.h"
+#include "orbsvcs/Log_Macros.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -28,7 +28,7 @@ TAO_Naming_Client::init (CORBA::ORB_ptr orb, ACE_Time_Value *timeout)
         orb->resolve_initial_references ("NameService", timeout);
 
       if (CORBA::is_nil (naming_obj.in ()))
-        ACE_ERROR_RETURN ((LM_ERROR,
+        ORBSVCS_ERROR_RETURN ((LM_ERROR,
                            " (%P|%t) Unable to initialize the NameService.\n"),
                           -1);
       this->naming_context_ =

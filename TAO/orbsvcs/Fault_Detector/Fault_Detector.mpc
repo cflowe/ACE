@@ -1,5 +1,5 @@
-// $Id: Fault_Detector.mpc 91892 2010-09-22 08:09:31Z msmit $
-project : taoserver, orbsvcsexe, install, fault_tolerance {
+// $Id: Fault_Detector.mpc 97014 2013-04-12 22:47:02Z mitza $
+project : taoserver, orbsvcsexe, install, fault_tolerance, svc_utils {
   exename  = tao_fault_detector
   Source_Files {
     Fault_Detector_i.cpp

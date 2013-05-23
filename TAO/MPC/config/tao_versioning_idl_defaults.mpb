@@ -1,6 +1,6 @@
 // -*- MPC -*-
 //
-// $Id: tao_versioning_idl_defaults.mpb 84759 2009-03-09 07:17:54Z johnnyw $
+// $Id: tao_versioning_idl_defaults.mpb 96941 2013-03-29 13:12:52Z johnnyw $
 
 // This base project is only meant to be used by the core TAO
 // libraries and the orbsvcs libraries.
@@ -8,5 +8,4 @@
 project : taoidldefaults {
   idlflags += -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL \
               -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL
-
 }

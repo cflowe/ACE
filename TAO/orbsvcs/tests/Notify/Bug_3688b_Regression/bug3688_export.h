@@ -1,6 +1,6 @@
 
 // -*- C++ -*-
-// $Id: bug3688_export.h 95323 2011-12-14 12:37:01Z msmit $
+// $Id: bug3688_export.h 96986 2013-04-11 16:39:42Z mesnier_p $
 // Definition for Win32 Export directives.
 // This file is generated automatically by generate_export_file.pl bug3688
 // ------------------------------

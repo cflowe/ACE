@@ -3,7 +3,7 @@
 /**
  *  @file    registration.cpp
  *
- *  $Id: registration.cpp 93650 2011-03-28 08:44:53Z johnnyw $
+ *  $Id: registration.cpp 96944 2013-03-30 09:43:50Z mcorino $
  *
  *
  *  This test is used to measure the time it takes to register and
@@ -20,6 +20,7 @@
 #include "tao/ORB_Core.h"
 #include "ace/Profile_Timer.h"
 #include "ace/Get_Opt.h"
+#include "ace/Truncate.h"
 
 //
 // The following macros help take a very precise look into the
@@ -172,7 +173,7 @@ reverse_map_effectiveness (test_i *servants)
   // Calculate the effectiveness of the hash.
   for (i = 0; i < iterations; i++)
     {
-      u_long hash_index = u_long (&servants[i]) % active_object_map_size;
+      u_long hash_index = ACE_Utils::truncate_cast<u_long> ((intptr_t)&servants[i]) % active_object_map_size;
       hash_counter[hash_index]++;
     }
 

@@ -1,7 +1,7 @@
 /**
  * @author Marcel Smit (msmit@remedy.nl)
  *
- * $Id: DDS_Listen_T.h 95809 2012-06-03 17:56:00Z johnnyw $
+ * $Id: DDS_Listen_T.h 96982 2013-04-11 06:49:53Z johnnyw $
  *
  * Wrapper facade for NDDS.
  */
@@ -9,6 +9,8 @@
 #define DDS_LISTEN_T_H_
 
 #include "dds4ccm/impl/DDS_Subscriber_Base_T.h"
+#include "dds4ccm/impl/DataReaderListener_T.h"
+#include "dds4ccm/impl/DataListenerControl_T.h"
 
 ACE_BEGIN_VERSIONED_NAMESPACE_DECL
 class ACE_Reactor;

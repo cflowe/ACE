@@ -213,11 +213,11 @@ endif
 endif
 
 #BEGIN MPC-Generated Install Info
-#idl_files:
-#Session_Container.idl
-#
 #build_files:
 #Session_Container.mpc
+#
+#idl_files:
+#Session_Container.idl
 #
 
 #END MPC-Generated Install Info

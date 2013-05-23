@@ -4,13 +4,14 @@
 /**
  * @file  PG_Group_Factory.cpp
  *
- * $Id: PG_Group_Factory.cpp 96861 2013-02-25 17:40:02Z mesnier_p $
+ * $Id: PG_Group_Factory.cpp 97014 2013-04-12 22:47:02Z mitza $
  *
  * @author Dale Wilson <wilson_d@ociweb.com>
  * @author Byron Harris <harrisb@ociweb.com>
  */
 //=============================================================================
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/PortableGroup/PG_Group_Factory.h"
 #include "orbsvcs/PortableGroup/PG_Property_Utils.h"
 #include "orbsvcs/PortableGroup/PG_Group_List_Store.h"
@@ -266,7 +267,7 @@ int TAO::PG_Group_Factory::destroy_group (PortableGroup::ObjectGroupId group_id)
           dynamic_cast<PG_Object_Group_Storable *> (group);
         if (!og)
           {
-            ACE_ERROR ((LM_ERROR,
+            ORBSVCS_ERROR ((LM_ERROR,
                         ACE_TEXT ("%T %n (%P|%t) - PG_Group_Factory ")
                         ACE_TEXT ("In destroying group could not cast ")
                         ACE_TEXT ("to PG_Object_Group_Storable\n")));

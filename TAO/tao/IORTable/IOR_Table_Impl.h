@@ -4,7 +4,7 @@
 /**
  *  @file IOR_Table_Impl.h
  *
- *  $Id: IOR_Table_Impl.h 81429 2008-04-24 18:49:54Z johnnyw $
+ *  $Id: IOR_Table_Impl.h 97032 2013-04-16 14:30:03Z mesnier_p $
  *
  *  @author Carlos O'Ryan (coryan@uci.edu)
  */
@@ -35,12 +35,12 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-class TAO_IOR_Table_Impl;
+class TAO_IORTable_Export TAO_IOR_Table_Impl;
 typedef TAO_IOR_Table_Impl *TAO_IOR_Table_Impl_ptr;
 typedef TAO_Objref_Var_T <TAO_IOR_Table_Impl> TAO_IOR_Table_Impl_var;
 typedef TAO_Objref_Out_T <TAO_IOR_Table_Impl> TAO_IOR_Table_Impl_out;
 
-class TAO_IOR_Table_Impl
+class TAO_IORTable_Export TAO_IOR_Table_Impl
   : public virtual IORTable::Table,
     public virtual ::CORBA::LocalObject
 {
@@ -53,6 +53,8 @@ public:
 
   /// Constructor
   TAO_IOR_Table_Impl (void);
+
+  virtual bool async_available (void) { return false; }
 
   /// Find the object, using the locator if it is not on the table.
   char *find (const char *object_key);
@@ -72,7 +74,7 @@ public:
   virtual void set_locator (IORTable::Locator_ptr the_locator);
   //@}
 
-private:
+protected:
   typedef ACE_Hash_Map_Manager_Ex <ACE_CString, ACE_CString,
                                    ACE_Hash <ACE_CString>,
                                    ACE_Equal_To <ACE_CString>,

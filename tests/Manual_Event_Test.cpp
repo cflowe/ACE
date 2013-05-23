@@ -3,7 +3,7 @@
 /**
  *  @file    Manual_Event_Test.cpp
  *
- *  $Id: Manual_Event_Test.cpp 96220 2012-11-06 10:03:41Z mcorino $
+ *  $Id: Manual_Event_Test.cpp 96956 2013-04-03 13:41:57Z mitza $
  *
  *  This test verifies the functionality of the <ACE_Manual_Event>
  *  implementation.
@@ -133,7 +133,7 @@ worker (void *)
       if (evt.signal () == -1)
         ACE_ERROR ((LM_ERROR, ACE_TEXT (" (%P|%t) %p\n"), ACE_TEXT ("signal")));
 
-      ACE_OS::sleep (ACE_Time_Value (0, 200 * 1000 * 100));  // 200 msec
+      ACE_OS::sleep (ACE_Time_Value (0, 200 * 1000));  // 200 msec
     }
 
   if (evt.wait () == -1)

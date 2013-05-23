@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_IORTabled.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -156,7 +156,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_IORTable.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -242,7 +242,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_IORTabled.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -323,7 +323,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_IORTable.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -397,6 +397,29 @@
 			Name="Build Files"
 			Filter="mpc;mpb;mwc">
 			<File
+				RelativePath="Async_IORTable.mpc">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
 				RelativePath="IORTable.mpc">
 				<FileConfiguration
 					Name="Debug|Win32"
@@ -451,6 +474,29 @@
 			Name="Pidl Files"
 			Filter="pidl">
 			<File
+				RelativePath="Async_IORTable.pidl">
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					ExcludedFromBuild="true"
+				>
+				</FileConfiguration>
+			</File>
+			<File
 				RelativePath="IORTable.pidl">
 				<FileConfiguration
 					Name="Debug|Win32"
@@ -472,6 +518,13 @@
 					ExcludedFromBuild="true"
 				>
 				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Inline Files"
+			Filter="i;ipp;inl">
+			<File
+				RelativePath="Locate_ResponseHandler.inl">
 			</File>
 		</Filter>
 		<Filter

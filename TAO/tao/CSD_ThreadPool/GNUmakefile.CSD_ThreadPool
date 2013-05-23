@@ -276,8 +276,8 @@ endif
 #CSD_TP_Custom_Request.inl
 #CSD_TP_Servant_State_Map.inl
 #CSD_TP_Collocated_Synch_With_Server_Request.inl
-#CSD_TP_Queue_Visitor.inl
 #CSD_TP_Task.inl
+#CSD_TP_Queue_Visitor.inl
 #CSD_TP_Collocated_Synch_Request.inl
 #CSD_TP_Request.inl
 #CSD_TP_Strategy.inl
@@ -298,8 +298,8 @@ endif
 #CSD_TP_Custom_Request.h
 #CSD_TP_Servant_State_Map.h
 #CSD_TP_Collocated_Synch_With_Server_Request.h
-#CSD_TP_Queue_Visitor.h
 #CSD_TP_Task.h
+#CSD_TP_Queue_Visitor.h
 #CSD_TP_Collocated_Synch_Request.h
 #CSD_TP_Request.h
 #CSD_TP_Strategy.h

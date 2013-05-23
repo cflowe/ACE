@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosPropertyd.lib TAO_PortableServerd.lib TAO_CosProperty_Skeld.lib TAO_CosProperty_Servd.lib TAO_CosNamingd.lib ACE_QoSd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosPropertyd.lib TAO_PortableServerd.lib TAO_CosProperty_Skeld.lib TAO_CosProperty_Servd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib ACE_QoSd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_AVd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -156,7 +156,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosProperty.lib TAO_PortableServer.lib TAO_CosProperty_Skel.lib TAO_CosProperty_Serv.lib TAO_CosNaming.lib ACE_QoS.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosProperty.lib TAO_PortableServer.lib TAO_CosProperty_Skel.lib TAO_CosProperty_Serv.lib TAO_Svc_Utils.lib TAO_CosNaming.lib ACE_QoS.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_AV.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -242,7 +242,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosPropertyd.lib TAO_PortableServerd.lib TAO_CosProperty_Skeld.lib TAO_CosProperty_Servd.lib TAO_CosNamingd.lib ACE_QoSd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosPropertyd.lib TAO_PortableServerd.lib TAO_CosProperty_Skeld.lib TAO_CosProperty_Servd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib ACE_QoSd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_AVd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -323,7 +323,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosProperty.lib TAO_PortableServer.lib TAO_CosProperty_Skel.lib TAO_CosProperty_Serv.lib TAO_CosNaming.lib ACE_QoS.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosProperty.lib TAO_PortableServer.lib TAO_CosProperty_Skel.lib TAO_CosProperty_Serv.lib TAO_Svc_Utils.lib TAO_CosNaming.lib ACE_QoS.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_AV.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

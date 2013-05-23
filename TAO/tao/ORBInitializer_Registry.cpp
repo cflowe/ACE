@@ -1,4 +1,4 @@
-// $Id: ORBInitializer_Registry.cpp 96334 2012-11-23 08:11:07Z johnnyw $
+// $Id: ORBInitializer_Registry.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/ORBInitializer_Registry.h"
 #include "tao/ORBInitializer_Registry_Adapter.h"
@@ -32,7 +32,7 @@ namespace PortableInterceptor
       // Make sure TAO's singleton manager is initialized.
       if (TAO_Singleton_Manager::instance ()->init () == -1)
         {
-          ACE_ERROR ((LM_ERROR,
+          TAOLIB_ERROR ((LM_ERROR,
                       ACE_TEXT ("TAO (%P|%t) - register_orb_initializer: ")
                       ACE_TEXT ("Unable to pre-initialize TAO\n")));
         }
@@ -64,7 +64,7 @@ namespace PortableInterceptor
       }
     else
       {
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     ACE_TEXT ("TAO (%P|%t) %p\n"),
                     ACE_TEXT ("ERROR: ORBInitializer Registry unable to find the ")
                     ACE_TEXT ("ORBInitializer Registry instance")));

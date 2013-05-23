@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 14 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,12 +20,13 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: CosNaming_IDL CosNaming CosProperty_IDL CosProperty CosProperty_Skel CosProperty_Serv AV CosConcurrency_IDL CosConcurrency CosConcurrency_Skel CosConcurrency_Serv CosEvent_IDL CosEvent Svc_Utils CosEvent_Skel CosEvent_Serv CosLifeCycle_IDL CosLifeCycle CosLifeCycle_Skel PortableGroup CosLoadBalancing CosNaming_Skel CosNaming_Serv CosNotification_IDL CosNotification CosNotification_MC CosNotification_Skel CosNotification_Serv CosNotification_MC_Ext CosNotification_Persist CosTime_IDL CosTime CosTime_Skel CosTime_Serv CosTrading_IDL CosTrading CosTrading_Skel CosTrading_Serv DsLogAdmin_IDL DsLogAdmin DsEventLogAdmin_IDL DsEventLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv DsEventLogAdmin_Skel DsEventLogAdmin_Serv DsNotifyLogAdmin_IDL DsNotifyLogAdmin DsNotifyLogAdmin_Skel DsNotifyLogAdmin_Serv FTORB_Utils FTRT_ClientORB RTEvent RTEvent_Skel RTEvent_Serv FtRtEvent FTRT_EventChannel FT_ClientORB FtNaming FtNamingReplication FT_Naming_Serv FT_ServerORB FaultTolerance HTIOP IFRService RTCORBAEvent RTEventLogAdmin_IDL RTEventLogAdmin RTSched RTEventLogAdmin_Skel RTEventLogAdmin_Serv RTKokyuEvent RTSchedEvent RT_Notification Security SSLIOP
+all: CosNaming_IDL Svc_Utils CosNaming CosProperty_IDL CosProperty CosProperty_Skel CosProperty_Serv AV CosConcurrency_IDL CosConcurrency CosConcurrency_Skel CosConcurrency_Serv CosEvent_IDL CosEvent CosEvent_Skel CosEvent_Serv CosLifeCycle_IDL CosLifeCycle CosLifeCycle_Skel PortableGroup CosLoadBalancing CosNaming_Skel CosNaming_Serv CosNotification_IDL CosNotification CosNotification_MC CosNotification_Skel CosNotification_Serv CosNotification_MC_Ext CosNotification_Persist CosTime_IDL CosTime CosTime_Skel CosTime_Serv CosTrading_IDL CosTrading CosTrading_Skel CosTrading_Serv DsLogAdmin_IDL DsLogAdmin DsEventLogAdmin_IDL DsEventLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv DsEventLogAdmin_Skel DsEventLogAdmin_Serv DsNotifyLogAdmin_IDL DsNotifyLogAdmin DsNotifyLogAdmin_Skel DsNotifyLogAdmin_Serv FTORB_Utils FTRT_ClientORB RTEvent RTEvent_Skel RTEvent_Serv FtRtEvent FTRT_EventChannel FT_ClientORB FtNaming FtNamingReplication FT_Naming_Serv FT_ServerORB FaultTolerance HTIOP IFRService RTCORBAEvent RTEventLogAdmin_IDL RTEventLogAdmin RTSched RTEventLogAdmin_Skel RTEventLogAdmin_Serv RTKokyuEvent RTSchedEvent RT_Notification Security SSLIOP
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNaming_IDL $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Svc_Utils $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNaming $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosProperty_IDL $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosProperty $(@)
@@ -38,7 +39,6 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosConcurrency_Serv $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosEvent_IDL $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosEvent $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Svc_Utils $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosEvent_Skel $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosEvent_Serv $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosLifeCycle_IDL $(@)
@@ -106,8 +106,12 @@ $(REMAINING_TARGETS):
 CosNaming_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNaming_IDL all
 
+.PHONY: Svc_Utils
+Svc_Utils:
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Svc_Utils all
+
 .PHONY: CosNaming
-CosNaming: CosNaming_IDL
+CosNaming: CosNaming_IDL Svc_Utils
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNaming all
 
 .PHONY: CosProperty_IDL
@@ -123,11 +127,11 @@ CosProperty_Skel: CosProperty
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosProperty_Skel all
 
 .PHONY: CosProperty_Serv
-CosProperty_Serv: CosProperty CosProperty_Skel
+CosProperty_Serv: Svc_Utils CosProperty CosProperty_Skel
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosProperty_Serv all
 
 .PHONY: AV
-AV: CosNaming CosProperty CosProperty_Skel CosProperty_Serv
+AV: Svc_Utils CosNaming CosProperty CosProperty_Skel CosProperty_Serv
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.AV all
 
 .PHONY: CosConcurrency_IDL
@@ -143,7 +147,7 @@ CosConcurrency_Skel: CosConcurrency_IDL CosConcurrency
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosConcurrency_Skel all
 
 .PHONY: CosConcurrency_Serv
-CosConcurrency_Serv: CosConcurrency CosConcurrency_Skel
+CosConcurrency_Serv: Svc_Utils CosConcurrency CosConcurrency_Skel
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosConcurrency_Serv all
 
 .PHONY: CosEvent_IDL
@@ -154,16 +158,12 @@ CosEvent_IDL:
 CosEvent: CosEvent_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosEvent all
 
-.PHONY: Svc_Utils
-Svc_Utils:
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Svc_Utils all
-
 .PHONY: CosEvent_Skel
 CosEvent_Skel: CosEvent
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosEvent_Skel all
 
 .PHONY: CosEvent_Serv
-CosEvent_Serv: CosNaming CosEvent Svc_Utils CosEvent_Skel
+CosEvent_Serv: Svc_Utils CosNaming CosEvent CosEvent_Skel
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosEvent_Serv all
 
 .PHONY: CosLifeCycle_IDL
@@ -171,27 +171,27 @@ CosLifeCycle_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosLifeCycle_IDL all
 
 .PHONY: CosLifeCycle
-CosLifeCycle: CosNaming CosLifeCycle_IDL
+CosLifeCycle: Svc_Utils CosNaming CosLifeCycle_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosLifeCycle all
 
 .PHONY: CosLifeCycle_Skel
-CosLifeCycle_Skel: CosNaming CosLifeCycle
+CosLifeCycle_Skel: Svc_Utils CosNaming CosLifeCycle
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosLifeCycle_Skel all
 
 .PHONY: PortableGroup
-PortableGroup: CosNaming
+PortableGroup: Svc_Utils CosNaming
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.PortableGroup all
 
 .PHONY: CosLoadBalancing
-CosLoadBalancing: CosNaming PortableGroup
+CosLoadBalancing: Svc_Utils CosNaming PortableGroup
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosLoadBalancing all
 
 .PHONY: CosNaming_Skel
-CosNaming_Skel: CosNaming
+CosNaming_Skel: Svc_Utils CosNaming
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNaming_Skel all
 
 .PHONY: CosNaming_Serv
-CosNaming_Serv: CosNaming Svc_Utils CosNaming_Skel
+CosNaming_Serv: Svc_Utils CosNaming CosNaming_Skel
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNaming_Serv all
 
 .PHONY: CosNotification_IDL
@@ -203,7 +203,7 @@ CosNotification: CosEvent CosNotification_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNotification all
 
 .PHONY: CosNotification_MC
-CosNotification_MC: CosNaming
+CosNotification_MC: Svc_Utils CosNaming
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNotification_MC all
 
 .PHONY: CosNotification_Skel
@@ -211,15 +211,15 @@ CosNotification_Skel: CosEvent CosEvent_Skel CosNotification
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNotification_Skel all
 
 .PHONY: CosNotification_Serv
-CosNotification_Serv: CosEvent Svc_Utils CosEvent_Skel CosNotification CosNotification_Skel
+CosNotification_Serv: Svc_Utils CosEvent CosEvent_Skel CosNotification CosNotification_Skel
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNotification_Serv all
 
 .PHONY: CosNotification_MC_Ext
-CosNotification_MC_Ext: CosNaming CosEvent Svc_Utils CosEvent_Skel CosNotification CosNotification_MC CosNotification_Skel CosNotification_Serv
+CosNotification_MC_Ext: Svc_Utils CosNaming CosEvent CosEvent_Skel CosNotification CosNotification_MC CosNotification_Skel CosNotification_Serv
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNotification_MC_Ext all
 
 .PHONY: CosNotification_Persist
-CosNotification_Persist: CosEvent Svc_Utils CosEvent_Skel CosNotification CosNotification_Skel CosNotification_Serv
+CosNotification_Persist: Svc_Utils CosEvent CosEvent_Skel CosNotification CosNotification_Skel CosNotification_Serv
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.CosNotification_Persist all
 
 .PHONY: CosTime_IDL
@@ -283,7 +283,7 @@ DsEventLogAdmin_Skel: CosEvent CosEvent_Skel DsLogAdmin DsEventLogAdmin DsLogAdm
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DsEventLogAdmin_Skel all
 
 .PHONY: DsEventLogAdmin_Serv
-DsEventLogAdmin_Serv: CosNaming CosEvent Svc_Utils CosEvent_Skel CosEvent_Serv DsLogAdmin DsEventLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv DsEventLogAdmin_Skel
+DsEventLogAdmin_Serv: Svc_Utils CosNaming CosEvent CosEvent_Skel CosEvent_Serv DsLogAdmin DsEventLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv DsEventLogAdmin_Skel
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DsEventLogAdmin_Serv all
 
 .PHONY: DsNotifyLogAdmin_IDL
@@ -299,15 +299,15 @@ DsNotifyLogAdmin_Skel: CosEvent CosEvent_Skel CosNotification CosNotification_Sk
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DsNotifyLogAdmin_Skel all
 
 .PHONY: DsNotifyLogAdmin_Serv
-DsNotifyLogAdmin_Serv: CosEvent Svc_Utils CosEvent_Skel CosNotification CosNotification_Skel DsLogAdmin DsEventLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv DsEventLogAdmin_Skel DsNotifyLogAdmin DsNotifyLogAdmin_Skel
+DsNotifyLogAdmin_Serv: Svc_Utils CosEvent CosEvent_Skel CosNotification CosNotification_Skel DsLogAdmin DsEventLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv DsEventLogAdmin_Skel DsNotifyLogAdmin DsNotifyLogAdmin_Skel
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DsNotifyLogAdmin_Serv all
 
 .PHONY: FTORB_Utils
-FTORB_Utils: CosNaming PortableGroup
+FTORB_Utils: Svc_Utils CosNaming PortableGroup
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FTORB_Utils all
 
 .PHONY: FTRT_ClientORB
-FTRT_ClientORB:
+FTRT_ClientORB: Svc_Utils
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FTRT_ClientORB all
 
 .PHONY: RTEvent
@@ -323,39 +323,39 @@ RTEvent_Serv: Svc_Utils RTEvent RTEvent_Skel
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTEvent_Serv all
 
 .PHONY: FtRtEvent
-FtRtEvent: CosNaming Svc_Utils PortableGroup FTORB_Utils RTEvent RTEvent_Skel RTEvent_Serv
+FtRtEvent: Svc_Utils CosNaming PortableGroup FTORB_Utils RTEvent RTEvent_Skel RTEvent_Serv
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FtRtEvent all
 
 .PHONY: FTRT_EventChannel
-FTRT_EventChannel: CosNaming Svc_Utils PortableGroup FTORB_Utils RTEvent RTEvent_Skel RTEvent_Serv FtRtEvent
+FTRT_EventChannel: Svc_Utils CosNaming PortableGroup FTORB_Utils RTEvent RTEvent_Skel RTEvent_Serv FtRtEvent
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FTRT_EventChannel all
 
 .PHONY: FT_ClientORB
-FT_ClientORB: CosNaming PortableGroup FTORB_Utils
+FT_ClientORB: Svc_Utils CosNaming PortableGroup FTORB_Utils
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FT_ClientORB all
 
 .PHONY: FtNaming
-FtNaming: CosNaming Svc_Utils PortableGroup CosNaming_Skel CosNaming_Serv
+FtNaming: Svc_Utils CosNaming PortableGroup CosNaming_Skel CosNaming_Serv
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FtNaming all
 
 .PHONY: FtNamingReplication
-FtNamingReplication: CosNaming Svc_Utils PortableGroup CosNaming_Skel CosNaming_Serv FtNaming
+FtNamingReplication: Svc_Utils CosNaming PortableGroup CosNaming_Skel CosNaming_Serv FtNaming
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FtNamingReplication all
 
 .PHONY: FT_Naming_Serv
-FT_Naming_Serv: CosNaming Svc_Utils PortableGroup CosLoadBalancing CosNaming_Skel CosNaming_Serv FtNaming FtNamingReplication
+FT_Naming_Serv: Svc_Utils CosNaming PortableGroup CosLoadBalancing CosNaming_Skel CosNaming_Serv FtNaming FtNamingReplication
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FT_Naming_Serv all
 
 .PHONY: FT_ServerORB
-FT_ServerORB: CosNaming PortableGroup FTORB_Utils
+FT_ServerORB: Svc_Utils CosNaming PortableGroup FTORB_Utils
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FT_ServerORB all
 
 .PHONY: FaultTolerance
-FaultTolerance: CosNaming CosEvent PortableGroup CosNotification FTORB_Utils FT_ClientORB FT_ServerORB
+FaultTolerance: Svc_Utils CosNaming CosEvent PortableGroup CosNotification FTORB_Utils FT_ClientORB FT_ServerORB
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.FaultTolerance all
 
 .PHONY: HTIOP
-HTIOP:
+HTIOP: Svc_Utils
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.HTIOP all
 
 .PHONY: IFRService
@@ -375,7 +375,7 @@ RTEventLogAdmin: Svc_Utils DsLogAdmin RTEvent RTEventLogAdmin_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTEventLogAdmin all
 
 .PHONY: RTSched
-RTSched: CosNaming Svc_Utils
+RTSched: Svc_Utils CosNaming
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTSched all
 
 .PHONY: RTEventLogAdmin_Skel
@@ -383,27 +383,27 @@ RTEventLogAdmin_Skel: Svc_Utils DsLogAdmin DsLogAdmin_Skel RTEvent RTEvent_Skel 
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTEventLogAdmin_Skel all
 
 .PHONY: RTEventLogAdmin_Serv
-RTEventLogAdmin_Serv: CosNaming Svc_Utils DsLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv RTEvent RTEvent_Skel RTEvent_Serv RTEventLogAdmin RTSched RTEventLogAdmin_Skel
+RTEventLogAdmin_Serv: Svc_Utils CosNaming DsLogAdmin DsLogAdmin_Skel DsLogAdmin_Serv RTEvent RTEvent_Skel RTEvent_Serv RTEventLogAdmin RTSched RTEventLogAdmin_Skel
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTEventLogAdmin_Serv all
 
 .PHONY: RTKokyuEvent
-RTKokyuEvent: CosNaming Svc_Utils RTEvent RTEvent_Skel RTEvent_Serv RTSched
+RTKokyuEvent: Svc_Utils CosNaming RTEvent RTEvent_Skel RTEvent_Serv RTSched
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTKokyuEvent all
 
 .PHONY: RTSchedEvent
-RTSchedEvent: CosNaming Svc_Utils RTEvent RTEvent_Skel RTEvent_Serv RTSched
+RTSchedEvent: Svc_Utils CosNaming RTEvent RTEvent_Skel RTEvent_Serv RTSched
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RTSchedEvent all
 
 .PHONY: RT_Notification
-RT_Notification: CosEvent Svc_Utils CosEvent_Skel CosNotification CosNotification_Skel CosNotification_Serv
+RT_Notification: Svc_Utils CosEvent CosEvent_Skel CosNotification CosNotification_Skel CosNotification_Serv
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.RT_Notification all
 
 .PHONY: Security
-Security:
+Security: Svc_Utils
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Security all
 
 .PHONY: SSLIOP
-SSLIOP: Security
+SSLIOP: Svc_Utils Security
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.SSLIOP all
 
 project_name_list:

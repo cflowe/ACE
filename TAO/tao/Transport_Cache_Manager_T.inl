@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-//$Id: Transport_Cache_Manager_T.inl 91816 2010-09-17 08:35:56Z johnnyw $
+//$Id: Transport_Cache_Manager_T.inl 96992 2013-04-11 18:07:48Z huangh $
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -71,7 +71,7 @@ namespace TAO
       return;
 
     if (TAO_debug_level > 9 && state != entry->item ().is_connected ())
-      ACE_DEBUG ((LM_DEBUG, ACE_TEXT ("TAO (%P|%t) - Transport_Cache_Manager_T")
+      TAOLIB_DEBUG ((LM_DEBUG, ACE_TEXT ("TAO (%P|%t) - Transport_Cache_Manager_T")
                   ACE_TEXT ("::mark_connected, %s Transport[%d]\n"),
                   (state ? ACE_TEXT("true") : ACE_TEXT("false")),
                   entry->item ().transport ()->id ()

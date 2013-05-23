@@ -271,6 +271,8 @@
     </ClCompile>
     <ClCompile Include="IOR_Multicast.cpp">
     </ClCompile>
+    <ClCompile Include="Log_Macros.cpp">
+    </ClCompile>
     <ClCompile Include="RtecBaseC.cpp">
     </ClCompile>
     <ClCompile Include="RtecBaseS.cpp">
@@ -287,6 +289,7 @@
   <ItemGroup>
     <ClInclude Include="Daemon_Utilities.h" />
     <ClInclude Include="IOR_Multicast.h" />
+    <ClInclude Include="Log_Macros.h" />
     <ClInclude Include="RtecBaseC.h" />
     <ClInclude Include="RtecBaseS.h" />
     <ClInclude Include="Shutdown_Utilities.h" />

@@ -1,5 +1,6 @@
-// $Id: FTRTEC_Factory_Service.cpp 91675 2010-09-08 19:09:19Z johnnyw $
+// $Id: FTRTEC_Factory_Service.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "EventChannelFactory_i.h"
 #include "ace/Task.h"
 #include "ace/SString.h"
@@ -37,7 +38,7 @@ int parse_args(int argc, ACE_TCHAR* argv[])
 
   if (result == -1 || (id.length () == 0 && output.length () == 0))
   {
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT("Usage: %s\n")
       ACE_TEXT("  [-i id]  set the id that is used to register to the naming service\n")
       ACE_TEXT("  [-k kind] set the kind that is used to register to the naming service\n")
@@ -91,10 +92,10 @@ int ACE_TMAIN (int argc, ACE_TCHAR *argv[])
 
       naming_context->bind(name, event_channel_factory.in());
 
-      ACE_DEBUG((LM_DEBUG, "Register to naming service with %s", id.c_str()));
+      ORBSVCS_DEBUG((LM_DEBUG, "Register to naming service with %s", id.c_str()));
       if (kind.length())
-        ACE_DEBUG((LM_DEBUG, ", %s", kind.c_str()));
-      ACE_DEBUG((LM_DEBUG,"\n"));
+        ORBSVCS_DEBUG((LM_DEBUG, ", %s", kind.c_str()));
+      ORBSVCS_DEBUG((LM_DEBUG,"\n"));
     }
 
     if (output.length()) {
@@ -107,7 +108,7 @@ int ACE_TMAIN (int argc, ACE_TCHAR *argv[])
           ACE_OS::fopen (output.c_str(),
           ACE_TEXT("w"));
         if (output_file == 0)
-          ACE_ERROR_RETURN ((LM_ERROR,
+          ORBSVCS_ERROR_RETURN ((LM_ERROR,
           "Cannot open output file for writing IOR: %s",
           output.c_str()),
           1);

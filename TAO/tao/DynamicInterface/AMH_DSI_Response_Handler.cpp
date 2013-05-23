@@ -1,4 +1,4 @@
-// $Id: AMH_DSI_Response_Handler.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: AMH_DSI_Response_Handler.cpp 96986 2013-04-11 16:39:42Z mesnier_p $
 
 #include "AMH_DSI_Response_Handler.h"
 #include "Request.h"
@@ -289,6 +289,7 @@ TAO_AMH_DSI_Exception_Holder::_tao_unmarshal (
 void
 TAO_AMH_DSI_Exception_Holder::raise_invoke ()
 {
+  auto_ptr< ::CORBA::Exception> safety (this->exception_);
   this->exception_->_raise ();
 }
 

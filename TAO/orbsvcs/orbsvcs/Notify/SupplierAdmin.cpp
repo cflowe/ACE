@@ -1,5 +1,6 @@
-// $Id: SupplierAdmin.cpp 91524 2010-08-27 14:33:58Z johnnyw $
+// $Id: SupplierAdmin.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/SupplierAdmin.h"
 #include "orbsvcs/Notify/Builder.h"
 #include "orbsvcs/Notify/ProxyConsumer.h"
@@ -88,7 +89,7 @@ TAO_Notify_SupplierAdmin::load_child (const ACE_CString &type,
   TAO_Notify::Topology_Object* result = this;
   if (type == "proxy_push_consumer")
   {
-    if (DEBUG_LEVEL) ACE_DEBUG ((LM_DEBUG,
+    if (DEBUG_LEVEL) ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("(%P|%t) Admin reload proxy %d\n")
       , static_cast<int> (id)
       ));
@@ -96,7 +97,7 @@ TAO_Notify_SupplierAdmin::load_child (const ACE_CString &type,
   }
   else if (type == "structured_proxy_push_consumer")
   {
-    if (DEBUG_LEVEL) ACE_DEBUG ((LM_DEBUG,
+    if (DEBUG_LEVEL) ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("(%P|%t) Admin reload proxy %d\n")
       , static_cast<int> (id)
       ));
@@ -104,7 +105,7 @@ TAO_Notify_SupplierAdmin::load_child (const ACE_CString &type,
   }
   else if (type == "sequence_proxy_push_consumer")
   {
-    if (DEBUG_LEVEL) ACE_DEBUG ((LM_DEBUG,
+    if (DEBUG_LEVEL) ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("(%P|%t) Admin reload proxy %d\n")
       , static_cast<int> (id)
       ));

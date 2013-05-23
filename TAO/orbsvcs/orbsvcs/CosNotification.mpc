@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: CosNotification.mpc 95607 2012-03-12 20:49:02Z fields_t $
+// $Id: CosNotification.mpc 97014 2013-04-12 22:47:02Z mitza $
 
 project(CosNotification_IDL) : orbsvcslib, orbsvcs_output, install, event, tao_versioning_idl_defaults {
   custom_only = 1
@@ -248,7 +248,7 @@ project(CosNotification_Persist) : notification_serv, orbsvcs_output, install, a
   }
 }
 
-project(CosNotification_MC): tao_versioning_idl_defaults, orbsvcs_output, naming, tao_monitor, iortable, install {
+project(CosNotification_MC): tao_versioning_idl_defaults, orbsvcs_output, naming, tao_monitor, iortable, install, svc_utils {
   sharedname   = TAO_CosNotification_MC
   dynamicflags += TAO_NOTIFY_MC_BUILD_DLL
   tagchecks   += Notify

@@ -1,6 +1,7 @@
 /* -*- c++ -*- */
-// $Id: ifr_removing_visitor.cpp 91675 2010-09-08 19:09:19Z johnnyw $
+// $Id: ifr_removing_visitor.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "ifr_removing_visitor.h"
 #include "utl_scope.h"
 #include "ast_root.h"
@@ -34,7 +35,7 @@ ifr_removing_visitor::visit_scope (UTL_Scope *node)
 
               if (d == 0)
                 {
-                  ACE_ERROR_RETURN ((
+                  ORBSVCS_ERROR_RETURN ((
                       LM_ERROR,
                       ACE_TEXT ("(%N:%l) ifr_removing_visitor::visit_scope -")
                       ACE_TEXT (" bad node in this scope\n")
@@ -87,7 +88,7 @@ ifr_removing_visitor::visit_root (AST_Root *node)
 
       if (be_global->ifr_scopes ().push (new_scope.in ()) != 0)
         {
-          ACE_ERROR_RETURN ((
+          ORBSVCS_ERROR_RETURN ((
               LM_ERROR,
               ACE_TEXT ("(%N:%l) ifr_removing_visitor::visit_root -")
               ACE_TEXT (" scope push failed\n")
@@ -98,7 +99,7 @@ ifr_removing_visitor::visit_root (AST_Root *node)
 
       if (this->visit_scope (node) == -1)
         {
-          ACE_ERROR_RETURN ((
+          ORBSVCS_ERROR_RETURN ((
               LM_ERROR,
               ACE_TEXT ("(%N:%l) ifr_removing_visitor::visit_root -")
               ACE_TEXT (" visit_scope failed\n")
@@ -111,7 +112,7 @@ ifr_removing_visitor::visit_root (AST_Root *node)
 
       if (be_global->ifr_scopes ().pop (tmp) != 0)
         {
-          ACE_ERROR_RETURN ((
+          ORBSVCS_ERROR_RETURN ((
               LM_ERROR,
               ACE_TEXT ("(%N:%l) ifr_removing_visitor::visit_root -")
               ACE_TEXT (" scope pop failed\n")

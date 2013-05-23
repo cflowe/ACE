@@ -1,4 +1,4 @@
-// $Id: nsmain.cpp 95323 2011-12-14 12:37:01Z msmit $
+// $Id: nsmain.cpp 96986 2013-04-11 16:39:42Z mesnier_p $
 
 #include "NamingTask.h"
 #include "Hello.h"

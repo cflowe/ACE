@@ -3,7 +3,7 @@
 /**
  *  @file    be_util.cpp
  *
- *  $Id: be_util.cpp 91061 2010-07-12 08:32:16Z parsons $
+ *  $Id: be_util.cpp 97014 2013-04-12 22:47:02Z mitza $
  *
  *  Static helper methods used by multiple visitors.
  *
@@ -12,12 +12,13 @@
  */
 //=============================================================================
 
+#include "orbsvcs/Log_Macros.h"
 #include "be_util.h"
 #include "be_extern.h"
 
 #include "ast_generator.h"
 
-#include "ace/Log_Msg.h"
+#include "orbsvcs/Log_Macros.h"
 
 // Prepare an argument for a BE.
 void
@@ -33,12 +34,12 @@ be_util::arg_post_proc (void)
 void
 be_util::usage (void)
 {
-  ACE_DEBUG ((
+  ORBSVCS_DEBUG ((
       LM_DEBUG,
       ACE_TEXT (" -o <dir>\t\tOutput directory for the generated file.")
       ACE_TEXT (" Default is current directory\n")
     ));
-  ACE_DEBUG ((
+  ORBSVCS_DEBUG ((
       LM_DEBUG,
       ACE_TEXT (" -e\t\t\tGenerate just an include of original IDL file")
       ACE_TEXT (" if no IDL3 declarations are found\n")

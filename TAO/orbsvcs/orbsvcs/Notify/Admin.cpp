@@ -1,4 +1,4 @@
-// $Id: Admin.cpp 91524 2010-08-27 14:33:58Z johnnyw $
+// $Id: Admin.cpp 97014 2013-04-12 22:47:02Z mitza $
 #include "orbsvcs/Notify/Admin.h"
 #include "orbsvcs/Notify/Validate_Worker_T.h"
 
@@ -188,7 +188,7 @@ TAO_Notify_Admin::load_child (const ACE_CString &type,
   if (type == "subscriptions")
     {
       if (DEBUG_LEVEL)
-        ACE_DEBUG ((LM_DEBUG,
+        ORBSVCS_DEBUG ((LM_DEBUG,
                     ACE_TEXT ("(%P|%t) Admin reload subscription %d\n"),
                     static_cast<int> (id)
                     ));
@@ -200,7 +200,7 @@ TAO_Notify_Admin::load_child (const ACE_CString &type,
   else if (type == "filter_admin")
     {
       if (DEBUG_LEVEL)
-        ACE_DEBUG ((LM_DEBUG,
+        ORBSVCS_DEBUG ((LM_DEBUG,
                     ACE_TEXT ("(%P|%t) Admin reload filter_admin %d\n"),
                     static_cast<int> (id)
                     ));

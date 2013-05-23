@@ -1,4 +1,4 @@
-// $Id: Messaging_Queueing_Strategies.cpp 95193 2011-12-02 10:09:51Z mcorino $
+// $Id: Messaging_Queueing_Strategies.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Messaging/Messaging_Queueing_Strategies.h"
 #include "tao/Messaging/Buffering_Constraint_Policy.h"
@@ -133,7 +133,7 @@ namespace TAO
 
     if (TAO_debug_level > 6)
       {
-        ACE_DEBUG ((LM_DEBUG,
+        TAOLIB_DEBUG ((LM_DEBUG,
                     "TAO (%P|%t) - TAO_Eager_Buffering_Sync_Strategy::timer_check, "
                     "Now = %u, Current = %u, New = %u\n",
                     now.msec (), current_deadline.msec (),

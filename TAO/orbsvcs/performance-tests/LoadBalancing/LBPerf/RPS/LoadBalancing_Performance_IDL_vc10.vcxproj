@@ -121,7 +121,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_CosNamingd.lib;TAO_IORManipd.lib;TAO_PortableGroupd.lib;TAO_PI_Serverd.lib;TAO_ObjRefTemplated.lib;TAO_IORInterceptord.lib;TAO_CosLoadBalancingd.lib;TAO_Strategiesd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;TAO_IORManipd.lib;TAO_PortableGroupd.lib;TAO_PI_Serverd.lib;TAO_ObjRefTemplated.lib;TAO_IORInterceptord.lib;TAO_CosLoadBalancingd.lib;TAO_Strategiesd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/noentry %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -158,7 +158,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_CosNaming.lib;TAO_IORManip.lib;TAO_PortableGroup.lib;TAO_PI_Server.lib;TAO_ObjRefTemplate.lib;TAO_IORInterceptor.lib;TAO_CosLoadBalancing.lib;TAO_Strategies.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;TAO_IORManip.lib;TAO_PortableGroup.lib;TAO_PI_Server.lib;TAO_ObjRefTemplate.lib;TAO_IORInterceptor.lib;TAO_CosLoadBalancing.lib;TAO_Strategies.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -197,7 +197,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_CosNamingd.lib;TAO_IORManipd.lib;TAO_PortableGroupd.lib;TAO_PI_Serverd.lib;TAO_ObjRefTemplated.lib;TAO_IORInterceptord.lib;TAO_CosLoadBalancingd.lib;TAO_Strategiesd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;TAO_IORManipd.lib;TAO_PortableGroupd.lib;TAO_PI_Serverd.lib;TAO_ObjRefTemplated.lib;TAO_IORInterceptord.lib;TAO_CosLoadBalancingd.lib;TAO_Strategiesd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 <!--
   Though we can set TargetMachine explicitly, VC++
@@ -240,7 +240,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_CosNaming.lib;TAO_IORManip.lib;TAO_PortableGroup.lib;TAO_PI_Server.lib;TAO_ObjRefTemplate.lib;TAO_IORInterceptor.lib;TAO_CosLoadBalancing.lib;TAO_Strategies.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;TAO_IORManip.lib;TAO_PortableGroup.lib;TAO_PI_Server.lib;TAO_ObjRefTemplate.lib;TAO_IORInterceptor.lib;TAO_CosLoadBalancing.lib;TAO_Strategies.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

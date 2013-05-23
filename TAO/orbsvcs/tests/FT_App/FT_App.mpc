@@ -1,4 +1,4 @@
-// $Id: FT_App.mpc 75850 2006-12-06 08:36:30Z johnnyw $
+// $Id: FT_App.mpc 97019 2013-04-15 14:27:23Z mitza $
 
 project(*idl): taoidldefaults, orbsvcslib {
   IDL_Files {
@@ -91,7 +91,7 @@ project(*Analyzer): taoclient, fault_tolerance, notification_skel, orbsvcsexe {
   }
 }
 
-project(*FaultConsumer): taoserver, fault_tolerance, notification_skel, orbsvcsexe, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro {
+project(*FaultConsumer): taoserver, fault_tolerance, notification_skel, orbsvcsexe, avoids_minimum_corba, avoids_corba_e_compact, avoids_corba_e_micro, svc_utils {
   exename = ft_fault_consumer
   libs    += TAO_ReplicationManagerLib
   after   += FT_ReplicationManager_Lib

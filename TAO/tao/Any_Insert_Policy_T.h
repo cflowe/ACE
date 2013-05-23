@@ -4,7 +4,7 @@
 /**
  *  @file    Any_Insert_Policy_T.h
  *
- *  $Id: Any_Insert_Policy_T.h 96200 2012-10-19 07:57:30Z johnnyw $
+ *  $Id: Any_Insert_Policy_T.h 96992 2013-04-11 18:07:48Z huangh $
  *
  *  @author Johnny Willemsen  <jwillemsen@remedy.nl>
  */
@@ -62,7 +62,7 @@ namespace TAO
           }
         else
           {
-            ACE_ERROR ((LM_ERROR,
+            TAOLIB_ERROR ((LM_ERROR,
                         ACE_TEXT ("(%P|%t) %p\n"),
                         ACE_TEXT ("ERROR: unable to find AnyTypeCode Adapter ")));
           }
@@ -102,7 +102,7 @@ namespace TAO
       {
         if (TAO_debug_level > 2)
           {
-            ACE_DEBUG ((LM_DEBUG,
+            TAOLIB_DEBUG ((LM_DEBUG,
                         "TAO (%P|%t) - Cannot insert a vanilla CORBA Object"
                         " into an Any for returning the return value.\n"));
           }

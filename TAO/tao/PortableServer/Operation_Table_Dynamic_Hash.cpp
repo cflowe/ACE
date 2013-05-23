@@ -1,4 +1,4 @@
-// $Id: Operation_Table_Dynamic_Hash.cpp 95143 2011-11-28 14:30:28Z johnnyw $
+// $Id: Operation_Table_Dynamic_Hash.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
 #include "tao/Timeprobe.h"
@@ -46,7 +46,7 @@ TAO_Dynamic_Hash_OpTable::TAO_Dynamic_Hash_OpTable (
 
       // @@ (ASG): what happens if bind fails ???
       if (this->bind (db[i].opname, s) == -1)
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     ACE_TEXT ("(%P|%t) %p\n"),
                     ACE_TEXT ("bind failed")));
     }

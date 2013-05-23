@@ -3,7 +3,7 @@
 /**
  *  @file    FT_FaultEventDescriptor.cpp
  *
- *  $Id: FT_FaultEventDescriptor.cpp 91676 2010-09-08 19:10:28Z johnnyw $
+ *  $Id: FT_FaultEventDescriptor.cpp 97014 2013-04-12 22:47:02Z mitza $
  *
  *  This file is part of TAO's implementation of Fault Tolerant CORBA.
  *  This file provides the implementation of the
@@ -15,6 +15,7 @@
  */
 //=============================================================================
 
+#include "orbsvcs/Log_Macros.h"
 #include "FT_FaultEventDescriptor.h"
 
 #include "ace/SString.h"
@@ -46,7 +47,7 @@ void TAO::FT_FaultEventDescriptor::dump ()
 
   if (this->all_at_location_failed == 1)
   {
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("TAO::FT_FaultEventDescriptor::dump: ")
       ACE_TEXT ("All objects at location <%s> failed.\n"),
         loc_as_string.c_str()
@@ -55,7 +56,7 @@ void TAO::FT_FaultEventDescriptor::dump ()
 
   if (this->all_of_type_at_location_failed == 1)
   {
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("TAO::FT_FaultEventDescriptor::dump: ")
       ACE_TEXT ("All objects of type <%s> at location <%s> failed.\n"),
         this->type_id.in(),
@@ -65,7 +66,7 @@ void TAO::FT_FaultEventDescriptor::dump ()
 
   if (this->object_at_location_failed == 1)
   {
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("TAO::FT_FaultEventDescriptor::dump: ")
       ACE_TEXT ("Replica of type <%s> with ObjectGroupId <%Q> ")
       ACE_TEXT ("at location <%s> failed.\n"),
@@ -77,7 +78,7 @@ void TAO::FT_FaultEventDescriptor::dump ()
 
   if (this->object_is_primary == 1)
   {
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("TAO::FT_FaultEventDescriptor::dump: ")
       ACE_TEXT ("Primary replica of ObjectGroupId <%Q> failed.\n"),
         this->object_group_id

@@ -1,4 +1,4 @@
-// $Id: AllocTracker.h 71526 2006-03-14 06:14:35Z jtc $
+// $Id: AllocTracker.h 97014 2013-04-12 22:47:02Z mitza $
 #ifndef ALLOC_TRACKER_H
 #define ALLOC_TRACKER_H
 #include /**/"ace/pre.h"
@@ -47,7 +47,7 @@ public:
     _CrtMemState diff;
     _CrtMemDifference (&diff, &before_, &after);
 
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("(%P|%t) %s: New heap blocks: %d; bytes: %d\n"),
       name_.c_str (),
       static_cast<int> (diff.lCounts[_NORMAL_BLOCK]),

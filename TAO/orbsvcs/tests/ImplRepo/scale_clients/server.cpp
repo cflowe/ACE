@@ -1,4 +1,4 @@
-// $Id: server.cpp 96806 2013-02-12 16:57:43Z harrisb $
+// $Id: server.cpp 97071 2013-04-23 16:14:17Z mesnier_p $
 
 // server.cpp
 // This version uses the Implementation Repository.
@@ -7,6 +7,7 @@
 
 #include "tao/IORTable/IORTable.h"
 #include "tao/PortableServer/Root_POA.h"
+#include "tao/ImR_Client/ImR_Client.h"
 
 #include "ace/Get_Opt.h"
 #include "ace/streams.h"

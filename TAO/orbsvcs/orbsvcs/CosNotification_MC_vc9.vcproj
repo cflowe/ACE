@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_PortableServerd.lib ACE_ETCLd.lib TAO_ETCLd.lib ACE_ETCL_Parserd.lib ACE_Monitor_Controld.lib TAO_Monitord.lib TAO_IORTabled.lib iphlpapi.lib pdh.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib ACE_ETCLd.lib TAO_ETCLd.lib ACE_ETCL_Parserd.lib ACE_Monitor_Controld.lib TAO_Monitord.lib TAO_IORTabled.lib iphlpapi.lib pdh.lib"
 				OutputFile="$(OutDir)\TAO_CosNotification_MCd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -156,7 +156,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_PortableServer.lib ACE_ETCL.lib TAO_ETCL.lib ACE_ETCL_Parser.lib ACE_Monitor_Control.lib TAO_Monitor.lib TAO_IORTable.lib iphlpapi.lib pdh.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib ACE_ETCL.lib TAO_ETCL.lib ACE_ETCL_Parser.lib ACE_Monitor_Control.lib TAO_Monitor.lib TAO_IORTable.lib iphlpapi.lib pdh.lib"
 				OutputFile="$(OutDir)\TAO_CosNotification_MC.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -242,7 +242,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_PortableServerd.lib ACE_ETCLd.lib TAO_ETCLd.lib ACE_ETCL_Parserd.lib ACE_Monitor_Controld.lib TAO_Monitord.lib TAO_IORTabled.lib iphlpapi.lib pdh.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib ACE_ETCLd.lib TAO_ETCLd.lib ACE_ETCL_Parserd.lib ACE_Monitor_Controld.lib TAO_Monitord.lib TAO_IORTabled.lib iphlpapi.lib pdh.lib"
 				OutputFile="$(OutDir)\TAO_CosNotification_MCd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -323,7 +323,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_PortableServer.lib ACE_ETCL.lib TAO_ETCL.lib ACE_ETCL_Parser.lib ACE_Monitor_Control.lib TAO_Monitor.lib TAO_IORTable.lib iphlpapi.lib pdh.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib ACE_ETCL.lib TAO_ETCL.lib ACE_ETCL_Parser.lib ACE_Monitor_Control.lib TAO_Monitor.lib TAO_IORTable.lib iphlpapi.lib pdh.lib"
 				OutputFile="$(OutDir)\TAO_CosNotification_MC.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Transport_Acceptor.cpp 91492 2010-08-26 13:40:18Z johnnyw $
+// $Id: Transport_Acceptor.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Transport_Acceptor.h"
 #include "ace/Reactor.h"
@@ -29,7 +29,7 @@ TAO_Acceptor::handle_accept_error (ACE_Event_Handler* base_acceptor)
   if (errno == EMFILE || errno == ENFILE)
     {
       if (TAO_debug_level > 0)
-        ACE_DEBUG ((LM_DEBUG, "TAO (%P|%t) - "
+        TAOLIB_DEBUG ((LM_DEBUG, "TAO (%P|%t) - "
                               "TAO_Acceptor::handle_accept_error - "
                               "Too many files open\n"));
 
@@ -76,7 +76,7 @@ TAO_Acceptor::handle_expiration (ACE_Event_Handler* base_acceptor)
     return -1;
 
   if (TAO_debug_level > 0)
-    ACE_DEBUG ((LM_DEBUG, "TAO (%P|%t) - "
+    TAOLIB_DEBUG ((LM_DEBUG, "TAO (%P|%t) - "
                           "TAO_Acceptor::handle_expiration - "
                           "Re-registering the acceptor\n"));
 

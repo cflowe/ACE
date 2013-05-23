@@ -1,5 +1,6 @@
-// $Id: Dump_Schedule.cpp 91676 2010-09-08 19:10:28Z johnnyw $
+// $Id: Dump_Schedule.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "ace/Sched_Params.h"
 #include "ace/Get_Opt.h"
 #include "ace/Argv_Type_Converter.h"
@@ -26,7 +27,7 @@ ACE_TMAIN (int argc, ACE_TCHAR* argv[])
         orb->resolve_initial_references ("NameService");
 
       if (CORBA::is_nil(naming_obj.in ()))
-        ACE_ERROR_RETURN ((LM_ERROR,
+        ORBSVCS_ERROR_RETURN ((LM_ERROR,
                            " (%P|%t) Unable to find the Naming Service\n"),
                           1);
 

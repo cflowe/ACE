@@ -24,7 +24,7 @@ FILES = \
 #----------------------------------------------------------------------------
 #       Include macros and targets
 #----------------------------------------------------------------------------
-LDLIBS = -lTAO_Svc_Utils -lTAO_FtNaming -lTAO_PortableGroup -lTAO_IORManip -lTAO_Messaging -lTAO_PI -lTAO_CodecFactory -lTAO_PortableServer -lTAO_Valuetype -lTAO_CosNaming -lTAO_AnyTypeCode -lTAO -lACE
+LDLIBS = -lTAO_FtNaming -lTAO_PortableGroup -lTAO_IORManip -lTAO_Messaging -lTAO_PI -lTAO_CodecFactory -lTAO_Valuetype -lTAO_CosNaming -lTAO_Svc_Utils -lTAO_PortableServer -lTAO_AnyTypeCode -lTAO -lACE
 TAO_IDL = ../../../bin/tao_idl
 TAO_IDL_DEP = ../../../bin/tao_idl$(EXEEXT)
 TAO_IDLFLAGS = -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I../..$(if $(ARCH), -g $(call ADD_QUOTE,$(call ADD_ARCH,$(ACE_ROOT)/bin/ace_gperf)))
@@ -74,7 +74,7 @@ else
   ifeq ($(findstring k, $(MAKEFLAGS)),k)
     LIBCHECK = 1
   else
-    LIBCHECK ?= $(filter-out $(foreach lib,TAO_Svc_Utils TAO_FtNaming TAO_PortableGroup TAO_IORManip TAO_Messaging TAO_PI TAO_CodecFactory TAO_PortableServer TAO_Valuetype TAO_CosNaming TAO_AnyTypeCode TAO ACE,$(findstring $(lib),$(foreach libpath,. $(if $(ARCH),./$(ARCH)) ../../../lib $(if $(ARCH),../../../lib/$(ARCH)) /usr/lib /usr/lib64 $(INSLIB),$(wildcard $(libpath)/$(LIB_PREFIX)$(lib).* $(libpath)/$(lib).lib)))),TAO_Svc_Utils TAO_FtNaming TAO_PortableGroup TAO_IORManip TAO_Messaging TAO_PI TAO_CodecFactory TAO_PortableServer TAO_Valuetype TAO_CosNaming TAO_AnyTypeCode TAO ACE)
+    LIBCHECK ?= $(filter-out $(foreach lib,TAO_FtNaming TAO_PortableGroup TAO_IORManip TAO_Messaging TAO_PI TAO_CodecFactory TAO_Valuetype TAO_CosNaming TAO_Svc_Utils TAO_PortableServer TAO_AnyTypeCode TAO ACE,$(findstring $(lib),$(foreach libpath,. $(if $(ARCH),./$(ARCH)) ../../../lib $(if $(ARCH),../../../lib/$(ARCH)) /usr/lib /usr/lib64 $(INSLIB),$(wildcard $(libpath)/$(LIB_PREFIX)$(lib).* $(libpath)/$(lib).lib)))),TAO_FtNaming TAO_PortableGroup TAO_IORManip TAO_Messaging TAO_PI TAO_CodecFactory TAO_Valuetype TAO_CosNaming TAO_Svc_Utils TAO_PortableServer TAO_AnyTypeCode TAO ACE)
     ifeq ($(LIBCHECK),)
       LIBCHECK = 1
     endif
@@ -169,7 +169,7 @@ endif
 ifneq ($(VXWORKSLINK),1)
 ifeq ($(static_libs_only), 1)
   ifeq ($(use_dep_libs), 1)
-    DEPLIBS = $(foreach lib, TAO_Svc_Utils TAO_FtNaming TAO_PortableGroup TAO_IORManip TAO_Messaging TAO_PI TAO_CodecFactory TAO_PortableServer TAO_Valuetype TAO_CosNaming TAO_AnyTypeCode TAO ACE , $(foreach libpath, . ../../../lib, $(wildcard $(libpath)/$(LIB_PREFIX)$(lib).$(LIBEXT))))
+    DEPLIBS = $(foreach lib, TAO_FtNaming TAO_PortableGroup TAO_IORManip TAO_Messaging TAO_PI TAO_CodecFactory TAO_Valuetype TAO_CosNaming TAO_Svc_Utils TAO_PortableServer TAO_AnyTypeCode TAO ACE , $(foreach libpath, . ../../../lib, $(wildcard $(libpath)/$(LIB_PREFIX)$(lib).$(LIBEXT))))
   endif
 endif
 

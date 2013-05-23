@@ -1,4 +1,5 @@
-// $Id: FtEventServiceInterceptor.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: FtEventServiceInterceptor.cpp 97014 2013-04-12 22:47:02Z mitza $
+#include "orbsvcs/Log_Macros.h"
 #include "ace/OS_NS_string.h"
 #include "ace/SString.h"
 #include "orbsvcs/FT_CORBA_ORBC.h"
@@ -110,7 +111,7 @@ get_transaction_depth_context(
   }
   catch (const CORBA::BAD_PARAM&)
   {
-    ACE_DEBUG((LM_DEBUG, "Received request without transaction depth context\n"));
+    ORBSVCS_DEBUG((LM_DEBUG, "Received request without transaction depth context\n"));
     return -1;
   }
 

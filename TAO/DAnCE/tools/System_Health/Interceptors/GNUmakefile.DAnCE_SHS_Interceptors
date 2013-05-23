@@ -33,7 +33,7 @@ FILES = \
 #----------------------------------------------------------------------------
 #       Include macros and targets
 #----------------------------------------------------------------------------
-ACE_SHLIBS = -lDAnCE_SHS_CORBA_Transport -lTAO_CosNaming -lDAnCE_SHS_Daemon_stub -lDAnCE_System_Health_stub -lDAnCE_skel -lDAnCE_stub -lDAnCE_ApplicationManager_skel -lDAnCE_ApplicationManager_stub -lDAnCE_Deployment_skel -lDAnCE_Deployment_stub -lDAnCE_Logger -lTAO_Messaging -lTAO_PortableServer -lTAO_Valuetype -lTAO_PI -lTAO_CodecFactory -lTAO_AnyTypeCode -lTAO -lACE
+ACE_SHLIBS = -lDAnCE_SHS_CORBA_Transport -lTAO_CosNaming -lTAO_Svc_Utils -lDAnCE_SHS_Daemon_stub -lDAnCE_System_Health_stub -lDAnCE_skel -lDAnCE_stub -lDAnCE_ApplicationManager_skel -lDAnCE_ApplicationManager_stub -lDAnCE_Deployment_skel -lDAnCE_Deployment_stub -lDAnCE_Logger -lTAO_Messaging -lTAO_PortableServer -lTAO_Valuetype -lTAO_PI -lTAO_CodecFactory -lTAO_AnyTypeCode -lTAO -lACE
 TAO_IDL = ../../../../../bin/tao_idl
 TAO_IDL_DEP = ../../../../../bin/tao_idl$(EXEEXT)
 TAO_IDLFLAGS = -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I../../../..$(if $(ARCH), -g $(call ADD_QUOTE,$(call ADD_ARCH,$(ACE_ROOT)/bin/ace_gperf)))
@@ -84,7 +84,7 @@ else
   ifeq ($(findstring k, $(MAKEFLAGS)),k)
     LIBCHECK = 1
   else
-    LIBCHECK ?= $(filter-out $(foreach lib,DAnCE_SHS_CORBA_Transport TAO_CosNaming DAnCE_SHS_Daemon_stub DAnCE_System_Health_stub DAnCE_skel DAnCE_stub DAnCE_ApplicationManager_skel DAnCE_ApplicationManager_stub DAnCE_Deployment_skel DAnCE_Deployment_stub DAnCE_Logger TAO_Messaging TAO_PortableServer TAO_Valuetype TAO_PI TAO_CodecFactory TAO_AnyTypeCode TAO ACE,$(findstring $(lib),$(foreach libpath,. $(if $(ARCH),./$(ARCH)) ../../../../../lib $(if $(ARCH),../../../../../lib/$(ARCH)) /usr/lib /usr/lib64 $(INSLIB),$(wildcard $(libpath)/$(LIB_PREFIX)$(lib).* $(libpath)/$(lib).lib)))),DAnCE_SHS_CORBA_Transport TAO_CosNaming DAnCE_SHS_Daemon_stub DAnCE_System_Health_stub DAnCE_skel DAnCE_stub DAnCE_ApplicationManager_skel DAnCE_ApplicationManager_stub DAnCE_Deployment_skel DAnCE_Deployment_stub DAnCE_Logger TAO_Messaging TAO_PortableServer TAO_Valuetype TAO_PI TAO_CodecFactory TAO_AnyTypeCode TAO ACE)
+    LIBCHECK ?= $(filter-out $(foreach lib,DAnCE_SHS_CORBA_Transport TAO_CosNaming TAO_Svc_Utils DAnCE_SHS_Daemon_stub DAnCE_System_Health_stub DAnCE_skel DAnCE_stub DAnCE_ApplicationManager_skel DAnCE_ApplicationManager_stub DAnCE_Deployment_skel DAnCE_Deployment_stub DAnCE_Logger TAO_Messaging TAO_PortableServer TAO_Valuetype TAO_PI TAO_CodecFactory TAO_AnyTypeCode TAO ACE,$(findstring $(lib),$(foreach libpath,. $(if $(ARCH),./$(ARCH)) ../../../../../lib $(if $(ARCH),../../../../../lib/$(ARCH)) /usr/lib /usr/lib64 $(INSLIB),$(wildcard $(libpath)/$(LIB_PREFIX)$(lib).* $(libpath)/$(lib).lib)))),DAnCE_SHS_CORBA_Transport TAO_CosNaming TAO_Svc_Utils DAnCE_SHS_Daemon_stub DAnCE_System_Health_stub DAnCE_skel DAnCE_stub DAnCE_ApplicationManager_skel DAnCE_ApplicationManager_stub DAnCE_Deployment_skel DAnCE_Deployment_stub DAnCE_Logger TAO_Messaging TAO_PortableServer TAO_Valuetype TAO_PI TAO_CodecFactory TAO_AnyTypeCode TAO ACE)
     ifeq ($(LIBCHECK),)
       LIBCHECK = 1
     endif

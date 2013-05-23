@@ -1,4 +1,4 @@
-// $Id: Wait_On_Read.cpp 95332 2011-12-15 11:09:41Z mcorino $
+// $Id: Wait_On_Read.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Wait_On_Read.h"
 #include "tao/Transport.h"
@@ -119,7 +119,7 @@ TAO_Wait_On_Read::wait (ACE_Time_Value * max_wait_time,
          return 0;
 
        if (TAO_debug_level > 0)
-         ACE_DEBUG ((LM_DEBUG,
+         TAOLIB_DEBUG ((LM_DEBUG,
                      ACE_TEXT ("TAO (%P|%t) - Wait_On_Read[%d]::wait (), ")
                      ACE_TEXT ("registering handle for cleanup\n"),
                      this->transport_->id ()));
@@ -134,7 +134,7 @@ TAO_Wait_On_Read::wait (ACE_Time_Value * max_wait_time,
                                 ACE_Event_Handler::READ_MASK) == -1)
          {
            if (TAO_debug_level > 0)
-             ACE_ERROR ((LM_ERROR,
+             TAOLIB_ERROR ((LM_ERROR,
                          ACE_TEXT ("TAO (%P|%t) - Wait_On_Read[%d]::wait (), ")
                          ACE_TEXT ("registration with reactor returned an error\n"),
                          this->transport_->id ()));

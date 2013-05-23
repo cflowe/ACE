@@ -1,4 +1,4 @@
-//$Id: Remote_Invocation.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+//$Id: Remote_Invocation.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Remote_Invocation.h"
 #include "tao/Profile.h"
@@ -74,7 +74,7 @@ namespace TAO
         {
           if (TAO_debug_level > 0)
             {
-              ACE_ERROR ((LM_ERROR,
+              TAOLIB_ERROR ((LM_ERROR,
                           ACE_TEXT ("TAO (%P|%t) - ")
                           ACE_TEXT ("Remote_Invocation::init_target_spec, ")
                           ACE_TEXT ("Error in finding index for ")
@@ -192,7 +192,7 @@ namespace TAO
 
         if (TAO_debug_level > 2)
           {
-            ACE_DEBUG ((LM_DEBUG,
+            TAOLIB_DEBUG ((LM_DEBUG,
                         ACE_TEXT ("TAO (%P|%t) - ")
                         ACE_TEXT ("Remote_Invocation::send_message, ")
                         ACE_TEXT ("failure while sending message\n")));

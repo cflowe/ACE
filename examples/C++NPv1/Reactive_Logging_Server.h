@@ -1,5 +1,5 @@
 /*
-** $Id: Reactive_Logging_Server.h 80826 2008-03-04 14:51:23Z wotte $
+** $Id: Reactive_Logging_Server.h 96943 2013-03-30 09:42:31Z mcorino $
 **
 ** Copyright 2001 Addison Wesley. All Rights Reserved.
 */
@@ -13,6 +13,7 @@
 #include "ace/Log_Record.h"
 #include "ace/Handle_Set.h"
 #include "ace/Basic_Types.h"
+#include "ace/Truncate.h"
 #include "ace/os_include/os_fcntl.h"
 #include "Iterative_Logging_Server.h"
 
@@ -35,7 +36,7 @@ protected:
 
   virtual int wait_for_multiple_events () {
     active_handles_ = master_handle_set_;
-    int width = (int)active_handles_.max_set () + 1;
+    int width = ACE_Utils::truncate_cast<int> ((intptr_t)active_handles_.max_set ()) + 1;
     if (select (width,
                 active_handles_.fdset (),
                 0,        // no write_fds

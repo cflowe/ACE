@@ -1,4 +1,4 @@
-// $Id: Stub.cpp 96760 2013-02-05 21:11:03Z stanleyk $
+// $Id: Stub.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 // Portions Copyright 1995 by Sun Microsystems Inc.
 // Portions Copyright 1997-2002 by Washington University
@@ -57,7 +57,7 @@ TAO_Stub::TAO_Stub (const char *repository_id,
     {
       if (TAO_debug_level > 0)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
                       ACE_TEXT ("TAO: (%P|%t) TAO_Stub created with default ")
                       ACE_TEXT ("ORB core\n")));
         }
@@ -118,7 +118,7 @@ TAO_Stub::add_forward_profiles (const TAO_MProfile &mprofiles,
                      this->profile_lock_));
   if (TAO_debug_level > 5)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("TAO (%P|%t) - Stub::add_forward_profiles, ")
                   ACE_TEXT ("acquired profile lock this = 0x%x\n"),
                   this));
@@ -170,7 +170,7 @@ TAO_Stub::create_ior_info (IOP::IOR *&ior_info, CORBA::ULong &index)
                             -1));
   if (TAO_debug_level > 5)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("TAO (%P|%t) - Stub::create_ior_info, acquired ")
                   ACE_TEXT ("profile lock this = 0x%x\n"),
                   this));
@@ -347,7 +347,7 @@ TAO_Stub::set_profile_in_use_i (TAO_Profile *pfile)
   // it to disappear, so increase the reference count by one!!
   if (pfile && (pfile->_incr_refcnt () == 0))
     {
-      ACE_ERROR_RETURN ((LM_ERROR,
+      TAOLIB_ERROR_RETURN ((LM_ERROR,
                         ACE_TEXT ("(%P|%t) unable to increment profile ref!\n")),
                         0);
     }
@@ -540,7 +540,7 @@ TAO_Stub::marshal (TAO_OutputCDR &cdr)
                                 0));
   if (TAO_debug_level > 5)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("TAO (%P|%t) - Stub::marshal, acquired ")
                   ACE_TEXT ("profile lock this = 0x%x\n"),
                   this));

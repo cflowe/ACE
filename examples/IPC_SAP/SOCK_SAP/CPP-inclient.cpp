@@ -1,4 +1,4 @@
-// $Id: CPP-inclient.cpp 91671 2010-09-08 18:39:23Z johnnyw $
+// $Id: CPP-inclient.cpp 97056 2013-04-19 11:16:17Z johnnyw $
 
 // This tests the features of the <ACE_SOCK_Connector> and
 // <ACE_SOCK_Stream> classes.  In addition, it can be used to test the
@@ -19,8 +19,6 @@
 #include "ace/OS_NS_string.h"
 #include "ace/OS_NS_unistd.h"
 #include "ace/OS_main.h"
-
-
 
 Options::Options (void)
   : host_ (ACE_DEFAULT_SERVER_HOST),
@@ -409,7 +407,7 @@ run_client (void)
   else
     ACE_Thread_Manager::instance ()->wait ();
 #else
-  *(OPTIONS::instance ()->thr_func) ();
+  (void) *(OPTIONS::instance ()->thr_func) ();
 #endif /* ACE_HAS_THREADS */
   return 0;
 }

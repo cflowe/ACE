@@ -1,4 +1,4 @@
-// $Id: ECG_Reconnect_ConsumerEC_Control.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: ECG_Reconnect_ConsumerEC_Control.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/Event/EC_Gateway_IIOP.h"
 #include "orbsvcs/Event/ECG_Reconnect_ConsumerEC_Control.h"
@@ -210,7 +210,7 @@ TAO_ECG_Reconnect_ConsumerEC_Control::event_channel_not_exist (
 {
   try
     {
-      //ACE_DEBUG ((LM_DEBUG,
+      //ORBSVCS_DEBUG ((LM_DEBUG,
       //            "ECG_Reconnect_ConsumerControl(%P|%t) - "
       //            "channel %x does not exists\n"));
       is_consumer_ec_connected_ = 0;
@@ -244,7 +244,7 @@ TAO_ECG_Reconnect_ConsumerEC_Control::system_exception (
       //   return;
 
       // Anything else is serious, including timeouts...
-      //ACE_DEBUG ((LM_DEBUG,
+      //ORBSVCS_DEBUG ((LM_DEBUG,
       //            "ECG_Reconnect_ConsumerControl(%P|%t) - "
       //            "channel %x does not exists system except\n"));
       is_consumer_ec_connected_ = 0;

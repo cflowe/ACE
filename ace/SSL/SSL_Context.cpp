@@ -1,4 +1,4 @@
-// $Id: SSL_Context.cpp 96831 2013-02-18 01:59:32Z stanleyk $
+// $Id: SSL_Context.cpp 96985 2013-04-11 15:50:32Z huangh $
 #include "SSL_Context.h"
 
 #include "sslconf.h"
@@ -9,7 +9,7 @@
 
 #include "ace/Guard_T.h"
 #include "ace/Object_Manager.h"
-#include "ace/Log_Msg.h"
+#include "ace/Log_Category.h"
 #include "ace/Singleton.h"
 #include "ace/Synch_Traits.h"
 #include "ace/Truncate.h"
@@ -603,7 +603,7 @@ ACE_SSL_Context::report_error (unsigned long error_code)
   (void) ::ERR_error_string (error_code, error_string);
 #endif /* OPENSSL_VERSION_NUMBER >= 0x0090601fL */
 
-  ACE_ERROR ((LM_ERROR,
+  ACELIB_ERROR ((LM_ERROR,
               ACE_TEXT ("ACE_SSL (%P|%t) error code: %u - %C\n"),
               error_code,
               error_string));

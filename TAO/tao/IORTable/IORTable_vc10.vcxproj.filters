@@ -21,6 +21,10 @@
       <UniqueIdentifier>{2990FD4C-FECA-1BAD-74A3-5011DFAA537B}</UniqueIdentifier>
       <Extensions>pidl</Extensions>
     </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{763028EF-FECA-1BAD-74A3-5011DFAA537B}</UniqueIdentifier>
+      <Extensions>i;ipp;inl</Extensions>
+    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{502A2050-FECA-1BAD-74A3-5011DFAA537B}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
@@ -61,6 +65,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Async_IORTable.mpc">
+      <Filter>Build Files</Filter>
+    </None>
     <None Include="IORTable.mpc">
       <Filter>Build Files</Filter>
     </None>
@@ -71,8 +78,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Async_IORTable.pidl">
+      <Filter>Pidl Files</Filter>
+    </None>
     <None Include="IORTable.pidl">
       <Filter>Pidl Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Locate_ResponseHandler.inl">
+      <Filter>Inline Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

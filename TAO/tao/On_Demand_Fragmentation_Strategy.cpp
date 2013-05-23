@@ -1,4 +1,4 @@
-// $Id: On_Demand_Fragmentation_Strategy.cpp 95629 2012-03-22 11:12:34Z sma $
+// $Id: On_Demand_Fragmentation_Strategy.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 
 #include "tao/On_Demand_Fragmentation_Strategy.h"
@@ -68,7 +68,7 @@ TAO_On_Demand_Fragmentation_Strategy::fragment (
       cdr.more_fragments (true);
 
       if (TAO_debug_level > 0)
-        ACE_DEBUG ((LM_DEBUG,
+        TAOLIB_DEBUG ((LM_DEBUG,
                     "TAO (%P|%t) - On_Demand_Fragmentation_Strategy::fragment, "
                     "sending fragment of size %d\n",
                     cdr.total_length ()));

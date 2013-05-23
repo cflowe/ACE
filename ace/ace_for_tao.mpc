@@ -1,6 +1,6 @@
 //  -*- MPC -*-
 //
-// $Id: ace_for_tao.mpc 96229 2012-11-06 19:00:45Z mcorino $
+// $Id: ace_for_tao.mpc 96991 2013-04-11 17:57:14Z huangh $
 
 // The ACE_FOR_TAO subset is designed primarily for use with the
 // TAO CosNotification service.  It is not intended to be used
@@ -70,6 +70,7 @@ project(ACE_FOR_TAO) : acedefaults, install, svcconf, uuid, versioned_namespace,
     Lib_Find.cpp
     Local_Memory_Pool.cpp
     Lock.cpp
+    Log_Category.cpp
     Log_Msg.cpp
     Log_Msg_Backend.cpp
     Log_Msg_Callback.cpp

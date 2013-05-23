@@ -1,4 +1,4 @@
-// $Id: LB_MemberLocator.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: LB_MemberLocator.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/LoadBalancing/LB_LoadManager.h"
 #include "orbsvcs/LoadBalancing/LB_MemberLocator.h"
@@ -26,8 +26,8 @@ TAO_LB_MemberLocator::preinvoke (
       CORBA::Object_var member =
         this->load_manager_->next_member (oid);
 
-//       ACE_DEBUG ((LM_DEBUG, "%N:%l\n"));
-//       ACE_DEBUG ((LM_DEBUG,
+//       ORBSVCS_DEBUG ((LM_DEBUG, "%N:%l\n"));
+//       ORBSVCS_DEBUG ((LM_DEBUG,
 //                   "FORWARDED\n"));
 
       ACE_ASSERT (!CORBA::is_nil (member.in ()));

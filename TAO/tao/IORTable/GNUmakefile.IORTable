@@ -27,15 +27,15 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  IOR_Table_Impl.cpp \
   IORTable.cpp \
+  IOR_Table_Impl.cpp \
   Table_Adapter.cpp \
   IORTableC.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
 #----------------------------------------------------------------------------
-ACE_SHLIBS = -lTAO -lACE
+ACE_SHLIBS = -lTAO_PortableServer -lTAO_AnyTypeCode -lTAO -lACE
 TAO_IDL = ../../../bin/tao_idl
 TAO_IDL_DEP = ../../../bin/tao_idl$(EXEEXT)
 TAO_IDLFLAGS = -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I../..$(if $(ARCH), -g $(call ADD_QUOTE,$(call ADD_ARCH,$(ACE_ROOT)/bin/ace_gperf)))
@@ -95,7 +95,7 @@ else
   ifeq ($(findstring k, $(MAKEFLAGS)),k)
     LIBCHECK = 1
   else
-    LIBCHECK ?= $(filter-out $(foreach lib,TAO ACE,$(findstring $(lib),$(foreach libpath,. $(if $(ARCH),./$(ARCH)) ../../../lib $(if $(ARCH),../../../lib/$(ARCH)) /usr/lib /usr/lib64 $(INSLIB),$(wildcard $(libpath)/$(LIB_PREFIX)$(lib).* $(libpath)/$(lib).lib)))),TAO ACE)
+    LIBCHECK ?= $(filter-out $(foreach lib,TAO_PortableServer TAO_AnyTypeCode TAO ACE,$(findstring $(lib),$(foreach libpath,. $(if $(ARCH),./$(ARCH)) ../../../lib $(if $(ARCH),../../../lib/$(ARCH)) /usr/lib /usr/lib64 $(INSLIB),$(wildcard $(libpath)/$(LIB_PREFIX)$(lib).* $(libpath)/$(lib).lib)))),TAO_PortableServer TAO_AnyTypeCode TAO ACE)
     ifeq ($(LIBCHECK),)
       LIBCHECK = 1
     endif
@@ -232,16 +232,21 @@ endif
 #BEGIN MPC-Generated Install Info
 #pidl_files:
 #IORTable.pidl
+#Async_IORTable.pidl
 #
 #build_files:
+#Async_IORTable.mpc
 #IORTable.mpc
+#
+#inline_files:
+#Locate_ResponseHandler.inl
 #
 #resource_files:
 #TAO_IORTable.rc
 #
 #header_files:
-#IOR_Table_Impl.h
 #IORTable.h
+#IOR_Table_Impl.h
 #Table_Adapter.h
 #iortable_export.h
 #IORTableC.h
@@ -251,8 +256,8 @@ endif
 #TAO_IORTable.pc.in
 #
 #source_files:
-#IOR_Table_Impl.cpp
 #IORTable.cpp
+#IOR_Table_Impl.cpp
 #Table_Adapter.cpp
 #IORTableC.cpp
 #

@@ -4,7 +4,7 @@
 /**
  *  @file     objectid.h
  *
- *  $Id: objectid.h 81473 2008-04-28 13:11:24Z johnnyw $
+ *  $Id: objectid.h 97039 2013-04-17 14:24:16Z mesnier_p $
  *
  *  ObjectIds redefined for TAO and recognized by CORBA
  *
@@ -52,6 +52,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 #define TAO_OBJID_POLICYCURRENT       "PolicyCurrent"
 #define TAO_OBJID_IORMANIPULATION     "IORManipulation"
 #define TAO_OBJID_IORTABLE            "IORTable"
+#define TAO_OBJID_ASYNCIORTABLE       "AsyncIORTable"
 #define TAO_OBJID_DYNANYFACTORY       "DynAnyFactory"
 #define TAO_OBJID_TYPECODEFACTORY     "TypeCodeFactory"
 #define TAO_OBJID_RTORB               "RTORB"

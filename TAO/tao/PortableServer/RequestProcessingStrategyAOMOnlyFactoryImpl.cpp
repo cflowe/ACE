@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: RequestProcessingStrategyAOMOnlyFactoryImpl.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: RequestProcessingStrategyAOMOnlyFactoryImpl.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/RequestProcessingStrategyAOMOnlyFactoryImpl.h"
 #include "tao/PortableServer/RequestProcessingStrategy.h"
@@ -29,7 +29,7 @@ namespace TAO
         }
         default :
         {
-          ACE_ERROR ((LM_ERROR, "Incorrect type in RequestProcessingStrategyAOMOnlyFactoryImpl"));
+          TAOLIB_ERROR ((LM_ERROR, "Incorrect type in RequestProcessingStrategyAOMOnlyFactoryImpl"));
           break;
         }
       }

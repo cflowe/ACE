@@ -3,7 +3,7 @@
 /**
  *  @file    be_global.cpp
  *
- *  $Id: be_global.cpp 93650 2011-03-28 08:44:53Z johnnyw $
+ *  $Id: be_global.cpp 97014 2013-04-12 22:47:02Z mitza $
  *
  *  Stores global data specific to the compiler back end.
  *
@@ -13,6 +13,7 @@
 //=============================================================================
 
 
+#include "orbsvcs/Log_Macros.h"
 #include "be_global.h"
 #include "ast_generator.h"
 #include "global_extern.h"
@@ -169,7 +170,7 @@ BE_GlobalData::parse_args (long &i, char **av)
           }
         else
           {
-            ACE_ERROR ((
+            ORBSVCS_ERROR ((
                 LM_ERROR,
                 ACE_TEXT ("IDL: I don't understand the '%s' option\n"),
                 av[i]
@@ -182,7 +183,7 @@ BE_GlobalData::parse_args (long &i, char **av)
         be_global->allow_duplicate_typedefs (true);
         break;
       default:
-        ACE_ERROR ((
+        ORBSVCS_ERROR ((
             LM_ERROR,
             ACE_TEXT ("IDL: I don't understand the '%s' option\n"),
             av[i]

@@ -117,7 +117,7 @@ ifeq ($(wildcard $(GENERATED_DIRTY)), $(GENERATED_DIRTY))
     ## If all of the generated files are there, then we need to check
     ## and make sure that the generated files are up-to-date.  If they are not
     ## then we need the special rule.
-    ifeq ($(shell $(TEST_EXE) "ServerObject.pidl" -nt "ServerObjectC.inl" 2> /dev/null || $(TEST_EXE) "ServerObject.pidl" -nt "ServerObjectS.h" 2> /dev/null || $(TEST_EXE) "ServerObject.pidl" -nt "ServerObjectA.h" 2> /dev/null || $(TEST_EXE) "ServerObject.pidl" -nt "ServerObjectC.h" 2> /dev/null || $(TEST_EXE) "ServerObject.pidl" -nt "ServerObjectS.cpp" 2> /dev/null || $(TEST_EXE) "ServerObject.pidl" -nt "ServerObjectC.cpp" 2> /dev/null || $(TEST_EXE) "ServerObject.pidl" -nt "ServerObjectA.cpp" 2> /dev/null || echo 0),)
+    ifeq ($(shell $(TEST_EXE) "ServerObject.idl" -nt "ServerObjectC.inl" 2> /dev/null || $(TEST_EXE) "ServerObject.idl" -nt "ServerObjectS.h" 2> /dev/null || $(TEST_EXE) "ServerObject.idl" -nt "ServerObjectA.h" 2> /dev/null || $(TEST_EXE) "ServerObject.idl" -nt "ServerObjectC.h" 2> /dev/null || $(TEST_EXE) "ServerObject.idl" -nt "ServerObjectS.cpp" 2> /dev/null || $(TEST_EXE) "ServerObject.idl" -nt "ServerObjectC.cpp" 2> /dev/null || $(TEST_EXE) "ServerObject.idl" -nt "ServerObjectA.cpp" 2> /dev/null || echo 0),)
       .NOTPARALLEL:
 
     else
@@ -135,8 +135,8 @@ ifeq ($(wildcard $(GENERATED_DIRTY)), $(GENERATED_DIRTY))
 else
 .NOTPARALLEL:
 endif
-ServerObjectC.inl ServerObjectS.h ServerObjectA.h ServerObjectC.h ServerObjectS.cpp ServerObjectC.cpp ServerObjectA.cpp: ServerObject.pidl $(subst $(SPACE),\$(SPACE),$(call ADD_ARCH,$(TAO_IDL_DEP)))
-	$(if $(findstring ",$(TAO_IDL)),$(TAO_IDL),$(call ADD_QUOTE,$(call ADD_ARCH,$(TAO_IDL)))) $(TAO_IDLFLAGS) -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client ServerObject.pidl
+ServerObjectC.inl ServerObjectS.h ServerObjectA.h ServerObjectC.h ServerObjectS.cpp ServerObjectC.cpp ServerObjectA.cpp: ServerObject.idl $(subst $(SPACE),\$(SPACE),$(call ADD_ARCH,$(TAO_IDL_DEP)))
+	$(if $(findstring ",$(TAO_IDL)),$(TAO_IDL),$(call ADD_QUOTE,$(call ADD_ARCH,$(TAO_IDL)))) $(TAO_IDLFLAGS) -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client ServerObject.idl
 
 
 ifneq ($(static_libs_only),1)
@@ -158,7 +158,7 @@ ifeq ($(wildcard $(GENERATED_DIRTY)), $(GENERATED_DIRTY))
     ## If all of the generated files are there, then we need to check
     ## and make sure that the generated files are up-to-date.  If they are not
     ## then we need the special rule.
-    ifeq ($(shell $(TEST_EXE) "ImplRepo.pidl" -nt "ImplRepoC.inl" 2> /dev/null || $(TEST_EXE) "ImplRepo.pidl" -nt "ImplRepoS.h" 2> /dev/null || $(TEST_EXE) "ImplRepo.pidl" -nt "ImplRepoA.h" 2> /dev/null || $(TEST_EXE) "ImplRepo.pidl" -nt "ImplRepoC.h" 2> /dev/null || $(TEST_EXE) "ImplRepo.pidl" -nt "ImplRepoS.cpp" 2> /dev/null || $(TEST_EXE) "ImplRepo.pidl" -nt "ImplRepoC.cpp" 2> /dev/null || echo 0),)
+    ifeq ($(shell $(TEST_EXE) "ImplRepo.idl" -nt "ImplRepoC.inl" 2> /dev/null || $(TEST_EXE) "ImplRepo.idl" -nt "ImplRepoS.h" 2> /dev/null || $(TEST_EXE) "ImplRepo.idl" -nt "ImplRepoA.h" 2> /dev/null || $(TEST_EXE) "ImplRepo.idl" -nt "ImplRepoC.h" 2> /dev/null || $(TEST_EXE) "ImplRepo.idl" -nt "ImplRepoS.cpp" 2> /dev/null || $(TEST_EXE) "ImplRepo.idl" -nt "ImplRepoC.cpp" 2> /dev/null || echo 0),)
       .NOTPARALLEL:
 
     else
@@ -176,8 +176,8 @@ ifeq ($(wildcard $(GENERATED_DIRTY)), $(GENERATED_DIRTY))
 else
 .NOTPARALLEL:
 endif
-ImplRepoC.inl ImplRepoS.h ImplRepoA.h ImplRepoC.h ImplRepoS.cpp ImplRepoC.cpp: ImplRepo.pidl $(subst $(SPACE),\$(SPACE),$(call ADD_ARCH,$(TAO_IDL_DEP)))
-	$(if $(findstring ",$(TAO_IDL)),$(TAO_IDL),$(call ADD_QUOTE,$(call ADD_ARCH,$(TAO_IDL)))) $(TAO_IDLFLAGS) -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client ImplRepo.pidl
+ImplRepoC.inl ImplRepoS.h ImplRepoA.h ImplRepoC.h ImplRepoS.cpp ImplRepoC.cpp: ImplRepo.idl $(subst $(SPACE),\$(SPACE),$(call ADD_ARCH,$(TAO_IDL_DEP)))
+	$(if $(findstring ",$(TAO_IDL)),$(TAO_IDL),$(call ADD_QUOTE,$(call ADD_ARCH,$(TAO_IDL)))) $(TAO_IDLFLAGS) -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -I../../tao/ImR_Client -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client ImplRepo.idl
 
 
 ifneq ($(static_libs_only),1)
@@ -257,8 +257,8 @@ endif
 #ImR_Client.mpc
 #
 #idl_files:
-#ServerObject.pidl
-#ImplRepo.pidl
+#ServerObject.idl
+#ImplRepo.idl
 #
 
 #END MPC-Generated Install Info

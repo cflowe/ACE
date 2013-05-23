@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: TAO_Singleton.cpp 93995 2011-04-26 09:20:04Z johnnyw $
+// $Id: TAO_Singleton.cpp 97001 2013-04-12 17:59:36Z huangh $
 
 #ifndef TAO_SINGLETON_CPP
 #define TAO_SINGLETON_CPP
@@ -15,7 +15,7 @@
 
 #include "ace/Guard_T.h"
 #include "ace/Object_Manager.h"
-#include "ace/Log_Msg.h"
+#include "tao/debug.h"
 #include "ace/os_include/os_typeinfo.h"
 
 #if !defined (__ACE_INLINE__)
@@ -31,9 +31,9 @@ TAO_Singleton<TYPE, ACE_LOCK>::dump (void)
   ACE_TRACE ("TAO_Singleton<TYPE, ACE_LOCK>::dump");
 
 #if !defined (ACE_LACKS_STATIC_DATA_MEMBER_TEMPLATES)
-  ACE_DEBUG ((LM_DEBUG,  ACE_TEXT ("instance_ = %@"),
+  TAOLIB_DEBUG ((LM_DEBUG,  ACE_TEXT ("instance_ = %@"),
               TAO_Singleton<TYPE, ACE_LOCK>::instance_i ()));
-  ACE_DEBUG ((LM_DEBUG, ACE_END_DUMP));
+  TAOLIB_DEBUG ((LM_DEBUG, ACE_END_DUMP));
 #endif /* ACE_LACKS_STATIC_DATA_MEMBER_TEMPLATES */
 #endif /* ACE_HAS_DUMP */
 }
@@ -128,9 +128,9 @@ TAO_TSS_Singleton<TYPE, ACE_LOCK>::dump (void)
   ACE_TRACE ("TAO_TSS_Singleton<TYPE, ACE_LOCK>::dump");
 
 #if !defined (ACE_LACKS_STATIC_DATA_MEMBER_TEMPLATES)
-  ACE_DEBUG ((LM_DEBUG,  ACE_TEXT ("instance_ = %@"),
+  TAOLIB_DEBUG ((LM_DEBUG,  ACE_TEXT ("instance_ = %@"),
               TAO_TSS_Singleton<TYPE, ACE_LOCK>::instance_i ()));
-  ACE_DEBUG ((LM_DEBUG, ACE_END_DUMP));
+  TAOLIB_DEBUG ((LM_DEBUG, ACE_END_DUMP));
 #endif /* ACE_LACKS_STATIC_DATA_MEMBER_TEMPLATES */
 #endif /* ACE_HAS_DUMP */
 }

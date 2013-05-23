@@ -1,4 +1,4 @@
-// $Id: ZlibCompressor_Factory.cpp 95562 2012-02-27 09:47:56Z johnnyw $
+// $Id: ZlibCompressor_Factory.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Compression/zlib/ZlibCompressor_Factory.h"
 #include "tao/Compression/zlib/ZlibCompressor.h"
@@ -44,7 +44,7 @@ Zlib_CompressorFactory::get_compressor (
             compressor = (*it).second.in();
 
         } catch (...) {
-            ACE_ERROR_RETURN((LM_ERROR,
+            TAOLIB_ERROR_RETURN((LM_ERROR,
                 ACE_TEXT("(%P | %t) ERROR: ZlibCompressor - Unable to create Zlib Compressor at level [%d].\n"),
                 int(compression_level)),0);
         }

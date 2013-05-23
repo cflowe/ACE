@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: Transport.inl 96624 2013-01-07 14:00:57Z sma $
+// $Id: Transport.inl 96988 2013-04-11 17:06:12Z mcorino $
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -203,12 +203,6 @@ ACE_INLINE size_t
 TAO_Transport::sent_byte_count (void) const
 {
   return this->sent_byte_count_;
-}
-
-ACE_INLINE void
-TAO_Transport::set_flush_in_post_open (void)
-{
-  this->flush_in_post_open_ = true;
 }
 
 #if TAO_HAS_TRANSPORT_CURRENT == 1

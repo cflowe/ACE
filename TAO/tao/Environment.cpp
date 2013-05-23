@@ -1,4 +1,4 @@
-// $Id: Environment.cpp 93359 2011-02-11 11:33:12Z mcorino $
+// $Id: Environment.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Environment.h"
 #include "tao/ORB_Core.h"
@@ -177,7 +177,7 @@ CORBA::Environment::print_exception (const char *info,
     {
       const char *id = this->exception_->_rep_id ();
 
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   ACE_TEXT ("TAO: (%P|%t) EXCEPTION, %C\n"),
                   info));
 
@@ -190,12 +190,12 @@ CORBA::Environment::print_exception (const char *info,
         // @@ we can use the exception's typecode to dump all the data
         // held within it ...
 
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     ACE_TEXT ("TAO: (%P|%t) user exception, ID '%C'\n"),
                     id));
     }
   else
-    ACE_ERROR ((LM_ERROR,
+    TAOLIB_ERROR ((LM_ERROR,
                 ACE_TEXT ("TAO: (%P|%t) no exception, %C\n"), info));
 }
 

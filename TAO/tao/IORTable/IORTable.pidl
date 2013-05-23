@@ -1,7 +1,7 @@
 /**
  * @file IORTable.pidl
  *
- * $Id: IORTable.pidl 92104 2010-09-30 09:53:25Z johnnyw $
+ * $Id: IORTable.pidl 97024 2013-04-15 16:55:16Z mesnier_p $
  *
  * @author Carlos O'Ryan <coryan@uci.edu>
  *
@@ -64,6 +64,7 @@ module IORTable
     string locate (in string object_key)
       raises (NotFound);
   };
+
 };
 
 #endif /* TAO_IORTABLE_IORTABLE_PIDL */

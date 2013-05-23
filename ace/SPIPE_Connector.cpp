@@ -1,7 +1,7 @@
-// $Id: SPIPE_Connector.cpp 91286 2010-08-05 09:04:31Z johnnyw $
+// $Id: SPIPE_Connector.cpp 96985 2013-04-11 15:50:32Z huangh $
 
 #include "ace/SPIPE_Connector.h"
-#include "ace/Log_Msg.h"
+#include "ace/Log_Category.h"
 #include "ace/OS_NS_sys_time.h"
 #include "ace/OS_NS_fcntl.h"
 #include "ace/OS_NS_unistd.h"
@@ -32,7 +32,7 @@ ACE_SPIPE_Connector::ACE_SPIPE_Connector (ACE_SPIPE_Stream &new_io,
   if (this->connect (new_io, remote_sap, timeout, local_sap,
                      reuse_addr, flags, perms, sa, pipe_mode) == -1
       && timeout != 0 && !(errno == EWOULDBLOCK || errno == ETIME))
-    ACE_ERROR ((LM_ERROR, ACE_TEXT ("address %s, %p\n"),
+    ACELIB_ERROR ((LM_ERROR, ACE_TEXT ("address %s, %p\n"),
                remote_sap.get_path_name (), ACE_TEXT ("ACE_SPIPE_Connector")));
 }
 

@@ -121,7 +121,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Loggerd.lib;DAnCE_Deployment_stubd.lib;TAO_IFR_Clientd.lib;TAO_CosNamingd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Loggerd.lib;DAnCE_Deployment_stubd.lib;TAO_IFR_Clientd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)DAnCE_Deployment_skeld.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\..\lib\DAnCE_Deployment_skeld.lib</ImportLibrary>
@@ -159,7 +159,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Logger.lib;DAnCE_Deployment_stub.lib;TAO_IFR_Client.lib;TAO_CosNaming.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Logger.lib;DAnCE_Deployment_stub.lib;TAO_IFR_Client.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)DAnCE_Deployment_skel.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -199,7 +199,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Loggerd.lib;DAnCE_Deployment_stubd.lib;TAO_IFR_Clientd.lib;TAO_CosNamingd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Loggerd.lib;DAnCE_Deployment_stubd.lib;TAO_IFR_Clientd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)DAnCE_Deployment_skeld.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\..\lib\DAnCE_Deployment_skeld.lib</ImportLibrary>
@@ -244,7 +244,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Logger.lib;DAnCE_Deployment_stub.lib;TAO_IFR_Client.lib;TAO_CosNaming.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Logger.lib;DAnCE_Deployment_stub.lib;TAO_IFR_Client.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)DAnCE_Deployment_skel.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>

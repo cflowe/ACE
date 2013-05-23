@@ -1,5 +1,5 @@
 //  -*- MPC -*- now wouldn't this be cool...
-// $Id: ace.mpc 96220 2012-11-06 10:03:41Z mcorino $
+// $Id: ace.mpc 96984 2013-04-11 15:22:24Z huangh $
 
 project(ACE) : ace_output, acedefaults, install, other, codecs, token, svcconf, uuid, filecache, versioned_namespace, pkgconfig, support_ostream {
   avoids       = ace_for_tao
@@ -92,6 +92,7 @@ project(ACE) : ace_output, acedefaults, install, other, codecs, token, svcconf, 
     Lib_Find.cpp
     Local_Memory_Pool.cpp
     Lock.cpp
+    Log_Category.cpp
     Log_Msg.cpp
     Log_Msg_Backend.cpp
     Log_Msg_Callback.cpp

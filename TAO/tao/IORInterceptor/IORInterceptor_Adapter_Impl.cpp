@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: IORInterceptor_Adapter_Impl.cpp 91492 2010-08-26 13:40:18Z johnnyw $
+// $Id: IORInterceptor_Adapter_Impl.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/IORInterceptor/IORInterceptor_Adapter_Impl.h"
 #include "tao/IORInterceptor/IORInfo.h"
@@ -84,7 +84,7 @@ TAO_IORInterceptor_Adapter_Impl::establish_components (TAO_Root_POA* poa)
 
               if (name.in () != 0)
                 {
-                  ACE_DEBUG ((LM_WARNING,
+                  TAOLIB_DEBUG ((LM_WARNING,
                               "(%P|%t) Exception thrown while processing "
                               "IORInterceptor \"%C\">\n",
                               name.in ()));

@@ -1,4 +1,4 @@
-//$Id: TkResource_Factory.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+//$Id: TkResource_Factory.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/TkResource/TkResource_Factory.h"
 #include "tao/debug.h"
@@ -25,7 +25,7 @@ namespace TAO
                       0);
 
       if (TAO_debug_level > 0)
-        ACE_DEBUG ((LM_DEBUG,
+        TAOLIB_DEBUG ((LM_DEBUG,
                     "TAO (%P|%t) - ACE_TkReactor created\n"));
     }
 

@@ -35,7 +35,8 @@ FILES = \
   Shutdown_Utilities.cpp \
   Time_Utilities.cpp \
   IOR_Multicast.cpp \
-  Daemon_Utilities.cpp
+  Daemon_Utilities.cpp \
+  Log_Macros.cpp
 
 
 #----------------------------------------------------------------------------
@@ -263,7 +264,7 @@ idl_stubs: $(ADDITIONAL_IDL_TARGETS)
 
 # This assignment forces make to run the idl_stubs
 # target before building any of the source files.
-FORCED_IDL_STUBS = TimeBaseC.cpp TimeBaseS.cpp RtecBaseC.cpp RtecBaseS.cpp Shutdown_Utilities.cpp Time_Utilities.cpp IOR_Multicast.cpp Daemon_Utilities.cpp  
+FORCED_IDL_STUBS = TimeBaseC.cpp TimeBaseS.cpp RtecBaseC.cpp RtecBaseS.cpp Shutdown_Utilities.cpp Time_Utilities.cpp IOR_Multicast.cpp Daemon_Utilities.cpp Log_Macros.cpp  
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:TimeBaseS.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:TimeBaseC.cpp=)
 FORCED_IDL_STUBS := $(FORCED_IDL_STUBS:RtecBaseS.cpp=)
@@ -398,6 +399,7 @@ endif
 #IOR_Multicast.h
 #TimeBaseS.h
 #RtecBaseC.h
+#Log_Macros.h
 #Time_Utilities.h
 #Shutdown_Utilities.h
 #Daemon_Utilities.h
@@ -416,6 +418,7 @@ endif
 #Time_Utilities.cpp
 #IOR_Multicast.cpp
 #Daemon_Utilities.cpp
+#Log_Macros.cpp
 #
 #lib_output:
 #../../../lib TAO_Svc_Utils

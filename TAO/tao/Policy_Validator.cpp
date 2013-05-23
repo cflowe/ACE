@@ -1,4 +1,4 @@
-// $Id: Policy_Validator.cpp 93995 2011-04-26 09:20:04Z johnnyw $
+// $Id: Policy_Validator.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Policy_Validator.h"
 #include "tao/debug.h"
@@ -41,7 +41,7 @@ TAO_Policy_Validator::add_validator (TAO_Policy_Validator *validator)
             {
               if (TAO_debug_level > 3)
                 {
-                  ACE_DEBUG ((LM_DEBUG,
+                  TAOLIB_DEBUG ((LM_DEBUG,
                               ACE_TEXT ("(%P|%t) Skipping validator [%@] ")
                               ACE_TEXT ("since it would create a circular list\n"),
                               validator));

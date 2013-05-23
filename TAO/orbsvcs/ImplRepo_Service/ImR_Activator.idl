@@ -1,8 +1,8 @@
 // -*- IDL -*-
 
-// $Id: ImR_Activator.idl 94989 2011-11-08 19:13:08Z johnnyw $
+// $Id: ImR_Activator.idl 97053 2013-04-18 22:37:56Z mesnier_p $
 
-#include "tao/ImR_Client/ImplRepo.pidl"
+#include "ImplRepo.idl"
 
 module ImplementationRepository
 {

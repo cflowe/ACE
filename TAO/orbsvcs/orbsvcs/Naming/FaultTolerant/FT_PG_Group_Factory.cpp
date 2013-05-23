@@ -4,12 +4,13 @@
 /**
  * @file  FT_PG_Group_Factory.cpp
  *
- * $Id: FT_PG_Group_Factory.cpp 96861 2013-02-25 17:40:02Z mesnier_p $
+ * $Id: FT_PG_Group_Factory.cpp 97014 2013-04-12 22:47:02Z mitza $
  *
  * @author Byron Harris <harrisb@ociweb.com>
  */
 //=============================================================================
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Naming/FaultTolerant/FT_PG_Group_Factory.h"
 #include "orbsvcs/Naming/FaultTolerant/FT_PG_Object_Group_Storable.h"
 
@@ -42,7 +43,7 @@ TAO::FT_PG_Group_Factory::set_object_group_stale (
               ACE_CString change_type_str ("created");
               if (group_info.change_type == FT_Naming::DELETED)
                 change_type_str = "deleted";
-                ACE_DEBUG ((LM_DEBUG,
+                ORBSVCS_DEBUG ((LM_DEBUG,
                             ACE_TEXT ("TAO (%P|%t) - FT_PG_Group_Factory: ")
                             ACE_TEXT ("Setting list store as stale "),
                             ACE_TEXT ("because of group with ID %lld "),
@@ -63,7 +64,7 @@ TAO::FT_PG_Group_Factory::set_object_group_stale (
 
       if (!og)
         {
-          ACE_ERROR ((LM_ERROR,
+          ORBSVCS_ERROR ((LM_ERROR,
                       ACE_TEXT ("TAO (%P|%t) - FT_PG_Group_Factory ")
                       ACE_TEXT ("In setting object group stale could not cast ")
                       ACE_TEXT ("to FT_PG_Object_Group_Storable\n")));
@@ -72,7 +73,7 @@ TAO::FT_PG_Group_Factory::set_object_group_stale (
 
       if (TAO_debug_level > 3)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          ORBSVCS_DEBUG ((LM_DEBUG,
                       ACE_TEXT ("TAO (%P|%t) - ")
                       ACE_TEXT ("Setting object group with ID %lld as stale\n"),
                       group_id

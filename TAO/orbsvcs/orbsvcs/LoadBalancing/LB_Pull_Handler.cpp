@@ -1,4 +1,4 @@
-// $Id: LB_Pull_Handler.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: LB_Pull_Handler.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/LoadBalancing/LB_Pull_Handler.h"
 #include "orbsvcs/LoadBalancing/LB_LoadManager.h"
@@ -54,7 +54,7 @@ TAO_LB_Pull_Handler::handle_timeout (
           this->load_manager_->push_loads (location,
                                            load_list.in ());
 
-//           ACE_DEBUG ((LM_DEBUG,
+//           ORBSVCS_DEBUG ((LM_DEBUG,
 //                       "LOCATION = %s\tLOAD = %f\n",
 //                       location[0].id.in (),
 //                       load_list[0].value));

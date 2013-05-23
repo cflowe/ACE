@@ -4,7 +4,7 @@
 /**
  *  @file Load_Protocol_Factory_T.h
  *
- *  $Id: Load_Protocol_Factory_T.h 92595 2010-11-15 13:04:05Z johnnyw $
+ *  $Id: Load_Protocol_Factory_T.h 96992 2013-04-11 18:07:48Z huangh $
  *
  *  Function templates to load a protocol factory.
  *
@@ -51,7 +51,7 @@ namespace TAO
       if (protocol_factory == 0)
         {
           if (TAO_debug_level > 0)
-            ACE_ERROR ((LM_WARNING,
+            TAOLIB_ERROR ((LM_WARNING,
                         ACE_TEXT("(%P|%t) WARNING - No <%C> found in Service")
                         ACE_TEXT(" Repository. Using default instance.\n"),
                         name));
@@ -85,7 +85,7 @@ namespace TAO
 
       if (protocol_set.insert (item) == -1)
         {
-          ACE_ERROR ((LM_ERROR,
+          TAOLIB_ERROR ((LM_ERROR,
                       ACE_TEXT("TAO (%P|%t) Unable to add ")
                       ACE_TEXT("<%C> to protocol factory set.\n"),
                       item->protocol_name ().c_str ()));
@@ -100,7 +100,7 @@ namespace TAO
 
       if (TAO_debug_level > 0)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
                       ACE_TEXT("TAO (%P|%t) - Loaded default ")
                       ACE_TEXT("protocol <%C>\n"),
                       name));

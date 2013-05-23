@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IFR_Clientd.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib CCM_stubd.lib CCM_ConfigValue_Factoryd.lib CIAO_Loggerd.lib TAO_CosNamingd.lib CCM_Cookie_Factoryd.lib CIAO_Base_stubd.lib CIF_Component_stubd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IFR_Clientd.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib CCM_stubd.lib CCM_ConfigValue_Factoryd.lib CIAO_Loggerd.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib CCM_Cookie_Factoryd.lib CIAO_Base_stubd.lib CIF_Component_stubd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\CIF_Commond.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -156,7 +156,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IFR_Client.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib CCM_stub.lib CCM_ConfigValue_Factory.lib CIAO_Logger.lib TAO_CosNaming.lib CCM_Cookie_Factory.lib CIAO_Base_stub.lib CIF_Component_stub.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IFR_Client.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib CCM_stub.lib CCM_ConfigValue_Factory.lib CIAO_Logger.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib CCM_Cookie_Factory.lib CIAO_Base_stub.lib CIF_Component_stub.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\CIF_Common.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -242,7 +242,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IFR_Clientd.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib CCM_stubd.lib CCM_ConfigValue_Factoryd.lib CIAO_Loggerd.lib TAO_CosNamingd.lib CCM_Cookie_Factoryd.lib CIAO_Base_stubd.lib CIF_Component_stubd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IFR_Clientd.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib CCM_stubd.lib CCM_ConfigValue_Factoryd.lib CIAO_Loggerd.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib CCM_Cookie_Factoryd.lib CIAO_Base_stubd.lib CIF_Component_stubd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\CIF_Commond.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -323,7 +323,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IFR_Client.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib CCM_stub.lib CCM_ConfigValue_Factory.lib CIAO_Logger.lib TAO_CosNaming.lib CCM_Cookie_Factory.lib CIAO_Base_stub.lib CIF_Component_stub.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IFR_Client.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib CCM_stub.lib CCM_ConfigValue_Factory.lib CIAO_Logger.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib CCM_Cookie_Factory.lib CIAO_Base_stub.lib CIF_Component_stub.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\CIF_Common.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

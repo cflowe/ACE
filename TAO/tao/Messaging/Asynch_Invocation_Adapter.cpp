@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Asynch_Invocation_Adapter.cpp 96760 2013-02-05 21:11:03Z stanleyk $
+// $Id: Asynch_Invocation_Adapter.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/Asynch_Reply_Dispatcher.h"
@@ -51,7 +51,7 @@ namespace TAO
 
     if (TAO_debug_level >= 4)
       {
-        ACE_DEBUG ((LM_DEBUG,
+        TAOLIB_DEBUG ((LM_DEBUG,
                     "TAO_Messaging (%P|%t) - Asynch_Invocation_Adapter::"
                     "invoke\n"));
       }

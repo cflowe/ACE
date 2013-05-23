@@ -1,4 +1,4 @@
-// $Id: UIOP_Transport.cpp 95629 2012-03-22 11:12:34Z sma $
+// $Id: UIOP_Transport.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Strategies/UIOP_Transport.h"
 
@@ -70,7 +70,7 @@ TAO_UIOP_Transport::recv (char *buf,
       TAO_debug_level > 4 &&
       errno != ETIME)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("TAO (%P|%t) - UIOP_Transport::recv, %p %p\n"),
                   ACE_TEXT ("TAO - read message failure ")
                   ACE_TEXT ("recv ()\n")));
@@ -141,7 +141,7 @@ TAO_UIOP_Transport::send_message (TAO_OutputCDR &stream,
   if (n == -1)
     {
       if (TAO_debug_level)
-        ACE_DEBUG ((LM_DEBUG,
+        TAOLIB_DEBUG ((LM_DEBUG,
                     ACE_TEXT ("TAO (%P|%t) closing transport %d after fault %p\n"),
                     this->id (),
                     ACE_TEXT ("send_message ()\n")));

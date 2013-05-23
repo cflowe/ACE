@@ -1,4 +1,4 @@
-// $Id: Push_Handler.cpp 91675 2010-09-08 19:09:19Z johnnyw $
+// $Id: Push_Handler.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "Push_Handler.h"
 #include "tao/debug.h"
@@ -23,7 +23,7 @@ TAO_LB_Push_Handler::handle_timeout (
       CosLoadBalancing::LoadList_var loads =
         this->monitor_->loads ();
 
-//       ACE_DEBUG ((LM_DEBUG,
+//       ORBSVCS_DEBUG ((LM_DEBUG,
 //                   "PUSHING LOAD:\n"
 //                   "  id:    %u\n"
 //                   "  value: %f\n",

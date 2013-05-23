@@ -1,4 +1,4 @@
-# $Id: tao_other_tests.lst 96895 2013-03-08 20:10:26Z stanleyk $
+# $Id: tao_other_tests.lst 97090 2013-04-30 21:11:49Z mesnier_p $
 #
 # This is the list of run_test.pl's that need to be run by
 # auto_run_tests.pl.
@@ -120,6 +120,7 @@ TAO/orbsvcs/tests/ImplRepo/run_test.pl perclient: !MINIMUM !CORBA_E_COMPACT !COR
 TAO/orbsvcs/tests/ImplRepo/run_test.pl persistent_ir_hash: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO
 TAO/orbsvcs/tests/ImplRepo/run_test.pl persistent_ir_shared: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !Win32
 TAO/orbsvcs/tests/ImplRepo/run_test.pl failover -replica: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !Win32
+TAO/orbsvcs/tests/ImplRepo/run_test.pl backup_restart -replica: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !Win32
 TAO/orbsvcs/tests/ImplRepo/run_test.pl persistent_ft -replica: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !Win32
 TAO/orbsvcs/tests/ImplRepo/run_test.pl persistent_listingcorrupt -replica: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !Win32
 TAO/orbsvcs/tests/ImplRepo/run_test.pl persistent_activatorcorrupt -replica: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !Win32
@@ -134,7 +135,11 @@ TAO/orbsvcs/tests/ImplRepo/Bug_2604_Regression/run_test.pl: !MINIMUM !CORBA_E_CO
 TAO/orbsvcs/tests/ImplRepo/ReconnectServer/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS
 TAO/orbsvcs/tests/ImplRepo/ReconnectServer/run_test.pl -forwardalways: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS
 TAO/orbsvcs/tests/ImplRepo/ReconnectServer/run_test.pl -forwardonce: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS
+TAO/orbsvcs/tests/ImplRepo/ReconnectServer/run_test.pl -pingexternal: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS
 TAO/orbsvcs/tests/ImplRepo/RestartServer/run_test.pl: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
+TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
+TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl -delay 20 -imr_start: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
+TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl -hide_server -imr_start: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
 TAO/orbsvcs/examples/ImR/Combined_Service/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !ST !ACE_FOR_TAO !LynxOS
 TAO/orbsvcs/examples/CosEC/TypedSimple/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !NO_IFR !ACE_FOR_TAO !WCHAR
 TAO/orbsvcs/tests/CosEvent/Timeout/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ST !NO_MESSAGING !ACE_FOR_TAO !LynxOS

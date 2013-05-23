@@ -122,7 +122,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_IFR_Clientd.lib;TAO_Valuetyped.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;CCM_stubd.lib;CCM_ConfigValue_Factoryd.lib;TAO_CosNamingd.lib;CCM_Cookie_Factoryd.lib;CIAO_Base_stubd.lib;CIF_Component_stubd.lib;CIF_Commond.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_IFR_Clientd.lib;TAO_Valuetyped.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;CCM_stubd.lib;CCM_ConfigValue_Factoryd.lib;TAO_PortableServerd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;CCM_Cookie_Factoryd.lib;CIAO_Base_stubd.lib;CIF_Component_stubd.lib;CIF_Commond.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)Events_Test_Client.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -160,7 +160,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_IFR_Client.lib;TAO_Valuetype.lib;TAO_CodecFactory.lib;TAO_PI.lib;CCM_stub.lib;CCM_ConfigValue_Factory.lib;TAO_CosNaming.lib;CCM_Cookie_Factory.lib;CIAO_Base_stub.lib;CIF_Component_stub.lib;CIF_Common.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_IFR_Client.lib;TAO_Valuetype.lib;TAO_CodecFactory.lib;TAO_PI.lib;CCM_stub.lib;CCM_ConfigValue_Factory.lib;TAO_PortableServer.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;CCM_Cookie_Factory.lib;CIAO_Base_stub.lib;CIF_Component_stub.lib;CIF_Common.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)Events_Test_Client.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -200,7 +200,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_IFR_Clientd.lib;TAO_Valuetyped.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;CCM_stubd.lib;CCM_ConfigValue_Factoryd.lib;TAO_CosNamingd.lib;CCM_Cookie_Factoryd.lib;CIAO_Base_stubd.lib;CIF_Component_stubd.lib;CIF_Commond.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_IFR_Clientd.lib;TAO_Valuetyped.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;CCM_stubd.lib;CCM_ConfigValue_Factoryd.lib;TAO_PortableServerd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;CCM_Cookie_Factoryd.lib;CIAO_Base_stubd.lib;CIF_Component_stubd.lib;CIF_Commond.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)Events_Test_Client.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 <!--
@@ -245,7 +245,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_IFR_Client.lib;TAO_Valuetype.lib;TAO_CodecFactory.lib;TAO_PI.lib;CCM_stub.lib;CCM_ConfigValue_Factory.lib;TAO_CosNaming.lib;CCM_Cookie_Factory.lib;CIAO_Base_stub.lib;CIF_Component_stub.lib;CIF_Common.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_IFR_Client.lib;TAO_Valuetype.lib;TAO_CodecFactory.lib;TAO_PI.lib;CCM_stub.lib;CCM_ConfigValue_Factory.lib;TAO_PortableServer.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;CCM_Cookie_Factory.lib;CIAO_Base_stub.lib;CIF_Component_stub.lib;CIF_Common.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)Events_Test_Client.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>

@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_CosLifeCycled.lib TAO_PortableServerd.lib TAO_CosLifeCycle_Skeld.lib TAO_CosTradingd.lib TAO_CosTrading_Skeld.lib TAO_Valuetyped.lib TAO_DynamicAnyd.lib TAO_Svc_Utilsd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Utilsd.lib TAO_IORTabled.lib TAO_CosTrading_Servd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib TAO_CosLifeCycled.lib TAO_CosLifeCycle_Skeld.lib TAO_CosTradingd.lib TAO_CosTrading_Skeld.lib TAO_Valuetyped.lib TAO_DynamicAnyd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Utilsd.lib TAO_IORTabled.lib TAO_CosTrading_Servd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_coslifecycle.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -155,7 +155,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_CosLifeCycle.lib TAO_PortableServer.lib TAO_CosLifeCycle_Skel.lib TAO_CosTrading.lib TAO_CosTrading_Skel.lib TAO_Valuetype.lib TAO_DynamicAny.lib TAO_Svc_Utils.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Utils.lib TAO_IORTable.lib TAO_CosTrading_Serv.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib TAO_CosLifeCycle.lib TAO_CosLifeCycle_Skel.lib TAO_CosTrading.lib TAO_CosTrading_Skel.lib TAO_Valuetype.lib TAO_DynamicAny.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Utils.lib TAO_IORTable.lib TAO_CosTrading_Serv.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_coslifecycle.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -240,7 +240,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_CosLifeCycled.lib TAO_PortableServerd.lib TAO_CosLifeCycle_Skeld.lib TAO_CosTradingd.lib TAO_CosTrading_Skeld.lib TAO_Valuetyped.lib TAO_DynamicAnyd.lib TAO_Svc_Utilsd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Utilsd.lib TAO_IORTabled.lib TAO_CosTrading_Servd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib TAO_CosLifeCycled.lib TAO_CosLifeCycle_Skeld.lib TAO_CosTradingd.lib TAO_CosTrading_Skeld.lib TAO_Valuetyped.lib TAO_DynamicAnyd.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Utilsd.lib TAO_IORTabled.lib TAO_CosTrading_Servd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_coslifecycle.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -320,7 +320,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_CosLifeCycle.lib TAO_PortableServer.lib TAO_CosLifeCycle_Skel.lib TAO_CosTrading.lib TAO_CosTrading_Skel.lib TAO_Valuetype.lib TAO_DynamicAny.lib TAO_Svc_Utils.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Utils.lib TAO_IORTable.lib TAO_CosTrading_Serv.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib TAO_CosLifeCycle.lib TAO_CosLifeCycle_Skel.lib TAO_CosTrading.lib TAO_CosTrading_Skel.lib TAO_Valuetype.lib TAO_DynamicAny.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Utils.lib TAO_IORTable.lib TAO_CosTrading_Serv.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_coslifecycle.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

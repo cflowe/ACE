@@ -1,5 +1,6 @@
-// $Id: CEC_MT_Dispatching.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: CEC_MT_Dispatching.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/CosEvent/CEC_MT_Dispatching.h"
 
 
@@ -40,7 +41,7 @@ TAO_CEC_MT_Dispatching::activate (void)
       if (this->force_activate_ != 0)
         {
           if (this->task_.activate (THR_BOUND, this->nthreads_) == -1)
-            ACE_ERROR ((LM_ERROR,
+            ORBSVCS_ERROR ((LM_ERROR,
                         "EC (%P|%t) cannot activate dispatching queue"));
         }
     }

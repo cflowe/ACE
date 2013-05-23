@@ -122,7 +122,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_PortableServerd.lib;TAO_CosNamingd.lib;TAO_CosEventd.lib;TAO_CosNotificationd.lib;TAO_CosEvent_Skeld.lib;TAO_CosNotification_Skeld.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_PortableServerd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;TAO_CosEventd.lib;TAO_CosNotificationd.lib;TAO_CosEvent_Skeld.lib;TAO_CosNotification_Skeld.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)MessengerConsumer.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -160,7 +160,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_PortableServer.lib;TAO_CosNaming.lib;TAO_CosEvent.lib;TAO_CosNotification.lib;TAO_CosEvent_Skel.lib;TAO_CosNotification_Skel.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_PortableServer.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;TAO_CosEvent.lib;TAO_CosNotification.lib;TAO_CosEvent_Skel.lib;TAO_CosNotification_Skel.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)MessengerConsumer.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -200,7 +200,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_PortableServerd.lib;TAO_CosNamingd.lib;TAO_CosEventd.lib;TAO_CosNotificationd.lib;TAO_CosEvent_Skeld.lib;TAO_CosNotification_Skeld.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_PortableServerd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;TAO_CosEventd.lib;TAO_CosNotificationd.lib;TAO_CosEvent_Skeld.lib;TAO_CosNotification_Skeld.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)MessengerConsumer.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
 <!--
@@ -245,7 +245,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_PortableServer.lib;TAO_CosNaming.lib;TAO_CosEvent.lib;TAO_CosNotification.lib;TAO_CosEvent_Skel.lib;TAO_CosNotification_Skel.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_PortableServer.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;TAO_CosEvent.lib;TAO_CosNotification.lib;TAO_CosEvent_Skel.lib;TAO_CosNotification_Skel.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)MessengerConsumer.exe</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>

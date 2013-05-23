@@ -2,7 +2,7 @@
 /**
  *  @file    be_codegen.cpp
  *
- *  $Id: be_codegen.cpp 96034 2012-08-12 19:06:55Z johnnyw $
+ *  $Id: be_codegen.cpp 96941 2013-03-29 13:12:52Z johnnyw $
  *
  * Code generation
  *
@@ -2656,6 +2656,13 @@ TAO_CodeGen::gen_stub_hdr_includes (void)
   this->gen_standard_include (this->client_header_,
                               "tao/Versioned_Namespace.h",
                               true);
+
+  if ((be_global->versioning_include () != 0) && (ACE_OS::strlen (be_global->versioning_include ()) > 0))
+    {
+      this->gen_standard_include (this->client_header_,
+                                  be_global->versioning_include (),
+                                  true);
+    }
 
   // On some platforms, this include isn't needed if certain command
   // line options are present. Rather than try to sort that all out,

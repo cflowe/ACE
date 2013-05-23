@@ -466,56 +466,6 @@
 			</File>
 		</Filter>
 		<Filter
-			Name="Pidl Files"
-			Filter="pidl">
-			<File
-				RelativePath="ImplRepo.pidl">
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-				>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-				>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|x64"
-					ExcludedFromBuild="true"
-				>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|x64"
-					ExcludedFromBuild="true"
-				>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="ServerObject.pidl">
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-				>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-				>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|x64"
-					ExcludedFromBuild="true"
-				>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release|x64"
-					ExcludedFromBuild="true"
-				>
-				</FileConfiguration>
-			</File>
-		</Filter>
-		<Filter
 			Name="Inline Files"
 			Filter="i;ipp;inl">
 			<File

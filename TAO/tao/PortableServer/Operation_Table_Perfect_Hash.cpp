@@ -1,4 +1,4 @@
-// $Id: Operation_Table_Perfect_Hash.cpp 95143 2011-11-28 14:30:28Z johnnyw $
+// $Id: Operation_Table_Perfect_Hash.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
 #include "tao/Timeprobe.h"
@@ -44,7 +44,7 @@ TAO_Perfect_Hash_OpTable::find (const char *opname,
   if (entry == 0)
     {
       skelfunc = 0; // insure that somebody can't call a wrong function!
-      ACE_ERROR_RETURN ((LM_ERROR,
+      TAOLIB_ERROR_RETURN ((LM_ERROR,
                          ACE_TEXT ("TAO_Perfect_Hash_OpTable:find for ")
                          ACE_TEXT ("operation '%C' (length=%d) failed\n"),
                          opname ? opname : "<null string>", length),
@@ -69,7 +69,7 @@ TAO_Perfect_Hash_OpTable::find (const char *opname,
   if (entry == 0)
     {
       skelfunc = 0; // insure that somebody can't call a wrong function!
-      ACE_ERROR_RETURN ((LM_ERROR,
+      TAOLIB_ERROR_RETURN ((LM_ERROR,
                          ACE_TEXT ("TAO_Perfect_Hash_OpTable:find for ")
                          ACE_TEXT ("operation '%C' (length=%d) failed\n"),
                          opname ? opname : "<null string>", length),

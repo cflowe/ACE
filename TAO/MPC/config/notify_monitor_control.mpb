@@ -1,7 +1,7 @@
 // -*- MPC -*-
-// $Id: notify_monitor_control.mpb 87335 2009-11-04 21:00:22Z dai_y $
+// $Id: notify_monitor_control.mpb 97019 2013-04-15 14:27:23Z mitza $
 
-feature(notify_monitor_control) {
+feature(notify_monitor_control): svc_utils {
   avoids += wince
   after += TAO_Monitor CosNotification_MC CosNotification_MC_Ext
   libs  += TAO_CosNotification_MC_Ext TAO_CosNotification_MC TAO_Monitor

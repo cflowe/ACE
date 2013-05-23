@@ -4,7 +4,7 @@
 /**
  *  @file Table_Adapter.h
  *
- *  $Id: Table_Adapter.h 93378 2011-02-14 11:52:07Z johnnyw $
+ *  $Id: Table_Adapter.h 97024 2013-04-15 16:55:16Z mesnier_p $
  *
  *  @author Carlos O'Ryan (coryan@uci.edu)
  */
@@ -58,7 +58,7 @@ public:
 
   virtual CORBA::Long initialize_collocated_object (TAO_Stub *stub);
 
-private:
+protected:
   static ACE_Lock * create_lock (TAO_SYNCH_MUTEX &l);
 
   /// Helper method to find an object bound in the table.

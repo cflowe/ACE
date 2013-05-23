@@ -221,9 +221,6 @@ endif
 endif
 
 #BEGIN MPC-Generated Install Info
-#idl_files:
-#DAnCE_Properties.idl
-#
 #build_files:
 #DAnCE_Core.mpc
 #DAnCE_Properties.mpc
@@ -233,6 +230,9 @@ endif
 #../MPC .
 #RepositoryManager/README RepositoryManager
 #NodeManager/README NodeManager
+#
+#idl_files:
+#DAnCE_Properties.idl
 #
 
 #END MPC-Generated Install Info

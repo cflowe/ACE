@@ -1,6 +1,8 @@
 // -*- C++ -*-
-// $Id: Security_ORBInitializer.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: Security_ORBInitializer.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Security/Security_ORBInitializer.h"
 
 #include "orbsvcs/Security/Security_Current.h"
@@ -29,7 +31,7 @@ TAO::Security::ORBInitializer::pre_init (
   if (CORBA::is_nil (tao_info.in ()))
     {
       if (TAO_debug_level > 0)
-        ACE_ERROR ((LM_ERROR,
+        ORBSVCS_ERROR ((LM_ERROR,
                     "(%P|%t) Security_ORBInitializer::pre_init:\n"
                     "(%P|%t)    Unable to narrow "
                     "\"PortableInterceptor::ORBInitInfo_ptr\" to\n"

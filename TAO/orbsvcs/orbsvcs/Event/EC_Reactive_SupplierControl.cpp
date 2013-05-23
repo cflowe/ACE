@@ -1,4 +1,4 @@
-// $Id: EC_Reactive_SupplierControl.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: EC_Reactive_SupplierControl.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/Event/EC_SupplierAdmin.h"
 #include "orbsvcs/Event/EC_Reactive_SupplierControl.h"
@@ -146,7 +146,7 @@ TAO_EC_Reactive_SupplierControl::supplier_not_exist (
 {
   try
     {
-      //ACE_DEBUG ((LM_DEBUG,
+      //ORBSVCS_DEBUG ((LM_DEBUG,
       //            "EC_Reactive_SupplierControl(%P|%t) - "
       //            "Consumer %x does not exists\n", long(proxy)));
       proxy->disconnect_push_consumer ();

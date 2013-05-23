@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 14 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: DDS_Hello_Base_stub Large_Deployment_stub Single_Service_Common_idl_gen Single_Service_Common_idl_lem_gen Single_Service_Common_stub Single_Service_Common_lem_stub Single_Service_Common_skel Single_Service_idl_gen Single_Service_stub Single_Service_lem_gen Single_Service_lem_stub Single_Service_exec Single_Service_svnt DDS_Quoter_Base_stub DDS_Shapes_Base_stub CIAO_NDDS_idl_install_only DDS4CCM_Logger DDS_Perf_Keyed_Test_Base_stub DDS_LatencyTT_Test_Base_stub DDS_Throughput_Base_stub DDS_CSL_DeadlineTest_Base_stub DDS_CSL_QoSTest_Base_stub DDS_CSL_SRTest_Base_stub DDS_CSL_USTest_Base_stub CoherentUpdate_Test_Base_stub CoherentWrite_Test_Base_stub Collocated_Base_stub DiffDir_stub CFT_Test_Base_stub DDS_CFTLE_Test_Base_stub CFT_Exception_Test_Base_stub CFT_ReadGet_Test_Base_stub DDS_CFTLS_Test_Base_stub DDS_DDSWriterEntityBase_stub Derived_stub DDS_DNM_Base_stub DDS_ECT_Base_stub DDS_FSS_Event_Base_stub DDS_FSS_State_Base_stub GCE_Test_Base_stub GCS_Test_Base_stub DDS_Getter_Test_Base_stub HomeT_Base_stub IDL_Test_Base_stub IDL_Test_Interfaces_idl_gen IDL_Test_Interfaces_lem_gen IDL_Test_Interfaces_stub IDL_Test_Interfaces_lem_stub IDL_Test_Interfaces_svnt DDS_DDSInstanceHandleBase_stub DDS_Keyed_Test_Base_stub DDS_KeyedWriterBase_stub RG_LateBindingBase_stub WU_LateBindingBase_stub DDS_LMBM_Test_Base_stub DDS_LNE_Test_Base_stub DDS_LOBO_Test_Base_stub DDS_EMLDT_Base_stub DDS_SMLDT_Base_stub TypeRegistration_Base_stub DDS_MultiTopic_Base_stub NoModule_stub DDS_NonChangeableBase_stub OIT_Test_Base_stub OFM_Base_stub OneFile_Base_stub DDS_CCM_Example_PSAT_type_stub DDS_PSL_DeadlineTest_Base_stub DDS_PSL_SampleLost_Base_stub PortUsage_Test_Base_stub Proxy_RW_Test_Base_stub QosProfile_Test_Base_stub QC_Different_Test_Base_stub DDS_QCLE_Test_Base_stub QC_ReadGet_Test_Base_stub DDS_QCLS_Test_Base_stub DDS_QCTL_Test_Base_stub QC_QCTQ_Test_Base_stub QC_QCTQM_Test_Base_stub DDS_Reader_Test_Base_stub RG_ResetTopicBase_stub TE_ResetTopicBase_stub TL_ResetTopicBase_stub UL_ResetTopicBase_stub WL_ResetTopicBase_stub DDS_SL_Disabled_Base_stub DDS_SL_ManyByMany_Base_stub DDS_SL_OneByOne_Base_stub DDS_SCABase_stub DDS_SharedDP_DDBase_stub SharedDP_Diff_ID_Base_stub DDS_SharedDPBase_stub DDS_SCT_Base_stub TopicName_Test_Base_stub DDS_TwoTopics_Base_stub DDS_Goodbye_Namespace_Base_stub DDS_Hello_Namespace_Base_stub DDS_Unkeyed_Test_Base_stub DDS_UnkeyedWriterBase_stub DDS_Updater_Base_stub UCC_Test_Base_stub DDS_VTopic_Base_stub DDS_VTopics_Base_stub Shapes_defn_idl_gen Shapes_defn_stub Shapes_Control_obj_idl_gen Shapes_Control_obj_stub Shapes_Control_obj_lem_gen Shapes_Control_obj_lem_stub Shapes_ShapeType_msg_stub Shapes_Control_idl_gen Shapes_Control_comp_stub Shapes_Control_lem_gen Shapes_Control_comp_lem_stub Shapes_Control_comp_exec Shapes_Control_obj_svnt Shapes_Control_comp_svnt
+all: DDS_Hello_Base_stub Large_Deployment_stub Single_Service_Common_idl_gen Single_Service_Common_idl_lem_gen Single_Service_Common_stub Single_Service_Common_lem_stub Single_Service_Common_skel Single_Service_idl_gen Single_Service_stub Single_Service_lem_gen Single_Service_lem_stub Single_Service_exec Single_Service_svnt DDS_Quoter_Base_stub DDS_Shapes_Base_stub CIAO_NDDS_idl_install_only DDS4CCM_Logger DDS_Perf_Keyed_Test_Base_stub DDS_LatencyTT_Test_Base_stub DDS_Throughput_Base_stub DDS_CSL_DeadlineTest_Base_stub DDS_CSL_QoSTest_Base_stub DDS_CSL_SRTest_Base_stub DDS_CSL_USTest_Base_stub CoherentUpdate_Test_Base_stub CoherentWrite_Test_Base_stub Collocated_Base_stub DiffDir_stub CFT_Test_Base_stub DDS_CFTLE_Test_Base_stub CFT_Exception_Test_Base_stub CFT_ReadGet_Test_Base_stub DDS_CFTLS_Test_Base_stub DDS_DDSWriterEntityBase_stub Derived_stub DDS_DNM_Base_stub DDS_ECT_Base_stub DDS_FSS_Event_Base_stub DDS_FSS_State_Base_stub GCE_Test_Base_stub GCS_Test_Base_stub DDS_Getter_Test_Base_stub Home_Hello_Base_stub HomeT_Base_stub IDL_Test_Base_stub IDL_Test_Interfaces_idl_gen IDL_Test_Interfaces_lem_gen IDL_Test_Interfaces_stub IDL_Test_Interfaces_lem_stub IDL_Test_Interfaces_svnt DDS_DDSInstanceHandleBase_stub DDS_Keyed_Test_Base_stub DDS_KeyedWriterBase_stub RG_LateBindingBase_stub WU_LateBindingBase_stub DDS_LMBM_Test_Base_stub DDS_LNE_Test_Base_stub DDS_LOBO_Test_Base_stub DDS_EMLDT_Base_stub DDS_SMLDT_Base_stub TypeRegistration_Base_stub DDS_MultiTopic_Base_stub NoModule_stub DDS_NonChangeableBase_stub OIT_Test_Base_stub OFM_Base_stub OneFile_Base_stub DDS_CCM_Example_PSAT_type_stub DDS_PSL_DeadlineTest_Base_stub DDS_PSL_SampleLost_Base_stub PortUsage_Test_Base_stub Proxy_RW_Test_Base_stub QosProfile_Test_Base_stub QC_Different_Test_Base_stub DDS_QCLE_Test_Base_stub QC_ReadGet_Test_Base_stub DDS_QCLS_Test_Base_stub DDS_QCTL_Test_Base_stub QC_QCTQ_Test_Base_stub QC_QCTQM_Test_Base_stub DDS_Reader_Test_Base_stub RG_ResetTopicBase_stub TE_ResetTopicBase_stub TL_ResetTopicBase_stub UL_ResetTopicBase_stub WL_ResetTopicBase_stub DDS_SL_Disabled_Base_stub DDS_SL_ManyByMany_Base_stub DDS_SL_OneByOne_Base_stub DDS_SCABase_stub DDS_SharedDP_DDBase_stub SharedDP_Diff_ID_Base_stub DDS_SharedDPBase_stub DDS_SCT_Base_stub TopicName_Test_Base_stub DDS_TwoTopics_Base_stub DDS_Goodbye_Namespace_Base_stub DDS_Hello_Namespace_Base_stub DDS_Unkeyed_Test_Base_stub DDS_UnkeyedWriterBase_stub DDS_Updater_Base_stub UCC_Test_Base_stub DDS_VTopic_Base_stub DDS_VTopics_Base_stub Shapes_defn_idl_gen Shapes_defn_stub Shapes_Control_obj_idl_gen Shapes_Control_obj_stub Shapes_Control_obj_lem_gen Shapes_Control_obj_lem_stub Shapes_ShapeType_msg_stub Shapes_Control_idl_gen Shapes_Control_comp_stub Shapes_Control_lem_gen Shapes_Control_comp_lem_stub Shapes_Control_comp_exec Shapes_Control_obj_svnt Shapes_Control_comp_svnt
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -67,6 +67,7 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd tests/GetComponent/Event/Base && $(MAKE) -f GNUmakefile.GCE_Test_Base_stub $(@)
 	$(KEEP_GOING)@cd tests/GetComponent/State/Base && $(MAKE) -f GNUmakefile.GCS_Test_Base_stub $(@)
 	$(KEEP_GOING)@cd tests/Getter/Base && $(MAKE) -f GNUmakefile.DDS_Getter_Test_Base_stub $(@)
+	$(KEEP_GOING)@cd tests/HomeDerived/Base && $(MAKE) -f GNUmakefile.Home_Hello_Base_stub $(@)
 	$(KEEP_GOING)@cd tests/HomeTest/Base && $(MAKE) -f GNUmakefile.HomeT_Base_stub $(@)
 	$(KEEP_GOING)@cd tests/IDL_Test/Base && $(MAKE) -f GNUmakefile.IDL_Test_Base_stub $(@)
 	$(KEEP_GOING)@cd tests/IDL_Test/Base && $(MAKE) -f GNUmakefile.IDL_Test_Interfaces_idl_gen $(@)
@@ -310,6 +311,10 @@ GCS_Test_Base_stub:
 .PHONY: DDS_Getter_Test_Base_stub
 DDS_Getter_Test_Base_stub:
 	$(KEEP_GOING)@cd tests/Getter/Base && $(MAKE) -f GNUmakefile.DDS_Getter_Test_Base_stub all
+
+.PHONY: Home_Hello_Base_stub
+Home_Hello_Base_stub:
+	$(KEEP_GOING)@cd tests/HomeDerived/Base && $(MAKE) -f GNUmakefile.Home_Hello_Base_stub all
 
 .PHONY: HomeT_Base_stub
 HomeT_Base_stub:
@@ -654,6 +659,7 @@ project_name_list:
 	@echo GCE_Test_Base_stub
 	@echo GCS_Test_Base_stub
 	@echo DDS_Getter_Test_Base_stub
+	@echo Home_Hello_Base_stub
 	@echo HomeT_Base_stub
 	@echo IDL_Test_Base_stub
 	@echo IDL_Test_Interfaces_idl_gen

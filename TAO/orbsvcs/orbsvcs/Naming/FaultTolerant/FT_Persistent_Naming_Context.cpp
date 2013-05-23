@@ -1,5 +1,6 @@
-// $Id: FT_Persistent_Naming_Context.cpp 96682 2013-01-19 00:21:08Z labancap $
+// $Id: FT_Persistent_Naming_Context.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Naming/FaultTolerant/FT_Persistent_Naming_Context.h"
 #include "orbsvcs/Naming/FaultTolerant/FT_Naming_Manager.h"
 #include "orbsvcs/FT_NamingManagerC.h"
@@ -72,7 +73,7 @@ TAO_FT_Persistent_Naming_Context::resolve (const CosNaming::Name& n)
     // If there is no naming manager, we will fail and report an error.
     if ( this->naming_manager_impl_ == 0)
     {
-      ACE_ERROR ((LM_ERROR,
+      ORBSVCS_ERROR ((LM_ERROR,
                   ACE_TEXT ("TAO_FT_Persistent_Naming_Context::resolve ")
                   ACE_TEXT ("- No NamingManager defined.\n")));
 

@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: DDS_Base_Connector_T.cpp 96867 2013-02-27 08:21:02Z johnnyw $
+// $Id: DDS_Base_Connector_T.cpp 97045 2013-04-18 12:43:48Z johnnyw $
 
 #include "ace/Env_Value_T.h"
 #include "tao/ORB_Core.h"
@@ -330,11 +330,23 @@ DDS_Base_Connector_T<CCM_TYPE>::init_domain (
               config_name.c_str(), rtps_transport_name.c_str ()));
 
           OpenDDS::DCPS::TransportInst_rch inst =
-            OpenDDS::DCPS::TransportRegistry::instance()->create_inst(rtps_transport_name,
-                                                                      "rtps_udp");
+            OpenDDS::DCPS::TransportRegistry::instance()->get_inst(rtps_transport_name);
+
+          if (inst.is_nil())
+            {
+              inst =
+                OpenDDS::DCPS::TransportRegistry::instance()->create_inst(rtps_transport_name,
+                                                                          "rtps_udp");
+            }
 
           OpenDDS::DCPS::TransportConfig_rch config =
-            OpenDDS::DCPS::TransportRegistry::instance()->create_config(config_name);
+            OpenDDS::DCPS::TransportRegistry::instance()->get_config(config_name);
+
+          if (config.is_nil ())
+            {
+              config =
+                OpenDDS::DCPS::TransportRegistry::instance()->create_config(config_name);
+            }
 
           config->instances_.push_back (inst);
           TheTransportRegistry->bind_config(config, participant);

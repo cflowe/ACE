@@ -4,7 +4,7 @@
 /**
  *  @file    be_global.h
  *
- *  $Id: be_global.h 96034 2012-08-12 19:06:55Z johnnyw $
+ *  $Id: be_global.h 96941 2013-03-29 13:12:52Z johnnyw $
  *
  *  Header file for class containing compiler back end global data.
  *
@@ -416,6 +416,12 @@ public:
 
   /// Get text that opens a "versioned" namespace.
   const char * versioning_begin (void) const;
+
+  /// Set include file for "versioned" namespace.
+  void versioning_include (const char* s);
+
+  /// Get include file for "versioned" namespace.
+  const char * versioning_include (void) const;
 
   /// Get text that opens a "versioned" namespace for core TAO/orbsvcs
   /// related code.
@@ -963,11 +969,14 @@ private:
   /// orbsvcs related code.
   ACE_CString core_versioning_end_;
 
-  /// Text that opens a "versioned" namepace.
+  /// Text that opens a "versioned" namespace.
   ACE_CString versioning_begin_;
 
-  /// Text that closes a "versioned" namepace.
+  /// Text that closes a "versioned" namespace.
   ACE_CString versioning_end_;
+
+  /// Include for versioned namespace include
+  ACE_CString versioning_include_;
 
   /// Client's header file name ending. Default is "C.h".
   char* client_hdr_ending_;

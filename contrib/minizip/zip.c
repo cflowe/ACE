@@ -7,7 +7,7 @@
    Copyright (C) 1998-2005 Gilles Vollant
 
    Read zip.h for more info
-   $Id: zip.c 91813 2010-09-17 07:52:52Z johnnyw $
+   $Id: zip.c 97057 2013-04-19 12:03:08Z johnnyw $
 */
 
 
@@ -846,7 +846,7 @@ extern MINIZIP_EXPORT int zipOpenNewFileInZip3 (zipFile file,const char* filenam
       unsigned char bufHead[RAND_HEAD_LEN];
       unsigned int sizeHead;
       zi->ci.encrypt = 1;
-      zi->ci.pcrc_32_tab = get_crc_table();
+      zi->ci.pcrc_32_tab = (unsigned long*)get_crc_table();
       /*init_keys(password,zi->ci.keys,zi->ci.pcrc_32_tab);*/
 
       sizeHead=crypthead(password,bufHead,RAND_HEAD_LEN,zi->ci.keys,zi->ci.pcrc_32_tab,crcForCrypting);

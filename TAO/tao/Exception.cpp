@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Exception.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: Exception.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Exception.h"
 #include "tao/SystemException.h"
@@ -90,7 +90,7 @@ void
 CORBA::Exception::_tao_print_exception (const char *user_provided_info,
                                         FILE *) const
 {
-  ACE_ERROR ((LM_ERROR,
+  TAOLIB_ERROR ((LM_ERROR,
               ACE_TEXT ("(%P|%t) EXCEPTION, %C\n")
               ACE_TEXT ("%C\n"),
               user_provided_info,

@@ -121,7 +121,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;DAnCE_Loggerd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Deployment_stubd.lib;DAnCE_System_Health_stubd.lib;DAnCE_SHS_Daemon_stubd.lib;TAO_CosNamingd.lib;DAnCE_Deployment_skeld.lib;DAnCE_ApplicationManager_stubd.lib;DAnCE_ApplicationManager_skeld.lib;DAnCE_stubd.lib;DAnCE_skeld.lib;DAnCE_Deployment_Schedulerd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;DAnCE_Loggerd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Deployment_stubd.lib;DAnCE_System_Health_stubd.lib;DAnCE_SHS_Daemon_stubd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;DAnCE_Deployment_skeld.lib;DAnCE_ApplicationManager_stubd.lib;DAnCE_ApplicationManager_skeld.lib;DAnCE_stubd.lib;DAnCE_skeld.lib;DAnCE_Deployment_Schedulerd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)DAnCE_SHS_CORBA_Transportd.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\..\..\lib\DAnCE_SHS_CORBA_Transportd.lib</ImportLibrary>
@@ -159,7 +159,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;DAnCE_Logger.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Deployment_stub.lib;DAnCE_System_Health_stub.lib;DAnCE_SHS_Daemon_stub.lib;TAO_CosNaming.lib;DAnCE_Deployment_skel.lib;DAnCE_ApplicationManager_stub.lib;DAnCE_ApplicationManager_skel.lib;DAnCE_stub.lib;DAnCE_skel.lib;DAnCE_Deployment_Scheduler.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;DAnCE_Logger.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Deployment_stub.lib;DAnCE_System_Health_stub.lib;DAnCE_SHS_Daemon_stub.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;DAnCE_Deployment_skel.lib;DAnCE_ApplicationManager_stub.lib;DAnCE_ApplicationManager_skel.lib;DAnCE_stub.lib;DAnCE_skel.lib;DAnCE_Deployment_Scheduler.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)DAnCE_SHS_CORBA_Transport.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -199,7 +199,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;DAnCE_Loggerd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Deployment_stubd.lib;DAnCE_System_Health_stubd.lib;DAnCE_SHS_Daemon_stubd.lib;TAO_CosNamingd.lib;DAnCE_Deployment_skeld.lib;DAnCE_ApplicationManager_stubd.lib;DAnCE_ApplicationManager_skeld.lib;DAnCE_stubd.lib;DAnCE_skeld.lib;DAnCE_Deployment_Schedulerd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;DAnCE_Loggerd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_Messagingd.lib;DAnCE_Deployment_stubd.lib;DAnCE_System_Health_stubd.lib;DAnCE_SHS_Daemon_stubd.lib;TAO_Svc_Utilsd.lib;TAO_CosNamingd.lib;DAnCE_Deployment_skeld.lib;DAnCE_ApplicationManager_stubd.lib;DAnCE_ApplicationManager_skeld.lib;DAnCE_stubd.lib;DAnCE_skeld.lib;DAnCE_Deployment_Schedulerd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)DAnCE_SHS_CORBA_Transportd.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\..\..\lib\DAnCE_SHS_CORBA_Transportd.lib</ImportLibrary>
@@ -244,7 +244,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;DAnCE_Logger.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Deployment_stub.lib;DAnCE_System_Health_stub.lib;DAnCE_SHS_Daemon_stub.lib;TAO_CosNaming.lib;DAnCE_Deployment_skel.lib;DAnCE_ApplicationManager_stub.lib;DAnCE_ApplicationManager_skel.lib;DAnCE_stub.lib;DAnCE_skel.lib;DAnCE_Deployment_Scheduler.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;DAnCE_Logger.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_Messaging.lib;DAnCE_Deployment_stub.lib;DAnCE_System_Health_stub.lib;DAnCE_SHS_Daemon_stub.lib;TAO_Svc_Utils.lib;TAO_CosNaming.lib;DAnCE_Deployment_skel.lib;DAnCE_ApplicationManager_stub.lib;DAnCE_ApplicationManager_skel.lib;DAnCE_stub.lib;DAnCE_skel.lib;DAnCE_Deployment_Scheduler.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)DAnCE_SHS_CORBA_Transport.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>

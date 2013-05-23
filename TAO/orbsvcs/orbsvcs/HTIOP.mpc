@@ -1,8 +1,8 @@
 // -*- MPC -*-
 //
-// $Id: HTIOP.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+// $Id: HTIOP.mpc 97014 2013-04-12 22:47:02Z mitza $
 
-project : htbp, orbsvcslib, orbsvcs_output, install, tao_versioning_idl_defaults {
+project : htbp, orbsvcslib, orbsvcs_output, install, tao_versioning_idl_defaults, svc_utils {
   sharedname   = TAO_HTIOP
   idlflags    += -Wb,export_macro=HTIOP_Export -Wb,export_include=orbsvcs/HTIOP/HTIOP_Export.h -SS
   dynamicflags += HTIOP_BUILD_DLL

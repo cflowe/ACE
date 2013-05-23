@@ -1,9 +1,7 @@
 // -*- IDL -*-
 
 /**
- *  @file   ServerObject.pidl
- *
- * $Id: ServerObject.pidl 92104 2010-09-30 09:53:25Z johnnyw $
+ * $Id: ServerObject.idl 97063 2013-04-22 14:55:00Z mitza $
  */
 
 #ifndef TAO_IMRCLIENT_SERVEROBJECT_PIDL

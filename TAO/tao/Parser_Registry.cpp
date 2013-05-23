@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Parser_Registry.cpp 91492 2010-08-26 13:40:18Z johnnyw $
+// $Id: Parser_Registry.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Parser_Registry.h"
 #include "tao/IOR_Parser.h"
@@ -58,7 +58,7 @@ TAO_Parser_Registry::open (TAO_ORB_Core *orb_core)
           --number_of_names;
           if (TAO_debug_level >= 1)
             {
-              ACE_DEBUG ((LM_DEBUG, "TAO (%P|%t) Failed to find Service Object"
+              TAOLIB_DEBUG ((LM_DEBUG, "TAO (%P|%t) Failed to find Service Object"
                           " for %C.\n", names[i]));
             }
         }

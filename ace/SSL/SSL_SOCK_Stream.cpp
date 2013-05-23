@@ -1,7 +1,7 @@
-// $Id: SSL_SOCK_Stream.cpp 96125 2012-09-05 22:16:38Z shuston $
+// $Id: SSL_SOCK_Stream.cpp 96985 2013-04-11 15:50:32Z huangh $
 
 #include "ace/Handle_Set.h"
-#include "ace/Log_Msg.h"
+#include "ace/Log_Category.h"
 #include "ace/Countdown_Time.h"
 #include "ace/OS_NS_string.h"
 #include "ace/OS_NS_sys_select.h"
@@ -32,7 +32,7 @@ ACE_SSL_SOCK_Stream::ACE_SSL_SOCK_Stream (ACE_SSL_Context *context)
 
   if (this->ssl_ == 0)
     {
-      ACE_ERROR ((LM_ERROR,
+      ACELIB_ERROR ((LM_ERROR,
                   "(%P|%t) ACE_SSL_SOCK_Stream "
                   "- cannot allocate new SSL structure %p\n",
                   ACE_TEXT ("")));

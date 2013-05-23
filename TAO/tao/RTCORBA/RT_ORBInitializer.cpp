@@ -1,4 +1,4 @@
-// $Id: RT_ORBInitializer.cpp 96334 2012-11-23 08:11:07Z johnnyw $
+// $Id: RT_ORBInitializer.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/RTCORBA/RT_ORBInitializer.h"
 
@@ -76,7 +76,7 @@ TAO_RT_ORBInitializer::pre_init (PortableInterceptor::ORBInitInfo_ptr info)
   if (CORBA::is_nil (tao_info.in ()))
     {
       if (TAO_debug_level > 0)
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     "(%P|%t) TAO_RT_ORBInitializer::pre_init:\n"
                     "(%P|%t)    Unable to narrow "
                     "\"PortableInterceptor::ORBInitInfo_ptr\" to\n"

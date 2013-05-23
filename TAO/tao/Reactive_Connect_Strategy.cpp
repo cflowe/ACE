@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Reactive_Connect_Strategy.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: Reactive_Connect_Strategy.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Reactive_Connect_Strategy.h"
 #include "tao/Connection_Handler.h"
@@ -51,7 +51,7 @@ TAO_Reactive_Connect_Strategy::wait_i (TAO_LF_Event *ev,
   if (TAO_debug_level > 2)
     {
       //FUZZ: disable check_for_lack_ACE_OS
-      ACE_DEBUG ((LM_DEBUG,
+      TAOLIB_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("TAO (%P|%t) - Waiting in the Reactor for ")
                   ACE_TEXT ("connection completion - wait ()\n")));
       //FUZZ: enable check_for_lack_ACE_OS

@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_backup_restart_test.pl 96891 2013-03-08 00:15:02Z stanleyk $
+# $Id: run_backup_restart_test.pl 96921 2013-03-14 16:00:32Z stanleyk $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -381,9 +381,10 @@ sub backup_restart_test()
         $status = 1;
     }
 
+    print_msg("INFO: killing backup server");
     $server_status = $NS2->TerminateWaitKill ($server->ProcessStopWaitInterval());
     if ($server_status != 0) {
-        print STDERR "ERROR: server 2 returned $server_status\n";
+        print STDERR "ERROR: Backup Naming Server shutdown returned $server_status\n";
         $status = 1;
     }
 

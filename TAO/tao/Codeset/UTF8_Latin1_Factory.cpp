@@ -1,4 +1,4 @@
-// $Id: UTF8_Latin1_Factory.cpp 84281 2009-01-30 15:01:17Z wotte $
+// $Id: UTF8_Latin1_Factory.cpp 96992 2013-04-11 18:07:48Z huangh $
 #include "tao/debug.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Log_Msg.h"
@@ -81,7 +81,7 @@ TAO_UTF8_Latin1_Factory::create_translator () const
     if (this->translator_ == 0)
     {
       if (TAO_debug_level)
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                     ACE_TEXT ("(%P|%t) TAO_UTF8_Latin1_Factory cannot ")
                     ACE_TEXT("create TAO_UTF8_Latin1_Translator\n")
                     ));

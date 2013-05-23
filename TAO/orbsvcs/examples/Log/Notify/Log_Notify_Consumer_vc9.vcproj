@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_DsLogAdmind.lib TAO_CosEventd.lib TAO_DsEventLogAdmind.lib TAO_CosNotificationd.lib TAO_DsNotifyLogAdmind.lib TAO_PortableServerd.lib TAO_CosEvent_Skeld.lib TAO_CosNotification_Skeld.lib TAO_CosNamingd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_DsLogAdmind.lib TAO_CosEventd.lib TAO_DsEventLogAdmind.lib TAO_CosNotificationd.lib TAO_DsNotifyLogAdmind.lib TAO_PortableServerd.lib TAO_CosEvent_Skeld.lib TAO_CosNotification_Skeld.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\Notify_Consumer.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -155,7 +155,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_DsLogAdmin.lib TAO_CosEvent.lib TAO_DsEventLogAdmin.lib TAO_CosNotification.lib TAO_DsNotifyLogAdmin.lib TAO_PortableServer.lib TAO_CosEvent_Skel.lib TAO_CosNotification_Skel.lib TAO_CosNaming.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_DsLogAdmin.lib TAO_CosEvent.lib TAO_DsEventLogAdmin.lib TAO_CosNotification.lib TAO_DsNotifyLogAdmin.lib TAO_PortableServer.lib TAO_CosEvent_Skel.lib TAO_CosNotification_Skel.lib TAO_Svc_Utils.lib TAO_CosNaming.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\Notify_Consumer.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -240,7 +240,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_DsLogAdmind.lib TAO_CosEventd.lib TAO_DsEventLogAdmind.lib TAO_CosNotificationd.lib TAO_DsNotifyLogAdmind.lib TAO_PortableServerd.lib TAO_CosEvent_Skeld.lib TAO_CosNotification_Skeld.lib TAO_CosNamingd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_DsLogAdmind.lib TAO_CosEventd.lib TAO_DsEventLogAdmind.lib TAO_CosNotificationd.lib TAO_DsNotifyLogAdmind.lib TAO_PortableServerd.lib TAO_CosEvent_Skeld.lib TAO_CosNotification_Skeld.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\Notify_Consumer.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -320,7 +320,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_DsLogAdmin.lib TAO_CosEvent.lib TAO_DsEventLogAdmin.lib TAO_CosNotification.lib TAO_DsNotifyLogAdmin.lib TAO_PortableServer.lib TAO_CosEvent_Skel.lib TAO_CosNotification_Skel.lib TAO_CosNaming.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_DsLogAdmin.lib TAO_CosEvent.lib TAO_DsEventLogAdmin.lib TAO_CosNotification.lib TAO_DsNotifyLogAdmin.lib TAO_PortableServer.lib TAO_CosEvent_Skel.lib TAO_CosNotification_Skel.lib TAO_Svc_Utils.lib TAO_CosNaming.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\Notify_Consumer.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

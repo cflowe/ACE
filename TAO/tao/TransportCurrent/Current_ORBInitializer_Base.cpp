@@ -1,4 +1,4 @@
-// $Id: Current_ORBInitializer_Base.cpp 78627 2007-06-28 08:50:01Z johnnyw $
+// $Id: Current_ORBInitializer_Base.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 
 #include "tao/PI/ORBInitInfo.h"
@@ -35,7 +35,7 @@ namespace TAO
       if (CORBA::is_nil (tao_info.in ()))
         {
           if (TAO_debug_level > 0)
-            ACE_ERROR ((LM_ERROR,
+            TAOLIB_ERROR ((LM_ERROR,
                         "TAO (%P|%t) TAO::Transport::ORBInitializer::pre_init - "
                         "Panic: unable to narrow the ORBInitInfo_ptr\n"));
 

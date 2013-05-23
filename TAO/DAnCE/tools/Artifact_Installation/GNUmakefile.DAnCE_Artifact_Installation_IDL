@@ -212,11 +212,11 @@ endif
 endif
 
 #BEGIN MPC-Generated Install Info
-#idl_files:
-#DAnCE_Artifact_Installation_Handler.idl
-#
 #build_files:
 #Artifact_Installation.mpc
+#
+#idl_files:
+#DAnCE_Artifact_Installation_Handler.idl
 #
 
 #END MPC-Generated Install Info

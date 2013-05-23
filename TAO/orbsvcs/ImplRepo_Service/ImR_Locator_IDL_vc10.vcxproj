@@ -121,7 +121,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_IORManipd.lib;TAO_ImR_Clientd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_ImR_Activator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_Async_ImR_Client_IDLd.lib;TAO_ImR_Activator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Locator_IDLd.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\lib\TAO_ImR_Locator_IDLd.lib</ImportLibrary>
@@ -159,7 +159,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_IORManip.lib;TAO_ImR_Client.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_ImR_Activator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_Async_ImR_Client_IDL.lib;TAO_ImR_Activator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Locator_IDL.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -199,7 +199,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_IORManipd.lib;TAO_ImR_Clientd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_ImR_Activator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_Async_ImR_Client_IDLd.lib;TAO_ImR_Activator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Locator_IDLd.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\lib\TAO_ImR_Locator_IDLd.lib</ImportLibrary>
@@ -244,7 +244,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_IORManip.lib;TAO_ImR_Client.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_ImR_Activator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_Async_ImR_Client_IDL.lib;TAO_ImR_Activator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Locator_IDL.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -267,18 +267,12 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AsyncStartupWaiterC.cpp">
-    </ClCompile>
-    <ClCompile Include="AsyncStartupWaiterS.cpp">
-    </ClCompile>
     <ClCompile Include="ImR_LocatorC.cpp">
     </ClCompile>
     <ClCompile Include="ImR_LocatorS.cpp">
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AsyncStartupWaiterC.h" />
-    <ClInclude Include="AsyncStartupWaiterS.h" />
     <ClInclude Include="ImR_LocatorC.h" />
     <ClInclude Include="ImR_LocatorS.h" />
     <ClInclude Include="locator_idl_export.h" />
@@ -292,45 +286,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="AsyncStartupWaiter.idl">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h -GH &quot;AsyncStartupWaiter.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on AsyncStartupWaiter.idl</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AsyncStartupWaiterC.cpp;AsyncStartupWaiterC.h;AsyncStartupWaiterC.inl;AsyncStartupWaiterS.cpp;AsyncStartupWaiterS.h</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h -GH &quot;AsyncStartupWaiter.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on AsyncStartupWaiter.idl</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AsyncStartupWaiterC.cpp;AsyncStartupWaiterC.h;AsyncStartupWaiterC.inl;AsyncStartupWaiterS.cpp;AsyncStartupWaiterS.h</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h -GH &quot;AsyncStartupWaiter.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on AsyncStartupWaiter.idl</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AsyncStartupWaiterC.cpp;AsyncStartupWaiterC.h;AsyncStartupWaiterC.inl;AsyncStartupWaiterS.cpp;AsyncStartupWaiterS.h</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h -GH &quot;AsyncStartupWaiter.idl&quot;&#x0D;&#x0A;endlocal</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on AsyncStartupWaiter.idl</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AsyncStartupWaiterC.cpp;AsyncStartupWaiterC.h;AsyncStartupWaiterC.inl;AsyncStartupWaiterS.cpp;AsyncStartupWaiterS.h</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
-    </CustomBuild>
     <CustomBuild Include="ImR_Locator.idl">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h &quot;ImR_Locator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h -I..\../tao/ImR_Client -GH &quot;ImR_Locator.idl&quot;&#x0D;&#x0A;endlocal</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Invoking ..\..\..\bin\tao_idl on ImR_Locator.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ImR_LocatorC.cpp;ImR_LocatorC.h;ImR_LocatorC.inl;ImR_LocatorS.cpp;ImR_LocatorS.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h &quot;ImR_Locator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h -I..\../tao/ImR_Client -GH &quot;ImR_Locator.idl&quot;&#x0D;&#x0A;endlocal</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Invoking ..\..\..\bin\tao_idl on ImR_Locator.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ImR_LocatorC.cpp;ImR_LocatorC.h;ImR_LocatorC.inl;ImR_LocatorS.cpp;ImR_LocatorS.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h &quot;ImR_Locator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h -I..\../tao/ImR_Client -GH &quot;ImR_Locator.idl&quot;&#x0D;&#x0A;endlocal</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Invoking ..\..\..\bin\tao_idl on ImR_Locator.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ImR_LocatorC.cpp;ImR_LocatorC.h;ImR_LocatorC.inl;ImR_LocatorS.cpp;ImR_LocatorS.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h &quot;ImR_Locator.idl&quot;&#x0D;&#x0A;endlocal</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal&#x0D;&#x0A;PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -I..\../orbsvcs -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Wb,export_macro=LocatorIDL_Export -Wb,export_include=locator_idl_export.h -I..\../tao/ImR_Client -GH &quot;ImR_Locator.idl&quot;&#x0D;&#x0A;endlocal</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Invoking ..\..\..\bin\tao_idl on ImR_Locator.idl</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ImR_LocatorC.cpp;ImR_LocatorC.h;ImR_LocatorC.inl;ImR_LocatorS.cpp;ImR_LocatorS.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="AsyncStartupWaiterC.inl" />
     <None Include="ImR_LocatorC.inl" />
   </ItemGroup>
   <ItemGroup>

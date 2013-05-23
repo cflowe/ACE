@@ -1,8 +1,8 @@
 // -*- C++ -*-
 //
-// $Id: Handle_Set.inl 96017 2012-08-08 22:18:09Z mitza $
+// $Id: Handle_Set.inl 96985 2013-04-11 15:50:32Z huangh $
 
-#include "ace/Log_Msg.h"
+#include "ace/Log_Category.h"
 
 // AIX defines bzero() in this odd file... used by FD_ZERO
 #if defined (ACE_HAS_STRINGS)

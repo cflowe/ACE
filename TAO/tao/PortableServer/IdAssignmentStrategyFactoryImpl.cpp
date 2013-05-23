@@ -1,4 +1,4 @@
-// $Id: IdAssignmentStrategyFactoryImpl.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: IdAssignmentStrategyFactoryImpl.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/IdAssignmentStrategyFactoryImpl.h"
 #include "tao/PortableServer/IdAssignmentStrategy.h"
@@ -35,7 +35,7 @@ namespace TAO
         ACE_Dynamic_Service <IdAssignmentStrategy>::instance (strategy_name);
 
       if (strategy == 0)
-        ACE_ERROR ((LM_ERROR,
+        TAOLIB_ERROR ((LM_ERROR,
                    ACE_TEXT ("(%P|%t) ERROR, Unable to get %s\n"),
                    strategy_name));
 

@@ -3,7 +3,7 @@
 /**
  *  @file     File_i.cpp
  *
- *  $Id: File_i.cpp 93650 2011-03-28 08:44:53Z johnnyw $
+ *  $Id: File_i.cpp 96947 2013-03-30 18:13:42Z mcorino $
  *
  *    Implementation of the File IDL module and the interfaces
  *    Descriptor and System in it.
@@ -18,6 +18,7 @@
 #include "ace/OS_NS_stdio.h"
 #include "ace/OS_NS_fcntl.h"
 #include "ace/OS_NS_unistd.h"
+#include "ace/Truncate.h"
 #include "tao/PortableServer/PortableServer.h"
 
 // IDL File::System constructor
@@ -60,7 +61,7 @@ FileImpl::System::open (const char *file_name,
   // convert ACE_HANDLE to a string
   ACE_OS::sprintf (file_descriptor_buffer,
                    "%ld",
-                   (long int) file_descriptor);
+                   ACE_Utils::truncate_cast<long int> ((intptr_t)file_descriptor));
 
   //Create an objectID from the ACE_HANDLE string
   PortableServer::ObjectId_var oid =
@@ -151,7 +152,7 @@ FileImpl::Descriptor::fd (void)
     PortableServer::ObjectId_to_string (oid1.in ());
 
   // Get the ACE_HANDLE from the string
-  return (ACE_HANDLE) ACE_OS::atol (s.in ());
+  return (ACE_HANDLE)(intptr_t)ACE_OS::atol (s.in ());
 }
 
 CORBA::Long

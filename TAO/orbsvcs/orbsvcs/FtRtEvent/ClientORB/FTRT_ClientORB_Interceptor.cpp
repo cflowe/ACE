@@ -1,10 +1,10 @@
-// $Id: FTRT_ClientORB_Interceptor.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: FTRT_ClientORB_Interceptor.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "orbsvcs/FtRtEvent/ClientORB/FTRT_ClientORB_Interceptor.h"
 #include "tao/MProfile.h"
 #include "tao/Stub.h"
 #include "tao/CDR.h"
-#include "ace/Log_Msg.h"
+#include "orbsvcs/Log_Macros.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -116,7 +116,7 @@ FTRT_ClientORB_Interceptor::receive_reply (
     // update the target
      CORBA::Object_var target = ri->target();
      target->_stubobj ()->base_profiles ( obj->_stubobj()->base_profiles() );
-     ACE_DEBUG((LM_DEBUG, "target object updated\n"));
+     ORBSVCS_DEBUG((LM_DEBUG, "target object updated\n"));
   }
 }
 

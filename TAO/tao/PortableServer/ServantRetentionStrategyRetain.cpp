@@ -4,7 +4,7 @@
 /**
  *  @file    ServantRetentionStrategyRetain.cpp
  *
- *  $Id: ServantRetentionStrategyRetain.cpp 93496 2011-03-07 09:37:27Z johnnyw $
+ *  $Id: ServantRetentionStrategyRetain.cpp 96992 2013-04-11 18:07:48Z huangh $
  *
  */
 //=============================================================================
@@ -364,7 +364,7 @@ namespace TAO
           if (deactivated)
             {
               if (TAO_debug_level > 0)
-                ACE_DEBUG ((LM_DEBUG,
+                TAOLIB_DEBUG ((LM_DEBUG,
                             ACE_TEXT ("(%t) TAO_Root_POA::is_servant_in_map: waiting for servant to deactivate\n")));
 
               // We are going to wait on this condition variable; the POA
@@ -411,7 +411,7 @@ namespace TAO
           if (deactivated)
             {
               if (TAO_debug_level > 0)
-                ACE_DEBUG ((LM_DEBUG,
+                TAOLIB_DEBUG ((LM_DEBUG,
                             ACE_TEXT ("(%t) TAO_Root_POA::is_user_id_in_map: waiting for servant to deactivate\n")));
 
               // We are going to wait on this condition variable; the POA

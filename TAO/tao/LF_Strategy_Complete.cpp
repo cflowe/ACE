@@ -1,10 +1,10 @@
-// $Id: LF_Strategy_Complete.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: LF_Strategy_Complete.cpp 97001 2013-04-12 17:59:36Z huangh $
 
 #include "tao/LF_Strategy_Complete.h"
 #include "tao/LF_Follower.h"
 #include "tao/Leader_Follower.h"
 #include "ace/Guard_T.h"
-#include "ace/Log_Msg.h"
+#include "tao/debug.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -39,7 +39,7 @@ TAO_LF_Strategy_Complete::reset_event_loop_thread (int call_reset,
   int const result = lf.elect_new_leader ();
 
   if (result == -1)
-    ACE_ERROR ((LM_ERROR,
+    TAOLIB_ERROR ((LM_ERROR,
                 ACE_TEXT ("TAO (%P|%t) - Failed to wake up ")
                 ACE_TEXT ("a follower thread\n")));
 }

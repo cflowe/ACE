@@ -1,4 +1,4 @@
-// $Id: IdUniquenessStrategyUniqueFactoryImpl.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: IdUniquenessStrategyUniqueFactoryImpl.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/IdUniquenessStrategyUniqueFactoryImpl.h"
 #include "tao/PortableServer/IdUniquenessStrategyUnique.h"
@@ -25,7 +25,7 @@ namespace TAO
         }
         case ::PortableServer::MULTIPLE_ID :
         {
-          ACE_ERROR ((LM_ERROR, "Incorrect type in IdUniquenessStrategyUniqueFactoryImpl"));
+          TAOLIB_ERROR ((LM_ERROR, "Incorrect type in IdUniquenessStrategyUniqueFactoryImpl"));
           break;
         }
       }

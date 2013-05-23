@@ -1,4 +1,4 @@
-// $Id: Compiler_Features_17_Test.cpp 96162 2012-09-27 09:39:28Z johnnyw $
+// $Id: Compiler_Features_17_Test.cpp 97112 2013-05-10 08:59:44Z johnnyw $
 
 /**
  * This program checks if the compiler / platform supports constexpr
@@ -10,6 +10,11 @@
 
 #include <limits>
 #include <stdint.h>
+
+constexpr int get_five()
+{
+  return 5;
+}
 
 class A
 {

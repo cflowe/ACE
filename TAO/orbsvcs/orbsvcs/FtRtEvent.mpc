@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: FtRtEvent.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+// $Id: FtRtEvent.mpc 97014 2013-04-12 22:47:02Z mitza $
 
 project (FtRtEvent) : orbsvcslib, orbsvcs_output, install, ftorbutils, rtevent_serv, naming, avoids_minimum_corba, pi_server, tao_versioning_idl_defaults {
   sharedname   = TAO_FtRtEvent
@@ -40,7 +40,7 @@ project (FtRtEvent) : orbsvcslib, orbsvcs_output, install, ftorbutils, rtevent_s
   }
 }
 
-project (FTRT_ClientORB) :  messaging, orbsvcslib, orbsvcs_output, pi, install {
+project (FTRT_ClientORB) :  messaging, orbsvcslib, orbsvcs_output, pi, install, svc_utils {
   sharedname   = TAO_FTRT_ClientORB
   dynamicflags += TAO_FTRT_BUILD_DLL
   tagchecks   += FTRT_ClientORB

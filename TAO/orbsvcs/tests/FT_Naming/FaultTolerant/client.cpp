@@ -2,7 +2,7 @@
 /**
  *  @file client.cpp
  *
- *  $Id: client.cpp 96906 2013-03-11 13:36:04Z stanleyk $
+ *  $Id: client.cpp 97059 2013-04-19 16:12:01Z mesnier_p $
  *
  *  This class implements a CORBA test client for the Fault Tolerant Naming Service.
  *
@@ -1567,6 +1567,15 @@ do_persistence_objectgroup_test (
             std::string member_ior;
             in >> member_ior;
 
+            if (!in.good ())
+              {
+                ACE_ERROR_RETURN  ((LM_ERROR,
+                                    ACE_TEXT ("ERROR: Unable to read member data ")
+                                    ACE_TEXT ("from file %C\n"),
+                                    member_data_file.c_str ()),
+                                   RC_ERROR);
+              }
+
             CORBA::Object_var member =
               theOrb->string_to_object(member_ior.c_str ());
             PortableGroup::Location location_name (1);
@@ -1603,8 +1612,9 @@ do_persistence_objectgroup_test (
                             ACE_TEXT ("ERROR: No group names found")));
               }
           }
-        catch (const CORBA::Exception&)
+        catch (const CORBA::Exception& ex)
           {
+            ex._tao_print_exception ("CORBA::Exception caught:");
             ACE_ERROR_RETURN ((LM_ERROR,
                                ACE_TEXT ("ERROR: Unable to remove member for group %C\n"),
                                basic_group_name),
@@ -1786,9 +1796,11 @@ do_equivalence_name_test (
       try {
         CORBA::Object_var obj1_on_replica = root_context_2->resolve (level1);
       }
-      catch (const CosNaming::NamingContext::NotFound& ex)
+      catch (const CosNaming::NamingContext::NotFound& )
         {
-          ex._tao_print_exception ("INFO: Unable to resolve object from replica. Sleeping for a second.\n");
+          ACE_DEBUG ((LM_INFO,
+                      "INFO: Unable to resolve object from replica. "
+                      "Sleeping for a second.\n"));
 
           ACE_OS::sleep (1);
 

@@ -4,7 +4,7 @@
 /**
  * @file PG_Object_Group_Manipulator.cpp
  *
- * $Id: PG_Object_Group_Manipulator.cpp 96760 2013-02-05 21:11:03Z stanleyk $
+ * $Id: PG_Object_Group_Manipulator.cpp 97014 2013-04-12 22:47:02Z mitza $
  *
  * @author Dale Wilson <wilson_d@ociweb.com>
  */
@@ -146,14 +146,14 @@ void dump_membership (const char * label, PortableGroup::ObjectGroup_ptr member)
   TAO_FT_IOGR_Property prop (ft_tag_component);
   if (this->iorm_->is_primary_set (&prop, member))
   {
-    ACE_DEBUG ( (LM_DEBUG,
+    ORBSVCS_DEBUG ( (LM_DEBUG,
       ACE_TEXT ("%T %n (%P|%t) - %s: PRIMARY member.\n"),
       label
       ));
   }
   else
   {
-    ACE_DEBUG ( (LM_DEBUG,
+    ORBSVCS_DEBUG ( (LM_DEBUG,
       ACE_TEXT ("%T %n (%P|%t) - %s: backup member.\n"),
       label
       ));
@@ -162,7 +162,7 @@ void dump_membership (const char * label, PortableGroup::ObjectGroup_ptr member)
   PortableGroup::TagGroupTaggedComponent tag_component;
   if (TAO::PG_Utils::get_tagged_component (member, tag_component))
   {
-    ACE_DEBUG ( (LM_DEBUG,
+    ORBSVCS_DEBUG ( (LM_DEBUG,
       ACE_TEXT ("%T %n (%P|%t) - %s: Group: .")
       ACE_TEXT (" version: %u\n"),
 
@@ -172,7 +172,7 @@ void dump_membership (const char * label, PortableGroup::ObjectGroup_ptr member)
   }
   else
   {
-    ACE_DEBUG ( (LM_DEBUG,
+    ORBSVCS_DEBUG ( (LM_DEBUG,
       ACE_TEXT ("%T %n (%P|%t) - %s: No group information found.\n"),
       label
       ));

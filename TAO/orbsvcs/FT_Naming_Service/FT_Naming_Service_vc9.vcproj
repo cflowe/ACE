@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_PortableServerd.lib TAO_CosNaming_Skeld.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Messagingd.lib TAO_IORManipd.lib TAO_PortableGroupd.lib TAO_FtNamingd.lib TAO_FtNamingReplicationd.lib TAO_IORTabled.lib TAO_Svc_Utilsd.lib TAO_CosNaming_Servd.lib TAO_FT_Naming_Servd.lib TAO_ImR_Clientd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib TAO_CosNaming_Skeld.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Messagingd.lib TAO_IORManipd.lib TAO_PortableGroupd.lib TAO_FtNamingd.lib TAO_FtNamingReplicationd.lib TAO_IORTabled.lib TAO_CosNaming_Servd.lib TAO_FT_Naming_Servd.lib TAO_ImR_Clientd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_ft_naming.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -155,7 +155,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_PortableServer.lib TAO_CosNaming_Skel.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Messaging.lib TAO_IORManip.lib TAO_PortableGroup.lib TAO_FtNaming.lib TAO_FtNamingReplication.lib TAO_IORTable.lib TAO_Svc_Utils.lib TAO_CosNaming_Serv.lib TAO_FT_Naming_Serv.lib TAO_ImR_Client.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib TAO_CosNaming_Skel.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Messaging.lib TAO_IORManip.lib TAO_PortableGroup.lib TAO_FtNaming.lib TAO_FtNamingReplication.lib TAO_IORTable.lib TAO_CosNaming_Serv.lib TAO_FT_Naming_Serv.lib TAO_ImR_Client.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_ft_naming.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -240,7 +240,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_CosNamingd.lib TAO_PortableServerd.lib TAO_CosNaming_Skeld.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Messagingd.lib TAO_IORManipd.lib TAO_PortableGroupd.lib TAO_FtNamingd.lib TAO_FtNamingReplicationd.lib TAO_IORTabled.lib TAO_Svc_Utilsd.lib TAO_CosNaming_Servd.lib TAO_FT_Naming_Servd.lib TAO_ImR_Clientd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib TAO_CosNaming_Skeld.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib TAO_Messagingd.lib TAO_IORManipd.lib TAO_PortableGroupd.lib TAO_FtNamingd.lib TAO_FtNamingReplicationd.lib TAO_IORTabled.lib TAO_CosNaming_Servd.lib TAO_FT_Naming_Servd.lib TAO_ImR_Clientd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_ft_naming.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -320,7 +320,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_CosNaming.lib TAO_PortableServer.lib TAO_CosNaming_Skel.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Messaging.lib TAO_IORManip.lib TAO_PortableGroup.lib TAO_FtNaming.lib TAO_FtNamingReplication.lib TAO_IORTable.lib TAO_Svc_Utils.lib TAO_CosNaming_Serv.lib TAO_FT_Naming_Serv.lib TAO_ImR_Client.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib TAO_CosNaming_Skel.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib TAO_Messaging.lib TAO_IORManip.lib TAO_PortableGroup.lib TAO_FtNaming.lib TAO_FtNamingReplication.lib TAO_IORTable.lib TAO_CosNaming_Serv.lib TAO_FT_Naming_Serv.lib TAO_ImR_Client.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\tao_ft_naming.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

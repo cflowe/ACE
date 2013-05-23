@@ -3,22 +3,20 @@
 /**
  *  @file    Future_Test.cpp
  *
- *  $Id: Future_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Future_Test.cpp 97075 2013-04-24 15:01:48Z schmidt $
  *
  *  This example tests the ACE Future and illustrates an
- *  implementation of the Active Object pattern, which is described
- *  in the POSA2 book <www.cs.wustl.edu/~schmidt/POSA/> and in a
- *  paper at <www.cs.wustl.edu/~schmidt/PDF/Act-Obj.pdf>.  The
- *  Active Object example here is very simple -- it determines if numbers
- *  are prime.
- *
+ *  implementation of the Active Object pattern, which is described in
+ *  the POSA2 book <www.dre.vanderbilt.edu/~schmidt/POSA/> and in a
+ *  paper at <www.dre.vanderbilt.edu/~schmidt/PDF/Act-Obj.pdf>.  The
+ *  Active Object example here is very simple -- it determines if
+ *  numbers are prime.
  *
  *  @author Andres Kruse <Andres.Kruse@cern.ch>
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  *  @author and Per Andersson <pera@ipso.se>
  */
 //=============================================================================
-
 
 #include "test_config.h"
 #include "ace/OS_NS_string.h"
@@ -31,9 +29,6 @@
 #include "ace/Activation_Queue.h"
 #include "ace/Auto_Ptr.h"
 #include "ace/Atomic_Op.h"
-
-
-
 
 #if defined (ACE_HAS_THREADS)
 

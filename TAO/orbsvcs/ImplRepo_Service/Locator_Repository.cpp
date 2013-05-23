@@ -1,6 +1,9 @@
-// $Id: Locator_Repository.cpp 96760 2013-02-05 21:11:03Z stanleyk $
+// $Id: Locator_Repository.cpp 97036 2013-04-16 19:56:43Z mesnier_p $
 
+#include "orbsvcs/Log_Macros.h"
 #include "Locator_Repository.h"
+#include "ImR_Locator_i.h"
+
 #include "utils.h"
 #include "tao/ORB_Core.h"
 #include "tao/default_ports.h"
@@ -52,13 +55,13 @@ Locator_Repository::report_ior (PortableServer::POA_ptr )
 {
   if (this->registered_)
     {
-      ACE_ERROR_RETURN ((LM_ERROR,
+      ORBSVCS_ERROR_RETURN ((LM_ERROR,
         ACE_TEXT ("ERROR: Repository already reported IOR\n")), -1);
     }
 
   if (this->opts_.debug () > 0)
     {
-      ACE_DEBUG ((LM_INFO, ACE_TEXT ("report_ior <%C>\n"),
+      ORBSVCS_DEBUG ((LM_INFO, ACE_TEXT ("report_ior <%C>\n"),
         this->imr_ior_.in ()));
     }
 
@@ -67,8 +70,8 @@ Locator_Repository::report_ior (PortableServer::POA_ptr )
   IORTable::Table_var ior_table = IORTable::Table::_narrow (obj.in ());
   ACE_ASSERT (! CORBA::is_nil (ior_table.in ()));
 
-  ior_table->bind ("ImplRepoService", this->imr_ior_.in());
-  ior_table->bind ("ImR", this->imr_ior_.in());
+  ior_table->rebind ("ImplRepoService", this->imr_ior_.in());
+  ior_table->rebind ("ImR", this->imr_ior_.in());
 
   // Set up multicast support (if enabled)
   if (this->opts_.multicast ())
@@ -106,13 +109,77 @@ Locator_Repository::report_ior (PortableServer::POA_ptr )
                                     ACE_TEXT("w"));
           if (fp == 0)
             {
-              ACE_ERROR_RETURN ((LM_ERROR,
+              ORBSVCS_ERROR_RETURN ((LM_ERROR,
                 ACE_TEXT("ImR: Could not open file: %s\n"),
                 this->opts_.ior_filename ().c_str ()), -1);
             }
           ACE_OS::fprintf (fp, "%s", this->imr_ior_.in ());
           ACE_OS::fclose (fp);
         }
+    }
+
+  registered_ = true;
+
+  return 0;
+}
+
+int
+Locator_Repository::recover_ior (void)
+{
+  if (this->registered_)
+    {
+      ORBSVCS_ERROR_RETURN ((LM_ERROR,
+         ACE_TEXT ("ERROR: Repository already registered IOR. ")
+         ACE_TEXT ("recover_ior should not be called.\n")), -1);
+    }
+
+  if (this->opts_.debug () > 0)
+    {
+      ORBSVCS_DEBUG ((LM_INFO, ACE_TEXT ("recover_ior <%C>\n"),
+                  this->opts_.ior_filename ().c_str()));
+    }
+
+  // Load the IOR from the specified file if it is available.
+  const ACE_TString& combined_ior_file = this->opts_.ior_filename ();
+
+  // Check if the file exists. If not, then return 1 indicating
+  // we cannot recover our state.
+  if (ACE_OS::access (combined_ior_file.c_str (), F_OK) != 0)
+    return -1;
+
+  try {
+    ACE_TString combined_ior = "file://" + combined_ior_file;
+
+    CORBA::Object_var combined_obj =
+      this->orb_->string_to_object (combined_ior.c_str());
+
+    if (!CORBA::is_nil (combined_obj.in ()))
+      {
+        // Convert the object back into an IOR string to store in the
+        // imr_ior_ attribute.
+        this->imr_ior_ = this->orb_->object_to_string (combined_obj.in ());
+      }
+  }
+  catch (const CORBA::Exception& ex)
+    {
+      ex._tao_print_exception ("Attempting to read combined_ior for ImR_Locator\n");
+      return -1;
+    }
+
+  // Register the ImR for use with INS
+  CORBA::Object_var obj = this->orb_->resolve_initial_references ("IORTable");
+  IORTable::Table_var ior_table = IORTable::Table::_narrow (obj.in ());
+  ACE_ASSERT (! CORBA::is_nil (ior_table.in ()));
+
+  ior_table->bind ("ImplRepoService", this->imr_ior_.in());
+  ior_table->bind ("ImR", this->imr_ior_.in());
+
+  // Set up multicast support (if enabled)
+  if (this->opts_.multicast ())
+    {
+      ACE_Reactor* reactor = this->orb_->orb_core ()->reactor ();
+      if (this->setup_multicast (reactor, this->imr_ior_.in ()) != 0)
+        return -1;
     }
 
   registered_ = true;
@@ -166,7 +233,7 @@ Locator_Repository::setup_multicast (ACE_Reactor* reactor, const char* ior)
                                  ACE_Event_Handler::READ_MASK) == -1)
     {
       if (this->opts_.debug() > 0)
-        ACE_DEBUG ((LM_DEBUG, "ImR: cannot register Event handler\n"));
+        ORBSVCS_DEBUG ((LM_DEBUG, "ImR: cannot register Event handler\n"));
       return -1;
     }
 #else /* ACE_HAS_IP_MULTICAST*/
@@ -207,11 +274,13 @@ int
 Locator_Repository::unregister_if_address_reused (
   const ACE_CString& server_id,
   const ACE_CString& name,
-  const char* partial_ior)
+  const char* partial_ior,
+  ImR_Locator_i* imr_locator)
+
 {
   if (this->opts_.debug() > 0)
   {
-    ACE_DEBUG ((LM_DEBUG,
+    ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("(%P|%t)ImR: checking reuse address ")
       ACE_TEXT ("for server \"%C %C\" ior \"%C\"\n"),
       server_id.c_str(),
@@ -229,7 +298,7 @@ Locator_Repository::unregister_if_address_reused (
 
     if (this->opts_.debug() > 0)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      ORBSVCS_DEBUG ((LM_DEBUG,
         ACE_TEXT ("(%P|%t)ImR: iterating - registered server")
         ACE_TEXT ("\"%C %C\" ior \"%C\"\n"), info->server_id.c_str(),
         info->name.c_str (), info->partial_ior.c_str ()));
@@ -241,7 +310,7 @@ Locator_Repository::unregister_if_address_reused (
     {
       if (this->opts_.debug() > 0)
       {
-        ACE_DEBUG ((LM_DEBUG,
+        ORBSVCS_DEBUG ((LM_DEBUG,
           ACE_TEXT ("(%P|%t)ImR: reuse address %C so remove server %C \n"),
           info->partial_ior.c_str (), info->name.c_str ()));
       }
@@ -255,7 +324,7 @@ Locator_Repository::unregister_if_address_reused (
   int err = 0;
   for (size_t i = 0; i < srvs.size (); ++i)
   {
-
+    imr_locator->remove_aam (srvs[i].c_str());
     if (this->remove_server (srvs[i]) != 0)
     {
       err = -1;
@@ -444,11 +513,17 @@ UpdateableServerInfo::UpdateableServerInfo (
 }
 
 UpdateableServerInfo::UpdateableServerInfo (Locator_Repository* repo,
-                                           const Server_Info_Ptr& si)
+                                            const Server_Info_Ptr& si,
+                                            bool reset_start_count)
 : repo_(repo),
   si_(si),
   needs_update_(false)
 {
+  if (reset_start_count)
+    {
+      needs_update_ = repo_ != 0;
+      si_->start_count = 0;
+    }
 }
 
 UpdateableServerInfo::UpdateableServerInfo (const Server_Info& si)

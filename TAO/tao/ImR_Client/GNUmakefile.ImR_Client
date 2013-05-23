@@ -233,10 +233,6 @@ endif
 endif
 
 #BEGIN MPC-Generated Install Info
-#pidl_files:
-#ServerObject.pidl
-#ImplRepo.pidl
-#
 #build_files:
 #ImR_Client.mpc
 #

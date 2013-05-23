@@ -1,4 +1,4 @@
-// $Id: ORB_Manager.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: ORB_Manager.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 // = AUTHOR
 //    Sumedh Mungee <sumedh@cs.wustl.edu>
@@ -44,7 +44,7 @@ TAO_ORB_Manager::init (int &argc,
         this->orb_->resolve_initial_references (TAO_OBJID_ROOTPOA);
 
       if (CORBA::is_nil (poa_object.in ()))
-        ACE_ERROR_RETURN ((LM_ERROR,
+        TAOLIB_ERROR_RETURN ((LM_ERROR,
                            ACE_TEXT (" (%P|%t) Unable to initialize the POA.\n")),
                           -1);
 
@@ -70,7 +70,7 @@ TAO_ORB_Manager::init_child_poa (int& argc,
 {
   // Check to see if root poa has to be created.
   if (this->init (argc, argv, orb_name) == -1)
-    ACE_ERROR_RETURN ((LM_ERROR,
+    TAOLIB_ERROR_RETURN ((LM_ERROR,
                        ACE_TEXT (" (%P|%t) Error in init.\n")),
                       -1);
 
@@ -137,7 +137,7 @@ TAO_ORB_Manager::activate_under_child_poa (const char *object_name,
                                            PortableServer::Servant servant)
 {
   if (object_name == 0)
-    ACE_ERROR_RETURN ((LM_ERROR,
+    TAOLIB_ERROR_RETURN ((LM_ERROR,
                        ACE_TEXT ("\n(%P|%t) TAO_ORB_Manager::register: ")
                        ACE_TEXT ("object_name is null!")),
                       0);

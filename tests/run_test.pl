@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 94489 2011-09-11 19:07:30Z johnnyw $
+# $Id: run_test.pl 96955 2013-04-03 08:14:06Z johnnyw $
 # -*- perl -*-
 # This file is for running the tests in the ACE tests directory.
 # It is usually used for auto_compiles.
@@ -115,6 +115,7 @@ sub run_program ($@)
     ## if the executable doesn't exist, the error will show
     ## up as part of the previous test.
     print "auto_run_tests: tests/$path $arguments\n";
+    $ENV{COVERITY_TEST_NAME} = "tests/$path";
 
     my ($program, $dir, $suffix) = fileparse($path);
     my $start_dir = getcwd ();
@@ -127,7 +128,6 @@ sub run_program ($@)
     unlink "core";
 
     my $P = $target->CreateProcess($program, $arguments);
-
     if ($config_list->check_config ('Valgrind')) {
       $P->IgnoreExeSubDir(1);
     }

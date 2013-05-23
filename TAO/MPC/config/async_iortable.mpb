@@ -1,0 +1,7 @@
+// -*- MPC -*-
+// $Id: async_iortable.mpb 97030 2013-04-16 03:12:26Z mesnier_p $
+
+project : taolib, iortable, messaging, dynamicinterface {
+  after   += Async_IORTable
+  libs    += TAO_Async_IORTable
+}

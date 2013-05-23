@@ -126,14 +126,14 @@
 			Name="Idl Files"
 			Filter="idl">
 			<File
-				RelativePath="ImplRepo.pidl">
+				RelativePath="ImplRepo.idl">
 				<FileConfiguration
 					Name="Debug|Win32"
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\bin\tao_idl on ImplRepo.pidl"
-						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ImplRepo.pidl&quot;"
+						Description="Invoking ..\..\..\bin\tao_idl on ImplRepo.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -I..\../tao/ImR_Client -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ImplRepo.idl&quot;"
 						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
 						Outputs="ImplRepoA.h;ImplRepoC.cpp;ImplRepoC.h;ImplRepoC.inl;ImplRepoS.cpp;ImplRepoS.h"/>
 				</FileConfiguration>
@@ -142,8 +142,8 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\bin\tao_idl on ImplRepo.pidl"
-						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ImplRepo.pidl&quot;"
+						Description="Invoking ..\..\..\bin\tao_idl on ImplRepo.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -I..\../tao/ImR_Client -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ImplRepo.idl&quot;"
 						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
 						Outputs="ImplRepoA.h;ImplRepoC.cpp;ImplRepoC.h;ImplRepoC.inl;ImplRepoS.cpp;ImplRepoS.h"/>
 				</FileConfiguration>
@@ -152,8 +152,8 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\bin\tao_idl on ImplRepo.pidl"
-						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ImplRepo.pidl&quot;"
+						Description="Invoking ..\..\..\bin\tao_idl on ImplRepo.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -I..\../tao/ImR_Client -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ImplRepo.idl&quot;"
 						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
 						Outputs="ImplRepoA.h;ImplRepoC.cpp;ImplRepoC.h;ImplRepoC.inl;ImplRepoS.cpp;ImplRepoS.h"/>
 				</FileConfiguration>
@@ -162,21 +162,21 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\bin\tao_idl on ImplRepo.pidl"
-						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ImplRepo.pidl&quot;"
+						Description="Invoking ..\..\..\bin\tao_idl on ImplRepo.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GX -I..\../tao/ImR_Client -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ImplRepo.idl&quot;"
 						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
 						Outputs="ImplRepoA.h;ImplRepoC.cpp;ImplRepoC.h;ImplRepoC.inl;ImplRepoS.cpp;ImplRepoS.h"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="ServerObject.pidl">
+				RelativePath="ServerObject.idl">
 				<FileConfiguration
 					Name="Debug|Win32"
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\bin\tao_idl on ServerObject.pidl"
-						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ServerObject.pidl&quot;"
+						Description="Invoking ..\..\..\bin\tao_idl on ServerObject.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ServerObject.idl&quot;"
 						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
 						Outputs="ServerObjectA.cpp;ServerObjectA.h;ServerObjectC.cpp;ServerObjectC.h;ServerObjectC.inl;ServerObjectS.cpp;ServerObjectS.h"/>
 				</FileConfiguration>
@@ -185,8 +185,8 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\bin\tao_idl on ServerObject.pidl"
-						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ServerObject.pidl&quot;"
+						Description="Invoking ..\..\..\bin\tao_idl on ServerObject.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ServerObject.idl&quot;"
 						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
 						Outputs="ServerObjectA.cpp;ServerObjectA.h;ServerObjectC.cpp;ServerObjectC.h;ServerObjectC.inl;ServerObjectS.cpp;ServerObjectS.h"/>
 				</FileConfiguration>
@@ -195,8 +195,8 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\bin\tao_idl on ServerObject.pidl"
-						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ServerObject.pidl&quot;"
+						Description="Invoking ..\..\..\bin\tao_idl on ServerObject.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ServerObject.idl&quot;"
 						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BEd.dll;..\..\..\lib\TAO_IDL_FEd.dll"
 						Outputs="ServerObjectA.cpp;ServerObjectA.h;ServerObjectC.cpp;ServerObjectC.h;ServerObjectC.inl;ServerObjectS.cpp;ServerObjectS.h"/>
 				</FileConfiguration>
@@ -205,8 +205,8 @@
 				>
 					<Tool
 						Name="VCCustomBuildTool"
-						Description="Invoking ..\..\..\bin\tao_idl on ServerObject.pidl"
-						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ServerObject.pidl&quot;"
+						Description="Invoking ..\..\..\bin\tao_idl on ServerObject.idl"
+						CommandLine="PATH=%PATH%;..\..\..\lib&#x0D;&#x0A;..\..\..\bin\tao_idl -Wb,pre_include=ace/pre.h -Wb,post_include=ace/post.h -I..\.. -Wb,versioning_begin=TAO_BEGIN_VERSIONED_NAMESPACE_DECL -Wb,versioning_end=TAO_END_VERSIONED_NAMESPACE_DECL -Gp -Gd -Sorb -GA -Wb,export_macro=TAO_IMR_Client_Export -Wb,export_include=tao/ImR_Client/imr_client_export.h -iC tao/ImR_Client &quot;ServerObject.idl&quot;"
 						AdditionalDependencies="..\..\..\bin\tao_idl.exe;..\..\..\lib\TAO_IDL_BE.dll;..\..\..\lib\TAO_IDL_FE.dll"
 						Outputs="ServerObjectA.cpp;ServerObjectA.h;ServerObjectC.cpp;ServerObjectC.h;ServerObjectC.inl;ServerObjectS.cpp;ServerObjectS.h"/>
 				</FileConfiguration>

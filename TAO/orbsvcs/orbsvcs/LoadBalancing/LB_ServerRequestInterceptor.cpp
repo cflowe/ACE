@@ -1,5 +1,6 @@
-// $Id: LB_ServerRequestInterceptor.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: LB_ServerRequestInterceptor.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/LoadBalancing/LB_ServerRequestInterceptor.h"
 #include "orbsvcs/LoadBalancing/LB_LoadAlert.h"
 #include "tao/debug.h"
@@ -127,7 +128,7 @@ TAO_LB_ServerRequestInterceptor::send_exception (
       // A CORBA::TRANSIENT is thrown when the LoadManager informs the
       // LoadAlert object that its member is overloaded, for example.
 
-      ACE_DEBUG ((LM_INFO,
+      ORBSVCS_DEBUG ((LM_INFO,
                   ACE_TEXT ("TAO_LB_ServerRequestInterceptor -- ")
                   ACE_TEXT ("Exception thrown.\n")));
     }
@@ -146,7 +147,7 @@ TAO_LB_ServerRequestInterceptor::send_other (
         ri->reply_status ();
 
       if (status == PortableInterceptor::LOCATION_FORWARD)
-        ACE_DEBUG ((LM_INFO,
+        ORBSVCS_DEBUG ((LM_INFO,
                     ACE_TEXT ("TAO_LB_ServerRequestInterceptor -- ")
                     ACE_TEXT ("LOCATION FORWARDED\n")));
     }

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 14 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: ACE ACE_Compression ACE_RLECompression ACE_ETCL ACE_ETCL_Parser ACE_FlReactor Monitor_Control ACE_Qt4Reactor_moc ACE_Qt4Reactor SSL ACE_TkReactor ACE_XtReactor JAWS JAWS_server gperf INet INet_SSL TAO_IDL_FE TAO_IDL_BE TAO_IDL_EXE IORTable_Core_Idl Codeset_Idl TAO_Core_idl TAO Codeset IORTable PortableServer_Idl AnyTypeCode_Idl AnyTypeCode PortableServer Svc_Utils Messaging_Idl Valuetype_Idl Valuetype PI_Idl CodecFactory_Idl CodecFactory PI Messaging CosNaming_IDL CosNaming CosNaming_Skel CosNaming_Serv NT_Naming_Service ImR_Client_Idl IORManipulation_Idl IORManipulation ImR_Client Naming_Service BiDir_GIOP_Idl BiDir_GIOP CSD_Framework_Idl CSD_Framework CSD_ThreadPool Compression_Idl Compression RLECompressor DiffServPolicy_Idl DiffServPolicy DynamicAny_Idl DynamicAny DynamicInterface Dynamic_TP TAO_ETCL EndpointPolicy_Core_Idl EndpointPolicy TAO_FlResource IFR_Client_Idl IFR_Client IFR_Client_skel IORInterceptor_Idl ObjRefTemplate_Idl ObjRefTemplate IORInterceptor Monitor_Idl TAO_Monitor PI_Server_Idl PI_Server TAO_QtResource RTCORBA_Core_Idl RTCORBA RTPortableServer_Idl RTPortableServer RTScheduler_Idl RTScheduler SmartProxies Strategies_Core_Idl Strategies TAO_TkResource TC_Idl TC TC_IIOP_Idl TC_IIOP TypeCodeFactory_Idl TypeCodeFactory TAO_Utils TAO_XtResource ZIOP_Core_Idl ZIOP catior_lib catior logWalker monitor_client nsgroup nsadd nsdel nslist Deployment_ApplicationManager_IDL DAnCE_Properties_IDL Deployment_IDL DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_DAM_IDL Deployment_DAM_stub Deployment_DAM_skel Deployment_DomainApplication_IDL Deployment_DomainApplication_stub Deployment_DomainApplication_skel Deployment_ExecutionManager_IDL Deployment_ExecutionManager_stub Deployment_ExecutionManager_skel Deployment_NAM_IDL Deployment_NAM_stub Deployment_NAM_skel Deployment_NodeApplication_IDL Deployment_NodeApplication_stub Deployment_NodeApplication_skel Deployment_NodeManager_IDL Deployment_TargetManager_IDL Deployment_TargetManager_stub Deployment_NodeManager_stub Deployment_NodeManager_skel Deployment_RepositoryManager_IDL Deployment_RepositoryManager_stub Deployment_RepositoryManager_skel Deployment_TargetManager_skel DomainApplication DAnCE_IDL DAnCE_stub DAnCE_skel DAnCE_LM_Config_Plugins DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_LocalityManager_Impl DAnCE_LocalityManager_Exec DAnCE_Error_Interceptors DAnCE_NodeApplication DAnCE_NodeApplicationManager DAnCE_Artifact_Installation_IDL DAnCE_Artifact_Installation DAnCE_Http_Installation DAnCE_File_Installation DAnCE_Installation_Repository_Manager Node_Manager_Exec DAnCE_PL_Daemon_idl DAnCE_PL_Daemon_stub DAnCE_RepositoryManagerDaemon_IDL CircularDependency DAnCE_LocalityManager_ExplicitExec NameServiceTest_Idl NameServiceTestClient NameServiceTest_NameServiceTestServer NAM_NA NodeManager_NodeApplicationManager DAnCE_Domain_Validator_Base DAnCE_System_Health DAnCE_System_Health_stub DAnCE_SHS_Daemon_idl DAnCE_SHS_Daemon_stub DAnCE_SHS_Daemon DAnCE_SHS_CORBA_Transport DAnCE_SHS_Interceptors
+all: ACE ACE_Compression ACE_RLECompression ACE_ETCL ACE_ETCL_Parser ACE_FlReactor Monitor_Control ACE_Qt4Reactor_moc ACE_Qt4Reactor SSL ACE_TkReactor ACE_XtReactor JAWS JAWS_server gperf INet INet_SSL TAO_IDL_FE TAO_IDL_BE TAO_IDL_EXE IORTable_Core_Idl PortableServer_Idl AnyTypeCode_Idl Codeset_Idl TAO_Core_idl TAO Codeset AnyTypeCode PortableServer IORTable Messaging_Idl Valuetype_Idl Valuetype PI_Idl CodecFactory_Idl CodecFactory PI Messaging CosNaming_IDL Svc_Utils CosNaming CosNaming_Skel CosNaming_Serv NT_Naming_Service ImR_Client_Idl IORManipulation_Idl IORManipulation ImR_Client Naming_Service BiDir_GIOP_Idl BiDir_GIOP CSD_Framework_Idl CSD_Framework CSD_ThreadPool Compression_Idl Compression RLECompressor DiffServPolicy_Idl DiffServPolicy DynamicAny_Idl DynamicAny DynamicInterface Dynamic_TP TAO_ETCL EndpointPolicy_Core_Idl EndpointPolicy TAO_FlResource IFR_Client_Idl IFR_Client IFR_Client_skel IORInterceptor_Idl ObjRefTemplate_Idl ObjRefTemplate IORInterceptor Async_IORTable_Core_Idl Async_IORTable Monitor_Idl TAO_Monitor PI_Server_Idl PI_Server TAO_QtResource RTCORBA_Core_Idl RTCORBA RTPortableServer_Idl RTPortableServer RTScheduler_Idl RTScheduler SmartProxies Strategies_Core_Idl Strategies TAO_TkResource TC_Idl TC TC_IIOP_Idl TC_IIOP TypeCodeFactory_Idl TypeCodeFactory TAO_Utils TAO_XtResource ZIOP_Core_Idl ZIOP catior_lib catior logWalker monitor_client nsgroup nsadd nsdel nslist Deployment_ApplicationManager_IDL DAnCE_Properties_IDL Deployment_IDL DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_DAM_IDL Deployment_DAM_stub Deployment_DAM_skel Deployment_DomainApplication_IDL Deployment_DomainApplication_stub Deployment_DomainApplication_skel Deployment_ExecutionManager_IDL Deployment_ExecutionManager_stub Deployment_ExecutionManager_skel Deployment_NAM_IDL Deployment_NAM_stub Deployment_NAM_skel Deployment_NodeApplication_IDL Deployment_NodeApplication_stub Deployment_NodeApplication_skel Deployment_NodeManager_IDL Deployment_TargetManager_IDL Deployment_TargetManager_stub Deployment_NodeManager_stub Deployment_NodeManager_skel Deployment_RepositoryManager_IDL Deployment_RepositoryManager_stub Deployment_RepositoryManager_skel Deployment_TargetManager_skel DomainApplication DAnCE_IDL DAnCE_stub DAnCE_skel DAnCE_LM_Config_Plugins DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_LocalityManager_Impl DAnCE_LocalityManager_Exec DAnCE_Error_Interceptors DAnCE_NodeApplication DAnCE_NodeApplicationManager DAnCE_Artifact_Installation_IDL DAnCE_Artifact_Installation DAnCE_Http_Installation DAnCE_File_Installation DAnCE_Installation_Repository_Manager Node_Manager_Exec DAnCE_PL_Daemon_idl DAnCE_PL_Daemon_stub DAnCE_RepositoryManagerDaemon_IDL CircularDependency DAnCE_LocalityManager_ExplicitExec NameServiceTest_Idl NameServiceTestClient NameServiceTest_NameServiceTestServer NAM_NA NodeManager_NodeApplicationManager DAnCE_Domain_Validator_Base DAnCE_System_Health DAnCE_System_Health_stub DAnCE_SHS_Daemon_idl DAnCE_SHS_Daemon_stub DAnCE_SHS_Daemon DAnCE_SHS_CORBA_Transport DAnCE_SHS_Interceptors
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -46,16 +46,15 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_BE $(@)
 	$(KEEP_GOING)@cd ../TAO_IDL && $(MAKE) -f GNUmakefile.TAO_IDL_EXE $(@)
 	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.IORTable_Core_Idl $(@)
+	$(KEEP_GOING)@cd ../tao/PortableServer && $(MAKE) -f GNUmakefile.PortableServer_Idl $(@)
+	$(KEEP_GOING)@cd ../tao/AnyTypeCode && $(MAKE) -f GNUmakefile.AnyTypeCode_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/Codeset && $(MAKE) -f GNUmakefile.Codeset_Idl $(@)
 	$(KEEP_GOING)@cd ../tao && $(MAKE) -f GNUmakefile.TAO_Core_idl $(@)
 	$(KEEP_GOING)@cd ../tao && $(MAKE) -f GNUmakefile.TAO $(@)
 	$(KEEP_GOING)@cd ../tao/Codeset && $(MAKE) -f GNUmakefile.Codeset $(@)
-	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.IORTable $(@)
-	$(KEEP_GOING)@cd ../tao/PortableServer && $(MAKE) -f GNUmakefile.PortableServer_Idl $(@)
-	$(KEEP_GOING)@cd ../tao/AnyTypeCode && $(MAKE) -f GNUmakefile.AnyTypeCode_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/AnyTypeCode && $(MAKE) -f GNUmakefile.AnyTypeCode $(@)
 	$(KEEP_GOING)@cd ../tao/PortableServer && $(MAKE) -f GNUmakefile.PortableServer $(@)
-	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.Svc_Utils $(@)
+	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.IORTable $(@)
 	$(KEEP_GOING)@cd ../tao/Messaging && $(MAKE) -f GNUmakefile.Messaging_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/Valuetype && $(MAKE) -f GNUmakefile.Valuetype_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/Valuetype && $(MAKE) -f GNUmakefile.Valuetype $(@)
@@ -65,6 +64,7 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ../tao/PI && $(MAKE) -f GNUmakefile.PI $(@)
 	$(KEEP_GOING)@cd ../tao/Messaging && $(MAKE) -f GNUmakefile.Messaging $(@)
 	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.CosNaming_IDL $(@)
+	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.Svc_Utils $(@)
 	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.CosNaming $(@)
 	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.CosNaming_Skel $(@)
 	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.CosNaming_Serv $(@)
@@ -99,6 +99,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ../tao/ObjRefTemplate && $(MAKE) -f GNUmakefile.ObjRefTemplate_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/ObjRefTemplate && $(MAKE) -f GNUmakefile.ObjRefTemplate $(@)
 	$(KEEP_GOING)@cd ../tao/IORInterceptor && $(MAKE) -f GNUmakefile.IORInterceptor $(@)
+	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.Async_IORTable_Core_Idl $(@)
+	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.Async_IORTable $(@)
 	$(KEEP_GOING)@cd ../tao/Monitor && $(MAKE) -f GNUmakefile.Monitor_Idl $(@)
 	$(KEEP_GOING)@cd ../tao/Monitor && $(MAKE) -f GNUmakefile.TAO_Monitor $(@)
 	$(KEEP_GOING)@cd ../tao/PI_Server && $(MAKE) -f GNUmakefile.PI_Server_Idl $(@)
@@ -286,6 +288,14 @@ TAO_IDL_EXE: ACE gperf TAO_IDL_FE TAO_IDL_BE
 IORTable_Core_Idl: TAO_IDL_EXE
 	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.IORTable_Core_Idl all
 
+.PHONY: PortableServer_Idl
+PortableServer_Idl: TAO_IDL_EXE
+	$(KEEP_GOING)@cd ../tao/PortableServer && $(MAKE) -f GNUmakefile.PortableServer_Idl all
+
+.PHONY: AnyTypeCode_Idl
+AnyTypeCode_Idl: TAO_IDL_EXE
+	$(KEEP_GOING)@cd ../tao/AnyTypeCode && $(MAKE) -f GNUmakefile.AnyTypeCode_Idl all
+
 .PHONY: Codeset_Idl
 Codeset_Idl: TAO_IDL_EXE
 	$(KEEP_GOING)@cd ../tao/Codeset && $(MAKE) -f GNUmakefile.Codeset_Idl all
@@ -302,29 +312,17 @@ TAO: ACE TAO_IDL_EXE TAO_Core_idl
 Codeset: ACE TAO_IDL_EXE Codeset_Idl TAO
 	$(KEEP_GOING)@cd ../tao/Codeset && $(MAKE) -f GNUmakefile.Codeset all
 
-.PHONY: IORTable
-IORTable: ACE TAO_IDL_EXE IORTable_Core_Idl TAO Codeset
-	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.IORTable all
-
-.PHONY: PortableServer_Idl
-PortableServer_Idl: TAO_IDL_EXE
-	$(KEEP_GOING)@cd ../tao/PortableServer && $(MAKE) -f GNUmakefile.PortableServer_Idl all
-
-.PHONY: AnyTypeCode_Idl
-AnyTypeCode_Idl: TAO_IDL_EXE
-	$(KEEP_GOING)@cd ../tao/AnyTypeCode && $(MAKE) -f GNUmakefile.AnyTypeCode_Idl all
-
 .PHONY: AnyTypeCode
-AnyTypeCode: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode_Idl
+AnyTypeCode: ACE TAO_IDL_EXE AnyTypeCode_Idl TAO Codeset
 	$(KEEP_GOING)@cd ../tao/AnyTypeCode && $(MAKE) -f GNUmakefile.AnyTypeCode all
 
 .PHONY: PortableServer
-PortableServer: ACE TAO_IDL_EXE TAO Codeset PortableServer_Idl AnyTypeCode
+PortableServer: ACE TAO_IDL_EXE PortableServer_Idl TAO Codeset AnyTypeCode
 	$(KEEP_GOING)@cd ../tao/PortableServer && $(MAKE) -f GNUmakefile.PortableServer all
 
-.PHONY: Svc_Utils
-Svc_Utils: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer
-	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.Svc_Utils all
+.PHONY: IORTable
+IORTable: ACE TAO_IDL_EXE IORTable_Core_Idl TAO Codeset AnyTypeCode PortableServer
+	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.IORTable all
 
 .PHONY: Messaging_Idl
 Messaging_Idl: TAO_IDL_EXE
@@ -362,20 +360,24 @@ Messaging: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Messaging_Idl 
 CosNaming_IDL: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode
 	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.CosNaming_IDL all
 
+.PHONY: Svc_Utils
+Svc_Utils: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer
+	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.Svc_Utils all
+
 .PHONY: CosNaming
-CosNaming: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode CosNaming_IDL
+CosNaming: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer CosNaming_IDL Svc_Utils
 	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.CosNaming all
 
 .PHONY: CosNaming_Skel
-CosNaming_Skel: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer CosNaming
+CosNaming_Skel: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Svc_Utils CosNaming
 	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.CosNaming_Skel all
 
 .PHONY: CosNaming_Serv
-CosNaming_Serv: ACE TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming CosNaming_Skel
+CosNaming_Serv: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer IORTable Valuetype CodecFactory PI Messaging Svc_Utils CosNaming CosNaming_Skel
 	$(KEEP_GOING)@cd ../orbsvcs/orbsvcs && $(MAKE) -f GNUmakefile.CosNaming_Serv all
 
 .PHONY: NT_Naming_Service
-NT_Naming_Service: ACE TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming CosNaming_Skel CosNaming_Serv
+NT_Naming_Service: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer IORTable Valuetype CodecFactory PI Messaging Svc_Utils CosNaming CosNaming_Skel CosNaming_Serv
 	$(KEEP_GOING)@cd ../orbsvcs/Naming_Service && $(MAKE) -f GNUmakefile.NT_Naming_Service all
 
 .PHONY: ImR_Client_Idl
@@ -395,7 +397,7 @@ ImR_Client: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer ImR_Client_Id
 	$(KEEP_GOING)@cd ../tao/ImR_Client && $(MAKE) -f GNUmakefile.ImR_Client all
 
 .PHONY: Naming_Service
-Naming_Service: ACE TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming CosNaming_Skel CosNaming_Serv IORManipulation ImR_Client
+Naming_Service: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer IORTable Valuetype CodecFactory PI Messaging Svc_Utils CosNaming CosNaming_Skel CosNaming_Serv IORManipulation ImR_Client
 	$(KEEP_GOING)@cd ../orbsvcs/Naming_Service && $(MAKE) -f GNUmakefile.Naming_Service all
 
 .PHONY: BiDir_GIOP_Idl
@@ -497,6 +499,14 @@ ObjRefTemplate: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype
 .PHONY: IORInterceptor
 IORInterceptor: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI IORInterceptor_Idl ObjRefTemplate
 	$(KEEP_GOING)@cd ../tao/IORInterceptor && $(MAKE) -f GNUmakefile.IORInterceptor all
+
+.PHONY: Async_IORTable_Core_Idl
+Async_IORTable_Core_Idl: TAO_IDL_EXE
+	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.Async_IORTable_Core_Idl all
+
+.PHONY: Async_IORTable
+Async_IORTable: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer IORTable Valuetype CodecFactory PI Messaging DynamicInterface Async_IORTable_Core_Idl
+	$(KEEP_GOING)@cd ../tao/IORTable && $(MAKE) -f GNUmakefile.Async_IORTable all
 
 .PHONY: Monitor_Idl
 Monitor_Idl: TAO_IDL_EXE
@@ -603,7 +613,7 @@ catior_lib: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype Cod
 	$(KEEP_GOING)@cd ../utils/catior && $(MAKE) -f GNUmakefile.catior_lib all
 
 .PHONY: catior
-catior: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming Compression RTCORBA ZIOP catior_lib
+catior: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming Compression RTCORBA ZIOP catior_lib
 	$(KEEP_GOING)@cd ../utils/catior && $(MAKE) -f GNUmakefile.catior all
 
 .PHONY: logWalker
@@ -615,19 +625,19 @@ monitor_client: ACE ACE_ETCL ACE_ETCL_Parser Monitor_Control TAO_IDL_EXE TAO Cod
 	$(KEEP_GOING)@cd ../utils/monitor && $(MAKE) -f GNUmakefile.monitor_client all
 
 .PHONY: nsgroup
-nsgroup: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming IORManipulation
+nsgroup: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming IORManipulation
 	$(KEEP_GOING)@cd ../utils/nsgroup && $(MAKE) -f GNUmakefile.nsgroup all
 
 .PHONY: nsadd
-nsadd: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode CosNaming
+nsadd: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Svc_Utils CosNaming
 	$(KEEP_GOING)@cd ../utils/nslist && $(MAKE) -f GNUmakefile.nsadd all
 
 .PHONY: nsdel
-nsdel: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming
+nsdel: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming
 	$(KEEP_GOING)@cd ../utils/nslist && $(MAKE) -f GNUmakefile.nsdel all
 
 .PHONY: nslist
-nslist: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming Strategies
+nslist: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming Strategies
 	$(KEEP_GOING)@cd ../utils/nslist && $(MAKE) -f GNUmakefile.nslist all
 
 .PHONY: Deployment_ApplicationManager_IDL
@@ -655,7 +665,7 @@ Deployment_AM_stub: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Value
 	$(KEEP_GOING)@cd dance/Deployment && $(MAKE) -f GNUmakefile.Deployment_AM_stub all
 
 .PHONY: Deployment_skel
-Deployment_skel: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming IFR_Client Deployment_IDL DAnCE_Logger Deployment_stub
+Deployment_skel: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming IFR_Client Deployment_IDL DAnCE_Logger Deployment_stub
 	$(KEEP_GOING)@cd dance/Deployment && $(MAKE) -f GNUmakefile.Deployment_skel all
 
 .PHONY: Deployment_AM_skel
@@ -791,11 +801,11 @@ DAnCE_Locality_Handler: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer V
 	$(KEEP_GOING)@cd dance/LocalityManager/Handler && $(MAKE) -f GNUmakefile.DAnCE_Locality_Handler all
 
 .PHONY: DAnCE_LocalityManager_Impl
-DAnCE_LocalityManager_Impl: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler
+DAnCE_LocalityManager_Impl: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler
 	$(KEEP_GOING)@cd dance/LocalityManager/Daemon && $(MAKE) -f GNUmakefile.DAnCE_LocalityManager_Impl all
 
 .PHONY: DAnCE_LocalityManager_Exec
-DAnCE_LocalityManager_Exec: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_LocalityManager_Impl
+DAnCE_LocalityManager_Exec: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_LocalityManager_Impl
 	$(KEEP_GOING)@cd dance/LocalityManager/Daemon && $(MAKE) -f GNUmakefile.DAnCE_LocalityManager_Exec all
 
 .PHONY: DAnCE_Error_Interceptors
@@ -803,11 +813,11 @@ DAnCE_Error_Interceptors: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer
 	$(KEEP_GOING)@cd dance/LocalityManager/Interceptors && $(MAKE) -f GNUmakefile.DAnCE_Error_Interceptors all
 
 .PHONY: DAnCE_NodeApplication
-DAnCE_NodeApplication: ACE TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_NodeApplication_stub Deployment_NodeApplication_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler
+DAnCE_NodeApplication: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer IORTable Valuetype CodecFactory PI Messaging Svc_Utils CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_NodeApplication_stub Deployment_NodeApplication_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler
 	$(KEEP_GOING)@cd dance/NodeApplication && $(MAKE) -f GNUmakefile.DAnCE_NodeApplication all
 
 .PHONY: DAnCE_NodeApplicationManager
-DAnCE_NodeApplicationManager: ACE TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming DynamicInterface DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_NAM_stub Deployment_NAM_skel Deployment_NodeApplication_stub Deployment_NodeApplication_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_NodeApplication
+DAnCE_NodeApplicationManager: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer IORTable Valuetype CodecFactory PI Messaging Svc_Utils CosNaming DynamicInterface DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_NAM_stub Deployment_NAM_skel Deployment_NodeApplication_stub Deployment_NodeApplication_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_NodeApplication
 	$(KEEP_GOING)@cd dance/NodeApplicationManager && $(MAKE) -f GNUmakefile.DAnCE_NodeApplicationManager all
 
 .PHONY: DAnCE_Artifact_Installation_IDL
@@ -831,7 +841,7 @@ DAnCE_Installation_Repository_Manager: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode P
 	$(KEEP_GOING)@cd tools/Artifact_Installation && $(MAKE) -f GNUmakefile.DAnCE_Installation_Repository_Manager all
 
 .PHONY: Node_Manager_Exec
-Node_Manager_Exec: ACE INet TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming DynamicInterface TAO_Utils DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_NAM_stub Deployment_NAM_skel Deployment_NodeApplication_stub Deployment_NodeApplication_skel Deployment_TargetManager_stub Deployment_NodeManager_stub Deployment_NodeManager_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_NodeApplication DAnCE_NodeApplicationManager DAnCE_Artifact_Installation DAnCE_Http_Installation DAnCE_File_Installation DAnCE_Installation_Repository_Manager
+Node_Manager_Exec: ACE INet TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer IORTable Valuetype CodecFactory PI Messaging Svc_Utils CosNaming DynamicInterface TAO_Utils DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel Deployment_NAM_stub Deployment_NAM_skel Deployment_NodeApplication_stub Deployment_NodeApplication_skel Deployment_TargetManager_stub Deployment_NodeManager_stub Deployment_NodeManager_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_NodeApplication DAnCE_NodeApplicationManager DAnCE_Artifact_Installation DAnCE_Http_Installation DAnCE_File_Installation DAnCE_Installation_Repository_Manager
 	$(KEEP_GOING)@cd dance/NodeManager && $(MAKE) -f GNUmakefile.Node_Manager_Exec all
 
 .PHONY: DAnCE_PL_Daemon_idl
@@ -851,7 +861,7 @@ CircularDependency: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Value
 	$(KEEP_GOING)@cd tests/LocalityManager/CircularDependency && $(MAKE) -f GNUmakefile.CircularDependency all
 
 .PHONY: DAnCE_LocalityManager_ExplicitExec
-DAnCE_LocalityManager_ExplicitExec: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_LocalityManager_Impl DAnCE_LocalityManager_Exec
+DAnCE_LocalityManager_ExplicitExec: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_Split_Plan_Impl DAnCE_Locality_Handler DAnCE_LocalityManager_Impl DAnCE_LocalityManager_Exec
 	$(KEEP_GOING)@cd tests/LocalityManager/ExplicitExec && $(MAKE) -f GNUmakefile.DAnCE_LocalityManager_ExplicitExec all
 
 .PHONY: NameServiceTest_Idl
@@ -859,11 +869,11 @@ NameServiceTest_Idl: TAO_IDL_EXE
 	$(KEEP_GOING)@cd tests/NameServiceTest && $(MAKE) -f GNUmakefile.NameServiceTest_Idl all
 
 .PHONY: NameServiceTestClient
-NameServiceTestClient: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode CosNaming DAnCE_Logger NameServiceTest_Idl
+NameServiceTestClient: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Svc_Utils CosNaming DAnCE_Logger NameServiceTest_Idl
 	$(KEEP_GOING)@cd tests/NameServiceTest && $(MAKE) -f GNUmakefile.NameServiceTestClient all
 
 .PHONY: NameServiceTest_NameServiceTestServer
-NameServiceTest_NameServiceTestServer: ACE TAO_IDL_EXE TAO Codeset IORTable AnyTypeCode PortableServer Svc_Utils Valuetype CodecFactory PI Messaging CosNaming CosNaming_Skel CosNaming_Serv DAnCE_Logger NameServiceTest_Idl NameServiceTestClient
+NameServiceTest_NameServiceTestServer: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer IORTable Valuetype CodecFactory PI Messaging Svc_Utils CosNaming CosNaming_Skel CosNaming_Serv DAnCE_Logger NameServiceTest_Idl NameServiceTestClient
 	$(KEEP_GOING)@cd tests/NameServiceTest && $(MAKE) -f GNUmakefile.NameServiceTest_NameServiceTestServer all
 
 .PHONY: NAM_NA
@@ -895,15 +905,15 @@ DAnCE_SHS_Daemon_stub: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Va
 	$(KEEP_GOING)@cd tools/System_Health/Daemon && $(MAKE) -f GNUmakefile.DAnCE_SHS_Daemon_stub all
 
 .PHONY: DAnCE_SHS_Daemon
-DAnCE_SHS_Daemon: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming TAO_Utils DAnCE_Logger Deployment_stub Deployment_AM_stub DAnCE_stub DAnCE_System_Health_stub DAnCE_SHS_Daemon_stub
+DAnCE_SHS_Daemon: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming TAO_Utils DAnCE_Logger Deployment_stub Deployment_AM_stub DAnCE_stub DAnCE_System_Health_stub DAnCE_SHS_Daemon_stub
 	$(KEEP_GOING)@cd tools/System_Health/Daemon && $(MAKE) -f GNUmakefile.DAnCE_SHS_Daemon all
 
 .PHONY: DAnCE_SHS_CORBA_Transport
-DAnCE_SHS_CORBA_Transport: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_System_Health_stub DAnCE_SHS_Daemon_stub
+DAnCE_SHS_CORBA_Transport: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_Deployment_Scheduler DAnCE_System_Health_stub DAnCE_SHS_Daemon_stub
 	$(KEEP_GOING)@cd tools/System_Health/Interceptors && $(MAKE) -f GNUmakefile.DAnCE_SHS_CORBA_Transport all
 
 .PHONY: DAnCE_SHS_Interceptors
-DAnCE_SHS_Interceptors: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_System_Health_stub DAnCE_SHS_Daemon_stub DAnCE_SHS_CORBA_Transport
+DAnCE_SHS_Interceptors: ACE TAO_IDL_EXE TAO Codeset AnyTypeCode PortableServer Valuetype CodecFactory PI Messaging Svc_Utils CosNaming DAnCE_Logger Deployment_stub Deployment_AM_stub Deployment_skel Deployment_AM_skel DAnCE_stub DAnCE_skel DAnCE_System_Health_stub DAnCE_SHS_Daemon_stub DAnCE_SHS_CORBA_Transport
 	$(KEEP_GOING)@cd tools/System_Health/Interceptors && $(MAKE) -f GNUmakefile.DAnCE_SHS_Interceptors all
 
 project_name_list:
@@ -967,6 +977,8 @@ project_name_list:
 	@echo IORInterceptor_Idl
 	@echo IORManipulation
 	@echo IORManipulation_Idl
+	@echo Async_IORTable
+	@echo Async_IORTable_Core_Idl
 	@echo IORTable
 	@echo IORTable_Core_Idl
 	@echo ImR_Client

@@ -1,4 +1,4 @@
-// $Id: Object_Adapter.cpp 94802 2011-10-20 09:46:10Z mcorino $
+// $Id: Object_Adapter.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 // -- PortableServer Include --
 #include "tao/PortableServer/Object_Adapter.h"
@@ -182,7 +182,7 @@ TAO_Object_Adapter::TAO_Object_Adapter (const TAO_Server_Strategy_Factory::Activ
 
       break;
 #else
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   "linear option for -ORBPersistentidPolicyDemuxStrategy "
                   "not supported with minimum POA maps. "
                   "Ingoring option to use default...\n"));
@@ -212,7 +212,7 @@ TAO_Object_Adapter::TAO_Object_Adapter (const TAO_Server_Strategy_Factory::Activ
 #else
     case TAO_LINEAR:
     case TAO_DYNAMIC_HASH:
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   "linear and dynamic options for -ORBTransientidPolicyDemuxStrategy "
                   "are not supported with minimum POA maps. "
                   "Ingoring option to use default...\n"));
@@ -1176,7 +1176,7 @@ TAO_Object_Adapter::wait_for_non_servant_upcalls_to_complete_no_throw (void)
     }
   catch (const ::CORBA::Exception&)
     {
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   "TAO_Object_Adapter::wait_for_non_servant_upcalls_to_complete "
                   "threw exception it should not have!\n"));
     }

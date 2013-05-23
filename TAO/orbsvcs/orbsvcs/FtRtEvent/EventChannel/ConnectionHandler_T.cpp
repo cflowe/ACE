@@ -1,5 +1,7 @@
-// $Id: ConnectionHandler_T.cpp 90386 2010-06-02 13:52:08Z vzykov $
+// $Id: ConnectionHandler_T.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "ace/INET_Addr.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -18,11 +20,11 @@ int ConnectionAcceptHandler<ACE_PEER_STREAM_2>::open (void * acceptor)
 
   if (reactor_->register_handler (this,
     ACE_Event_Handler::READ_MASK) == -1)
-    ACE_ERROR_RETURN ((LM_ERROR,
+    ORBSVCS_ERROR_RETURN ((LM_ERROR,
     "(%P|%t) can't register with reactor\n"),
     -1);
 
-  ACE_DEBUG ((LM_DEBUG,
+  ORBSVCS_DEBUG ((LM_DEBUG,
     "(%P|%t) connected with %s\n",
     addr.get_host_name ()));
 

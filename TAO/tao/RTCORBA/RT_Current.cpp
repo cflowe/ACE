@@ -1,4 +1,4 @@
-// $Id: RT_Current.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: RT_Current.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/RTCORBA/RT_Current.h"
 
@@ -37,7 +37,7 @@ TAO_RT_Current::the_priority (void)
   if (result == -1)
     {
       if (TAO_debug_level > 0)
-        ACE_DEBUG ((LM_DEBUG, "ERROR: TAO_RT_Current::the_priority. "
+        TAOLIB_DEBUG ((LM_DEBUG, "ERROR: TAO_RT_Current::the_priority. "
                     "RT CORBA Priority accessed in a thread where it has not been set.\n"));
       // Spec does not define a minor code
       throw CORBA::INITIALIZE ();

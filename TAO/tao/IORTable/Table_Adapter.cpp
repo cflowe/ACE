@@ -1,7 +1,7 @@
 /**
  * @file Table_Adapter.cpp
  *
- * $Id: Table_Adapter.cpp 93378 2011-02-14 11:52:07Z johnnyw $
+ * $Id: Table_Adapter.cpp 97024 2013-04-15 16:55:16Z mesnier_p $
  *
  * @author Carlos O'Ryan <coryan@uci.edu>
  *
@@ -9,6 +9,7 @@
 
 #include "tao/IORTable/Table_Adapter.h"
 #include "tao/IORTable/IOR_Table_Impl.h"
+
 #include "tao/ORB_Core.h"
 #include "tao/Server_Strategy_Factory.h"
 #include "tao/Object.h"

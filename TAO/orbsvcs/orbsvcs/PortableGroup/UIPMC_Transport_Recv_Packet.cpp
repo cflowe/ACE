@@ -1,5 +1,6 @@
-// $Id: UIPMC_Transport_Recv_Packet.cpp 96029 2012-08-10 14:01:17Z sma $
+// $Id: UIPMC_Transport_Recv_Packet.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/PortableGroup/UIPMC_Transport_Recv_Packet.h"
 #include "orbsvcs/PortableGroup/UIPMC_Mcast_Transport.h"
 
@@ -59,7 +60,7 @@ namespace TAO_PG
     this->data_length_ += len;
 
     if (TAO_debug_level >= 10)
-      ACE_DEBUG ((LM_DEBUG,
+      ORBSVCS_DEBUG ((LM_DEBUG,
                   ACE_TEXT ("TAO (%P|%t) - TAO_PG::UIPMC_Recv_Packet::")
                   ACE_TEXT ("add_fragment, adding fragment %d with %d out ")
                   ACE_TEXT ("of %d bytes\n"),

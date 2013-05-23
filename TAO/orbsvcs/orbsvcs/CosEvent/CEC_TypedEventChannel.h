@@ -6,7 +6,7 @@
  *
  *  @author Jon Astle (jon@astle45.fsnet.co.uk)
  *
- *  $Id: CEC_TypedEventChannel.h 81226 2008-04-03 09:43:45Z sma $
+ *  $Id: CEC_TypedEventChannel.h 96944 2013-03-30 09:43:50Z mcorino $
  *
  * A new implementation of the COS Typed Event Channel, based on
  * the untyped version by Carlos O'Ryan (coryan@cs.wustl.edu)
@@ -35,6 +35,7 @@
 
 #include "ace/Hash_Map_Manager.h"
 #include "ace/Null_Mutex.h"
+#include "ace/Truncate.h"
 #include "ace/SString.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -117,7 +118,7 @@ public:
   {
   public:
     u_long operator() (PortableServer::ServantBase* const & ptr) const {
-      return reinterpret_cast<u_long> (ptr);
+      return ACE_Utils::truncate_cast<u_long> ((intptr_t)ptr);
     }
   };
 

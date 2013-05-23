@@ -1,4 +1,4 @@
-// $Id: RTScheduler_Loader.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: RTScheduler_Loader.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/RTScheduling/RTScheduler_Loader.h"
 #include "tao/RTScheduling/RTScheduler_Initializer.h"
@@ -24,7 +24,7 @@ TAO_RTScheduler_Loader::init (int, ACE_TCHAR* [])
   ACE_TRACE ("TAO_RTScheduler_Loader::init");
 
   if (TAO_debug_level > 0)
-    ACE_DEBUG ((LM_DEBUG,
+    TAOLIB_DEBUG ((LM_DEBUG,
                 "In RTScheduler_Loader::init\n"));
 
   // Only allow initialization once.

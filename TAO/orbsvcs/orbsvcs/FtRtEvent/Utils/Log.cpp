@@ -1,4 +1,5 @@
-//$Id: Log.cpp 91738 2010-09-13 14:46:31Z johnnyw $
+//$Id: Log.cpp 97014 2013-04-12 22:47:02Z mitza $
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/FtRtEvent/Utils/Log.h"
 
 #if !defined(__ACE_INLINE__)
@@ -21,7 +22,7 @@ unsigned int Log::log_level_;
       va_start(p, format);
       ACE_TCHAR str[1024];
       ACE_OS::vsprintf(str, format, p);
-      ACE_DEBUG((LM_DEBUG, str));
+      ORBSVCS_DEBUG((LM_DEBUG, str));
       va_end(p);
     }
   }

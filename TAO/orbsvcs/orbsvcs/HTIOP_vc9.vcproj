@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib ACE_HTBPd.lib TAOd.lib TAO_AnyTypeCoded.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib ACE_HTBPd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_HTIOPd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -156,7 +156,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib ACE_HTBP.lib TAO.lib TAO_AnyTypeCode.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib ACE_HTBP.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_HTIOP.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -242,7 +242,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib ACE_HTBPd.lib TAOd.lib TAO_AnyTypeCoded.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib ACE_HTBPd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_HTIOPd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -323,7 +323,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib ACE_HTBP.lib TAO.lib TAO_AnyTypeCode.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib ACE_HTBP.lib TAO.lib TAO_AnyTypeCode.lib TAO_PortableServer.lib TAO_Svc_Utils.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\TAO_HTIOP.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

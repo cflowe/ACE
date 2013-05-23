@@ -1,5 +1,6 @@
-// $Id: Locator_Loader.cpp 77020 2007-02-12 13:56:49Z johnnyw $
+// $Id: Locator_Loader.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "Locator_Loader.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Task.h"
@@ -85,7 +86,7 @@ ImR_Locator_Loader::run(void)
     }
   catch (...)
     {
-      ACE_ERROR((LM_ERROR, "Exception in ImR_Locator_ORB_Runner ()\n"));
+      ORBSVCS_ERROR((LM_ERROR, "Exception in ImR_Locator_ORB_Runner ()\n"));
       return -1;
     }
 }

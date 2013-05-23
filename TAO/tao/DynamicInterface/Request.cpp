@@ -1,4 +1,4 @@
-// $Id: Request.cpp 91741 2010-09-13 18:13:11Z johnnyw $
+// $Id: Request.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/DynamicInterface/Request.h"
 #include "tao/DynamicInterface/DII_Invocation_Adapter.h"
@@ -370,7 +370,7 @@ CORBA::Request::handle_response (TAO_InputCDR &incoming,
     case GIOP::LOCATION_FORWARD_PERM:
     default:
       // @@ (JP) Don't know what to do about any of these yet.
-      ACE_ERROR ((LM_ERROR,
+      TAOLIB_ERROR ((LM_ERROR,
                   ACE_TEXT ("(%P|%t) unhandled reply status\n")));
   }
 }

@@ -1,7 +1,7 @@
 // -*- MPC -*-
-// $Id: ftclientorb.mpb 96870 2013-02-28 17:45:40Z stanleyk $
+// $Id: ftclientorb.mpb 97019 2013-04-15 14:27:23Z mitza $
 
-project : ftorbutils, pi, interceptors, threads {
+project : ftorbutils, pi, interceptors, threads, svc_utils {
   avoids    += ace_for_tao      // Requires ace/UUID
   after     += FT_ClientORB
   libs      += TAO_FT_ClientORB

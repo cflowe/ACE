@@ -641,6 +641,9 @@
 				RelativePath="Lock.cpp">
 			</File>
 			<File
+				RelativePath="Log_Category.cpp">
+			</File>
+			<File
 				RelativePath="Log_Msg.cpp">
 			</File>
 			<File
@@ -1632,6 +1635,9 @@
 				RelativePath="config-win32-mingw.h">
 			</File>
 			<File
+				RelativePath="config-win32-mingw64.h">
+			</File>
+			<File
 				RelativePath="config-win32-msvc-10.h">
 			</File>
 			<File
@@ -1927,6 +1933,9 @@
 			</File>
 			<File
 				RelativePath="LOCK_SOCK_Acceptor.h">
+			</File>
+			<File
+				RelativePath="Log_Category.h">
 			</File>
 			<File
 				RelativePath="Log_Msg.h">
@@ -3999,6 +4008,9 @@
 			</File>
 			<File
 				RelativePath="Lock_Adapter_T.inl">
+			</File>
+			<File
+				RelativePath="Log_Category.inl">
 			</File>
 			<File
 				RelativePath="Log_Msg.inl">

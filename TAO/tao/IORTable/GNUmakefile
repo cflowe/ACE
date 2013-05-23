@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/tmp/stage-1107/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 12 -recurse -hierarchy -relative ACE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers -relative TAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/tmp/stage-1107/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 14 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,13 +20,19 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: IORTable_Core_Idl IORTable
+all: Async_IORTable_Core_Idl IORTable_Core_Idl IORTable Async_IORTable
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Async_IORTable_Core_Idl $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.IORTable_Core_Idl $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.IORTable $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Async_IORTable $(@)
+
+.PHONY: Async_IORTable_Core_Idl
+Async_IORTable_Core_Idl:
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Async_IORTable_Core_Idl all
 
 .PHONY: IORTable_Core_Idl
 IORTable_Core_Idl:
@@ -36,6 +42,12 @@ IORTable_Core_Idl:
 IORTable: IORTable_Core_Idl
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.IORTable all
 
+.PHONY: Async_IORTable
+Async_IORTable: Async_IORTable_Core_Idl IORTable
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Async_IORTable all
+
 project_name_list:
+	@echo Async_IORTable
+	@echo Async_IORTable_Core_Idl
 	@echo IORTable
 	@echo IORTable_Core_Idl

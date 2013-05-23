@@ -1,4 +1,4 @@
-// $Id: FTRTEC_Gateway_Service.cpp 91675 2010-09-08 19:09:19Z johnnyw $
+// $Id: FTRTEC_Gateway_Service.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #include "ace/Get_Opt.h"
 #include "ace/SString.h"
@@ -55,11 +55,11 @@ int parse_args (int argc, ACE_TCHAR *argv[])
         name);
 
       if (CORBA::is_nil(ftec.in()))
-        ACE_ERROR_RETURN((LM_ERROR, "Cannot Find FT_EventService\n"), -1);
+        ORBSVCS_ERROR_RETURN((LM_ERROR, "Cannot Find FT_EventService\n"), -1);
     }
   }
   catch (const CORBA::Exception&){
-    ACE_ERROR_RETURN((LM_ERROR, "Cannot Find FT_EventService\n"), -1);
+    ORBSVCS_ERROR_RETURN((LM_ERROR, "Cannot Find FT_EventService\n"), -1);
   }
   return 0;
 }
@@ -95,7 +95,7 @@ int ACE_TMAIN (int argc, ACE_TCHAR *argv[])
       FILE *output_file=
         ACE_OS::fopen (ior_file_name.c_str(), "w");
       if (output_file == 0)
-        ACE_ERROR_RETURN ((LM_ERROR,
+        ORBSVCS_ERROR_RETURN ((LM_ERROR,
         "Cannot open output file for writing IOR: %s",
         ior_file_name.c_str()),
         1);

@@ -4,7 +4,7 @@
 /**
  *  @file   AMH_Response_Handler.h
  *
- *  $Id: AMH_Response_Handler.h 96195 2012-10-15 13:27:06Z johnnyw $
+ *  $Id: AMH_Response_Handler.h 96986 2013-04-11 16:39:42Z mesnier_p $
  *
  *  @author Mayur Deshpande <mayur@ics.uci.edu>
  */
@@ -105,6 +105,7 @@ protected:
   /// Send back a location forward exception to the client.
   void _tao_rh_send_location_forward (CORBA::Object_ptr fwd,
                                       CORBA::Boolean is_perm);
+
 
   /// The outgoing CDR stream
   /**

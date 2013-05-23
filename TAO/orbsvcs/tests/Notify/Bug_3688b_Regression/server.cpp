@@ -1,4 +1,4 @@
-// $Id: server.cpp 96760 2013-02-05 21:11:03Z stanleyk $
+// $Id: server.cpp 96986 2013-04-11 16:39:42Z mesnier_p $
 
 #include "ace/Service_Config.h"
 #include "orbsvcs/Notify_Service/Notify_Service.h"

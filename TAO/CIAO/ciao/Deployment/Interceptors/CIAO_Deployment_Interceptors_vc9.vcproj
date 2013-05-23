@@ -76,7 +76,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IFR_Clientd.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib CCM_stubd.lib CCM_Cookie_Factoryd.lib CCM_ConfigValue_Factoryd.lib CIAO_Base_stubd.lib TAO_CosNamingd.lib CIAO_Loggerd.lib TAO_PortableServerd.lib TAO_Messagingd.lib DAnCE_Loggerd.lib DAnCE_Deployment_stubd.lib DAnCE_ApplicationManager_stubd.lib DAnCE_stubd.lib DAnCE_Deployment_skeld.lib DAnCE_ApplicationManager_skeld.lib DAnCE_skeld.lib DAnCE_Deployment_Schedulerd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IFR_Clientd.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib CCM_stubd.lib CCM_Cookie_Factoryd.lib CCM_ConfigValue_Factoryd.lib CIAO_Base_stubd.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib CIAO_Loggerd.lib TAO_Messagingd.lib DAnCE_Loggerd.lib DAnCE_Deployment_stubd.lib DAnCE_ApplicationManager_stubd.lib DAnCE_stubd.lib DAnCE_Deployment_skeld.lib DAnCE_ApplicationManager_skeld.lib DAnCE_skeld.lib DAnCE_Deployment_Schedulerd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\CIAO_Deployment_Interceptorsd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -156,7 +156,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IFR_Client.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib CCM_stub.lib CCM_Cookie_Factory.lib CCM_ConfigValue_Factory.lib CIAO_Base_stub.lib TAO_CosNaming.lib CIAO_Logger.lib TAO_PortableServer.lib TAO_Messaging.lib DAnCE_Logger.lib DAnCE_Deployment_stub.lib DAnCE_ApplicationManager_stub.lib DAnCE_stub.lib DAnCE_Deployment_skel.lib DAnCE_ApplicationManager_skel.lib DAnCE_skel.lib DAnCE_Deployment_Scheduler.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IFR_Client.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib CCM_stub.lib CCM_Cookie_Factory.lib CCM_ConfigValue_Factory.lib CIAO_Base_stub.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib CIAO_Logger.lib TAO_Messaging.lib DAnCE_Logger.lib DAnCE_Deployment_stub.lib DAnCE_ApplicationManager_stub.lib DAnCE_stub.lib DAnCE_Deployment_skel.lib DAnCE_ApplicationManager_skel.lib DAnCE_skel.lib DAnCE_Deployment_Scheduler.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\CIAO_Deployment_Interceptors.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
@@ -242,7 +242,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IFR_Clientd.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib CCM_stubd.lib CCM_Cookie_Factoryd.lib CCM_ConfigValue_Factoryd.lib CIAO_Base_stubd.lib TAO_CosNamingd.lib CIAO_Loggerd.lib TAO_PortableServerd.lib TAO_Messagingd.lib DAnCE_Loggerd.lib DAnCE_Deployment_stubd.lib DAnCE_ApplicationManager_stubd.lib DAnCE_stubd.lib DAnCE_Deployment_skeld.lib DAnCE_ApplicationManager_skeld.lib DAnCE_skeld.lib DAnCE_Deployment_Schedulerd.lib iphlpapi.lib"
+				AdditionalDependencies="ACEd.lib TAOd.lib TAO_AnyTypeCoded.lib TAO_IFR_Clientd.lib TAO_Valuetyped.lib TAO_CodecFactoryd.lib TAO_PId.lib CCM_stubd.lib CCM_Cookie_Factoryd.lib CCM_ConfigValue_Factoryd.lib CIAO_Base_stubd.lib TAO_PortableServerd.lib TAO_Svc_Utilsd.lib TAO_CosNamingd.lib CIAO_Loggerd.lib TAO_Messagingd.lib DAnCE_Loggerd.lib DAnCE_Deployment_stubd.lib DAnCE_ApplicationManager_stubd.lib DAnCE_stubd.lib DAnCE_Deployment_skeld.lib DAnCE_ApplicationManager_skeld.lib DAnCE_skeld.lib DAnCE_Deployment_Schedulerd.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\CIAO_Deployment_Interceptorsd.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
@@ -323,7 +323,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/machine:AMD64"
-				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IFR_Client.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib CCM_stub.lib CCM_Cookie_Factory.lib CCM_ConfigValue_Factory.lib CIAO_Base_stub.lib TAO_CosNaming.lib CIAO_Logger.lib TAO_PortableServer.lib TAO_Messaging.lib DAnCE_Logger.lib DAnCE_Deployment_stub.lib DAnCE_ApplicationManager_stub.lib DAnCE_stub.lib DAnCE_Deployment_skel.lib DAnCE_ApplicationManager_skel.lib DAnCE_skel.lib DAnCE_Deployment_Scheduler.lib iphlpapi.lib"
+				AdditionalDependencies="ACE.lib TAO.lib TAO_AnyTypeCode.lib TAO_IFR_Client.lib TAO_Valuetype.lib TAO_CodecFactory.lib TAO_PI.lib CCM_stub.lib CCM_Cookie_Factory.lib CCM_ConfigValue_Factory.lib CIAO_Base_stub.lib TAO_PortableServer.lib TAO_Svc_Utils.lib TAO_CosNaming.lib CIAO_Logger.lib TAO_Messaging.lib DAnCE_Logger.lib DAnCE_Deployment_stub.lib DAnCE_ApplicationManager_stub.lib DAnCE_stub.lib DAnCE_Deployment_skel.lib DAnCE_ApplicationManager_skel.lib DAnCE_skel.lib DAnCE_Deployment_Scheduler.lib iphlpapi.lib"
 				OutputFile="$(OutDir)\CIAO_Deployment_Interceptors.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"

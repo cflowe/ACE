@@ -1,4 +1,4 @@
-// $Id: CSD_TP_Strategy_Factory.cpp 96777 2013-02-07 17:01:57Z labancap $
+// $Id: CSD_TP_Strategy_Factory.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/CSD_ThreadPool/CSD_TP_Strategy_Factory.h"
 #include "tao/CSD_ThreadPool/CSD_TP_Strategy.h"
@@ -48,7 +48,7 @@ TAO::CSD::TP_Strategy_Factory::init (int argc,
     {
       if (TAO_debug_level > 0)
         {
-          ACE_DEBUG((LM_DEBUG,
+          TAOLIB_DEBUG((LM_DEBUG,
                      ACE_TEXT ("TAO (%P|%t) - TP_Strategy_Factory - ")
                      ACE_TEXT ("cannot initialize strategy repo\n")));
         }
@@ -111,7 +111,7 @@ TAO::CSD::TP_Strategy_Factory::init (int argc,
         {
           if (TAO_debug_level > 0)
             {
-              ACE_ERROR ((LM_ERROR,
+              TAOLIB_ERROR ((LM_ERROR,
                           ACE_TEXT("CSD_ORB_Loader: Unknown option ")
                           ACE_TEXT("<%s>.\n"),
                           argv[curarg]));

@@ -455,6 +455,8 @@
     </ClCompile>
     <ClCompile Include="Lock.cpp">
     </ClCompile>
+    <ClCompile Include="Log_Category.cpp">
+    </ClCompile>
     <ClCompile Include="Log_Msg.cpp">
     </ClCompile>
     <ClCompile Include="Log_Msg_Backend.cpp">
@@ -1553,6 +1555,7 @@
     <ClInclude Include="config-win32-dmc.h" />
     <ClInclude Include="config-win32-interix.h" />
     <ClInclude Include="config-win32-mingw.h" />
+    <ClInclude Include="config-win32-mingw64.h" />
     <ClInclude Include="config-win32-msvc-10.h" />
     <ClInclude Include="config-win32-msvc-7.h" />
     <ClInclude Include="config-win32-msvc-8.h" />
@@ -1652,6 +1655,7 @@
     <ClInclude Include="Lock.h" />
     <ClInclude Include="Lock_Adapter_T.h" />
     <ClInclude Include="LOCK_SOCK_Acceptor.h" />
+    <ClInclude Include="Log_Category.h" />
     <ClInclude Include="Log_Msg.h" />
     <ClInclude Include="Log_Msg_Backend.h" />
     <ClInclude Include="Log_Msg_Callback.h" />
@@ -2302,6 +2306,7 @@
     <None Include="Local_Tokens.inl" />
     <None Include="Lock.inl" />
     <None Include="Lock_Adapter_T.inl" />
+    <None Include="Log_Category.inl" />
     <None Include="Log_Msg.inl" />
     <None Include="Log_Record.inl" />
     <None Include="LSOCK.inl" />

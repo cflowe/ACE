@@ -1,4 +1,4 @@
-// $Id: MessengerServer.cpp 96258 2012-11-12 15:36:58Z harrisb $
+// $Id: MessengerServer.cpp 97071 2013-04-23 16:14:17Z mesnier_p $
 
 // MessengerServer.cpp
 // This version uses the Implementation Repository.
@@ -8,6 +8,7 @@
 
 #include "tao/IORTable/IORTable.h"
 #include "tao/PortableServer/Root_POA.h"
+#include "tao/ImR_Client/ImR_Client.h"
 
 #include <iostream>
 

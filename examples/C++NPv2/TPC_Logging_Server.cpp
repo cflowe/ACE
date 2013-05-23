@@ -1,5 +1,5 @@
 /*
-** $Id: TPC_Logging_Server.cpp 80826 2008-03-04 14:51:23Z wotte $
+** $Id: TPC_Logging_Server.cpp 97075 2013-04-24 15:01:48Z schmidt $
 **
 ** This is the Thread-per-connection logging server example from Chapter 7.
 **
@@ -97,7 +97,6 @@ int TPC_Logging_Acceptor::accept_svc_handler
       || SSL_shutdown (ssl_) == -1) return -1;
   return 0;
 }
-
 
 typedef Reactor_Logging_Server_Adapter<TPC_Logging_Acceptor>
         TPC_Logging_Server;

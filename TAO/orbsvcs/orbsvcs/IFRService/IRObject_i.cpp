@@ -1,5 +1,7 @@
-// $Id: IRObject_i.cpp 91682 2010-09-09 07:20:23Z johnnyw $
+// $Id: IRObject_i.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/IFRService/IRObject_i.h"
 #include "orbsvcs/IFRService/Repository_i.h"
 #include "orbsvcs/IFRService/IDLType_i.h"
@@ -47,7 +49,7 @@ TAO_IRObject_i::update_key (void)
                                                   object_id);
   if (status != 0)
     {
-      ACE_DEBUG ((LM_DEBUG,
+      ORBSVCS_DEBUG ((LM_DEBUG,
                   "update_key - parse_ir_object_key failed\n"));
       return;
     }

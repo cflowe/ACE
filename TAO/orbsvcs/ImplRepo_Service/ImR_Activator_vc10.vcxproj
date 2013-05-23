@@ -121,7 +121,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;ACEXMLd.lib;ACEXML_Parserd.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_IORManipd.lib;TAO_ImR_Clientd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_ImR_Locator_IDLd.lib;TAO_ImR_Activator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;ACEXMLd.lib;ACEXML_Parserd.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_Svc_Utilsd.lib;TAO_Async_ImR_Client_IDLd.lib;TAO_ImR_Locator_IDLd.lib;TAO_ImR_Activator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Activatord.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\lib\TAO_ImR_Activatord.lib</ImportLibrary>
@@ -159,7 +159,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;ACEXML.lib;ACEXML_Parser.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_IORManip.lib;TAO_ImR_Client.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_ImR_Locator_IDL.lib;TAO_ImR_Activator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;ACEXML.lib;ACEXML_Parser.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_Svc_Utils.lib;TAO_Async_ImR_Client_IDL.lib;TAO_ImR_Locator_IDL.lib;TAO_ImR_Activator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Activator.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
@@ -199,7 +199,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;ACEXMLd.lib;ACEXML_Parserd.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_IORManipd.lib;TAO_ImR_Clientd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_ImR_Locator_IDLd.lib;TAO_ImR_Activator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACEd.lib;TAOd.lib;TAO_AnyTypeCoded.lib;ACEXMLd.lib;ACEXML_Parserd.lib;TAO_Valuetyped.lib;TAO_PortableServerd.lib;TAO_CodecFactoryd.lib;TAO_PId.lib;TAO_Messagingd.lib;TAO_Svc_Utilsd.lib;TAO_Async_ImR_Client_IDLd.lib;TAO_ImR_Locator_IDLd.lib;TAO_ImR_Activator_IDLd.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Activatord.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\..\..\lib\TAO_ImR_Activatord.lib</ImportLibrary>
@@ -244,7 +244,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;ACEXML.lib;ACEXML_Parser.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_IORManip.lib;TAO_ImR_Client.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_ImR_Locator_IDL.lib;TAO_ImR_Activator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ACE.lib;TAO.lib;TAO_AnyTypeCode.lib;ACEXML.lib;ACEXML_Parser.lib;TAO_Valuetype.lib;TAO_PortableServer.lib;TAO_CodecFactory.lib;TAO_PI.lib;TAO_Messaging.lib;TAO_Svc_Utils.lib;TAO_Async_ImR_Client_IDL.lib;TAO_ImR_Locator_IDL.lib;TAO_ImR_Activator_IDL.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TAO_ImR_Activator.dll</OutputFile>
       <AdditionalLibraryDirectories>.;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>

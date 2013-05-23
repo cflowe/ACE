@@ -1,5 +1,7 @@
-// $Id: MonitorSupplierAdmin.cpp 82195 2008-06-26 13:15:30Z parsons $
+// $Id: MonitorSupplierAdmin.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/MonitorControlExt/MonitorSupplierAdmin.h"
 #include "orbsvcs/Notify/MonitorControlExt/MonitorEventChannel.h"
 #include "orbsvcs/Notify/MonitorControl/Control_Registry.h"
@@ -74,7 +76,7 @@ TAO_MonitorSupplierAdmin::register_stats_controls (
   if (!cinstance->add (control))
     {
       delete control;
-      ACE_ERROR ((LM_ERROR, "Unable to add control: %s\n",
+      ORBSVCS_ERROR ((LM_ERROR, "Unable to add control: %s\n",
                   this->control_name_.c_str ()));
     }
 }

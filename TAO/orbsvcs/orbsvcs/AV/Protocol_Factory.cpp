@@ -1,6 +1,8 @@
-// $Id: Protocol_Factory.cpp 82940 2008-10-06 18:20:19Z johnnyw $
+// $Id: Protocol_Factory.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/AV/Protocol_Factory.h"
 #include "tao/debug.h"
 #include "ace/Dynamic_Service.h"
@@ -125,7 +127,7 @@ TAO_AV_Protocol_Object::handle_control_input (ACE_Message_Block *,
                                               const ACE_Addr &)
 {
   if (TAO_debug_level > 0)
-    ACE_DEBUG ((LM_DEBUG,"TAO_AV_Protocol_Object::handle_control_input\n"));
+    ORBSVCS_DEBUG ((LM_DEBUG,"TAO_AV_Protocol_Object::handle_control_input\n"));
   return 0;
 }
 

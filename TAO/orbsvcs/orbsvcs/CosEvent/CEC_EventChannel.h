@@ -4,7 +4,7 @@
 /**
  *  @file   CEC_EventChannel.h
  *
- *  $Id: CEC_EventChannel.h 77001 2007-02-12 07:54:49Z johnnyw $
+ *  $Id: CEC_EventChannel.h 96944 2013-03-30 09:43:50Z mcorino $
  *
  *  @author Carlos O'Ryan (coryan@cs.wustl.edu)
  *
@@ -32,6 +32,7 @@
 #include "orbsvcs/CosEvent/CEC_Defaults.h"
 #include "orbsvcs/CosEvent/event_serv_export.h"
 #include "ace/Hash_Map_Manager.h"
+#include "ace/Truncate.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -108,7 +109,7 @@ public:
   {
   public:
     u_long operator() (PortableServer::ServantBase* const & ptr) const {
-      return reinterpret_cast<u_long> (ptr);
+      return ACE_Utils::truncate_cast<u_long> ((intptr_t)ptr);
     }
   };
 

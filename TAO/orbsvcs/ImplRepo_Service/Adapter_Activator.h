@@ -3,7 +3,7 @@
 /**
  *  @file   Adapter_Activator.h
  *
- *  $Id: Adapter_Activator.h 77020 2007-02-12 13:56:49Z johnnyw $
+ *  $Id: Adapter_Activator.h 97000 2013-04-12 17:29:18Z mesnier_p $
  *
  *  @brief  This class implements ImR's Adapter Activator.
  *
@@ -16,7 +16,6 @@
 
 #include "tao/PortableServer/PortableServer.h"
 #include "tao/PortableServer/AdapterActivatorC.h"
-#include "tao/PortableServer/ServantLocatorC.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
@@ -24,16 +23,19 @@
 
 #include "tao/LocalObject.h"
 
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+class TAO_ServantBase;
+TAO_END_VERSIONED_NAMESPACE_DECL
 
 /**
  * @class ImR_Adapter_Activator
  *
  * @brief Implementation Repository Adapter Activator
  *
- * Part of the ServantLocator/AdapterActivator combination that is used to
+ * Part of the DefaultServant/AdapterActivator combination that is used to
  * receive forwardable requests from clients.  The Adapter Activator creates
  * the POA structure that the request expects.  For each POA created, the
- * same ServantLocator will be registered in each one.
+ * same DefaultServant will be registered in each one.
  */
 class ImR_Adapter
   : public PortableServer::AdapterActivator,
@@ -48,10 +50,10 @@ public:
     const char *name
   );
 
-  void init(PortableServer::ServantLocator_ptr servant);
+  void init(TAO_ServantBase * servant);
 private:
-  /// The ServantLocator registered in each new POA.
-  PortableServer::ServantLocator_ptr servant_locator_;
+  /// the default servant used.
+  TAO_ServantBase *default_servant_;
 };
 
 #endif /* IMR_ADAPTER_ACTIVATOR_H */

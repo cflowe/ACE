@@ -1,5 +1,7 @@
-// $Id: MC_Notify_Service.cpp 87253 2009-10-28 23:29:32Z dai_y $
+// $Id: MC_Notify_Service.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/MonitorControlExt/MC_Notify_Service.h"
 
 #include "tao/debug.h"
@@ -38,7 +40,7 @@ TAO_MC_Notify_Service::init_i (CORBA::ORB_ptr orb)
   if (monitor == 0)
     {
       if (TAO_debug_level > 0)
-        ACE_DEBUG ((LM_DEBUG, "%s must be loaded via "
+        ORBSVCS_DEBUG ((LM_DEBUG, "%s must be loaded via "
                               "the Service Configurator\n",
                               TAO_NOTIFY_MONITOR_CONTROL_MANAGER));
     }
@@ -60,7 +62,7 @@ TAO_MC_Notify_Service::init_i2 (CORBA::ORB_ptr orb,
   if (monitor == 0)
     {
       if (TAO_debug_level > 0)
-        ACE_DEBUG ((LM_DEBUG, "%s must be loaded via "
+        ORBSVCS_DEBUG ((LM_DEBUG, "%s must be loaded via "
                               "the Service Configurator\n",
                               TAO_NOTIFY_MONITOR_CONTROL_MANAGER));
     }

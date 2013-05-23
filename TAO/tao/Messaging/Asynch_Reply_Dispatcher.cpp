@@ -1,4 +1,4 @@
-// $Id: Asynch_Reply_Dispatcher.cpp 96885 2013-03-06 09:22:01Z sma $
+// $Id: Asynch_Reply_Dispatcher.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/Messaging/Asynch_Reply_Dispatcher.h"
 #include "tao/Pluggable_Messaging_Utils.h"
@@ -66,7 +66,7 @@ TAO_Asynch_Reply_Dispatcher::dispatch_reply (TAO_Pluggable_Reply_Params &params)
     {
       if (TAO_debug_level > 2)
         {
-          ACE_ERROR ((
+          TAOLIB_ERROR ((
             LM_ERROR,
             ACE_TEXT ("TAO_Messaging (%P|%t) - Asynch_Reply_Dispatcher::dispatch_reply ")
             ACE_TEXT ("clone_from failed\n")));
@@ -95,7 +95,7 @@ TAO_Asynch_Reply_Dispatcher::dispatch_reply (TAO_Pluggable_Reply_Params &params)
 
       if (TAO_debug_level >= 4)
         {
-          ACE_DEBUG ((LM_DEBUG,
+          TAOLIB_DEBUG ((LM_DEBUG,
                       ACE_TEXT ("TAO_Messaging (%P|%t) - Asynch_Reply_Dispatcher")
                       ACE_TEXT ("::dispatch_reply status = %d\n"),
                                 this->reply_status_));

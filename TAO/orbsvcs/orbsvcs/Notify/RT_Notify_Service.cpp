@@ -1,5 +1,7 @@
-// $Id: RT_Notify_Service.cpp 91524 2010-08-27 14:33:58Z johnnyw $
+// $Id: RT_Notify_Service.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/RT_Notify_Service.h"
 #include "ace/Dynamic_Service.h"
 #include "orbsvcs/Notify/Properties.h"
@@ -20,7 +22,7 @@ TAO_RT_Notify_Service::~TAO_RT_Notify_Service ()
 void
 TAO_RT_Notify_Service::init_service (CORBA::ORB_ptr orb)
 {
-  ACE_DEBUG ((LM_DEBUG, "Loading the Real-Time Notification Service...\n"));
+  ORBSVCS_DEBUG ((LM_DEBUG, "Loading the Real-Time Notification Service...\n"));
 
   this->init_i (orb);
 }

@@ -1,5 +1,6 @@
-// $Id: EC_Priority_Scheduling.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: EC_Priority_Scheduling.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Event/EC_Priority_Scheduling.h"
 #include "orbsvcs/Event/EC_QOS_Info.h"
 #include "orbsvcs/Event/EC_ProxyConsumer.h"
@@ -23,7 +24,7 @@ TAO_EC_Priority_Scheduling::add_proxy_supplier_dependencies (
       TAO_EC_ProxyPushSupplier *supplier,
       TAO_EC_ProxyPushConsumer *consumer)
 {
-  ACE_DEBUG ((LM_DEBUG, "add_proxy_supplier_dependencies - %x %x\n",
+  ORBSVCS_DEBUG ((LM_DEBUG, "add_proxy_supplier_dependencies - %x %x\n",
               supplier, consumer));
   const RtecEventChannelAdmin::SupplierQOS& qos =
     consumer->publications ();

@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: Svc_Utils.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+// $Id: Svc_Utils.mpc 97014 2013-04-12 22:47:02Z mitza $
 
 project(Svc_Utils) : orbsvcslib, orbsvcs_output, install, portableserver, tao_versioning_idl_defaults {
   sharedname   = TAO_Svc_Utils
@@ -20,6 +20,7 @@ project(Svc_Utils) : orbsvcslib, orbsvcs_output, install, portableserver, tao_ve
     Time_Utilities.cpp
     IOR_Multicast.cpp
     Daemon_Utilities.cpp
+    Log_Macros.cpp
   }
 
   Header_Files {

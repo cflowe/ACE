@@ -1,5 +1,6 @@
-// $Id: Delivery_Request.cpp 79230 2007-08-06 18:18:07Z elliott_c $
+// $Id: Delivery_Request.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/Notify/Delivery_Request.h"
 
 #if ! defined (__ACE_INLINE__)
@@ -30,14 +31,14 @@ Delivery_Request::Delivery_Request (const Routing_Slip_Ptr & routing_slip, size_
   , request_id_ (request_id)
   , delivery_type_ (0)
 {
-  if (DEBUG_LEVEL > 8) ACE_DEBUG ((LM_DEBUG,
+  if (DEBUG_LEVEL > 8) ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("(%P|%t) Delivery_Request:: constructor\n")
       ));
 }
 
 Delivery_Request::~Delivery_Request ()
 {
-  if (DEBUG_LEVEL > 8) ACE_DEBUG ((LM_DEBUG,
+  if (DEBUG_LEVEL > 8) ORBSVCS_DEBUG ((LM_DEBUG,
       ACE_TEXT ("(%P|%t) Delivery_Request:: destructor\n")
       ));
 }

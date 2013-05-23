@@ -1,8 +1,9 @@
-//$Id: Flows_T.cpp 81499 2008-04-28 17:58:17Z johnnyw $
+//$Id: Flows_T.cpp 97014 2013-04-12 22:47:02Z mitza $
 
 #ifndef TAO_AV_FLOWS_T_CPP
 #define TAO_AV_FLOWS_T_CPP
 
+#include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/AV/Flows_T.h"
 #include "tao/debug.h"
 
@@ -199,7 +200,7 @@ TAO_FDev<T_Producer, T_Consumer>::destroy (AVStreams::FlowEndPoint_ptr /* the_ep
     }
   int result = TAO_AV_Core::deactivate_servant (this);
   if (result < 0)
-    if (TAO_debug_level > 0) ACE_DEBUG ((LM_DEBUG,"TAO_StreamEndPoint::destroy failed\n"));
+    if (TAO_debug_level > 0) ORBSVCS_DEBUG ((LM_DEBUG,"TAO_StreamEndPoint::destroy failed\n"));
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL

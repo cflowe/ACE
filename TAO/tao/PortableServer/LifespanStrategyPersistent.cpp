@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LifespanStrategyPersistent.cpp 96760 2013-02-05 21:11:03Z stanleyk $
+// $Id: LifespanStrategyPersistent.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/LifespanStrategyPersistent.h"
 #include "tao/PortableServer/Root_POA.h"
@@ -97,7 +97,7 @@ namespace TAO
               // When we don't have a ImR_Client adapter, but the user
               // has specified that the ImR has to be used we have an
               // error situation which has to be reported.
-              ACE_ERROR ((LM_ERROR,
+              TAOLIB_ERROR ((LM_ERROR,
                           ACE_TEXT ("(%P|%t) ERROR: No ImR_Client library ")
                           ACE_TEXT ("available but use IMR has been specified.\n")));
 

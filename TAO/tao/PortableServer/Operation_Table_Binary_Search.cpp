@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Operation_Table_Binary_Search.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: Operation_Table_Binary_Search.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/PortableServer/Operation_Table_Binary_Search.h"
 #include "tao/Timeprobe.h"
@@ -42,7 +42,7 @@ TAO_Binary_Search_OpTable::find (const char *opname,
   TAO_operation_db_entry const * const entry = lookup (opname);
 
   if (entry == 0)
-    ACE_ERROR_RETURN ((LM_ERROR,
+    TAOLIB_ERROR_RETURN ((LM_ERROR,
                        ACE_TEXT ("TAO_Binary_Search_Table:find failed\n")),
                       -1);
   // Valid entry. Figure out the skel_ptr.
@@ -62,7 +62,7 @@ TAO_Binary_Search_OpTable::find (const char *opname,
   TAO_operation_db_entry const * const entry = lookup (opname);
 
   if (entry == 0)
-    ACE_ERROR_RETURN ((LM_ERROR,
+    TAOLIB_ERROR_RETURN ((LM_ERROR,
                        ACE_TEXT ("TAO_Binary_Search_Table:find failed\n")),
                       -1);
 

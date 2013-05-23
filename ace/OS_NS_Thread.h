@@ -4,7 +4,7 @@
 /**
  *  @file   OS_NS_Thread.h
  *
- *  $Id: OS_NS_Thread.h 96255 2012-11-12 10:47:27Z johnnyw $
+ *  $Id: OS_NS_Thread.h 97095 2013-05-07 15:12:26Z schmidt $
  *
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  *  @author Jesper S. M|ller<stophph@diku.dk>
@@ -1719,6 +1719,11 @@ namespace ACE_OS {
 
   ACE_NAMESPACE_INLINE_FUNCTION
   const char* thr_name (void);
+
+  // Stores a string version of the current thread id into buffer and
+  // returns the size of this thread id in bytes.
+  ACE_NAMESPACE_INLINE_FUNCTION
+  ssize_t thr_id (char buffer[], size_t buffer_length);
 
   /// State is THR_CANCEL_ENABLE or THR_CANCEL_DISABLE
   ACE_NAMESPACE_INLINE_FUNCTION

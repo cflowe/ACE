@@ -212,11 +212,11 @@ endif
 endif
 
 #BEGIN MPC-Generated Install Info
-#idl_files:
-#Container_Base.idl
-#
 #build_files:
 #Containers.mpc
+#
+#idl_files:
+#Container_Base.idl
 #
 
 #END MPC-Generated Install Info

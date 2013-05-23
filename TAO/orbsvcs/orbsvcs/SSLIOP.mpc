@@ -1,8 +1,8 @@
 // -*- MPC -*-
 //
-// $Id: SSLIOP.mpc 90825 2010-06-24 09:06:01Z johnnyw $
+// $Id: SSLIOP.mpc 97018 2013-04-15 14:13:37Z mitza $
 
-project(SSLIOP) : orbsvcslib, orbsvcs_output, install, security, ssl, pi_server, interceptors, tao_versioning_idl_defaults, ssliop_params_dup {
+project(SSLIOP) : orbsvcslib, orbsvcs_output, install, security, ssl, pi_server, interceptors, tao_versioning_idl_defaults, ssliop_params_dup, svc_utils {
   sharedname   = TAO_SSLIOP
   idlflags    += -Wb,export_macro=TAO_SSLIOP_Export -Wb,export_include=orbsvcs/SSLIOP/SSLIOP_Export.h -SS
   dynamicflags += TAO_SSLIOP_BUILD_DLL

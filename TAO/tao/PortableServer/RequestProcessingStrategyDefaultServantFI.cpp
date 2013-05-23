@@ -1,4 +1,4 @@
-// $Id: RequestProcessingStrategyDefaultServantFI.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: RequestProcessingStrategyDefaultServantFI.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/orbconf.h"
 
@@ -32,7 +32,7 @@ namespace TAO
         }
         default :
         {
-          ACE_ERROR ((LM_ERROR, "Incorrect type in RequestProcessingStrategyDefaultServantFactoryImpl"));
+          TAOLIB_ERROR ((LM_ERROR, "Incorrect type in RequestProcessingStrategyDefaultServantFactoryImpl"));
           break;
         }
       }

@@ -3,7 +3,7 @@
 /**
  *  @file    Simple_util.h
  *
- *  $Id: Simple_util.h 95323 2011-12-14 12:37:01Z msmit $
+ *  $Id: Simple_util.h 96986 2013-04-11 16:39:42Z mesnier_p $
  *
  *  The classe define the templates for the client and server.
  *

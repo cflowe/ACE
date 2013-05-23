@@ -1,5 +1,6 @@
-// $Id: Shared_Backing_Store.cpp 96896 2013-03-08 20:29:07Z stanleyk $
+// $Id: Shared_Backing_Store.cpp 97014 2013-04-12 22:47:02Z mitza $
 
+#include "orbsvcs/Log_Macros.h"
 #include "Shared_Backing_Store.h"
 #include "Server_Info.h"
 #include "Activator_Info.h"
@@ -124,7 +125,7 @@ namespace {
 
       if (file_lock_.get () == 0)
         {
-          ACE_ERROR ((LM_ERROR,
+          ORBSVCS_ERROR ((LM_ERROR,
                       ACE_TEXT("(%P|%t) ERROR: attempting to lock ")
                       ACE_TEXT ("an uninitialized Lockable_File.")));
           this->locked_ = false;
@@ -199,17 +200,17 @@ namespace {
       }
     catch (const CORBA::COMM_FAILURE&)
       {
-        ACE_DEBUG ((LM_DEBUG,
+        ORBSVCS_DEBUG ((LM_DEBUG,
                     ACE_TEXT("(%P|%t) Replicated ImR: COMM_FAILURE Exception\n")));
       }
     catch (const CORBA::TRANSIENT&)
       {
-        ACE_DEBUG ((LM_DEBUG,
+        ORBSVCS_DEBUG ((LM_DEBUG,
                     ACE_TEXT("(%P|%t) Replicated ImR: TRANSIENT Exception\n")));
       }
     catch (const CORBA::OBJECT_NOT_EXIST&)
       {
-        ACE_DEBUG ((
+        ORBSVCS_DEBUG ((
                     LM_DEBUG,
                     ACE_TEXT("(%P|%t) Replicated ImR: OBJECT_NOT_EXIST ")
                     ACE_TEXT("Exception, dropping replica\n")));
@@ -319,7 +320,7 @@ namespace {
             entry_repo_type != id.repo_type)
           {
             // if already existed, replace the contents
-            ACE_ERROR((LM_ERROR,
+            ORBSVCS_ERROR((LM_ERROR,
                        ACE_TEXT("(%P|%t) ERROR: replacing %C with existing repo_id=%d ")
                        ACE_TEXT("and imr_type=%d, with repo_id=%d and imr_type=%d\n"),
                        identify_key(key).c_str(), id.repo_id, id.repo_type,
@@ -350,7 +351,7 @@ namespace {
     const int err = unique_ids.find(key, entry);
     if (err != 0)
       {
-        ACE_ERROR((LM_ERROR,
+        ORBSVCS_ERROR((LM_ERROR,
                    ACE_TEXT("(%P|%t) Couldn't find unique repo id for %C\n"),
                    identify_key(key).c_str()));
         return err;
@@ -392,7 +393,7 @@ namespace {
     const size_t size = extra_params.size();
     if ((size != 2) && (debug > 4))
       {
-        ACE_ERROR((
+        ORBSVCS_ERROR((
                    LM_ERROR,
                    ACE_TEXT("(%P|%t) Persisted server id=%C name=%C doesn't have all ")
                    ACE_TEXT("unique id params. (%d of 2)\n"),
@@ -404,7 +405,7 @@ namespace {
     Options::ImrType repo_type = this_repo_type;
     for (unsigned int i = 0; i < size; ++i)
       {
-        ACE_DEBUG((LM_INFO,
+        ORBSVCS_DEBUG((LM_INFO,
                    ACE_TEXT ("name values %C=%C (%C)\n"),
                    extra_params[i].first.c_str(),
                    extra_params[i].second.c_str(),
@@ -423,7 +424,7 @@ namespace {
         ACE_OS::atoi(extra_params[Shared_Backing_Store::REPO_ID].second.c_str());
     else
       {
-        ACE_ERROR((LM_ERROR,
+        ORBSVCS_ERROR((LM_ERROR,
                    ACE_TEXT("(%P|%t) Persisted %C did not supply a repo_id\n"),
                    identify_key(key).c_str()));
       }
@@ -509,7 +510,7 @@ Shared_Backing_Store::persistent_update(const Server_Info_Ptr& info, bool add)
   const ACE_TString fname = this->filename_ + entry.int_id_.unique_filename;
   if (this->opts_.debug() > 9)
     {
-      ACE_DEBUG((LM_INFO, ACE_TEXT ("Persisting to %s(%C)\n"),
+      ORBSVCS_DEBUG((LM_INFO, ACE_TEXT ("Persisting to %s(%C)\n"),
         fname.c_str(), info->name.c_str()));
     }
   Lockable_File server_file(fname, O_WRONLY);
@@ -517,7 +518,7 @@ Shared_Backing_Store::persistent_update(const Server_Info_Ptr& info, bool add)
   FILE* fp = server_file.get_file();
   if (fp == 0)
     {
-      ACE_ERROR ((LM_ERROR, ACE_TEXT ("Couldn't write to file %s\n"),
+      ORBSVCS_ERROR ((LM_ERROR, ACE_TEXT ("Couldn't write to file %s\n"),
         fname.c_str()));
       return -1;
     }
@@ -568,7 +569,7 @@ Shared_Backing_Store::persistent_update(const Activator_Info_Ptr& info,
   const ACE_TString fname = this->filename_ + entry.int_id_.unique_filename;
   if (this->opts_.debug() > 9)
     {
-      ACE_DEBUG((LM_INFO, ACE_TEXT ("Persisting to %s(%C)\n"),
+      ORBSVCS_DEBUG((LM_INFO, ACE_TEXT ("Persisting to %s(%C)\n"),
         fname.c_str(), info->name.c_str()));
     }
   Lockable_File activator_file(fname, O_WRONLY);
@@ -576,7 +577,7 @@ Shared_Backing_Store::persistent_update(const Activator_Info_Ptr& info,
   FILE* fp = activator_file.get_file();
   if (fp == 0)
     {
-      ACE_ERROR ((LM_ERROR, ACE_TEXT ("Couldn't write to file %s\n"),
+      ORBSVCS_ERROR ((LM_ERROR, ACE_TEXT ("Couldn't write to file %s\n"),
                   fname.c_str()));
       return -1;
     }
@@ -614,53 +615,93 @@ Shared_Backing_Store::repo_mode() const
 int
 Shared_Backing_Store::connect_replicas (Replica_ptr this_replica)
 {
-  const ACE_TString& replica_ior = replica_ior_filename(true);
+  const ACE_TString& replica_ior_file = replica_ior_filename(true);
   if (this->opts_.debug() > 1)
     {
-      ACE_DEBUG((LM_INFO,
-        ACE_TEXT("Resolving ImR replica %s\n"), replica_ior.c_str()));
+      ORBSVCS_DEBUG((LM_INFO,
+        ACE_TEXT("Resolving ImR replica %s\n"), replica_ior_file.c_str()));
     }
 
-  CORBA::Object_var obj =
-    this->orb_->string_to_object (replica_ior.c_str());
-
-  if (!CORBA::is_nil (obj.in ()))
+  // Determine if the peer has started previously by checking if the
+  // ior file for the replica is there.
+  int peer_started_previously = 0;
+  if (ACE_OS::access (replica_ior_file.c_str (), F_OK) == 0)
     {
-      bool non_exist = true;
-      try
-        {
-          this->peer_replica_ = ImplementationRepository::
-            UpdatePushNotification::_narrow (obj.in());
-          non_exist = (this->peer_replica_->_non_existent() == 1);
-        }
-      catch (const CORBA::Exception& )
-        {
-          // let error be handled below
-        }
+      peer_started_previously = 1;
+    }
+  else
+    this->peer_replica_ =
+      ImplementationRepository::UpdatePushNotification::_nil();
 
-      if (non_exist)
+  if (peer_started_previously)
+    {
+      ACE_TString replica_ior = "file://" + replica_ior_file;
+      CORBA::Object_var obj =
+        this->orb_->string_to_object (replica_ior.c_str());
+
+      if (!CORBA::is_nil (obj.in ()))
         {
-          this->peer_replica_ =
-            ImplementationRepository::UpdatePushNotification::_nil();
+          bool non_exist = true;
+          try
+            {
+              this->peer_replica_ = ImplementationRepository::
+                UpdatePushNotification::_narrow (obj.in());
+              non_exist = (this->peer_replica_->_non_existent() == 1);
+            }
+          catch (const CORBA::Exception& )
+            {
+              // let error be handled below
+            }
+
+          if (non_exist)
+            {
+              this->peer_replica_ =
+                ImplementationRepository::UpdatePushNotification::_nil();
+            }
         }
     }
 
+  // Check if a peer IOR is defined
   if (CORBA::is_nil (this->peer_replica_.in()))
     {
       if (this->imr_type_ == Options::BACKUP_IMR)
-        {
-          ACE_ERROR_RETURN ((LM_ERROR,
-            ACE_TEXT("Error: No primary ImR replica is running <%s>\n"),
-            replica_ior.c_str()), -1);
+        { // We are a backup IMR Locator
+
+          // If the primary has started at some point in the past, but is
+          // not available right now, then we will assume that we are in
+          // a restart situation where the backup is being started while
+          // the primary is still down. This implies that a successful
+          // start of the replication pair has been made in the past and
+          // we can use the combined ior from the previous run.
+          if (peer_started_previously)
+            {
+              // Verify that we recovered the IOR successfully. If we did not
+              // then fail startup of the backup IMR Locator.
+              if (this->recover_ior () == -1)
+                ORBSVCS_ERROR_RETURN ((LM_ERROR,
+                                   ACE_TEXT("Error: Unable to retrieve IOR from combined IOR ")
+                                   ACE_TEXT ("file: %C\n"),
+                                   replica_ior_file.c_str()),
+                                  -1);
+            }
+          else
+            { // There has been a startup error. The backup can only be started
+              // after the primary has been successfully started.
+              ORBSVCS_ERROR_RETURN ((LM_ERROR,
+                               ACE_TEXT("Error: Primary has not been started previously.\n ")
+                               ACE_TEXT ("file: %C\n"),
+                               replica_ior_file.c_str()),
+                              -1);
+            }
         }
 
-      // no connection currently, just wait for backup
+      // For either primary or backup - no connection currently, just wait for peer to start
       return 0;
     }
 
   if (opts_.debug() > 1)
     {
-      ACE_DEBUG((LM_INFO,
+      ORBSVCS_DEBUG((LM_INFO,
         ACE_TEXT("Registering with previously running ImR replica\n")));
     }
 
@@ -672,14 +713,14 @@ Shared_Backing_Store::connect_replicas (Replica_ptr this_replica)
     }
   catch (const ImplementationRepository::InvalidPeer& ip)
     {
-      ACE_ERROR_RETURN ((LM_ERROR,
+      ORBSVCS_ERROR_RETURN ((LM_ERROR,
         ACE_TEXT("Error: obj key <%s> is an invalid ImR replica because %s\n"),
-        replica_ior.c_str(), ip.reason.in()), -1);
+        replica_ior_file.c_str(), ip.reason.in()), -1);
     }
 
   if (opts_.debug() > 9)
     {
-      ACE_DEBUG((LM_INFO,
+      ORBSVCS_DEBUG((LM_INFO,
         ACE_TEXT("Initializing repository with ft ior=<%C> ")
         ACE_TEXT("and replica seq number %d\n"),
         this->imr_ior_.in(), replica_seq_num_));
@@ -719,7 +760,7 @@ Shared_Backing_Store::init_repo(PortableServer::POA_ptr imr_poa)
         {
           if (this->opts_.debug() > 9)
             {
-              ACE_DEBUG((LM_INFO,
+              ORBSVCS_DEBUG((LM_INFO,
                 ACE_TEXT ("Persisted Repository already empty\n")));
             }
         }
@@ -731,7 +772,7 @@ Shared_Backing_Store::init_repo(PortableServer::POA_ptr imr_poa)
             {
               if (this->opts_.debug() > 9)
                 {
-                  ACE_DEBUG((LM_INFO, ACE_TEXT ("Removing %s\n"),
+                  ORBSVCS_DEBUG((LM_INFO, ACE_TEXT ("Removing %s\n"),
                     filenames[i].c_str()));
                 }
               ACE_OS::unlink ( filenames[i].c_str () );
@@ -739,7 +780,7 @@ Shared_Backing_Store::init_repo(PortableServer::POA_ptr imr_poa)
 
           if (this->opts_.debug() > 9)
             {
-              ACE_DEBUG((LM_INFO, ACE_TEXT ("Removing %s\n"),
+              ORBSVCS_DEBUG((LM_INFO, ACE_TEXT ("Removing %s\n"),
                 this->listing_file_.c_str()));
             }
           ACE_OS::unlink ( this->listing_file_.c_str () );
@@ -751,7 +792,7 @@ Shared_Backing_Store::init_repo(PortableServer::POA_ptr imr_poa)
 
   if (this->opts_.debug() > 9)
     {
-      ACE_DEBUG((LM_INFO,
+      ORBSVCS_DEBUG((LM_INFO,
         ACE_TEXT ("ImR Repository initialized\n")));
     }
 
@@ -778,7 +819,7 @@ Shared_Backing_Store::persistent_load (bool only_changes)
   size_t sz = filenames.size ();
   if (this->opts_.debug() > 9)
     {
-      ACE_DEBUG((LM_INFO, ACE_TEXT ("persistent_load %d files\n"), sz));
+      ORBSVCS_DEBUG((LM_INFO, ACE_TEXT ("persistent_load %d files\n"), sz));
     }
   for (CORBA::ULong i = 0; i < sz; ++i)
     {
@@ -832,7 +873,7 @@ Shared_Backing_Store::sync_load ()
   int err = 0;
   if (this->opts_.debug() > 5)
     {
-      ACE_DEBUG((
+      ORBSVCS_DEBUG((
         LM_INFO,
         ACE_TEXT("(%P|%t) sync_load %d, %d\n"),
         this->sync_needed_, this->sync_files_.size()));
@@ -848,7 +889,7 @@ Shared_Backing_Store::sync_load ()
         {
           if (this->opts_.debug() > 6)
             {
-              ACE_DEBUG((LM_INFO,
+              ORBSVCS_DEBUG((LM_INFO,
                          ACE_TEXT("(%P|%t) sync_load %s\n"),
                          fname->c_str()));
             }
@@ -909,7 +950,7 @@ Shared_Backing_Store::persist_listings (Lockable_File& listing_lf)
   FILE* list = listing_lf.get_file(this->listing_file_, O_WRONLY);
   if (list == 0)
     {
-      ACE_ERROR ((LM_ERROR, ACE_TEXT ("Couldn't write to file %s\n"),
+      ORBSVCS_ERROR ((LM_ERROR, ACE_TEXT ("Couldn't write to file %s\n"),
                   this->listing_file_.c_str()));
       return -1;
     }
@@ -922,7 +963,7 @@ Shared_Backing_Store::persist_listings (Lockable_File& listing_lf)
   FILE* baklist = ACE_OS::fopen(bfname.c_str(),ACE_TEXT("w"));
   if (baklist == 0)
     {
-      ACE_ERROR ((LM_ERROR, ACE_TEXT ("Couldn't write to file %s\n"),
+      ORBSVCS_ERROR ((LM_ERROR, ACE_TEXT ("Couldn't write to file %s\n"),
                   bfname.c_str()));
       return -1;
     }
@@ -951,7 +992,7 @@ Shared_Backing_Store::report_ior(PortableServer::POA_ptr imr_poa)
   FILE* fp = ACE_OS::fopen (replica_filename.c_str (), "w");
   if (fp == 0)
     {
-      ACE_ERROR_RETURN ((LM_ERROR,
+      ORBSVCS_ERROR_RETURN ((LM_ERROR,
         ACE_TEXT("ImR: Could not open file: %s\n"),
         replica_filename.c_str ()), -1);
     }
@@ -1074,7 +1115,7 @@ Shared_Backing_Store::notify_updated_server(
 {
   if (this->opts_.debug() > 5)
     {
-      ACE_DEBUG((
+      ORBSVCS_DEBUG((
         LM_INFO,
         ACE_TEXT("(%P|%t) notify_updated_server=%C\n"),
         server.name.in()));
@@ -1113,7 +1154,7 @@ Shared_Backing_Store::notify_updated_activator(
 {
   if (this->opts_.debug() > 5)
     {
-      ACE_DEBUG((
+      ORBSVCS_DEBUG((
         LM_INFO,
         ACE_TEXT("(%P|%t) notify_updated_activator=%C\n"),
         activator.name.in()));
@@ -1159,7 +1200,7 @@ Shared_Backing_Store::register_replica(
   seq_num = this->seq_num_;
   if (this->imr_type_ == Options::STANDALONE_IMR)
     {
-      ACE_ERROR((LM_ERROR,
+      ORBSVCS_ERROR((LM_ERROR,
         ACE_TEXT("Error: Non-replicated ImR receiving replica ")
         ACE_TEXT("registration <%s>\n"),
         ft_imr_ior));
@@ -1177,7 +1218,7 @@ Shared_Backing_Store::register_replica(
     {
       if (this->opts_.debug() > 2)
         {
-          ACE_DEBUG((
+          ORBSVCS_DEBUG((
             LM_INFO,
             ACE_TEXT("(%P|%t) Already registered <%C>\n"),
             this->imr_ior_.in()));
@@ -1214,7 +1255,7 @@ Shared_Backing_Store::register_replica(
     {
       // give back the original pointer and don't clean it up
       ft_imr_ior = ior._retn();
-      ACE_ERROR((LM_ERROR,
+      ORBSVCS_ERROR((LM_ERROR,
         "ERROR: Failed to create Fault Tolerant ImR, reason=%s\n",
         reason.in()));
       throw ImplementationRepository::InvalidPeer(reason.in());
@@ -1240,11 +1281,6 @@ Shared_Backing_Store::replica_ior_filename(bool peer_ior_file) const
     }
   ACE_CString ior =
     this->filename_ + IMR_REPLICA[desired_type] + ACE_TEXT(".ior");
-  if (peer_ior_file)
-    {
-      // the peer ior file needs the file prefix
-      ior = "file://" + ior;
-    }
 
   return ior;
 }
@@ -1312,7 +1348,7 @@ Shared_Backing_Store::LocatorListings_XMLHandler::startElement (
         }
     }
   else
-    ACE_DEBUG((
+    ORBSVCS_DEBUG((
       LM_INFO,
       ACE_TEXT ("LocatorListings_XMLHandler::startElement ")
       ACE_TEXT ("incorrect number of attrs (%d)\n"),
@@ -1339,7 +1375,7 @@ Shared_Backing_Store::LocatorListings_XMLHandler::remove_unmatched(
       int ret = repo.servers().unbind (sientry->ext_id_);
       if (ret != 0)
         {
-          ACE_ERROR((LM_ERROR,
+          ORBSVCS_ERROR((LM_ERROR,
             ACE_TEXT ("ERROR: could not remove server: %s\n"),
             sientry->int_id_->name.c_str()));
         }
@@ -1352,7 +1388,7 @@ Shared_Backing_Store::LocatorListings_XMLHandler::remove_unmatched(
       int ret = repo.activators().unbind (aientry->ext_id_);
       if (ret != 0)
         {
-          ACE_ERROR((LM_ERROR,
+          ORBSVCS_ERROR((LM_ERROR,
             ACE_TEXT ("ERROR: could not remove activator: %s\n"),
             aientry->int_id_->name.c_str()));
         }

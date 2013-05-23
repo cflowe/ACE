@@ -1,4 +1,4 @@
-// $Id: SystemException.cpp 93359 2011-02-11 11:33:12Z mcorino $
+// $Id: SystemException.cpp 96992 2013-04-11 18:07:48Z huangh $
 
 #include "tao/SystemException.h"
 #include "tao/ORB_Constants.h"
@@ -216,7 +216,7 @@ CORBA::SystemException::_tao_minor_code (u_int location, int errno_value)
 void
 CORBA::SystemException::_tao_print_system_exception (FILE *) const
 {
-  ACE_ERROR ((LM_ERROR,
+  TAOLIB_ERROR ((LM_ERROR,
               ACE_TEXT("(%P|%t) system exception, ID '%C'\n"),
               this->_info ().c_str ()));
 }
@@ -945,7 +945,7 @@ CORBA::name ::_tao_type (void) const \
     return adapter->_tao_type_ ## name (); \
   else \
     { \
-      ACE_ERROR ((LM_ERROR, \
+      TAOLIB_ERROR ((LM_ERROR, \
                   ACE_TEXT ("(%P|%t) %p\n"), \
                   ACE_TEXT ("Unable to find the ") \
                   ACE_TEXT ("AnyTypeCode Adapter instance"))); \
