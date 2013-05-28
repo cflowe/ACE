@@ -3,7 +3,7 @@
 /**
  *  @file    valuetype_cs.cpp
  *
- *  $Id: valuetype_cs.cpp 95536 2012-02-20 12:34:23Z johnnyw $
+ *  $Id: valuetype_cs.cpp 97145 2013-05-17 13:42:03Z sma $
  *
  *  Visitor generating code for Valuetypes in the client stubs file.
  *
@@ -243,6 +243,19 @@ be_visitor_valuetype_cs::visit_valuetype (be_valuetype *node)
       // functions, including virtual destructors, wreaks havoc with
       // g++ >= 4.0 RTTI support when the
       // "-fvisibility-inlines-hidden" command line option is used.
+
+      // The virtual _copy_value method.
+      *os << "::CORBA::ValueBase *" << be_nl
+          << node->name () << "::_copy_value (void)" << be_nl
+          << "{" << be_idt_nl
+          << "::CORBA::ValueBase *ret_val = 0;" << be_nl
+          << "ACE_NEW_THROW_EX (" << be_idt_nl
+          << "ret_val," << be_nl
+          << node->local_name () << " ()," << be_nl
+          << "::CORBA::NO_MEMORY ()" << be_uidt_nl
+          << ");" << be_nl
+          << "return ret_val;" << be_uidt_nl
+          << "}" << be_nl_2;
 
       // The virtual _tao_marshal_v method.
       *os << "::CORBA::Boolean" << be_nl

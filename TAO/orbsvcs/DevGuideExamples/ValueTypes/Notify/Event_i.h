@@ -1,4 +1,4 @@
-// $Id: Event_i.h 83399 2008-10-22 15:58:30Z sowayaa $
+// $Id: Event_i.h 97145 2013-05-17 13:42:03Z sma $
 
 #ifndef EVENT_H_
 #define EVENT_H_
@@ -21,6 +21,20 @@ public:
   {
     name(n);
     kind(k);
+  }
+
+  virtual ::CORBA::ValueBase *_copy_value (void)
+  {
+    ::CORBA::ValueBase *ret_val = 0;
+    ACE_NEW_THROW_EX (
+      ret_val,
+      MyEvent_i (
+        name (),
+        kind ()
+      ),
+      ::CORBA::NO_MEMORY ()
+    );
+    return ret_val;
   }
 
   virtual void dump ()
@@ -52,7 +66,6 @@ class MyEventFactory
   : public virtual CORBA::ValueFactoryBase
 {
 public:
-
   virtual CORBA::ValueBase * create_for_unmarshal ()
   {
     // It doesn't matter what values we construct it with
@@ -61,6 +74,4 @@ public:
   }
 };
 
-
 #endif /* EVENT_H_  */
-

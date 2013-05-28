@@ -1,4 +1,4 @@
-// $Id: client.cpp 96986 2013-04-11 16:39:42Z mesnier_p $
+// $Id: client.cpp 97131 2013-05-13 19:18:55Z mesnier_p $
 
 #include "ace/Get_Opt.h"
 #include "testC.h"

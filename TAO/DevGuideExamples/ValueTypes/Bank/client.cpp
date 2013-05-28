@@ -1,4 +1,4 @@
-// $Id: client.cpp 94425 2011-08-26 11:09:22Z msmit $
+// $Id: client.cpp 97145 2013-05-17 13:42:03Z sma $
 
 #include "_pch.h"
 
@@ -49,6 +49,21 @@ public:
     name(n);
     balance(bal);
   }
+
+  ::CORBA::ValueBase *_copy_value ()
+  {
+    ::CORBA::ValueBase *ret_val = 0;
+    ACE_NEW_THROW_EX (
+      ret_val,
+      Person_i (
+        name (),
+        balance ()
+      ),
+      ::CORBA::NO_MEMORY ()
+    );
+    return ret_val;
+  }
+
 private:
   void debit(CORBA::Long)
   {

@@ -1,4 +1,4 @@
-//$Id: Echo_Client_i.cpp 96986 2013-04-11 16:39:42Z mesnier_p $
+//$Id: Echo_Client_i.cpp 97131 2013-05-13 19:18:55Z mesnier_p $
 
 #include "Echo_Client_i.h"
 #include "ace/Get_Opt.h"

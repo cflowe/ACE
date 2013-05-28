@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 97109 2013-05-09 19:53:57Z mesnier_p $
+# $Id: run_test.pl 97135 2013-05-14 15:20:18Z mesnier_p $
 # -*- perl -*-
 
 ###############################################################################
@@ -21,6 +21,7 @@ my $usage = 0;
 my $use_imr_start = 0;
 my $restart_loc = 0;
 my $list_test = 0;
+my $multistart = 0;
 my $hide_server = 0;
 my $expect_transient = "";
 my $notify_locator = "";
@@ -61,6 +62,9 @@ if ($#ARGV >= 0) {
         elsif ($ARGV[$i] eq "-hide_server") {
             $hide_server = 1;
             $notify_locator = "-l";
+        }
+        elsif ($ARGV[$i] eq "-multistart") {
+            $multistart = 1;
         }
         elsif ($ARGV[$i] eq "-imr_start") {
             $use_imr_start = 1;
@@ -417,10 +421,52 @@ sub run_imr_start_test
     return $result;
 }
 
+sub run_multistart_test
+{
+    init_test ();
+    print_msg ("Running multistart test");
+    $srv[1]->DeleteFile ($srvstatusfile[1]);
+
+    my @TICMD;
+    print "First async start request\n";
+    $TICMD[0] = $ti->CreateProcess ("$ENV{ACE_ROOT}/bin/tao_imr");
+    $TICMD[0]->Arguments ("-ORBInitRef ImplRepoService=file://$ti_imriorfile start $obj[1]");
+    $TICMD[0]->Spawn();
+    print "sleep 1 sec\n";
+    sleep (1);
+    print "Second async start request\n";
+    $TICMD[1] = $ti->CreateProcess ("$ENV{ACE_ROOT}/bin/tao_imr");
+    $TICMD[1]->Arguments ("-ORBInitRef ImplRepoService=file://$ti_imriorfile start $obj[1]");
+    $TICMD[1]->Spawn();
+    print "sleep 7 sec\n";
+    sleep (7);
+    run_imr_util ("start $obj[1]");
+
+    open (STATUS, $srvstatusfile[1]);
+    @lines = <STATUS>;
+    close (STATUS);
+
+    $count = @lines;
+
+    if ($count == 1) {
+        print "SUCCESS: multiple start requests result in only 1 server\n";
+    }
+    else {
+        print "FAILURE: multiple start requests expected 1 start, got $count\n";
+    }
+
+    for ($i = 0; $i < 2; $i++) {
+        $TICMD[$i]->WaitKill ($ti->ProcessStartWaitInterval() +$server_reply_delay);
+    }
+
+    fini_test ();
+}
+
 sub run_list_test
 {
     init_test ();
-    run_imr_util ("start $obj[1]");
+    print_msg ("Running list test");
+    spawn_imr_util ("start $obj[1]");
     run_imr_util ("start $obj[0]");
     run_imr_util ("list -a");
     run_imr_util ("shutdown $obj[1]");
@@ -501,6 +547,9 @@ if ($use_imr_start == 1) {
 }
 elsif ($list_test == 1) {
     $ret = run_list_test ();
+}
+elsif ($multistart == 1) {
+    $ret = run_multistart_test ();
 }
 else {
     $ret = run_client_activate_test ();

@@ -1,4 +1,4 @@
-// $Id: AMH_DSI_Response_Handler.cpp 96986 2013-04-11 16:39:42Z mesnier_p $
+// $Id: AMH_DSI_Response_Handler.cpp 97145 2013-05-17 13:42:03Z sma $
 
 #include "AMH_DSI_Response_Handler.h"
 #include "Request.h"
@@ -33,6 +33,20 @@ TAO_AMH_DSI_Exception_Holder::TAO_AMH_DSI_Exception_Holder (CORBA::Exception *ex
 
 TAO_AMH_DSI_Exception_Holder::~TAO_AMH_DSI_Exception_Holder ()
 {
+}
+
+::CORBA::ValueBase *
+TAO_AMH_DSI_Exception_Holder::_copy_value (void)
+{
+  ::CORBA::ValueBase *ret_val= 0;
+  ACE_NEW_THROW_EX (
+    ret_val,
+    TAO_AMH_DSI_Exception_Holder (
+      exception_
+    ),
+    ::CORBA::NO_MEMORY ()
+  );
+  return ret_val;
 }
 
 void

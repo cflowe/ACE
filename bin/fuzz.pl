@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: fuzz.pl 97060 2013-04-19 19:17:11Z mitza $
+# $Id: fuzz.pl 97146 2013-05-17 13:49:22Z mitza $
 #   Fuzz is a script whose purpose is to check through ACE/TAO/CIAO files for
 #   easy to spot (by a perl script, at least) problems.
 
@@ -264,7 +264,7 @@ sub check_for_id_string ()
                 if (/\$Id:\$/) {
                     print_error ("$file:$.: Incorrect \$Id:\$ found (remove colon)");
                 }
-                if (/\$Id: fuzz.pl 97060 2013-04-19 19:17:11Z mitza $/) {
+                if (/\$Id: fuzz.pl 97146 2013-05-17 13:49:22Z mitza $/) {
                     print_error ("$file:$.: Incorrect \$Id: found (remove colon, added \$)");
                 }
                 if (/\$Id\:/ or /\$Id\$/) {
@@ -2310,11 +2310,12 @@ sub check_for_ace_log_categories ()
 
     for my $f (@files_h, @files_cpp, @files_inl) {
         my $cat = 'ACE';
-        if ($f =~ /\/ace\/(\w+)/) {
-            next if $1 eq 'Log_Msg' || $` =~ /\/protocols$/;
+        $f =~ s!\\!/!g;
+        if ($f =~ /\bace\/(\w+)/) {
+            next if $1 eq 'Log_Msg' || $` =~ /\/protocols\/$/;
             $cat = 'ACELIB';
         }
-        elsif ($f =~ /\/tao\//) {
+        elsif ($f =~ /tao\//) {
             $cat = 'TAOLIB';
         }
         elsif ($f =~ /\/orbsvcs\// && $f !~ /tests|examples/i) {
@@ -2323,7 +2324,7 @@ sub check_for_ace_log_categories ()
         elsif ($f =~ /CIAO\// || $f =~ /DAnCE\//) {
             next;
         }
-        elsif ($f =~ /\/tests\/Log_Msg_Test\.cpp/) {
+        elsif ($f =~ /tests\/Log_Msg_Test\.cpp/) {
             next;
         }
 

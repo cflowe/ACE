@@ -368,6 +368,9 @@
 				RelativePath="AsyncAccessManager.cpp">
 			</File>
 			<File
+				RelativePath="AsyncListManager.cpp">
+			</File>
+			<File
 				RelativePath="Config_Backing_Store.cpp">
 			</File>
 			<File
@@ -421,6 +424,9 @@
 			</File>
 			<File
 				RelativePath="AsyncAccessManager.h">
+			</File>
+			<File
+				RelativePath="AsyncListManager.h">
 			</File>
 			<File
 				RelativePath="Config_Backing_Store.h">

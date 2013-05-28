@@ -1,8 +1,7 @@
-// $Id: ObjectReferenceFactory.cpp 91649 2010-09-08 13:44:26Z johnnyw $
+// $Id: ObjectReferenceFactory.cpp 97145 2013-05-17 13:42:03Z sma $
 
 #include "ObjectReferenceFactory.h"
 #include "tao/debug.h"
-
 
 ObjectReferenceFactory::ObjectReferenceFactory (
   PortableInterceptor::ObjectReferenceFactory * old_orf)
@@ -10,6 +9,18 @@ ObjectReferenceFactory::ObjectReferenceFactory (
 {
   // Claim ownership of the old ObjectReferenceFactory.
   CORBA::add_ref (old_orf);
+}
+
+::CORBA::ValueBase *
+ObjectReferenceFactory::_copy_value (void)
+{
+  ::CORBA::ValueBase *ret_val= 0;
+  ACE_NEW_THROW_EX (
+    ret_val,
+    ObjectReferenceFactory (old_orf_.inout ()),
+    ::CORBA::NO_MEMORY ()
+  );
+  return ret_val;
 }
 
 ObjectReferenceFactory::~ObjectReferenceFactory (void)

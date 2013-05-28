@@ -1,4 +1,4 @@
-// $Id: Select_Reactor_T.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: Select_Reactor_T.cpp 97138 2013-05-16 17:55:36Z mitza $
 
 #ifndef ACE_SELECT_REACTOR_T_CPP
 #define ACE_SELECT_REACTOR_T_CPP
@@ -1531,6 +1531,9 @@ ACE_Select_Reactor_T<ACE_SELECT_REACTOR_TOKEN>::check_handles (void)
         {
           result = 1;
           this->remove_handler_i (h, ACE_Event_Handler::ALL_EVENTS_MASK);
+          this->wait_set_.rd_mask_.clr_bit (h);
+          this->wait_set_.wr_mask_.clr_bit (h);
+          this->wait_set_.ex_mask_.clr_bit (h);
         }
       rd_mask.clr_bit (h);
 #else /* !ACE_WIN32 && !MVS && !VXWORKS */

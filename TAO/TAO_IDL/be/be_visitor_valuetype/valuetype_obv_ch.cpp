@@ -1,10 +1,8 @@
-
-
 //=============================================================================
 /**
  *  @file    valuetype_obv_ch.cpp
  *
- *  $Id: valuetype_obv_ch.cpp 95536 2012-02-20 12:34:23Z johnnyw $
+ *  $Id: valuetype_obv_ch.cpp 97151 2013-05-20 09:52:28Z sma $
  *
  *  Visitor generating code for Valuetypes in the client header
  *  OBV_ class
@@ -32,7 +30,6 @@ be_visitor_valuetype_obv_ch::be_visitor_valuetype_obv_ch (
 be_visitor_valuetype_obv_ch::~be_visitor_valuetype_obv_ch (void)
 {
 }
-
 
 // OBV_ class must be in OBV_ namespace.
 int
@@ -64,7 +61,7 @@ be_visitor_valuetype_obv_ch::visit_valuetype (be_valuetype *node)
   else
     {
       *os << be_nl_2 << "// OBV_ class" << be_nl;
-      *os << "class " << be_global->stub_export_macro() << " ";;
+      *os << "class " << be_global->stub_export_macro() << " ";
 
       if (!node->is_nested())
         {
@@ -195,13 +192,24 @@ be_visitor_valuetype_obv_ch::visit_valuetype (be_valuetype *node)
 
       // Virtual destructor.
       *os << be_nl << "virtual ~";
-
       if (! node->is_nested ())
         {
           *os << "OBV_";
         }
-
       *os << node->local_name () << " (void);";
+
+      // Virtual _copy_value() only provided in OBV_* class when
+      // ::CORBA::DefaultValueRefCountBase has been included.
+      // The OBV_ class is concrete in this case and so requires
+      // a _copy_value definition.
+      // Otherwise, the end user derives from this abstract
+      // OBV_* class and it is up to them to provide the correct
+      // implimentation of the _copy_value() there.
+      if (this->obv_need_ref_counter (node))
+        {
+          *os << be_uidt_nl << be_nl << "public:" << be_idt_nl
+              << "virtual ::CORBA::ValueBase *_copy_value (void);";
+        }
 
       // Map fields to private data.
       if (!node->opt_accessor ())

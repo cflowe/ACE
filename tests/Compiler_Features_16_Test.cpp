@@ -1,4 +1,4 @@
-// $Id: Compiler_Features_16_Test.cpp 96162 2012-09-27 09:39:28Z johnnyw $
+// $Id: Compiler_Features_16_Test.cpp 97164 2013-05-21 17:35:26Z johnnyw $
 
 /**
  * This program checks if the compiler / platform supports strongly
@@ -16,12 +16,19 @@
 static constexpr uint32_t bound = std::numeric_limits<uint32_t>::max();
 
 namespace CORBA {
+  // First forward declare TCKind, this is legal with C++11
+  enum class TCKind : uint32_t;
+
   enum class TCKind : uint32_t
   {
     tk_null,
     tk_void,
     tk_event
   };// TCKind
+
+  // And another forward declared TCKind, after it has been
+  // declared
+  enum class TCKind : uint32_t;
 };
 
 std::ostream& operator<<

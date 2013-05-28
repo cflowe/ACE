@@ -1,4 +1,4 @@
-// $Id: Test.idl 96840 2013-02-19 21:48:51Z harrisb $
+// $Id: Test.idl 97131 2013-05-13 19:18:55Z mesnier_p $
 
 interface Test
 {
@@ -8,7 +8,7 @@ interface Test
 
   // After replying, abort process
   // delay_secs seconds.
-  void abort ( in short delay_secs );
+  oneway void abort ( in short delay_secs );
 
 };
 

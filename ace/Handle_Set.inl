@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: Handle_Set.inl 96985 2013-04-11 15:50:32Z huangh $
+// $Id: Handle_Set.inl 97138 2013-05-16 17:55:36Z mitza $
 
 #include "ace/Log_Category.h"
 
@@ -76,7 +76,7 @@ ACE_Handle_Set::is_set (ACE_HANDLE handle) const
   return FD_ISSET (handle,
                    const_cast<fd_set*> (&this->mask_));
 #elif defined (ACE_VXWORKS) && ACE_VXWORKS >= 0x690
-  return static_cast<int> (FD_ISSET (handle, &this->mask_));
+  return FD_ISSET (handle, &this->mask_) != 0;
 #else
   return FD_ISSET (handle,
                    &this->mask_);

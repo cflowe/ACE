@@ -27,6 +27,9 @@
     <ClCompile Include="AsyncAccessManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AsyncListManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Config_Backing_Store.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AsyncAccessManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncListManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Config_Backing_Store.h">

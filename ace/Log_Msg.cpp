@@ -1,4 +1,4 @@
-// $Id: Log_Msg.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: Log_Msg.cpp 97130 2013-05-13 17:36:26Z mesnier_p $
 
 // We need this to get the status of ACE_NTRACE...
 #include "ace/config-all.h"

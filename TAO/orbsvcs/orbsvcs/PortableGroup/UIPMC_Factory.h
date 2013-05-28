@@ -4,7 +4,7 @@
 /**
  *  @file     UIPMC_Factory.h
  *
- *  $Id: UIPMC_Factory.h 96015 2012-08-08 15:31:24Z sma $
+ *  $Id: UIPMC_Factory.h 97137 2013-05-16 09:01:45Z sma $
  *
  *  @author Frank Hunleth <fhunleth@cs.wustl.edu>
  */
@@ -60,9 +60,13 @@ private:
   /// compatibility with old clients.
   int major_;
   int minor_;
+
   /// Should we override the default behaviour (whatever it is) to listen on
   /// all interfaces
   bool listen_on_all_;
+
+  /// Any specified and valid -ORBListenerInterfaces option string
+  ACE_CString listener_interfaces_;
 };
 
 TAO_END_VERSIONED_NAMESPACE_DECL

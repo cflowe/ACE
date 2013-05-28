@@ -4,7 +4,7 @@
 /**
  *  @file    Intrusive_Ref_Count_Handle_T.h
  *
- *  $Id: Intrusive_Ref_Count_Handle_T.h 85181 2009-04-28 07:00:58Z johnnyw $
+ *  $Id: Intrusive_Ref_Count_Handle_T.h 97131 2013-05-13 19:18:55Z mesnier_p $
  *
  *  @authors Tim Bradley  <bradley_t@ociweb.com>
  */
@@ -116,6 +116,10 @@ public:
   /// Caller becomes responsibe for the returned "copy" to the reference.
   /// Always leaves the smart pointer in the "nil" state upon return.
   T* _retn (void);
+
+  /// Equality operator allows the refcounted object to be used generically
+  /// as a contained object
+  bool operator== (const TAO_Intrusive_Ref_Count_Handle& h) const;
 
 private:
 

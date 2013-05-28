@@ -1,4 +1,4 @@
-# $Id: tao_other_tests.lst 97090 2013-04-30 21:11:49Z mesnier_p $
+# $Id: tao_other_tests.lst 97153 2013-05-20 12:16:04Z sma $
 #
 # This is the list of run_test.pl's that need to be run by
 # auto_run_tests.pl.
@@ -140,6 +140,7 @@ TAO/orbsvcs/tests/ImplRepo/RestartServer/run_test.pl: !ST !MINIMUM !CORBA_E_COMP
 TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
 TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl -delay 20 -imr_start: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
 TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl -hide_server -imr_start: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
+TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl -multistart: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
 TAO/orbsvcs/examples/ImR/Combined_Service/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !ST !ACE_FOR_TAO !LynxOS
 TAO/orbsvcs/examples/CosEC/TypedSimple/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !NO_IFR !ACE_FOR_TAO !WCHAR
 TAO/orbsvcs/tests/CosEvent/Timeout/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ST !NO_MESSAGING !ACE_FOR_TAO !LynxOS
@@ -204,9 +205,10 @@ TAO/orbsvcs/tests/Security/EndpointPolicy/run_test.pl: SSL !STATIC !DISABLE_INTE
 TAO/orbsvcs/tests/Security/Null_Cipher/run_test.pl: SSL !STATIC !DISABLE_INTERCEPTORS !ACE_FOR_TAO !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO
 TAO/orbsvcs/tests/Security/MT_BiDir_SSL/run_test.pl: SSL !STATIC !DISABLE_INTERCEPTORS !ACE_FOR_TAO !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !GIOP10 !DISABLE_BIDIR !LynxOS
 TAO/orbsvcs/tests/Miop/McastHello/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST
+TAO/orbsvcs/tests/Miop/McastLocal/run_test.pl -debug: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST !NO_LOOPBACK_MCAST
 TAO/orbsvcs/tests/Miop/McastZIOP/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST ZLIB
-TAO/orbsvcs/tests/Miop/McastPreferredInterfaces/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST
-TAO/orbsvcs/tests/Miop/McastPreferredInterfaces/run_test_ipv6.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST IPV6
+TAO/orbsvcs/tests/Miop/McastPreferredInterfaces/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST !NO_LOOPBACK_MCAST
+TAO/orbsvcs/tests/Miop/McastPreferredInterfaces/run_test_ipv6.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST IPV6 !NO_LOOPBACK_MCAST
 TAO/orbsvcs/tests/Miop/McastFragmentation/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST
 TAO/orbsvcs/tests/Miop/McastFragmentation/run_test_ipv6.pl: IPV6 !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST
 # The following 2 tests use dynamic loading to change the default reactor on Windows !VxWorks !VxWorks_RTP !LabVIEW_RT

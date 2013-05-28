@@ -2,7 +2,7 @@
 /*
  * @file AsyncAccessManager.h
  *
- * $Id: AsyncAccessManager.h 97087 2013-04-30 15:24:14Z mesnier_p $
+ * $Id: AsyncAccessManager.h 97131 2013-05-13 19:18:55Z mesnier_p $
  *
  * @author Phil Mesnier <mesnier_p@ociweb.com>
  */
@@ -22,10 +22,10 @@
 #pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
+#include "tao/Intrusive_Ref_Count_Handle_T.h"
 #include "LiveCheck.h"
 
 class ImR_Locator_i;
-class ImR_ReplyHandler;
 struct Server_Info;
 
 
@@ -87,8 +87,8 @@ class AsyncAccessManager
   void notify_child_death (void);
   void ping_replied (LiveStatus server);
 
-  AsyncAccessManager *add_ref (void);
-  void remove_ref (void);
+  AsyncAccessManager *_add_ref (void);
+  void _remove_ref (void);
 
  private:
   void final_state (void);
@@ -107,31 +107,7 @@ class AsyncAccessManager
   TAO_SYNCH_MUTEX lock_;
 };
 
-class AsyncAccessManager_ptr
-{
-public:
-  AsyncAccessManager_ptr (void);
-  AsyncAccessManager_ptr (AsyncAccessManager *aam);
-  AsyncAccessManager_ptr (const AsyncAccessManager_ptr &aam_ptr);
-  ~AsyncAccessManager_ptr (void);
-
-  AsyncAccessManager_ptr &operator = (const AsyncAccessManager_ptr &aam_ptr);
-  AsyncAccessManager_ptr &operator = (AsyncAccessManager *aam);
-  const AsyncAccessManager * operator-> () const;
-  const AsyncAccessManager * operator* () const;
-  AsyncAccessManager * operator-> ();
-  AsyncAccessManager * operator* ();
-  bool operator== (const AsyncAccessManager_ptr &aam_ptr) const;
-  bool operator== (const AsyncAccessManager *aam) const;
-
-  AsyncAccessManager * clone (void) const;
-  AsyncAccessManager * _retn (void);
-
-  void assign (AsyncAccessManager *aam);
-
-private:
-  AsyncAccessManager * val_;
-};
+typedef TAO_Intrusive_Ref_Count_Handle<AsyncAccessManager> AsyncAccessManager_ptr;
 
 //----------------------------------------------------------------------------
 /*
@@ -165,19 +141,19 @@ private:
 /*
  */
 
-class AsyncLiveListener : public LiveListener
+class AccessLiveListener : public LiveListener
 {
  public:
-  AsyncLiveListener (const char * server,
+  AccessLiveListener (const char * server,
                      AsyncAccessManager *aam,
                      LiveCheck &pinger,
                      ImplementationRepository::ServerObject_ptr ref);
 
-  AsyncLiveListener (const char * server,
+  AccessLiveListener (const char * server,
                      AsyncAccessManager *aam,
                      LiveCheck &pinger);
 
-  virtual ~AsyncLiveListener (void);
+  virtual ~AccessLiveListener (void);
   bool start (void);
 
   bool status_changed (LiveStatus status);

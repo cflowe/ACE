@@ -3,7 +3,7 @@
 /**
  *  @file    INET_Addr_Test.cpp
  *
- *  $Id: INET_Addr_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: INET_Addr_Test.cpp 97129 2013-05-13 17:34:36Z johnnyw $
  *
  *   Performs several tests on the ACE_INET_Addr class.  It creates several
  *   IPv4 and IPv6 addresses and checks that the address formed by the
@@ -96,7 +96,7 @@ int run_main (int, ACE_TCHAR *[])
                       ACE_TEXT ("0x%x != 0x%x\n"),
                       ipv4_addresses[i],
                       addr.get_ip_address (),
-                      addr32));
+                      ACE_HTONL (addr32)));
           status = 1;
         }
 

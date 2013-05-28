@@ -7,17 +7,17 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE -workers 14 -name_modifier "*_vc10"
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeadMemberDetection_App_Ctrl_Client", "DeadMemberDetection_App_Ctrl_Client_vc10.vcxproj", "{960C14EF-FECA-1BAD-BFA7-7DCA84015201}"
+# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE -workers 20 -name_modifier "*_vc10"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DMD_App_Ctrl_Client", "DMD_App_Ctrl_Client_vc10.vcxproj", "{63FE8419-FECA-1BAD-4A55-ED3C84015201}"
 	ProjectSection(ProjectDependencies) = postProject
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201} = {98B7ACED-FECA-1BAD-BFA7-7DCA84015201}
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201} = {97D8F3C4-FECA-1BAD-4A55-ED3C84015201}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeadMemberDetection_App_Ctrl_Idl", "DeadMemberDetection_App_Ctrl_Idl_vc10.vcxproj", "{98B7ACED-FECA-1BAD-BFA7-7DCA84015201}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DMD_App_Ctrl_Idl", "DMD_App_Ctrl_Idl_vc10.vcxproj", "{97D8F3C4-FECA-1BAD-4A55-ED3C84015201}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeadMemberDetection_App_Ctrl_Server", "DeadMemberDetection_App_Ctrl_Server_vc10.vcxproj", "{AD6C0465-FECA-1BAD-BFA7-7DCA84015201}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DMD_App_Ctrl_Server", "DMD_App_Ctrl_Server_vc10.vcxproj", "{589E9493-FECA-1BAD-4A55-ED3C84015201}"
 	ProjectSection(ProjectDependencies) = postProject
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201} = {98B7ACED-FECA-1BAD-BFA7-7DCA84015201}
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201} = {97D8F3C4-FECA-1BAD-4A55-ED3C84015201}
 	EndProjectSection
 EndProject
 Global
@@ -28,30 +28,30 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{960C14EF-FECA-1BAD-BFA7-7DCA84015201}.Debug|Win32.ActiveCfg = Debug|Win32
-		{960C14EF-FECA-1BAD-BFA7-7DCA84015201}.Debug|Win32.Build.0 = Debug|Win32
-		{960C14EF-FECA-1BAD-BFA7-7DCA84015201}.Debug|x64.ActiveCfg = Debug|x64
-		{960C14EF-FECA-1BAD-BFA7-7DCA84015201}.Debug|x64.Build.0 = Debug|x64
-		{960C14EF-FECA-1BAD-BFA7-7DCA84015201}.Release|Win32.ActiveCfg = Release|Win32
-		{960C14EF-FECA-1BAD-BFA7-7DCA84015201}.Release|Win32.Build.0 = Release|Win32
-		{960C14EF-FECA-1BAD-BFA7-7DCA84015201}.Release|x64.ActiveCfg = Release|x64
-		{960C14EF-FECA-1BAD-BFA7-7DCA84015201}.Release|x64.Build.0 = Release|x64
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201}.Debug|Win32.ActiveCfg = Debug|Win32
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201}.Debug|Win32.Build.0 = Debug|Win32
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201}.Debug|x64.ActiveCfg = Debug|x64
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201}.Debug|x64.Build.0 = Debug|x64
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201}.Release|Win32.ActiveCfg = Release|Win32
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201}.Release|Win32.Build.0 = Release|Win32
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201}.Release|x64.ActiveCfg = Release|x64
-		{98B7ACED-FECA-1BAD-BFA7-7DCA84015201}.Release|x64.Build.0 = Release|x64
-		{AD6C0465-FECA-1BAD-BFA7-7DCA84015201}.Debug|Win32.ActiveCfg = Debug|Win32
-		{AD6C0465-FECA-1BAD-BFA7-7DCA84015201}.Debug|Win32.Build.0 = Debug|Win32
-		{AD6C0465-FECA-1BAD-BFA7-7DCA84015201}.Debug|x64.ActiveCfg = Debug|x64
-		{AD6C0465-FECA-1BAD-BFA7-7DCA84015201}.Debug|x64.Build.0 = Debug|x64
-		{AD6C0465-FECA-1BAD-BFA7-7DCA84015201}.Release|Win32.ActiveCfg = Release|Win32
-		{AD6C0465-FECA-1BAD-BFA7-7DCA84015201}.Release|Win32.Build.0 = Release|Win32
-		{AD6C0465-FECA-1BAD-BFA7-7DCA84015201}.Release|x64.ActiveCfg = Release|x64
-		{AD6C0465-FECA-1BAD-BFA7-7DCA84015201}.Release|x64.Build.0 = Release|x64
+		{63FE8419-FECA-1BAD-4A55-ED3C84015201}.Debug|Win32.ActiveCfg = Debug|Win32
+		{63FE8419-FECA-1BAD-4A55-ED3C84015201}.Debug|Win32.Build.0 = Debug|Win32
+		{63FE8419-FECA-1BAD-4A55-ED3C84015201}.Debug|x64.ActiveCfg = Debug|x64
+		{63FE8419-FECA-1BAD-4A55-ED3C84015201}.Debug|x64.Build.0 = Debug|x64
+		{63FE8419-FECA-1BAD-4A55-ED3C84015201}.Release|Win32.ActiveCfg = Release|Win32
+		{63FE8419-FECA-1BAD-4A55-ED3C84015201}.Release|Win32.Build.0 = Release|Win32
+		{63FE8419-FECA-1BAD-4A55-ED3C84015201}.Release|x64.ActiveCfg = Release|x64
+		{63FE8419-FECA-1BAD-4A55-ED3C84015201}.Release|x64.Build.0 = Release|x64
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201}.Debug|Win32.Build.0 = Debug|Win32
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201}.Debug|x64.ActiveCfg = Debug|x64
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201}.Debug|x64.Build.0 = Debug|x64
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201}.Release|Win32.ActiveCfg = Release|Win32
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201}.Release|Win32.Build.0 = Release|Win32
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201}.Release|x64.ActiveCfg = Release|x64
+		{97D8F3C4-FECA-1BAD-4A55-ED3C84015201}.Release|x64.Build.0 = Release|x64
+		{589E9493-FECA-1BAD-4A55-ED3C84015201}.Debug|Win32.ActiveCfg = Debug|Win32
+		{589E9493-FECA-1BAD-4A55-ED3C84015201}.Debug|Win32.Build.0 = Debug|Win32
+		{589E9493-FECA-1BAD-4A55-ED3C84015201}.Debug|x64.ActiveCfg = Debug|x64
+		{589E9493-FECA-1BAD-4A55-ED3C84015201}.Debug|x64.Build.0 = Debug|x64
+		{589E9493-FECA-1BAD-4A55-ED3C84015201}.Release|Win32.ActiveCfg = Release|Win32
+		{589E9493-FECA-1BAD-4A55-ED3C84015201}.Release|Win32.Build.0 = Release|Win32
+		{589E9493-FECA-1BAD-4A55-ED3C84015201}.Release|x64.ActiveCfg = Release|x64
+		{589E9493-FECA-1BAD-4A55-ED3C84015201}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

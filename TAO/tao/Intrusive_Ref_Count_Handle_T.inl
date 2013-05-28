@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: Intrusive_Ref_Count_Handle_T.inl 72684 2006-05-17 19:12:46Z dai_y $
+// $Id: Intrusive_Ref_Count_Handle_T.inl 97131 2013-05-13 19:18:55Z mesnier_p $
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -127,6 +127,15 @@ TAO_Intrusive_Ref_Count_Handle<T>::_retn()
   T* retval = this->ptr_;
   this->ptr_ = 0;
   return retval;
+}
+
+
+template <typename T>
+ACE_INLINE
+bool
+TAO_Intrusive_Ref_Count_Handle<T>::operator== (const TAO_Intrusive_Ref_Count_Handle& h) const
+{
+  return this->ptr_ == h.in();
 }
 
 

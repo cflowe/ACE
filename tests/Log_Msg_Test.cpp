@@ -3,7 +3,7 @@
 /**
  *  @file    Log_Msg_Test.cpp
  *
- *  $Id: Log_Msg_Test.cpp 97003 2013-04-12 19:35:21Z huangh $
+ *  $Id: Log_Msg_Test.cpp 97138 2013-05-16 17:55:36Z mitza $
  *
  *   This program tests the <ACE_Log_Msg> class in various ways and
  *   also illustrates many of the features of the <ACE_Log_Msg> For
@@ -502,7 +502,7 @@ test_ostream (void)
                         1);
     }
 
-#if !defined (ACE_VXWORKS) && !defined (ACE_HAS_PHARLAP) || (defined(ACE_VXWORKS) && (ACE_VXWORKS > 0x680))
+#if !defined (ACE_VXWORKS) && !defined (ACE_HAS_PHARLAP) || (defined(ACE_VXWORKS) && (ACE_VXWORKS > 0x690))
 # define TEST_CAN_UNLINK_IN_ADVANCE
 #endif
 

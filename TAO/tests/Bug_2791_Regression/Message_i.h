@@ -1,8 +1,7 @@
-// $Id: Message_i.h 91742 2010-09-13 18:23:17Z johnnyw $
+// $Id: Message_i.h 97145 2013-05-17 13:42:03Z sma $
 
 #include "MessageC.h"
 #include "tao/corba.h"
-
 
 class MessageImpl : public virtual OBV_Message,
                     public virtual CORBA::DefaultValueRefCountBase
@@ -10,6 +9,7 @@ class MessageImpl : public virtual OBV_Message,
   public:
     MessageImpl ();
     MessageImpl (const char *user, const char *subject, const char *text);
+    virtual ::CORBA::ValueBase *_copy_value (void);
 
     virtual char *user ();
     virtual void user (const char *);

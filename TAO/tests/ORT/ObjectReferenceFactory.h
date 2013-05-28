@@ -4,12 +4,11 @@
 /**
  * @file ObjectReferenceFactory.h
  *
- * $Id: ObjectReferenceFactory.h 76591 2007-01-25 18:17:52Z elliott_c $
+ * $Id: ObjectReferenceFactory.h 97145 2013-05-17 13:42:03Z sma $
 
  * @author Ossama Othman <ossama@uci.edu>
  */
 //=============================================================================
-
 
 #ifndef TAO_OBJECT_REFERENCE_FACTORY_H
 #define TAO_OBJECT_REFERENCE_FACTORY_H
@@ -24,7 +23,6 @@
 #pragma warning(push)
 #pragma warning(disable:4250)
 #endif /* _MSC_VER */
-
 
 /**
  * @class ObjectReferenceFactory
@@ -41,10 +39,11 @@ class ObjectReferenceFactory
   , public virtual CORBA::DefaultValueRefCountBase
 {
  public:
-
   /// Constructor
   ObjectReferenceFactory (
     PortableInterceptor::ObjectReferenceFactory * old_orf);
+
+  virtual ::CORBA::ValueBase *_copy_value (void);
 
   /**
    * @name PortableInterceptor::ObjectReferenceFactory Methods
@@ -59,7 +58,6 @@ class ObjectReferenceFactory
   //@}
 
 protected:
-
   /// Destructor
   /**
    * Protected destructor to enforce proper memory management via
@@ -68,7 +66,6 @@ protected:
   ~ObjectReferenceFactory (void);
 
 private:
-
   /// The old ObjectReferenceFactory used to create object references.
   /**
    * This ObjectReferenceFactory will still be used when creating
@@ -76,9 +73,7 @@ private:
    * ObjectReferenceFactory.
    */
   PortableInterceptor::ObjectReferenceFactory_var old_orf_;
-
 };
-
 
 #if defined (_MSC_VER)
 #pragma warning(pop)

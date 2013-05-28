@@ -1,4 +1,4 @@
-// $Id: Compiler_Features_19_Test.cpp 96873 2013-02-28 19:49:03Z johnnyw $
+// $Id: Compiler_Features_19_Test.cpp 97142 2013-05-17 09:26:59Z johnnyw $
 
 /**
  * This program checks if the compiler / platform supports aliased
@@ -11,6 +11,7 @@
 
 #include <string>
 #include <iostream>
+#include <cstdint>
 
 namespace IDL
 {

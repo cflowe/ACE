@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: Bug_3672_Regression.mpc 96986 2013-04-11 16:39:42Z mesnier_p $
+// $Id: Bug_3672_Regression.mpc 97131 2013-05-13 19:18:55Z mesnier_p $
 
 project(*idl): taoidldefaults, ami {
   IDL_Files {

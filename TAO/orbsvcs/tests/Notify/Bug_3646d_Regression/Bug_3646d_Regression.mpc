@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: Bug_3646d_Regression.mpc 96986 2013-04-11 16:39:42Z mesnier_p $
+// $Id: Bug_3646d_Regression.mpc 97131 2013-05-13 19:18:55Z mesnier_p $
 
 project (*lib): taolib, portableserver, threads, avoids_corba_e_micro, avoids_corba_e_compact, avoids_minimum_corba {
   sharedname = bug3646d

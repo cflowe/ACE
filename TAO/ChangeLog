@@ -1,3 +1,335 @@
+Mon May 27 10:09:24 CEST 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * TAO version 2.2.0 released.
+
+Fri May 24 07:55:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * tao/ObjRefTemplate/ObjectReferenceTemplate_i.cpp:
+        * orbsvcs/examples/ORT/Gateway_ObjRef_Factory.cpp:
+
+          Add .in () accessor to vars being duplicated. This stops some older
+          compilers issuing warnings about which pointer accessor they are
+          automatically selecting.
+
+Wed May 22 15:15:34 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connection_Handler.cpp:
+
+          Fuzz fix.
+
+Tue May 21 13:22:47 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * orbsvcs/ImplRepo_Service/Iterator.h:
+        * orbsvcs/ImplRepo_Service/Iterator.cpp:
+
+          Removed obsolete class.
+
+        * orbsvcs/ImplRepo_Service/LiveCheck.cpp:
+
+          scoreboard cleanup.
+
+Tue May 21 13:17:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * orbsvcs/tests/Miop/McastLocal/README:
+
+          Add note about failures on Solaris, AIX and MacOS due to problems
+          with sending data via multicast on loopback.
+
+Tue May 21 11:12:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Connection_Handler.cpp:
+
+          Add sanity check for SndSock value obtained from system (without TABS)
+
+Mon May 20 16:41:51 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * orbsvcs/ImplRepo_Service/AsyncListManager.cpp:
+        * orbsvcs/ImplRepo_Service/LiveCheck.h:
+        * orbsvcs/ImplRepo_Service/LiveCheck.cpp:
+
+          Add and improve debugging output.
+
+Mon May 20 13:52:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * orbsvcs/tests/miop/McastLocal/run_test.pl:
+
+          Add debug switch to client as well.
+
+Mon May 20 13:10:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * tao/params.cpp:
+
+          Remove dead code and unused state variable (expect_char).
+
+Mon May 20 12:15:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * bin/tao_other_tests.lst:
+
+          Added !NO_LOOPBACK_MCAST config item to McastLocal/Mcast & McastPreferredInterfaces
+          tests.
+
+Mon May 20 09:59:30 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * orbsvcs/tests/miop/McastHello/McastHello.cpp:
+        * orbsvcs/tests/miop/McastLocal/McastHello.cpp:
+
+          Remove warning about unused instance_ variable.
+
+Mon May 20 09:50:30 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:
+        * TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:
+
+          Fix fuzz warning about a white-space trailing a comment line.
+
+Mon May 20 07:47:30 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * bin/tao_other_test.lst:
+
+          Enable debug for orbsvcs/tests/miop/McastLocal.
+
+Sun May 19 13:20:04 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * tao/CSD_Framework/CSD_FW_Server_Request_Wrapper.cpp:
+
+          fix compile issue on platforms that don't have interceptors enabled.
+
+Fri May 17 19:02:02 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * orbsvcs/ImplRepo_Service/AsyncListManager.cpp:
+
+          Added some debugging output.
+
+Fri May 17 13:42:24 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * docs/libraries.html:
+
+          Add descrption of libTAO_Async_IORTable.so
+
+        * tao/CSD_Framework/CSD_FW_Server_Request_Wrapper.cpp:
+
+          Fix for problem that surfaces when a CSD implementation is used along with
+          server-side portable interceptors.
+
+Fri May 17 13:40:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * NEWS:
+        * TAO_IDL/be/be_visitor_valuetype/any_op_cs.cpp:
+        * TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:
+        * TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:
+        * TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:
+        * TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:
+        * TAO_IDL/be_include/be_visitor_valuetype/valuetype_obv_cs.h:
+        * tao/Valuetype/ValueBase.cpp:
+        * tao/Valuetype/ValueBase.h:
+
+          Fix for Buzilla 1391. Valuetypes now generate a _copy_value()
+          method where appliciable. This is now treated as a pure
+          virtual function (as per the CORBA spec). Build TAO with
+          #define TAO_VALUETYPE_COPY_VALUE_IS_NOT_PURE  in effect to
+          return to the previous "not required" behaviour.
+
+        * tao/ObjRefTemplate/ObjectReferenceTemplate_i.h:
+        * tao/ObjRefTemplate/ObjectReferenceTemplate_i.cpp:
+        * tao/DynamicInterface/AMH_DSI_Response_Handler.cpp:
+        * tao/DynamicInterface/AMH_DSI_Response_Handler.h:
+        * orbsvcs/orbsvcs/LoadBalancing/LB_ObjectReferenceFactory.h:
+        * orbsvcs/orbsvcs/LoadBalancing/LB_ObjectReferenceFactory.cpp:
+        * DevGuideExamples/ValueTypes/Messenger/Message_i.h:
+        * DevGuideExamples/ValueTypes/Messenger/Message_i.cpp:
+        * DevGuideExamples/ValueTypes/Bank/client.cpp:
+        * DevGuideExamples/ValueTypes/Bank/server.cpp:
+        * tests/OBV/Forward/TreeController.idl:
+        * tests/OBV/Truncatable/client.cpp:
+        * tests/OBV/Indirection/Factory.cpp:
+        * tests/OBV/Collocated/Forward/TreeController.idl:
+        * tests/ORT/ObjectReferenceFactory.cpp:
+        * tests/ORT/ObjectReferenceFactory.h:
+        * tests/Bug_2791_Regression/Message_i.h:
+        * tests/Bug_2791_Regression/Message_i.cpp:
+        * examples/OBV/Typed_Events/Event_Types_impl.cpp:
+        * examples/OBV/Typed_Events/Event_Types_impl.h:
+        * orbsvcs/DevGuideExamples/ValueTypes/Notify/Event_i.h:
+        * orbsvcs/examples/ORT/Gateway_ObjRef_Factory.cpp:
+        * orbsvcs/examples/ORT/Gateway_ObjRef_Factory.h:
+
+          Add _copy_value() implimentation where necessary in the examples
+          and ensure all Valuetypes are HEAP allocated, (as all valuetypes
+          are reference counted, they are required to be deletable, not
+          STACK based).
+
+Fri May 17 10:11:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.cpp:
+
+          size_t not CORBA::ULong for ACE_Vector size.
+
+Fri May 17 09:10:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.cpp:
+
+          Rename ALLOW_UNICAST_MIOP to TAO_ALLOW_UNICAST_MIOP, this feature
+          was originally not going to be committed into the Open Source but
+          it is being used (unwisely in our opinion) in the community. It
+          short circuits the error checking on joins, such that MIOP can
+          be used to send to a unicast address. I would not recommend building
+          TAO with this option set.
+
+Fri May 17 08:26:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.cpp:
+
+          Correction to Cater ALLOW_UNICAST_MIOP builds.
+
+Fri May 17 08:03:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.cpp:
+
+          Correction to Cater for wide character version of call.
+
+Thu May 16 09:01:00 UTC 2013  Simon Massey  <simon dot massey at prismtech dot com>
+
+        * docs/Options.html:
+        * tao/params.h:
+        * tao/params.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Acceptor.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Acceptor.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Factory.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Factory.cpp:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.h:
+        * orbsvcs/orbsvcs/PortableGroup/UIPMC_Mcast_Connection_Handler.cpp:
+        * orbsvcs/tests/Miop/McastLocal/client.cpp:
+        * orbsvcs/tests/Miop/McastLocal/McastHello.cpp:
+        * orbsvcs/tests/Miop/McastLocal/McastHello.h:
+        * orbsvcs/tests/Miop/McastLocal/McastLocal.mpc:
+        * orbsvcs/tests/Miop/McastLocal/README:
+        * orbsvcs/tests/Miop/McastLocal/run_test.pl:
+        * orbsvcs/tests/Miop/McastLocal/server.cpp:
+        * orbsvcs/tests/Miop/McastLocal/svc_client.conf:
+        * orbsvcs/tests/Miop/McastLocal/svc_server1.conf:
+        * orbsvcs/tests/Miop/McastLocal/svc_server2.conf:
+        * orbsvcs/tests/Miop/McastLocal/Test.idl:
+        * bin/tao_other_tests.lst:
+
+          Provide UIPMC Factory configuration option -ORBListenerInterfaces
+          see docs/Options.html for details.
+
+Wed May 15 18:21:40 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tao/Exception.cpp:
+          Shouldn't put asserts in the core code
+
+Tue May 14 15:17:51 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl:
+        * orbsvcs/tests/ImplRepo/servers_interact_on_startup/server.cpp:
+
+          Make sure the multistart test first clears the status before the
+          test case, and also that the server appends to the status file
+          so multiple starts can actually be counted.
+
+Tue May 14 14:53:28 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * bin/tao_other_tests.lst:
+        * orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl:
+
+          Added a test scenario where multiple concurrent start requests
+          are issued for the same server.  This test insures that only a
+          single instance is actually started.
+
+Mon May 13 21:38:06 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * orbsvcs/ImplRepo_Service/AsyncListManager.cpp:
+
+          Fix a deadlock condition where the lister is waiting for more
+          pings than it will receive because 1 or more target servers was
+          unpingable.
+
+Mon May 13 19:12:59 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * orbsvcs/ImplRepo_Service/AsyncAccessManager.h:
+        * orbsvcs/ImplRepo_Service/AsyncAccessManager.cpp:
+        * orbsvcs/ImplRepo_Service/AsyncListManager.h:
+        * orbsvcs/ImplRepo_Service/AsyncListManager.cpp:
+        * orbsvcs/ImplRepo_Service/ImR_Locator_i.cpp:
+        * orbsvcs/ImplRepo_Service/ImplRepo_Service.mpc:
+        * orbsvcs/ImplRepo_Service/Iterator.h:
+        * orbsvcs/ImplRepo_Service/Iterator.cpp:
+        * orbsvcs/ImplRepo_Service/LiveCheck.h:
+        * orbsvcs/ImplRepo_Service/LiveCheck.cpp:
+
+        * orbsvcs/tests/ImplRepo/ReconnectServer/run_test.pl:
+
+        * orbsvcs/tests/ImplRepo/servers_list/Test.idl:
+        * orbsvcs/tests/ImplRepo/servers_list/run_test.pl:
+
+        * tao/Intrusive_Ref_Count_Handle_T.h:
+        * tao/Intrusive_Ref_Count_Handle_T.inl:
+
+        Merge from branch OCI_Asynch_IMR:
+        Mon May 13 15:00:19 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * orbsvcs/ImplRepo_Service/AsyncListManager.h:
+        * orbsvcs/ImplRepo_Service/AsyncListManager.cpp:
+
+          Clean up runtime failures.
+
+        * orbsvcs/tests/ImplRepo/servers_list/Test.idl:
+
+          Make the abort() operation a oneway so that commfails are avoided
+          in the client.
+
+        Sun May 12 16:45:48 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * orbsvcs/ImplRepo_Service/AsyncAccessManager.h:
+        * orbsvcs/ImplRepo_Service/AsyncAccessManager.cpp:
+        * orbsvcs/ImplRepo_Service/AsyncListManager.h:
+        * orbsvcs/ImplRepo_Service/AsyncListManager.cpp:
+        * orbsvcs/ImplRepo_Service/ImR_Locator_i.cpp:
+        * orbsvcs/ImplRepo_Service/ImplRepo_Service.mpc:
+        * orbsvcs/ImplRepo_Service/Iterator.h:
+        * orbsvcs/ImplRepo_Service/Iterator.cpp:
+        * orbsvcs/ImplRepo_Service/LiveCheck.h:
+        * orbsvcs/ImplRepo_Service/LiveCheck.cpp:
+
+          Asynchronous List operation implementation. Since the list operation
+          may trigger pings, it needed to be event driven similar to the access
+          and start up of registered servers.
+
+        * orbsvcs/tests/ImplRepo/ReconnectServer/run_test.pl:
+        * orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl:
+        * orbsvcs/tests/ImplRepo/servers_list/run_test.pl:
+
+          Improve debugging and shutdown performance.
+
+        Wed May  8 22:13:12 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * tao/Intrusive_Ref_Count_Handle_T.h:
+        * tao/Intrusive_Ref_Count_Handle_T.inl:
+
+          Added an equivalence operator that returns true if the two handles
+          point to the same underlying object. This allows the handle type to
+          be used in generic containers.
+
+
+
+Mon May 13 14:15:13 UTC 2013  Brian Johnson  <johnsonb@ociweb.com>
+
+        * orbsvcs/tests/LoadBalancing/GenericFactory/DeadMemberDetection_App_Ctrl/DMD_App_Ctrl.mpc:
+        * orbsvcs/tests/LoadBalancing/GenericFactory/DeadMemberDetection_Inf_Ctrl/DMD_Inf_Ctrl.mpc:
+
+          Renamed mpc file to prevent hitting the maximum filename length on windows.
+
+        * orbsvcs/tests/LoadBalancing/GenericFactory/DeadMemberDetection_App_Ctrl/DeadMemberDetection_App_Ctrl.mpc:
+        * orbsvcs/tests/LoadBalancing/GenericFactory/DeadMemberDetection_Inf_Ctrl/DeadMemberDetection_Inf_Ctrl.mpc:
+
+          Removed these files.
+
+Mon May 13 07:14:00 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * NEWS:
+          Make 2.1.9 public and prepare for the next minor release
+
 Mon May 13 08:52:11 CEST 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * TAO version 2.1.9 released.

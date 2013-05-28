@@ -1,4 +1,4 @@
-// $Id: server.cpp 91825 2010-09-17 09:10:22Z johnnyw $
+// $Id: server.cpp 97145 2013-05-17 13:42:03Z sma $
 
 #include "_pch.h"
 
@@ -44,6 +44,17 @@ class Person_i
   , public virtual CORBA::DefaultValueRefCountBase
 {
 public:
+  ::CORBA::ValueBase *_copy_value ()
+  {
+    ::CORBA::ValueBase *ret_val = 0;
+    ACE_NEW_THROW_EX (
+      ret_val,
+      Person_i (),
+      ::CORBA::NO_MEMORY ()
+    );
+    return ret_val;
+  }
+
   void debit(CORBA::Long amt)
   {
     CORBA::Long tmp = balance();

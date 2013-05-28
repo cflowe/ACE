@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: OS_NS_netdb.inl 96760 2013-02-05 21:11:03Z stanleyk $
+// $Id: OS_NS_netdb.inl 97130 2013-05-13 17:36:26Z mesnier_p $
 
 #include "ace/OS_NS_macros.h"
 #include "ace/OS_NS_string.h"

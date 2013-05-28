@@ -4,7 +4,7 @@
 /**
  *  @file AMH_DSI_Response_Handler.h
  *
- *  $Id: AMH_DSI_Response_Handler.h 93359 2011-02-11 11:33:12Z mcorino $
+ *  $Id: AMH_DSI_Response_Handler.h 97145 2013-05-17 13:42:03Z sma $
  *
  *  @brief Handle the Response appropriately.
  */
@@ -151,6 +151,7 @@ public:
   TAO_AMH_DSI_Exception_Holder (CORBA::Exception *ex);
 
   virtual ~TAO_AMH_DSI_Exception_Holder (void);
+  virtual ::CORBA::ValueBase *_copy_value (void);
 
   static TAO_AMH_DSI_Exception_Holder* _downcast ( CORBA::ValueBase* );
 
@@ -241,7 +242,6 @@ public:
   static TAO_AMH_DSI_Response_Handler* _unchecked_narrow (CORBA::Object_ptr);
 
 protected:
-
   /// Return 0.  Should never be used.
   virtual const char *_interface_repository_id (void) const;
 

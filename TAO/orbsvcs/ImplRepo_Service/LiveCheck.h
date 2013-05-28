@@ -2,7 +2,7 @@
 /*
  * @file LiveCheck.h
  *
- * $Id: LiveCheck.h 97093 2013-05-01 21:14:49Z mesnier_p $
+ * $Id: LiveCheck.h 97156 2013-05-20 16:42:50Z mesnier_p $
  *
  * @author Phil Mesnier <mesnier_p@ociweb.com>
  */
@@ -23,7 +23,10 @@
 #pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
+#include "tao/Intrusive_Ref_Count_Handle_T.h"
+
 class LiveCheck;
+class LiveEntry;
 
 //---------------------------------------------------------------------------
 /*
@@ -32,9 +35,11 @@ class LiveCheck;
  * @brief indication of the known condition of a target server
  *
  *  LS_UNKNOWN   - The server hasn't yet been pinged
+ *  LS_PING_AWAY - A ping request has been issued, waiting for reply
  *  LS_DEAD      - The ping failed for reasons other than POA Activation
  *  LS_ALIVE     - The server positively acknowledged a ping
  *  LS_TRANSIENT - The server connected, but acively raised a transient
+ *  LS_LAST_TRANSIENT - The maximum number of retries is reached
  *  LS_TIMEDOUT  - The server connected, but never returned any result.
  */
 enum LiveStatus {
@@ -69,6 +74,12 @@ class Locator_Export LiveListener
 
   virtual ~LiveListener (void);
 
+  /// sets the initial status volue, set by entry during an add_listener call
+  void entry (const LiveEntry *entry);
+
+  /// Query the status of the associated entry
+  LiveStatus status (void) const;
+
   /// called by the asynch ping receiver when a reply or an exception
   /// is received. Returns true if finished listening
   virtual bool status_changed (LiveStatus status) = 0;
@@ -76,42 +87,19 @@ class Locator_Export LiveListener
   /// accessor for the server name. Used by the LiveCheck to associate a listener
   const char *server (void) const;
 
-  LiveListener *add_ref (void);
-  void remove_ref (void);
+  LiveListener *_add_ref (void);
+  void _remove_ref (void);
+
+ protected:
+  ACE_CString server_;
+  const LiveEntry *entry_;
 
  private:
-  ACE_CString server_;
-
   int refcount_;
   TAO_SYNCH_MUTEX lock_;
 };
 
-class LiveListener_ptr
-{
-public:
-  LiveListener_ptr (void);
-  LiveListener_ptr (LiveListener *aam);
-  LiveListener_ptr (const LiveListener_ptr &aam_ptr);
-  ~LiveListener_ptr (void);
-
-  LiveListener_ptr &operator = (const LiveListener_ptr &aam_ptr);
-  LiveListener_ptr &operator = (LiveListener *aam);
-  const LiveListener * operator-> () const;
-  const LiveListener * operator* () const;
-  LiveListener * operator-> ();
-  LiveListener * operator* ();
-  bool operator== (const LiveListener_ptr &aam_ptr) const;
-  bool operator== (const LiveListener *aam) const;
-
-  LiveListener * clone (void) const;
-  LiveListener * _retn (void);
-
-  void assign (LiveListener *aam);
-
-private:
-  LiveListener * val_;
-};
-
+typedef TAO_Intrusive_Ref_Count_Handle<LiveListener> LiveListener_ptr;
 
 //---------------------------------------------------------------------------
 /*
@@ -138,6 +126,9 @@ class Locator_Export LiveEntry
   void status (LiveStatus l);
   void reset_status (void);
 
+  /// the current state value as text
+  static const char *status_name (LiveStatus s);
+
   void update_listeners (void);
   bool validate_ping (bool &want_reping, ACE_Time_Value &next);
   void do_ping (PortableServer::POA_ptr poa);
@@ -153,7 +144,6 @@ class Locator_Export LiveEntry
   ImplementationRepository::ServerObject_var ref_;
   LiveStatus liveliness_;
   ACE_Time_Value next_check_;
-  short retry_count_;
   int repings_;
   int max_retry_;
   bool may_ping_;

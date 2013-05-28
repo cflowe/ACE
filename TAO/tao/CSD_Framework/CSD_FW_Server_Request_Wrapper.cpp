@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: CSD_FW_Server_Request_Wrapper.cpp 96992 2013-04-11 18:07:48Z huangh $
+// $Id: CSD_FW_Server_Request_Wrapper.cpp 97149 2013-05-19 13:24:54Z mesnier_p $
 
 #include "tao/CSD_Framework/CSD_FW_Server_Request_Wrapper.h"
 #include "tao/debug.h"
@@ -264,12 +264,10 @@ TAO::CSD::FW_Server_Request_Wrapper::clone (TAO_ServerRequest*& request)
   // ACTION: Primitive data type assignment.
   clone_obj->argument_flag_ = request->argument_flag_;
 
-  //#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   // TYPE: size_t
   // ACTION: Primitive data type assignment.
-  //         Just leave this alone for a clone.
-  //
-  //clone_obj->interceptor_count_ = request->interceptor_count_;
+  clone_obj->interceptor_count_ = request->interceptor_count_;
 
   // TYPE: TAO::PICurrent_Impl
   // ACTION: Copy/assignment operator disabled on purpose.
@@ -283,7 +281,7 @@ TAO::CSD::FW_Server_Request_Wrapper::clone (TAO_ServerRequest*& request)
   //         Just leave this alone for a clone.
   //
   //clone_obj->result_seq_ = request->result_seq_;
-  //#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
 
   if (clone_obj->transport_ != 0)
     {

@@ -108,6 +108,7 @@ else
 LDFLAGS      += -L. $(if $(ARCH),-L./$(ARCH)) -L../lib $(if $(ARCH),-L../lib/$(ARCH))
 endif
 CPPFLAGS     += -I..
+CPPFLAGS     += -DNOMINMAX
 ifeq ($(static_libs),1)
   CPPFLAGS += -DACE_AS_STATIC_LIBS
   ifeq ($(link_groups), 1)

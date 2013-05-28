@@ -1,4 +1,4 @@
-// $Id: ObjectReferenceTemplate_i.cpp 91628 2010-09-07 11:11:12Z johnnyw $
+// $Id: ObjectReferenceTemplate_i.cpp 97167 2013-05-24 07:57:47Z sma $
 
 #include "tao/ObjRefTemplate/ObjectReferenceTemplate_i.h"
 #include "tao/PortableServer/Root_POA.h"
@@ -24,6 +24,23 @@ namespace TAO
 
   ObjectReferenceTemplate::~ObjectReferenceTemplate (void)
   {
+  }
+
+  ::CORBA::ValueBase *
+  ObjectReferenceTemplate::_copy_value (void)
+  {
+    ::CORBA::ValueBase *ret_val= 0;
+    ACE_NEW_THROW_EX (
+      ret_val,
+      ObjectReferenceTemplate (
+        server_id_,
+        orb_id_,
+        adapter_name_,
+        poa_.in ()
+      ),
+      ::CORBA::NO_MEMORY ()
+    );
+    return ret_val;
   }
 
   char *

@@ -1,4 +1,4 @@
-// $Id: LB_ObjectReferenceFactory.cpp 97014 2013-04-12 22:47:02Z mitza $
+// $Id: LB_ObjectReferenceFactory.cpp 97145 2013-05-17 13:42:03Z sma $
 
 #include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/LoadBalancing/LB_ObjectReferenceFactory.h"
@@ -46,6 +46,14 @@ TAO_LB_ObjectReferenceFactory::TAO_LB_ObjectReferenceFactory (
   ACE_OS::memset (this->registered_members_,
                   0,
                   len * sizeof (CORBA::Boolean));
+}
+
+::CORBA::ValueBase *
+TAO_LB_ObjectReferenceFactory::_copy_value (void)
+{
+  ::CORBA::ValueBase *ret_val= 0;
+  // Not implimented
+  return ret_val;
 }
 
 TAO_LB_ObjectReferenceFactory::~TAO_LB_ObjectReferenceFactory (void)
@@ -225,6 +233,5 @@ TAO_LB_ObjectReferenceFactory::load_managed_object (const char * repository_id,
 
   return false;
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL

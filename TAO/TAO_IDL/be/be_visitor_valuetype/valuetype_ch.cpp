@@ -3,7 +3,7 @@
 /**
  *  @file    valuetype_ch.cpp
  *
- *  $Id: valuetype_ch.cpp 95536 2012-02-20 12:34:23Z johnnyw $
+ *  $Id: valuetype_ch.cpp 97145 2013-05-17 13:42:03Z sma $
  *
  *  Visitor generating code for Valuetypes in the client header
  *  (see C++ mapping OMG 20.17)
@@ -174,12 +174,13 @@ be_visitor_valuetype_ch::visit_valuetype (be_valuetype *node)
 
   if (is_an_amh_exception_holder)
     {
-      // Generate the constructor and destructor.
+      // Generate the constructor and destructor and _copy_value.
       *os << be_nl_2
           << node->local_name () << " ( ::CORBA::Exception *ex)" << be_idt_nl
           << ": exception (ex)" << be_uidt_nl
           << "{}" << be_nl_2
-          << "virtual ~" << node->local_name () << " (void);";
+          << "virtual ~" << node->local_name () << " (void);" << be_nl
+          << "virtual ::CORBA::ValueBase *_copy_value (void);";
     }
 
   *os << be_nl_2

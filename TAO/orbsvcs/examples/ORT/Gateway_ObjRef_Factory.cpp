@@ -1,4 +1,4 @@
-// $Id: Gateway_ObjRef_Factory.cpp 77020 2007-02-12 13:56:49Z johnnyw $
+// $Id: Gateway_ObjRef_Factory.cpp 97167 2013-05-24 07:57:47Z sma $
 
 #include "Gateway_ObjRef_Factory.h"
 
@@ -10,6 +10,22 @@ Gateway_ObjRef_Factory (
     old_factory_ (old_factory)
 {
   CORBA::add_ref (old_factory);
+}
+
+::CORBA::ValueBase *
+Gateway_ObjRef_Factory::_copy_value (void)
+{
+  Gateway_ObjRef_Factory *ret_val= 0;
+  ACE_NEW_THROW_EX (
+    ret_val,
+    Gateway_ObjRef_Factory (
+      gateway_object_factory_.in (),
+      old_factory_
+    ),
+    ::CORBA::NO_MEMORY ()
+  );
+
+  return ret_val;
 }
 
 CORBA::Object_ptr

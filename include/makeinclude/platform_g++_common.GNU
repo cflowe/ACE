@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_g++_common.GNU 96866 2013-02-26 23:12:39Z shuston $
+# $Id: platform_g++_common.GNU 97130 2013-05-13 17:36:26Z mesnier_p $
 
 ifeq ($(openmp),1)
 FLAGS_C_CC += -fopenmp

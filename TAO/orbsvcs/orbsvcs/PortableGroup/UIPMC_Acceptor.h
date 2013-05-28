@@ -4,7 +4,7 @@
 /**
  *  @file     UIPMC_Acceptor.h
  *
- *  $Id: UIPMC_Acceptor.h 96029 2012-08-10 14:01:17Z sma $
+ *  $Id: UIPMC_Acceptor.h 97137 2013-05-16 09:01:45Z sma $
  *
  *  MIOP specific acceptor processing
  *
@@ -32,6 +32,9 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
+// Note [] as sizeof used to infer length
+static const char CopyPreferredInterfaceToken[]= "$$$$";
+
 // TAO UIPMC_Acceptor concrete call definition
 
 /**
@@ -45,7 +48,8 @@ class TAO_PortableGroup_Export TAO_UIPMC_Acceptor : public TAO_Acceptor
 {
 public:
   /// Constructor.
-  TAO_UIPMC_Acceptor (bool listen_on_all_ifs);
+  TAO_UIPMC_Acceptor (bool listen_on_all_ifs,
+                      const char *listener_interfaces);
 
   /// Destructor.
   ~TAO_UIPMC_Acceptor (void);
@@ -143,6 +147,7 @@ protected:
 
 private:
   bool listen_on_all_;
+  ACE_CString listener_interfaces_;
 };
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -3,7 +3,7 @@
 /**
  *  @file    valuetype_obv_cs.h
  *
- *  $Id: valuetype_obv_cs.h 88845 2010-02-04 12:43:28Z johnnyw $
+ *  $Id: valuetype_obv_cs.h 97145 2013-05-17 13:42:03Z sma $
  *
  *  Visitor generating code for Valuetypes
  *  OBV_ class implementation
@@ -14,7 +14,6 @@
  *  @author derived from interface_ch.cpp from Aniruddha Gokhale
  */
 //=============================================================================
-
 
 #ifndef _BE_VALUETYPE_VALUETYPE_OBV_CS_H_
 #define _BE_VALUETYPE_VALUETYPE_OBV_CS_H_
@@ -47,7 +46,11 @@ private:
   /// Called by method above to generate base class constructor call.
   void gen_obv_init_base_constructor_args (be_valuetype *node,
                                            unsigned long &index);
+
+  /// Called to generate the initalizing constructor call for the
+  /// generated _copy_value method.
+  void gen_obv_call_base_constructor_args (be_valuetype *node,
+                                           unsigned long &index);
 };
 
 #endif /* _BE_VALUETYPE_VALUETYPE_OBV_CS_H_ */
-

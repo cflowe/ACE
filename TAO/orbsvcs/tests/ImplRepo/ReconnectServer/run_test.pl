@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 97091 2013-05-01 13:36:35Z mesnier_p $
+# $Id: run_test.pl 97131 2013-05-13 19:18:55Z mesnier_p $
 # -*- perl -*-
 
 ###############################################################################
@@ -33,7 +33,7 @@ my $ping_ext = '';
 foreach my $i (@ARGV) {
     if ($i eq '-debug') {
         $debug_level = '10';
-        $imr_debug_level = '1';
+        $imr_debug_level = '3';
     }
     if ($i eq '-forwardalways') {
         $delay = '5';

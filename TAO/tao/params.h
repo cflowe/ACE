@@ -4,7 +4,7 @@
 /**
  *  @file    params.h
  *
- *  $Id: params.h 96760 2013-02-05 21:11:03Z stanleyk $
+ *  $Id: params.h 97137 2013-05-16 09:01:45Z sma $
  *
  *  @author Chris Cleeland
  */
@@ -211,9 +211,12 @@ public:
   void disable_rt_collocation_resolver (bool);
 
   /// Accepts the list of preferred interfaces and does a simple
-  /// semantic check on the string
+  /// semantic check on the string before setting. Also the getter.
   bool preferred_interfaces (const char *s);
   const char *preferred_interfaces (void) const;
+
+  /// Utility function called by the preferred interfaces setter
+  static bool check_preferred_interfaces_string (const char *);
 
   void enforce_pref_interfaces (bool p);
   bool enforce_pref_interfaces (void) const;

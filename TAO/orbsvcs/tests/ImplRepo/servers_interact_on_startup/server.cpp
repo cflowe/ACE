@@ -1,4 +1,4 @@
-// $Id: server.cpp 97086 2013-04-29 16:41:37Z mesnier_p $
+// $Id: server.cpp 97135 2013-05-14 15:20:18Z mesnier_p $
 
 // server.cpp
 // This version uses the Implementation Repository.
@@ -186,7 +186,7 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
 
     {
       ACE_CString status_file = poa_name + ACE_CString(".status");
-      ofstream out(status_file.c_str ());
+      ofstream out(status_file.c_str (), ios_base::app);
       out << "started" << endl;
     }
 

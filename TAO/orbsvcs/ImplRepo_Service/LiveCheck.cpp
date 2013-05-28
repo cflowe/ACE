@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LiveCheck.cpp 97093 2013-05-01 21:14:49Z mesnier_p $
+// $Id: LiveCheck.cpp 97162 2013-05-21 13:27:58Z mesnier_p $
 
 #include "LiveCheck.h"
 #include "ImR_Locator_i.h"
@@ -28,7 +28,7 @@ LiveListener::server (void) const
 }
 
 LiveListener *
-LiveListener::add_ref (void)
+LiveListener::_add_ref (void)
 {
   ACE_GUARD_RETURN (TAO_SYNCH_MUTEX, mon, this->lock_, 0);
   ++this->refcount_;
@@ -36,7 +36,7 @@ LiveListener::add_ref (void)
 }
 
 void
-LiveListener::remove_ref (void)
+LiveListener::_remove_ref (void)
 {
   int count = 0;
   {
@@ -52,126 +52,31 @@ LiveListener::remove_ref (void)
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
 
-LiveListener_ptr::LiveListener_ptr (void)
-  : val_ (0)
-{
-}
-
-LiveListener_ptr::LiveListener_ptr (LiveListener *ll)
-  :val_ (ll)
-{
-}
-
-LiveListener_ptr::LiveListener_ptr (const LiveListener_ptr &ll_ptr)
-  :val_ (ll_ptr.clone())
-{
-}
-
-LiveListener_ptr::~LiveListener_ptr (void)
-{
-  if (val_ != 0)
-    {
-      val_->remove_ref();
-    }
-}
-
-LiveListener_ptr &
-LiveListener_ptr::operator= (const LiveListener_ptr &ll_ptr)
-{
-  if (val_ != *ll_ptr)
-    {
-      if (val_ != 0)
-        {
-          val_->remove_ref();
-        }
-      val_ = ll_ptr.clone();
-    }
-  return *this;
-}
-
-LiveListener_ptr &
-LiveListener_ptr::operator= (LiveListener *ll)
-{
-  if (val_ != ll)
-    {
-      if (val_ != 0)
-        {
-          val_->remove_ref();
-        }
-      val_ = ll;
-    }
-  return *this;
-}
-
-const LiveListener *
-LiveListener_ptr::operator-> () const
-{
-  return val_;
-}
-
-const LiveListener *
-LiveListener_ptr::operator* () const
-{
-  return val_;
-}
-
-LiveListener *
-LiveListener_ptr::operator-> ()
-{
-  return val_;
-}
-
-LiveListener *
-LiveListener_ptr::operator* ()
-{
-  return val_;
-}
-
-bool
-LiveListener_ptr::operator== (const LiveListener_ptr &ll_ptr) const
-{
-  return val_ == *ll_ptr;
-}
-
-bool
-LiveListener_ptr::operator== (const LiveListener *ll) const
-{
-  return val_ == ll;
-}
-
-LiveListener *
-LiveListener_ptr::clone (void) const
-{
-  if (val_ != 0)
-    {
-      val_->add_ref();
-    }
-  return val_;
-}
-
-LiveListener *
-LiveListener_ptr::_retn (void)
-{
-  LiveListener * ll = val_;
-  val_ = 0;
-  return ll;
-}
-
-void
-LiveListener_ptr::assign (LiveListener *ll)
-{
-  if (val_ != 0)
-    {
-      val_->remove_ref();
-    }
-  val_ = ll;
-}
-
-//---------------------------------------------------------------------------
-//---------------------------------------------------------------------------
-
 const int LiveEntry::reping_msec_[] = {10, 100, 500, 1000, 1000, 2000, 2000, 5000, 5000};
 int LiveEntry::reping_limit_ = sizeof (LiveEntry::reping_msec_) / sizeof (int);
+
+const ACE_TCHAR *
+LiveEntry::status_name (LiveStatus s)
+{
+  switch (s)
+    {
+    case LS_UNKNOWN:
+      return ACE_TEXT ("UNKNOWN");
+    case LS_PING_AWAY:
+      return ACE_TEXT ("PING_AWAY");
+    case LS_DEAD:
+      return ACE_TEXT ("DEAD");
+    case LS_ALIVE:
+      return ACE_TEXT ("ALIVE");
+    case LS_TRANSIENT:
+      return ACE_TEXT ("TRANSIENT");
+    case LS_LAST_TRANSIENT:
+      return ACE_TEXT ("LAST_TRANSIENT");
+    case LS_TIMEDOUT:
+      return ACE_TEXT ("TIMEDOUT");
+    }
+  return ACE_TEXT ("<undefined status>");
+}
 
 void
 LiveEntry::set_reping_limit (int max)
@@ -230,7 +135,7 @@ void
 LiveEntry::add_listener (LiveListener *ll)
 {
   ACE_GUARD (TAO_SYNCH_MUTEX, mon, this->lock_);
-  LiveListener_ptr llp(ll->add_ref());
+  LiveListener_ptr llp(ll->_add_ref());
   this->listeners_.insert (llp);
 }
 
@@ -312,8 +217,10 @@ LiveEntry::status (LiveStatus l)
       if (ImR_Locator_i::debug () > 2)
         {
           ORBSVCS_DEBUG ((LM_DEBUG,
-                          ACE_TEXT ("(%P|%t) LiveEntry::status change, server = %C status = %d\n"),
-                          this->server_.c_str(), this->liveliness_));
+                          ACE_TEXT ("(%P|%t) LiveEntry::status change, ")
+                          ACE_TEXT ("server = %C status = %s\n"),
+                          this->server_.c_str(),
+                          status_name (this->liveliness_)));
         }
       this->owner_->schedule_ping (this);
     }
@@ -340,8 +247,8 @@ LiveEntry::validate_ping (bool &want_reping, ACE_Time_Value& next)
         {
           ORBSVCS_DEBUG ((LM_DEBUG,
                           ACE_TEXT ("(%P|%t) LiveEntry::validate_ping, status ")
-                          ACE_TEXT ("= %d, listeners = %d server %C\n"),
-                          this->liveliness_, this->listeners_.size (),
+                          ACE_TEXT ("= %s, listeners = %d server %C\n"),
+                          status_name (this->liveliness_), this->listeners_.size (),
                           this->server_.c_str()));
         }
       return false;
@@ -360,10 +267,10 @@ LiveEntry::validate_ping (bool &want_reping, ACE_Time_Value& next)
         {
           ORBSVCS_DEBUG ((LM_DEBUG,
                           ACE_TEXT ("(%P|%t) LiveEntry::validate_ping, ")
-                          ACE_TEXT ("status = %d, listeners = %d, ")
+                          ACE_TEXT ("status = %s, listeners = %d, ")
                           ACE_TEXT ("diff = %d,%d, msec = %d ")
                           ACE_TEXT ("server %C\n"),
-                          this->liveliness_, this->listeners_.size (),
+                          status_name (this->liveliness_), this->listeners_.size (),
                           diff.sec(), diff.usec(), msec,
                           this->server_.c_str()));
         }
@@ -433,11 +340,23 @@ LiveEntry::do_ping (PortableServer::POA_ptr poa)
   try
     {
       this->ref_->sendc_ping (cb.in());
+      if (ImR_Locator_i::debug () > 3)
+        {
+          ORBSVCS_DEBUG ((LM_DEBUG,
+                          ACE_TEXT ("(%P|%t) LiveEntry::do_ping, ")
+                          ACE_TEXT ("sendc_ping returned OK\n")));
+        }
       ACE_GUARD (TAO_SYNCH_MUTEX, mon, this->lock_);
       this->liveliness_ = LS_PING_AWAY;
     }
-  catch (CORBA::Exception &)
+  catch (CORBA::Exception &ex)
     {
+      if (ImR_Locator_i::debug () > 3)
+        {
+          ORBSVCS_DEBUG ((LM_DEBUG,
+                          ACE_TEXT ("(%P|%t) LiveEntry::do_ping, ")
+                          ACE_TEXT ("sendc_ping threw %C\n"), ex._name()));
+        }
       this->status (LS_DEAD);
     }
 }
@@ -587,7 +506,7 @@ LiveCheck::handle_timeout (const ACE_Time_Value &,
         }
       else
         {
-          if (ImR_Locator_i::debug () > 5)
+          if (ImR_Locator_i::debug () > 4)
             {
               ORBSVCS_DEBUG ((LM_DEBUG,
                               ACE_TEXT ("(%P|%t) LiveCheck::handle_timeout(%d)")
@@ -627,8 +546,8 @@ LiveCheck::handle_timeout (const ACE_Time_Value &,
         {
           ORBSVCS_DEBUG ((LM_DEBUG,
                           ACE_TEXT ("(%P|%t) LiveCheck::handle_timeout(%d),")
-                          ACE_TEXT (" want reping, delay = %d,%d\n"),
-                          token, delay.sec(), delay.usec()));
+                          ACE_TEXT (" want reping(%d), delay = %d,%d\n"),
+                          token, this->token_, delay.sec(), delay.usec()));
         }
       this->reactor()->schedule_timer (this, reinterpret_cast<void *>(this->token_), delay);
     }

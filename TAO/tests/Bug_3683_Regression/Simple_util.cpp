@@ -1,4 +1,4 @@
-// $Id: Simple_util.cpp 96986 2013-04-11 16:39:42Z mesnier_p $
+// $Id: Simple_util.cpp 97131 2013-05-13 19:18:55Z mesnier_p $
 
 #ifndef SIMPLE_UTIL_C
 #define SIMPLE_UTIL_C

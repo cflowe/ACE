@@ -1,3 +1,85 @@
+Mon May 27 10:09:24 CEST 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * ACE version 6.2.0 released.
+
+Tue May 21 17:24:39 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tests/Compiler_Features_16_Test.cpp:
+          Added a forward declared enum after it has been declared
+
+Mon May 20 18:40:20 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tests/Compiler_Features_16_Test.cpp:
+          Added also a forward declared enum
+
+Fri May 17 13:48:34 UTC 2013  Adam Mitz  <mitza@ociweb.com>
+
+        * bin/fuzz.pl:
+
+          Updated regex for finding logging macros.
+
+Fri May 17 09:32:04 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tests/tests.mpc:
+          Add NOMINMAX to macros for compiler features test 16/17
+
+Fri May 17 09:26:22 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tests/Compiler_Features_19_Test.cpp:
+          Added missing include
+
+Thu May 16 17:52:36 UTC 2013  Adam Mitz  <mitza@ociweb.com>
+
+        * ace/Select_Reactor_T.cpp:
+
+          If a handler has to be removed by check_handles(),
+          also remove it from the three masks in the wait_set_.
+
+        * ace/Handle_Set.inl:
+        * ace/OS_NS_unistd.inl:
+        * ace/config-vxworks6.9.h:
+        * bin/PerlACE/ProcessVX.pm:
+        * tests/Log_Msg_Test.cpp:
+
+          Updated for port to 64-bit VxWorks 6.9 (x86 RTP static).
+
+        * bin/fuzz.pl:
+
+          Updated check for logging macros for the case
+          where the current directory is ACE_ROOT.
+
+Mon May 13 17:27:37 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        Merging from branch OCI_Asynch_IMR:
+        Wed May  8 21:42:24 UTC 2013  Phil Mesnier  <mesnier_p@ociweb.com>
+
+        * ace/Countdown_Time_T.cpp:
+        * ace/Countdown_Time_T.h:
+
+          Make the countdown time instances nestable. Prior to this change,
+          if a function using the countdown time to subtract a duration
+          happened to call another function that also used a countdown time
+          instance to subtract from the same instance, the inner countdown
+          would subtract its span and then the outer one would do the same
+          resulting in the same span of time being subtracted twice.
+
+Mon May 13 17:34:28 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * tests/INET_Addr_Test.cpp:
+          Fixed error in logging
+
+        * tests/Multihomed_INET_Addr_Test.cpp:
+          Unicode fixes
+
+Mon May 13 07:13:57 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * NEWS:
+        * bin/diff-builds-and-group-fixed-tests-only.sh:
+        * docs/Download.html:
+        * docs/bczar/bczar.html:
+        * etc/index.html:
+          Make 6.1.9 public and prepare for the next minor release
+
 Mon May 13 08:52:11 CEST 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * ACE version 6.1.9 released.
@@ -328,7 +410,6 @@ Thu Apr 11 15:45:41 UTC 2013  Huang-Ming Huang  <huangh@ociweb.com>
         * ace/Module.cpp:
         * ace/Monitor_Admin.cpp:
         * ace/Monitor_Base.cpp:
-
         * ace/Monitor_Control/BSD_Network_Interface_Monitor.cpp:
         * ace/Monitor_Control/CPU_Load_Monitor.cpp:
         * ace/Monitor_Control/Constraint_Interpreter.cpp:
@@ -370,13 +451,11 @@ Thu Apr 11 15:45:41 UTC 2013  Huang-Ming Huang  <huangh@ociweb.com>
         * ace/Process_Mutex.cpp:
         * ace/Process_Semaphore.cpp:
         * ace/Profile_Timer.cpp:
-
         * ace/QoS/QoS_Manager.cpp:
         * ace/QoS/QoS_Session_Factory.cpp:
         * ace/QoS/QoS_Session_Impl.inl:
         * ace/QoS/QoS_Session_Impl.cpp:
         * ace/QoS/SOCK_Dgram_Mcast_QoS.cpp:
-
         * ace/RB_Tree.inl:
         * ace/RB_Tree.cpp:
         * ace/RW_Mutex.cpp:
@@ -401,13 +480,11 @@ Thu Apr 11 15:45:41 UTC 2013  Huang-Ming Huang  <huangh@ociweb.com>
         * ace/SOCK_SEQPACK_Connector.cpp:
         * ace/SPIPE_Acceptor.cpp:
         * ace/SPIPE_Connector.cpp:
-
         * ace/SSL/SSL_Asynch_Stream.cpp:
         * ace/SSL/SSL_Context.cpp:
         * ace/SSL/SSL_SOCK_Acceptor.cpp:
         * ace/SSL/SSL_SOCK_Connector.cpp:
         * ace/SSL/SSL_SOCK_Stream.cpp:
-
         * ace/SUN_Proactor.cpp:
         * ace/SV_Message_Queue.cpp:
         * ace/SV_Semaphore_Complex.cpp:
@@ -476,9 +553,7 @@ Thu Apr 11 15:45:41 UTC 2013  Huang-Ming Huang  <huangh@ociweb.com>
         * ace/WFMO_Reactor.cpp:
         * ace/WIN32_Asynch_IO.cpp:
         * ace/WIN32_Proactor.cpp:
-
         * ace/XML_Utils/XML_Error_Handler.cpp:
-
         * ace/XTI_ATM_Mcast.inl:
         Change the use of ACE_ERROR/ACE_DEBUG macros inside ace to ACELIB_ERROR/ACELIB_DEBUG.
 

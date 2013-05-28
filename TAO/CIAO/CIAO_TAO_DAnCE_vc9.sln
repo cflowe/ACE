@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE -workers 14 -name_modifier "*_vc9"
+# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE -workers 20 -name_modifier "*_vc9"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACE", "..\..\ace\ACE_vc9.vcproj", "{BD537C9A-FECA-1BAD-6757-8A6300006755}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACE_Compression", "..\..\ace\Compression\ACE_Compression_vc9.vcproj", "{F7A46F8F-FECA-1BAD-EA06-BB371373EA04}"
@@ -838,7 +838,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZIOP", "..\tao\ZIOP\ZIOP_vc
 		{5F53591B-FECA-1BAD-EDA2-8A6627DFE878} = {5F53591B-FECA-1BAD-EDA2-8A6627DFE878}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\DAnCE_IDL_vc9.vcproj", "{B2D0EB3D-FECA-1BAD-5C40-2D6827CFC82F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\DAnCE_IDL_vc9.vcproj", "{B2D0EB3D-FECA-1BAD-5C40-2D6827CFC82F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -856,12 +856,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_IDL", "\home\build\DO
 		{57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA} = {57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Properties_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\DAnCE_Properties_IDL_vc9.vcproj", "{DACCCECF-FECA-1BAD-2551-0BE127CFC82F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Properties_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\DAnCE_Properties_IDL_vc9.vcproj", "{DACCCECF-FECA-1BAD-2551-0BE127CFC82F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\DAnCE_skel_vc9.vcproj", "{3C9796EA-FECA-1BAD-5C40-2D6827CFC82F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\DAnCE_skel_vc9.vcproj", "{3C9796EA-FECA-1BAD-5C40-2D6827CFC82F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -883,7 +883,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_skel", "\home\build\D
 		{C7ACD16A-FECA-1BAD-F0BC-F15E960D6ACA} = {C7ACD16A-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\DAnCE_stub_vc9.vcproj", "{3D7776EA-FECA-1BAD-5C40-2D6827CFC82F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\DAnCE_stub_vc9.vcproj", "{3D7776EA-FECA-1BAD-5C40-2D6827CFC82F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -903,7 +903,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_stub", "\home\build\D
 		{B2D0EB3D-FECA-1BAD-5C40-2D6827CFC82F} = {B2D0EB3D-FECA-1BAD-5C40-2D6827CFC82F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_AM_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_AM_skel_vc9.vcproj", "{C7ACD16A-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_AM_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_AM_skel_vc9.vcproj", "{C7ACD16A-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -924,7 +924,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_AM_skel", "\home
 		{C64C316A-FECA-1BAD-F0BC-F15E960D6ACA} = {C64C316A-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_AM_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_AM_stub_vc9.vcproj", "{C64C316A-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_AM_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_AM_stub_vc9.vcproj", "{C64C316A-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -943,7 +943,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_AM_stub", "\home
 		{A17B8E7B-FECA-1BAD-F0BC-F15E960D6ACA} = {A17B8E7B-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ApplicationManager_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_ApplicationManager_IDL_vc9.vcproj", "{A17B8E7B-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ApplicationManager_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_ApplicationManager_IDL_vc9.vcproj", "{A17B8E7B-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -959,7 +959,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ApplicationManag
 		{C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C} = {C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DAM_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DAM_IDL_vc9.vcproj", "{C9AFD137-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DAM_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DAM_IDL_vc9.vcproj", "{C9AFD137-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -975,7 +975,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DAM_IDL", "\home
 		{C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C} = {C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DAM_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DAM_skel_vc9.vcproj", "{8B64364D-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DAM_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DAM_skel_vc9.vcproj", "{8B64364D-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -998,7 +998,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DAM_skel", "\hom
 		{8A84D64D-FECA-1BAD-F0BC-F15E960D6ACA} = {8A84D64D-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DAM_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DAM_stub_vc9.vcproj", "{8A84D64D-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DAM_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DAM_stub_vc9.vcproj", "{8A84D64D-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1018,7 +1018,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DAM_stub", "\hom
 		{C9AFD137-FECA-1BAD-F0BC-F15E960D6ACA} = {C9AFD137-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DomainApplication_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DomainApplication_IDL_vc9.vcproj", "{E96D0F39-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DomainApplication_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DomainApplication_IDL_vc9.vcproj", "{E96D0F39-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1034,7 +1034,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DomainApplicatio
 		{C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C} = {C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DomainApplication_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DomainApplication_skel_vc9.vcproj", "{8749D6AF-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DomainApplication_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DomainApplication_skel_vc9.vcproj", "{8749D6AF-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1055,7 +1055,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DomainApplicatio
 		{86A936AF-FECA-1BAD-F0BC-F15E960D6ACA} = {86A936AF-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DomainApplication_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DomainApplication_stub_vc9.vcproj", "{86A936AF-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DomainApplication_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_DomainApplication_stub_vc9.vcproj", "{86A936AF-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1074,7 +1074,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_DomainApplicatio
 		{E96D0F39-FECA-1BAD-F0BC-F15E960D6ACA} = {E96D0F39-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ExecutionManager_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_ExecutionManager_IDL_vc9.vcproj", "{800F9E14-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ExecutionManager_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_ExecutionManager_IDL_vc9.vcproj", "{800F9E14-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1090,7 +1090,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ExecutionManager
 		{C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C} = {C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ExecutionManager_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_ExecutionManager_skel_vc9.vcproj", "{1160C479-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ExecutionManager_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_ExecutionManager_skel_vc9.vcproj", "{1160C479-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1113,7 +1113,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ExecutionManager
 		{10802479-FECA-1BAD-F0BC-F15E960D6ACA} = {10802479-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ExecutionManager_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_ExecutionManager_stub_vc9.vcproj", "{10802479-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ExecutionManager_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_ExecutionManager_stub_vc9.vcproj", "{10802479-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1134,7 +1134,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_ExecutionManager
 		{800F9E14-FECA-1BAD-F0BC-F15E960D6ACA} = {800F9E14-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_IDL_vc9.vcproj", "{847C17E1-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_IDL_vc9.vcproj", "{847C17E1-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1151,7 +1151,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_IDL", "\home\bui
 		{DACCCECF-FECA-1BAD-2551-0BE127CFC82F} = {DACCCECF-FECA-1BAD-2551-0BE127CFC82F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NAM_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NAM_IDL_vc9.vcproj", "{C9AFD197-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NAM_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NAM_IDL_vc9.vcproj", "{C9AFD197-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1167,7 +1167,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NAM_IDL", "\home
 		{C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C} = {C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NAM_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NAM_skel_vc9.vcproj", "{8B643C4D-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NAM_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NAM_skel_vc9.vcproj", "{8B643C4D-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1190,7 +1190,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NAM_skel", "\hom
 		{8A84DC4D-FECA-1BAD-F0BC-F15E960D6ACA} = {8A84DC4D-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NAM_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NAM_stub_vc9.vcproj", "{8A84DC4D-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NAM_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NAM_stub_vc9.vcproj", "{8A84DC4D-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1210,7 +1210,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NAM_stub", "\hom
 		{C9AFD197-FECA-1BAD-F0BC-F15E960D6ACA} = {C9AFD197-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeApplication_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeApplication_IDL_vc9.vcproj", "{5500547F-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeApplication_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeApplication_IDL_vc9.vcproj", "{5500547F-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1220,7 +1220,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeApplication_
 		{9AE77B29-FECA-1BAD-3E37-F15126B04395} = {9AE77B29-FECA-1BAD-3E37-F15126B04395}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeApplication_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeApplication_skel_vc9.vcproj", "{419C62C4-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeApplication_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeApplication_skel_vc9.vcproj", "{419C62C4-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1241,7 +1241,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeApplication_
 		{407C82C4-FECA-1BAD-F0BC-F15E960D6ACA} = {407C82C4-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeApplication_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeApplication_stub_vc9.vcproj", "{407C82C4-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeApplication_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeApplication_stub_vc9.vcproj", "{407C82C4-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1260,7 +1260,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeApplication_
 		{5500547F-FECA-1BAD-F0BC-F15E960D6ACA} = {5500547F-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeManager_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeManager_IDL_vc9.vcproj", "{181856A9-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeManager_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeManager_IDL_vc9.vcproj", "{181856A9-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1276,7 +1276,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeManager_IDL"
 		{C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C} = {C8F8EEDF-FECA-1BAD-1FCE-AE3479D5626C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeManager_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeManager_skel_vc9.vcproj", "{901C4FA0-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeManager_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeManager_skel_vc9.vcproj", "{901C4FA0-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1302,7 +1302,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeManager_skel
 		{91FCAFA0-FECA-1BAD-F0BC-F15E960D6ACA} = {91FCAFA0-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeManager_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeManager_stub_vc9.vcproj", "{91FCAFA0-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeManager_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_NodeManager_stub_vc9.vcproj", "{91FCAFA0-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1324,7 +1324,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_NodeManager_stub
 		{181856A9-FECA-1BAD-F0BC-F15E960D6ACA} = {181856A9-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_RepositoryManager_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_RepositoryManager_IDL_vc9.vcproj", "{75F04E9C-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_RepositoryManager_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_RepositoryManager_IDL_vc9.vcproj", "{75F04E9C-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1334,7 +1334,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_RepositoryManage
 		{9AE77B29-FECA-1BAD-3E37-F15126B04395} = {9AE77B29-FECA-1BAD-3E37-F15126B04395}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_RepositoryManager_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_RepositoryManager_skel_vc9.vcproj", "{4E9DCCF6-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_RepositoryManager_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_RepositoryManager_skel_vc9.vcproj", "{4E9DCCF6-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1355,7 +1355,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_RepositoryManage
 		{4F7D2CF6-FECA-1BAD-F0BC-F15E960D6ACA} = {4F7D2CF6-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_RepositoryManager_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_RepositoryManager_stub_vc9.vcproj", "{4F7D2CF6-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_RepositoryManager_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_RepositoryManager_stub_vc9.vcproj", "{4F7D2CF6-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1374,7 +1374,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_RepositoryManage
 		{75F04E9C-FECA-1BAD-F0BC-F15E960D6ACA} = {75F04E9C-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_TargetManager_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_TargetManager_IDL_vc9.vcproj", "{995FE532-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_TargetManager_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_TargetManager_IDL_vc9.vcproj", "{995FE532-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1384,7 +1384,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_TargetManager_ID
 		{9AE77B29-FECA-1BAD-3E37-F15126B04395} = {9AE77B29-FECA-1BAD-3E37-F15126B04395}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_TargetManager_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_TargetManager_skel_vc9.vcproj", "{84677618-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_TargetManager_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_TargetManager_skel_vc9.vcproj", "{84677618-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1405,7 +1405,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_TargetManager_sk
 		{85879618-FECA-1BAD-F0BC-F15E960D6ACA} = {85879618-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_TargetManager_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_TargetManager_stub_vc9.vcproj", "{85879618-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_TargetManager_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_TargetManager_stub_vc9.vcproj", "{85879618-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1424,7 +1424,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_TargetManager_st
 		{995FE532-FECA-1BAD-F0BC-F15E960D6ACA} = {995FE532-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_skel", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_skel_vc9.vcproj", "{56585B29-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_skel", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_skel_vc9.vcproj", "{56585B29-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1446,7 +1446,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_skel", "\home\bu
 		{847C17E1-FECA-1BAD-F0BC-F15E960D6ACA} = {847C17E1-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_stub_vc9.vcproj", "{57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Deployment\Deployment_stub_vc9.vcproj", "{57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1465,7 +1465,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deployment_stub", "\home\bu
 		{847C17E1-FECA-1BAD-F0BC-F15E960D6ACA} = {847C17E1-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DomainApplication", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\DomainApplication\DomainApplication_vc9.vcproj", "{219E8FD8-FECA-1BAD-89A8-BE4AFBE1A47D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DomainApplication", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\DomainApplication\DomainApplication_vc9.vcproj", "{219E8FD8-FECA-1BAD-89A8-BE4AFBE1A47D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1490,7 +1490,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DomainApplication", "\home\
 		{8B643C4D-FECA-1BAD-F0BC-F15E960D6ACA} = {8B643C4D-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_LM_Config_Plugins", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Configuration\DAnCE_LM_Config_Plugins_vc9.vcproj", "{B7F9BA43-FECA-1BAD-B793-8860ECB59552}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_LM_Config_Plugins", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Configuration\DAnCE_LM_Config_Plugins_vc9.vcproj", "{B7F9BA43-FECA-1BAD-B793-8860ECB59552}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1510,7 +1510,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_LM_Config_Plugins", "
 		{3D7776EA-FECA-1BAD-5C40-2D6827CFC82F} = {3D7776EA-FECA-1BAD-5C40-2D6827CFC82F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_LocalityManager_Exec", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Daemon\DAnCE_LocalityManager_Exec_vc9.vcproj", "{6A4A6D2E-FECA-1BAD-DF18-984CEF4517A0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_LocalityManager_Exec", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Daemon\DAnCE_LocalityManager_Exec_vc9.vcproj", "{6A4A6D2E-FECA-1BAD-DF18-984CEF4517A0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1539,7 +1539,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_LocalityManager_Exec"
 		{670F9D2E-FECA-1BAD-DF18-984CEF4517A0} = {670F9D2E-FECA-1BAD-DF18-984CEF4517A0}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_LocalityManager_Impl", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Daemon\DAnCE_LocalityManager_Impl_vc9.vcproj", "{670F9D2E-FECA-1BAD-DF18-984CEF4517A0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_LocalityManager_Impl", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Daemon\DAnCE_LocalityManager_Impl_vc9.vcproj", "{670F9D2E-FECA-1BAD-DF18-984CEF4517A0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1567,7 +1567,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_LocalityManager_Impl"
 		{3B357DA8-FECA-1BAD-50C3-1E8EF85AE9CC} = {3B357DA8-FECA-1BAD-50C3-1E8EF85AE9CC}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Locality_Handler", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Handler\DAnCE_Locality_Handler_vc9.vcproj", "{3B357DA8-FECA-1BAD-50C3-1E8EF85AE9CC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Locality_Handler", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Handler\DAnCE_Locality_Handler_vc9.vcproj", "{3B357DA8-FECA-1BAD-50C3-1E8EF85AE9CC}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1592,7 +1592,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Locality_Handler", "\
 		{01DA8BF2-FECA-1BAD-3A75-D4507CF0D4C1} = {01DA8BF2-FECA-1BAD-3A75-D4507CF0D4C1}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Error_Interceptors", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Interceptors\DAnCE_Error_Interceptors_vc9.vcproj", "{04A12C35-FECA-1BAD-D556-873F7BC8B35D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Error_Interceptors", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Interceptors\DAnCE_Error_Interceptors_vc9.vcproj", "{04A12C35-FECA-1BAD-D556-873F7BC8B35D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1615,7 +1615,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Error_Interceptors", 
 		{3C9796EA-FECA-1BAD-5C40-2D6827CFC82F} = {3C9796EA-FECA-1BAD-5C40-2D6827CFC82F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Deployment_Scheduler", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Scheduler\DAnCE_Deployment_Scheduler_vc9.vcproj", "{01DA8BF2-FECA-1BAD-3A75-D4507CF0D4C1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Deployment_Scheduler", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\LocalityManager\Scheduler\DAnCE_Deployment_Scheduler_vc9.vcproj", "{01DA8BF2-FECA-1BAD-3A75-D4507CF0D4C1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1638,14 +1638,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Deployment_Scheduler"
 		{3C9796EA-FECA-1BAD-5C40-2D6827CFC82F} = {3C9796EA-FECA-1BAD-5C40-2D6827CFC82F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Logger", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Logger\DAnCE_Logger_vc9.vcproj", "{686C7C20-FECA-1BAD-1120-8ECAD9D5EDA0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Logger", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Logger\DAnCE_Logger_vc9.vcproj", "{686C7C20-FECA-1BAD-1120-8ECAD9D5EDA0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
 		{9B5668C3-FECA-1BAD-2526-CFF1E5CFA759} = {9B5668C3-FECA-1BAD-2526-CFF1E5CFA759}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_NodeApplication", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\NodeApplication\DAnCE_NodeApplication_vc9.vcproj", "{FD3DADE2-FECA-1BAD-39EA-6DA7300BF1C5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_NodeApplication", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\NodeApplication\DAnCE_NodeApplication_vc9.vcproj", "{FD3DADE2-FECA-1BAD-39EA-6DA7300BF1C5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1676,7 +1676,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_NodeApplication", "\h
 		{3B357DA8-FECA-1BAD-50C3-1E8EF85AE9CC} = {3B357DA8-FECA-1BAD-50C3-1E8EF85AE9CC}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_NodeApplicationManager", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\NodeApplicationManager\DAnCE_NodeApplicationManager_vc9.vcproj", "{BA55903A-FECA-1BAD-32BE-4F671878CE3E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_NodeApplicationManager", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\NodeApplicationManager\DAnCE_NodeApplicationManager_vc9.vcproj", "{BA55903A-FECA-1BAD-32BE-4F671878CE3E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1711,7 +1711,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_NodeApplicationManage
 		{FD3DADE2-FECA-1BAD-39EA-6DA7300BF1C5} = {FD3DADE2-FECA-1BAD-39EA-6DA7300BF1C5}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Node_Manager_Exec", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\NodeManager\Node_Manager_Exec_vc9.vcproj", "{B09BE49D-FECA-1BAD-39B2-911BD355EE7F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Node_Manager_Exec", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\NodeManager\Node_Manager_Exec_vc9.vcproj", "{B09BE49D-FECA-1BAD-39B2-911BD355EE7F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1756,7 +1756,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Node_Manager_Exec", "\home\
 		{C3621C02-FECA-1BAD-842E-8498C52C5B05} = {C3621C02-FECA-1BAD-842E-8498C52C5B05}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_PL_Daemon_idl", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Plan_Launcher\Daemon\DAnCE_PL_Daemon_idl_vc9.vcproj", "{4D433829-FECA-1BAD-3BC8-1144339CA8FB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_PL_Daemon_idl", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Plan_Launcher\Daemon\DAnCE_PL_Daemon_idl_vc9.vcproj", "{4D433829-FECA-1BAD-3BC8-1144339CA8FB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
@@ -1774,7 +1774,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_PL_Daemon_idl", "\hom
 		{57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA} = {57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_PL_Daemon_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\Plan_Launcher\Daemon\DAnCE_PL_Daemon_stub_vc9.vcproj", "{E66A47A5-FECA-1BAD-3BC8-1144339CA8FB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_PL_Daemon_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\Plan_Launcher\Daemon\DAnCE_PL_Daemon_stub_vc9.vcproj", "{E66A47A5-FECA-1BAD-3BC8-1144339CA8FB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1793,17 +1793,17 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_PL_Daemon_stub", "\ho
 		{4D433829-FECA-1BAD-3BC8-1144339CA8FB} = {4D433829-FECA-1BAD-3BC8-1144339CA8FB}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_RepositoryManagerDaemon_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\dance\RepositoryManager\DAnCE_RepositoryManagerDaemon_IDL_vc9.vcproj", "{32AD475D-FECA-1BAD-93F1-779E3235BE24}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_RepositoryManagerDaemon_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\dance\RepositoryManager\DAnCE_RepositoryManagerDaemon_IDL_vc9.vcproj", "{32AD475D-FECA-1BAD-93F1-779E3235BE24}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Artifact_Installation_IDL", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_Artifact_Installation_IDL_vc9.vcproj", "{853450DF-FECA-1BAD-842E-8498C52C5B05}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Artifact_Installation_IDL", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_Artifact_Installation_IDL_vc9.vcproj", "{853450DF-FECA-1BAD-842E-8498C52C5B05}"
 	ProjectSection(ProjectDependencies) = postProject
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Artifact_Installation", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_Artifact_Installation_vc9.vcproj", "{05414B7A-FECA-1BAD-842E-8498C52C5B05}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Artifact_Installation", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_Artifact_Installation_vc9.vcproj", "{05414B7A-FECA-1BAD-842E-8498C52C5B05}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1829,7 +1829,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Artifact_Installation
 		{853450DF-FECA-1BAD-842E-8498C52C5B05} = {853450DF-FECA-1BAD-842E-8498C52C5B05}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_File_Installation", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_File_Installation_vc9.vcproj", "{C362E097-FECA-1BAD-842E-8498C52C5B05}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_File_Installation", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_File_Installation_vc9.vcproj", "{C362E097-FECA-1BAD-842E-8498C52C5B05}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1855,7 +1855,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_File_Installation", "
 		{9BFA1930-FECA-1BAD-2FB1-8A317DF27231} = {9BFA1930-FECA-1BAD-2FB1-8A317DF27231}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Http_Installation", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_Http_Installation_vc9.vcproj", "{C3621C02-FECA-1BAD-842E-8498C52C5B05}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Http_Installation", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_Http_Installation_vc9.vcproj", "{C3621C02-FECA-1BAD-842E-8498C52C5B05}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1882,7 +1882,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Http_Installation", "
 		{F4866C9A-FECA-1BAD-F826-8A65F7EE4449} = {F4866C9A-FECA-1BAD-F826-8A65F7EE4449}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Installation_Repository_Manager", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_Installation_Repository_Manager_vc9.vcproj", "{02EA4C7A-FECA-1BAD-842E-8498C52C5B05}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Installation_Repository_Manager", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\Artifact_Installation\DAnCE_Installation_Repository_Manager_vc9.vcproj", "{02EA4C7A-FECA-1BAD-842E-8498C52C5B05}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1908,7 +1908,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Installation_Reposito
 		{9BFA1930-FECA-1BAD-2FB1-8A317DF27231} = {9BFA1930-FECA-1BAD-2FB1-8A317DF27231}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Domain_Validator_Base", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\Domain_Validator\DAnCE_Domain_Validator_Base_vc9.vcproj", "{5A2342B6-FECA-1BAD-9924-D9262EB7059B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Domain_Validator_Base", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\Domain_Validator\DAnCE_Domain_Validator_Base_vc9.vcproj", "{5A2342B6-FECA-1BAD-9924-D9262EB7059B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1926,7 +1926,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Domain_Validator_Base
 		{57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA} = {57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Split_Plan_Impl", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\Split_Plan\DAnCE_Split_Plan_Impl_vc9.vcproj", "{AF1F8CA3-FECA-1BAD-6F3A-24795C86D245}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Split_Plan_Impl", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\Split_Plan\DAnCE_Split_Plan_Impl_vc9.vcproj", "{AF1F8CA3-FECA-1BAD-6F3A-24795C86D245}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1946,7 +1946,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_Split_Plan_Impl", "\h
 		{3D7776EA-FECA-1BAD-5C40-2D6827CFC82F} = {3D7776EA-FECA-1BAD-5C40-2D6827CFC82F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_System_Health_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\System_Health\DAnCE_System_Health_stub_vc9.vcproj", "{C670D3EE-FECA-1BAD-9F09-01D440604022}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_System_Health_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\System_Health\DAnCE_System_Health_stub_vc9.vcproj", "{C670D3EE-FECA-1BAD-9F09-01D440604022}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1965,7 +1965,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_System_Health_stub", 
 		{C4F3332E-FECA-1BAD-9F09-01D440604022} = {C4F3332E-FECA-1BAD-9F09-01D440604022}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_System_Health", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\System_Health\DAnCE_System_Health_vc9.vcproj", "{C4F3332E-FECA-1BAD-9F09-01D440604022}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_System_Health", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\System_Health\DAnCE_System_Health_vc9.vcproj", "{C4F3332E-FECA-1BAD-9F09-01D440604022}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -1983,7 +1983,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_System_Health", "\hom
 		{57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA} = {57B8BB29-FECA-1BAD-F0BC-F15E960D6ACA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Daemon_idl", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\System_Health\Daemon\DAnCE_SHS_Daemon_idl_vc9.vcproj", "{963EEF84-FECA-1BAD-3EE1-E1440F213F9C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Daemon_idl", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\System_Health\Daemon\DAnCE_SHS_Daemon_idl_vc9.vcproj", "{963EEF84-FECA-1BAD-3EE1-E1440F213F9C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -2002,7 +2002,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Daemon_idl", "\ho
 		{C670D3EE-FECA-1BAD-9F09-01D440604022} = {C670D3EE-FECA-1BAD-9F09-01D440604022}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Daemon_stub", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\System_Health\Daemon\DAnCE_SHS_Daemon_stub_vc9.vcproj", "{51B73D78-FECA-1BAD-3EE1-E1440F213F9C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Daemon_stub", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\System_Health\Daemon\DAnCE_SHS_Daemon_stub_vc9.vcproj", "{51B73D78-FECA-1BAD-3EE1-E1440F213F9C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}
@@ -2022,7 +2022,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Daemon_stub", "\h
 		{963EEF84-FECA-1BAD-3EE1-E1440F213F9C} = {963EEF84-FECA-1BAD-3EE1-E1440F213F9C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Daemon", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\System_Health\Daemon\DAnCE_SHS_Daemon_vc9.vcproj", "{BA1A5A52-FECA-1BAD-3EE1-E1440F213F9C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Daemon", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\System_Health\Daemon\DAnCE_SHS_Daemon_vc9.vcproj", "{BA1A5A52-FECA-1BAD-3EE1-E1440F213F9C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{270DD74A-FECA-1BAD-9F2E-F819A05AED51} = {270DD74A-FECA-1BAD-9F2E-F819A05AED51}
@@ -2049,7 +2049,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Daemon", "\home\b
 		{C2F804E2-FECA-1BAD-BFC0-0DE40000505F} = {C2F804E2-FECA-1BAD-BFC0-0DE40000505F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_CORBA_Transport", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\System_Health\Interceptors\DAnCE_SHS_CORBA_Transport_vc9.vcproj", "{93B2343E-FECA-1BAD-CD12-F9E74728D775}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_CORBA_Transport", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\System_Health\Interceptors\DAnCE_SHS_CORBA_Transport_vc9.vcproj", "{93B2343E-FECA-1BAD-CD12-F9E74728D775}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{686C7C20-FECA-1BAD-1120-8ECAD9D5EDA0} = {686C7C20-FECA-1BAD-1120-8ECAD9D5EDA0}
@@ -2077,7 +2077,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_CORBA_Transport",
 		{01DA8BF2-FECA-1BAD-3A75-D4507CF0D4C1} = {01DA8BF2-FECA-1BAD-3A75-D4507CF0D4C1}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Interceptors", "\home\build\DOC_ROOT\stage-978\ACE_wrappers\TAO\DAnCE\tools\System_Health\Interceptors\DAnCE_SHS_Interceptors_vc9.vcproj", "{0E639F5E-FECA-1BAD-CD12-F9E74728D775}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAnCE_SHS_Interceptors", "\home\build\DOC_ROOT\stage-1038\ACE_wrappers\TAO\DAnCE\tools\System_Health\Interceptors\DAnCE_SHS_Interceptors_vc9.vcproj", "{0E639F5E-FECA-1BAD-CD12-F9E74728D775}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BD537C9A-FECA-1BAD-6757-8A6300006755} = {BD537C9A-FECA-1BAD-6757-8A6300006755}
 		{BC01DC9A-FECA-1BAD-727D-8A63505D827F} = {BC01DC9A-FECA-1BAD-727D-8A63505D827F}

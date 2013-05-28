@@ -4,7 +4,7 @@
 /**
  * @file ObjectReferenceTemplate_i.h
  *
- * $Id: ObjectReferenceTemplate_i.h 76995 2007-02-11 12:51:42Z johnnyw $
+ * $Id: ObjectReferenceTemplate_i.h 97145 2013-05-17 13:42:03Z sma $
  *
  * This is the implementation of the
  * PortableInterceptor::ObjectReferenceTemplate ValueType.
@@ -60,6 +60,7 @@ namespace TAO
                              const char *orb_id,
                              PortableInterceptor::AdapterName *adapter_name,
                              PortableServer::POA_ptr poa);
+    ::CORBA::ValueBase *_copy_value (void);
 
     /**
      * @name PortableInterceptor::ObjectReferenceTemplate Methods
@@ -88,7 +89,6 @@ namespace TAO
     //@}
 
   protected:
-
     /// Destructor
     /**
      * Protected destructor to enforce proper memory management via

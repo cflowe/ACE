@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: OS_NS_unistd.inl 96017 2012-08-08 22:18:09Z mitza $
+// $Id: OS_NS_unistd.inl 97138 2013-05-16 17:55:36Z mitza $
 
 #include "ace/OS_NS_sys_utsname.h"
 #include "ace/OS_NS_string.h"
@@ -498,7 +498,7 @@ ACE_OS::getpid (void)
 #elif defined (ACE_WIN32)
   return ::GetCurrentProcessId ();
 #else
-  ACE_OSCALL_RETURN (::getpid (), int, -1);
+  ACE_OSCALL_RETURN (::getpid (), pid_t, -1);
 #endif /* ACE_LACKS_GETPID */
 }
 

@@ -273,6 +273,8 @@
     </ClCompile>
     <ClCompile Include="AsyncAccessManager.cpp">
     </ClCompile>
+    <ClCompile Include="AsyncListManager.cpp">
+    </ClCompile>
     <ClCompile Include="Config_Backing_Store.cpp">
     </ClCompile>
     <ClCompile Include="Forwarder.cpp">
@@ -306,6 +308,7 @@
     <ClInclude Include="Activator_Info.h" />
     <ClInclude Include="Adapter_Activator.h" />
     <ClInclude Include="AsyncAccessManager.h" />
+    <ClInclude Include="AsyncListManager.h" />
     <ClInclude Include="Config_Backing_Store.h" />
     <ClInclude Include="Forwarder.h" />
     <ClInclude Include="ImR_Locator_i.h" />

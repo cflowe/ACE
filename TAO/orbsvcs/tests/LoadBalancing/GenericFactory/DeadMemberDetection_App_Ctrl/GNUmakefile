@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-978/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 14 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-978/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,28 +20,28 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: DeadMemberDetection_App_Ctrl_Idl DeadMemberDetection_App_Ctrl_Client DeadMemberDetection_App_Ctrl_Server
+all: DMD_App_Ctrl_Idl DMD_App_Ctrl_Client DMD_App_Ctrl_Server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DeadMemberDetection_App_Ctrl_Idl $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DeadMemberDetection_App_Ctrl_Client $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DeadMemberDetection_App_Ctrl_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DMD_App_Ctrl_Idl $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DMD_App_Ctrl_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DMD_App_Ctrl_Server $(@)
 
-.PHONY: DeadMemberDetection_App_Ctrl_Idl
-DeadMemberDetection_App_Ctrl_Idl:
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DeadMemberDetection_App_Ctrl_Idl all
+.PHONY: DMD_App_Ctrl_Idl
+DMD_App_Ctrl_Idl:
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DMD_App_Ctrl_Idl all
 
-.PHONY: DeadMemberDetection_App_Ctrl_Client
-DeadMemberDetection_App_Ctrl_Client: DeadMemberDetection_App_Ctrl_Idl
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DeadMemberDetection_App_Ctrl_Client all
+.PHONY: DMD_App_Ctrl_Client
+DMD_App_Ctrl_Client: DMD_App_Ctrl_Idl
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DMD_App_Ctrl_Client all
 
-.PHONY: DeadMemberDetection_App_Ctrl_Server
-DeadMemberDetection_App_Ctrl_Server: DeadMemberDetection_App_Ctrl_Idl DeadMemberDetection_App_Ctrl_Client
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DeadMemberDetection_App_Ctrl_Server all
+.PHONY: DMD_App_Ctrl_Server
+DMD_App_Ctrl_Server: DMD_App_Ctrl_Idl DMD_App_Ctrl_Client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.DMD_App_Ctrl_Server all
 
 project_name_list:
-	@echo DeadMemberDetection_App_Ctrl_Client
-	@echo DeadMemberDetection_App_Ctrl_Idl
-	@echo DeadMemberDetection_App_Ctrl_Server
+	@echo DMD_App_Ctrl_Client
+	@echo DMD_App_Ctrl_Idl
+	@echo DMD_App_Ctrl_Server

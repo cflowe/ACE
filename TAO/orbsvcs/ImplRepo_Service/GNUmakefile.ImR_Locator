@@ -30,6 +30,7 @@ FILES = \
   Activator_Info.cpp \
   Adapter_Activator.cpp \
   AsyncAccessManager.cpp \
+  AsyncListManager.cpp \
   Forwarder.cpp \
   ImR_Locator_i.cpp \
   ImR_ResponseHandler.cpp \
@@ -356,6 +357,7 @@ endif
 #Iterator.h
 #ImR_ResponseHandler.h
 #Locator_Options.h
+#AsyncListManager.h
 #Locator_XMLHandler.h
 #AsyncAccessManager.h
 #LiveCheck.h
@@ -371,6 +373,7 @@ endif
 #Activator_Info.cpp
 #Adapter_Activator.cpp
 #AsyncAccessManager.cpp
+#AsyncListManager.cpp
 #Forwarder.cpp
 #ImR_Locator_i.cpp
 #ImR_ResponseHandler.cpp
