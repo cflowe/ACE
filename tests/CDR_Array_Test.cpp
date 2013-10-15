@@ -3,7 +3,7 @@
 /**
  *  @file    CDR_Array_Test.cpp
  *
- *  $Id: CDR_Array_Test.cpp 95761 2012-05-15 18:23:04Z johnnyw $
+ *  $Id: CDR_Array_Test.cpp 97236 2013-08-03 19:13:52Z johnnyw $
  *
  *  Checks ACE_OutputCDR::write_XX_array.
  *  Checks ACE_InputCDR::read_XX_array.
@@ -622,7 +622,7 @@ CDR_Test<T, H>::do_test (int total, int niter, int use_array,
             CDR_Test<T, H>::ttoh (cv, cs);
             ACE_ERROR((LM_ERROR,
                        ACE_TEXT ( "Wrong value at pos %d:" )
-                       ACE_TEXT ( " '%s' should be '%s'.\n" ),
+                       ACE_TEXT ( " '%C' should be '%C'.\n" ),
                        i, rs, cs));
             errors++;
             if (errors == maxerrors)

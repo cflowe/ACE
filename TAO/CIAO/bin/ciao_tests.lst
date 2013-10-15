@@ -1,4 +1,4 @@
-# $Id: ciao_tests.lst 97042 2013-04-18 09:04:09Z mhengstmengel $
+# $Id: ciao_tests.lst 97240 2013-08-05 10:27:45Z mhengstmengel $
 #
 # This is the list of run_test.pl's that need to be run by
 # auto_run_tests.pl.
@@ -78,6 +78,7 @@ TAO/CIAO/connectors/dds4ccm/examples/Hello/descriptors/run_1_to_5.pl: DDS4CCM
 TAO/CIAO/connectors/dds4ccm/examples/Hello/descriptors/run_5_to_5.pl: DDS4CCM
 TAO/CIAO/connectors/dds4ccm/examples/Quoter/descriptors/run_test.pl: DDS4CCM
 TAO/CIAO/connectors/dds4ccm/examples/Shapes/descriptors/run_test.pl: DDS4CCM
+TAO/CIAO/connectors/dds4ccm/examples/ShapesContr/descriptors/run_test.pl: DDS4CCM
 TAO/CIAO/connectors/dds4ccm/examples/IDL2CPPWrapper/Shapes/descriptors/run_test.pl: DDS4CCM DDS4CCM_NDDS
 TAO/CIAO/connectors/dds4ccm/examples/Large_Deployment/descriptors/run_test.pl: DDS4CCM
 TAO/CIAO/connectors/dds4ccm/tests/ContentFilteredTopic/EventListener/descriptors/run_test.pl: DDS4CCM

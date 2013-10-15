@@ -1,4 +1,4 @@
-// $Id: FTP_ClientRequestHandler.cpp 91671 2010-09-08 18:39:23Z johnnyw $
+// $Id: FTP_ClientRequestHandler.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 #include "ace/INet/FTP_ClientRequestHandler.h"
 
@@ -68,7 +68,7 @@ namespace ACE
         const ACE_CString& realm,
         ACE_CString& user,
         ACE_CString& pw)
-      : AuthenticationBase (),
+      : ACE::INet::AuthenticationBase (),
         realm_ (realm),
         user_ (user),
         password_ (pw)

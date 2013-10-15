@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-# $Id: ProcessAndroid.pm 94499 2011-09-13 08:13:10Z johnnyw $
+# $Id: ProcessAndroid.pm 97254 2013-08-08 17:51:50Z johnnyw $
 
 package PerlACE::ProcessAndroid;
 
@@ -321,10 +321,7 @@ sub copy_executable ()
     $self->PutFile ("$program", $exe);
 
     if ($PerlACE::Static == 0) {
-        my $vxtest_file = "$ENV{'ACE_ROOT'}/$program" . '.vxtest';
-        if (defined $ENV{'ACE_TEST_VERBOSE'}) {
-            print STDERR "Analyzing vxtest file <$vxtest_file>\n";
-        }
+        my $vxtest_file = "$program" . '.vxtest';
         copy_vxtest_files ($self, $vxtest_file);
     }
 }

@@ -1295,6 +1295,9 @@
     <ClInclude Include="config-vxworks6.9.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="config-win32-borland.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="config-win32-cegcc.h">
       <Filter>Header Files</Filter>
     </ClInclude>

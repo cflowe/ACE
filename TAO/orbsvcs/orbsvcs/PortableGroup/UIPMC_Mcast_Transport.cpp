@@ -1,4 +1,4 @@
-// $Id: UIPMC_Mcast_Transport.cpp 97014 2013-04-12 22:47:02Z mitza $
+// $Id: UIPMC_Mcast_Transport.cpp 97203 2013-06-19 22:49:55Z mesnier_p $
 
 #include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/PortableGroup/UIPMC_Mcast_Transport.h"
@@ -328,8 +328,8 @@ TAO_UIPMC_Mcast_Transport::recv_all (TAO_Resume_Handle &rh)
 
           ACE_INET_Addr from_addr;
           CORBA::UShort packet_length;
-          CORBA::ULong packet_number;
-          bool stop_packet;
+          CORBA::ULong packet_number = 0;
+          bool stop_packet = false;
           u_long id_hash;
 
           char *start_data =

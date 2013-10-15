@@ -284,6 +284,10 @@
     <ClInclude Include="Cached_Accept_Conn_Test.h" />
     <ClInclude Include="Cached_Conn_Test.h" />
     <ClInclude Include="Collection_Test.h" />
+    <ClInclude Include="Compiler_Features_20_DLL.h" />
+    <ClInclude Include="Compiler_Features_20_DLL_Export.h" />
+    <ClInclude Include="Compiler_Features_22_DLL.h" />
+    <ClInclude Include="Compiler_Features_22_DLL_Export.h" />
     <ClInclude Include="Config_Test.h" />
     <ClInclude Include="Conn_Test.h" />
     <ClInclude Include="DLL_Test.h" />

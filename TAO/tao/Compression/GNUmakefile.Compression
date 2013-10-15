@@ -235,8 +235,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#Compression.pidl
 #Compression_include.pidl
+#Compression.pidl
 #
 #build_files:
 #Compression.mpc

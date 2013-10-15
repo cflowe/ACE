@@ -3,7 +3,7 @@
 /**
  *  @file    constants.idl
  *
- *  $Id: constants.idl 94252 2011-06-22 18:27:45Z parsons $
+ *  $Id: constants.idl 97288 2013-08-13 06:45:48Z johnnyw $
  *
  *  This file contains examples of IDL code that has
  *  caused problems in the past for the TAO IDL
@@ -14,7 +14,6 @@
  *  @author Jeff Parsons <parsons@cs.wustl.edu> and TAO users.
  */
 //=============================================================================
-
 
 const string all_escape = "\n\t\v\b\r\f\a\\\?\'\"";
 

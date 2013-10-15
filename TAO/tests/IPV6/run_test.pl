@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 87665 2009-11-20 09:30:08Z dbudko $
+# $Id: run_test.pl 97200 2013-06-12 13:05:55Z mesnier_p $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -50,6 +50,13 @@ $client_arg = "-k file://$client_iorfile ";
          server => "$server_arg -ORBListenEndpoints iiop://127.0.0.1",
          client => "$client_arg -x -ORBConnectIPV6Only 1",
          error => 1,
+         url => 0,
+         url_address => "",
+     },{
+         description => "Testing IPV4 server with client with '-ORBPreferIPV6Interfaces 1'.\n",
+         server => "$server_arg -ORBListenEndpoints iiop://127.0.0.1",
+         client => "$client_arg -ORBPreferIPV6Interfaces 1",
+         error => 0,
          url => 0,
          url_address => "",
      },{

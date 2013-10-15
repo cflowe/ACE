@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 16 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,31 +20,31 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Persistent_Grid_IDL Persistent_Grid_Persistent_Client Persistent_Grid_Client Persistent_Grid_Server
+all: Persistent_Grid_IDL Persistent_Grid_Server Persistent_Grid_Client Persistent_Grid_Persistent_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_IDL $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Persistent_Client $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Persistent_Client $(@)
 
 .PHONY: Persistent_Grid_IDL
 Persistent_Grid_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_IDL all
 
-.PHONY: Persistent_Grid_Persistent_Client
-Persistent_Grid_Persistent_Client: Persistent_Grid_IDL
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Persistent_Client all
+.PHONY: Persistent_Grid_Server
+Persistent_Grid_Server: Persistent_Grid_IDL
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Server all
 
 .PHONY: Persistent_Grid_Client
-Persistent_Grid_Client: Persistent_Grid_IDL Persistent_Grid_Persistent_Client
+Persistent_Grid_Client: Persistent_Grid_IDL Persistent_Grid_Server
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Client all
 
-.PHONY: Persistent_Grid_Server
-Persistent_Grid_Server: Persistent_Grid_IDL Persistent_Grid_Persistent_Client
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Server all
+.PHONY: Persistent_Grid_Persistent_Client
+Persistent_Grid_Persistent_Client: Persistent_Grid_IDL Persistent_Grid_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Persistent_Grid_Persistent_Client all
 
 project_name_list:
 	@echo Persistent_Grid_Client

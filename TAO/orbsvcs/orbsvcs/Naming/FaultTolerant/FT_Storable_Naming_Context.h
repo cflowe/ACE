@@ -4,7 +4,7 @@
 /**
  *  @file   FT_Storable_Naming_Context.h
  *
- *  $Id: FT_Storable_Naming_Context.h 96682 2013-01-19 00:21:08Z labancap $
+ *  $Id: FT_Storable_Naming_Context.h 97275 2013-08-10 17:11:33Z johnnyw $
  *
  *  @author Kevin Stanley <stanleyk@ociweb.com>
  */
@@ -62,7 +62,7 @@ public:
   // naming context implementations.
   static void set_naming_manager (TAO_FT_Naming_Manager *mgr_impl);
 
-  bool is_object_group (const CORBA::Object_ptr obj) const;
+  CORBA::Boolean is_object_group (CORBA::Object_ptr obj) const;
 
  /**
   * Tell the peer replica that this context has been updated.

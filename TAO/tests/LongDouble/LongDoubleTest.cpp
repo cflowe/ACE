@@ -1,6 +1,5 @@
-//
-// $Id: LongDoubleTest.cpp 91649 2010-09-08 13:44:26Z johnnyw $
-//
+// $Id: LongDoubleTest.cpp 97239 2013-08-05 06:25:41Z johnnyw $
+
 #include "LongDoubleTest.h"
 #include "Global.h"
 

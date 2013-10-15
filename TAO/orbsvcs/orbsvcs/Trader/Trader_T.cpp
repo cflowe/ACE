@@ -1,4 +1,4 @@
-// $Id: Trader_T.cpp 77001 2007-02-12 07:54:49Z johnnyw $
+// $Id: Trader_T.cpp 97203 2013-06-19 22:49:55Z mesnier_p $
 
 #ifndef TAO_TRADER_CPP
 #define TAO_TRADER_CPP
@@ -277,8 +277,8 @@ TAO_Link_Attributes<IF>::max_link_follow_policy (void)
 
 template <class ELEMENT_TYPE> int
 TAO_Element_Equal<ELEMENT_TYPE>::
-operator () (TAO_DynSequence_i& dyn_any,
-             const ELEMENT_TYPE& element)
+operator () (TAO_DynSequence_i& ,
+             const ELEMENT_TYPE&)
 {
   return 1;
 }

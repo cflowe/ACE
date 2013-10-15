@@ -3,7 +3,7 @@
 /**
  *  @file    Intrusive_Auto_Ptr_Test.cpp
  *
- *  $Id: Intrusive_Auto_Ptr_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Intrusive_Auto_Ptr_Test.cpp 97205 2013-06-21 07:42:27Z johnnyw $
  *
  *  This test verifies the functionality of the <ACE_Intrusive_Auto_Ptr>
  *  implementation.
@@ -28,7 +28,7 @@ class One {
   int ref;
 
 public:
-  One (int refcount): ref(refcount)
+  One (int refcount) : m2(0), ref(refcount)
   {
     released = false;
   }

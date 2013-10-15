@@ -1,4 +1,4 @@
-// $Id: MCAST_Parser.cpp 96992 2013-04-11 18:07:48Z huangh $
+// $Id: MCAST_Parser.cpp 97281 2013-08-12 08:28:17Z johnnyw $
 
 #include "tao/MCAST_Parser.h"
 
@@ -270,7 +270,7 @@ TAO_MCAST_Parser::multicast_query (char* & buf,
                                           sizeof ior_len,
                                           0,
                                           &tv);
-                  if (result != sizeof (ior_len))
+                  if (result != (ssize_t)sizeof (ior_len))
                     {
                       TAOLIB_ERROR ((LM_ERROR,
                                   ACE_TEXT ("%p\n"),

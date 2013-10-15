@@ -3,7 +3,7 @@
 /**
  *  @file    Reactor_Timer_Test.cpp
  *
- *  $Id: Reactor_Timer_Test.cpp 95332 2011-12-15 11:09:41Z mcorino $
+ *  $Id: Reactor_Timer_Test.cpp 97246 2013-08-07 07:10:20Z johnnyw $
  *
  *    This is a simple test that illustrates the timer mechanism of
  *    the reactor.  Scheduling timers, resetting timer intervals,
@@ -94,7 +94,7 @@ Time_Handler::handle_timeout (const ACE_Time_Value &tv,
 
   if (current_count == long (ACE_MAX_TIMERS - 1))
     done = 1;
-  else if (the_count == ACE_MAX_TIMERS - 1)
+  else if (the_count == long (ACE_MAX_TIMERS - 1))
     {
       done = 1;
       return -1;

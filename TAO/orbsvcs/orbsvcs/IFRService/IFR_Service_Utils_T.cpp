@@ -1,4 +1,4 @@
-// $Id: IFR_Service_Utils_T.cpp 88348 2009-12-29 09:24:19Z johnnyw $
+// $Id: IFR_Service_Utils_T.cpp 97245 2013-08-07 07:08:10Z johnnyw $
 
 #ifndef TAO_IFR_SERVICE_UTILS_T_CPP
 #define TAO_IFR_SERVICE_UTILS_T_CPP
@@ -344,7 +344,7 @@ TAO_Port_Utils<T>::create_entry (const char *id,
   return T::_narrow (obj.in ());
 }
 
-#if defined (__BORLANDC__) && (__BORLANDC__ < 0x630)
+#if defined (__BORLANDC__) && (__BORLANDC__ <= 0x660)
 // Borland gives warnings about argument not used on the construct as used
 // for the other compilers. This has been reported to Borland, adding
 // a workaround to suppress these warnings so that the real important ones

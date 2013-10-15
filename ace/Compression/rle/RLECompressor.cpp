@@ -1,7 +1,11 @@
-// $Id: RLECompressor.cpp 95560 2012-02-27 08:11:54Z johnnyw $
+// $Id: RLECompressor.cpp 97285 2013-08-12 14:44:23Z johnnyw $
 
 #include "RLECompressor.h"
 #include "ace/OS_NS_string.h"
+
+#if defined (__BORLANDC__) && (__BORLANDC__ <= 0x660)
+#  pragma option push -w-8072
+#endif
 
 ACE_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -156,3 +160,7 @@ ACE_RLECompressor::decompress( const void *in_ptr,
 
 // Close versioned namespace, if enabled by the user.
 ACE_END_VERSIONED_NAMESPACE_DECL
+
+#if defined (__BORLANDC__) && (__BORLANDC__ <= 0x660)
+# pragma option pop
+#endif

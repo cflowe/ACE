@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: IIOP_Endpoint.cpp 96992 2013-04-11 18:07:48Z huangh $
+// $Id: IIOP_Endpoint.cpp 97195 2013-06-06 23:22:48Z mesnier_p $
 
 /*
  * Add all include files within the following
@@ -295,7 +295,7 @@ TAO_IIOP_Endpoint::next_filtered_i (TAO_IIOP_Endpoint *root,
     {
       if (candidate == 0)
         return !want_ipv6 ? candidate :
-          root->next_filtered_i(root, ipv6_only, prefer_ipv6, false);
+          root->next_filtered_i(0, ipv6_only, prefer_ipv6, false);
 
       if (want_ipv6 == candidate->is_ipv6_decimal())
         return candidate;

@@ -1,4 +1,4 @@
-// $Id: AuthenticationBase.cpp 90891 2010-06-28 09:55:39Z mcorino $
+// $Id: AuthenticationBase.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 #include "ace/INet/AuthenticationBase.h"
 
@@ -12,9 +12,17 @@ namespace ACE
 {
   namespace INet
   {
-    AuthenticationBase::~AuthenticationBase () {}
+    AuthenticationBase::~AuthenticationBase ()
+    {
+    }
 
-    AuthenticatorBase::~AuthenticatorBase () {}
+    AuthenticatorBase::AuthenticatorBase ()
+    {
+    }
+
+    AuthenticatorBase::~AuthenticatorBase ()
+    {
+    }
   }
 }
 

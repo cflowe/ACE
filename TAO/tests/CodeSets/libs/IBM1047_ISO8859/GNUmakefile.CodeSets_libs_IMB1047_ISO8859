@@ -27,10 +27,10 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
+  Char_IBM1047_ISO8859_Translator.cpp \
   Char_IBM1047_ISO8859_Factory.cpp \
-  Wchar_IBM1047_ISO8859_Factory.cpp \
   Wchar_IBM1047_ISO8859_Translator.cpp \
-  Char_IBM1047_ISO8859_Translator.cpp
+  Wchar_IBM1047_ISO8859_Factory.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

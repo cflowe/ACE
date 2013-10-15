@@ -1,4 +1,4 @@
-# $Id: tao_other_tests.lst 97153 2013-05-20 12:16:04Z sma $
+# $Id: tao_other_tests.lst 97265 2013-08-09 13:00:33Z johnnyw $
 #
 # This is the list of run_test.pl's that need to be run by
 # auto_run_tests.pl.
@@ -75,6 +75,7 @@ TAO/orbsvcs/tests/Bug_3418_Regression/run_test.pl: !ST SSL !STATIC !DISABLE_INTE
 TAO/orbsvcs/tests/Bug_3486_Regression/run_test.pl: !NO_MESSAGING !STATIC !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ACE_FOR_TAO !LynxOS
 TAO/orbsvcs/tests/Bug_3598b_Regression/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !DISABLE_INTERCEPTORS !ACE_FOR_TAO
 TAO/orbsvcs/tests/Bug_4080_Regression/run_test.pl:  !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !NO_MCAST
+TAO/orbsvcs/tests/Bug_4118_Regression/run_test.pl: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !NO_MESSAGING !ACE_FOR_TAO !DISTRIBUTED
 TAO/orbsvcs/tests/CosEvent/Basic/run_test.pl: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ACE_FOR_TAO
 TAO/orbsvcs/tests/HTIOP/Hello/run_test.pl: !NO_UUID !ST !STATIC !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ACE_FOR_TAO !LynxOS
 TAO/orbsvcs/tests/HTIOP/AMI/run_test.pl: !NO_UUID !ST !STATIC !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ACE_FOR_TAO
@@ -141,6 +142,7 @@ TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl: !ST !MINIMUM
 TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl -delay 20 -imr_start: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
 TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl -hide_server -imr_start: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
 TAO/orbsvcs/tests/ImplRepo/servers_interact_on_startup/run_test.pl -multistart: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
+TAO/orbsvcs/tests/ImplRepo/ping_interrupt/run_test.pl: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !WCHAR !ACE_FOR_TAO !LynxOS !OpenVMS
 TAO/orbsvcs/examples/ImR/Combined_Service/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !STATIC !ST !ACE_FOR_TAO !LynxOS
 TAO/orbsvcs/examples/CosEC/TypedSimple/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !NO_IFR !ACE_FOR_TAO !WCHAR
 TAO/orbsvcs/tests/CosEvent/Timeout/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ST !NO_MESSAGING !ACE_FOR_TAO !LynxOS
@@ -265,9 +267,9 @@ TAO/orbsvcs/DevGuideExamples/NotifyService/OfferSubscriptions/run_test.pl: !ST !
 TAO/orbsvcs/DevGuideExamples/NotifyService/QoSProperties/run_test.pl: !ST !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !LynxOS
 TAO/orbsvcs/DevGuideExamples/NotifyService/SupplierSideNC/run_test.pl: !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !LynxOS
 TAO/orbsvcs/DevGuideExamples/NotifyService/RTNotify/run_test.pl: !ST !MINIMUM !STATIC !CORBA_E_COMPACT !CORBA_E_MICRO !LynxOS
-TAO/orbsvcs/DevGuideExamples/Security/ParticipatingApp/run_test.pl: SSL !STATIC !DISABLE_INTERCEPTORS !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO
-TAO/orbsvcs/DevGuideExamples/Security/PolicyControllingApp/run_test.pl: SSL !STATIC !DISABLE_INTERCEPTORS !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO
-TAO/orbsvcs/DevGuideExamples/Security/SecurityUnawareApp/run_test.pl: SSL !STATIC !DISABLE_INTERCEPTORS !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO
+TAO/orbsvcs/DevGuideExamples/Security/ParticipatingApp/run_test.pl: SSL !STATIC !DISABLE_INTERCEPTORS !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ACE_FOR_TAO
+TAO/orbsvcs/DevGuideExamples/Security/PolicyControllingApp/run_test.pl: SSL !STATIC !DISABLE_INTERCEPTORS !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ACE_FOR_TAO
+TAO/orbsvcs/DevGuideExamples/Security/SecurityUnawareApp/run_test.pl: SSL !STATIC !DISABLE_INTERCEPTORS !MINIMUM !CORBA_E_COMPACT !CORBA_E_MICRO !ACE_FOR_TAO
 TAO/orbsvcs/DevGuideExamples/NamingService/Messenger/run_test.pl: !CORBA_E_COMPACT !CORBA_E_MICRO !LynxOS
 TAO/orbsvcs/DevGuideExamples/NamingService/Naming_Client/run_test.pl: !CORBA_E_COMPACT !CORBA_E_MICRO !LynxOS
 TAO/orbsvcs/DevGuideExamples/NamingService/Naming_Context_Ext/run_test.pl: !CORBA_E_COMPACT !CORBA_E_MICRO !LynxOS

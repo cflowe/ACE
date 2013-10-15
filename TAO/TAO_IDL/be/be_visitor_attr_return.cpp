@@ -1,4 +1,4 @@
-// $Id: be_visitor_attr_return.cpp 95647 2012-03-23 20:37:27Z johnnyw $
+// $Id: be_visitor_attr_return.cpp 97245 2013-08-07 07:08:10Z johnnyw $
 
 #include "be_visitor_attr_return.h"
 
@@ -173,7 +173,7 @@ be_visitor_attr_return::visit_string (be_string *node)
   os_ << be_nl
       << "return "
       << "::CORBA::"
-      << (node->width () == sizeof (char) ? "" : "w")
+      << (node->width () == (ssize_t) sizeof (char) ? "" : "w")
       << "string_dup (" << this->attr_name_string_.c_str ()
       << ".in ());";
 

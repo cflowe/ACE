@@ -17,9 +17,9 @@ BIN_UNCHECKED    = bpr_thread
 LIB_PREFIX      ?= lib
 
 FILES = \
+  BPR_Drivers.cpp \
   Thread_Bounded_Packet_Relay.cpp \
-  bpr_thread.cpp \
-  BPR_Drivers.cpp
+  bpr_thread.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

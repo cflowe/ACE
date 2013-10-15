@@ -3,7 +3,7 @@
 /**
  *  @file    field_cdr_cs.h
  *
- *  $Id: field_cdr_cs.h 88828 2010-02-04 09:09:22Z johnnyw $
+ *  $Id: field_cdr_cs.h 97222 2013-07-24 14:59:08Z parsons $
  *
  *  Visitor generating code for Field in the client stubs file.
  *
@@ -13,8 +13,8 @@
 //=============================================================================
 
 
-#ifndef _BE_VISITOR_VALUETYPE_FIELD_CDR_C_H_
-#define _BE_VISITOR_VALUETYPE_FIELD_CDR_CI_H_
+#ifndef _BE_VISITOR_VALUETYPE_FIELD_CDR_CS_H_
+#define _BE_VISITOR_VALUETYPE_FIELD_CDR_CS_H_
 
 #include "be_visitor_scope.h"
 
@@ -123,4 +123,4 @@ public:
   virtual int visit_typedef (be_typedef *node);
 };
 
-#endif /*  _BE_VISITOR_VALUETYPE_FIELD_CDR_CI_H_ */
+#endif /*  _BE_VISITOR_VALUETYPE_FIELD_CDR_CS_H_ */

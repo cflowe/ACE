@@ -1,4 +1,4 @@
-// $Id: Auto_Update_Starter.cpp 86518 2009-08-18 12:30:56Z olli $
+// $Id: Auto_Update_Starter.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 #include "ace/Monitor_Control/Auto_Update_Starter.h"
 
@@ -14,6 +14,10 @@ namespace ACE
 {
   namespace Monitor_Control
   {
+    Auto_Update_Starter::Auto_Update_Starter (void)
+    {
+    }
+
     int
     Auto_Update_Starter::svc (void)
     {

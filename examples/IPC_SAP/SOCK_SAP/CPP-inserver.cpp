@@ -1,4 +1,4 @@
-// $Id: CPP-inserver.cpp 96943 2013-03-30 09:42:31Z mcorino $
+// $Id: CPP-inserver.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 // This example tests the features of the <ACE_SOCK_Acceptor>,
 // <ACE_SOCK_Stream>, and <ACE_Svc_Handler> classes.  If the platform
@@ -90,7 +90,7 @@ twoway_server (void *arg)
                       "(%P|%t) reached end of input, connection closed by client\n"));
           break;
         }
-      else if (r_bytes != sizeof (ACE_INT32))
+      else if (r_bytes != (ssize_t) sizeof (ACE_INT32))
         {
           ACE_ERROR ((LM_ERROR,
                       "(%P|%t) %p\n",
@@ -206,7 +206,7 @@ oneway_server (void *arg)
                       "(%P|%t) reached end of input, connection closed by client\n"));
           break;
         }
-      else if (r_bytes != sizeof (ACE_INT32))
+      else if (r_bytes != (ssize_t) sizeof (ACE_INT32))
         {
           ACE_ERROR ((LM_ERROR,
                       "(%P|%t) %p\n",

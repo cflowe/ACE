@@ -4,7 +4,7 @@ package Version;
 # Description   : Central location for the MPC version.
 # Author        : Chad Elliott
 # Create Date   : 1/5/2003
-# $Id: Version.pm 2035 2011-10-06 15:05:21Z johnnyw $
+# $Id: Version.pm 2141 2013-06-26 16:16:19Z mesnier_p $
 # ************************************************************
 
 # ************************************************************
@@ -18,7 +18,7 @@ use strict;
 # ************************************************************
 
 ## This is the starting major and minor version
-my $version = '3.9';
+my $version = '4.0';
 my $once    = 1;
 
 # ************************************************************

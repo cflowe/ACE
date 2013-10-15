@@ -1620,6 +1620,9 @@
 				RelativePath="config-vxworks6.9.h">
 			</File>
 			<File
+				RelativePath="config-win32-borland.h">
+			</File>
+			<File
 				RelativePath="config-win32-cegcc.h">
 			</File>
 			<File

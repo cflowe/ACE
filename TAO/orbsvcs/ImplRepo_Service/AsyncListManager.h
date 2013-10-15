@@ -2,7 +2,7 @@
 /*
  * @file AsyncListManager.h
  *
- * $Id: AsyncListManager.h 97131 2013-05-13 19:18:55Z mesnier_p $
+ * $Id: AsyncListManager.h 97245 2013-08-07 07:08:10Z johnnyw $
  *
  * @author Phil Mesnier <mesnier_p@ociweb.com>
  */
@@ -53,6 +53,7 @@ class AsyncListManager
   CORBA::ULong list (ImplementationRepository::AMH_ServerInformationIteratorResponseHandler_ptr _tao_rh,
                      CORBA::ULong start, CORBA::ULong count);
 
+  bool evaluate_status (CORBA::ULong index, LiveStatus status);
   void ping_replied (CORBA::ULong index, LiveStatus status);
 
   AsyncListManager *_add_ref (void);
@@ -90,7 +91,7 @@ class ListLiveListener : public LiveListener
 
   virtual ~ListLiveListener (void);
   bool start (void);
-
+  LiveStatus status (void);
   bool status_changed (LiveStatus status);
 
  private:
@@ -98,10 +99,7 @@ class ListLiveListener : public LiveListener
   LiveCheck &pinger_;
   LiveStatus status_;
   CORBA::ULong index_;
+  bool started_;
 };
-
-
-
-
 
 #endif /* IMR_ASYNCACCESSMANGER_H_  */

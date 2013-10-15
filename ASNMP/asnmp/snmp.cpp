@@ -3,7 +3,7 @@
 /**
  *  @file    snmp.cpp
  *
- *  $Id: snmp.cpp 94442 2011-09-07 09:14:41Z johnnyw $
+ *  $Id: snmp.cpp 97246 2013-08-07 07:10:20Z johnnyw $
  *
  * The basic SNMPv1 API - blocking version using UDP/IPv4 transport
  * and addressing.
@@ -280,5 +280,9 @@ void Snmp::get_host_name(char* name, int len)
 }
 
 Snmp_Result::~Snmp_Result()
+{
+}
+
+Snmp_Result::Snmp_Result()
 {
 }

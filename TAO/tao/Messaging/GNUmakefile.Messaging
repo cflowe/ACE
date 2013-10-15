@@ -258,14 +258,14 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#ExceptionHolder.pidl
+#Messaging.pidl
+#Messaging_SyncScope_Policy.pidl
+#Pollable.pidl
 #Messaging_No_Impl.pidl
 #Messaging_Types.pidl
+#ExceptionHolder.pidl
 #Messaging_RT_Policy.pidl
-#Messaging_SyncScope_Policy.pidl
 #TAO_Ext.pidl
-#Pollable.pidl
-#Messaging.pidl
 #
 #build_files:
 #Messaging.mpc

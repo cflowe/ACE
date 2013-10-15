@@ -27,8 +27,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  EC_Wrapper.cpp \
-  Gateway_EC.cpp
+  Gateway_EC.cpp \
+  EC_Wrapper.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

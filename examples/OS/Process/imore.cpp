@@ -2,7 +2,7 @@
 /**
  *  @file    imore.cpp (imore stands for indirect more.)
  *
- *  $Id: imore.cpp 93639 2011-03-24 13:32:13Z johnnyw $
+ *  $Id: imore.cpp 97250 2013-08-07 09:37:03Z johnnyw $
  *
  *  This program demonstrates how to redirect stdout of a parent
  *  process to the stdin of its child process using either unnamed pipe
@@ -234,9 +234,9 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
   options.command_line (executable);
   if (new_process.spawn (options) == -1)
     {
-      int error = ACE_OS::last_error ();
+      int const error_number = ACE_OS::last_error ();
       ACE_ERROR_RETURN ((LM_ERROR, "%p errno = %d.\n",
-                         "test_more", error), -1);
+                         "test_more", error_number), -1);
     }
 
   // write file to ACE_STDOUT.

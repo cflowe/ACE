@@ -4,7 +4,7 @@
 /**
  * @file Monitor_Query.h
  *
- * $Id: Monitor_Query.h 81753 2008-05-21 19:02:47Z parsons $
+ * $Id: Monitor_Query.h 97246 2013-08-07 07:10:20Z johnnyw $
  *
  * @author Jeff Parsons <j.parsons@vanderbilt.edu>
  */
@@ -41,6 +41,9 @@ namespace ACE
       : public ACE_Event_Handler
     {
     public:
+      /// Default constructor
+      Monitor_Point_Auto_Query ();
+
       /// Override of ACE base class method.
       virtual int handle_timeout (const ACE_Time_Value& current,
                                   const void* monitor_query);

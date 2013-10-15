@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 96955 2013-04-03 08:14:06Z johnnyw $
+# $Id: run_test.pl 97179 2013-05-29 14:08:57Z johnnyw $
 # -*- perl -*-
 # This file is for running the tests in the ACE tests directory.
 # It is usually used for auto_compiles.
@@ -115,7 +115,7 @@ sub run_program ($@)
     ## if the executable doesn't exist, the error will show
     ## up as part of the previous test.
     print "auto_run_tests: tests/$path $arguments\n";
-    $ENV{COVERITY_TEST_NAME} = "tests/$path";
+    #$ENV{COVERITY_TEST_NAME} = "tests/$path";
 
     my ($program, $dir, $suffix) = fileparse($path);
     my $start_dir = getcwd ();

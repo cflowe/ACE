@@ -4,7 +4,7 @@
 /**
  *  @file    DTP_POA_Strategy.h
  *
- *  $Id: DTP_POA_Strategy.h 96762 2013-02-06 14:24:46Z mesnier_p $
+ *  $Id: DTP_POA_Strategy.h 97245 2013-08-07 07:08:10Z johnnyw $
  *
  *  @author  Marc Neeley <neeleym@ociweb.com>
  */
@@ -121,7 +121,7 @@ class TAO_Dynamic_TP_Export TAO_DTP_POA_Strategy:
   /// This will cause a new "request" object to be created and pushed
   /// on to a "request queue".  The worker threads are responsible for
   /// servicing the queue, and performing the actual dispatch logic.
-  virtual Strategy_Base::DispatchResult dispatch_remote_request_i
+  virtual TAO::CSD::Strategy_Base::DispatchResult dispatch_remote_request_i
     (TAO_ServerRequest&              server_request,
      const PortableServer::ObjectId& object_id,
      PortableServer::POA_ptr         poa,
@@ -133,7 +133,7 @@ class TAO_Dynamic_TP_Export TAO_DTP_POA_Strategy:
   /// This will cause a new "request" object to be created and pushed
   /// on to a "request queue".  The worker threads are responsible for
   /// servicing the queue, and performing the actual dispatch logic.
-  virtual Strategy_Base::DispatchResult dispatch_collocated_request_i
+  virtual TAO::CSD::Strategy_Base::DispatchResult dispatch_collocated_request_i
     (TAO_ServerRequest&              server_request,
      const PortableServer::ObjectId& object_id,
      PortableServer::POA_ptr         poa,

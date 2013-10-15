@@ -1,4 +1,4 @@
-// $Id: server.cpp 96334 2012-11-23 08:11:07Z johnnyw $
+// $Id: server.cpp 97284 2013-08-12 14:43:50Z johnnyw $
 
 #include "ace/ARGV.h"
 #include "ace/Service_Config.h"
@@ -11,6 +11,10 @@
 #include "orbsvcs/Notify/CosNotify_Service.h"
 
 #include "DllOrb.h"
+
+#if defined (__BORLANDC__) && (__BORLANDC__ <= 0x660)
+#  pragma option push -w-8057
+#endif
 
 ACE_TCHAR const * const scpc_loadOrb = ACE_DYNAMIC_VERSIONED_SERVICE_DIRECTIVE(
   "testDllOrb",
@@ -33,12 +37,12 @@ ACE_TCHAR const * const scpc_loadNotifyService = ACE_DYNAMIC_VERSIONED_SERVICE_D
 ACE_TCHAR const * const scpc_unloadNotifyService = ACE_REMOVE_SERVICE_DIRECTIVE("testNotifyService");
 
 int
-unloadNotify(ACE_Service_Config & r_serviceConfig)
+unloadNotify(ACE_Service_Config & service_config)
 {
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("Unloading NotifyService ...\n")));
-  if(0 != r_serviceConfig.process_directive(scpc_unloadNotifyService))
+  if(service_config.process_directive(scpc_unloadNotifyService) != 0)
   {
-    ACE_DEBUG ((LM_ERROR, ACE_TEXT ("Unloading NotifyService failed\n")));
+    ACE_ERROR ((LM_ERROR, ACE_TEXT ("Unloading NotifyService failed\n")));
     return -1;
   }
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("unloading NotifyService done.\n")));
@@ -46,7 +50,7 @@ unloadNotify(ACE_Service_Config & r_serviceConfig)
 }
 
 int
-loadNotify(ACE_Service_Config & r_serviceConfig)
+loadNotify(ACE_Service_Config & service_config)
 {
   try
   {
@@ -58,9 +62,9 @@ loadNotify(ACE_Service_Config & r_serviceConfig)
     ACE_DEBUG ((LM_INFO, ACE_TEXT ("RootPOA OK.\n")));
 
     ACE_DEBUG ((LM_INFO, ACE_TEXT ("Loading NotifyService ...\n")));
-    if(0 != r_serviceConfig.process_directive(scpc_loadNotifyService))
+    if(0 != service_config.process_directive(scpc_loadNotifyService))
     {
-      ACE_DEBUG ((LM_ERROR, ACE_TEXT ("Loading NotifyService failed\n")));
+      ACE_ERROR ((LM_ERROR, ACE_TEXT ("Loading NotifyService failed\n")));
       return -1;
     }
     ACE_DEBUG ((LM_INFO, ACE_TEXT ("Loading NotifyService done.\n")));
@@ -105,7 +109,7 @@ loadNotify(ACE_Service_Config & r_serviceConfig)
   }
   catch(...)
   {
-    ACE_DEBUG ((LM_ERROR, ACE_TEXT ("Unexpected C++ Exception\n")));
+    ACE_ERROR ((LM_ERROR, ACE_TEXT ("Unexpected C++ Exception\n")));
     return -1;
   }
 
@@ -113,24 +117,24 @@ loadNotify(ACE_Service_Config & r_serviceConfig)
 }
 
 
-int unloadOrb(ACE_Service_Config & r_serviceConfig)
+int unloadOrb(ACE_Service_Config & service_config)
 {
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("Unloading ORB ...\n")));
-  if(0 != r_serviceConfig.process_directive(scpc_unloadOrb))
+  if(0 != service_config.process_directive(scpc_unloadOrb))
   {
-    ACE_DEBUG ((LM_ERROR, ACE_TEXT ("Unloading ORB failed\n")));
+    ACE_ERROR ((LM_ERROR, ACE_TEXT ("Unloading ORB failed\n")));
     return -1;
   }
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("unloading ORB done.\n")));
   return 0;
 }
 
-int loadOrb(ACE_Service_Config & r_serviceConfig)
+int loadOrb(ACE_Service_Config & service_config)
 {
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("Loading ORB ...\n")));
-  if(0 != r_serviceConfig.process_directive(scpc_loadOrb))
+  if(0 != service_config.process_directive(scpc_loadOrb))
   {
-    ACE_DEBUG ((LM_ERROR, ACE_TEXT ("Loading ORB failed\n")));
+    ACE_ERROR ((LM_ERROR, ACE_TEXT ("Loading ORB failed\n")));
     return -1;
   }
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("Loading ORB done.\n")));
@@ -164,7 +168,7 @@ ACE_TMAIN(int, ACE_TCHAR **argv)
 
   if(0 != result)
     {
-      ACE_DEBUG ((LM_ERROR, ACE_TEXT ("serviceConfig.open failed\n")));
+      ACE_ERROR ((LM_ERROR, ACE_TEXT ("serviceConfig.open failed\n")));
       return result;
     }
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("serviceConfig.open done\n")));
@@ -175,7 +179,7 @@ ACE_TMAIN(int, ACE_TCHAR **argv)
       result = loadOrb(serviceConfig);
       if(0 != result)
         {
-          ACE_DEBUG ((LM_ERROR, ACE_TEXT ("loadOrb failed\n")));
+          ACE_ERROR ((LM_ERROR, ACE_TEXT ("loadOrb failed\n")));
           return result;
         }
       ACE_DEBUG ((LM_INFO, ACE_TEXT ("loadOrb done\n")));
@@ -184,8 +188,8 @@ ACE_TMAIN(int, ACE_TCHAR **argv)
       result = loadNotify(serviceConfig);
       if(0 != result)
         {
-          ACE_DEBUG ((LM_ERROR, ACE_TEXT ("loadNotify failed\n")));
-        return result;
+          ACE_ERROR ((LM_ERROR, ACE_TEXT ("loadNotify failed\n")));
+          return result;
         }
       ACE_DEBUG ((LM_INFO, ACE_TEXT ("loadNotify done\n")));
 
@@ -193,7 +197,7 @@ ACE_TMAIN(int, ACE_TCHAR **argv)
       result = unloadNotify(serviceConfig);
       if(0 != result)
         {
-          ACE_DEBUG ((LM_ERROR, ACE_TEXT ("unloadNotify failed\n")));
+          ACE_ERROR ((LM_ERROR, ACE_TEXT ("unloadNotify failed\n")));
           return result;
         }
       ACE_DEBUG ((LM_INFO, ACE_TEXT ("unloadNotify done\n")));
@@ -202,7 +206,7 @@ ACE_TMAIN(int, ACE_TCHAR **argv)
       result = unloadOrb(serviceConfig);
       if(0 != result)
         {
-          ACE_DEBUG ((LM_ERROR, ACE_TEXT ("unloadOrb failed\n")));
+          ACE_ERROR ((LM_ERROR, ACE_TEXT ("unloadOrb failed\n")));
           return result;
         }
       ACE_DEBUG ((LM_INFO, ACE_TEXT ("unloadOrb done\n")));
@@ -212,7 +216,7 @@ ACE_TMAIN(int, ACE_TCHAR **argv)
   result = serviceConfig.fini_svcs();
   if(0 != result)
     {
-      ACE_DEBUG ((LM_ERROR, ACE_TEXT ("serviceConfig.fini_svcs failed\n")));
+      ACE_ERROR ((LM_ERROR, ACE_TEXT ("serviceConfig.fini_svcs failed\n")));
       return result;
     }
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("serviceConfig.fini_svcs done\n")));
@@ -221,7 +225,7 @@ ACE_TMAIN(int, ACE_TCHAR **argv)
   result = serviceConfig.close();
   if(0 != result)
     {
-      ACE_DEBUG ((LM_ERROR, ACE_TEXT ("serviceConfig.close failed\n")));
+      ACE_ERROR ((LM_ERROR, ACE_TEXT ("serviceConfig.close failed\n")));
       return result;
     }
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("serviceConfig.close done\n")));
@@ -229,3 +233,6 @@ ACE_TMAIN(int, ACE_TCHAR **argv)
   return 0;
 }
 
+#if defined (__BORLANDC__) && (__BORLANDC__ <= 0x660)
+# pragma option pop
+#endif

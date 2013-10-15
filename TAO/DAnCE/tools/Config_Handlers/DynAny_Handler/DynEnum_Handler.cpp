@@ -1,4 +1,4 @@
-// $Id: DynEnum_Handler.cpp 93596 2011-03-21 11:25:22Z jedmondson $
+// $Id: DynEnum_Handler.cpp 97263 2013-08-09 08:33:57Z johnnyw $
 
 #include "DynEnum_Handler.h"
 #include "DynAny_Handler.h"
@@ -72,11 +72,10 @@ namespace DAnCE
     }
 
     void
-    DynEnum_Handler::extract_out_of_dynany (const DynamicAny::DynAny_ptr dyn)
+    DynEnum_Handler::extract_out_of_dynany (const DynamicAny::DynAny_ptr)
     {
       DANCE_TRACE("DynEnum_Handler::extract_out_of_dynany");
 
-      ACE_UNUSED_ARG (dyn);
       DANCE_DEBUG (DANCE_LOG_NONFATAL_ERROR,
         (LM_ERROR, ACE_TEXT ("Extracting Enums not yet supported\n")));
     }

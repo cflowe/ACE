@@ -28,10 +28,10 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
   Consumer.cpp \
-  Counting_Consumer.cpp \
   Driver.cpp \
+  Counting_Supplier.cpp \
   Supplier.cpp \
-  Counting_Supplier.cpp
+  Counting_Consumer.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

@@ -4,7 +4,7 @@
 /**
  * @file    ACE.h
  *
- * $Id: ACE.h 93276 2011-02-04 20:03:53Z olli $
+ * $Id: ACE.h 97262 2013-08-09 08:32:10Z johnnyw $
  *
  * This file contains value added ACE functions that extend the
  * behavior of the UNIX and Win32 OS calls.
@@ -22,7 +22,7 @@
 
 #include /**/ "ace/pre.h"
 
-#include "ace/config-lite.h"
+#include /**/ "ace/config-lite.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once

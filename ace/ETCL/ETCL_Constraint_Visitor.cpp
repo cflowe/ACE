@@ -3,7 +3,7 @@
 /**
  * @file ETCL_Constraint_Visitor.cpp
  *
- * $Id: ETCL_Constraint_Visitor.cpp 81653 2008-05-08 21:08:49Z parsons $
+ * $Id: ETCL_Constraint_Visitor.cpp 97246 2013-08-07 07:10:20Z johnnyw $
  *
  * @author Jeff Parsons <j.parsons@vanderbilt.edu>
  */
@@ -12,6 +12,10 @@
 #include "ace/ETCL/ETCL_Constraint_Visitor.h"
 
 ACE_BEGIN_VERSIONED_NAMESPACE_DECL
+
+ETCL_Constraint_Visitor::ETCL_Constraint_Visitor (void)
+{
+}
 
 ETCL_Constraint_Visitor::~ETCL_Constraint_Visitor (void)
 {

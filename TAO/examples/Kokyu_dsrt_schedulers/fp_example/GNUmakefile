@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 16 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: fp_example_IDL fp_server fp_client
+all: fp_example_IDL fp_client fp_server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.fp_example_IDL $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.fp_server $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.fp_client $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.fp_server $(@)
 
 .PHONY: fp_example_IDL
 fp_example_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.fp_example_IDL all
 
-.PHONY: fp_server
-fp_server: fp_example_IDL
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.fp_server all
-
 .PHONY: fp_client
-fp_client: fp_example_IDL fp_server
+fp_client: fp_example_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.fp_client all
+
+.PHONY: fp_server
+fp_server: fp_example_IDL fp_client
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.fp_server all
 
 project_name_list:
 	@echo fp_client

@@ -1,4 +1,4 @@
-// $Id: client.cpp 93388 2011-02-15 10:15:34Z msmit $
+// $Id: client.cpp 97183 2013-05-30 15:32:11Z johnnyw $
 
 #include "Common/CIF_Common.h"
 #include "Component/CIF_ComponentC.h"
@@ -1715,8 +1715,6 @@ run_test (::Components::Events_ptr source,
                             "exception during run_test\n"));
       ++ret;
     }
-  return ret;
-
   return ret;
 }
 

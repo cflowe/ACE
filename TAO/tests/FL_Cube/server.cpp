@@ -1,4 +1,4 @@
-// $Id: server.cpp 91825 2010-09-17 09:10:22Z johnnyw $
+// $Id: server.cpp 97190 2013-06-05 20:13:29Z mesnier_p $
 
 #include "test_i.h"
 #include "ace/Get_Opt.h"
@@ -54,7 +54,7 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
       if (parse_args (argc, argv) != 0)
         return 1;
 
-      char* targv[] = { argv[0] };
+      char* targv[] = { ACE_TEXT_ALWAYS_CHAR (argv[0]) };
       window.show (1, targv);
 
       sw.show ();

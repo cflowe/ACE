@@ -385,6 +385,18 @@
 				RelativePath="Collection_Test.h">
 			</File>
 			<File
+				RelativePath="Compiler_Features_20_DLL.h">
+			</File>
+			<File
+				RelativePath="Compiler_Features_20_DLL_Export.h">
+			</File>
+			<File
+				RelativePath="Compiler_Features_22_DLL.h">
+			</File>
+			<File
+				RelativePath="Compiler_Features_22_DLL_Export.h">
+			</File>
+			<File
 				RelativePath="Config_Test.h">
 			</File>
 			<File

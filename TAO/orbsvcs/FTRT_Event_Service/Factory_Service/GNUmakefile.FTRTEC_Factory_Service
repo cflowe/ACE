@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  FTRTEC_Factory_Service.cpp \
-  EventChannelFactory_i.cpp
+  EventChannelFactory_i.cpp \
+  FTRTEC_Factory_Service.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -298,8 +298,8 @@ endif
 #EventChannelFactory_i.h
 #
 #source_files:
-#FTRTEC_Factory_Service.cpp
 #EventChannelFactory_i.cpp
+#FTRTEC_Factory_Service.cpp
 #
 #exe_output:
 # ftrtec_factory_service

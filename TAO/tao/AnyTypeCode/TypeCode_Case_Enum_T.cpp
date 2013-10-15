@@ -1,4 +1,4 @@
-// $Id: TypeCode_Case_Enum_T.cpp 91741 2010-09-13 18:13:11Z johnnyw $
+// $Id: TypeCode_Case_Enum_T.cpp 97244 2013-08-07 06:52:37Z johnnyw $
 
 #ifndef TAO_TYPECODE_CASE_ENUM_T_CPP
 #define TAO_TYPECODE_CASE_ENUM_T_CPP
@@ -43,8 +43,7 @@ bool
 TAO::TypeCode::Case_Enum_T<StringType,
                            TypeCodeType>::marshal_label (TAO_OutputCDR & cdr) const
 {
-  return
-    (cdr << this->label_);
+  return (cdr << this->label_);
 }
 
 template <typename StringType,
@@ -52,8 +51,7 @@ template <typename StringType,
 bool
 TAO::TypeCode::Case_Enum_T<StringType,
                            TypeCodeType>::equal_label (::CORBA::ULong index,
-                                                       ::CORBA::TypeCode_ptr tc
-                                                       ) const
+                                                       ::CORBA::TypeCode_ptr tc) const
 {
   CORBA::Any_var any = tc->member_label (index);
   TAO_OutputCDR out_cdr;

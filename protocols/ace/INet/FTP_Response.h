@@ -1,4 +1,4 @@
-// $Id: FTP_Response.h 91626 2010-09-07 10:59:20Z johnnyw $
+// $Id: FTP_Response.h 97204 2013-06-20 16:56:28Z mesnier_p $
 
 /**
  * @file FTP_Response.h
@@ -84,7 +84,7 @@ namespace ACE
                 INFORMATION = 1,
                 CONNECTION = 2,
                 AUTHENTICATION = 3,
-                NONE = 4,
+                SUBTYPE_NONE = 4,  // "NONE" conflicts with a macro on VxWorks.
                 FILESYSTEM = 5
               };
 

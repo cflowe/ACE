@@ -4,7 +4,7 @@ package DirectoryManager;
 # Description   : This module provides directory related methods
 # Author        : Chad Elliott
 # Create Date   : 5/13/2004
-# $Id: DirectoryManager.pm 2035 2011-10-06 15:05:21Z johnnyw $
+# $Id: DirectoryManager.pm 2143 2013-07-09 15:14:04Z mitza $
 # ************************************************************
 
 # ************************************************************
@@ -192,7 +192,7 @@ sub translate_directory {
     my $dd = 'dotdot';
     $dir =~ s/^\.\.([\/\\])/$dd$1/;
     $dir =~ s/([\/\\])\.\.$/$1$dd/;
-    $dir =~ s/([\/\\])\.\.([\/\\])/$1$dd$2/g;
+    $dir =~ s/([\/\\])\.\.(?=[\/\\])/$1$dd$2/g;
     $dir =~ s/^\.\.$/$dd/;
   }
 

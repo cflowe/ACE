@@ -2,7 +2,7 @@
 /*
  * @file AsyncAccessManager.h
  *
- * $Id: AsyncAccessManager.h 97131 2013-05-13 19:18:55Z mesnier_p $
+ * $Id: AsyncAccessManager.h 97245 2013-08-07 07:08:10Z johnnyw $
  *
  * @author Phil Mesnier <mesnier_p@ociweb.com>
  */
@@ -64,7 +64,7 @@ enum AAM_Status
  * will have its own AAM instance.
  */
 
-class AsyncAccessManager
+class Locator_Export AsyncAccessManager
 {
  public:
   AsyncAccessManager (const Server_Info &info,

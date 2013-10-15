@@ -4,12 +4,11 @@
 /**
  *  @file corba.h
  *
- *  $Id: corba.h 79256 2007-08-08 11:24:06Z johnnyw $
+ *  $Id: corba.h 97293 2013-08-14 17:35:17Z johnnyw $
  *
- *  Master header file for all TAO stubs.
- *
- *  @note This header should not be included in any core TAO library
- *        files.  Include the necessary individual headers instead.
+ *  @note This header is for backwards compatibility only. It pulls
+ *        in a lot of files increasing compilation time and footprint
+ *        size. Include the necessary individual headers instead.
  *
  *  @author  Copyright 1994-1995 by Sun Microsystems Inc.
  *  @author  Chris Cleeland

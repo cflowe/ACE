@@ -3,7 +3,7 @@
 /**
  *  @file    udp_test.cpp
  *
- *  $Id: udp_test.cpp 95761 2012-05-15 18:23:04Z johnnyw $
+ *  $Id: udp_test.cpp 97218 2013-07-02 20:54:03Z mesnier_p $
  *
  *  Measures UDP round-trip performance.
  *
@@ -358,13 +358,10 @@ Client::run (void)
         }
     }
 
-  if (window)
-    {
-      window = window * 1000; // convert to nsec.
-      ndist = (int)((max-min) / window) + 1;
-      Dist = (u_int *) ACE_OS::calloc (ndist,
-                                       sizeof (u_int));
-    }
+  window = window * 1000; // convert to nsec.
+  ndist = (int)((max-min) / window) + 1;
+  Dist = (u_int *) ACE_OS::calloc (ndist,
+                                   sizeof (u_int));
 
   for (i = 0; i < (ACE_INT32) nsamples; i++)
     {
@@ -591,7 +588,7 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
           break;
         case 'w':
           window = ACE_OS::atoi (getopt.opt_arg ());
-          if (window < 0)
+          if (window < 2)
             ACE_ERROR_RETURN ((LM_ERROR,
                                "Invalid window!\n\n"),
                               1);

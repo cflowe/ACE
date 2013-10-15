@@ -4,7 +4,7 @@
 /**
  *  @file    QtReactor_Test.cpp
  *
- *  $Id: QtReactor_Test.cpp 95212 2011-12-05 12:29:55Z johnnyw $
+ *  $Id: QtReactor_Test.cpp 97191 2013-06-05 20:14:04Z mesnier_p $
  *
  *  Simple test of QtReactor. Test is intended to verify if QtReactor
  *  correctly cooperates with Qt event loop in typical application. Test
@@ -46,6 +46,7 @@
 #include "ace/Time_Value.h"
 #include "ace/QtReactor/QtReactor.h"
 #include "ace/Event_Handler.h"
+#include "ace/Argv_Type_Converter.h"
 #include "ace/Acceptor.h"
 #include "ace/Connector.h"
 #include "ace/SOCK_Acceptor.h"
@@ -891,7 +892,9 @@ void testQtReactor (int argc, ACE_TCHAR *argv[])
   // Qt specific code
   ACE_DEBUG ((LM_INFO, ACE_TEXT ("Testing QtReactor\n")));
 
-  QTestApplication app (argc, argv);
+  ACE_Argv_Type_Converter ct (argc, argv);
+  QTestApplication app (argc, ct.get_ASCII_argv ());
+
   ACE_QtReactor    qtReactor (&app);
   ACE_Reactor      reactor (&qtReactor);
   HandlersRegister handlersRegister (&reactor);

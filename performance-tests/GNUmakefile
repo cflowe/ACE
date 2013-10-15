@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 16 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Misc_Basic_Perf Misc_Childbirth_Time Misc_Context_Switch_Time Misc_Preempt Misc_Test_Guard Misc_Test_Mutex Misc_Test_Naming Misc_Test_Singleton SCTP_SOCK_SEQPACK_Association_Test SCTP_SOCK_SEQPACK_Clt SCTP_SOCK_SEQPACK_Srv SCTP_SOCK_STREAM_Clt SCTP_SOCK_STREAM_Srv Svr_Conc_Leader_Follower Svr_Conc_Leader_Follower_RT_CORBA Svr_Conc_Queue_Based_Workers Svr_Conc_Queue_Based_Workers_RTCorba Synch_Lib Synch_Benchmarks_Base_Test Synch_Benchmarks Synch_Benchmarks_Perf_Test TCP-target UDP-target
+all: Misc_Basic_Perf Misc_Childbirth_Time Misc_Context_Switch_Time Misc_Preempt Misc_Test_Guard Misc_Test_Mutex Misc_Test_Naming Misc_Test_Singleton SCTP_SOCK_SEQPACK_Association_Test SCTP_SOCK_STREAM_Srv SCTP_SOCK_STREAM_Clt SCTP_SOCK_SEQPACK_Clt SCTP_SOCK_SEQPACK_Srv Svr_Conc_Leader_Follower Svr_Conc_Leader_Follower_RT_CORBA Svr_Conc_Queue_Based_Workers Svr_Conc_Queue_Based_Workers_RTCorba Synch_Lib Synch_Benchmarks_Base_Test Synch_Benchmarks Synch_Benchmarks_Perf_Test TCP-target UDP-target
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -34,10 +34,10 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Misc && $(MAKE) -f GNUmakefile.Misc_Test_Naming $(@)
 	$(KEEP_GOING)@cd Misc && $(MAKE) -f GNUmakefile.Misc_Test_Singleton $(@)
 	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Association_Test $(@)
+	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Srv $(@)
+	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Clt $(@)
 	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Clt $(@)
 	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Srv $(@)
-	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Clt $(@)
-	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Srv $(@)
 	$(KEEP_GOING)@cd Server_Concurrency/Leader_Follower && $(MAKE) -f GNUmakefile.Svr_Conc_Leader_Follower $(@)
 	$(KEEP_GOING)@cd Server_Concurrency/Leader_Follower && $(MAKE) -f GNUmakefile.Svr_Conc_Leader_Follower_RT_CORBA $(@)
 	$(KEEP_GOING)@cd Server_Concurrency/Queue_Based_Workers && $(MAKE) -f GNUmakefile.Svr_Conc_Queue_Based_Workers $(@)
@@ -85,21 +85,21 @@ Misc_Test_Singleton:
 SCTP_SOCK_SEQPACK_Association_Test:
 	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Association_Test all
 
+.PHONY: SCTP_SOCK_STREAM_Srv
+SCTP_SOCK_STREAM_Srv:
+	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Srv all
+
+.PHONY: SCTP_SOCK_STREAM_Clt
+SCTP_SOCK_STREAM_Clt: SCTP_SOCK_STREAM_Srv
+	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Clt all
+
 .PHONY: SCTP_SOCK_SEQPACK_Clt
-SCTP_SOCK_SEQPACK_Clt:
+SCTP_SOCK_SEQPACK_Clt: SCTP_SOCK_STREAM_Srv SCTP_SOCK_STREAM_Clt
 	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Clt all
 
 .PHONY: SCTP_SOCK_SEQPACK_Srv
-SCTP_SOCK_SEQPACK_Srv: SCTP_SOCK_SEQPACK_Clt
+SCTP_SOCK_SEQPACK_Srv: SCTP_SOCK_STREAM_Srv
 	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_SEQPACK_Srv all
-
-.PHONY: SCTP_SOCK_STREAM_Clt
-SCTP_SOCK_STREAM_Clt: SCTP_SOCK_SEQPACK_Clt
-	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Clt all
-
-.PHONY: SCTP_SOCK_STREAM_Srv
-SCTP_SOCK_STREAM_Srv: SCTP_SOCK_SEQPACK_Clt
-	$(KEEP_GOING)@cd SCTP && $(MAKE) -f GNUmakefile.SCTP_SOCK_STREAM_Srv all
 
 .PHONY: Svr_Conc_Leader_Follower
 Svr_Conc_Leader_Follower:

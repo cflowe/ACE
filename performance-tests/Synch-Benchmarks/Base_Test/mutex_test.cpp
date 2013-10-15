@@ -1,4 +1,4 @@
-// $Id: mutex_test.cpp 80826 2008-03-04 14:51:23Z wotte $
+// $Id: mutex_test.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 #define ACE_BUILD_SVC_DLL
 
@@ -23,6 +23,9 @@ template<class LOCK>
 class ACE_Svc_Export Baseline_Lock_Test : public Baseline_Test_Base
 {
 public:
+  Baseline_Lock_Test ();
+  virtual ~Baseline_Lock_Test ();
+
   virtual int acquire ();
   virtual int release ();
   // These two method are used to test try_acquire performance.
@@ -35,6 +38,16 @@ private:
   LOCK lock_;
   //
 };
+
+template<class LOCK>
+Baseline_Lock_Test<LOCK>::Baseline_Lock_Test ()
+{
+}
+
+template<class LOCK>
+Baseline_Lock_Test<LOCK>::~Baseline_Lock_Test ()
+{
+}
 
 template<class LOCK> int
 Baseline_Lock_Test<LOCK>::acquire ()

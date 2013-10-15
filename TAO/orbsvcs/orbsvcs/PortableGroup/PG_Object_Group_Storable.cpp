@@ -1,4 +1,4 @@
-// $Id: PG_Object_Group_Storable.cpp 96892 2013-03-08 15:00:00Z stanleyk $
+// $Id: PG_Object_Group_Storable.cpp 97278 2013-08-12 07:18:19Z johnnyw $
 
 #include "orbsvcs/PortableGroup/PG_Object_Group_Storable.h"
 
@@ -542,7 +542,7 @@ TAO::PG_Object_Group_Storable::write (TAO::Storable_Base & stream)
       factory_id_cdr << member->factory_id_;
       stream << factory_id_cdr;
 
-      stream << member->is_primary_;
+      stream << (int)member->is_primary_;
     }
   stream.flush ();
   this->write_occurred_ = true;

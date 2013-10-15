@@ -4,7 +4,7 @@
 /**
  *  @file    Signal.h
  *
- *  $Id: Signal.h 96257 2012-11-12 13:35:09Z johnnyw $
+ *  $Id: Signal.h 97262 2013-08-09 08:32:10Z johnnyw $
  *
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  */
@@ -14,7 +14,7 @@
 #define ACE_SIGNAL_H
 #include /**/ "ace/pre.h"
 
-#include "ace/config-lite.h"
+#include /**/ "ace/config-lite.h"
 
 #if defined (ACE_DONT_INCLUDE_ACE_SIGNAL_H)
 # error ace/Signal.h was #included instead of signal.h by ace/OS_NS_signal.h:  fix!!!!

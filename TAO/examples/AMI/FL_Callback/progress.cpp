@@ -1,4 +1,4 @@
-// $Id: progress.cpp 91825 2010-09-17 09:10:22Z johnnyw $
+// $Id: progress.cpp 97190 2013-06-05 20:13:29Z mesnier_p $
 
 #include "Progress_i.h"
 #include "ace/Get_Opt.h"
@@ -73,7 +73,7 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
 
       window.end ();
 
-      char* targv[] = { argv[0] };
+      char* targv[] = { ACE_TEXT_ALWAYS_CHAR (argv[0]) };
       window.show (1, targv);
 
       sw.show ();

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 16 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: LocalObject_Messenger_Idl LocalObject_Messenger_Server ServantLocator_Idl ServantLocator_Client ServantLocator_Server
+all: LocalObject_Messenger_Idl LocalObject_Messenger_Server ServantLocator_Idl ServantLocator_Server ServantLocator_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -28,8 +28,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.LocalObject_Messenger_Idl $(@)
 	$(KEEP_GOING)@cd Messenger && $(MAKE) -f GNUmakefile.LocalObject_Messenger_Server $(@)
 	$(KEEP_GOING)@cd ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Idl $(@)
-	$(KEEP_GOING)@cd ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Client $(@)
 	$(KEEP_GOING)@cd ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Server $(@)
+	$(KEEP_GOING)@cd ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Client $(@)
 
 .PHONY: LocalObject_Messenger_Idl
 LocalObject_Messenger_Idl:
@@ -43,13 +43,13 @@ LocalObject_Messenger_Server: LocalObject_Messenger_Idl
 ServantLocator_Idl:
 	$(KEEP_GOING)@cd ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Idl all
 
-.PHONY: ServantLocator_Client
-ServantLocator_Client: ServantLocator_Idl
-	$(KEEP_GOING)@cd ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Client all
-
 .PHONY: ServantLocator_Server
-ServantLocator_Server: ServantLocator_Idl ServantLocator_Client
+ServantLocator_Server: ServantLocator_Idl
 	$(KEEP_GOING)@cd ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Server all
+
+.PHONY: ServantLocator_Client
+ServantLocator_Client: ServantLocator_Idl ServantLocator_Server
+	$(KEEP_GOING)@cd ServantLocator && $(MAKE) -f GNUmakefile.ServantLocator_Client all
 
 project_name_list:
 	@echo LocalObject_Messenger_Idl

@@ -1,17 +1,6 @@
-// $Id: MonitorClient.cpp 90164 2010-05-18 21:47:55Z mitza $
+// $Id: MonitorClient.cpp 97251 2013-08-07 09:43:41Z johnnyw $
 
 #include "orbsvcs/Notify/MonitorControl/NotificationServiceMCC.h"
-
-#if defined (TAO_HAS_MONITOR_FRAMEWORK) && (TAO_HAS_MONITOR_FRAMEWORK == 1)
-
-void
-error (const char* msg)
-{
-  ACE_ERROR ((LM_ERROR, "%s\n", msg));
-  ACE_OS::exit (1);
-}
-
-#endif /* TAO_HAS_MONITOR_FRAMEWORK==1 */
 
 int
 ACE_TMAIN (int argc, ACE_TCHAR* argv[])
@@ -45,7 +34,7 @@ ACE_TMAIN (int argc, ACE_TCHAR* argv[])
     }
   catch (...)
     {
-      error ("Caught an unexpected exception type");
+      ACE_ERROR_RETURN ((LM_ERROR, "Caught an unexpected exception type\n"), 1);
     }
 
 #else /* TAO_HAS_MONITOR_FRAMEWORK==1 */

@@ -1,7 +1,7 @@
 /*
  * ACE reactor demonstration
  *
- * $Id: ReadHandler.cpp 94310 2011-07-09 19:10:06Z schmidt $
+ * $Id: ReadHandler.cpp 97246 2013-08-07 07:10:20Z johnnyw $
  * Date: 26-Jan-2006
  */
 
@@ -76,7 +76,7 @@ int ReadHandler::handle_input(ACE_HANDLE) {
         // Note: only use the sizeof and pointer to int on compatible
         //       platforms (i.e. little-endian/big-endian, data type size)
         if (mStream.recv_n(&mDataSize, sizeof(mDataSize),
-                &connTimeout) != sizeof(mDataSize)) {
+                &connTimeout) != (ssize_t) sizeof(mDataSize)) {
           ACE_ERROR((LM_ERROR, ACE_TEXT("%N:%l: Failed to receive ")
                      ACE_TEXT ("request. (errno = %i: %m)\n"), ACE_ERRNO_GET));
             INVOCATION_RETURN(-1);

@@ -27,13 +27,13 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  DTP_POA_Strategy.cpp \
-  DTP_POA_Loader.cpp \
   DTP_ORB_Loader.cpp \
-  DTP_ORBInitializer.cpp \
+  DTP_POA_Loader.cpp \
   DTP_Config.cpp \
-  DTP_Task.cpp \
   DTP_Thread_Lane_Resources_Manager.cpp \
+  DTP_ORBInitializer.cpp \
+  DTP_Task.cpp \
+  DTP_POA_Strategy.cpp \
   DTP_Thread_Pool.cpp
 
 #----------------------------------------------------------------------------
@@ -265,13 +265,13 @@ endif
 #dynamic_tp_export.h
 #
 #source_files:
-#DTP_POA_Strategy.cpp
-#DTP_POA_Loader.cpp
 #DTP_ORB_Loader.cpp
-#DTP_ORBInitializer.cpp
+#DTP_POA_Loader.cpp
 #DTP_Config.cpp
-#DTP_Task.cpp
 #DTP_Thread_Lane_Resources_Manager.cpp
+#DTP_ORBInitializer.cpp
+#DTP_Task.cpp
+#DTP_POA_Strategy.cpp
 #DTP_Thread_Pool.cpp
 #
 #lib_output:

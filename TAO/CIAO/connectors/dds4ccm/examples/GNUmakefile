@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 16 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: DDS_Hello_Base_stub Large_Deployment_stub Single_Service_Common_idl_gen Single_Service_Common_idl_lem_gen Single_Service_Common_stub Single_Service_Common_lem_stub Single_Service_Common_skel Single_Service_idl_gen Single_Service_stub Single_Service_lem_gen Single_Service_lem_stub Single_Service_exec Single_Service_svnt DDS_Quoter_Base_stub DDS_Shapes_Base_stub
+all: DDS_Hello_Base_stub Large_Deployment_stub Single_Service_Common_idl_gen Single_Service_Common_idl_lem_gen Single_Service_Common_stub Single_Service_Common_lem_stub Single_Service_Common_skel Single_Service_idl_gen Single_Service_stub Single_Service_lem_gen Single_Service_lem_stub Single_Service_exec Single_Service_svnt DDS_Quoter_Base_stub DDS_Shapes_Base_stub ShapesContr_Base_stub Shapes_Contr_Base_idl_gen Shapes_Contr_Base_lem_gen Shapes_Contr_Base_stub Shapes_Contr_Base_svnt ShapesContr_Controller_idl_gen ShapesContr_Controller_stub ShapesContr_Controller_lem_gen ShapesContr_Controller_exec ShapesContr_Controller_svnt ShapesContr_ContrR_idl_gen ShapesContr_ContrR_stub ShapesContr_ContrR_lem_gen ShapesContr_ContrR_exec ShapesContr_ContrRr_svnt
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -40,6 +40,21 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd Large_Deployment/Single_Service && $(MAKE) -f GNUmakefile.Single_Service_svnt $(@)
 	$(KEEP_GOING)@cd Quoter/Base && $(MAKE) -f GNUmakefile.DDS_Quoter_Base_stub $(@)
 	$(KEEP_GOING)@cd Shapes/Base && $(MAKE) -f GNUmakefile.DDS_Shapes_Base_stub $(@)
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.ShapesContr_Base_stub $(@)
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.Shapes_Contr_Base_idl_gen $(@)
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.Shapes_Contr_Base_lem_gen $(@)
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.Shapes_Contr_Base_stub $(@)
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.Shapes_Contr_Base_svnt $(@)
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_idl_gen $(@)
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_stub $(@)
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_lem_gen $(@)
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_exec $(@)
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_svnt $(@)
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrR_idl_gen $(@)
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrR_stub $(@)
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrR_lem_gen $(@)
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrR_exec $(@)
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrRr_svnt $(@)
 
 .PHONY: DDS_Hello_Base_stub
 DDS_Hello_Base_stub:
@@ -101,6 +116,66 @@ DDS_Quoter_Base_stub:
 DDS_Shapes_Base_stub:
 	$(KEEP_GOING)@cd Shapes/Base && $(MAKE) -f GNUmakefile.DDS_Shapes_Base_stub all
 
+.PHONY: ShapesContr_Base_stub
+ShapesContr_Base_stub:
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.ShapesContr_Base_stub all
+
+.PHONY: Shapes_Contr_Base_idl_gen
+Shapes_Contr_Base_idl_gen:
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.Shapes_Contr_Base_idl_gen all
+
+.PHONY: Shapes_Contr_Base_lem_gen
+Shapes_Contr_Base_lem_gen: Shapes_Contr_Base_idl_gen
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.Shapes_Contr_Base_lem_gen all
+
+.PHONY: Shapes_Contr_Base_stub
+Shapes_Contr_Base_stub: Shapes_Contr_Base_lem_gen
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.Shapes_Contr_Base_stub all
+
+.PHONY: Shapes_Contr_Base_svnt
+Shapes_Contr_Base_svnt: Shapes_Contr_Base_stub
+	$(KEEP_GOING)@cd ShapesContr/Base && $(MAKE) -f GNUmakefile.Shapes_Contr_Base_svnt all
+
+.PHONY: ShapesContr_Controller_idl_gen
+ShapesContr_Controller_idl_gen: Shapes_Contr_Base_stub
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_idl_gen all
+
+.PHONY: ShapesContr_Controller_stub
+ShapesContr_Controller_stub: Shapes_Contr_Base_stub ShapesContr_Controller_idl_gen
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_stub all
+
+.PHONY: ShapesContr_Controller_lem_gen
+ShapesContr_Controller_lem_gen: Shapes_Contr_Base_lem_gen ShapesContr_Controller_idl_gen
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_lem_gen all
+
+.PHONY: ShapesContr_Controller_exec
+ShapesContr_Controller_exec: ShapesContr_Controller_stub ShapesContr_Controller_lem_gen
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_exec all
+
+.PHONY: ShapesContr_Controller_svnt
+ShapesContr_Controller_svnt: Shapes_Contr_Base_stub Shapes_Contr_Base_svnt ShapesContr_Controller_exec
+	$(KEEP_GOING)@cd ShapesContr/Controller && $(MAKE) -f GNUmakefile.ShapesContr_Controller_svnt all
+
+.PHONY: ShapesContr_ContrR_idl_gen
+ShapesContr_ContrR_idl_gen: Shapes_Contr_Base_stub
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrR_idl_gen all
+
+.PHONY: ShapesContr_ContrR_stub
+ShapesContr_ContrR_stub: Shapes_Contr_Base_stub ShapesContr_ContrR_idl_gen
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrR_stub all
+
+.PHONY: ShapesContr_ContrR_lem_gen
+ShapesContr_ContrR_lem_gen: Shapes_Contr_Base_lem_gen ShapesContr_ContrR_idl_gen
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrR_lem_gen all
+
+.PHONY: ShapesContr_ContrR_exec
+ShapesContr_ContrR_exec: ShapesContr_ContrR_stub ShapesContr_ContrR_lem_gen
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrR_exec all
+
+.PHONY: ShapesContr_ContrRr_svnt
+ShapesContr_ContrRr_svnt: Shapes_Contr_Base_stub Shapes_Contr_Base_svnt ShapesContr_ContrR_exec
+	$(KEEP_GOING)@cd ShapesContr/ControllerR && $(MAKE) -f GNUmakefile.ShapesContr_ContrRr_svnt all
+
 project_name_list:
 	@echo DDS_Hello_Base_stub
 	@echo Large_Deployment_stub
@@ -117,3 +192,18 @@ project_name_list:
 	@echo Single_Service_svnt
 	@echo DDS_Quoter_Base_stub
 	@echo DDS_Shapes_Base_stub
+	@echo ShapesContr_Base_stub
+	@echo Shapes_Contr_Base_idl_gen
+	@echo Shapes_Contr_Base_lem_gen
+	@echo Shapes_Contr_Base_stub
+	@echo Shapes_Contr_Base_svnt
+	@echo ShapesContr_Controller_exec
+	@echo ShapesContr_Controller_idl_gen
+	@echo ShapesContr_Controller_lem_gen
+	@echo ShapesContr_Controller_stub
+	@echo ShapesContr_Controller_svnt
+	@echo ShapesContr_ContrR_exec
+	@echo ShapesContr_ContrR_idl_gen
+	@echo ShapesContr_ContrR_lem_gen
+	@echo ShapesContr_ContrR_stub
+	@echo ShapesContr_ContrRr_svnt

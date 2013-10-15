@@ -1,4 +1,4 @@
-// $Id: HTIOP_Connector_Impl.cpp 86602 2009-09-03 10:45:43Z vzykov $
+// $Id: HTIOP_Connector_Impl.cpp 97203 2013-06-19 22:49:55Z mesnier_p $
 
 #ifndef HTIOP_CONNECTOR_IMPL_CPP
 #define HTIOP_CONNECTOR_IMPL_CPP
@@ -12,7 +12,7 @@ TAO::HTIOP::Connect_Creation_Strategy<SVC_HANDLER>::
 Connect_Creation_Strategy (ACE_Thread_Manager* t,
                                      TAO_ORB_Core *orb_core,
                                      void *arg,
-                                     CORBA::Boolean flag)
+                                     CORBA::Boolean )
   : ACE_Creation_Strategy <SVC_HANDLER> (t),
     orb_core_ (orb_core),
     arg_ (arg)

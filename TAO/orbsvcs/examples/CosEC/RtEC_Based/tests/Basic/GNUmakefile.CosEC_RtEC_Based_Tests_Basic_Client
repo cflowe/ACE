@@ -20,8 +20,8 @@ TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
   Consumer.cpp \
-  Supplier.cpp \
-  Basic.cpp
+  Basic.cpp \
+  Supplier.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

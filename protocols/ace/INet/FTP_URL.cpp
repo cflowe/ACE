@@ -1,4 +1,4 @@
-// $Id: FTP_URL.cpp 91118 2010-07-17 10:29:57Z mcorino $
+// $Id: FTP_URL.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 #include "ace/INet/FTP_URL.h"
 
@@ -24,18 +24,18 @@ namespace ACE
       }
 
     URL::URL ()
-      : URL_INetAuthBase (FTP_PORT)
+      : ACE::INet::URL_INetAuthBase (FTP_PORT)
       {
       }
 
     URL::URL (const ACE_CString& url_string)
-      : URL_INetAuthBase (FTP_PORT)
+      : ACE::INet::URL_INetAuthBase (FTP_PORT)
       {
         this->parse (url_string);
       }
 
     URL::URL (const URL& url)
-      : URL_INetAuthBase (0)
+      : ACE::INet::URL_INetAuthBase (0)
       {
         *this = url;
       }

@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 16 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: airplane_idl airplane_server airplane_client nestea_idl nestea_server nestea_client Bug_2604_Idl Bug_2604_Server Bug_2604_Client Bug_689_Regression_Idl Bug_689_Regression_Server Bug_689_Regression_Client ImplRepo_NameService ReconnectServer_Idl ReconnectServer_ServerA ReconnectServer_Client ReconnectServer_ServerB RestartServer_Idl RestartServer_Client RestartServer_Server scaletest_idl scaletest_client scaletest_server scale_clients_idl scale_clients_client scale_clients_server servers_interact_on_startup_idl servers_interact_on_startup_client servers_interact_on_startup_server servers_list_idl servers_list_client servers_list_server
+all: airplane_idl airplane_server airplane_client nestea_idl nestea_server nestea_client Bug_2604_Idl Bug_2604_Server Bug_2604_Client Bug_689_Regression_Idl Bug_689_Regression_Server Bug_689_Regression_Client ImplRepo_NameService ReconnectServer_Idl ReconnectServer_ServerA ReconnectServer_Client ReconnectServer_ServerB RestartServer_Idl RestartServer_Client RestartServer_Server ping_interrupt_idl ping_interrupt_server scaletest_idl scaletest_client scaletest_server scale_clients_idl scale_clients_client scale_clients_server servers_interact_on_startup_idl servers_interact_on_startup_client servers_interact_on_startup_server servers_list_idl servers_list_client servers_list_server
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -45,6 +45,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Idl $(@)
 	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Client $(@)
 	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Server $(@)
+	$(KEEP_GOING)@cd ping_interrupt && $(MAKE) -f GNUmakefile.ping_interrupt_idl $(@)
+	$(KEEP_GOING)@cd ping_interrupt && $(MAKE) -f GNUmakefile.ping_interrupt_server $(@)
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_idl $(@)
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_client $(@)
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_server $(@)
@@ -138,6 +140,14 @@ RestartServer_Client: RestartServer_Idl
 RestartServer_Server: RestartServer_Idl RestartServer_Client
 	$(KEEP_GOING)@cd RestartServer && $(MAKE) -f GNUmakefile.RestartServer_Server all
 
+.PHONY: ping_interrupt_idl
+ping_interrupt_idl:
+	$(KEEP_GOING)@cd ping_interrupt && $(MAKE) -f GNUmakefile.ping_interrupt_idl all
+
+.PHONY: ping_interrupt_server
+ping_interrupt_server: ping_interrupt_idl
+	$(KEEP_GOING)@cd ping_interrupt && $(MAKE) -f GNUmakefile.ping_interrupt_server all
+
 .PHONY: scaletest_idl
 scaletest_idl:
 	$(KEEP_GOING)@cd scale && $(MAKE) -f GNUmakefile.scaletest_idl all
@@ -207,6 +217,8 @@ project_name_list:
 	@echo RestartServer_Client
 	@echo RestartServer_Idl
 	@echo RestartServer_Server
+	@echo ping_interrupt_idl
+	@echo ping_interrupt_server
 	@echo scaletest_client
 	@echo scaletest_idl
 	@echo scaletest_server

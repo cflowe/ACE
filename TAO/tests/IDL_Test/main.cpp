@@ -3,7 +3,7 @@
 /**
  *  @file    main.cpp
  *
- *  $Id: main.cpp 93650 2011-03-28 08:44:53Z johnnyw $
+ *  $Id: main.cpp 97281 2013-08-12 08:28:17Z johnnyw $
  *
  *  We test the pragma prefixes generated in pragma.idl, and
  *  the values of some generated constants in constants.idl.
@@ -294,13 +294,13 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
           "IDL:omg.org/CORBA/Object:1.0"
         };
 
-        for (int i = 0; i != sizeof (base)/sizeof (base[0]); ++i)
+        for (size_t i = 0; i != sizeof (base)/sizeof (base[0]); ++i)
           {
             if (!x._is_a (base[i]))
               {
                 ++error_count;
                 ACE_DEBUG ((LM_DEBUG,
-                           "something_handler::_is_a should return true for %s\n",
+                           "something_handler::_is_a should return true for %C\n",
                            base[i]));
               }
           }
@@ -309,7 +309,7 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
           {
             ++error_count;
             ACE_DEBUG( (LM_DEBUG,
-                       "mismatch in downcast for %s\n",
+                       "mismatch in downcast for %C\n",
                         base[0]));
           }
 
@@ -317,7 +317,7 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
           {
             ++error_count;
             ACE_DEBUG ((LM_DEBUG,
-                       "mismatch in downcast for %s\n",
+                       "mismatch in downcast for %C\n",
                        base[1]));
           }
 
@@ -325,7 +325,7 @@ ACE_TMAIN(int argc, ACE_TCHAR *argv[])
           {
             ++error_count;
             ACE_DEBUG ((LM_DEBUG,
-                       "mismatch in downcast for %s\n",
+                       "mismatch in downcast for %C\n",
                        base[2]));
           }
       }

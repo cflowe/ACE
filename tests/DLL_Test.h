@@ -4,7 +4,7 @@
 /**
  * @file DLL_Test.h
  *
- * $Id: DLL_Test.h 84504 2009-02-18 09:24:23Z msmit $
+ * $Id: DLL_Test.h 97246 2013-08-07 07:10:20Z johnnyw $
  *
  * @author Kirthika Parameswaran  <kirthika@cs.wustl.edu>
  */
@@ -64,6 +64,7 @@ public:
 class ACE_Svc_Export Child : public Parent
 {
 public:
+  Child (void);
 
   virtual ~Child (void);
 

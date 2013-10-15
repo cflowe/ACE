@@ -1,10 +1,8 @@
-// $Id: Offer_Exporter.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: Offer_Exporter.cpp 97181 2013-05-29 19:27:25Z johnnyw $
 
 #include "Offer_Exporter.h"
 #include "ace/INET_Addr.h"
 #include "ace/OS_NS_stdio.h"
-
-
 
 TAO_Offer_Exporter::
 TAO_Offer_Exporter (CosTrading::Lookup_ptr lookup_if,
@@ -34,6 +32,7 @@ TAO_Offer_Exporter::export_offers (void)
 {
   ACE_DEBUG ((LM_DEBUG, "*** TAO_Offer_Exporter::Exporting offers.\n"));
 
+  // Set the PROPERTY_NAMES - TRADER_NAME.
   for (int i = 0; i < NUM_OFFERS; i++)
     {
       this->props_plotters_[i][4].value <<= "Default";
@@ -51,10 +50,9 @@ TAO_Offer_Exporter::export_to (CosTrading::Register_ptr reg)
     {
       for (int i = 0; i < NUM_OFFERS; i++)
         {
-          CORBA::Object_ptr offer_obj= this->plotter_[i]._this ();
-
+          TAO_Trader_Test::Plotter_var pPlotter= this->plotter_[i]._this ();
           CosTrading::OfferId_var offer_id =
-            reg->_cxx_export (offer_obj,
+            reg->_cxx_export (pPlotter.in(),
                               TT_Info::INTERFACE_NAMES[1],
                               this->props_plotters_[i]);
 
@@ -63,9 +61,8 @@ TAO_Offer_Exporter::export_to (CosTrading::Register_ptr reg)
               ACE_DEBUG ((LM_DEBUG, "Registered offer id: %C.\n", offer_id.in ()));
             }
 
-          offer_obj = this->printer_[i]._this ();
-
-          offer_id = reg->_cxx_export (offer_obj,
+          TAO_Trader_Test::Printer_var pPrinter = this->printer_[i]._this ();
+          offer_id = reg->_cxx_export (pPrinter.in(),
                                        TT_Info::INTERFACE_NAMES[2],
                                        this->props_printers_[i]);
 
@@ -74,9 +71,8 @@ TAO_Offer_Exporter::export_to (CosTrading::Register_ptr reg)
               ACE_DEBUG ((LM_DEBUG, "Registered offer id: %C.\n", offer_id.in ()));
             }
 
-          offer_obj = this->fs_[i]._this ();
-
-          offer_id = reg->_cxx_export (offer_obj,
+          TAO_Trader_Test::File_System_var pFileSystem = this->fs_[i]._this ();
+          offer_id = reg->_cxx_export (pFileSystem.in(),
                                        TT_Info::INTERFACE_NAMES[3],
                                        this->props_fs_[i]);
 
@@ -86,10 +82,9 @@ TAO_Offer_Exporter::export_to (CosTrading::Register_ptr reg)
             }
         }
     }
-  catch (const CORBA::Exception& ex)
+  catch (const CORBA::Exception& e)
     {
-      ex._tao_print_exception (
-        "TAO_Offer_Exporter::export_offers");
+      e._tao_print_exception ("TAO_Offer_Exporter::export_to");
       throw;
     }
 }
@@ -133,6 +128,7 @@ TAO_Offer_Exporter::export_offers_to_all (void)
           CosTrading::Link::LinkInfo_var link_info =
             link_if->describe_link (link_name_seq[i]);
 
+          // Set the PROPERTY_NAMES - TRADER_NAME.
           for (int j = 0; j < NUM_OFFERS; j++)
             {
               this->props_plotters_[j][4].value <<= link_name_seq[i];
@@ -148,9 +144,10 @@ TAO_Offer_Exporter::export_offers_to_all (void)
 
           this->export_to (link_info->target_reg.in ());
         }
-      catch (const CORBA::Exception&)
+      catch (const CORBA::Exception& e)
         {
-          // @@ IGNORE??
+          e._tao_print_exception ("TAO_Offer_Exporter::export_offers_to_all");
+          throw;
         }
     }
 }
@@ -176,10 +173,9 @@ TAO_Offer_Exporter::withdraw_offers (void)
             }
         }
     }
-  catch (const CORBA::Exception& ex)
+  catch (const CORBA::Exception& e)
     {
-      ex._tao_print_exception (
-        "TAO_Offer_Exporter::withdraw_offers");
+      e._tao_print_exception ("TAO_Offer_Exporter::withdraw_offers");
       throw;
     }
 }
@@ -216,10 +212,9 @@ TAO_Offer_Exporter::describe_offers (void)
             }
         }
     }
-  catch (const CORBA::Exception& ex)
+  catch (const CORBA::Exception& e)
     {
-      ex._tao_print_exception (
-        "TAO_Offer_Exporter::describe_offers");
+      e._tao_print_exception ("TAO_Offer_Exporter::describe_offers");
       throw;
     }
 }
@@ -255,10 +250,9 @@ TAO_Offer_Exporter::modify_offers (void)
             }
         }
     }
-  catch (const CORBA::Exception& ex)
+  catch (const CORBA::Exception& e)
     {
-      ex._tao_print_exception (
-        "TAO_Offer_Exporter::modify_offers");
+      e._tao_print_exception ("TAO_Offer_Exporter::modify_offers");
       throw;
     }
 }
@@ -289,10 +283,9 @@ withdraw_offers_using_constraints (void)
         withdraw_using_constraint (TT_Info::INTERFACE_NAMES[TT_Info::FILESYSTEM],
                                    constraint);
     }
-  catch (const CORBA::Exception& ex)
+  catch (const CORBA::Exception& e)
     {
-      ex._tao_print_exception (
-        "TAO_Offer_Exporter::withdraw_using_constraint");
+      e._tao_print_exception ("TAO_Offer_Exporter::withdraw_offers_using_constraints");
       throw;
     }
 }
@@ -303,36 +296,38 @@ TAO_Offer_Exporter::grab_offerids (void)
   if (this->verbose_)
     ACE_DEBUG ((LM_DEBUG, "TAO_Offer_Exporter::Grabbing all offer ids.\n"));
 
-  CosTrading::OfferIdSeq *offer_id_seq;
+  CosTrading::OfferIdSeq_var offer_id_seq_result;
   try
     {
       CORBA::ULong length = NUM_OFFERS;
-      CosTrading::OfferIdIterator_ptr offer_id_iter;
+      CosTrading::OfferIdIterator_var offer_id_iter;
 
       this->admin_->list_offers (NUM_OFFERS,
-                                 CosTrading::OfferIdSeq_out (offer_id_seq),
-                                 CosTrading::OfferIdIterator_out (offer_id_iter));
+                                 offer_id_seq_result.out(),
+                                 offer_id_iter.out());
 
-      if ((! CORBA::is_nil (offer_id_iter)) && offer_id_seq != 0)
+      // We might already have seq results but may have to process additional
+      // iterator result fragments.
+      if (!CORBA::is_nil (offer_id_iter.in()))
         {
+          CosTrading::OfferIdSeq_var offer_id_seq_remaining;
           CORBA::Boolean any_left = 0;
-          CosTrading::OfferIdSeq *id_seq;
-          CosTrading::OfferIdIterator_var offer_id_iter_var (offer_id_iter);
-
           do
             {
               any_left =
                 offer_id_iter->next_n (length,
-                                       CosTrading::OfferIdSeq_out (id_seq));
+                                       offer_id_seq_remaining.out());
 
-              int offers = id_seq->length ();
-              int old_length = offer_id_seq->length ();
-              offer_id_seq->length (old_length + offers);
+              // Grow our result sequence with the remaining fragments.
+              CORBA::ULong offers = offer_id_seq_remaining->length ();
+              CORBA::ULong old_length = offer_id_seq_result->length ();
+              offer_id_seq_result->length (old_length + offers);
 
-              for (int i = 0; i < offers; i++)
-                (*offer_id_seq)[i + old_length] = (*id_seq)[i];
+              for (CORBA::ULong i = 0; i < offers; i++)
+                {
+                  offer_id_seq_result[i + old_length] = CORBA::string_dup (offer_id_seq_remaining[i].in ());
+                }
 
-              delete id_seq;
             }
           while (any_left);
 
@@ -342,23 +337,24 @@ TAO_Offer_Exporter::grab_offerids (void)
       if (this->verbose_)
         {
           ACE_DEBUG ((LM_DEBUG, "The following offer ids are registered:\n"));
-          for (int len = offer_id_seq->length (), j = 0; j < len; j++)
-            ACE_DEBUG ((LM_DEBUG, "Offer Id: %C\n", (const char *)(*offer_id_seq)[j]));
+          for (CORBA::ULong i=0; i<offer_id_seq_result->length(); i++)
+            ACE_DEBUG ((LM_DEBUG, "Offer Id: %C\n", offer_id_seq_result[i].in()));
         }
     }
-  catch (const CORBA::Exception& ex)
+  catch (const CORBA::Exception& e)
     {
-      ex._tao_print_exception ("TAO_Offer_Exporter::grab_offerids");
+      e._tao_print_exception ("TAO_Offer_Exporter::grab_offerids");
       throw;
     }
   // @@ redundant.
 
-  return offer_id_seq;
+  return offer_id_seq_result._retn();
 }
 
 void
 TAO_Offer_Exporter::create_offers (void)
 {
+  ACE_DEBUG ((LM_DEBUG, "*** TAO_Offer_Exporter::Creating offers.\n"));
   const int QUEUE_SIZE = 4;
 
   int counter = 0, i = 0;

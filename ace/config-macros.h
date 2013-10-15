@@ -4,7 +4,7 @@
 /**
  *  @file   config-macros.h
  *
- *  $Id: config-macros.h 94386 2011-08-10 12:42:53Z johnnyw $
+ *  $Id: config-macros.h 97246 2013-08-07 07:10:20Z johnnyw $
  *
  *  @author (Originally in OS.h)Doug Schmidt <schmidt@cs.wustl.edu>
  *  @author Jesper S. M|ller<stophph@diku.dk>
@@ -223,7 +223,7 @@
 // ============================================================================
 
 #if !defined (ACE_UNUSED_ARG)
-# if defined (__GNUC__) && ((__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 2)))
+# if defined (__GNUC__) && ((__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 2))) || (defined (__BORLANDC__) && defined (__clang__))
 #   define ACE_UNUSED_ARG(a) (void) (a)
 # elif defined (__GNUC__) || defined (ghs) || defined (__hpux) || defined (__DECCXX) || defined (__rational__) || defined (__USLC__) || defined (ACE_RM544) || defined (__DCC__) || defined (__PGI) || defined (__TANDEM)
 // Some compilers complain about "statement with no effect" with (a).

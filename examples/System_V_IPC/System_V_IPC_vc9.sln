@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE -workers 20 -name_modifier "*_vc9"
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type vc9 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE -workers 16 -name_modifier "*_vc9"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Message_Queues_MQ_Client", "SV_Message_Queues\SV_Message_Queues_MQ_Client_vc9.vcproj", "{7625F539-FECA-1BAD-6606-BBB2EAC4C36E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Message_Queues_MQ_Server", "SV_Message_Queues\SV_Message_Queues_MQ_Server_vc9.vcproj", "{FC1E9529-FECA-1BAD-6606-BBB2EAC4C36E}"
@@ -19,6 +19,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Semaphores_1", "SV_Semaphores\SV_Semaphores_1_vc9.vcproj", "{5E535F11-FECA-1BAD-BE72-3C5B13526565}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Semaphores_2", "SV_Semaphores\SV_Semaphores_2_vc9.vcproj", "{5E536F11-FECA-1BAD-BE72-3C5B13526565}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SV_Shared_Memory", "SV_Shared_Memory\SV_Shared_Memory_vc9.vcproj", "{DCE5DB1B-FECA-1BAD-0000-0000D5A70449}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +78,14 @@ Global
 		{5E536F11-FECA-1BAD-BE72-3C5B13526565}.Release|Win32.Build.0 = Release|Win32
 		{5E536F11-FECA-1BAD-BE72-3C5B13526565}.Release|x64.ActiveCfg = Release|x64
 		{5E536F11-FECA-1BAD-BE72-3C5B13526565}.Release|x64.Build.0 = Release|x64
+		{DCE5DB1B-FECA-1BAD-0000-0000D5A70449}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DCE5DB1B-FECA-1BAD-0000-0000D5A70449}.Debug|Win32.Build.0 = Debug|Win32
+		{DCE5DB1B-FECA-1BAD-0000-0000D5A70449}.Debug|x64.ActiveCfg = Debug|x64
+		{DCE5DB1B-FECA-1BAD-0000-0000D5A70449}.Debug|x64.Build.0 = Debug|x64
+		{DCE5DB1B-FECA-1BAD-0000-0000D5A70449}.Release|Win32.ActiveCfg = Release|Win32
+		{DCE5DB1B-FECA-1BAD-0000-0000D5A70449}.Release|Win32.Build.0 = Release|Win32
+		{DCE5DB1B-FECA-1BAD-0000-0000D5A70449}.Release|x64.ActiveCfg = Release|x64
+		{DCE5DB1B-FECA-1BAD-0000-0000D5A70449}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

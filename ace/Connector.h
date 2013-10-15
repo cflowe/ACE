@@ -4,7 +4,7 @@
 /**
  *  @file    Connector.h
  *
- *  $Id: Connector.h 97084 2013-04-26 20:42:28Z schmidt $
+ *  $Id: Connector.h 97180 2013-05-29 16:51:19Z schmidt $
  *
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  */
@@ -216,7 +216,7 @@ public:
                        const typename PEER_CONNECTOR::PEER_ADDR &remote_addr,
                        const ACE_Synch_Options &synch_options = ACE_Synch_Options::defaults,
                        const typename PEER_CONNECTOR::PEER_ADDR &local_addr
-                         = (peer_addr_type &) peer_addr_type::sap_any,
+                         = reinterpret_cast<const peer_addr_type &>(peer_addr_type::sap_any),
                        int reuse_addr = 0,
                        int flags = O_RDWR,
                        int perms = 0);
@@ -236,7 +236,7 @@ public:
                        const typename PEER_CONNECTOR::PEER_ADDR &remote_addr,
                        const ACE_Synch_Options &synch_options = ACE_Synch_Options::defaults,
                        const typename PEER_CONNECTOR::PEER_ADDR &local_addr
-                         = (peer_addr_type &) peer_addr_type::sap_any,
+                         = reinterpret_cast<const peer_addr_type &>(peer_addr_type::sap_any),
                        int reuse_addr = 0,
                        int flags = O_RDWR,
                        int perms = 0);

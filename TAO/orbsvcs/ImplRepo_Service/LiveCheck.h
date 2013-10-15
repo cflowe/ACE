@@ -2,7 +2,7 @@
 /*
  * @file LiveCheck.h
  *
- * $Id: LiveCheck.h 97156 2013-05-20 16:42:50Z mesnier_p $
+ * $Id: LiveCheck.h 97203 2013-06-19 22:49:55Z mesnier_p $
  *
  * @author Phil Mesnier <mesnier_p@ociweb.com>
  */
@@ -27,6 +27,7 @@
 
 class LiveCheck;
 class LiveEntry;
+class PingReceiver;
 
 //---------------------------------------------------------------------------
 /*
@@ -74,12 +75,6 @@ class Locator_Export LiveListener
 
   virtual ~LiveListener (void);
 
-  /// sets the initial status volue, set by entry during an add_listener call
-  void entry (const LiveEntry *entry);
-
-  /// Query the status of the associated entry
-  LiveStatus status (void) const;
-
   /// called by the asynch ping receiver when a reply or an exception
   /// is received. Returns true if finished listening
   virtual bool status_changed (LiveStatus status) = 0;
@@ -92,7 +87,6 @@ class Locator_Export LiveListener
 
  protected:
   ACE_CString server_;
-  const LiveEntry *entry_;
 
  private:
   int refcount_;
@@ -121,6 +115,7 @@ class Locator_Export LiveEntry
              ImplementationRepository::ServerObject_ptr ref);
   ~LiveEntry (void);
 
+  void release_callback (void);
   void add_listener (LiveListener *ll);
   LiveStatus status (void) const;
   void status (LiveStatus l);
@@ -137,6 +132,7 @@ class Locator_Export LiveEntry
   bool reping_available (void);
   int next_reping (void);
   void max_retry_msec (int max);
+  const char *server_name (void) const;
 
  private:
   LiveCheck *owner_;
@@ -151,6 +147,8 @@ class Locator_Export LiveEntry
   typedef ACE_Unbounded_Set<LiveListener_ptr> Listen_Set;
   Listen_Set listeners_;
   TAO_SYNCH_MUTEX lock_;
+  PortableServer::ServantBase_var callback_;
+
   static const int reping_msec_ [];
   static int reping_limit_;
 
@@ -172,12 +170,53 @@ class Locator_Export PingReceiver :
   PingReceiver (LiveEntry * entry, PortableServer::POA_ptr poa);
   virtual ~PingReceiver (void);
 
+  /// Called by the entry if it is no longer interested in the result of
+  /// a ping.
+  void cancel (void);
+
+  /// Called when an anticipated ping reply is received
   void ping (void);
+
+  /// Called when an anticipated ping raises an exception
   void ping_excep (Messaging::ExceptionHolder * excep_holder);
 
  private:
   PortableServer::POA_var poa_;
   LiveEntry * entry_;
+};
+
+
+//---------------------------------------------------------------------------
+/*
+ * @class LC_TimeoutGuard
+ *
+ * @brief A helper object to avoid reentrancy in the handle_timout method
+ *
+ * The LiveCheck::handle_timeout may be called reentrantly on a single thread
+ * if the sending of a ping uses non-blocking connection establishment. If a
+ * connection must be established before the ping can be sent, that may involve
+ * waiting in the reactor, possibly handing other requests, and possibly even
+ * subsequent timeouts.
+ * */
+
+class Locator_Export LC_TimeoutGuard
+{
+ public:
+  /// construct a new stack-based guard. This sets a flag in the owner that will
+  /// be cleared on destruction.
+  LC_TimeoutGuard (LiveCheck *owner, int token);
+
+  /// releases the flag. If the LiveCheck received any requests for an immediate
+  /// or defered ping during this time, schedule it now.
+  ~LC_TimeoutGuard (void);
+
+  /// Returns true if the busy flag in the owner was already set.
+  bool blocked (void);
+
+ private:
+  LiveCheck *owner_;
+  int token_;
+  bool blocked_;
 };
 
 //---------------------------------------------------------------------------
@@ -194,6 +233,8 @@ class Locator_Export PingReceiver :
 class Locator_Export LiveCheck : public ACE_Event_Handler
 {
  public:
+  friend class LC_TimeoutGuard;
+
   LiveCheck ();
   ~LiveCheck (void);
 
@@ -241,6 +282,9 @@ class Locator_Export LiveCheck : public ACE_Event_Handler
   ACE_Time_Value ping_interval_;
   bool running_;
   int token_;
+  int handle_timeout_busy_;
+  bool want_timeout_;
+  ACE_Time_Value deferred_timeout_;
 };
 
 #endif /* IMR_LIVECHECK_H_  */

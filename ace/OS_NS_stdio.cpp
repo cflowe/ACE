@@ -1,4 +1,4 @@
-// $Id: OS_NS_stdio.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: OS_NS_stdio.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 #include "ace/OS_NS_stdio.h"
 #include "ace/OS_NS_Thread.h"
@@ -37,8 +37,11 @@ extern "C" BOOL WINAPI DllMain(HINSTANCE instance, DWORD reason, LPVOID)
 
 ACE_BEGIN_VERSIONED_NAMESPACE_DECL
 
+namespace ACE_OS
+{
+
 void
-ACE_OS::ace_flock_t::dump (void) const
+ace_flock_t::dump (void) const
 {
 #if defined (ACE_HAS_DUMP)
   ACE_OS_TRACE ("ACE_OS::ace_flock_t::dump");
@@ -66,6 +69,8 @@ ACE_OS::ace_flock_t::dump (void) const
 # endif /* 0 */
 #endif /* ACE_HAS_DUMP */
 }
+
+} /* namespace ACE_OS */
 
 /*****************************************************************************/
 

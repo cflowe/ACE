@@ -1,4 +1,4 @@
-// $Id: Sig_Handler.cpp 96674 2013-01-17 12:23:46Z johnnyw $
+// $Id: Sig_Handler.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 #include "ace/Sig_Handler.h"
 #include "ace/Sig_Adapter.h"
@@ -328,6 +328,10 @@ ACE_Sig_Handlers_Set::instance (int signum)
 }
 
 ACE_ALLOC_HOOK_DEFINE(ACE_Sig_Handlers)
+
+ACE_Sig_Handlers::ACE_Sig_Handlers (void)
+{
+}
 
 void
 ACE_Sig_Handlers::dump (void) const

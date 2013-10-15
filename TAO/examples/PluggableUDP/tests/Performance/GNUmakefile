@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 16 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: Performance_IDL Performance_Client Performance_Server
+all: Performance_IDL Performance_Server Performance_Client
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Performance_IDL $(@)
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Performance_Client $(@)
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Performance_Server $(@)
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Performance_Client $(@)
 
 .PHONY: Performance_IDL
 Performance_IDL:
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Performance_IDL all
 
-.PHONY: Performance_Client
-Performance_Client: Performance_IDL
-	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Performance_Client all
-
 .PHONY: Performance_Server
-Performance_Server: Performance_IDL Performance_Client
+Performance_Server: Performance_IDL
 	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Performance_Server all
+
+.PHONY: Performance_Client
+Performance_Client: Performance_IDL Performance_Server
+	$(KEEP_GOING)@$(MAKE) -f GNUmakefile.Performance_Client all
 
 project_name_list:
 	@echo Performance_Client

@@ -1,4 +1,4 @@
-// $Id: Bug_2772_Regression_Test.cpp 91671 2010-09-08 18:39:23Z johnnyw $
+// $Id: Bug_2772_Regression_Test.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 // ============================================================================
 //
@@ -17,8 +17,6 @@
 #include "ace/Recursive_Thread_Mutex.h"
 #include "ace/Condition_Recursive_Thread_Mutex.h"
 #include "ace/Thread.h"
-
-
 
 class ThreadTest
 {

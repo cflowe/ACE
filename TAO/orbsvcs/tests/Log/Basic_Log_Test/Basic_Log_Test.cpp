@@ -1,4 +1,4 @@
-// $Id: Basic_Log_Test.cpp 95761 2012-05-15 18:23:04Z johnnyw $
+// $Id: Basic_Log_Test.cpp 97206 2013-06-21 07:43:25Z johnnyw $
 
 #include "Basic_Log_Test.h"
 
@@ -14,7 +14,7 @@ const char* BasicLog_Test::basic_log_factory_name_= "BasicLogFactory";
 const char* BasicLog_Test::naming_sevice_name_ = "NameService";
 
 BasicLog_Test::BasicLog_Test(void)
-  : logServiceIor_ (0)
+  : argc_ (0), argv_(0), logServiceIor_ (0)
 {
 }
 

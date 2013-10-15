@@ -2,7 +2,7 @@
 /**
  *  @file    SOCK_Dgram_Test.cpp
  *
- *  $Id: SOCK_Dgram_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: SOCK_Dgram_Test.cpp 97197 2013-06-07 14:41:21Z mesnier_p $
  *
  *   Tests that a call to open with an any address binds to the any address
  *   for the protocol passed in.
@@ -111,7 +111,7 @@ client (void *arg)
             }
           else
             {
-              buf[rcv_siz] = '\0';
+              buf[rcv_siz/sizeof (ACE_TCHAR)] = '\0';
               if (ACE_OS::strncmp (buf, TEST_DATA, ACE_OS::strlen (TEST_DATA)))
                 ACE_ERROR ((LM_ERROR,
                             ACE_TEXT ("(%P|%t) recv string should be %s; ")

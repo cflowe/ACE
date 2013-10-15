@@ -4,7 +4,7 @@
 /**
  * @file  Storable_FlatFileStream.cpp
  *
- * $Id: Storable_FlatFileStream.cpp 96992 2013-04-11 18:07:48Z huangh $
+ * $Id: Storable_FlatFileStream.cpp 97277 2013-08-11 17:51:45Z johnnyw $
  *
  * @author Marina Spivak <marina@cs.wustl.edu>
  * @author Byron Harris <harrisb@ociweb.com>
@@ -122,6 +122,7 @@ TAO::Storable_FlatFileStream::Storable_FlatFileStream (const ACE_CString & file,
                                                        const char * mode,
                                                        bool use_backup)
   : Storable_Base(use_backup)
+  , filelock_ ()
   , fl_ (0)
   , file_(file)
   , mode_(mode)
@@ -346,7 +347,7 @@ TAO::Storable_FlatFileStream::operator >> (ACE_CString& str)
 TAO::Storable_Base &
 TAO::Storable_FlatFileStream::operator << (int i)
 {
-  int n = ACE_OS::fprintf (this->fl_, "%d\n", i);
+  int const n = ACE_OS::fprintf (this->fl_, "%d\n", i);
   if (n < 0)
     this->throw_on_write_error (badbit);
   return *this;
@@ -365,7 +366,7 @@ TAO::Storable_FlatFileStream::operator >> (int &i)
 TAO::Storable_Base &
 TAO::Storable_FlatFileStream::operator << (unsigned int i)
 {
-  int n = ACE_OS::fprintf (this->fl_, "%u\n", i);
+  int const n = ACE_OS::fprintf (this->fl_, "%u\n", i);
   if (n < 0)
     this->throw_on_write_error (badbit);
   return *this;
@@ -384,12 +385,12 @@ TAO::Storable_FlatFileStream::operator >> (unsigned int &i)
 TAO::Storable_Base &
 TAO::Storable_FlatFileStream::operator << (const TAO_OutputCDR & cdr)
 {
-  unsigned int length = cdr.total_length ();
+  unsigned int const length = cdr.total_length ();
   *this << length;
   for (const ACE_Message_Block *i = cdr.begin (); i != 0; i = i->cont ())
     {
       const char *bytes = i->rd_ptr ();
-      size_t len = i->length ();
+      size_t const len = i->length ();
       this->write (len, bytes);
     }
   return *this;

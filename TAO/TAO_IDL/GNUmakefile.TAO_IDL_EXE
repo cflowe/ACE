@@ -244,8 +244,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
-#tao_idl.mpc
 #tao_idl_fe.mpc
+#tao_idl.mpc
 #tao_idl_be.mpc
 #TAO_IDL.mwc
 #TAO_IDL_ACE.mwc

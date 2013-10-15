@@ -231,8 +231,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
-#IORTable.pidl
 #Async_IORTable.pidl
+#IORTable.pidl
 #
 #build_files:
 #Async_IORTable.mpc

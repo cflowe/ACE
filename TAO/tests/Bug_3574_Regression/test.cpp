@@ -1,6 +1,10 @@
-// $Id: test.cpp 84604 2009-02-26 07:18:42Z johnnyw $
+// $Id: test.cpp 97284 2013-08-12 14:43:50Z johnnyw $
 
 #include "tao/StringSeqC.h"
+
+#if defined (__BORLANDC__) && (__BORLANDC__ <= 0x660)
+#  pragma option push -w-8011
+#endif
 
 int
 ACE_TMAIN (int, ACE_TCHAR *[])
@@ -49,3 +53,7 @@ ACE_TMAIN (int, ACE_TCHAR *[])
 
   return 0;
 }
+
+#if defined (__BORLANDC__) && (__BORLANDC__ <= 0x660)
+# pragma option pop
+#endif

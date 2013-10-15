@@ -1,4 +1,4 @@
-// $Id: Constraint_Visitors.cpp 93537 2011-03-11 20:32:03Z olli $
+// $Id: Constraint_Visitors.cpp 97176 2013-05-29 07:01:17Z johnnyw $
 
 #include "orbsvcs/Trader/Constraint_Visitors.h"
 #include "orbsvcs/Trader/Constraint_Nodes.h"
@@ -753,8 +753,8 @@ operator () (TAO_DynSequence_i& dyn_any,
   int return_value = 0;
   try
     {
-      const char* value = dyn_any.get_string ();
-      return_value = (ACE_OS::strcmp (value, element) == 0);
+      CORBA::String_var value = dyn_any.get_string ();
+      return_value = (ACE_OS::strcmp (value.in(), element) == 0);
     }
   catch (const CORBA::Exception&){}
   return return_value;

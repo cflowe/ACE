@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: ETCL_Constraint.inl 96333 2012-11-23 08:08:31Z johnnyw $
+// $Id: ETCL_Constraint.inl 97187 2013-05-31 14:02:34Z johnnyw $
 
 // ****************************************************************
 
@@ -309,7 +309,8 @@ ETCL_Binary_Expr::lhs (void) const
 
 ACE_INLINE
 ETCL_Preference::ETCL_Preference (void)
-  : subexpr_ (0)
+  : type_ (0),
+    subexpr_ (0)
 {}
 
 ACE_INLINE

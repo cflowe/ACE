@@ -1,5 +1,5 @@
 /* -*- C++ -*- */
-// $Id: config-win32-common.h 96094 2012-08-22 11:51:11Z johnnyw $
+// $Id: config-win32-common.h 97246 2013-08-07 07:10:20Z johnnyw $
 
 
 #ifndef ACE_CONFIG_WIN32_COMMON_H
@@ -134,7 +134,7 @@
 //  #endif
 
 // Define the special export macros needed to export symbols outside a dll
-#if !defined(__BORLANDC__) && (!defined (ACE_HAS_CUSTOM_EXPORT_MACROS) || (ACE_HAS_CUSTOM_EXPORT_MACROS == 0))
+#if !defined (ACE_HAS_CUSTOM_EXPORT_MACROS) || (ACE_HAS_CUSTOM_EXPORT_MACROS == 0)
 #if defined (ACE_HAS_CUSTOM_EXPORT_MACROS)
 #undef ACE_HAS_CUSTOM_EXPORT_MACROS
 #endif

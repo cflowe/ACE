@@ -19,8 +19,8 @@ LIB_PREFIX      ?= lib
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  Consumer.cpp \
   Service.cpp \
+  Consumer.cpp \
   Supplier.cpp
 
 #----------------------------------------------------------------------------

@@ -2,7 +2,7 @@
 /**
  *  @file    main_thread_custom_handler.cpp
  *
- *  $Id: main_thread_custom_handler.cpp 93639 2011-03-24 13:32:13Z johnnyw $
+ *  $Id: main_thread_custom_handler.cpp 97246 2013-08-07 07:10:20Z johnnyw $
  *
  *    Implements a threaded timer queue.
  *    This code exercises the Timer_Queue_Test_Driver class using
@@ -30,7 +30,7 @@ ACE_TMAIN (int, ACE_TCHAR *[])
 {
     // Auto ptr ensures that the driver memory is released
     // automatically.
-    THREAD_TIMER_QUEUE_TEST_DRIVER *tqtd;
+    THREAD_TIMER_QUEUE_TEST_DRIVER *tqtd = 0;
     ACE_NEW_RETURN (tqtd, Thread_Timer_Queue_Custom_Handler_Test, -1);
 
     auto_ptr <THREAD_TIMER_QUEUE_TEST_DRIVER> driver (tqtd);

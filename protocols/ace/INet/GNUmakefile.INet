@@ -308,8 +308,8 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #build_files:
-#inet.mpc
 #inet_ssl.mpc
+#inet.mpc
 #
 #inline_files:
 #ClientRequestHandler.inl

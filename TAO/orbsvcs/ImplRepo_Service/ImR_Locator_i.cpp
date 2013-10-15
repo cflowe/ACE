@@ -1,4 +1,4 @@
-// // $Id: ImR_Locator_i.cpp 97131 2013-05-13 19:18:55Z mesnier_p $
+// // $Id: ImR_Locator_i.cpp 97188 2013-06-03 21:24:44Z mesnier_p $
 
 #include "orbsvcs/Log_Macros.h"
 #include "ImR_Locator_i.h"
@@ -554,7 +554,7 @@ ImR_Locator_i::activate_server_i (UpdateableServerInfo& info,
       ACE_NEW (aam_raw, AsyncAccessManager (*info, manual_start, *this));
       aam = aam_raw;
       this->aam_set_.insert_tail (aam);
-  }
+    }
   else
     {
       aam = this->find_aam (info->name.c_str());
@@ -1005,9 +1005,21 @@ ImR_Locator_i::server_is_running
 
       AsyncAccessManager_ptr aam(this->find_aam (name.c_str()));
       if (!aam.is_nil())
-        aam->server_is_running (partial_ior, s.in());
+        {
+          if (ImR_Locator_i::debug () > 4)
+            {
+              ORBSVCS_DEBUG ((LM_DEBUG,
+                              ACE_TEXT ("(%P|%t) ImR_Locator_i::send_start_request aam is not nil\n")));
+            }
+          aam->server_is_running (partial_ior, s.in());
+        }
       else
         {
+          if (ImR_Locator_i::debug () > 4)
+            {
+              ORBSVCS_DEBUG ((LM_DEBUG,
+                              ACE_TEXT ("(%P|%t) ImR_Locator_i::send_start_request aam is nil\n")));
+            }
           if (info->activation_mode != ImplementationRepository::PER_CLIENT)
             {
               AsyncAccessManager *aam_raw;

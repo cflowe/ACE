@@ -4,7 +4,7 @@
 /**
  *  @file    PG_Object_Group.h
  *
- *  $Id: PG_Object_Group.h 96861 2013-02-25 17:40:02Z mesnier_p $
+ *  $Id: PG_Object_Group.h 97245 2013-08-07 07:08:10Z johnnyw $
  *
  *  Manage all information related to an object group.
  *  @@ Note: the above description is optimistic.  The hope is to eventually
@@ -78,7 +78,6 @@ namespace TAO
 
       /// TRUE if this is primary member
       CORBA::Boolean is_primary_;
-
 
       ///////////////
       // Methods

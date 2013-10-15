@@ -1,6 +1,6 @@
 // file      : Receiver.cpp
 // author    : Boris Kolpackov <boris@kolpackov.net>
-// cvs-id    : $Id: Receiver.cpp 80826 2008-03-04 14:51:23Z wotte $
+// cvs-id    : $Id: Receiver.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 #include "ace/Vector_T.h"
 #include "ace/Log_Msg.h"
@@ -84,7 +84,7 @@ ACE_TMAIN (int argc, ACE_TCHAR* argv[])
         continue;
       }
 
-      if (s != sizeof (msg))
+      if (s != (ssize_t) sizeof (msg))
       {
         ACE_ERROR ((LM_ERROR, "unexpected message size %d, expected %d\n",
                     s, sizeof (msg)));

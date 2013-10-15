@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: auto_run_tests.pl 96955 2013-04-03 08:14:06Z johnnyw $
+# $Id: auto_run_tests.pl 97179 2013-05-29 14:08:57Z johnnyw $
 # -*- perl -*-
 # This file is for running the run_test.pl scripts listed in
 # auto_run_tests.lst.
@@ -176,9 +176,9 @@ foreach my $test_lst (@file_list) {
 
         if (! $is_ace_test) {
             print "auto_run_tests: $test\n";
-            $ENV{COVERITY_TEST_NAME} = $test;
-            $ENV{COVERITY_SUITE_NAME} = $test_lst;
-            $ENV{COVERITY_TEST_SOURCE} = "$directory/$program";
+            #$ENV{COVERITY_TEST_NAME} = $test;
+            #$ENV{COVERITY_SUITE_NAME} = $test_lst;
+            #$ENV{COVERITY_TEST_SOURCE} = "$directory/$program";
         }
 
         my($orig_dir) = $directory;

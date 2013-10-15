@@ -5,7 +5,7 @@
 /**
  *  @file    snmp.h
  *
- *  $Id: snmp.h 80826 2008-03-04 14:51:23Z wotte $
+ *  $Id: snmp.h 97246 2013-08-07 07:10:20Z johnnyw $
  *
  * SNMP class defintion. The Snmp class provides an object oriented
  * approach to SNMP. The SNMP class is an encapsulation of SNMP
@@ -55,6 +55,7 @@ class Snmp;
 class ASNMP_Export Snmp_Result
 {
   public:
+    Snmp_Result ();
     virtual ~Snmp_Result();
     virtual void result(Snmp *snmp, int result) = 0;
 };

@@ -1,4 +1,4 @@
-// $Id: Trader.cpp 91677 2010-09-08 19:18:49Z johnnyw $
+// $Id: Trader.cpp 97203 2013-06-19 22:49:55Z mesnier_p $
 
 #include "orbsvcs/Trader/Trader.h"
 #include "orbsvcs/Trader/Offer_Iterators_T.h"
@@ -123,7 +123,7 @@ TAO_Trader_Base::is_valid_identifier_name (const char* ident)
       }
 
     size_t length =
-      pos ? pos - ident : ACE_OS::strlen (ident);
+      pos ? static_cast<size_t>(pos - ident) : ACE_OS::strlen (ident);
 
     if (length >= 1 && ACE_OS::ace_isalpha (ident[0]))
       {

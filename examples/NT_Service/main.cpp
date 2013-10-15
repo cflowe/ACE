@@ -3,7 +3,7 @@
 /**
  *  @file    main.cpp
  *
- *  $Id: main.cpp 93639 2011-03-24 13:32:13Z johnnyw $
+ *  $Id: main.cpp 97246 2013-08-07 07:10:20Z johnnyw $
  *
  *  This is the main program - it just hands control off to the
  *  process instance to figure out what to do.  This program only
@@ -141,10 +141,9 @@ Process::parse_args (int argc, ACE_TCHAR* argv[])
 
 // Define a function to handle Ctrl+C to cleanly shut this down.
 
-static BOOL __stdcall
-ConsoleHandler (DWORD ctrlType)
+static BOOL WINAPI
+ConsoleHandler (DWORD /*ctrlType*/)
 {
-  ACE_UNUSED_ARG (ctrlType);
   SERVICE::instance ()->handle_control (SERVICE_CONTROL_STOP);
   return TRUE;
 }

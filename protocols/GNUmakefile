@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 16 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: HTBP INet INet_SSL RMCast TMCast FTP_Simple_exec HTTPS_Simple_exec HTTP_Simple_exec Send_Msg_Receiver Send_Msg_Sender Member Reactor_Tests_Client Reactor_Tests_Server Send_Large_Msg_Client Send_Large_Msg_Server SendRecv_Test_Client SendRecv_Test_Server Ping_Client Ping_Server MT_Get RMCast_Receiver RMCast_Sender
+all: HTBP INet INet_SSL RMCast TMCast FTP_Simple_exec HTTP_Simple_exec HTTPS_Simple_exec Send_Msg_Receiver Send_Msg_Sender Member Reactor_Tests_Client Reactor_Tests_Server Send_Large_Msg_Client Send_Large_Msg_Server SendRecv_Test_Client SendRecv_Test_Server Ping_Client Ping_Server MT_Get RMCast_Receiver RMCast_Sender
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
@@ -31,8 +31,8 @@ $(REMAINING_TARGETS):
 	$(KEEP_GOING)@cd ace/RMCast && $(MAKE) -f GNUmakefile.RMCast $(@)
 	$(KEEP_GOING)@cd ace/TMCast && $(MAKE) -f GNUmakefile.TMCast $(@)
 	$(KEEP_GOING)@cd examples/INet && $(MAKE) -f GNUmakefile.FTP_Simple_exec $(@)
-	$(KEEP_GOING)@cd examples/INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec $(@)
 	$(KEEP_GOING)@cd examples/INet && $(MAKE) -f GNUmakefile.HTTP_Simple_exec $(@)
+	$(KEEP_GOING)@cd examples/INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec $(@)
 	$(KEEP_GOING)@cd examples/RMCast/Send_Msg && $(MAKE) -f GNUmakefile.Send_Msg_Receiver $(@)
 	$(KEEP_GOING)@cd examples/RMCast/Send_Msg && $(MAKE) -f GNUmakefile.Send_Msg_Sender $(@)
 	$(KEEP_GOING)@cd examples/TMCast/Member && $(MAKE) -f GNUmakefile.Member $(@)
@@ -72,13 +72,13 @@ TMCast:
 FTP_Simple_exec: INet
 	$(KEEP_GOING)@cd examples/INet && $(MAKE) -f GNUmakefile.FTP_Simple_exec all
 
-.PHONY: HTTPS_Simple_exec
-HTTPS_Simple_exec: INet INet_SSL
-	$(KEEP_GOING)@cd examples/INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec all
-
 .PHONY: HTTP_Simple_exec
-HTTP_Simple_exec: INet HTTPS_Simple_exec
+HTTP_Simple_exec: INet
 	$(KEEP_GOING)@cd examples/INet && $(MAKE) -f GNUmakefile.HTTP_Simple_exec all
+
+.PHONY: HTTPS_Simple_exec
+HTTPS_Simple_exec: INet INet_SSL HTTP_Simple_exec
+	$(KEEP_GOING)@cd examples/INet && $(MAKE) -f GNUmakefile.HTTPS_Simple_exec all
 
 .PHONY: Send_Msg_Receiver
 Send_Msg_Receiver: RMCast

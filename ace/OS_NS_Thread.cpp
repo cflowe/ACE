@@ -1,4 +1,4 @@
-// $Id: OS_NS_Thread.cpp 97130 2013-05-13 17:36:26Z mesnier_p $
+// $Id: OS_NS_Thread.cpp 97246 2013-08-07 07:10:20Z johnnyw $
 
 #include "ace/OS_NS_Thread.h"
 
@@ -1471,7 +1471,7 @@ ACE_OS::cond_timedwait (ACE_cond_t *cv,
     return -1;
 
 #     if defined (ACE_WIN32)
-  if (result != WAIT_OBJECT_0)
+  if (result != (int)WAIT_OBJECT_0)
     {
       switch (result)
         {
@@ -1654,7 +1654,7 @@ ACE_OS::cond_timedwait (ACE_cond_t *cv,
   if (ACE_OS::thread_mutex_unlock (&cv->waiters_lock_) != 0)
     return -1;
 
-  if (result != WAIT_OBJECT_0)
+  if (result != (int)WAIT_OBJECT_0)
     {
       switch (result)
         {
@@ -1746,7 +1746,7 @@ ACE_OS::cond_wait (ACE_cond_t *cv,
   if (ACE_OS::thread_mutex_unlock (&cv->waiters_lock_) != 0)
     return -1;
 
-  if (result != WAIT_OBJECT_0)
+  if (result != (int)WAIT_OBJECT_0)
     {
       switch (result)
         {

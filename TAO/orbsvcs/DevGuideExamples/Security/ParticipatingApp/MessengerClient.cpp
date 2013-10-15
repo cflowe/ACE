@@ -1,4 +1,4 @@
-/* -*- C++ -*- $Id: MessengerClient.cpp 87601 2009-11-17 11:49:09Z dbudko $ */
+/* -*- C++ -*- $Id: MessengerClient.cpp 97242 2013-08-05 14:27:44Z johnnyw $ */
 
 #include "orbsvcs/SecurityC.h"
 #include "MessengerC.h"
@@ -13,8 +13,8 @@ dynamic SSLIOP_Factory Service_Object *
   TAO_SSLIOP:_make_TAO_SSLIOP_Protocol_Factory()
   "-SSLNoProtection \
    -SSLAuthenticate SERVER_AND_CLIENT \
-   -SSLPrivateKey PEM:serverkey.pem \
-   -SSLCertificate PEM:servercert.pem"
+   -SSLPrivateKey PEM:server_key.pem \
+   -SSLCertificate PEM:server_cert.pem"
 
 static Resource_Factory "-ORBProtocolFactory SSLIOP_Factory"
 ---------------------------------------
@@ -27,8 +27,8 @@ dynamic SSLIOP_Factory Service_Object *
   TAO_SSLIOP:_make_TAO_SSLIOP_Protocol_Factory()
   "-SSLNoProtection  \
    -SSLAuthenticate SERVER \
-   -SSLPrivateKey PEM:clientkey.pem  \
-   -SSLCertificate PEM:clientcert.pem"
+   -SSLPrivateKey PEM:client_key.pem  \
+   -SSLCertificate PEM:client_cert.pem"
 
 static Resource_Factory "-ORBProtocolFactory SSLIOP_Factory"
 ---------------------------------------

@@ -27,8 +27,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 TAO_ROOT  ?= $(ACE_ROOT)/TAO
 
 FILES = \
-  XtResource_Factory.cpp \
-  XtResource_Loader.cpp
+  XtResource_Loader.cpp \
+  XtResource_Factory.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -285,13 +285,13 @@ endif
 #XtResource.mpc
 #
 #header_files:
-#XtResource_Loader.h
 #XtResource_Factory.h
+#XtResource_Loader.h
 #TAO_XtResource_Export.h
 #
 #source_files:
-#XtResource_Factory.cpp
 #XtResource_Loader.cpp
+#XtResource_Factory.cpp
 #
 #lib_output:
 #../../../lib TAO_XtResource

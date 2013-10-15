@@ -18,15 +18,15 @@ LIB_PREFIX      ?= lib
 
 FILES = \
   Options.cpp \
-  URL_Visitor_Factory.cpp \
-  Mem_Map_Stream.cpp \
-  URL.cpp \
-  URL_Addr.cpp \
-  HTTP_URL.cpp \
-  Web_Crawler.cpp \
-  main.cpp \
   URL_Visitor.cpp \
+  Mem_Map_Stream.cpp \
+  URL_Visitor_Factory.cpp \
+  URL_Addr.cpp \
   URL_Status.cpp \
+  URL.cpp \
+  Web_Crawler.cpp \
+  HTTP_URL.cpp \
+  main.cpp \
   Command_Processor.cpp \
   Iterators.cpp
 

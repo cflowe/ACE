@@ -1,4 +1,4 @@
-// $Id: Service_Type_Exporter.h 77020 2007-02-12 13:56:49Z johnnyw $
+// $Id: Service_Type_Exporter.h 97176 2013-05-29 07:01:17Z johnnyw $
 
 // ========================================================================
 //
@@ -25,6 +25,8 @@ public:
 
   TAO_Service_Type_Exporter (CosTrading::Lookup_ptr lookup_if,
                              CORBA::Boolean verbose);
+
+  ~TAO_Service_Type_Exporter (void);
 
   void remove_all_types (void);
   // Remove all service types from the trading service instance.

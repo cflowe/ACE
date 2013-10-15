@@ -1,6 +1,6 @@
-// $Id: Proactor.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: Proactor.cpp 97262 2013-08-09 08:32:10Z johnnyw $
 
-#include "ace/config-lite.h"
+#include /**/ "ace/config-lite.h"
 #include "ace/Proactor.h"
 #if defined (ACE_HAS_WIN32_OVERLAPPED_IO) || defined (ACE_HAS_AIO_CALLS)
 

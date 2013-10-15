@@ -1,4 +1,4 @@
-// $Id: PG_Object_Group.cpp 97014 2013-04-12 22:47:02Z mitza $
+// $Id: PG_Object_Group.cpp 97278 2013-08-12 07:18:19Z johnnyw $
 
 #include "orbsvcs/Log_Macros.h"
 #include "orbsvcs/PortableGroup/PG_Object_Group.h"
@@ -870,7 +870,7 @@ TAO::PG_Object_Group::initial_populate (void)
       PortableGroup::InitialNumberMembersValue initial_number_members =
         this->get_initial_number_members ();
 
-      if (this->members_.current_size () < initial_number_members)
+      if (((PortableGroup::InitialNumberMembersValue)this->members_.current_size ()) < initial_number_members)
         {
           this->create_members (initial_number_members);
         }
@@ -882,11 +882,11 @@ TAO::PG_Object_Group::minimum_populate (void)
 {
   ACE_GUARD (TAO_SYNCH_MUTEX, guard, this->internals_);
 
-  if ( this->get_membership_style () == PortableGroup::MEMB_INF_CTRL )
+  if ( this->get_membership_style () == PortableGroup::MEMB_INF_CTRL)
     {
       PortableGroup::MinimumNumberMembersValue minimum_number_members =
         this->get_minimum_number_members ();
-      if (members_.current_size () < minimum_number_members)
+      if (((PortableGroup::InitialNumberMembersValue)members_.current_size ()) < minimum_number_members)
         {
           this->create_members (minimum_number_members);
         }

@@ -26,8 +26,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
   MTQueue.cpp \
-  Protocol.cpp \
-  Group.cpp
+  Group.cpp \
+  Protocol.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets
@@ -262,10 +262,10 @@ endif
 #MTQueue.hpp
 #Group.hpp
 #GroupFwd.hpp
-#TransactionController.hpp
 #Messaging.hpp
-#LinkListener.hpp
 #Export.hpp
+#TransactionController.hpp
+#LinkListener.hpp
 #FaultDetector.hpp
 #
 #pkgconfig_files:
@@ -273,8 +273,8 @@ endif
 #
 #source_files:
 #MTQueue.cpp
-#Protocol.cpp
 #Group.cpp
+#Protocol.cpp
 #
 #lib_output:
 #../../../lib ACE_TMCast

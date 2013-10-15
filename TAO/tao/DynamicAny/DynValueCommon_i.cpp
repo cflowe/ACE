@@ -1,14 +1,8 @@
 // -*- C++ -*-
-// $Id: DynValueCommon_i.cpp 95600 2012-03-07 15:26:40Z sma $
+// $Id: DynValueCommon_i.cpp 97252 2013-08-08 13:27:14Z johnnyw $
 
 #include "tao/DynamicAny/DynValueCommon_i.h"
-//#include "tao/DynamicAny/DynAnyUtils_T.h"
-
-//#include "tao/AnyTypeCode/Marshal.h"
 #include "tao/AnyTypeCode/Any_Unknown_IDL_Type.h"
-//#include "tao/AnyTypeCode/AnyTypeCode_methods.h"
-//#include "tao/CDR.h"
-//#include "tao/Valuetype/ValueBase.h"
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

@@ -1,4 +1,4 @@
-// $Id: Container_i.cpp 95761 2012-05-15 18:23:04Z johnnyw $
+// $Id: Container_i.cpp 97203 2013-06-19 22:49:55Z mesnier_p $
 
 #include "orbsvcs/IFRService/Repository_i.h"
 #include "orbsvcs/IFRService/InterfaceDef_i.h"
@@ -692,8 +692,8 @@ TAO_Container_i::describe_contents_i (CORBA::DefinitionKind limit_type,
   else
     {
       ret_len = length < static_cast<CORBA::ULong> (max_returned_objs)
-                ? length
-                : max_returned_objs;
+        ? length
+        : static_cast<CORBA::ULong> (max_returned_objs);
     }
 
   CORBA::Container::DescriptionSeq *desc_seq;

@@ -1,4 +1,4 @@
-// $Id: ast_string.cpp 89076 2010-02-18 22:54:36Z parsons $
+// $Id: ast_string.cpp 97245 2013-08-07 07:08:10Z johnnyw $
 
 /*
 
@@ -99,7 +99,7 @@ AST_String::AST_String (AST_Decl::NodeType nt,
   Identifier *id = 0;
   UTL_ScopedName *new_name = 0;
   UTL_ScopedName *conc_name = 0;
-  bool narrow = this->width () == sizeof (char);
+  bool narrow = this->width () == (ssize_t) sizeof (char);
 
   ACE_NEW (id,
            Identifier (narrow ? "char *" : "WChar *"));

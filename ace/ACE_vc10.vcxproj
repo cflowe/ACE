@@ -1550,6 +1550,7 @@
     <ClInclude Include="config-vxworks6.7.h" />
     <ClInclude Include="config-vxworks6.8.h" />
     <ClInclude Include="config-vxworks6.9.h" />
+    <ClInclude Include="config-win32-borland.h" />
     <ClInclude Include="config-win32-cegcc.h" />
     <ClInclude Include="config-win32-common.h" />
     <ClInclude Include="config-win32-dmc.h" />

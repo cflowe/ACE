@@ -1,4 +1,4 @@
-// $Id: be_visitor_attr_setarg_type.cpp 95648 2012-03-23 21:09:32Z johnnyw $
+// $Id: be_visitor_attr_setarg_type.cpp 97245 2013-08-07 07:08:10Z johnnyw $
 
 #include "be_visitor_attr_setarg_type.h"
 
@@ -123,7 +123,7 @@ be_visitor_attr_setarg_type::visit_sequence (be_sequence *)
 int
 be_visitor_attr_setarg_type::visit_string (be_string *node)
 {
-  if (node->width () == sizeof (char))
+  if (node->width () == (ssize_t) sizeof (char))
     {
       os_ << "const char * ";
     }

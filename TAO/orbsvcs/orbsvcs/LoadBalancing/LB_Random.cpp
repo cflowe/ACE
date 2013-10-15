@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LB_Random.cpp 97014 2013-04-12 22:47:02Z mitza $
+// $Id: LB_Random.cpp 97217 2013-07-01 16:51:03Z mesnier_p $
 
 #include "orbsvcs/LoadBalancing/LB_Random.h"
 
@@ -118,21 +118,17 @@ TAO_LB_Random::_tao_next_member (
   //       addition to the fact that the lower order bits should be as
   //       random as the higher order bits.
 
-  // Prevent integer arithmetic overflow.
-  const CORBA::Float flen = static_cast<CORBA::Float> (len);
-
-  const CORBA::ULong i =
-    static_cast<CORBA::ULong> (flen * ACE_OS::rand () / (RAND_MAX + 1.0));
-
-  ACE_ASSERT (i < len);
-
-//   ORBSVCS_DEBUG ((LM_DEBUG,
-//               "** Len = %u\t"
-//               "Location # %u\t"
-//               "Loc Name = \"%s\"\n",
-//               len,
-//               i,
-//               locations[i][0].id.in ()));
+  CORBA::ULong i = 0;
+  if (len > 1)
+    {
+      // Prevent integer arithmetic overflow.
+      double flen = static_cast<double> (len);
+      do
+        {
+          i = static_cast<CORBA::ULong> (flen * ACE_OS::rand () / (RAND_MAX + 1.0));
+        }
+      while (i == len);
+    }
 
   return load_manager->get_member_ref (object_group,
                                        locations[i]);

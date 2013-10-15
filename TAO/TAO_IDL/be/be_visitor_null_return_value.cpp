@@ -1,4 +1,4 @@
-// $Id: be_visitor_null_return_value.cpp 92362 2010-10-26 12:58:47Z parsons $
+// $Id: be_visitor_null_return_value.cpp 97245 2013-08-07 07:08:10Z johnnyw $
 
 #include "be_visitor_null_return_value.h"
 
@@ -139,7 +139,7 @@ be_visitor_null_return_value::visit_sequence (be_sequence *node)
 int
 be_visitor_null_return_value::visit_string (be_string *node)
 {
-  if (node->width () == sizeof (char))
+  if (node->width () == (ssize_t) sizeof (char))
     {
       os_ << "static_cast<char *> (0)";
     }

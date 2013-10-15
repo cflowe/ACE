@@ -1,4 +1,4 @@
-// $Id: DynSequence_Handler.cpp 93596 2011-03-21 11:25:22Z jedmondson $
+// $Id: DynSequence_Handler.cpp 97229 2013-08-01 11:57:33Z msmit $
 
 #include "DynSequence_Handler.h"
 #include "DynAny_Handler.h"
@@ -69,6 +69,8 @@ namespace DAnCE
         case TCKind::tk_wstring_l:
         case TCKind::tk_enum_l:
         case TCKind::tk_struct_l:
+        case TCKind::tk_sequence_l:
+        case TCKind::tk_array_l:
           try
             {
               dynseq.length (value.count_element ());
@@ -100,10 +102,6 @@ namespace DAnCE
           // special case where value iterator multiplicity should be one, and should
           // represent a string, each character of which becomes a element of the sequence.
 
-        case TCKind::tk_sequence_l:
-        case TCKind::tk_array_l:
-          // Several special cases here.
-
         case TCKind::tk_any_l:
         case TCKind::tk_TypeCode_l:
         case TCKind::tk_Principal_l:
@@ -118,7 +116,7 @@ namespace DAnCE
         case TCKind::tk_event_l:
           // Special case where element association in datavalue contains another datavalue.
 
-          DANCE_DEBUG (DANCE_LOG_TERMINAL_ERROR, (LM_ERROR, ACE_TEXT ("Type not supported\n")));
+          DANCE_DEBUG (DANCE_LOG_TERMINAL_ERROR, (LM_ERROR, DLINFO ACE_TEXT ("DynSequence_Handler::extract_into_dynany - Type not supported\n")));
           throw Config_Error (ACE_TEXT (""), ACE_TEXT ("Type not supported"));
         }
 

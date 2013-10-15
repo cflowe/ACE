@@ -1,4 +1,4 @@
-// $Id: server.cpp 97071 2013-04-23 16:14:17Z mesnier_p $
+// $Id: server.cpp 97203 2013-06-19 22:49:55Z mesnier_p $
 
 // server.cpp
 // This version uses the Implementation Repository.
@@ -114,6 +114,8 @@ ACE_TMAIN (int argc, ACE_TCHAR *argv[])
     // to avoid forwarding requests back to the ImR.
 
     TAO_Root_POA* tpoa = dynamic_cast<TAO_Root_POA*>(test_poa.in());
+    ACE_ASSERT (tpoa != 0);
+
     obj = tpoa->id_to_reference_i(object_id.in(), false);
     CORBA::String_var test_ior = orb->object_to_string(obj.in());
     obj = orb->resolve_initial_references("IORTable");

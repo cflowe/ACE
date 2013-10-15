@@ -7,7 +7,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE -workers 20 -name_modifier "*_vc10"
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type vc10 -exclude TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_OpenDDS.mwc,TAO/CIAO/CIAO_TAO_DAnCE_OpenDDS_shapes.mwc -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE -workers 16 -name_modifier "*_vc10"
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bug_2604_Client", "Bug_2604_Regression\Bug_2604_Client_vc10.vcxproj", "{3C99B06A-FECA-1BAD-1532-D94F9500CB20}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D0ED05B7-FECA-1BAD-1532-D94F9500CB20} = {D0ED05B7-FECA-1BAD-1532-D94F9500CB20}
@@ -85,6 +85,13 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nestea_server", "nestea_server_vc10.vcxproj", "{50F8D54E-FECA-1BAD-4269-700A3BCF5075}"
 	ProjectSection(ProjectDependencies) = postProject
 		{8A0875A0-FECA-1BAD-4269-700A3BCF5075} = {8A0875A0-FECA-1BAD-4269-700A3BCF5075}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ping_interrupt_idl", "ping_interrupt\ping_interrupt_idl_vc10.vcxproj", "{B6815809-FECA-1BAD-D0E9-1F29E9F625EC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ping_interrupt_server", "ping_interrupt\ping_interrupt_server_vc10.vcxproj", "{C2224686-FECA-1BAD-D0E9-1F29E9F625EC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B6815809-FECA-1BAD-D0E9-1F29E9F625EC} = {B6815809-FECA-1BAD-D0E9-1F29E9F625EC}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "scaletest_client", "scale\scaletest_client_vc10.vcxproj", "{0B9894E4-FECA-1BAD-2233-DDC177BE98F5}"
@@ -303,6 +310,22 @@ Global
 		{50F8D54E-FECA-1BAD-4269-700A3BCF5075}.Release|Win32.Build.0 = Release|Win32
 		{50F8D54E-FECA-1BAD-4269-700A3BCF5075}.Release|x64.ActiveCfg = Release|x64
 		{50F8D54E-FECA-1BAD-4269-700A3BCF5075}.Release|x64.Build.0 = Release|x64
+		{B6815809-FECA-1BAD-D0E9-1F29E9F625EC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B6815809-FECA-1BAD-D0E9-1F29E9F625EC}.Debug|Win32.Build.0 = Debug|Win32
+		{B6815809-FECA-1BAD-D0E9-1F29E9F625EC}.Debug|x64.ActiveCfg = Debug|x64
+		{B6815809-FECA-1BAD-D0E9-1F29E9F625EC}.Debug|x64.Build.0 = Debug|x64
+		{B6815809-FECA-1BAD-D0E9-1F29E9F625EC}.Release|Win32.ActiveCfg = Release|Win32
+		{B6815809-FECA-1BAD-D0E9-1F29E9F625EC}.Release|Win32.Build.0 = Release|Win32
+		{B6815809-FECA-1BAD-D0E9-1F29E9F625EC}.Release|x64.ActiveCfg = Release|x64
+		{B6815809-FECA-1BAD-D0E9-1F29E9F625EC}.Release|x64.Build.0 = Release|x64
+		{C2224686-FECA-1BAD-D0E9-1F29E9F625EC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C2224686-FECA-1BAD-D0E9-1F29E9F625EC}.Debug|Win32.Build.0 = Debug|Win32
+		{C2224686-FECA-1BAD-D0E9-1F29E9F625EC}.Debug|x64.ActiveCfg = Debug|x64
+		{C2224686-FECA-1BAD-D0E9-1F29E9F625EC}.Debug|x64.Build.0 = Debug|x64
+		{C2224686-FECA-1BAD-D0E9-1F29E9F625EC}.Release|Win32.ActiveCfg = Release|Win32
+		{C2224686-FECA-1BAD-D0E9-1F29E9F625EC}.Release|Win32.Build.0 = Release|Win32
+		{C2224686-FECA-1BAD-D0E9-1F29E9F625EC}.Release|x64.ActiveCfg = Release|x64
+		{C2224686-FECA-1BAD-D0E9-1F29E9F625EC}.Release|x64.Build.0 = Release|x64
 		{0B9894E4-FECA-1BAD-2233-DDC177BE98F5}.Debug|Win32.ActiveCfg = Debug|Win32
 		{0B9894E4-FECA-1BAD-2233-DDC177BE98F5}.Debug|Win32.Build.0 = Debug|Win32
 		{0B9894E4-FECA-1BAD-2233-DDC177BE98F5}.Debug|x64.ActiveCfg = Debug|x64

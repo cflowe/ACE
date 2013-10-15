@@ -3,7 +3,7 @@
 /**
  *  @file    Bug_2434_Regression_Test.cpp
  *
- *  $Id: Bug_2434_Regression_Test.cpp 95763 2012-05-16 06:43:51Z johnnyw $
+ *  $Id: Bug_2434_Regression_Test.cpp 97246 2013-08-07 07:10:20Z johnnyw $
  *
  *    This is a simple test of ACE_Time_Value.  No command line arguments
  *    are needed to run the test.
@@ -12,11 +12,8 @@
  */
 //=============================================================================
 
-
 // Note, for this test the config.h file *must* come first!
 #include "ace/config-all.h"
-
-
 
 #include "test_config.h"
 #include "ace/ACE.h"

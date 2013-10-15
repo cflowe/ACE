@@ -4,7 +4,7 @@
 /**
  * @file Auto_Update_Starter.h
  *
- * $Id: Auto_Update_Starter.h 85297 2009-05-07 01:40:41Z parsons $
+ * $Id: Auto_Update_Starter.h 97246 2013-08-07 07:10:20Z johnnyw $
  *
  * @author Jeff Parsons <j.parsons@vanderbilt.edu>
  */
@@ -45,6 +45,8 @@ namespace ACE
     class MONITOR_CONTROL_Export Auto_Update_Starter : public ACE_Task_Base
     {
     public:
+      Auto_Update_Starter (void);
+
       int svc (void);
     };
   }

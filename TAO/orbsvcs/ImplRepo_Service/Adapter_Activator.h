@@ -3,7 +3,7 @@
 /**
  *  @file   Adapter_Activator.h
  *
- *  $Id: Adapter_Activator.h 97000 2013-04-12 17:29:18Z mesnier_p $
+ *  $Id: Adapter_Activator.h 97245 2013-08-07 07:08:10Z johnnyw $
  *
  *  @brief  This class implements ImR's Adapter Activator.
  *
@@ -47,8 +47,7 @@ public:
   /// Called when a POA needs to be created.
   virtual CORBA::Boolean unknown_adapter (
     PortableServer::POA_ptr parent,
-    const char *name
-  );
+    const char *name);
 
   void init(TAO_ServantBase * servant);
 private:

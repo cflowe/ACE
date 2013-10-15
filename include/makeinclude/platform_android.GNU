@@ -1,5 +1,5 @@
 # -*- Makefile -*-
-# $Id: platform_android.GNU 94460 2011-09-09 11:27:27Z johnnyw $
+# $Id: platform_android.GNU 97253 2013-08-08 15:45:09Z johnnyw $
 
 # This file should allow ACE to be built for Android 2.3.1 (API Level 9)
 # or greater, by cross compiling on Linux.
@@ -7,9 +7,8 @@
 # The standalone gcc compilers in NDK r6 have issues with the visibility.
 no_hidden_visibility ?= 1
 
-# as of NDK r6 inlining and static libs are required
+# as of NDK r6 inlining is required
 inline ?= 1
-static_libs_only ?= 1
 
 include $(ACE_ROOT)/include/makeinclude/platform_linux_common.GNU
 

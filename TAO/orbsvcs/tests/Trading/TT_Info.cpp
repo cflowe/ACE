@@ -1,4 +1,4 @@
-// $Id: TT_Info.cpp 91672 2010-09-08 18:44:58Z johnnyw $
+// $Id: TT_Info.cpp 97176 2013-05-29 07:01:17Z johnnyw $
 
 #include "TT_Info.h"
 #include "orbsvcs/Trader/Trader_Utils.h"
@@ -247,7 +247,7 @@ TT_Info::dump_properties (const CosTrading::PropertySeq& prop_seq,
                 }
               else if ((*value) >>= float_val)
                 {
-                  ACE_DEBUG ((LM_DEBUG, "%f\n", long_val));
+                  ACE_DEBUG ((LM_DEBUG, "%f\n", float_val));
                 }
               else if ((*value) >>= double_val)
                 {

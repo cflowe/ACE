@@ -1,4 +1,4 @@
-// $Id: DynAny_Handler.mpc 92092 2010-09-29 18:38:04Z mitza $
+// $Id: DynAny_Handler.mpc 97229 2013-08-01 11:57:33Z msmit $
 
 project (XSC_DynAny_Handler) : install, xerces, dynamicany, typecodefactory, dance_deployment_stub, \
   dance_config_handlers_base, dance_lib, dance, ifr_client {
@@ -11,6 +11,7 @@ project (XSC_DynAny_Handler) : install, xerces, dynamicany, typecodefactory, dan
   Source_Files {
     DynAny_Handler.cpp
     DynEnum_Handler.cpp
+    DynArray_Handler.cpp
     DynSequence_Handler.cpp
     DynStruct_Handler.cpp
     DynAlias_Handler.cpp

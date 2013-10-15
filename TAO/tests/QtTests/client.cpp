@@ -1,7 +1,8 @@
-// $Id: client.cpp 94068 2011-05-19 15:07:06Z johnnyw $
+// $Id: client.cpp 97190 2013-06-05 20:13:29Z mesnier_p $
 
 #include "testC.h"
 #include "ace/Get_Opt.h"
+#include "ace/Argv_Type_Converter.h"
 #include "tao/QtResource/QtResource_Loader.h"
 
 #include "client.h"
@@ -9,9 +10,10 @@
 int
 ACE_TMAIN(int argc, ACE_TCHAR *argv[])
 {
-  QApplication app (argc, argv);
-  TAO::QtResource_Loader qt_resources (&app);
 
+  ACE_Argv_Type_Converter ct (argc, argv);
+  QApplication app (argc,  ct.get_ASCII_argv ());
+  TAO::QtResource_Loader qt_resources (&app);
 
   try
     {

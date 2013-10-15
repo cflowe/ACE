@@ -3,7 +3,7 @@
 /**
  *  @file    DLL_Test_Impl.cpp
  *
- *  $Id: DLL_Test_Impl.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: DLL_Test_Impl.cpp 97246 2013-08-07 07:10:20Z johnnyw $
  *
  *  This test illustrates the use of <ACE_DLL> wrapper class.
  *
@@ -112,6 +112,10 @@ public:
 static Static_Constructor_Test the_instance;
 
 // --------------------------------------------------------
+
+Child::Child (void)
+{
+}
 
 Child::~Child (void)
 {

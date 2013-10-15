@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 91412 2010-08-20 20:14:20Z wotte $
+# $Id: run_test.pl 97276 2013-08-11 17:50:59Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{'ACE_ROOT'}/bin";
@@ -47,7 +47,7 @@ open (STDOUT, ">&OLDOUT");
 open (STDERR, ">&OLDERR");
 
   if ($retval != 0) {
-    print STDERR "ERROR: Parsing returned $retval for file\n";
+    print STDERR "ERROR: Parsing returned $retval for file $file\n";
     $status = 1;
   }
  else  {

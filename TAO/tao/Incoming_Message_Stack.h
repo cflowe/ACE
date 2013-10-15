@@ -4,7 +4,7 @@
 /**
  *  @file Incoming_Message_Stack.h
  *
- *  $Id: Incoming_Message_Stack.h 94277 2011-06-29 11:15:59Z johnnyw $
+ *  $Id: Incoming_Message_Stack.h 97245 2013-08-07 07:08:10Z johnnyw $
  *
  *  @author Frank Rehberger <frehberg@prismtech.com>
  */
@@ -20,6 +20,8 @@
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
+
+#include /**/ "tao/TAO_Export.h"
 
 ACE_BEGIN_VERSIONED_NAMESPACE_DECL
 class ACE_Allocator;
@@ -37,7 +39,7 @@ namespace TAO
  * Internal class, providing stack functionality for TAO_Queued_Data
  * objects.  Stack operations don't require memory allocation.
 */
-class Incoming_Message_Stack
+class TAO_Export Incoming_Message_Stack
 {
 public:
   /// default constructor, initiliazes empty stack.

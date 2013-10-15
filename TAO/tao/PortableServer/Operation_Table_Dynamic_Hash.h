@@ -4,7 +4,7 @@
 /**
  *  @file    Operation_Table_Dynamic_Hash.h
  *
- *  $Id: Operation_Table_Dynamic_Hash.h 71473 2006-03-10 07:19:20Z jtc $
+ *  $Id: Operation_Table_Dynamic_Hash.h 97176 2013-05-29 07:01:17Z johnnyw $
  *
  *  @author Aniruddha Gokhale
  */
@@ -42,9 +42,9 @@ public:
    * Initialize the dynamic hash operation table with a database of
    * operation names. The hash table size may be different from the
    * size of the database. Hence we use the third argument to specify
-   * the size of the internal hash table.  The <alloc> argument is
+   * the size of the internal hash table.  The @a alloc argument is
    * used to determine where the memory comes from (usually from
-   * <ACE_Static_Allocator_Base>).
+   * ACE_Static_Allocator_Base).
    */
   TAO_Dynamic_Hash_OpTable (const TAO_operation_db_entry *db,
                             CORBA::ULong dbsize,

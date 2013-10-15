@@ -26,8 +26,8 @@ SHLIB            = $(SHLIB_UNCHECKED)
 
 FILES = \
   Baseline_Test.cpp \
-  mutex_test.cpp \
-  base_test.cpp
+  base_test.cpp \
+  mutex_test.cpp
 
 #----------------------------------------------------------------------------
 #       Include macros and targets

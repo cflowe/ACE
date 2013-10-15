@@ -1,0 +1,10 @@
+// $Id: Test.idl 97188 2013-06-03 21:24:44Z mesnier_p $
+
+interface Test
+{
+
+  // Return the number of the server after a delay
+  short get_server_num (in short delay_secs);
+
+};
+

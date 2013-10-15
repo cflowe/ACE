@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: config-linux.h 96124 2012-09-05 22:16:02Z shuston $
+// $Id: config-linux.h 97271 2013-08-09 17:47:05Z johnnyw $
 
 // The following configuration file is designed to work for Linux
 // platforms using GNU C++.
@@ -72,13 +72,13 @@
 
 #if defined (__powerpc__) || defined (__x86_64__)
 # if !defined (ACE_DEFAULT_BASE_ADDR)
-#   define ACE_DEFAULT_BASE_ADDR ((char *) 0x40000000)
+#   define ACE_DEFAULT_BASE_ADDR (reinterpret_cast< char* >(0x40000000))
 # endif /* ! ACE_DEFAULT_BASE_ADDR */
 #elif defined (__ia64)
 # if !defined (ACE_DEFAULT_BASE_ADDR)
 // Zero base address should work fine for Linux of IA-64: it just lets
 // the kernel to choose the right value.
-#   define ACE_DEFAULT_BASE_ADDR ((char *) 0x0000000000000000)
+#   define ACE_DEFAULT_BASE_ADDR (reinterpret_cast< char*>(0x0000000000000000))
 # endif /* ! ACE_DEFAULT_BASE_ADDR */
 #endif /* ! __powerpc__  && ! __ia64 */
 
@@ -203,7 +203,7 @@
 #define ACE_HAS_3_PARAM_READDIR_R
 
 #if !defined (ACE_DEFAULT_BASE_ADDR)
-#  define ACE_DEFAULT_BASE_ADDR ((char *) 0x80000000)
+#  define ACE_DEFAULT_BASE_ADDR (reinterpret_cast< char* >(0x80000000))
 #endif /* ! ACE_DEFAULT_BASE_ADDR */
 
 #define ACE_HAS_ALLOCA
@@ -356,13 +356,14 @@
 # define ACE_HAS_GETIFADDRS
 #endif
 
+#if !defined (ACE_LACKS_LINUX_VERSION_H)
+# include <linux/version.h>
+#endif /* !ACE_LACKS_LINUX_VERSION_H */
+
 #if !defined (ACE_GETNAME_RETURNS_RANDOM_SIN_ZERO)
 // Detect if getsockname() and getpeername() returns random values in
 // the sockaddr_in::sin_zero field by evaluation of the kernel
 // version. Since version 2.5.47 this problem is fixed.
-#  if !defined (ACE_LACKS_LINUX_VERSION_H)
-#    include <linux/version.h>
-#  endif /* !ACE_LACKS_LINUX_VERSION_H */
 #  if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,47))
 #    define ACE_GETNAME_RETURNS_RANDOM_SIN_ZERO 0
 #  else
@@ -371,12 +372,14 @@
 #endif  /* ACE_GETNAME_RETURNS_RANDOM_SIN_ZERO */
 
 #if !defined (ACE_HAS_EVENT_POLL) && !defined (ACE_HAS_DEV_POLL)
-# if !defined (ACE_LACKS_LINUX_VERSION_H)
-#  include <linux/version.h>
-# endif /* !ACE_LACKS_LINUX_VERSION_H */
 # if (LINUX_VERSION_CODE > KERNEL_VERSION (2,6,0))
 #  define ACE_HAS_EVENT_POLL
 # endif
+#endif
+
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,8))
+# define ACE_HAS_SCHED_GETAFFINITY 1
+# define ACE_HAS_SCHED_SETAFFINITY 1
 #endif
 
 // This is ghastly, but as long as there are platforms supported

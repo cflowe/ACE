@@ -4,7 +4,7 @@ package MakeObjectGenerator;
 # Description   : Generates object files for generic Makefiles.
 # Author        : Chad Elliott
 # Create Date   : 5/23/2003
-# $Id: MakeObjectGenerator.pm 2036 2011-10-06 15:14:09Z johnnyw $
+# $Id: MakeObjectGenerator.pm 2143 2013-07-09 15:14:04Z mitza $
 # ************************************************************
 
 # ************************************************************
@@ -13,16 +13,19 @@ package MakeObjectGenerator;
 
 use strict;
 use ObjectGenerator;
+use DirectoryManager;
 
 use vars qw(@ISA);
 @ISA = qw(ObjectGenerator);
+
+my $dm = bless {}, 'DirectoryManager';
 
 # ************************************************************
 # Subroutine Section
 # ************************************************************
 
 sub process {
-  my $noext = $_[1];
+  my $noext = $dm->translate_directory($_[1]);
   my @exts  = ('o');
   my @dirs  = (defined $ENV{VDIR} ? $ENV{VDIR} : '');
   $noext =~ s/\.[^\.]+$//o;

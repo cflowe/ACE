@@ -1,5 +1,5 @@
 //  -*- MPC -*-
-// $Id: tests.mpc 97143 2013-05-17 09:32:07Z johnnyw $
+// $Id: tests.mpc 97290 2013-08-13 17:09:59Z johnnyw $
 
 project(Test_Output) : acelib, script {
   libout       = .
@@ -35,7 +35,6 @@ project(Framework Component DLL) : acelib {
   Resource_Files {
   }
 }
-
 
 project(DLL Test Parent Lib) : acelib {
   libout       = .
@@ -677,6 +676,45 @@ project(Compiler_Features_19_Test) : acetest {
   exename = Compiler_Features_19_Test
   Source_Files {
     Compiler_Features_19_Test.cpp
+  }
+}
+
+project(Compiler_Features_20_Test) : acelib {
+  libout       = .
+  sharedname   = Compiler_Features_20
+  dynamicflags += COMPILER_FEATURES_20_DLL_BUILD_DLL
+
+  Source_Files {
+    Compiler_Features_20_DLL.cpp
+  }
+  Header_Files {
+    Compiler_Features_20_DLL.h
+    Compiler_Features_20_DLL_Export.h
+  }
+  Resource_Files {
+  }
+}
+
+project(Compiler_Features_21_Test) : acetest {
+  exename = Compiler_Features_21_Test
+  Source_Files {
+    Compiler_Features_21_Test.cpp
+  }
+}
+
+project(Compiler_Features_22_Test) : acelib {
+  libout       = .
+  sharedname   = Compiler_Features_22
+  dynamicflags += COMPILER_FEATURES_22_DLL_BUILD_DLL
+
+  Source_Files {
+    Compiler_Features_22_DLL.cpp
+  }
+  Header_Files {
+    Compiler_Features_22_DLL.h
+    Compiler_Features_22_DLL_Export.h
+  }
+  Resource_Files {
   }
 }
 
@@ -1738,6 +1776,9 @@ project(Service Config Test) : acetest {
   Source_Files {
     Service_Config_Test.cpp
   }
+  specific(vxtest) {
+    libs += Service_Config_DLL
+  }
 }
 
 project(Framework Component Test) : acetest {
@@ -1949,6 +1990,9 @@ project(Based Pointer Test) : acetest {
   Source_Files {
     Based_Pointer_Test.cpp
   }
+  specific(vxtest) {
+    libs += Based_Pointer_Test_Lib
+  }
 }
 
 project(Library Unload): unload_libace {
@@ -2027,6 +2071,9 @@ project(Service Config Stream Test) : acetest {
   exename = Service_Config_Stream_Test
   Source_Files {
     Service_Config_Stream_Test.cpp
+  }
+  specific(vxtest) {
+    libs += Service_Config_Stream_DLL
   }
 }
 

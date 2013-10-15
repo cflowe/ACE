@@ -4,7 +4,7 @@
 /**
  *  @file   Global_Macros.h
  *
- *  $Id: Global_Macros.h 97075 2013-04-24 15:01:48Z schmidt $
+ *  $Id: Global_Macros.h 97262 2013-08-09 08:32:10Z johnnyw $
  *
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  *  @author Jesper S. M|ller<stophph@diku.dk>
@@ -27,7 +27,7 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-#include "ace/config-lite.h"
+#include /**/ "ace/config-lite.h"
 #include "ace/Assert.h" // For ACE_ASSERT
 
 // Start Global Macros

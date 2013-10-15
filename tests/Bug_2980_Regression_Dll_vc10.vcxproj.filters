@@ -63,6 +63,18 @@
     <ClInclude Include="Collection_Test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Compiler_Features_20_DLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler_Features_20_DLL_Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler_Features_22_DLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler_Features_22_DLL_Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Config_Test.h">
       <Filter>Header Files</Filter>
     </ClInclude>

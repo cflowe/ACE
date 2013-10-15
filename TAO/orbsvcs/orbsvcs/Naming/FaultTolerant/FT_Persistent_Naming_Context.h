@@ -4,7 +4,7 @@
 /**
  *  @file   FT_Persistent_Naming_Context.h
  *
- *  $Id: FT_Persistent_Naming_Context.h 96682 2013-01-19 00:21:08Z labancap $
+ *  $Id: FT_Persistent_Naming_Context.h 97275 2013-08-10 17:11:33Z johnnyw $
  *
  *  @author Kevin Stanley <stanleyk@ociweb.com>
  */
@@ -62,7 +62,7 @@ public:
 
   static void set_naming_manager_impl (TAO_FT_Naming_Manager *mgr_impl);
 
-  bool is_object_group (const CORBA::Object_ptr obj) const;
+  CORBA::Boolean is_object_group (CORBA::Object_ptr obj) const;
 
 protected:
   static TAO_FT_Naming_Manager *naming_manager_impl_;

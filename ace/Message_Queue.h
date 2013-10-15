@@ -4,7 +4,7 @@
 /**
  *  @file    Message_Queue.h
  *
- *  $Id: Message_Queue.h 96333 2012-11-23 08:08:31Z johnnyw $
+ *  $Id: Message_Queue.h 97201 2013-06-18 07:17:34Z johnnyw $
  *
  *  @author Douglas C. Schmidt <schmidt@cs.wustl.edu>
  */
@@ -213,7 +213,6 @@ protected:
   /// Indicates the state of the queue, which can be
   /// <ACTIVATED>, <DEACTIVATED>, or <PULSED>.
   int state_;
-
 };
 
 ACE_END_VERSIONED_NAMESPACE_DECL

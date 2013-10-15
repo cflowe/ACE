@@ -1,4 +1,4 @@
-// $Id: ConnectionCache.h 91118 2010-07-17 10:29:57Z mcorino $
+// $Id: ConnectionCache.h 97246 2013-08-07 07:10:20Z johnnyw $
 
 /**
  * @file ConnectionCache.h
@@ -237,14 +237,14 @@ namespace ACE
                                    const ConnectionCacheValue& cacheval);
 
               /// Attempts to claim an existing connection.
-              /// Returns true and sets <connection> if successful.
+              /// Returns true and sets @a connection if successful.
               /// Returns false otherwise.
               /// Does not wait when no connection available.
               bool claim_existing_connection(const ConnectionKey& key,
                                              connection_type*& connection,
                                              ConnectionCacheValue::State& state);
 
-              /// Looks up a matching cache entry for <key> and updates
+              /// Looks up a matching cache entry for @a key and updates
               /// <cacheval> with the entry state if found.
               /// Returns true if found, false otherwise.
               bool find_connection (const ConnectionKey& key,

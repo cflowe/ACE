@@ -8,7 +8,7 @@
 # this file will be lost the next time it is generated.
 #
 # MPC Command:
-# /home/build/DOC_ROOT/stage-1038/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 20 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-1038/ACE_wrappers/TAO/DAnCE
+# /home/build/DOC_ROOT/stage-775/ACE_wrappers/bin/mwc.pl -type gnuace -exclude "TAO/TAO_*.mwc,TAO/CIAO/CIAO_*.mwc" -workers 16 -recurse -hierarchy -relative ACE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers -relative TAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO -relative CIAO_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/CIAO -relative DANCE_ROOT=/home/build/DOC_ROOT/stage-775/ACE_wrappers/TAO/DAnCE
 #
 #----------------------------------------------------------------------------
 
@@ -20,13 +20,20 @@ endif
 
 include $(ACE_ROOT)/include/makeinclude/macros.GNU
 
-all: INet-target INet_SSL
+all: HTBP-target INet-target INet_SSL RMCast-target TMCast-target
 
 REMAINING_TARGETS := $(filter-out all,$(TARGETS_NESTED:.nested=)) $(CUSTOM_TARGETS)
 
 $(REMAINING_TARGETS):
+	$(KEEP_GOING)@cd HTBP && $(MAKE) -f GNUmakefile.HTBP $(@)
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.INet $(@)
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.INet_SSL $(@)
+	$(KEEP_GOING)@cd RMCast && $(MAKE) -f GNUmakefile.RMCast $(@)
+	$(KEEP_GOING)@cd TMCast && $(MAKE) -f GNUmakefile.TMCast $(@)
+
+.PHONY: HTBP-target
+HTBP-target:
+	$(KEEP_GOING)@cd HTBP && $(MAKE) -f GNUmakefile.HTBP all
 
 .PHONY: INet-target
 INet-target:
@@ -36,6 +43,17 @@ INet-target:
 INet_SSL: INet-target
 	$(KEEP_GOING)@cd INet && $(MAKE) -f GNUmakefile.INet_SSL all
 
+.PHONY: RMCast-target
+RMCast-target:
+	$(KEEP_GOING)@cd RMCast && $(MAKE) -f GNUmakefile.RMCast all
+
+.PHONY: TMCast-target
+TMCast-target:
+	$(KEEP_GOING)@cd TMCast && $(MAKE) -f GNUmakefile.TMCast all
+
 project_name_list:
+	@echo HTBP-target
 	@echo INet-target
 	@echo INet_SSL
+	@echo RMCast-target
+	@echo TMCast-target

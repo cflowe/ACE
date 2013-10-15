@@ -234,9 +234,9 @@ endif
 
 #BEGIN MPC-Generated Install Info
 #pidl_files:
+#Default_ORT.pidl
 #ObjectReferenceTemplate.pidl
 #ObjectReferenceTemplate_include.pidl
-#Default_ORT.pidl
 #
 #build_files:
 #ObjRefTemplate.mpc
