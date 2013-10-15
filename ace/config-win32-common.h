@@ -1,5 +1,5 @@
 /* -*- C++ -*- */
-// $Id: config-win32-common.h 97246 2013-08-07 07:10:20Z johnnyw $
+// $Id: config-win32-common.h 97304 2013-08-29 21:14:43Z shuston $
 
 
 #ifndef ACE_CONFIG_WIN32_COMMON_H
@@ -603,8 +603,10 @@
 #define ACE_LACKS_ALPHASORT
 #define ACE_LACKS_MKSTEMP
 #define ACE_LACKS_LSTAT
-// Looks like Win32 has a non-const swab function
+// Looks like Win32 has a non-const swab function, and it takes the
+// non-standard int len (rather than ssize_t).
 #define ACE_HAS_NONCONST_SWAB
+#define ACE_HAS_INT_SWAB
 
 // gethostbyaddr does not handle IPv6-mapped-IPv4 addresses
 #define ACE_HAS_BROKEN_GETHOSTBYADDR_V4MAPPED

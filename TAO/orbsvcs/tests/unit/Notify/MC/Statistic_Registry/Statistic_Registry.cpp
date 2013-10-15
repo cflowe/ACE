@@ -1,4 +1,4 @@
-// $Id: Statistic_Registry.cpp 91816 2010-09-17 08:35:56Z johnnyw $
+// $Id: Statistic_Registry.cpp 97315 2013-09-03 13:19:49Z mesnier_p $
 
 #include "ace/Monitor_Base.h"
 #include "ace/Monitor_Point_Registry.h"
@@ -12,6 +12,9 @@ using namespace ACE_VERSIONED_NAMESPACE_NAME::ACE::Monitor_Control;
 void
 error (const char* msg)
 {
+#if defined (ACE_NLOGGING)
+  ACE_UNUSED_ARG (msg);
+#endif /* ACE_NLOGGING */
   ACE_ERROR ((LM_ERROR, "%s\n", msg));
   ACE_OS::exit (1);
 }

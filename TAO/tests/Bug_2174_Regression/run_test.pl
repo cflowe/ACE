@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 87837 2009-12-01 09:50:38Z dbudko $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -58,7 +58,7 @@ if ($client->PutFile ($iorbase) == -1) {
 $client_status = $CL->SpawnWaitKill ($client->ProcessStartWaitInterval());
 
 if ($client_status != 2) {
-    print STDERR "ERROR: client returned $client_status\n";
+    print STDERR "ERROR: client returned $client_status, should return 2\n";
     $SV->Kill (); $SV->TimedWait (1);
     exit 1;
 }

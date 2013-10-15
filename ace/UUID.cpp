@@ -1,4 +1,4 @@
-//$Id: UUID.cpp 96985 2013-04-11 15:50:32Z huangh $
+//$Id: UUID.cpp 97320 2013-09-05 07:53:58Z johnnyw $
 
 #include "ace/UUID.h"
 #include "ace/Guard_T.h"
@@ -348,8 +348,8 @@ namespace ACE_Utils
   UUID_Generator::
   generate_UUID (UUID& uuid, ACE_UINT16 version, u_char variant)
   {
-    UUID_Time timestamp;
-    ACE_UINT16 clock_sequence;
+    UUID_Time timestamp = 0;
+    ACE_UINT16 clock_sequence = 0;
 
     this->get_timestamp_and_clocksequence (timestamp,
                                            clock_sequence);

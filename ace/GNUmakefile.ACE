@@ -946,6 +946,7 @@ endif
 #config-macosx-iOS-simulator.h
 #config-macosx-leopard.h
 #config-macosx-lion.h
+#config-macosx-mavericks.h
 #config-macosx-mountainlion.h
 #config-macosx-panther.h
 #config-macosx-snowleopard.h

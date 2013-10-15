@@ -1,5 +1,5 @@
 /* -*- C++ -*- */
-// $Id: config-hpux-11.00.h 97130 2013-05-13 17:36:26Z mesnier_p $
+// $Id: config-hpux-11.00.h 97326 2013-09-11 07:52:09Z johnnyw $
 
 // The following configuration file is designed to work for HP
 // platforms running HP-UX 11.00 using aC++ or gcc (2.95 and up).
@@ -166,6 +166,8 @@
 
 #define ACE_LACKS_CLOCK_MONOTONIC
 #define ACE_LACKS_MONOTONIC_TIME
+
+#define ACE_LACKS_PTHREAD_SCOPE_PROCESS
 
 // Prototypes for both signal() and struct sigaction are consistent.
 #define ACE_HAS_CONSISTENT_SIGNAL_PROTOTYPES

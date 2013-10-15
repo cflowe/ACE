@@ -1,4 +1,4 @@
-// $Id: NamingViewer.cpp 91816 2010-09-17 08:35:56Z johnnyw $
+// $Id: NamingViewer.cpp 97316 2013-09-03 15:53:44Z mesnier_p $
 
 #include "stdafx.h"
 #include "NamingViewer.h"
@@ -6,6 +6,7 @@
 #include "ace/ARGV.h"
 #include "ace/ACE.h"
 #include "ace/Argv_Type_Converter.h"
+#include "ace/Init_ACE.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

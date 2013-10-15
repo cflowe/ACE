@@ -1202,6 +1202,9 @@
     <ClInclude Include="config-macosx-lion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="config-macosx-mavericks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="config-macosx-mountainlion.h">
       <Filter>Header Files</Filter>
     </ClInclude>

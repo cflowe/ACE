@@ -1,7 +1,8 @@
-// $Id: TS_Clerk_Handler.cpp 94310 2011-07-09 19:10:06Z schmidt $
+// $Id: TS_Clerk_Handler.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
 
 #include "ace/Get_Opt.h"
 #include "TS_Clerk_Handler.h"
+#include "ace/Lib_Find.h"
 #include "ace/Signal.h"
 #include "ace/OS_NS_stdio.h"
 #include "ace/OS_NS_string.h"

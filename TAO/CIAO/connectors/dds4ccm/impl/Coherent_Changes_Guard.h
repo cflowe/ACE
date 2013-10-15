@@ -2,7 +2,7 @@
  * @author William R. Otte <wotte@dre.vanderbilt.edu>
  * @author Johnny Willemsen (jwillemsen@remedy.nl)
  *
- * $Id: Coherent_Changes_Guard.h 95809 2012-06-03 17:56:00Z johnnyw $
+ * $Id: Coherent_Changes_Guard.h 97302 2013-08-29 11:15:22Z johnnyw $
  *
  * Wrapper facade for NDDS.
  */
@@ -18,6 +18,10 @@ namespace CIAO
 {
   namespace DDS4CCM
   {
+    /**
+     * Guard class which calls begin_coherent_changes() on
+     * construction and end_coherent_changes() at destruction
+     */
     class DDS4CCM_DDS_IMPL_Export Coherent_Changes_Guard :
       private ACE_Copy_Disabled
     {

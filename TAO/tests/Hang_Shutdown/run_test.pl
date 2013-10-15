@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 94512 2011-09-16 11:59:06Z msmit $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -58,7 +58,7 @@ if ($client->PutFile ($svcconf) == -1) {
     exit 1;
 }
 
-$SV2 = $server->CreateProcess ("server");
+$SV2 = $server->CreateProcess ("server", " -o $server_iorfile");
 $CL2 = $client->CreateProcess ("client", " -ORBSvcConf $client_svcfile");
 
 $SV2->Spawn ();

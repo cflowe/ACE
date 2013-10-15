@@ -1,7 +1,7 @@
 /**
  * @author Johnny Willemsen  <jwillemsen@remedy.nl>
  *
- * $Id: DDS_State_Connector_T.h 94802 2011-10-20 09:46:10Z mcorino $
+ * $Id: DDS_State_Connector_T.h 97302 2013-08-29 11:15:22Z johnnyw $
  *
  * DDS State Connector implementation
  */
@@ -181,7 +181,8 @@ private:
       typename CCM_TYPE::push_observer_traits,
       typename DDS_TYPE::typed_reader_type,
       typename DDS_TYPE::value_type,
-      SEQ_TYPE>
+      SEQ_TYPE,
+      CIAO::DDS4CCM::DDS4CCM_READ>
   push_observer_;
   //@}
 
@@ -193,7 +194,8 @@ private:
       typename CCM_TYPE::push_state_observer_traits,
       typename DDS_TYPE::typed_reader_type,
       typename DDS_TYPE::value_type,
-      SEQ_TYPE>
+      SEQ_TYPE,
+      CIAO::DDS4CCM::DDS4CCM_READ>
     push_state_observer_;
   //@}
 

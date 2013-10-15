@@ -1,7 +1,7 @@
 /**
  * @author Marcel Smit (msmit@remedy.nl)
  *
- * $Id: DDS_Event_Connector_T.h 95809 2012-06-03 17:56:00Z johnnyw $
+ * $Id: DDS_Event_Connector_T.h 97302 2013-08-29 11:15:22Z johnnyw $
  *
  * DDS Event Connector implementation
  */
@@ -104,7 +104,8 @@ private:
       typename CCM_TYPE::push_consumer_traits,
       typename DDS_TYPE::typed_reader_type,
       typename DDS_TYPE::value_type,
-      SEQ_TYPE>
+      SEQ_TYPE,
+      CIAO::DDS4CCM::DDS4CCM_TAKE>
     push_consumer_;
   //@}
 

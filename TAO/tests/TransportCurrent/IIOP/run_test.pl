@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 91376 2010-08-17 08:51:28Z johnnyw $
+# $Id: run_test.pl 97327 2013-09-11 07:53:15Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -25,19 +25,28 @@ $status = 0;
 
 $mode = shift (@ARGV);
 if ( $mode =~ /-dynamic/) {
-    $base_client_conf = "client_dynamic.conf";
-    $base_server_conf = "server_dynamic.conf";
+    $base_client_conf = "client_dynamic" . $PerlACE::svcconf_ext;
+    $base_server_conf = "server_dynamic" . $PerlACE::svcconf_ext;
     $client_conf_file = $client->LocalFile ("$base_client_conf");
     $server_conf_file = $server->LocalFile ("$base_server_conf");
 }
 elsif  ( $mode =~ /-static/) {
-    $base_client_conf = "client_static.conf";
-    $base_server_conf = "server_static.conf";
+    $base_client_conf = "client_static" . $PerlACE::svcconf_ext;
+    $base_server_conf = "server_static" . $PerlACE::svcconf_ext;
     $client_conf_file = $client->LocalFile ("$base_client_conf");
     $server_conf_file = $server->LocalFile ("$base_server_conf");
 }
 else {
     print STDERR "Unknown $mode. Specify -static or -dynamic\n";
+    exit 1;
+}
+
+if ($server->PutFile ($base_server_conf) == -1) {
+    print STDERR "ERROR: cannot set file <$server_conf_file>\n";
+    exit 1;
+}
+if ($client->PutFile ($base_client_conf) == -1) {
+    print STDERR "ERROR: cannot set file <$client_conf_file>\n";
     exit 1;
 }
 
@@ -47,7 +56,6 @@ $SV = $server->CreateProcess ("server",
 $CL = $client->CreateProcess ("client",
                               "@ARGV -n 1 -ORBSvcConf $client_conf_file -k file://$client_iorfile");
 
-print STDERR $SV->CommandLine()."\n";
 $SV->Spawn ();
 
 if ($server->WaitForFileTimed ($iorbase,
@@ -57,7 +65,6 @@ if ($server->WaitForFileTimed ($iorbase,
     exit 1;
 }
 
-print STDERR $CL->CommandLine()."\n";
 $client_status = $CL->SpawnWaitKill ($client->ProcessStartWaitInterval ());
 
 if ($client_status != 0) {

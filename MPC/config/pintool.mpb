@@ -1,0 +1,9 @@
+// $Id: pintool.mpb 2152 2013-09-07 03:49:47Z hillj $
+
+project : pin {
+  specific (prop:windows) {
+    link_options += /EXPORT:main /ENTRY:Ptrace_DllMainCRTStartup@12
+  } else {
+    linkflags += -Wl,-exported_symbols_list -Wl,$(PIN_ROOT)/source/include/pin/pintool.exp
+  }
+}

@@ -1,4 +1,4 @@
-// $Id: drv_args.cpp 95357 2011-12-17 20:16:04Z johnnyw $
+// $Id: drv_args.cpp 97307 2013-09-01 00:42:04Z mesnier_p $
 
 /*
 
@@ -80,6 +80,7 @@ trademarks or registered trademarks of Sun Microsystems, Inc.
 #include "ace/OS_NS_stdio.h"
 #include "ace/OS_NS_unistd.h"
 #include "ace/os_include/os_ctype.h"
+#include "ace/Lib_Find.h"
 
 extern long DRV_nfiles;
 extern char *DRV_files[];

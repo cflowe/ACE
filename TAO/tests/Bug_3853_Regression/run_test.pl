@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 91816 2010-09-17 08:35:56Z johnnyw $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -34,10 +34,6 @@ $server2->DeleteFile($shutdown_iorbase2);
 $SV1 = $server1->CreateProcess ("server", "-ORBEndpoint iiop://localhost:$port1 -o $server_iorfile1 -s $shutdown_server_iorfile1");
 $SV2 = $server2->CreateProcess ("server", "-ORBEndpoint iiop://localhost:$port2 -o $server_iorfile2 -s $shutdown_server_iorfile2");
 $CL = $client->CreateProcess ("client", "-t 30");
-
-print STDERR $SV1->CommandLine() . "\n";
-print STDERR $SV2->CommandLine() . "\n";
-print STDERR $CL->CommandLine() . "\n";
 
 $server_status = $SV1->Spawn ();
 

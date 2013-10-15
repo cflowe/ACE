@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 88394 2010-01-01 07:44:26Z johnnyw $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -119,7 +119,6 @@ if ($client3->PutFile ($iorbase) == -1) {
 print STDERR "****** Start the clients*** \n" if $verbose;
 
 if ($clients > 0) {
-    print STDERR $CL1->CommandLine(), "\n" if $verbose;
     $client_status = $CL1->Spawn ();
 
     if ($client_status != 0) {

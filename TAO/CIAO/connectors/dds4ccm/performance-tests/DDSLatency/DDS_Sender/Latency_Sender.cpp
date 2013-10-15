@@ -1,4 +1,4 @@
-// $Id: Latency_Sender.cpp 95375 2011-12-20 15:11:01Z johnnyw $
+// $Id: Latency_Sender.cpp 97313 2013-09-02 15:41:41Z mesnier_p $
 
 #include "ace/Get_Opt.h"
 #include "ace/High_Res_Timer.h"
@@ -11,6 +11,7 @@
 #include "Latency_BaseSupport.h"
 #include "Latency_BasePlugin.h"
 #include "ace/Tokenizer_T.h"
+#include "ace/OS_NS_math.h"
 
 #include <ndds/ndds_namespace_cpp.h>
 

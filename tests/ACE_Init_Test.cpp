@@ -1,4 +1,4 @@
-// $Id: ACE_Init_Test.cpp 85425 2009-05-22 16:11:04Z johnnyw $
+// $Id: ACE_Init_Test.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
 
 // This is a Win32-only test for verifying that the ACE dll
 // initializes itself without having a nonstatic object manager
@@ -37,6 +37,7 @@ run_main (int, ACE_TCHAR *[])
 #include "ACE_Init_TestDlg.h"
 #include "test_config.h"
 #include "ace/ACE.h"
+#include "ace/Init_ACE.h"
 #include "ace/OS_NS_unistd.h"
 #include "ace/Thread_Manager.h"
 

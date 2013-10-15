@@ -1,10 +1,12 @@
-// $Id: System_Time.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: System_Time.cpp 97308 2013-09-01 00:58:08Z mesnier_p $
 
 #include "ace/System_Time.h"
 #include "ace/MMAP_Memory_Pool.h"
 #include "ace/Malloc_T.h"
 #include "ace/Null_Mutex.h"
 #include "ace/Time_Value.h"
+#include "ace/Lib_Find.h"
+
 #include "ace/OS_NS_string.h"
 #include "ace/OS_NS_time.h"
 

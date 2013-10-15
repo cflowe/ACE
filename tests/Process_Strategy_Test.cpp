@@ -3,7 +3,7 @@
 /**
  *  @file    Process_Strategy_Test.cpp
  *
- *  $Id: Process_Strategy_Test.cpp 97246 2013-08-07 07:10:20Z johnnyw $
+ *  $Id: Process_Strategy_Test.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
  *
  *   This is a test of the <ACE_Strategy_Acceptor> and
  *   <ACE_File_Lock> classes.  The <ACE_Strategy_Acceptor> uses
@@ -47,6 +47,7 @@
 #include "ace/Singleton.h"
 #include "ace/Synch_Traits.h"
 #include "ace/File_Lock.h"
+#include "ace/Lib_Find.h"
 
 // Counting_Service and Options in here
 #include "Process_Strategy_Test.h"

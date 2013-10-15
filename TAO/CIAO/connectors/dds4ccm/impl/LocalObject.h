@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: LocalObject.h 92574 2010-11-13 09:23:07Z johnnyw $
+// $Id: LocalObject.h 97302 2013-08-29 11:15:22Z johnnyw $
 
 #ifndef DDS4CCM_LOCALOBJECT_H_
 #define DDS4CCM_LOCALOBJECT_H_
@@ -11,6 +11,11 @@ namespace CIAO
 {
   namespace DDS4CCM
   {
+    /**
+     * Base class for all DDS4CCM local facets. It stores
+     * an object reference to the component this local
+     * facet belongs too.
+     */
     class DDS4CCM_DDS_IMPL_Export LocalObject
       : public virtual ::CORBA::LocalObject
     {

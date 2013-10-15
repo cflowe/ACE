@@ -1,9 +1,10 @@
-// $Id: Dev_Poll_Reactor.cpp 97130 2013-05-13 17:36:26Z mesnier_p $
+// $Id: Dev_Poll_Reactor.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
 
 #include "ace/OS_NS_errno.h"
 #include "ace/Dev_Poll_Reactor.h"
 #include "ace/Signal.h"
 #include "ace/Sig_Handler.h"
+#include "ace/Flag_Manip.h"
 
 #if defined (ACE_HAS_EVENT_POLL) || defined (ACE_HAS_DEV_POLL)
 

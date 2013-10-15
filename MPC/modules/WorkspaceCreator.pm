@@ -4,7 +4,7 @@ package WorkspaceCreator;
 # Description   : Base class for all workspace creators
 # Author        : Chad Elliott
 # Create Date   : 5/13/2002
-# $Id: WorkspaceCreator.pm 2111 2012-07-06 16:47:38Z elliott_c $
+# $Id: WorkspaceCreator.pm 2153 2013-09-07 15:16:52Z elliott_c $
 # ************************************************************
 
 # ************************************************************
@@ -1257,14 +1257,22 @@ sub write_workspace {
           my @list = $self->number_target_deps($self->{'projects'},
                                                $self->{'project_info'},
                                                \%targnum, 0);
+          ## If the workspace name contains a dot, we will replace it
+          ## with two underscores.  Graphviz does not accept names with
+          ## dots.
+          $wsname =~ s/\./__/g;
           print $dh "digraph $wsname {\n";
           foreach my $project (@{$self->{'projects'}}) {
             if (defined $targnum{$project}) {
+              ## If the project name contains a dot, we will replace it
+              ## with two underscores.  Graphviz does not accept names
+              ## with dots.
               my $pname = $self->{'project_info'}->{$project}->[ProjectCreator::PROJECT_NAME];
+              $pname =~ s/\./__/g;
               foreach my $number (@{$targnum{$project}}) {
-                print $dh "  $pname -> ",
-                  $self->{'project_info'}->{$list[$number]}->[ProjectCreator::PROJECT_NAME],
-                    ";\n";
+                my $depr = $self->{'project_info'}->{$list[$number]}->[ProjectCreator::PROJECT_NAME];
+                $depr =~ s/\./__/g;
+                print $dh "  $pname -> ", $depr, ";\n";
               }
             }
           }

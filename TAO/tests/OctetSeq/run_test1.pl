@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test1.pl 87806 2009-11-27 10:16:51Z dbudko $
+# $Id: run_test1.pl 97327 2013-09-11 07:53:15Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -10,8 +10,6 @@ use PerlACE::TestTarget;
 
 $status = 0;
 $debug_level = '0';
-
-
 
 $client_iterations = '5000';
 
@@ -36,9 +34,25 @@ my $iorbase = "test.ior";
 my $server_iorfile = $server->LocalFile ($iorbase);
 my $client_iorfile = $t3->LocalFile ($iorbase);
 
-my $server_conf = $server->LocalFile ("svc1" . $PerlACE::svcconf_ext);
-my $client_conf = $client->LocalFile ("svc1" . $PerlACE::svcconf_ext);
-my $t3_conf = $t3->LocalFile ("svc1" . $PerlACE::svcconf_ext);
+my $conf_base = "svc1" . $PerlACE::svcconf_ext;
+my $server_conf = $server->LocalFile ($conf_base);
+my $client_conf = $client->LocalFile ($conf_base);
+my $t3_conf = $t3->LocalFile ($conf_base);
+
+if ($server->PutFile ($conf_base) == -1) {
+    print STDERR "ERROR: cannot set file <$server_conf>\n";
+    exit 1;
+}
+
+if ($client->PutFile ($conf_base) == -1) {
+    print STDERR "ERROR: cannot set file <$client_conf>\n";
+    exit 1;
+}
+
+if ($t3->PutFile ($conf_base) == -1) {
+    print STDERR "ERROR: cannot set file <$t3_conf>\n";
+    exit 1;
+}
 
 $server->DeleteFile($iorbase);
 $client->DeleteFile($iorbase);

@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Hello_Sender_exec.cpp 95814 2012-06-04 06:51:36Z johnnyw $
+// $Id: Hello_Sender_exec.cpp 97306 2013-08-31 14:05:50Z johnnyw $
 
 #include "Hello_Sender_exec.h"
 #include "ace/Guard_T.h"
@@ -328,7 +328,6 @@ namespace CIAO_Hello_Sender_Impl
         ACE_ERROR ((LM_ERROR, ACE_TEXT ("Sender_exec_i::stop - ")
                               ACE_TEXT ("Sender never got ready to start\n")));
       }
-
   }
 
 

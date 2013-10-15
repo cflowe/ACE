@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 88365 2009-12-30 10:57:35Z johnnyw $
+# $Id: run_test.pl 97325 2013-09-07 17:31:40Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -24,7 +24,12 @@ my $server_iorfile = $server->LocalFile ($iorbase);
 my $client_iorfile = $client->LocalFile ($iorbase);
 $server->DeleteFile($iorbase);
 $client->DeleteFile($iorbase);
-my $server_conf = $server->LocalFile ("server$PerlACE::svcconf_ext");
+my $server_conf_base = "server$PerlACE::svcconf_ext";
+my $server_conf = $server->LocalFile ($server_conf_base);
+if ($server->PutFile ($server_conf_base) == -1) {
+    print STDERR "ERROR: cannot set file <$server_conf_base>\n";
+    exit 1;
+}
 
 $endpoints = "-ORBEndpoint shmiop://12345 -ORBEndpoint iiop://:"
     . PerlACE::TestTarget::RandomPort(5000);

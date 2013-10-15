@@ -1,4 +1,4 @@
-// $Id: INET_Addr.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: INET_Addr.cpp 97355 2013-09-27 22:16:09Z shuston $
 
 // Defines the Internet domain address family address format.
 
@@ -17,6 +17,7 @@
 #include "ace/OS_NS_netdb.h"
 #include "ace/OS_NS_unistd.h"
 #include "ace/OS_NS_sys_socket.h"
+#include "ace/Truncate.h"
 
 ACE_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -379,7 +380,8 @@ ACE_INET_Addr::set (u_short port_number,
       if ((error = ::getaddrinfo (host_name, 0, &hints, &res)) == 0)
         {
           this->set_type (res->ai_family);
-          this->set_addr (res->ai_addr, res->ai_addrlen);
+          this->set_addr (res->ai_addr,
+                          ACE_Utils::truncate_cast<int>(res->ai_addrlen));
           this->set_port_number (port_number, encode);
           ::freeaddrinfo (res);
           return 0;

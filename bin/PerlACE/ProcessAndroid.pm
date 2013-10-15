@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-# $Id: ProcessAndroid.pm 97254 2013-08-08 17:51:50Z johnnyw $
+# $Id: ProcessAndroid.pm 97326 2013-09-11 07:52:09Z johnnyw $
 
 package PerlACE::ProcessAndroid;
 
@@ -278,7 +278,7 @@ sub Spawn ()
     my($test, $dir, $suffix) = fileparse($program);
 
     my $adb_process = $ENV{'ANDROID_SDK_ROOT'} . "/platform-tools/adb";
-    my $cmd = $adb_process . ' shell "cd ' . $dir . ' && LD_LIBRARY_PATH=' . $fsroot_target . '/lib:$LD_LIBRARY_PATH ./' . $test . ' ' . $self->{ARGUMENTS} . '"';
+    my $cmd = $adb_process . ' shell "cd ' . $dir . ' && LD_LIBRARY_PATH=' . $fsroot_target . '/lib:\$LD_LIBRARY_PATH ./' . $test . ' ' . $self->{ARGUMENTS} . '"';
 
     FORK: {
         if ($self->{PROCESS} = fork) {
@@ -407,7 +407,7 @@ sub PutFile ($)
 
     my $adb_process = $ENV{'ANDROID_SDK_ROOT'} . "/platform-tools/adb";
 
-    my $cmd = "$adb_process" . ' push '. "$src $dest $silent";
+    my $cmd = "$adb_process" . ' push '. "\"$src\" \"$dest\" $silent";
 
     if (defined $ENV{'ACE_TEST_VERBOSE'}) {
       print STDERR "PutFile cmd: $cmd\n";

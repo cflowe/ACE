@@ -99,6 +99,7 @@ LDFLAGS      += -L. $(if $(ARCH),-L./$(ARCH))
 endif
 CPPFLAGS     += -I..
 ifeq ($(static_libs),1)
+  CPPFLAGS += -DACE_AS_STATIC_LIBS
   ifeq ($(link_groups), 1)
     LDLIBS := -Wl,--start-group $(LDLIBS) -Wl,--end-group
   endif

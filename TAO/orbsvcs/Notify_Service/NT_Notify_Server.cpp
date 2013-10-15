@@ -4,7 +4,7 @@
 /**
  *  @file    NT_Notify_Server.cpp
  *
- *  $Id: NT_Notify_Server.cpp 97014 2013-04-12 22:47:02Z mitza $
+ *  $Id: NT_Notify_Server.cpp 97312 2013-09-02 15:06:18Z mesnier_p $
  *
  *  Driver program that runs the TAO Notification Service as a Windows NT
  *  Service.
@@ -36,6 +36,7 @@ ACE_TMAIN(int, ACE_TCHAR *[])
 #include "ace/Arg_Shifter.h"
 #include "ace/ARGV.h"
 #include "ace/Configuration.h"
+#include "ace/Init_ACE.h"
 
 #include "winreg.h"
 #include "NT_Notify_Service.h"

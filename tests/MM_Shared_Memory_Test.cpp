@@ -3,7 +3,7 @@
 /**
  *  @file    MM_Shared_Memory_Test.cpp
  *
- *  $Id: MM_Shared_Memory_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: MM_Shared_Memory_Test.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
  *
  *   This is a simple test of <ACE_Shared_Memory_MM>.  The test
  *   forks two processes or spawns two threads (depending upon the
@@ -22,7 +22,7 @@
 #include "ace/SV_Semaphore_Simple.h"
 #include "ace/Process_Semaphore.h"
 #include "ace/Thread_Manager.h"
-#include "ace/ACE.h"
+#include "ace/Lib_Find.h"
 #include "ace/OS_NS_string.h"
 #include "ace/OS_NS_unistd.h"
 

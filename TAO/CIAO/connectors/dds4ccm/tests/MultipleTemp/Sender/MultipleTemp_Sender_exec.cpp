@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: MultipleTemp_Sender_exec.cpp 92902 2010-12-17 15:09:42Z mcorino $
+// $Id: MultipleTemp_Sender_exec.cpp 97302 2013-08-29 11:15:22Z johnnyw $
 
 //Test Multiple templates connector
 #include "MultipleTemp_Sender_exec.h"
@@ -189,7 +189,7 @@ namespace CIAO_MultipleTemp_Sender_Impl
     catch (const CCM_DDS::InternalError& ex)
     {
       ACE_ERROR ((LM_ERROR, ACE_TEXT ("ERROR: Internal Error ")
-                   ACE_TEXT ("whit update_many: index <%d> - retval <%d>\n"),
+                   ACE_TEXT ("with update_many: index <%d> - retval <%d>\n"),
                    ex.index, ex.error_code));
       result = false;
     }

@@ -1,8 +1,9 @@
 // Log_Msg_MFC.cpp : Defines the class behaviors for the application.
-// $Id: Log_Msg_MFC.cpp 81978 2008-06-16 16:57:12Z sowayaa $
+// $Id: Log_Msg_MFC.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
 
 #include "ace/Log_Msg.h"
 #include "Log_Msg_MFC.h"
+#include "ace/Init_ACE.h"
 
 #if defined (ACE_WIN32)
 

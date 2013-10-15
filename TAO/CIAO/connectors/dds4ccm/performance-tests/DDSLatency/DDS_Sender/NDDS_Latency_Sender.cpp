@@ -1,4 +1,4 @@
-// $Id: NDDS_Latency_Sender.cpp 94618 2011-10-06 12:06:35Z msmit $
+// $Id: NDDS_Latency_Sender.cpp 97313 2013-09-02 15:41:41Z mesnier_p $
 
 #include "ace/Get_Opt.h"
 #include "tao/ORB_Core.h"
@@ -7,6 +7,7 @@
 #include "Latency_BaseSupport.h"
 #include "Latency_BasePlugin.h"
 #include "ace/Tokenizer_T.h"
+#include "ace/OS_NS_math.h"
 
 #include <ndds/ndds_namespace_cpp.h>
 #include <ndds/ndds_cpp.h>

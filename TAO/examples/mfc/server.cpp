@@ -1,4 +1,4 @@
-// $Id: server.cpp 88929 2010-02-10 10:54:48Z sma $
+// $Id: server.cpp 97317 2013-09-04 12:47:36Z mesnier_p $
 
 // server.cpp : Defines the class behaviors for the application.
 
@@ -14,6 +14,7 @@
 #include "serverView.h"
 
 #include "ace/ACE.h"
+#include "ace/Init_ACE.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

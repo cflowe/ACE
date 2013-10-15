@@ -4,7 +4,7 @@
 /**
  *  @file test_config.h
  *
- *  $Id: test_config.h 97246 2013-08-07 07:10:20Z johnnyw $
+ *  $Id: test_config.h 97326 2013-09-11 07:52:09Z johnnyw $
  *
  *   This file factors out common macros and other utilities used by the
  *   ACE automated regression tests.  It also shows how to redirect ACE_DEBUG/ACE_ERROR
@@ -86,7 +86,7 @@ size_t const ACE_MAX_THREADS = 4;
 #endif /* ACE_START_TEST */
 
 #ifndef ACE_END_TEST
-# define ACE_END_TEST ACE_DEBUG ((LM_DEBUG, ACE_TEXT ("(%P|%t) Ending %s test t %D\n"), program));
+# define ACE_END_TEST ACE_DEBUG ((LM_DEBUG, ACE_TEXT ("(%P|%t) Ending %s test %D\n"), program));
 #endif /* ACE_END_TEST */
 #endif /* ACE_HAS_CONSOLE_TEST_OUTPUT */
 

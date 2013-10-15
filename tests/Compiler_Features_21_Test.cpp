@@ -1,4 +1,4 @@
-// $Id: Compiler_Features_21_Test.cpp 97201 2013-06-18 07:17:34Z johnnyw $
+// $Id: Compiler_Features_21_Test.cpp 97326 2013-09-11 07:52:09Z johnnyw $
 
 /**
  * This program checks if the compiler doesn't have a certain bug
@@ -24,7 +24,7 @@ struct B
 
 int xxx()
 {
-  B local_array();
+  B local_array;
   return 0;
 }
 

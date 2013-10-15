@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 94527 2011-09-28 12:32:45Z johnnyw $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -31,7 +31,7 @@ my $logbase = 'server.log';
 my $server_logfile = $server->LocalFile ($logbase);
 $server->DeleteFile($logbase);
 
-my $SV = $server->CreateProcess ("server", "-ORBAcceptErrorDelay 5 -ORBDebugLevel 1 -ORBLogFile $logbase -o $server_iorfile");
+my $SV = $server->CreateProcess ("server", "-ORBAcceptErrorDelay 5 -ORBDebugLevel 1 -ORBLogFile $server_logfile -o $server_iorfile");
 my $CL = $client->CreateProcess ("client", "-k file://$client_iorfile");
 
 my $server_status = $SV->Spawn();

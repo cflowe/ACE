@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: OS_NS_unistd.inl 97138 2013-05-16 17:55:36Z mitza $
+// $Id: OS_NS_unistd.inl 97304 2013-08-29 21:14:43Z shuston $
 
 #include "ace/OS_NS_sys_utsname.h"
 #include "ace/OS_NS_string.h"
@@ -1009,7 +1009,12 @@ ACE_OS::swab (const void *src,
   const char *tmp = static_cast<const char*> (src);
   char *from = const_cast<char *> (tmp);
   char *to = static_cast<char *> (dest);
+#  if defined (ACE_HAS_INT_SWAB)
+  int ilength = ACE_Utils::truncate_cast<int> (length);
+  ::swab (from, to, ilength);
+#  else
   ::swab (from, to, length);
+#  endif /* ACE_HAS_INT_SWAB */
 #elif defined (ACE_HAS_CONST_CHAR_SWAB)
   const char *from = static_cast<const char*> (src);
   char *to = static_cast<char *> (dest);

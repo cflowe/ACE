@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 87601 2009-11-17 11:49:09Z dbudko $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 
@@ -40,6 +40,15 @@ my $server_cfg_poa = $server->LocalFile ($cfg_poa);
 my $server_cfg_object = $server->LocalFile ($cfg_object);
 my $client_cfg_poa = $client->LocalFile ($cfg_poa);
 my $client_cfg_object = $client->LocalFile ($cfg_object);
+
+if ($server->PutFile ($cfg_poa) == -1) {
+    print STDERR "ERROR: cannot set file <$server_cfg_poa>\n";
+    return 1;
+}
+if ($server->PutFile ($cfg_object) == -1) {
+    print STDERR "ERROR: cannot set file <$server_cfg_object>\n";
+    return 1;
+}
 
 if ($^O eq "dec_osf") {
     $server_cfg_poa = "$server_cfg_poa$cfg_suffix_tru64";

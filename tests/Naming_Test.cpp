@@ -3,7 +3,7 @@
 /**
  *  @file    Naming_Test.cpp
  *
- *  $Id: Naming_Test.cpp 95533 2012-02-14 22:59:17Z wotte $
+ *  $Id: Naming_Test.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
  *
  *    This is a test to illustrate the Naming Services. The test
  *    does binds, rebinds, finds, and unbinds on name bindings using
@@ -17,7 +17,7 @@
 
 #include "test_config.h"
 #include "randomize.h"
-#include "ace/ACE.h"
+#include "ace/Lib_Find.h"
 #include "ace/SString.h"
 #include "ace/Naming_Context.h"
 #include "ace/Profile_Timer.h"

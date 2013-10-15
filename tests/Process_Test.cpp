@@ -3,7 +3,7 @@
 /**
  *  @file    Process_Test.cpp
  *
- *  $Id: Process_Test.cpp 95533 2012-02-14 22:59:17Z wotte $
+ *  $Id: Process_Test.cpp 97326 2013-09-11 07:52:09Z johnnyw $
  *
  *  Tests ACE_Process file handle inheritance for UNIX-like systems
  *
@@ -16,14 +16,12 @@
 #include "test_config.h"
 #include "ace/Process.h"
 #include "ace/Get_Opt.h"
-#include "ace/ACE.h"
+#include "ace/Lib_Find.h"
 #include "ace/OS_NS_sys_stat.h"
 #include "ace/OS_NS_unistd.h"
 #include "ace/Dirent.h"
 #include "ace/SString.h"
 #include "ace/OS_NS_stdlib.h"
-
-
 
 // This will only work on Linux. Even UNIX-ish with /proc filesys lacks the
 // 'self' level and link to the opened file name.

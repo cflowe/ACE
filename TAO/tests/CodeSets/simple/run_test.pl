@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 88314 2009-12-23 12:02:42Z vzykov $
+# $Id: run_test.pl 97327 2013-09-11 07:53:15Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -22,8 +22,18 @@ my $client_iorfile = $client->LocalFile ($iorbase);
 $server->DeleteFile($iorbase);
 $client->DeleteFile($iorbase);
 
-my $client_conf = $client->LocalFile ("cs_test.conf");
-my $server_conf = $server->LocalFile ("cs_test.conf");
+my $base_conf = "cs_test" . $PerlACE::svcconf_ext;
+my $client_conf = $client->LocalFile ($base_conf);
+my $server_conf = $server->LocalFile ($base_conf);
+
+if ($server->PutFile ($base_conf) == -1) {
+    print STDERR "ERROR: cannot set file <$server_conf>\n";
+    exit 1;
+}
+if ($client->PutFile ($base_conf) == -1) {
+    print STDERR "ERROR: cannot set file <$client_conf>\n";
+    exit 1;
+}
 
 $SV = $server->CreateProcess ("server", "-o $server_iorfile -ORBDottedDecimalAddresses 1");
 $CL = $client->CreateProcess ("client", "-k file://$client_iorfile -ORBSvcConf $client_conf");

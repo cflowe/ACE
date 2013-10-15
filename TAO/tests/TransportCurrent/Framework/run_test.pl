@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 88213 2009-12-17 11:48:32Z dbudko $
+# $Id: run_test.pl 97327 2013-09-11 07:53:15Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -35,14 +35,23 @@ my $client_iorfile = $client->LocalFile ($iorbase);
 $server->DeleteFile($iorbase);
 $client->DeleteFile($iorbase);
 
-my $confserverbase = "server$confmod.conf";
-my $confserver = $server->LocalFile ("$confserverbase");
-my $confclient = $client->LocalFile ("client$confmod.conf");
+my $confserverbase = "server$confmod" . $PerlACE::svcconf_ext;
+my $confclientbase = "client$confmod" . $PerlACE::svcconf_ext;
+my $confserver = $server->LocalFile ($confserverbase);
+my $confclient = $client->LocalFile ($confclientbase);
+
+if ($server->PutFile ($confserverbase) == -1) {
+    print STDERR "ERROR: cannot set file <$confserver>\n";
+    exit 1;
+}
+if ($client->PutFile ($confclientbase) == -1) {
+    print STDERR "ERROR: cannot set file <$confclient>\n";
+    exit 1;
+}
 
 $SV = $server->CreateProcess ("server", "@ARGV -ORBSvcConf $confserver -o $server_iorfile");
 $CL = $client->CreateProcess ("client", "@ARGV -n 1 -ORBSvcConf $confclient -k file://$client_iorfile");
 
-print STDERR $SV->CommandLine()."\n";
 $SV->Spawn ();
 
 if ($server->WaitForFileTimed ($iorbase,
@@ -52,7 +61,6 @@ if ($server->WaitForFileTimed ($iorbase,
     exit 1;
 }
 
-print STDERR $CL->CommandLine()."\n";
 $client_status = $CL->SpawnWaitKill ($client->ProcessStartWaitInterval ());
 
 if ($client_status != 0) {

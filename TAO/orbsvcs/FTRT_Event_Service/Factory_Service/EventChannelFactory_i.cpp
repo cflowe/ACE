@@ -1,4 +1,4 @@
-// $Id: EventChannelFactory_i.cpp 97014 2013-04-12 22:47:02Z mitza $
+// $Id: EventChannelFactory_i.cpp 97317 2013-09-04 12:47:36Z mesnier_p $
 
 #include "orbsvcs/Log_Macros.h"
 #include "EventChannelFactory_i.h"
@@ -135,11 +135,10 @@ CORBA::Object_ptr EventChannelFactory_i::create_process (
   timeout += ACE_OS::gettimeofday();
   if (new_process.spawn (options) == -1)
   {
-    int error = ACE_OS::last_error ();
     ORBSVCS_ERROR ((LM_ERROR,
       "%p errno = %d.\n",
       str.c_str(),
-      error));
+      ACE_OS::last_error ()));
     return result;
   }
 

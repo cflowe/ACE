@@ -1,4 +1,4 @@
-<!-- $Id: Plan.cdp 95809 2012-06-03 17:56:00Z johnnyw $ -->
+<!-- $Id: Plan.cdp 97302 2013-08-29 11:15:22Z johnnyw $ -->
 <Deployment:DeploymentPlan
    xmlns:Deployment="http://www.omg.org/Deployment"
    xmlns:xmi="http://www.omg.org/XMI"
@@ -280,6 +280,26 @@
 
   <connection>
     <name>info_listen_data</name>
+    <deployRequirement>
+      <name>edu.dre.vanderbilt.DAnCE.ConnectionType</name>
+      <resourceType>Local_Interface</resourceType>
+    </deployRequirement>
+    <internalEndpoint>
+      <portName>info_listen_data</portName>
+      <provider>false</provider>
+      <kind>SimplexReceptacle</kind>
+      <instance xmi:idref="ReceiverComponentInstance" />
+    </internalEndpoint>
+    <internalEndpoint>
+      <portName>push_consumer_data</portName>
+      <provider>true</provider>
+      <kind>Facet</kind>
+      <instance xmi:idref="LMBM_Test_ConnectorComponentInstance2" />
+    </internalEndpoint>
+  </connection>
+
+  <connection>
+    <name>info_listen_data_listener</name>
     <deployRequirement>
       <name>edu.dre.vanderbilt.DAnCE.ConnectionType</name>
       <resourceType>Local_Interface</resourceType>

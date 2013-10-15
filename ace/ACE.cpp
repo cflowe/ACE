@@ -1,4 +1,4 @@
-// $Id: ACE.cpp 97130 2013-05-13 17:36:26Z mesnier_p $
+// $Id: ACE.cpp 97355 2013-09-27 22:16:09Z shuston $
 
 #include "ace/ACE.h"
 
@@ -9,6 +9,7 @@
 #include "ace/Version.h"
 #include "ace/Message_Block.h"
 #include "ace/Log_Category.h"
+#include "ace/Flag_Manip.h"
 #include "ace/OS_NS_sys_select.h"
 #include "ace/OS_NS_string.h"
 #include "ace/OS_NS_strings.h"
@@ -1013,7 +1014,8 @@ ACE::recvv_n_i (ACE_HANDLE handle,
         {
           char *base = static_cast<char *> (iov[s].iov_base);
           iov[s].iov_base = base + n;
-          iov[s].iov_len = iov[s].iov_len - n;
+          // This blind cast is safe because n < iov_len, after above loop.
+          iov[s].iov_len = iov[s].iov_len - static_cast<u_long> (n);
         }
     }
 
@@ -1079,7 +1081,8 @@ ACE::recvv_n_i (ACE_HANDLE handle,
         {
           char *base = reinterpret_cast<char *> (iov[s].iov_base);
           iov[s].iov_base = base + n;
-          iov[s].iov_len = iov[s].iov_len - n;
+          // This blind cast is safe because n < iov_len, after above loop.
+          iov[s].iov_len = iov[s].iov_len - static_cast<u_long> (n);
         }
     }
 
@@ -1791,7 +1794,8 @@ ACE::sendv_n_i (ACE_HANDLE handle,
         {
           char *base = reinterpret_cast<char *> (iov[s].iov_base);
           iov[s].iov_base = base + n;
-          iov[s].iov_len = iov[s].iov_len - n;
+          // This blind cast is safe because n < iov_len, after above loop.
+          iov[s].iov_len = iov[s].iov_len - static_cast<u_long> (n);
         }
     }
 
@@ -1863,7 +1867,8 @@ ACE::sendv_n_i (ACE_HANDLE handle,
         {
           char *base = reinterpret_cast<char *> (iov[s].iov_base);
           iov[s].iov_base = base + n;
-          iov[s].iov_len = iov[s].iov_len - n;
+          // This blind cast is safe because n < iov_len, after above loop.
+          iov[s].iov_len = iov[s].iov_len - static_cast<u_long> (n);
         }
     }
 
@@ -2105,7 +2110,8 @@ ACE::readv_n (ACE_HANDLE handle,
         {
           char *base = reinterpret_cast<char *> (iov[s].iov_base);
           iov[s].iov_base = base + n;
-          iov[s].iov_len = iov[s].iov_len - n;
+          // This blind cast is safe because n < iov_len, after above loop.
+          iov[s].iov_len = iov[s].iov_len - static_cast<u_long> (n);
         }
     }
 
@@ -2147,7 +2153,8 @@ ACE::writev_n (ACE_HANDLE handle,
         {
           char *base = reinterpret_cast<char *> (iov[s].iov_base);
           iov[s].iov_base = base + n;
-          iov[s].iov_len = iov[s].iov_len - n;
+          // This blind cast is safe because n < iov_len, after above loop.
+          iov[s].iov_len = iov[s].iov_len - static_cast<u_long> (n);
         }
     }
 

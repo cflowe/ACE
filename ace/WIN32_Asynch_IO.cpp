@@ -1,4 +1,4 @@
-// $Id: WIN32_Asynch_IO.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: WIN32_Asynch_IO.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
 
 #include "ace/WIN32_Asynch_IO.h"
 
@@ -9,6 +9,7 @@
 #include "ace/Proactor.h"
 #include "ace/Message_Block.h"
 #include "ace/Service_Config.h"
+#include "ace/Flag_Manip.h"
 #include "ace/INET_Addr.h"
 #include "ace/Task_T.h"
 #include "ace/OS_NS_errno.h"

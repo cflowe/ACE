@@ -3,7 +3,7 @@
 /**
  *  @file    Object_Manager_Flipping_Test.cpp
  *
- *  $Id: Object_Manager_Flipping_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Object_Manager_Flipping_Test.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
  *
 
  *  Tests the basic function of the ACE_Service_Config in scenarios
@@ -22,7 +22,7 @@
 #include "test_config.h"
 #include "ace/Object_Manager.h"
 #include "ace/OS_Memory.h"
-#include "ace/ACE.h"
+#include "ace/Init_ACE.h"
 #include "ace/Service_Config.h"
 #include "ace/Intrusive_Auto_Ptr.h"
 

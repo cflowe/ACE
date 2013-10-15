@@ -3,7 +3,7 @@
 /**
  *  @file    Time_Service_Test.cpp
  *
- *  $Id: Time_Service_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Time_Service_Test.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
  *
  *  This example tests the Time Service server and clerk
  *  components. The test forks and execs two processes to run both
@@ -20,7 +20,7 @@
 
 #include "test_config.h"
 #include "ace/Process.h"
-#include "ace/ACE.h"
+#include "ace/Lib_Find.h"
 #include "ace/OS_NS_string.h"
 #include "ace/OS_NS_unistd.h"
 

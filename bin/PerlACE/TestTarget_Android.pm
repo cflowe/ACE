@@ -5,7 +5,7 @@ package PerlACE::TestTarget_Android;
 # Description : Creates a PerlACE::Android
 # Author      : Marcel Smit
 # Create Date : 29/20/2008
-#          $Id: TestTarget_Android.pm 94524 2011-09-23 12:43:36Z msmit $
+#          $Id: TestTarget_Android.pm 97326 2013-09-11 07:52:09Z johnnyw $
 # ******************************************************************
 
 # ******************************************************************
@@ -346,7 +346,7 @@ sub PutFile ($)
     my $adb_process = $ENV{'ANDROID_SDK_ROOT'} . "/platform-tools/adb";
 
     my $targetfile = $self->LocalFile ($src);
-    my $cmd = "$adb_process" . ' push '. "$src $targetfile $silent";
+    my $cmd = "$adb_process" . ' push '. "\"$src\" \"$targetfile\" $silent";
 
     if (defined $ENV{'ACE_TEST_VERBOSE'}) {
       print STDERR "PutFile cmd: $cmd\n";

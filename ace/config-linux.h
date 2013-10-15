@@ -1,6 +1,6 @@
 // -*- C++ -*-
 //
-// $Id: config-linux.h 97271 2013-08-09 17:47:05Z johnnyw $
+// $Id: config-linux.h 97326 2013-09-11 07:52:09Z johnnyw $
 
 // The following configuration file is designed to work for Linux
 // platforms using GNU C++.
@@ -323,6 +323,8 @@
 // 32bit PowerPC Linux uses 128bit long double
 # define ACE_SIZEOF_LONG_DOUBLE 16
 #endif
+
+#define ACE_LACKS_PTHREAD_SCOPE_PROCESS
 
 #define ACE_LACKS_GETIPNODEBYADDR
 #define ACE_LACKS_GETIPNODEBYNAME

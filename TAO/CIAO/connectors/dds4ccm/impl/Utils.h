@@ -2,7 +2,7 @@
  * @file Utils.h
  * @author William R. Otte <wotte@dre.vanderbilt.edu>
  *
- * $Id: Utils.h 96544 2012-12-19 08:31:22Z johnnyw $
+ * $Id: Utils.h 97302 2013-08-29 11:15:22Z johnnyw $
  *
  * Misc utility classes for DDS4CCM.
  */
@@ -25,6 +25,20 @@ namespace CIAO
 {
   namespace DDS4CCM
   {
+    /**
+     * Enum controlling the semantics of the
+     * DDS4CCM listeners.
+     */
+    enum DDS4CCM_LISTENER_READ_TAKE
+    {
+      /// Listener does a DDS read
+      DDS4CCM_READ,
+      /// Listener does a DDS take
+      DDS4CCM_TAKE
+    };
+
+    /// Helper method translating a DDS ReturnCode_t into
+    /// a readable string
     inline const char * translate_retcode (::DDS::ReturnCode_t ret)
     {
 #define DDS4CCM_RETCODE(X) case X: return #X

@@ -3,7 +3,7 @@
 /**
  *  @file    be_interface.cpp
  *
- *  $Id: be_interface.cpp 95346 2011-12-15 20:48:33Z parsons $
+ *  $Id: be_interface.cpp 97307 2013-09-01 00:42:04Z mesnier_p $
  *
  *  Extension of class AST_Interface that provides additional means for C++
  *  mapping of an interface.
@@ -43,6 +43,7 @@
 #include "nr_extern.h"
 
 #include "ace/Process.h"
+#include "ace/Lib_Find.h"
 #include "ace/OS_NS_time.h"
 #include "ace/OS_NS_unistd.h"
 #include "ace/OS_NS_fcntl.h"

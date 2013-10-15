@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 97179 2013-05-29 14:08:57Z johnnyw $
+# $Id: run_test.pl 97320 2013-09-05 07:53:58Z johnnyw $
 # -*- perl -*-
 # This file is for running the tests in the ACE tests directory.
 # It is usually used for auto_compiles.
@@ -467,8 +467,19 @@ $svc_conf_file = "Service_Config_Stream_Test.conf";
 if ($target->PutFile ($svc_conf_file) == -1) {
     print STDERR "WARNING: Cannot send $svc_conf_file to target\n";
 }
+# Bug_3334_Regression_Test needs service config file.
+$svc_conf_file = "Bug_3334_Regression_Test.conf";
+if ($target->PutFile ($svc_conf_file) == -1) {
+    print STDERR "WARNING: Cannot send $svc_conf_file to target\n";
+}
+# Bug_3912_Regression_Test needs service config file.
+$svc_conf_file = "Bug_3912_Regression_Test.conf";
+if ($target->PutFile ($svc_conf_file) == -1) {
+    print STDERR "WARNING: Cannot send $svc_conf_file to target\n";
+}
 
 foreach $test (@tests) {
+
     if (defined $opt_d) {
         print "Would run test $test now\n";
     }

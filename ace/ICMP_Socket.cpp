@@ -1,10 +1,11 @@
-// $Id: ICMP_Socket.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: ICMP_Socket.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
 
 #include "ace/ICMP_Socket.h"
 
 #if defined (ACE_HAS_ICMP_SUPPORT) && (ACE_HAS_ICMP_SUPPORT == 1)
 
 #include "ace/ACE.h"
+#include "ace/Sock_Connect.h"
 #include "ace/Log_Category.h"
 #include "ace/OS_NS_netdb.h"
 #include "ace/OS_NS_sys_socket.h"

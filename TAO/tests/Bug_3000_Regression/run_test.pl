@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 87806 2009-11-27 10:16:51Z dbudko $
+# $Id: run_test.pl 97327 2013-09-11 07:53:15Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -27,7 +27,13 @@ my $iorfile = "test.ior";
 my $server_iorfile = $server->LocalFile ($iorfile);
 $server->DeleteFile($iorfile);
 
-my $server_conf = $server->LocalFile ("rw.conf");
+my $base_conf = "rw" . $PerlACE::svcconf_ext;
+my $server_conf = $server->LocalFile ($base_conf);
+
+if ($server->PutFile ($base_conf) == -1) {
+    print STDERR "ERROR: cannot set file <$server_conf>\n";
+    exit 1;
+}
 
 #Files which used by client1
 my $client1_iorfile = $client1->LocalFile ($iorfile);
@@ -56,8 +62,6 @@ $CL2 = $client2->CreateProcess ("client",
                                 "-k file://$client2_iorfile " .
                                 "-ORBDottedDecimalAddresses 2 " .
                                 "-ORBEndpoint iiop://:$port2");
-
-print $SV->CommandLine() . "\n";
 
 $server_status = $SV->Spawn ();
 
@@ -91,8 +95,6 @@ if ($client2->PutFile ($iorfile) == -1) {
     exit 1;
 }
 
-print $CL1->CommandLine() . "\n";
-
 $client_status = $CL1->SpawnWaitKill ($client1->ProcessStartWaitInterval() + 45);
 
 # The client crashes, therefore it normally exists with status != 0,
@@ -101,8 +103,6 @@ if ($client_status == -1) {
     print STDERR "ERROR: client returned $client_status\n";
     $status = 1;
 }
-
-print $CL2->CommandLine() . "\n";
 
 $client_status = $CL2->SpawnWaitKill ($client2->ProcessStartWaitInterval() + 45);
 

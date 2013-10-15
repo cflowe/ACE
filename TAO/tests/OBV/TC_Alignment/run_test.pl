@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
     & eval 'exec perl -S $0 $argv:q'
     if 0;
 
-# $Id: run_test.pl 89783 2010-04-07 08:53:26Z mhengstmengel $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 # This is a Perl script that runs all Naming Service tests.  It starts
@@ -45,8 +45,6 @@ if ($server->WaitForFileTimed ($iorbase,
     $SV->Kill (); $SV->TimedWait (1);
     exit 1;
 }
-
-print STDERR $CL->CommandLine(), "\n";
 
 $client_status = $CL->SpawnWaitKill ($client->ProcessStartWaitInterval ());
 

@@ -4,7 +4,7 @@
 /**
  *  @file   Optimized_Connection_Endpoint_Selector.h
  *
- *  $Id: Optimized_Connection_Endpoint_Selector.h 79221 2007-08-06 11:01:22Z johnnyw $
+ *  $Id: Optimized_Connection_Endpoint_Selector.h 97319 2013-09-04 18:12:58Z johnnyw $
  *
  * Strategies for selecting profile/endpoint from an IOR for making an
  * invocation.
@@ -15,7 +15,7 @@
 
 
 #ifndef TAO_OPTIMIZED_CONNECTION_ENDPOINT_SELECTOR_H
-#define TAO_OPTIMIZED_ENDPOINT_SELECTOR_H
+#define TAO_OPTIMIZED_CONNECTION_ENDPOINT_SELECTOR_H
 
 #include /**/ "ace/pre.h"
 

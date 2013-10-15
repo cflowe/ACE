@@ -1,4 +1,4 @@
-// $Id: MMAP_Memory_Pool.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: MMAP_Memory_Pool.cpp 97308 2013-09-01 00:58:08Z mesnier_p $
 
 // MMAP_Memory_Pool.cpp
 #include "ace/MMAP_Memory_Pool.h"
@@ -8,6 +8,7 @@
 #include "ace/OS_NS_sys_stat.h"
 #include "ace/Log_Category.h"
 #include "ace/Truncate.h"
+#include "ace/Lib_Find.h"
 
 #if (ACE_HAS_POSITION_INDEPENDENT_POINTERS == 1)
 #include "ace/Based_Pointer_T.h"

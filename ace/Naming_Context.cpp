@@ -1,4 +1,4 @@
-// $Id: Naming_Context.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: Naming_Context.cpp 97308 2013-09-01 00:58:08Z mesnier_p $
 
 #include "ace/Get_Opt.h"
 #include "ace/Naming_Context.h"
@@ -6,6 +6,7 @@
 #include "ace/Local_Name_Space_T.h"
 #include "ace/Registry_Name_Space.h"
 #include "ace/MMAP_Memory_Pool.h"
+#include "ace/Lib_Find.h"
 #include "ace/RW_Process_Mutex.h"
 #include "ace/OS_NS_string.h"
 #include "ace/OS_NS_unistd.h"

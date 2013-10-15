@@ -1,5 +1,5 @@
 //  -*- MPC -*-
-// $Id: tests.mpc 97290 2013-08-13 17:09:59Z johnnyw $
+// $Id: tests.mpc 97341 2013-09-17 13:09:49Z johnnyw $
 
 project(Test_Output) : acelib, script {
   libout       = .
@@ -318,11 +318,15 @@ project (Bug_2980_Regression_Test) {
   after += Bug_2980_Regression_Dll
   avoids += uses_wchar
   includes    += $(ACE_ROOT)
+  staticflags += ACE_AS_STATIC_LIBS
   exename = Bug_2980_Regression_Test
   Source_Files {
     Bug_2980_Regression_Test.cpp
   }
   Resource_Files {
+  }
+  specific(vxtest) {
+    libs += Bug_2980_Regression ACE
   }
 }
 
@@ -715,6 +719,41 @@ project(Compiler_Features_22_Test) : acelib {
     Compiler_Features_22_DLL_Export.h
   }
   Resource_Files {
+  }
+}
+
+project(Compiler_Features_23_Test) : acetest {
+  exename = Compiler_Features_23_Test
+  Source_Files {
+    Compiler_Features_23_Test.cpp
+  }
+}
+
+project(Compiler_Features_24_Test) : acetest {
+  exename = Compiler_Features_24_Test
+  Source_Files {
+    Compiler_Features_24_Test.cpp
+  }
+}
+
+project(Compiler_Features_25_Test) : acetest {
+  exename = Compiler_Features_25_Test
+  Source_Files {
+    Compiler_Features_25_Test.cpp
+  }
+}
+
+project(Compiler_Features_26_Test) : acetest {
+  exename = Compiler_Features_26_Test
+  Source_Files {
+    Compiler_Features_26_Test.cpp
+  }
+}
+
+project(Compiler_Features_27_Test) : acetest {
+  exename = Compiler_Features_27_Test
+  Source_Files {
+    Compiler_Features_27_Test.cpp
   }
 }
 

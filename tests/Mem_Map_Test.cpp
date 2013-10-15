@@ -3,7 +3,7 @@
 /**
  *  @file    Mem_Map_Test.cpp
  *
- *  $Id: Mem_Map_Test.cpp 93638 2011-03-24 13:16:05Z johnnyw $
+ *  $Id: Mem_Map_Test.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
  *
  *    This test illustrates the use of ACE_Mem_Map to reverse a
  *    file. The test first creates a dummy file for testing, then
@@ -18,7 +18,7 @@
 
 #include "test_config.h"
 #include "ace/Mem_Map.h"
-#include "ace/ACE.h"
+#include "ace/Lib_Find.h"
 #include "ace/OS_NS_string.h"
 #include "ace/OS_NS_unistd.h"
 #include "ace/OS_NS_fcntl.h"

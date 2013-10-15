@@ -1,4 +1,4 @@
-// $Id: Statistic.cpp 93058 2011-01-12 13:21:49Z olli $
+// $Id: Statistic.cpp 97315 2013-09-03 13:19:49Z mesnier_p $
 
 #include "ace/Log_Msg.h"
 #include "ace/Monitor_Base.h"
@@ -10,6 +10,9 @@ using namespace ACE_VERSIONED_NAMESPACE_NAME::ACE::Monitor_Control;
 void
 error (const char* msg)
 {
+#if defined (ACE_NLOGGING)
+  ACE_UNUSED_ARG (msg);
+#endif /* ACE_NLOGGING */
   ACE_ERROR ((LM_ERROR, "%s\n", msg));
   ACE_OS::exit (1);
 }

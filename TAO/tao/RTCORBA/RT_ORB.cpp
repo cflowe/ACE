@@ -1,4 +1,4 @@
-// $Id: RT_ORB.cpp 92778 2010-12-03 09:21:49Z johnnyw $
+// $Id: RT_ORB.cpp 97327 2013-09-11 07:53:15Z johnnyw $
 
 #include "tao/RTCORBA/RT_ORB.h"
 
@@ -457,7 +457,7 @@ TAO_RT_ORB::modify_thread_scheduling_policy (CORBA::ORB_ptr orb)
   // scope and policy when creating the thread, thus not needing to
   // use this method.
 
-#if defined (linux)
+#if !defined (ACE_LACKS_THREAD_PROCESS_SCOPING) && defined (ACE_LACKS_PTHREAD_SCOPE_PROCESS)
 
   int const sched_policy = orb->orb_core ()->orb_params ()->ace_sched_policy ();
 
@@ -468,7 +468,7 @@ TAO_RT_ORB::modify_thread_scheduling_policy (CORBA::ORB_ptr orb)
 
   return ACE_Thread::setprio (thread_id, minimum_priority, sched_policy);
 
-#else /* linux */
+#else /* !ACE_LACKS_THREAD_PROCESS_SCOPING && ACE_LACKS_PTHREAD_SCOPE_PROCESS */
 
   ACE_UNUSED_ARG (orb);
   ACE_NOTSUP_RETURN (-1);

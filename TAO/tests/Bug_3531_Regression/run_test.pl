@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 91816 2010-09-17 08:35:56Z johnnyw $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -56,7 +56,6 @@ $CLS[$num_clients - 1] = $clients[$i]->CreateProcess ("client",
                                     "-k file://$clients_iorfile[$num_clients - 1] -x");
 
 # start server and wait for file
-print STDERR $SV->CommandLine(), "\n" if $verbose;
 $server_status = $SV->Spawn ();
 
 if ($server_status != 0) {
@@ -93,7 +92,6 @@ if ($status != 0) {
 # spawn clients in the loop and one in separated way
 my $broken_number = 0;
 for($i = 0; $i < $num_clients - 1; $i++) {
-    print STDERR $CLS[$i]->CommandLine(), "\n" if $verbose;
     my $client_status = $CLS[$i]->Spawn();
     if ($client_status != 0) {
         print STDERR "ERROR: client $i Spawn returned $client_status\n";

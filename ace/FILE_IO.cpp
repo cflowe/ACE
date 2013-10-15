@@ -1,4 +1,4 @@
-// $Id: FILE_IO.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: FILE_IO.cpp 97355 2013-09-27 22:16:09Z shuston $
 
 #include "ace/FILE_IO.h"
 
@@ -124,16 +124,17 @@ ACE_FILE_IO::recvv (iovec *io_vec)
   ACE_TRACE ("ACE_FILE_IO::recvv");
 
   io_vec->iov_base = 0;
-  size_t const length =
-    static_cast <size_t> (ACE_OS::filesize (this->get_handle ()));
+  ACE_OFF_T const length = ACE_OS::filesize (this->get_handle ());
 
   if (length > 0)
     {
+      // Restrict to max size we can record in iov_len.
+      size_t len = ACE_Utils::truncate_cast<u_long> (length);
       ACE_NEW_RETURN (io_vec->iov_base,
-                      char[length],
+                      char[len],
                       -1);
-      io_vec->iov_len = this->recv_n (io_vec->iov_base,
-                                      length);
+      io_vec->iov_len = static_cast<u_long> (this->recv_n (io_vec->iov_base,
+                                                           len));
       return io_vec->iov_len;
     }
   else

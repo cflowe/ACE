@@ -1519,6 +1519,7 @@
     <ClInclude Include="config-macosx-iOS-simulator.h" />
     <ClInclude Include="config-macosx-leopard.h" />
     <ClInclude Include="config-macosx-lion.h" />
+    <ClInclude Include="config-macosx-mavericks.h" />
     <ClInclude Include="config-macosx-mountainlion.h" />
     <ClInclude Include="config-macosx-panther.h" />
     <ClInclude Include="config-macosx-snowleopard.h" />

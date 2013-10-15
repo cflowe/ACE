@@ -1,8 +1,6 @@
-// $Id: IOS_util.cpp 91671 2010-09-08 18:39:23Z johnnyw $
+// $Id: IOS_util.cpp 97342 2013-09-19 09:41:44Z johnnyw $
 
 #include "ace/INet/IOS_util.h"
-
-
 
 ACE_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -10,10 +8,8 @@ namespace ACE
 {
   namespace IOS
   {
-
     std::ostream Null::out_stream_ (0);
     std::istream Null::in_stream_ (0);
-
   }
 }
 

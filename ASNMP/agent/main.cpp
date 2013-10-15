@@ -1,11 +1,11 @@
-// $Id: main.cpp 91874 2010-09-21 08:33:31Z johnnyw $
+// $Id: main.cpp 97309 2013-09-01 13:10:27Z mesnier_p $
 
 // This server daemon processes SNMP Version 1 get, get-next, and set
 // commands. over the MIB II "System" group only.
 
 #include "ace/config-all.h"
 #include "snmp_agent.h"
-#include "ace/ACE.h"
+#include "ace/Init_ACE.h"
 #include "ace/Argv_Type_Converter.h"
 
 int

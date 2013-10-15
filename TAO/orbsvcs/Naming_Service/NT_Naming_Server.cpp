@@ -4,7 +4,7 @@
 /**
  *  @file    NT_Naming_Server.cpp
  *
- *  $Id: NT_Naming_Server.cpp 97014 2013-04-12 22:47:02Z mitza $
+ *  $Id: NT_Naming_Server.cpp 97312 2013-09-02 15:06:18Z mesnier_p $
  *
  *  Driver program that runs the TAO Naming Service as a Windows NT
  *  Service.
@@ -31,6 +31,7 @@ ACE_TMAIN(int, ACE_TCHAR *[])
 #else
 
 #include "ace/Get_Opt.h"
+#include "ace/Init_ACE.h"
 
 #include "winreg.h"
 #include "NT_Naming_Service.h"

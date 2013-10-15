@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 87626 2009-11-19 08:28:24Z dbudko $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -42,8 +42,6 @@ $CL = $client->CreateProcess ("client",
                               "-p $orb_port");
 
 $SH_CL = $client_shutdown->CreateProcess ("shutdown_client", "-k file://$client_shutdown_iorfile");
-
-print STDERR $CL->CommandLine(), "\n" ;
 
 $server_status = $SV->Spawn ();
 

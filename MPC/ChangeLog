@@ -1,3 +1,78 @@
+Fri Sep 27 20:48:52 UTC 2013  Adam Mitz  <mitza@ociweb.com>
+
+        * config/boost_chrono.mpb:
+
+          Adding a new mpb for a new Boost library.
+
+Sat Sep  7 15:15:55 UTC 2013  Chad Elliott  <elliott_c@ociweb.com>
+
+        * modules/ConfigParser.pm:
+
+          Remove leading and trailing spaces from lines read from a file to
+          avoid adding them to paths and other values.
+
+        * modules/WorkspaceCreator.pm:
+
+          Replace '.' with '__' in project names used within Graphviz files.
+          Names with periods in them are not accepted.
+
+        * templates/make.net.mpd:
+
+          Use libs, lit_libs, and pure_libs as is done within the vc8 C#
+          template.
+
+        * templates/vc8csharp.mpd:
+
+          If a config file group has the 'generates_source' setting, we will
+          add a .Designer.cs file to the compile list.
+
+Sat Sep  7 03:49:06 UTC 2013  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * config/pin.mpb:
+        * config/pintool.mpb:
+
+          Fixed compilation and runtime errors on MacOS X.
+
+Fri Sep  6 20:51:59 UTC 2013  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * config/pin.mpb:
+        * config/pintool.mpb:
+
+          Separated the definitions for linking against Pin without creating
+          a Pintool, and for creating a Pintool.
+
+Sat Aug 24 18:40:18 UTC 2013  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * config/udm.mpb:
+
+          Update to latest version of UDM.
+
+        * config/pintools_32bit.mpb:
+
+          Removed this file.
+
+Sat Aug 24 18:36:37 UTC 2013  James H. Hill  <hillj at cs dot iupui dot edu>
+
+        * config/pintool.mpb:
+
+          Renamed base project, and improved support for intel64 and ia32.
+
+        * config/pintools_32bit.mpb:
+
+          Removed this file.
+
+Mon Aug 19 09:52:47 CDT 2013  Adam Mitz  <mitza@ociweb.com>
+
+        * templates/make.mpd:
+        * templates/makedll.mpt:
+
+          If we have GNU Make, no need for a rule to touch the .depend file.
+
+Mon Aug 19 07:22:20 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
+
+        * templates/bmake.mpd:
+          bcc64 has no support for pch
+
 Wed Aug  7 07:12:31 UTC 2013  Johnny Willemsen  <jwillemsen@remedy.nl>
 
         * templates/bmake.mpd:

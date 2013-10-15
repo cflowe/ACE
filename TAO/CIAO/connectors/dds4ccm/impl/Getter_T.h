@@ -1,7 +1,7 @@
 /**
  * @author Marcel Smit (msmit@remedy.nl)
  *
- * $Id: Getter_T.h 95960 2012-07-23 19:10:54Z johnnyw $
+ * $Id: Getter_T.h 97302 2013-08-29 11:15:22Z johnnyw $
  *
  * Wrapper facade for NDDS.
  */
@@ -124,7 +124,6 @@ namespace CIAO
 
     /**
       * @brief Implementation of the Getter port for variable sized data types.
-      *
       */
     template <typename GETTER_TYPE, typename TYPED_DDS_READER, typename VALUE_TYPE, typename SEQ_VALUE_TYPE>
     class Getter_T <GETTER_TYPE, TYPED_DDS_READER, VALUE_TYPE, SEQ_VALUE_TYPE, false> :
@@ -137,10 +136,9 @@ namespace CIAO
       *
       *         Spec : get_one returns the next sample to be gotten.
       *
-      * Returns false when 'wait' times out or when no valid data could be read
+      * @retval false When 'wait' times out or when no valid data could be read
       * from DDS.
-      * Return true, when 'wait' is triggered.
-      *
+      * @retval true When 'wait' is triggered.
       */
       virtual bool get_one (
         typename VALUE_TYPE::_out_type an_instance,
@@ -161,10 +159,9 @@ namespace CIAO
       *
       *         Spec : get_one returns the next sample to be gotten.
       *
-      * Returns false when 'wait' times out or when no valid data could be read
+      * @retval false When 'wait' times out or when no valid data could be read
       * from DDS.
-      * Return true, when 'wait' is triggered.
-      *
+      * @retval true When 'wait' is triggered.
       */
       virtual bool get_one (
         typename VALUE_TYPE::_out_type an_instance,

@@ -1,4 +1,4 @@
-// $Id: MultiTopic_Connector_T.h 93117 2011-01-20 12:11:28Z mcorino $
+// $Id: MultiTopic_Connector_T.h 97302 2013-08-29 11:15:22Z johnnyw $
 
 #ifndef DDS_MT_CONNECTOR_T_H_
 #define DDS_MT_CONNECTOR_T_H_
@@ -256,10 +256,11 @@ private:
       typename CCM_TYPE::push_consumer_cl_traits,
       typename DDS_TYPE::typed_reader_type,
       typename DDS_TYPE::value_type,
-      SEQ_TYPE>
+      SEQ_TYPE,
+      CIAO::DDS4CCM::DDS4CCM_TAKE>
     push_consumer_cl_;
 
-  //connection to the receiver implementation
+  /// Connection to the receiver implementation
   typename CCM_TYPE::push_consumer_cl_traits::data_listener_type::_var_type dl_;
 
   CORBA::String_var topic_name_sq_;

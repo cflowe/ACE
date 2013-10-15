@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: Hello_Sender_exec.h 93117 2011-01-20 12:11:28Z mcorino $
+// $Id: Hello_Sender_exec.h 97302 2013-08-29 11:15:22Z johnnyw $
 
 #ifndef CIAO_HELLO_SENDER_EXEC_YPB9XX_H_
 #define CIAO_HELLO_SENDER_EXEC_YPB9XX_H_
@@ -185,8 +185,7 @@ namespace CIAO_Hello_Sender_Impl
     CORBA::Boolean log_time_;
     ACE_CString msg_;
 
-    ACE_CString create_message (
-          const ACE_CString &msg);
+    ACE_CString create_message (const ACE_CString &msg);
     Atomic_Boolean ready_to_start_;
   };
 

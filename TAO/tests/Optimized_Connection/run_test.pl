@@ -2,7 +2,7 @@ eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}'
      & eval 'exec perl -S $0 $argv:q'
      if 0;
 
-# $Id: run_test.pl 91816 2010-09-17 08:35:56Z johnnyw $
+# $Id: run_test.pl 97321 2013-09-05 07:56:47Z johnnyw $
 # -*- perl -*-
 
 use lib "$ENV{ACE_ROOT}/bin";
@@ -22,12 +22,23 @@ my $client = PerlACE::TestTarget::create_target (1) || die "Create target 1 fail
 my $iorbase = "oc.ior";
 my $client_iorfile = $client->LocalFile ($iorbase);
 
-my $client_conf = $client->LocalFile ("oc_svc.conf");
+$client_conf_base = "oc_svc$PerlACE::svcconf_ext";
+my $client_conf = $client->LocalFile ($client_conf_base);
+if ($client->PutFile ($client_conf_base) == -1) {
+    print STDERR "ERROR: cannot set file <$client_conf>\n";
+    exit 1;
+}
 
 $CL = $client->CreateProcess ("client", "-k file://$client_iorfile ".
                                         "-orbsvcconf $client_conf ".
                                         "-ORBDebugLevel $debug_level");
 
+my $client_status = $CL->Spawn();
+
+if ($client_status != 0) {
+    print STDERR "ERROR: client returned $client_status\n";
+    exit 1;
+}
 
 if ($client->WaitForFileTimed ($iorbase,
                            $client->ProcessStartWaitInterval()) == -1) {
@@ -35,7 +46,7 @@ if ($client->WaitForFileTimed ($iorbase,
     exit 1;
 }
 
-$client_status = $CL->SpawnWaitKill ($client->ProcessStartWaitInterval());
+$client_status = $CL->WaitKill ($client->ProcessStartWaitInterval());
 
 if ($client_status != 0) {
     print STDERR "ERROR: client returned $client_status\n";

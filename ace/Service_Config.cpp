@@ -1,4 +1,4 @@
-// $Id: Service_Config.cpp 96985 2013-04-11 15:50:32Z huangh $
+// $Id: Service_Config.cpp 97326 2013-09-11 07:52:09Z johnnyw $
 
 #include "ace/Service_Config.h"
 
@@ -244,7 +244,12 @@ ACE_Service_Config::open_i (const ACE_TCHAR program_name[],
 
   // Become a daemon before doing anything else.
   if (ACE_Service_Config::be_a_daemon_)
-    ACE::daemonize ();
+    {
+      // If we have to become a daemn and that fails
+      // return -1 here
+      if (ACE::daemonize () == -1)
+        return -1;
+    }
 
   // Write process id to file.
   if (this->pid_file_name_ != 0)

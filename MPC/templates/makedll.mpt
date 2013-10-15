@@ -1,5 +1,5 @@
 // -*- MPC -*-
-// $Id: makedll.mpt 2069 2011-12-15 04:22:03Z mitza $
+// $Id: makedll.mpt 2148 2013-08-19 14:55:02Z mitza $
 
 // ***********************************************************************
 // The default compiler for the 'make' project type is gcc (provided by
@@ -372,6 +372,7 @@ mingw_msys {
   rc           = rc
   pic          =
   depgen_flags = -t make
+  gnumake = 1
 }
 
 // MinGW compiler with the built-in Windows shell and native make
@@ -398,6 +399,7 @@ mingw {
   depgen_flags = -t make
   echo_outer_quote =
   expanded_variable_assignment = 1
+  gnumake = 1
 }
 
 dmc_win {

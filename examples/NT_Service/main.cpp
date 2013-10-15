@@ -3,7 +3,7 @@
 /**
  *  @file    main.cpp
  *
- *  $Id: main.cpp 97246 2013-08-07 07:10:20Z johnnyw $
+ *  $Id: main.cpp 97311 2013-09-02 14:57:47Z mesnier_p $
  *
  *  This is the main program - it just hands control off to the
  *  process instance to figure out what to do.  This program only
@@ -16,6 +16,7 @@
 
 
 #include "ace/Get_Opt.h"
+#include "ace/Init_ACE.h"
 #include "ntsvc.h"
 
 #if defined (ACE_WIN32) && !defined (ACE_LACKS_WIN32_SERVICES)

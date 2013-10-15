@@ -4,7 +4,7 @@
 /**
  *  @file   DiffServ_Protocols_Hooks.h
  *
- *  $Id: DiffServ_Protocols_Hooks.h 84860 2009-03-17 10:17:38Z johnnyw $
+ *  $Id: DiffServ_Protocols_Hooks.h 97318 2013-09-04 18:00:37Z johnnyw $
  *
  *  @author Jaiganesh Balasubramanian <jai@dre.vanderbilt.edu>
  *          Johnny Willemsen <jwillemsen@remedy.nl>
@@ -12,7 +12,7 @@
 // ===================================================================
 
 #ifndef TAO_DIFFSERV_PROTOCOLS_HOOKS_H
-#define TAO_DIFFSERVT_PROTOCOLS_HOOKS_H
+#define TAO_DIFFSERV_PROTOCOLS_HOOKS_H
 
 #include /**/ "ace/pre.h"
 
